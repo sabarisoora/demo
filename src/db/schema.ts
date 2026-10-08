@@ -24,6 +24,7 @@ export const users = pgTable("users", {
   // When a cancelled subscription stops granting Elite. Null = no end date.
   eliteUntil: timestamp("elite_until", { withTimezone: true }),
   ds24OrderId: text("ds24_order_id"),
+  emailVerifiedAt: timestamp("email_verified_at", { withTimezone: true }),
   // DS24 affiliate + campaign that referred this user (captured at signup).
   affiliate: text("affiliate"),
   campaign: text("campaign"),
@@ -102,6 +103,29 @@ export const expenses = pgTable(
   },
   (t) => [index("expenses_business_date_idx").on(t.businessId, t.date)],
 );
+
+// One-time links for password reset and email verification. Only a hash of the token is stored.
+export const authTokens = pgTable(
+  "auth_tokens",
+  {
+    id: text("id").primaryKey(),
+    userId: uuid("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    // "reset" | "verify"
+    kind: text("kind").notNull(),
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+    usedAt: timestamp("used_at", { withTimezone: true }),
+  },
+  (t) => [index("auth_tokens_user_idx").on(t.userId)],
+);
+
+// Fixed-window counters for rate limiting (login attempts, signups, reset emails).
+export const rateLimits = pgTable("rate_limits", {
+  key: text("key").primaryKey(),
+  windowStart: timestamp("window_start", { withTimezone: true }).notNull(),
+  count: integer("count").notNull().default(0),
+});
 
 // Every Digistore24 IPN call, for auditing and support.
 export const ipnEvents = pgTable("ipn_events", {

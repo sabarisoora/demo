@@ -1,9 +1,12 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { Logo } from "@/components/brand";
-import { isElite, requireSession } from "@/lib/auth";
+import { isAdmin, isElite, requireSession } from "@/lib/auth";
+import { site } from "@/lib/site";
 import { getNiche } from "@/niches";
 import { logout } from "../(auth)/actions";
 import { Nav, type NavItem } from "./nav";
+import { Notices, VerifyBanner } from "./banners";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const { user, business } = await requireSession();
@@ -19,6 +22,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     { href: "/app/accountant", label: "Accountant Export" },
     { href: "/app/import", label: "Import CSV" },
     { href: "/app/settings", label: "Settings" },
+    { href: "/app/account", label: "Account" },
     { href: "/app/elite/leaks", label: "Profit Leak Detector", elite: true },
     { href: "/app/elite/services", label: "Service Profitability", elite: true },
     { href: "/app/elite/forecast", label: "6-Month Forecast", elite: true },
@@ -46,18 +50,38 @@ export default async function AppLayout({ children }: { children: React.ReactNod
           <div className="truncate text-xs text-muted" title={user.email}>
             {user.email}
           </div>
-          <form action={logout}>
-            <button className="mt-1 text-xs font-semibold text-ink-2 hover:text-ink">Log out</button>
-          </form>
+          <div className="mt-1 flex items-center gap-3 text-xs font-semibold text-ink-2">
+            <form action={logout}>
+              <button className="hover:text-ink">Log out</button>
+            </form>
+            <a href={`mailto:${site.supportEmail}`} className="hover:text-ink">
+              Help
+            </a>
+            {isAdmin(user) && (
+              <Link href="/admin" className="text-accent hover:underline">
+                Admin
+              </Link>
+            )}
+          </div>
         </div>
       </aside>
       <main className="min-w-0 flex-1 px-4 py-6 sm:px-6 lg:px-10 lg:py-10">
-        <div className="mx-auto max-w-6xl">{children}</div>
+        <div className="mx-auto max-w-6xl">
+          {!user.emailVerifiedAt && <VerifyBanner email={user.email} />}
+          <Suspense>
+            <Notices />
+          </Suspense>
+          {children}
+        </div>
         <div className="no-print mx-auto mt-10 flex max-w-6xl items-center justify-between border-t border-line pt-4 text-xs text-muted lg:hidden">
           <span className="truncate">{user.email}</span>
-          <form action={logout}>
-            <button className="font-semibold text-ink-2">Log out</button>
-          </form>
+          <span className="flex shrink-0 gap-3 font-semibold text-ink-2">
+            {isAdmin(user) && <Link href="/admin">Admin</Link>}
+            {!elite && <Link href="/app/upgrade">Upgrade</Link>}
+            <form action={logout}>
+              <button>Log out</button>
+            </form>
+          </span>
         </div>
       </main>
     </div>

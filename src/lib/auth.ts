@@ -37,6 +37,11 @@ export async function destroySession() {
   jar.delete(COOKIE);
 }
 
+/** Signs a user out everywhere (after a password reset or change). */
+export async function destroyUserSessions(userId: string) {
+  await db.delete(sessions).where(eq(sessions.userId, userId));
+}
+
 /** The signed-in user and their business, or null. Cached per request. */
 export const getSession = cache(async (): Promise<{ user: User; business: Business } | null> => {
   const token = (await cookies()).get(COOKIE)?.value;
@@ -59,4 +64,19 @@ export async function requireSession() {
 
 export function isElite(user: Pick<User, "plan" | "eliteUntil">, now = new Date()) {
   return user.plan === "elite" && (!user.eliteUntil || user.eliteUntil > now);
+}
+
+/** Owner/admin accounts: listed in ADMIN_EMAILS and with a confirmed email (so nobody can pre-register it). */
+export function isAdmin(user: Pick<User, "email" | "emailVerifiedAt">) {
+  const admins = (process.env.ADMIN_EMAILS ?? "")
+    .split(",")
+    .map((e) => e.trim().toLowerCase())
+    .filter(Boolean);
+  return !!user.emailVerifiedAt && admins.includes(user.email.toLowerCase());
+}
+
+export async function requireAdmin() {
+  const s = await requireSession();
+  if (!isAdmin(s.user)) redirect("/app");
+  return s;
 }

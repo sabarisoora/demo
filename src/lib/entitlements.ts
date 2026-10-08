@@ -45,3 +45,9 @@ export async function claimUnmatchedPurchases(userId: string, email: string) {
   await applyBillingEvent(userId, latest.event, latest.orderId, latest.receivedAt);
   await db.update(ipnEvents).set({ userId }).where(and(eq(ipnEvents.email, email), inArray(ipnEvents.productId, products)));
 }
+
+/** Marks the email confirmed, then hands over any Elite purchase made with it before signup. */
+export async function markEmailVerified(userId: string, email: string) {
+  await db.update(users).set({ emailVerifiedAt: new Date() }).where(eq(users.id, userId));
+  await claimUnmatchedPurchases(userId, email);
+}

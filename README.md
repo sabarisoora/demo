@@ -21,6 +21,12 @@ Free users see Elite pages blurred, with a teaser computed from **their own data
 leaks worth $4,057"). The blurred preview is rendered from sample data, so paid details never
 reach the browser.
 
+**Accounts and operations:** email confirmation, forgot/reset password, change password, full
+data export (JSON + CSV), self-serve account deletion, rate-limited login/signup/reset, an owner
+**admin panel** (`/admin`: signups, Elite subscribers, signups per affiliate, Digistore24 event log,
+manual Elite grant/revoke), Terms / Privacy / Refund pages, per-niche landing pages
+(`/auto-repair`), sitemap, robots, 404/error pages and security headers.
+
 The calculations match the Excel workbook: the unit tests check them against the values Excel
 computed for the same sample data (`src/lib/metrics.test.ts`).
 
@@ -43,6 +49,13 @@ Free to host: Vercel Hobby + Neon free Postgres.
    | `DS24_ELITE_PRODUCT_IDS` | Optional: comma‑separated list if several products unlock Elite (e.g. monthly + yearly) |
    | `DS24_IPN_PASSPHRASE` | A long random string; enter the same one in Digistore24 (step 5) |
    | `NEXT_PUBLIC_ELITE_PRICE_LABEL` | e.g. `$29/mo` (optional, shown on pricing) |
+   | `ADMIN_EMAILS` | Your email, e.g. `you@profitiqs.com`. Sign up with it and confirm it to open `/admin` |
+   | `RESEND_API_KEY` | From resend.com (free). Needed for password reset and email confirmation |
+   | `EMAIL_FROM` | e.g. `ProfitIQS <hello@profitiqs.com>` once your domain is verified in Resend |
+   | `NEXT_PUBLIC_SUPPORT_EMAIL` | Shown in the app, emails and legal pages |
+   | `NEXT_PUBLIC_COMPANY_NAME` | Your legal business name, shown on legal pages |
+   | `NEXT_PUBLIC_GOVERNING_LAW` | Country whose law governs the Terms (default `India`) |
+   | `NEXT_PUBLIC_REFUND_DAYS` | Money-back window in days; match your DS24 product (default `30`) |
 
 4. **Redeploy** (*Deployments → ⋯ → Redeploy*). The build creates the database tables automatically (`npm run build` = migrate + `next build`). The first deploy, before a database is connected, still succeeds: it skips migrations with a warning, and the landing page works, but signup needs the database. Redeploy after connecting it, and after changing any `NEXT_PUBLIC_*` variable.
 5. **Connect Digistore24**:
@@ -50,6 +63,18 @@ Free to host: Vercel Hobby + Neon free Postgres.
    - *Settings → Integrations (IPN) → New connection → Generic*: URL `https://YOUR-DOMAIN/api/ds24/ipn`, SHA passphrase = `DS24_IPN_PASSPHRASE`. Click *Test connection*; it should answer `OK`.
    - Product → *Thank you page*: `https://YOUR-DOMAIN/app/upgrade/thanks`.
 6. **Custom domain** (optional): *Settings → Domains* → add `app.profitiqs.com`, then add the CNAME Vercel shows at your domain registrar.
+
+### Set up email (Resend, free)
+
+1. Sign up at resend.com → *API Keys → Create* → put it in `RESEND_API_KEY` on Vercel.
+2. *Domains → Add domain* → `profitiqs.com` → add the DNS records it shows at your domain registrar → wait for *Verified*.
+3. Set `EMAIL_FROM` to `ProfitIQS <hello@profitiqs.com>` and redeploy.
+
+Before the domain is verified, Resend's test sender only delivers to the email you signed up to Resend with. That's enough to confirm your own admin account, but customers won't get emails until the domain is verified.
+
+### Legal pages
+
+`/terms`, `/privacy` and `/refunds` are written for how this app actually works (Digistore24 as reseller, Vercel/Neon/Resend as processors, only essential cookies). Fill in the business env vars above, and have them reviewed for your country before launch. They're a solid starting point, not legal advice.
 
 ### How affiliate tracking works
 
@@ -76,7 +101,7 @@ npm run lint                  # TypeScript check
 1. Copy `src/niches/auto-repair.ts` to e.g. `src/niches/salon.ts` and change the labels (job name, the two revenue streams, categories, thresholds, landing copy).
 2. Add sample data as `src/niches/samples/salon.json` (same shape: `orders` + `expenses`).
 3. Register it in `src/niches/index.ts`.
-4. Send that niche's traffic to `/signup?niche=salon`. A per‑niche landing page (`/salon`) is the next step.
+4. Its landing page is live at `/salon` automatically (and listed in the sitemap). Send that niche's affiliates there.
 
 ## Project layout
 
@@ -100,7 +125,6 @@ drizzle/                     SQL migrations
 
 ## Known gaps / next steps
 
-- **Password reset and email verification** need an email provider (e.g. Resend, free tier). Until then, reset passwords manually in the database. Without email verification, a pre‑signup purchase can be claimed by whoever registers that email first.
-- **Login rate limiting** isn't implemented yet (add Vercel Firewall rules or Upstash).
-- Per‑niche landing pages, more Elite reports from the workbook (technicians, inventory, receivables, benchmarks), and a yearly plan.
+- Changing the account email is handled by support for now (admin panel shows the user; update it in the database).
+- More Elite reports from the workbook (technicians, inventory, receivables, benchmarks) and a yearly plan.
 - Tax figures are planning estimates, not tax advice; the disclaimer is shown on every tax screen.

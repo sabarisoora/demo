@@ -2,7 +2,7 @@
 // In DS24: Settings → Integrations (IPN) → add "Generic" connection with URL
 //   https://YOUR-DOMAIN/api/ds24/ipn
 // and the same SHA passphrase you put in DS24_IPN_PASSPHRASE.
-import { eq } from "drizzle-orm";
+import { and, eq, isNotNull } from "drizzle-orm";
 import { db, ipnEvents, users } from "@/db";
 import { eliteProductIds, verifyDs24Signature } from "@/lib/ds24";
 import { applyBillingEvent } from "@/lib/entitlements";
@@ -35,8 +35,14 @@ export async function POST(request: Request) {
     const [u] = await db.select({ id: users.id }).from(users).where(eq(users.id, custom)).limit(1);
     userId = u?.id ?? null;
   }
+  // Email matching only trusts confirmed emails; otherwise anyone could register a buyer's
+  // email first. Unconfirmed accounts get the purchase when they confirm (markEmailVerified).
   if (!userId && email) {
-    const [u] = await db.select({ id: users.id }).from(users).where(eq(users.email, email)).limit(1);
+    const [u] = await db
+      .select({ id: users.id })
+      .from(users)
+      .where(and(eq(users.email, email), isNotNull(users.emailVerifiedAt)))
+      .limit(1);
     userId = u?.id ?? null;
   }
 

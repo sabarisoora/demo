@@ -8,11 +8,26 @@ export async function GET(_: Request, { params }: { params: Promise<{ kind: stri
   const session = await getSession();
   if (!session) return new Response("Unauthorized", { status: 401 });
   const { kind } = await params;
-  if (kind !== "jobs" && kind !== "expenses") return new Response("Not found", { status: 404 });
+  if (kind !== "jobs" && kind !== "expenses" && kind !== "all") return new Response("Not found", { status: 404 });
 
-  const { business } = session;
+  const { business, user } = session;
   const niche = getNiche(business.niche);
   const { jobs, expenses } = await loadEntries(business.id);
+  const slug = (business.name || "profitiqs").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "profitiqs";
+  const today = new Date().toISOString().slice(0, 10);
+
+  if (kind === "all") {
+    // Everything we hold for this account (data portability). Password hash is never included.
+    const { passwordHash: _omit, ...account } = user;
+    const body = JSON.stringify({ exportedAt: new Date().toISOString(), account, business, jobs, expenses }, null, 2);
+    return new Response(body, {
+      headers: {
+        "content-type": "application/json; charset=utf-8",
+        "content-disposition": `attachment; filename="${slug}-profitiqs-export-${today}.json"`,
+        "cache-control": "no-store",
+      },
+    });
+  }
   const { a, b } = niche.streams;
 
   const rows: (string | number)[][] =
@@ -23,8 +38,7 @@ export async function GET(_: Request, { params }: { params: Promise<{ kind: stri
         ]
       : [["Ref", "Date", "Category", "Vendor", "Amount"], ...expenses.map((e) => [e.ref, e.date, e.category, e.vendor, e.amount])];
 
-  const slug = (business.name || "profitiqs").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "profitiqs";
-  const name = `${slug}-${kind === "jobs" ? niche.job.plural.toLowerCase().replace(/\s+/g, "-") : "expenses"}-${new Date().toISOString().slice(0, 10)}.csv`;
+  const name = `${slug}-${kind === "jobs" ? niche.job.plural.toLowerCase().replace(/\s+/g, "-") : "expenses"}-${today}.csv`;
   return new Response(toCsv(rows), {
     headers: {
       "content-type": "text/csv; charset=utf-8",
