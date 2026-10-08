@@ -3,21 +3,15 @@ import { Logo } from "@/components/brand";
 import { SiteFooter } from "@/components/site-footer";
 import { monthlySeries, profitLeaks, statusFor, taxSummary } from "@/lib/metrics";
 import { percent } from "@/lib/format";
+import { sampleContext } from "@/lib/sample";
 import type { Niche } from "@/niches";
 
 const usd = (n: number) => `$${Math.round(n).toLocaleString("en-US")}`;
 
 /** Headline figures for the mockup, computed from the niche's own sample data. */
 function sampleFigures(niche: Niche) {
-  const { orders, expenses } = niche.sample;
-  const t = taxSummary(
-    { country: "United States", vatRegistered: false, vatRateOverride: null, reserveRateOverride: null, openingCash: 0, reserveSetAside: 0, fiscalYearStart: 1 },
-    orders,
-    expenses,
-    niche.expenseCategories,
-  );
-  const last = orders.map((o) => o.date).sort().at(-1)!;
-  const today = new Date(Number(last.slice(0, 4)), Number(last.slice(5, 7)) - 1, 15);
+  const { orders, expenses, today, settings } = sampleContext(niche);
+  const t = taxSummary(settings, orders, expenses, niche.expenseCategories);
   const leaks = profitLeaks(t, orders, expenses, monthlySeries(orders, expenses, today), niche);
   const flagged = leaks.filter((l) => l.leaking).length;
   const impact = leaks.reduce((s, l) => s + l.impact, 0);
@@ -165,6 +159,10 @@ export function Landing({ niche }: { niche: Niche }) {
                 <li>★ Profit Leak Detector</li>
                 <li>★ Service profitability</li>
                 <li>★ 6-month forecast</li>
+                <li>★ Customer insights & win-back list</li>
+                <li>★ Monthly business review</li>
+                <li>★ KPI goals & benchmarks</li>
+                <li>★ Cash flow & runway</li>
               </ul>
             </div>
           </div>

@@ -26,6 +26,10 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     { href: "/app/elite/leaks", label: "Profit Leak Detector", elite: true },
     { href: "/app/elite/services", label: "Service Profitability", elite: true },
     { href: "/app/elite/forecast", label: "6-Month Forecast", elite: true },
+    { href: "/app/elite/customers", label: "Customer Insights", elite: true },
+    { href: "/app/elite/review", label: "Monthly Review", elite: true },
+    { href: "/app/elite/scorecard", label: "KPIs & Benchmarks", elite: true },
+    { href: "/app/elite/cashflow", label: "Cash Flow", elite: true },
   ];
 
   return (

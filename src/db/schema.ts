@@ -10,6 +10,7 @@ import {
   timestamp,
   uuid,
 } from "drizzle-orm/pg-core";
+import type { Goals } from "@/niches/types";
 
 const money = (name: string) =>
   numeric(name, { precision: 14, scale: 2, mode: "number" }).notNull().default(0);
@@ -62,6 +63,8 @@ export const businesses = pgTable("businesses", {
   openingCash: money("opening_cash"),
   reserveSetAside: money("reserve_set_aside"),
   // { "2026-10": { "bank": true, ... }, "docs": { "statements": true, ... } }
+  // KPI Scorecard goals; null = the niche's defaults.
+  goals: jsonb("goals").$type<Goals>(),
   checklist: jsonb("checklist").$type<Record<string, Record<string, boolean>>>().notNull().default({}),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });

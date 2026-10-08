@@ -1,4 +1,5 @@
-import { getSession } from "@/lib/auth";
+import { getSession, isElite } from "@/lib/auth";
+import { customerInsights } from "@/lib/elite-metrics";
 import { toCsv } from "@/lib/csv";
 import { loadEntries } from "@/lib/data";
 import { jobProfit, jobRevenue } from "@/lib/metrics";
@@ -8,7 +9,8 @@ export async function GET(_: Request, { params }: { params: Promise<{ kind: stri
   const session = await getSession();
   if (!session) return new Response("Unauthorized", { status: 401 });
   const { kind } = await params;
-  if (kind !== "jobs" && kind !== "expenses" && kind !== "all") return new Response("Not found", { status: 404 });
+  if (!["jobs", "expenses", "all", "lapsed"].includes(kind)) return new Response("Not found", { status: 404 });
+  if (kind === "lapsed" && !isElite(session.user)) return new Response("Elite only", { status: 403 });
 
   const { business, user } = session;
   const niche = getNiche(business.niche);
@@ -29,6 +31,21 @@ export async function GET(_: Request, { params }: { params: Promise<{ kind: stri
     });
   }
   const { a, b } = niche.streams;
+
+  if (kind === "lapsed") {
+    const lapsed = customerInsights(jobs, niche, new Date()).atRisk;
+    const rows = [
+      [niche.job.customerLabel, "Visits", "Lifetime Revenue", "First Visit", "Last Visit", "Segment"],
+      ...lapsed.map((c) => [c.name, c.visits, round(c.revenue), c.first, c.last, c.segment]),
+    ];
+    return new Response(toCsv(rows), {
+      headers: {
+        "content-type": "text/csv; charset=utf-8",
+        "content-disposition": `attachment; filename="${slug}-win-back-list-${today}.csv"`,
+        "cache-control": "no-store",
+      },
+    });
+  }
 
   const rows: (string | number)[][] =
     kind === "jobs"

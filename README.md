@@ -13,9 +13,10 @@ First niche: **Auto Repair Shop**. The engine is shared, so adding a niche is on
 | Dashboard: revenue, expenses, net profit, margin, tax reserve, 12‑month chart, insights, monthly checklist | **Profit Leak Detector**: low‑margin jobs, parts/labor margin, overhead creep, rising expenses, weak service lines, unfunded tax, each with a $ impact |
 | Repair orders (parts + labor revenue/cost) and expenses: add, edit, delete | **Service Profitability**: revenue, margins and profit per service category |
 | Tax & Deductions: reserve rate for 50 countries, VAT/GST output/input/net, deductions by category | **6‑Month Forecast**: conservative / expected / aggressive scenarios |
-| Health Snapshot (5 scores + overall) | |
-| Accountant Export (print/PDF) + CSV export | |
-| CSV import (auto‑matches column names) and one‑click sample data | |
+| Health Snapshot (5 scores + overall) | **Customer Insights**: top 25, VIP/Core/Occasional segments, repeat rate, win‑back list of lapsed regulars (CSV) |
+| Accountant Export (print/PDF) + CSV export | **Monthly Business Review**: any month vs. prior month and same month last year, printable |
+| CSV import (auto‑matches column names) and one‑click sample data | **KPI Scorecard & Benchmarks**: editable yearly goals with progress, and your numbers vs. industry benchmarks |
+| | **Cash Flow**: money in/out per month, running cash position, runway |
 
 Free users see Elite pages blurred, with a teaser computed from **their own data** ("we found 2
 leaks worth $4,057"). The blurred preview is rendered from sample data, so paid details never
@@ -126,5 +127,5 @@ drizzle/                     SQL migrations
 ## Known gaps / next steps
 
 - Changing the account email is handled by support for now (admin panel shows the user; update it in the database).
-- More Elite reports from the workbook (technicians, inventory, receivables, benchmarks) and a yearly plan.
+- Elite reports that need extra data fields: technicians, inventory, receivables (paid/unpaid), comebacks. And a yearly plan.
 - Tax figures are planning estimates, not tax advice; the disclaimer is shown on every tax screen.

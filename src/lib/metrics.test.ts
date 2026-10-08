@@ -48,9 +48,11 @@ describe("matches the Essential workbook", () => {
 
   it("BUSINESS HEALTH SNAPSHOT components", () => {
     // Revenue grew >10% month over month, matching the workbook's cached trend score of 100.
+    // The last point is the current (partial) month and is ignored by the trend.
     const months = [
       { month: "2026-06", revenue: 100, expenses: 0, profit: 0, jobs: 0 },
       { month: "2026-07", revenue: 120, expenses: 0, profit: 0, jobs: 0 },
+      { month: "2026-08", revenue: 5, expenses: 0, profit: 0, jobs: 0 },
     ];
     const h = healthSnapshot(t, months);
     expect(h.components.map((c) => c.score)).toEqual([100, 100, 10, 70, 100]);
@@ -121,5 +123,21 @@ describe("elite", () => {
     const f = forecast(months, today);
     expect(f.map((p) => p.month)).toEqual(["2026-08", "2026-09", "2026-10", "2026-11", "2026-12", "2027-01"]);
     for (const p of f) expect(p.aggressive).toBeGreaterThanOrEqual(p.conservative);
+  });
+});
+
+describe("month-over-month uses complete months", () => {
+  it("ignores the current partial month and names the months", async () => {
+    const { completeMonths, insights } = await import("./metrics");
+    const months = [
+      { month: "2026-08", revenue: 100, expenses: 50, profit: 50, jobs: 1 },
+      { month: "2026-09", revenue: 150, expenses: 40, profit: 110, jobs: 1 },
+      { month: "2026-10", revenue: 1, expenses: 0, profit: 1, jobs: 1 },
+    ];
+    const [before, latest] = completeMonths(months);
+    expect([before.month, latest.month]).toEqual(["2026-08", "2026-09"]);
+    const tips = insights(t, months, autoRepair);
+    expect(tips[3]).toEqual({ ok: true, text: "Revenue is flat or up in September vs. August." });
+    expect(tips[4]).toEqual({ ok: true, text: "Expenses are flat or down in September vs. August." });
   });
 });

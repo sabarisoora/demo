@@ -161,9 +161,11 @@ export async function loadSample() {
   const latest = sample.orders.map((r) => r.date).sort().at(-1)!;
   const [ly, lm] = latest.split("-").map(Number);
   const now = new Date();
-  const offset = (now.getFullYear() - ly) * 12 + (now.getMonth() + 1 - lm);
+  // Land the newest sample month on LAST month: every month is complete and nothing has to be
+  // squeezed into the days of the current month that have passed so far.
+  const offset = (now.getFullYear() - ly) * 12 + (now.getMonth() + 1 - lm) - 1;
   const today = now.toISOString().slice(0, 10);
-  // Shifting can push a few late-month rows past today; clamp them so nothing is in the future.
+  // A few stray expenses run past the last job; clamp them so nothing is in the future.
   const shift = (d: string) => {
     const s = shiftMonths(d, offset);
     return s > today ? today : s;

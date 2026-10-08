@@ -40,6 +40,15 @@ export const autoRepair: Niche = {
     streamBMargin: 0.5,
     overheadShare: 0.3,
   },
+  segments: { vip: 1500, core: 600 },
+  benchmarks: {
+    avgTicket: 450,
+    grossMargin: 0.52,
+    netMargin: 0.12,
+    streamRatio: 1.1,
+    source: "General independent auto-repair reference ranges compiled from common industry sources (planning guide, not a guarantee).",
+  },
+  defaultGoals: { revenue: 400000, netProfit: 60000, avgTicket: 500, jobCount: 300, grossMargin: 0.55, netMargin: 0.15 },
   copy: {
     lowMarginTip: "Review the parts cost ratio on Engine and Transmission repair orders.",
     heroTitle: "Know exactly what your shop made — and what to set aside for tax.",

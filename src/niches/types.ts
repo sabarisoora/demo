@@ -46,6 +46,19 @@ export type Niche = {
     /** Overhead above this share of revenue is flagged. */
     overheadShare: number;
   };
+  /** Lifetime-revenue thresholds for customer segments (VIP ≥ vip, Core ≥ core). */
+  segments: { vip: number; core: number };
+  /** Industry reference points for the Benchmarks report. */
+  benchmarks: {
+    avgTicket: number;
+    grossMargin: number;
+    netMargin: number;
+    /** Stream A revenue ÷ stream B revenue (e.g. parts-to-labor). */
+    streamRatio: number;
+    source: string;
+  };
+  /** Starting goals for the KPI Scorecard (the owner can edit them). */
+  defaultGoals: Goals;
   copy: {
     /** Tip shown when net margin is low. */
     lowMarginTip: string;
@@ -54,4 +67,14 @@ export type Niche = {
     pains: { title: string; body: string }[];
   };
   sample: SampleData;
+};
+
+/** Annual goals for the KPI Scorecard. Margins are fractions (0.55 = 55%). */
+export type Goals = {
+  revenue: number;
+  netProfit: number;
+  avgTicket: number;
+  jobCount: number;
+  grossMargin: number;
+  netMargin: number;
 };

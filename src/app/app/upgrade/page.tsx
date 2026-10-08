@@ -34,6 +34,10 @@ export default async function UpgradePage() {
     ["Profit Leak Detector", "Finds the jobs, prices and costs draining profit, with the money each one costs you"],
     ["Service Profitability", `Margin and profit for every ${niche.job.singular.toLowerCase()} category: what to push, what to reprice`],
     ["6-Month Forecast", "Conservative, expected and aggressive profit scenarios for planning cash and hiring"],
+    ["Customer Insights", "Top customers, VIP/Core/Occasional segments, repeat rate, and a win-back list of regulars who stopped coming"],
+    ["Monthly Business Review", "A printable one-page report vs last month and the same month last year"],
+    ["KPI Scorecard & Benchmarks", "Your own yearly goals with progress, and your numbers against industry benchmarks"],
+    ["Cash Flow", "Money in vs out each month, running cash position and months of runway"],
     ["Everything in Essential", "Plus every new Elite report as it ships"],
   ];
 

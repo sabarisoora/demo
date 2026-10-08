@@ -15,6 +15,13 @@
       "when": 1791473577948,
       "tag": "0001_auth_and_admin",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1791474540577,
+      "tag": "0002_kpi_goals",
+      "breakpoints": true
     }
   ]
 }

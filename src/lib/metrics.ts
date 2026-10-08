@@ -128,10 +128,21 @@ export function monthlySeries(jobs: JobRow[], expenses: ExpenseRow[], today: Dat
 }
 export type MonthPoint = ReturnType<typeof monthlySeries>[number];
 
+const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const monthName = (key: string) => MONTH_NAMES[Number(key.slice(5, 7)) - 1];
+
+/**
+ * The two most recent COMPLETE months [before, latest] for month-over-month checks.
+ * The last entry of a rolling series is the current, partial month, so it's skipped.
+ */
+export function completeMonths(months: MonthPoint[]): [MonthPoint, MonthPoint] {
+  const n = months.length;
+  return n >= 3 ? [months[n - 3], months[n - 2]] : [months[0], months[n - 1]];
+}
+
 /** BUSINESS HEALTH SNAPSHOT sheet. */
 export function healthSnapshot(t: TaxSummary, months: MonthPoint[]) {
-  const thisMonth = months[months.length - 1];
-  const lastMonth = months[months.length - 2];
+  const [lastMonth, thisMonth] = completeMonths(months);
   const monthlyBurn = t.totalExpenses / 12;
   const expenseShare = ratio(t.totalExpenses, t.revenue, 1);
 
@@ -153,7 +164,7 @@ export function healthSnapshot(t: TaxSummary, months: MonthPoint[]) {
     { key: "cash", label: "Cash", score: cash, why: "Months of expenses covered by cash on hand" },
     { key: "tax", label: "Tax readiness", score: tax, why: "How much of the recommended tax reserve is funded" },
     { key: "expense", label: "Expense health", score: expense, why: "Total expenses as a share of revenue" },
-    { key: "trend", label: "Revenue trend", score: trend, why: "This month vs. last month" },
+    { key: "trend", label: "Revenue trend", score: trend, why: "Last complete month vs. the month before" },
   ].map((c) => ({ ...c, status: statusFor(c.score) }));
   const overall = sum(components, (c) => c.score) / components.length;
   return { components, overall, status: statusFor(overall) };
@@ -171,8 +182,8 @@ export type Insight = { ok: boolean; text: string };
 
 /** DASHBOARD "INSIGHTS — WHAT THIS MEANS". */
 export function insights(t: TaxSummary, months: MonthPoint[], niche: Niche): Insight[] {
-  const thisMonth = months[months.length - 1];
-  const lastMonth = months[months.length - 2];
+  const [lastMonth, thisMonth] = completeMonths(months);
+  const vs = `in ${monthName(thisMonth.month)} vs. ${monthName(lastMonth.month)}`;
   const pct = Math.round(niche.thresholds.netMargin * 100);
   return [
     t.netMargin < niche.thresholds.netMargin
@@ -185,11 +196,11 @@ export function insights(t: TaxSummary, months: MonthPoint[], niche: Niche): Ins
       ? { ok: false, text: "You're running at a loss: expenses exceed revenue for this period." }
       : { ok: true, text: "The business is profitable for this period." },
     thisMonth.revenue < lastMonth.revenue
-      ? { ok: false, text: "Revenue is down vs. last month." }
-      : { ok: true, text: "Revenue is flat or up vs. last month." },
+      ? { ok: false, text: `Revenue is down ${vs}.` }
+      : { ok: true, text: `Revenue is flat or up ${vs}.` },
     thisMonth.expenses > lastMonth.expenses
-      ? { ok: false, text: "Expenses are up vs. last month." }
-      : { ok: true, text: "Expenses are flat or down vs. last month." },
+      ? { ok: false, text: `Expenses are up ${vs}.` }
+      : { ok: true, text: `Expenses are flat or down ${vs}.` },
   ];
 }
 
