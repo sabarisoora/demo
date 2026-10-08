@@ -13,10 +13,19 @@ if (existsSync(".env")) {
   }
 }
 
-const url = process.env.DATABASE_URL;
+// Prefer the direct (non-pooled) connection for schema changes when the integration provides one.
+const url =
+  process.env.DATABASE_URL_UNPOOLED ||
+  process.env.POSTGRES_URL_NON_POOLING ||
+  process.env.DATABASE_URL ||
+  process.env.POSTGRES_URL ||
+  "";
 if (!url) {
-  console.error("DATABASE_URL is not set — cannot run migrations.");
-  process.exit(1);
+  // Don't fail the deploy: the site still builds, and migrations run on the next deploy
+  // once a database is connected.
+  console.warn("\n⚠  No DATABASE_URL set — skipping database migrations.");
+  console.warn("   On Vercel: Storage → connect a Neon Postgres database, then Redeploy.\n");
+  process.exit(0);
 }
 
 const client = postgres(url, { max: 1, prepare: false, onnotice: () => {} });

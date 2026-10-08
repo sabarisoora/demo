@@ -33,7 +33,7 @@ Free to host: Vercel Hobby + Neon free Postgres.
 ## Deploy to Vercel (free)
 
 1. **Import the repo** at vercel.com → *Add New → Project* → pick this GitHub repo. Framework is detected as Next.js; keep the defaults.
-2. **Add a database**: in the project, *Storage → Create Database → Neon (Postgres)* → connect it to the project. This sets `DATABASE_URL` for you.
+2. **Add a database**: in the project, *Storage → Create Database → Neon (Postgres)* → connect it to the project. This sets `DATABASE_URL` for you (`POSTGRES_URL` also works).
 3. **Environment variables** (*Settings → Environment Variables*):
 
    | Name | Value |
@@ -44,7 +44,7 @@ Free to host: Vercel Hobby + Neon free Postgres.
    | `DS24_IPN_PASSPHRASE` | A long random string; enter the same one in Digistore24 (step 5) |
    | `NEXT_PUBLIC_ELITE_PRICE_LABEL` | e.g. `$29/mo` (optional, shown on pricing) |
 
-4. **Deploy.** The build runs database migrations automatically (`npm run build` = migrate + `next build`). After changing a `NEXT_PUBLIC_*` variable, redeploy so it takes effect.
+4. **Redeploy** (*Deployments → ⋯ → Redeploy*). The build creates the database tables automatically (`npm run build` = migrate + `next build`). The first deploy, before a database is connected, still succeeds: it skips migrations with a warning, and the landing page works, but signup needs the database. Redeploy after connecting it, and after changing any `NEXT_PUBLIC_*` variable.
 5. **Connect Digistore24**:
    - Create the Elite product as a **subscription** (monthly payment plan). Set its affiliate commission (first payment vs. follow‑up payments).
    - *Settings → Integrations (IPN) → New connection → Generic*: URL `https://YOUR-DOMAIN/api/ds24/ipn`, SHA passphrase = `DS24_IPN_PASSPHRASE`. Click *Test connection*; it should answer `OK`.

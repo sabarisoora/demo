@@ -3,19 +3,32 @@ import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 import * as schema from "./schema";
 
-const url = process.env.DATABASE_URL;
-if (!url) throw new Error("DATABASE_URL is not set. Copy .env.example to .env and fill it in.");
+// Vercel's Neon/Postgres integrations name the variable differently; accept any of them.
+export function databaseUrl() {
+  return process.env.DATABASE_URL || process.env.POSTGRES_URL || process.env.POSTGRES_PRISMA_URL || "";
+}
+
+function createDb() {
+  const url = databaseUrl();
+  if (!url) {
+    throw new Error("No database configured. Set DATABASE_URL (on Vercel: Storage → connect a Neon Postgres database, then redeploy).");
+  }
+  // Neon/Supabase poolers (PgBouncer in transaction mode) don't support prepared statements.
+  const client = postgres(url, { max: 5, prepare: false });
+  return drizzle(client, { schema });
+}
+
+type Db = ReturnType<typeof createDb>;
 
 // Reuse one client across hot reloads in dev and across invocations on a warm serverless instance.
-const globalForDb = globalThis as unknown as { pg?: ReturnType<typeof postgres> };
-const client =
-  globalForDb.pg ??
-  postgres(url, {
-    max: 5,
-    // Neon/Supabase poolers (PgBouncer in transaction mode) don't support prepared statements.
-    prepare: false,
-  });
-if (process.env.NODE_ENV !== "production") globalForDb.pg = client;
+const globalForDb = globalThis as unknown as { db?: Db };
 
-export const db = drizzle(client, { schema });
+// Connect lazily on first use, so building the app never needs a database.
+export const db = new Proxy({} as Db, {
+  get(_, prop) {
+    globalForDb.db ??= createDb();
+    return Reflect.get(globalForDb.db, prop, globalForDb.db);
+  },
+});
+
 export * from "./schema";
