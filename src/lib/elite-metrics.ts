@@ -3,6 +3,11 @@ import type { Goals, Niche } from "@/niches/types";
 import { jobCost, jobProfit, jobRevenue, lastMonths, monthKey, type ExpenseRow, type JobRow } from "./metrics";
 
 type CustomerJob = JobRow & { customer: string };
+/** A job with the optional detail fields (technician, hours, payment, comeback). */
+export type DetailJob = JobRow & { customer?: string; ref?: string };
+
+/** True once a business has started recording any job details. */
+export const tracksDetails = (jobs: DetailJob[]) => jobs.some((j) => !!j.technician || (j.hours ?? 0) > 0 || j.comeback);
 
 const sum = <T>(rows: T[], f: (r: T) => number) => rows.reduce((s, r) => s + f(r), 0);
 const ratio = (a: number, b: number) => (b === 0 ? 0 : a / b);
@@ -12,7 +17,7 @@ const isoDay = (d: Date) => `${monthKey(d)}-${String(d.getDate()).padStart(2, "0
 // ───────────── Trailing twelve months ─────────────
 
 /** Totals for the last 12 months including the current one (the workbook's "TTM"). */
-export function ttmSummary(jobs: JobRow[], expenses: ExpenseRow[], today: Date) {
+export function ttmSummary(jobs: DetailJob[], expenses: ExpenseRow[], today: Date) {
   const start = `${lastMonths(today, 12)[0]}-01`;
   const j = jobs.filter((x) => x.date >= start);
   const e = expenses.filter((x) => x.date >= start);
@@ -32,6 +37,8 @@ export function ttmSummary(jobs: JobRow[], expenses: ExpenseRow[], today: Date) 
     avgTicket: ratio(revenue, j.length),
     revenueA: sum(j, (x) => x.revenueA),
     revenueB: sum(j, (x) => x.revenueB),
+    comebacks: j.filter((x) => x.comeback).length,
+    tracksDetails: tracksDetails(j),
   };
 }
 export type Ttm = ReturnType<typeof ttmSummary>;
@@ -64,16 +71,116 @@ export function scorecard(t: Ttm, goals: Goals, niche: Niche): ScoreRow[] {
 
 export type BenchRow = { label: string; yours: number; benchmark: number; format: "money" | "percent" | "ratio"; better: boolean; hint: string };
 
+/** Your trailing-12-month numbers vs the niche's reference points ([] when the niche has none). */
 export function benchmarkRows(t: Ttm, niche: Niche): BenchRow[] {
   const b = niche.benchmarks;
+  if (!b) return [];
   const { a, b: sb } = niche.streams;
   const streamRatio = ratio(t.revenueA, t.revenueB);
-  return [
+  const rows: BenchRow[] = [
     { label: `Average ${niche.job.short} value`, yours: t.avgTicket, benchmark: b.avgTicket, format: "money", better: t.avgTicket >= b.avgTicket, hint: "Raise with inspections, recommended services and package pricing." },
     { label: "Gross margin", yours: t.grossMargin, benchmark: b.grossMargin, format: "percent", better: t.grossMargin >= b.grossMargin, hint: `Review ${a.toLowerCase()} markup and your ${sb.toLowerCase()} rate.` },
     { label: "Net margin", yours: t.netMargin, benchmark: b.netMargin, format: "percent", better: t.netMargin >= b.netMargin, hint: "Overhead is the usual gap between gross and net." },
     { label: `${a}-to-${sb.toLowerCase()} revenue`, yours: streamRatio, benchmark: b.streamRatio, format: "ratio", better: streamRatio >= b.streamRatio, hint: `How much ${a.toLowerCase()} you sell per unit of ${sb.toLowerCase()}.` },
   ];
+  // Only meaningful once comebacks are being recorded; otherwise 0% would look falsely good.
+  if (t.tracksDetails) {
+    const rate = ratio(t.comebacks, t.jobCount);
+    rows.push({ label: `${niche.details.comeback} rate`, yours: rate, benchmark: b.comebackRate, format: "percent", better: rate <= b.comebackRate, hint: "Repeat repairs cost labor and trust; check them by technician." });
+  }
+  return rows;
+}
+
+// ───────────── Technicians and comebacks ─────────────
+
+export function technicianStats(jobs: DetailJob[]) {
+  const map = new Map<string, DetailJob[]>();
+  for (const j of jobs) {
+    const name = (j.technician ?? "").trim();
+    if (!name) continue;
+    map.set(name, [...(map.get(name) ?? []), j]);
+  }
+  const rows = [...map.entries()].map(([name, js]) => {
+    const revenue = sum(js, jobRevenue);
+    const hours = sum(js, (j) => j.hours ?? 0);
+    const laborRevenue = sum(js, (j) => j.revenueB);
+    const comebacks = js.filter((j) => j.comeback);
+    return {
+      name,
+      jobs: js.length,
+      hours,
+      revenue,
+      profit: sum(js, jobProfit),
+      laborRevenue,
+      // Effective labor rate: what each billed hour actually brought in.
+      ratePerHour: ratio(laborRevenue, hours),
+      revenuePerHour: ratio(revenue, hours),
+      avgTicket: ratio(revenue, js.length),
+      comebacks: comebacks.length,
+      comebackRate: ratio(comebacks.length, js.length),
+      comebackCost: sum(comebacks, jobCost),
+    };
+  });
+  rows.sort((x, y) => y.revenue - x.revenue);
+  return { rows, unassigned: jobs.filter((j) => !(j.technician ?? "").trim()).length };
+}
+
+/** Comebacks: repeat repairs. Their cost is the labor and parts spent redoing work. */
+export function comebackStats(jobs: DetailJob[]) {
+  const cbs = jobs.filter((j) => j.comeback);
+  const byCategory = [...new Set(cbs.map((j) => j.category))]
+    .map((category) => {
+      const c = cbs.filter((j) => j.category === category);
+      const all = jobs.filter((j) => j.category === category).length;
+      return { category, count: c.length, rate: ratio(c.length, all), cost: sum(c, jobCost) };
+    })
+    .sort((x, y) => y.count - x.count);
+  return {
+    count: cbs.length,
+    rate: ratio(cbs.length, jobs.length),
+    cost: sum(cbs, jobCost),
+    // Net cost after anything the customer was charged for the redo.
+    netCost: Math.max(sum(cbs, jobCost) - sum(cbs, jobRevenue), 0),
+    byCategory,
+    recent: [...cbs].sort((x, y) => (x.date < y.date ? 1 : -1)).slice(0, 20),
+  };
+}
+
+// ───────────── Accounts receivable ─────────────
+
+export const AGING_BUCKETS = ["Current", "31–60 days", "61–90 days", "90+ days"] as const;
+export type AgingBucket = (typeof AGING_BUCKETS)[number];
+
+export function agingBucket(days: number): AgingBucket {
+  return days <= 30 ? "Current" : days <= 60 ? "31–60 days" : days <= 90 ? "61–90 days" : "90+ days";
+}
+
+/** Unpaid jobs aged by days since the job date (the workbook's AR Center). */
+export function receivables<J extends DetailJob>(jobs: J[], today: Date) {
+  const t = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+  const open = jobs
+    .filter((j) => j.paid === false)
+    .map((j) => {
+      const [y, m, d] = j.date.split("-").map(Number);
+      const days = Math.max(0, Math.round((t - Date.UTC(y, m - 1, d)) / DAY));
+      return { job: j, amount: jobRevenue(j), days, bucket: agingBucket(days) };
+    })
+    .sort((x, y) => y.days - x.days);
+  const total = sum(open, (o) => o.amount);
+  const buckets = AGING_BUCKETS.map((bucket) => {
+    const b = open.filter((o) => o.bucket === bucket);
+    const amount = sum(b, (o) => o.amount);
+    return { bucket, count: b.length, amount, share: ratio(amount, total) };
+  });
+  const over90 = sum(open.filter((o) => o.days > 90), (o) => o.amount);
+  return {
+    open,
+    total,
+    buckets,
+    over90,
+    avgDays: ratio(sum(open, (o) => o.days * o.amount), total),
+    currentShare: ratio(buckets[0].amount, total),
+  };
 }
 
 // ───────────── Customers ─────────────

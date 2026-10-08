@@ -16,7 +16,9 @@ First niche: **Auto Repair Shop**. The engine is shared, so adding a niche is on
 | Health Snapshot (5 scores + overall) | **Customer Insights**: top 25, VIP/Core/Occasional segments, repeat rate, win‑back list of lapsed regulars (CSV) |
 | Accountant Export (print/PDF) + CSV export | **Monthly Business Review**: any month vs. prior month and same month last year, printable |
 | CSV import (auto‑matches column names) and one‑click sample data | **KPI Scorecard & Benchmarks**: editable yearly goals with progress, and your numbers vs. industry benchmarks |
-| | **Cash Flow**: money in/out per month, running cash position, runway |
+| Weekly summary email (opt-out, one-click unsubscribe) | **Cash Flow**: money in/out per month, running cash position, runway |
+| Optional job details: technician, hours, paid/unpaid, comeback | **Receivables**: unpaid balances aged Current/31–60/61–90/90+ days, chase list, mark paid |
+| | **Technicians & Comebacks**: revenue, hours, effective labor rate and comeback rate per technician; comebacks by category |
 
 Free users see Elite pages blurred, with a teaser computed from **their own data** ("we found 2
 leaks worth $4,057"). The blurred preview is rendered from sample data, so paid details never
@@ -57,6 +59,7 @@ Free to host: Vercel Hobby + Neon free Postgres.
    | `NEXT_PUBLIC_COMPANY_NAME` | Your legal business name, shown on legal pages |
    | `NEXT_PUBLIC_GOVERNING_LAW` | Country whose law governs the Terms (default `India`) |
    | `NEXT_PUBLIC_REFUND_DAYS` | Money-back window in days; match your DS24 product (default `30`) |
+   | `CRON_SECRET` | Any long random string. Turns on the weekly summary email job (Vercel sends it on cron calls) |
 
 4. **Redeploy** (*Deployments → ⋯ → Redeploy*). The build creates the database tables automatically (`npm run build` = migrate + `next build`). The first deploy, before a database is connected, still succeeds: it skips migrations with a warning, and the landing page works, but signup needs the database. Redeploy after connecting it, and after changing any `NEXT_PUBLIC_*` variable.
 5. **Connect Digistore24**:
@@ -72,6 +75,10 @@ Free to host: Vercel Hobby + Neon free Postgres.
 3. Set `EMAIL_FROM` to `ProfitIQS <hello@profitiqs.com>` and redeploy.
 
 Before the domain is verified, Resend's test sender only delivers to the email you signed up to Resend with. That's enough to confirm your own admin account, but customers won't get emails until the domain is verified.
+
+### Weekly summary email
+
+`vercel.json` schedules `/api/cron/weekly-digest` daily at 13:00 UTC. Each run emails anyone with a confirmed email, some data, and no summary in the last week (up to 150 per run, the rest the next day), so each user gets one per week. It needs `CRON_SECRET` and `RESEND_API_KEY`. Users can switch it off in Account or with the one-click unsubscribe link. Use **Admin → Send me a test weekly summary** to preview it.
 
 ### Legal pages
 
@@ -99,10 +106,19 @@ npm run lint                  # TypeScript check
 
 ## Adding a niche
 
-1. Copy `src/niches/auto-repair.ts` to e.g. `src/niches/salon.ts` and change the labels (job name, the two revenue streams, categories, thresholds, landing copy).
-2. Add sample data as `src/niches/samples/salon.json` (same shape: `orders` + `expenses`).
-3. Register it in `src/niches/index.ts`.
-4. Its landing page is live at `/salon` automatically (and listed in the sitemap). Send that niche's affiliates there.
+From one of your Essential workbooks (same layout as the auto repair one):
+
+```bash
+pip install openpyxl
+python3 scripts/niche-from-workbook.py "Hair_Salon_..._Essential_2026.xlsx"   # optional: --slug hair-salon
+npm test        # checks the new niche's totals against the values Excel computed
+```
+
+The script reads the niche name, the job type ("Repair Order" → "RO-"), the two revenue streams,
+both category lists, the planning threshold and the sample rows. It writes `src/niches/<slug>.ts`,
+its sample data and Excel's totals, and registers it. The landing page is then live at `/<slug>`
+and in the sitemap. Review the generated copy, segment thresholds and default goals. Industry
+benchmarks are left out unless you add them from a real source.
 
 ## Project layout
 
@@ -127,5 +143,5 @@ drizzle/                     SQL migrations
 ## Known gaps / next steps
 
 - Changing the account email is handled by support for now (admin panel shows the user; update it in the database).
-- Elite reports that need extra data fields: technicians, inventory, receivables (paid/unpaid), comebacks. And a yearly plan.
+- Inventory and equipment tracking from the Elite workbook, and a yearly plan.
 - Tax figures are planning estimates, not tax advice; the disclaimer is shown on every tax screen.

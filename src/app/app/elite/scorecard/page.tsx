@@ -42,6 +42,7 @@ function Scores({ rows, money }: { rows: ScoreRow[]; money: (n: number) => strin
 }
 
 function Benchmarks({ rows, money, niche }: { rows: BenchRow[]; money: (n: number) => string; niche: Niche }) {
+  if (rows.length === 0) return <p className="text-sm text-ink-2">Industry benchmarks aren't available for the {niche.name.toLowerCase()} edition yet.</p>;
   const fmt = (r: BenchRow, v: number) => (r.format === "money" ? money(v) : r.format === "percent" ? percent(v) : `${v.toFixed(2)}×`);
   return (
     <>
@@ -65,7 +66,7 @@ function Benchmarks({ rows, money, niche }: { rows: BenchRow[]; money: (n: numbe
           </li>
         ))}
       </ul>
-      <p className="mt-3 text-xs text-muted">{niche.benchmarks.source}</p>
+      <p className="mt-3 text-xs text-muted">{niche.benchmarks?.source}</p>
     </>
   );
 }

@@ -163,6 +163,8 @@ export function Landing({ niche }: { niche: Niche }) {
                 <li>★ Monthly business review</li>
                 <li>★ KPI goals & benchmarks</li>
                 <li>★ Cash flow & runway</li>
+                <li>★ Receivables aging</li>
+                <li>★ {niche.details.technicianPlural} & {niche.details.comeback.toLowerCase()}s</li>
               </ul>
             </div>
           </div>

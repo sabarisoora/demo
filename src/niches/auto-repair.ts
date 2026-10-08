@@ -13,6 +13,13 @@ export const autoRepair: Niche = {
     customerLabel: "Customer",
   },
   streams: { a: "Parts", b: "Labor" },
+  details: {
+    technician: "Technician",
+    technicianPlural: "Technicians",
+    hours: "Labor hours",
+    comeback: "Comeback",
+    comebackHint: "Repeat repair of earlier work (warranty redo)",
+  },
   jobCategories: [
     "Oil Change / Maintenance",
     "Brake Service",
@@ -46,6 +53,7 @@ export const autoRepair: Niche = {
     grossMargin: 0.52,
     netMargin: 0.12,
     streamRatio: 1.1,
+    comebackRate: 0.03,
     source: "General independent auto-repair reference ranges compiled from common industry sources (planning guide, not a guarantee).",
   },
   defaultGoals: { revenue: 400000, netProfit: 60000, avgTicket: 500, jobCount: 300, grossMargin: 0.55, netMargin: 0.15 },

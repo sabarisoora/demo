@@ -31,20 +31,42 @@ function L({ label, children, className = "" }: { label: string; children: React
 
 const today = () => new Date().toISOString().slice(0, 10);
 
-type JobInit = { id: string; ref: string; date: string; category: string; customer: string; revenueA: number; costA: number; revenueB: number; costB: number };
+type JobInit = {
+  id: string;
+  ref: string;
+  date: string;
+  category: string;
+  customer: string;
+  revenueA: number;
+  costA: number;
+  revenueB: number;
+  costB: number;
+  technician: string;
+  hours: number;
+  paid: boolean;
+  comeback: boolean;
+};
+
+export type DetailLabels = { technician: string; hours: string; comeback: string; comebackHint: string };
 
 export function JobForm({
   categories,
   streams,
   labels,
+  details,
+  technicians,
   initial,
 }: {
   categories: string[];
   streams: { a: string; b: string };
   labels: { singular: string; customer: string; short: string };
+  details: DetailLabels;
+  /** Names already used, offered as suggestions. */
+  technicians: string[];
   initial?: JobInit;
 }) {
   const [state, action, pending] = useActionState(saveJob, undefined);
+  const hasDetails = !!initial && (!!initial.technician || initial.hours > 0 || !initial.paid || initial.comeback);
   const form = useRef<HTMLFormElement>(null);
   useEffect(() => {
     if (state?.ok && !initial) form.current?.reset();
@@ -83,6 +105,32 @@ export function JobForm({
       <L label={`${streams.b} cost`}>
         <input className="field num" name="costB" type="number" step="0.01" min="0" inputMode="decimal" defaultValue={initial?.costB ?? ""} placeholder="0.00" />
       </L>
+      <details className="col-span-2 rounded-lg border border-line px-3 py-2 md:col-span-4" open={hasDetails}>
+        <summary className="cursor-pointer text-sm font-semibold text-ink-2">
+          More details <span className="font-normal text-muted">(optional: {details.technician.toLowerCase()}, hours, payment, {details.comeback.toLowerCase()})</span>
+        </summary>
+        <div className="mt-3 grid grid-cols-2 gap-3 pb-1 md:grid-cols-4">
+          <L label={details.technician}>
+            <input className="field" name="technician" list="technician-names" defaultValue={initial?.technician} autoComplete="off" />
+            <datalist id="technician-names">
+              {technicians.map((t) => (
+                <option key={t} value={t} />
+              ))}
+            </datalist>
+          </L>
+          <L label={details.hours}>
+            <input className="field num" name="hours" type="number" step="0.1" min="0" inputMode="decimal" defaultValue={initial?.hours || ""} placeholder="0.0" />
+          </L>
+          <label className="flex items-center gap-2 self-end pb-2 text-sm">
+            <input type="checkbox" name="unpaid" defaultChecked={initial ? !initial.paid : false} className="h-4 w-4 accent-[var(--brand)]" />
+            Not paid yet
+          </label>
+          <label className="flex items-center gap-2 self-end pb-2 text-sm" title={details.comebackHint}>
+            <input type="checkbox" name="comeback" defaultChecked={initial?.comeback} className="h-4 w-4 accent-[var(--brand)]" />
+            {details.comeback}
+          </label>
+        </div>
+      </details>
       <div className="col-span-2 flex flex-wrap items-center gap-3 md:col-span-4">
         <button className="btn btn-primary" disabled={pending}>
           {pending ? "Saving…" : initial ? "Save changes" : `Add ${labels.singular.toLowerCase()}`}

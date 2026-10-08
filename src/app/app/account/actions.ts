@@ -41,3 +41,10 @@ export async function deleteAccount(_: AccountState, form: FormData): Promise<Ac
   await destroySession();
   redirect("/?deleted=1");
 }
+
+export async function setDigest(_: AccountState, form: FormData): Promise<AccountState> {
+  const { user } = await requireSession();
+  const on = form.get("digest") === "on";
+  await db.update(users).set({ digestOptOut: !on }).where(eq(users.id, user.id));
+  return { ok: on ? "Weekly summary is on." : "Weekly summary is off." };
+}

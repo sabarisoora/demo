@@ -6,7 +6,7 @@ import { jobProfit, jobRevenue } from "@/lib/metrics";
 import { getNiche } from "@/niches";
 import { Card, Empty, PageHeader } from "@/components/ui";
 import { PAGE_SIZE, Pager, parsePage } from "@/components/pager";
-import { deleteJob } from "../actions";
+import { deleteJob, setJobPaid } from "../actions";
 import { DeleteButton, JobForm } from "../entry-forms";
 
 export const metadata = { title: "Entries" };
@@ -34,7 +34,15 @@ export default async function JobsPage({ searchParams }: { searchParams: Promise
       </PageHeader>
 
       <Card title={editing ? `Edit ${editing.ref || niche.job.singular}` : `Add a ${niche.job.singular.toLowerCase()}`}>
-        <JobForm key={editing?.id ?? "new"} categories={niche.jobCategories} streams={niche.streams} labels={labels} initial={editing} />
+        <JobForm
+          key={editing?.id ?? "new"}
+          categories={niche.jobCategories}
+          streams={niche.streams}
+          labels={labels}
+          details={niche.details}
+          technicians={[...new Set(jobs.map((j) => j.technician).filter(Boolean))].sort()}
+          initial={editing}
+        />
       </Card>
 
       <div className="mt-4">
@@ -43,7 +51,7 @@ export default async function JobsPage({ searchParams }: { searchParams: Promise
         ) : (
           <Card className="overflow-hidden p-0">
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[760px] text-sm">
+              <table className="w-full min-w-[820px] text-sm">
                 <thead className="bg-surface-2 text-left text-xs text-muted uppercase">
                   <tr>
                     <th className="px-4 py-2.5 font-semibold">{niche.job.short} #</th>
@@ -63,7 +71,11 @@ export default async function JobsPage({ searchParams }: { searchParams: Promise
                     const m = rev ? p / rev : 0;
                     return (
                       <tr key={j.id} className={`border-t border-line ${editing?.id === j.id ? "bg-brand-soft" : ""}`}>
-                        <td className="px-4 py-2 font-medium">{j.ref}</td>
+                        <td className="px-4 py-2 font-medium">
+                          {j.ref}
+                          {!j.paid && <span className="ml-2 rounded bg-warning/20 px-1.5 py-0.5 text-[10px] font-bold text-ink uppercase">Unpaid</span>}
+                          {j.comeback && <span className="ml-2 rounded bg-critical/15 px-1.5 py-0.5 text-[10px] font-bold text-critical-ink uppercase">{niche.details.comeback}</span>}
+                        </td>
                         <td className="px-4 py-2 whitespace-nowrap text-ink-2">{dateLabel(j.date)}</td>
                         <td className="px-4 py-2">{j.category}</td>
                         <td className="px-4 py-2 text-ink-2">{j.customer}</td>
@@ -74,6 +86,12 @@ export default async function JobsPage({ searchParams }: { searchParams: Promise
                         </td>
                         <td className="px-4 py-2">
                           <div className="flex justify-end gap-3">
+                            {!j.paid && (
+                              <form action={setJobPaid}>
+                                <input type="hidden" name="id" value={j.id} />
+                                <button className="text-xs font-semibold text-good-ink hover:underline">Mark paid</button>
+                              </form>
+                            )}
                             <Link href={`/app/jobs?edit=${j.id}`} className="text-xs font-semibold text-brand hover:underline">
                               Edit
                             </Link>

@@ -8,6 +8,10 @@ export type SampleData = {
     costA: number;
     revenueB: number;
     costB: number;
+    technician?: string;
+    hours?: number;
+    paid?: boolean;
+    comeback?: boolean;
   }[];
   expenses: { ref: string; date: string; category: string; vendor: string; amount: number }[];
 };
@@ -29,6 +33,14 @@ export type Niche = {
     refPrefix: string; // "RO-"
     customerLabel: string; // "Customer"
   };
+  /** Labels for the optional job details. */
+  details: {
+    technician: string; // "Technician"
+    technicianPlural: string; // "Technicians"
+    hours: string; // "Labor hours"
+    comeback: string; // "Comeback"
+    comebackHint: string; // "Repeat repair of earlier work"
+  };
   /** The two revenue/cost streams on every job, e.g. Parts + Labor. */
   streams: { a: string; b: string };
   jobCategories: string[];
@@ -48,13 +60,15 @@ export type Niche = {
   };
   /** Lifetime-revenue thresholds for customer segments (VIP ≥ vip, Core ≥ core). */
   segments: { vip: number; core: number };
-  /** Industry reference points for the Benchmarks report. */
-  benchmarks: {
+  /** Industry reference points for the Benchmarks report. Omit for niches without published figures. */
+  benchmarks?: {
     avgTicket: number;
     grossMargin: number;
     netMargin: number;
     /** Stream A revenue ÷ stream B revenue (e.g. parts-to-labor). */
     streamRatio: number;
+    /** Share of jobs that are comebacks (lower is better). */
+    comebackRate: number;
     source: string;
   };
   /** Starting goals for the KPI Scorecard (the owner can edit them). */

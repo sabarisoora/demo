@@ -34,6 +34,11 @@ const jobSchema = z.object({
   costA: money,
   revenueB: money,
   costB: money,
+  technician: z.string().trim().max(80).default(""),
+  hours: z.coerce.number().finite().min(0, "Hours can't be negative").max(10000).default(0),
+  // Checkboxes: present ("on") when ticked, absent otherwise.
+  unpaid: z.string().optional(),
+  comeback: z.string().optional(),
 });
 
 async function nextRef(table: typeof jobs | typeof expenses, businessId: string, prefix: string, start: number) {
@@ -45,7 +50,8 @@ export async function saveJob(_: ActionState, form: FormData): Promise<ActionSta
   const { business } = await requireSession();
   const parsed = jobSchema.safeParse(Object.fromEntries(form));
   if (!parsed.success) return { error: parsed.error.issues[0].message };
-  const { id, ...v } = parsed.data;
+  const { id, unpaid, comeback, ...rest } = parsed.data;
+  const v = { ...rest, paid: unpaid !== "on", comeback: comeback === "on" };
   if (id) {
     await db.update(jobs).set(v).where(and(eq(jobs.id, id), eq(jobs.businessId, business.id)));
   } else {
@@ -56,6 +62,14 @@ export async function saveJob(_: ActionState, form: FormData): Promise<ActionSta
   refresh();
   if (id) redirect("/app/jobs");
   return { ok: "Saved." };
+}
+
+export async function setJobPaid(form: FormData) {
+  const { business } = await requireSession();
+  const id = z.string().uuid().parse(form.get("id"));
+  const paid = form.get("paid") !== "false";
+  await db.update(jobs).set({ paid }).where(and(eq(jobs.id, id), eq(jobs.businessId, business.id)));
+  refresh();
 }
 
 export async function deleteJob(form: FormData) {
@@ -204,7 +218,19 @@ const JOB_ALIASES = {
   costB: ["labor cost", "labour cost", "tech cost", "technician cost", "cost b"],
   total: ["total", "total revenue", "revenue", "amount", "sales", "grand total"],
   totalCost: ["total cost", "cost", "cogs"],
+  technician: ["technician", "tech", "technician name", "mechanic", "staff", "employee", "stylist", "provider"],
+  hours: ["hours", "labor hours", "labour hours", "billed hours", "hrs", "hours billed"],
+  paid: ["paid", "status", "payment status", "paid status", "is paid"],
+  comeback: ["comeback", "is comeback", "redo", "warranty redo", "repeat repair"],
 };
+
+/** "Paid", "yes", "closed" → true; "unpaid", "open", "due" → false; blank → paid. */
+function parsePaid(v: string) {
+  const s = v.trim().toLowerCase();
+  if (!s) return true;
+  return !["unpaid", "no", "false", "0", "open", "due", "owing", "outstanding", "pending", "invoiced"].includes(s);
+}
+const parseYes = (v: string) => ["yes", "y", "true", "1", "x", "comeback"].includes(v.trim().toLowerCase());
 
 const EXPENSE_ALIASES = {
   ref: ["ref", "id", "expense id", "reference", "transaction id", "bill number"],
@@ -266,6 +292,10 @@ export async function importCsv(_: ImportState, form: FormData): Promise<ImportS
         category: (cell(r, col.category) || "Uncategorized").slice(0, 120),
         customer: cell(r, col.customer).slice(0, 160),
         ...nums,
+        technician: cell(r, col.technician).slice(0, 80),
+        hours: Math.max(0, Number.isFinite(parseMoney(cell(r, col.hours))) ? parseMoney(cell(r, col.hours)) : 0),
+        paid: parsePaid(cell(r, col.paid)),
+        comeback: parseYes(cell(r, col.comeback)),
       });
     });
     for (let i = 0; i < values.length; i += 500) await db.insert(jobs).values(values.slice(i, i + 500));

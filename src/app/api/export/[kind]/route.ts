@@ -50,8 +50,14 @@ export async function GET(_: Request, { params }: { params: Promise<{ kind: stri
   const rows: (string | number)[][] =
     kind === "jobs"
       ? [
-          [`${niche.job.short} Number`, "Date", "Category", niche.job.customerLabel, `${a} Revenue`, `${a} Cost`, `${b} Revenue`, `${b} Cost`, "Total Revenue", "Profit"],
-          ...jobs.map((j) => [j.ref, j.date, j.category, j.customer, j.revenueA, j.costA, j.revenueB, j.costB, round(jobRevenue(j)), round(jobProfit(j))]),
+          [
+            `${niche.job.short} Number`, "Date", "Category", niche.job.customerLabel, `${a} Revenue`, `${a} Cost`, `${b} Revenue`, `${b} Cost`, "Total Revenue", "Profit",
+            niche.details.technician, niche.details.hours, "Paid", niche.details.comeback,
+          ],
+          ...jobs.map((j) => [
+            j.ref, j.date, j.category, j.customer, j.revenueA, j.costA, j.revenueB, j.costB, round(jobRevenue(j)), round(jobProfit(j)),
+            j.technician, j.hours, j.paid ? "Yes" : "No", j.comeback ? "Yes" : "No",
+          ]),
         ]
       : [["Ref", "Date", "Category", "Vendor", "Amount"], ...expenses.map((e) => [e.ref, e.date, e.category, e.vendor, e.amount])];
 

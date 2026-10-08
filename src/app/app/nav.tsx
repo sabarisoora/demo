@@ -9,20 +9,20 @@ export function Nav({ items, elite }: { items: NavItem[]; elite: boolean }) {
   const path = usePathname();
   const active = (href: string) => (href === "/app" ? path === "/app" : path.startsWith(href));
   return (
-    <nav aria-label="Main" className="flex gap-1 overflow-x-auto lg:flex-col lg:overflow-visible">
+    <nav aria-label="Main" className="flex gap-1 overflow-x-auto lg:flex-col lg:gap-0.5 lg:overflow-visible">
       {items.map((it, i) => {
         const showDivider = it.elite && !items[i - 1]?.elite;
         return (
           <div key={it.href} className="contents">
             {showDivider && (
-              <div className="hidden px-3 pt-5 pb-1 text-[11px] font-bold tracking-widest text-muted uppercase lg:block">
+              <div className="hidden px-3 pt-3 pb-1 text-[11px] font-bold tracking-widest text-muted uppercase lg:block">
                 Elite
               </div>
             )}
             <Link
               href={it.href}
               aria-current={active(it.href) ? "page" : undefined}
-              className={`flex shrink-0 items-center justify-between gap-2 rounded-md px-3 py-2 text-sm font-medium whitespace-nowrap ${
+              className={`flex shrink-0 items-center justify-between gap-2 rounded-md px-3 py-2 text-sm font-medium whitespace-nowrap lg:py-1 ${
                 active(it.href) ? "bg-brand-soft text-ink" : "text-ink-2 hover:bg-surface-2 hover:text-ink"
               }`}
             >

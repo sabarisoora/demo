@@ -4,7 +4,7 @@ import { dateLabel } from "@/lib/format";
 import { site } from "@/lib/site";
 import { getNiche } from "@/niches";
 import { Card, PageHeader } from "@/components/ui";
-import { DeleteForm, NameForm, PasswordForm } from "./account-forms";
+import { DeleteForm, DigestForm, NameForm, PasswordForm } from "./account-forms";
 
 export const metadata = { title: "Account" };
 
@@ -35,6 +35,11 @@ export default async function AccountPage() {
             <p className="mt-3 text-xs text-muted">
               Need to change your email? Write to <a href={`mailto:${site.supportEmail}`} className="underline">{site.supportEmail}</a>.
             </p>
+          </Card>
+          <Card title="Emails">
+            <p className="mb-3 text-sm text-ink-2">A short summary every week: revenue, profit and {niche.job.plural.toLowerCase()} vs the week before, and one thing to act on.</p>
+            <DigestForm on={!user.digestOptOut} />
+            {!user.emailVerifiedAt && <p className="mt-2 text-xs text-muted">Confirm your email to start receiving it.</p>}
           </Card>
           <Card title="Password">
             <PasswordForm />

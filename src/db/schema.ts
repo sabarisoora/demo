@@ -26,6 +26,10 @@ export const users = pgTable("users", {
   eliteUntil: timestamp("elite_until", { withTimezone: true }),
   ds24OrderId: text("ds24_order_id"),
   emailVerifiedAt: timestamp("email_verified_at", { withTimezone: true }),
+  // Weekly summary email: opt-out flag, one-click unsubscribe token, last send time.
+  digestOptOut: boolean("digest_opt_out").notNull().default(false),
+  unsubscribeToken: text("unsubscribe_token"),
+  lastDigestAt: timestamp("last_digest_at", { withTimezone: true }),
   // DS24 affiliate + campaign that referred this user (captured at signup).
   affiliate: text("affiliate"),
   campaign: text("campaign"),
@@ -85,6 +89,11 @@ export const jobs = pgTable(
     costA: money("cost_a"),
     revenueB: money("revenue_b"),
     costB: money("cost_b"),
+    // Optional detail used by the Elite technician, receivables and comeback reports.
+    technician: text("technician").notNull().default(""),
+    hours: numeric("hours", { precision: 8, scale: 2, mode: "number" }).notNull().default(0),
+    paid: boolean("paid").notNull().default(true),
+    comeback: boolean("comeback").notNull().default(false),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [index("jobs_business_date_idx").on(t.businessId, t.date)],

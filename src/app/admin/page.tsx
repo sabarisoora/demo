@@ -5,6 +5,7 @@ import { isElite, requireAdmin } from "@/lib/auth";
 import { count as fmtCount, percent } from "@/lib/format";
 import { Card, PageHeader, Stat } from "@/components/ui";
 import { grantElite, revokeElite, verifyEmailManually } from "./actions";
+import { TestDigestButton } from "./test-digest";
 
 const PAGE = 50;
 const ago = (days: number) => new Date(Date.now() - days * 24 * 60 * 60 * 1000);
@@ -60,7 +61,9 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
 
   return (
     <>
-      <PageHeader title="Admin" subtitle="Signups, subscribers, affiliates and payment events." />
+      <PageHeader title="Admin" subtitle="Signups, subscribers, affiliates and payment events.">
+        <TestDigestButton />
+      </PageHeader>
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
         <Stat label="Users" value={fmtCount(totals.n)} />

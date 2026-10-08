@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
-import { changePassword, deleteAccount, updateName, type AccountState } from "./actions";
+import { changePassword, deleteAccount, setDigest, updateName, type AccountState } from "./actions";
 
 function Msg({ state }: { state: AccountState }) {
   if (state?.error)
@@ -88,6 +88,22 @@ export function DeleteForm() {
         </button>
         <Msg state={state} />
       </div>
+    </form>
+  );
+}
+
+export function DigestForm({ on }: { on: boolean }) {
+  const [state, action, pending] = useActionState(setDigest, undefined);
+  return (
+    <form action={action} className="flex flex-wrap items-center gap-3">
+      <label className="flex items-center gap-2 text-sm">
+        <input type="checkbox" name="digest" defaultChecked={on} className="h-4 w-4 accent-[var(--brand)]" />
+        Email me a weekly summary
+      </label>
+      <button className="btn btn-ghost" disabled={pending}>
+        Save
+      </button>
+      <Msg state={state} />
     </form>
   );
 }

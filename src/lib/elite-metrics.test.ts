@@ -82,3 +82,52 @@ describe("monthly review and cash flow", () => {
     expect(cf.runwayMonths).toBeGreaterThan(0);
   });
 });
+
+describe("technicians, comebacks, receivables", () => {
+  const j = (o: Partial<import("./elite-metrics").DetailJob>) => ({ date: "2026-07-01", category: "Brakes", revenueA: 0, costA: 0, revenueB: 0, costB: 0, ...o });
+
+  it("technician stats: effective labor rate and comeback rate", async () => {
+    const { technicianStats } = await import("./elite-metrics");
+    const s = technicianStats([
+      j({ technician: "Ann", hours: 2, revenueB: 300, costB: 100 }),
+      j({ technician: "Ann", hours: 1, revenueB: 150, costA: 20, comeback: true }),
+      j({ technician: "Bo", hours: 4, revenueB: 400 }),
+      j({}),
+    ]);
+    expect(s.unassigned).toBe(1);
+    const ann = s.rows.find((r) => r.name === "Ann")!;
+    expect(ann.ratePerHour).toBeCloseTo(150, 9);
+    expect(ann.comebackRate).toBe(0.5);
+    expect(ann.comebackCost).toBe(20);
+    expect(s.rows[0].name).toBe("Ann"); // ranked by revenue (450 vs 400)
+  });
+
+  it("comeback net cost subtracts what was charged", async () => {
+    const { comebackStats } = await import("./elite-metrics");
+    const c = comebackStats([j({ comeback: true, costB: 100, revenueB: 30 }), j({ comeback: false, revenueB: 500 })]);
+    expect(c).toMatchObject({ count: 1, rate: 0.5, cost: 100, netCost: 70 });
+  });
+
+  it("receivables age unpaid jobs into the workbook's buckets", async () => {
+    const { receivables, agingBucket } = await import("./elite-metrics");
+    expect([30, 31, 60, 61, 90, 91, 400].map(agingBucket)).toEqual(["Current", "31–60 days", "31–60 days", "61–90 days", "61–90 days", "90+ days", "90+ days"]);
+    const r = receivables(
+      [j({ date: "2026-07-10", paid: false, revenueB: 100 }), j({ date: "2026-03-01", paid: false, revenueA: 300 }), j({ date: "2026-01-01", paid: true, revenueB: 999 })],
+      new Date(2026, 6, 15),
+    );
+    expect(r.open).toHaveLength(2);
+    expect(r.total).toBe(400);
+    expect(r.over90).toBe(300);
+    expect(r.buckets.find((b) => b.bucket === "Current")?.amount).toBe(100);
+    expect(r.open[0].days).toBe(136); // oldest first
+  });
+
+  it("comeback benchmark row only once details are tracked", () => {
+    const base = ttmSummary(orders.map(({ technician, hours, comeback, paid, ...o }) => o), expenses, today);
+    expect(benchmarkRows(base, autoRepair).some((r) => r.label === "Comeback rate")).toBe(false);
+    const withDetails = ttmSummary(orders, expenses, today);
+    const row = benchmarkRows(withDetails, autoRepair).find((r) => r.label === "Comeback rate")!;
+    expect(row.yours).toBeCloseTo(7 / 220, 9);
+    expect(row.benchmark).toBe(0.03);
+  });
+});

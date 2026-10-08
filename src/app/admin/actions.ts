@@ -35,3 +35,11 @@ export async function verifyEmailManually(form: FormData) {
   if (u) await markEmailVerified(id, u.email);
   revalidatePath("/admin");
 }
+
+export async function sendTestDigest(): Promise<{ ok?: string; error?: string }> {
+  const { user, business } = await requireAdmin();
+  const { sendDigest } = await import("@/lib/digest-send");
+  const { requestOrigin } = await import("@/lib/email");
+  const sent = await sendDigest(user, business, await requestOrigin());
+  return sent ? { ok: `Sent to ${user.email}.` } : { error: "Nothing sent: add some entries to your own account first, and check RESEND_API_KEY." };
+}

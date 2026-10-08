@@ -30,11 +30,13 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     { href: "/app/elite/review", label: "Monthly Review", elite: true },
     { href: "/app/elite/scorecard", label: "KPIs & Benchmarks", elite: true },
     { href: "/app/elite/cashflow", label: "Cash Flow", elite: true },
+    { href: "/app/elite/receivables", label: "Receivables", elite: true },
+    { href: "/app/elite/technicians", label: `${niche.details.technicianPlural} & ${niche.details.comeback}s`, elite: true },
   ];
 
   return (
     <div className="lg:flex">
-      <aside className="no-print border-b border-line bg-surface lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-64 lg:shrink-0 lg:flex-col lg:border-r lg:border-b-0">
+      <aside className="no-print border-b border-line bg-surface lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-64 lg:shrink-0 lg:flex-col lg:overflow-y-auto lg:border-r lg:border-b-0">
         <div className="flex items-center justify-between px-4 pt-4 pb-3 lg:px-5 lg:pt-6">
           <Logo href="/app" />
           <span className="rounded-full border border-line-strong px-2 py-0.5 text-[11px] font-bold tracking-wider uppercase">
@@ -42,7 +44,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
           </span>
         </div>
         <div className="px-4 pb-1 text-xs text-muted lg:px-5">{business.name || niche.name}</div>
-        <div className="px-2 pb-2 lg:flex-1 lg:overflow-y-auto lg:px-3 lg:pt-3">
+        <div className="px-2 pb-2 lg:flex-1 lg:px-3 lg:pt-2">
           <Nav items={items} elite={elite} />
         </div>
         <div className="hidden border-t border-line p-4 lg:block">

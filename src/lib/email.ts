@@ -19,7 +19,7 @@ export const emailConfigured = () => !!process.env.RESEND_API_KEY || logOnly();
  * Sends a transactional email through Resend (https://resend.com, free tier: 3,000/month).
  * Without RESEND_API_KEY the email is printed to the server log instead, so local dev works.
  */
-export async function sendEmail(msg: { to: string; subject: string; text: string; html: string }): Promise<boolean> {
+export async function sendEmail(msg: { to: string; subject: string; text: string; html: string; headers?: Record<string, string> }): Promise<boolean> {
   const key = process.env.RESEND_API_KEY;
   if (!key || logOnly()) {
     console.log(`[email not configured] To: ${msg.to}\nSubject: ${msg.subject}\n\n${msg.text}`);
@@ -30,7 +30,7 @@ export async function sendEmail(msg: { to: string; subject: string; text: string
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: { authorization: `Bearer ${key}`, "content-type": "application/json" },
-      body: JSON.stringify({ from, to: [msg.to], subject: msg.subject, text: msg.text, html: msg.html }),
+      body: JSON.stringify({ from, to: [msg.to], subject: msg.subject, text: msg.text, html: msg.html, ...(msg.headers && { headers: msg.headers }) }),
     });
     if (!res.ok) console.error("Resend error", res.status, await res.text());
     return res.ok;

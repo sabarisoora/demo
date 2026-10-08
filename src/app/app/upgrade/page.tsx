@@ -38,6 +38,8 @@ export default async function UpgradePage() {
     ["Monthly Business Review", "A printable one-page report vs last month and the same month last year"],
     ["KPI Scorecard & Benchmarks", "Your own yearly goals with progress, and your numbers against industry benchmarks"],
     ["Cash Flow", "Money in vs out each month, running cash position and months of runway"],
+    ["Receivables", "Unpaid balances aged 30/60/90+ days, with a chase list and one-click “mark paid”"],
+    [`${niche.details.technicianPlural} & ${niche.details.comeback}s`, `Revenue, hours and effective rate per ${niche.details.technician.toLowerCase()}, plus where repeat repairs come from`],
     ["Everything in Essential", "Plus every new Elite report as it ships"],
   ];
 

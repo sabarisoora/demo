@@ -11,6 +11,11 @@ export type JobRow = {
   costA: number;
   revenueB: number;
   costB: number;
+  // Optional details (Elite reports).
+  technician?: string;
+  hours?: number;
+  paid?: boolean;
+  comeback?: boolean;
 };
 export type ExpenseRow = { date: string; category: string; amount: number };
 export type Settings = {
@@ -347,6 +352,46 @@ export function profitLeaks(t: TaxSummary, jobs: JobRow[], expenses: ExpenseRow[
     impact: sum(losers, (c) => c.revenue * th.jobGrossMargin - c.profit),
     detail: losers.length ? `Reprice or upsell: ${losers.map((c) => c.category).join(", ")}.` : "Every service line clears the margin target.",
   });
+
+  // 6b. Comebacks (repeat repairs): only once the business records them.
+  const cbs = jobs.filter((j) => j.comeback);
+  if (cbs.length || jobs.some((j) => j.technician || (j.hours ?? 0) > 0)) {
+    const rate = ratio(cbs.length, jobs.length);
+    const target = niche.benchmarks?.comebackRate ?? 0.03;
+    const netCost = Math.max(sum(cbs, jobCost) - sum(cbs, jobRevenue), 0);
+    leaks.push({
+      key: "comebacks",
+      title: `${niche.details.comeback} cost`,
+      metric: `${niche.details.comeback} rate`,
+      value: rate,
+      threshold: target,
+      format: "percent",
+      leaking: rate > target,
+      impact: rate > target ? netCost : 0,
+      detail:
+        rate > target
+          ? `${cbs.length} repeat repairs cost about this much in labor and ${a.toLowerCase()}. See which technicians and services they come from.`
+          : "Repeat repairs are at or below the target rate.",
+    });
+  }
+
+  // 6c. Overdue invoices: unpaid more than 90 days (money at risk, not yet lost).
+  const unpaid = jobs.filter((j) => j.paid === false);
+  if (unpaid.length) {
+    const cutoff = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+    const overdue = sum(unpaid.filter((j) => j.date < cutoff), jobRevenue);
+    leaks.push({
+      key: "overdue",
+      title: "Overdue invoices",
+      metric: "Unpaid for more than 90 days",
+      value: overdue,
+      threshold: 0,
+      format: "money",
+      leaking: overdue > 0,
+      impact: 0,
+      detail: overdue > 0 ? "The older a balance, the less likely it gets paid. Chase these first (see Receivables)." : "No balances older than 90 days.",
+    });
+  }
 
   // 7. Unfunded tax reserve (not lost money, but money that isn't really yours).
   const gap = Math.max(t.recommendedReserve - t.reserveSetAside, 0);
