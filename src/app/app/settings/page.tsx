@@ -1,24 +1,38 @@
 import Link from "next/link";
 import { isElite, requireSession } from "@/lib/auth";
-import { countries } from "@/lib/countries";
+import { countries, getCountry } from "@/lib/countries";
 import { dateLabel } from "@/lib/format";
-import { Card, PageHeader, TAX_DISCLAIMER } from "@/components/ui";
+import { Card, OwnerOnly, PageHeader, TAX_DISCLAIMER } from "@/components/ui";
 import { SettingsForm } from "./settings-form";
 import { DataTools } from "./danger";
+import { ShopForm } from "./shop-form";
+import { getNiche } from "@/niches";
 
 export const metadata = { title: "Settings" };
 
 export default async function SettingsPage() {
-  const { user, business } = await requireSession();
+  const { user, business, role } = await requireSession();
+  if (role !== "owner") return <OwnerOnly title="Settings" />;
   const elite = isElite(user);
   return (
     <>
       <PageHeader title="Settings" subtitle="Your country sets the currency and default tax rates. Override any rate your accountant gives you." />
       <div className="grid gap-4 lg:grid-cols-3">
-        <Card className="lg:col-span-2">
-          <SettingsForm initial={business} countries={countries} />
-          <p className="mt-6 text-xs text-muted">{TAX_DISCLAIMER}</p>
-        </Card>
+        <div className="space-y-4 lg:col-span-2">
+          <Card>
+            <SettingsForm initial={business} countries={countries} />
+            <p className="mt-6 text-xs text-muted">{TAX_DISCLAIMER}</p>
+          </Card>
+          <section id="shop" className="scroll-mt-6">
+            <Card title="Shop & invoices">
+              <ShopForm
+                initial={business}
+                taxLabel={getCountry(business.country).vat > 0 ? getCountry(business.country).vatLabel.split(" ")[0] : "Sales tax"}
+                laborLabel={getNiche(business.niche).streams.b}
+              />
+            </Card>
+          </section>
+        </div>
         <div className="space-y-4">
           <Card title="Plan">
             <p className="text-sm">

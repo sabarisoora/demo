@@ -5,7 +5,10 @@ export const PAGE_SIZE = 50;
 export function Pager({ page, total, base }: { page: number; total: number; base: string }) {
   const pages = Math.max(1, Math.ceil(total / PAGE_SIZE));
   if (pages <= 1) return null;
-  const href = (p: number) => (p === 1 ? base : `${base}?page=${p}`);
+  const href = (p: number) => {
+    const clean = base.replace(/[?&]$/, "");
+    return p === 1 ? clean : `${clean}${clean.includes("?") ? "&" : "?"}page=${p}`;
+  };
   return (
     <nav aria-label="Pages" className="mt-4 flex items-center justify-between text-sm">
       <span className="text-muted">

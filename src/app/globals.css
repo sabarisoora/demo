@@ -230,3 +230,14 @@ body {
   color: var(--muted);
   margin-top: 0.4rem;
 }
+
+@media print {
+  /* Invoices print edge to edge without the card frame. */
+  .invoice {
+    border: none !important;
+    padding: 0 !important;
+  }
+  main {
+    padding: 0 !important;
+  }
+}

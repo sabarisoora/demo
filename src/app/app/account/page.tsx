@@ -9,7 +9,8 @@ import { DeleteForm, DigestForm, NameForm, PasswordForm } from "./account-forms"
 export const metadata = { title: "Account" };
 
 export default async function AccountPage() {
-  const { user, business } = await requireSession();
+  const { user, business, role } = await requireSession();
+  const owner = role === "owner";
   const niche = getNiche(business.niche);
   const elite = isElite(user);
   return (
@@ -36,24 +37,30 @@ export default async function AccountPage() {
               Need to change your email? Write to <a href={`mailto:${site.supportEmail}`} className="underline">{site.supportEmail}</a>.
             </p>
           </Card>
-          <Card title="Emails">
+          {owner && <Card title="Emails">
             <p className="mb-3 text-sm text-ink-2">A short summary every week: revenue, profit and {niche.job.plural.toLowerCase()} vs the week before, and one thing to act on.</p>
             <DigestForm on={!user.digestOptOut} />
             {!user.emailVerifiedAt && <p className="mt-2 text-xs text-muted">Confirm your email to start receiving it.</p>}
-          </Card>
+          </Card>}
           <Card title="Password">
             <PasswordForm />
           </Card>
           <Card title="Delete account" className="border-critical/40">
             <p className="mb-4 text-sm text-ink-2">
-              Permanently deletes your account, business settings and every {niche.job.singular.toLowerCase()} and expense. This can't be undone. Download your data first.
-              {elite && " Deleting your account doesn't cancel your Digistore24 subscription; cancel it from your receipt email first."}
+              {owner ? (
+                <>
+                  Permanently deletes your account, your shop's settings, team access and every {niche.job.singular.toLowerCase()}, customer and expense. This can't be undone. Download your data first.
+                  {elite && " Deleting your account doesn't cancel your Digistore24 subscription; cancel it from your receipt email first."}
+                </>
+              ) : (
+                <>Deletes your login only. {business.name || "The shop"}'s data stays with the owner.</>
+              )}
             </p>
             <DeleteForm />
           </Card>
         </div>
         <div className="space-y-4">
-          <Card title="Plan">
+          {owner ? <Card title="Plan">
             <p className="text-sm">
               {elite ? (
                 <>
@@ -74,6 +81,13 @@ export default async function AccountPage() {
               </Link>
             )}
           </Card>
+          : (
+            <Card title="Your shop">
+              <p className="text-sm">
+                {role === "viewer" ? "Read-only" : "Staff"} member of <strong>{business.name || "this shop"}</strong>. The owner manages billing and the team.
+              </p>
+            </Card>
+          )}
           <Card title="Your data">
             <p className="mb-3 text-sm text-ink-2">Download everything you've entered, any time.</p>
             <div className="flex flex-col gap-2">

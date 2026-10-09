@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { requireSession } from "@/lib/auth";
+import { isElite, requireSession } from "@/lib/auth";
+import { shopToday } from "@/lib/shop-data";
 import { loadPeriod, parsePeriod, settingsOf } from "@/lib/data";
 import { count, monthLabel, moneyFormatter, percent } from "@/lib/format";
 import { businessStatus, insights, jobProfit, monthKey, monthlySeries, taxSummary } from "@/lib/metrics";
@@ -13,7 +14,7 @@ export const metadata = { title: "Dashboard" };
 export default async function Dashboard({ searchParams }: { searchParams: Promise<{ period?: string; welcome?: string }> }) {
   const sp = await searchParams;
   const period = parsePeriod(sp.period);
-  const { business } = await requireSession();
+  const { user, business } = await requireSession();
   const niche = getNiche(business.niche);
   const today = new Date();
   const { jobs, expenses, periodJobs, periodExpenses } = await loadPeriod(business, period, today);
@@ -28,6 +29,7 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
     return (
       <>
         <PageHeader title={`Welcome${business.ownerName ? `, ${business.ownerName.split(" ")[0]}` : ""}`} subtitle="Your dashboard fills itself in as you add data. Three ways to start:" />
+        <ShopToday businessId={business.id} reminderMonths={business.reminderMonths} elite={isElite(user)} money={money} jobLabel={niche.job.plural} />
         <div className="grid gap-4 md:grid-cols-3">
           <Card title="1 · See it with sample data">
             <p className="mb-4 text-sm text-ink-2">
@@ -37,17 +39,17 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
               <button className="btn btn-primary">Load sample data</button>
             </form>
           </Card>
-          <Card title="2 · Import a CSV">
-            <p className="mb-4 text-sm text-ink-2">Export {niche.job.plural.toLowerCase()} or expenses from your current software or bank, then upload the file.</p>
+          <Card title="2 · Import your data">
+            <p className="mb-4 text-sm text-ink-2">Upload your ProfitIQS Excel workbook, or a CSV of {niche.job.plural.toLowerCase()} or expenses from your current software or bank.</p>
             <Link href="/app/import" className="btn btn-ghost">
-              Import CSV
+              Import data
             </Link>
           </Card>
           <Card title="3 · Enter by hand">
             <p className="mb-4 text-sm text-ink-2">Add your first {niche.job.singular.toLowerCase()} and expense. Takes about 30 seconds each.</p>
             <div className="flex flex-wrap gap-2">
-              <Link href="/app/jobs" className="btn btn-ghost">
-                Add {niche.job.short}
+              <Link href="/app/jobs/new" className="btn btn-ghost">
+                New {niche.job.short}
               </Link>
               <Link href="/app/expenses" className="btn btn-ghost">
                 Add expense
@@ -83,6 +85,8 @@ export default async function Dashboard({ searchParams }: { searchParams: Promis
       <PageHeader title={`${niche.name} Dashboard`} subtitle={business.name || undefined}>
         <PeriodTabs current={period} base="/app" />
       </PageHeader>
+
+      <ShopToday businessId={business.id} reminderMonths={business.reminderMonths} elite={isElite(user)} money={money} jobLabel={niche.job.plural} />
 
       <div className="rise grid grid-cols-2 gap-3 lg:grid-cols-4">
         <Stat label="Total revenue" value={money(t.revenue)} />
@@ -193,5 +197,31 @@ function Breakdown({ rows, total, money }: { rows: { label: string; value: numbe
         );
       })}
     </ul>
+  );
+}
+
+async function ShopToday({ businessId, reminderMonths, elite, money, jobLabel }: { businessId: string; reminderMonths: number; elite: boolean; money: (n: number) => string; jobLabel: string }) {
+  const t = await shopToday(businessId, reminderMonths);
+  const items = [
+    { href: "/app/jobs?status=estimate", label: "Estimates waiting", value: count(t.estimates), hint: t.estimates ? money(t.estimateValue) : "None pending" },
+    { href: "/app/jobs?status=open", label: "In progress", value: count(t.open), hint: `Open ${jobLabel.toLowerCase()}` },
+    { href: "/app/jobs?status=unpaid", label: "Unpaid", value: count(t.unpaid), hint: t.unpaid ? money(t.unpaidValue) : "All collected", bad: t.unpaid > 0 },
+    ...(elite
+      ? [
+          { href: "/app/inventory?filter=low", label: "Parts to reorder", value: count(t.lowStock), hint: "At or below reorder level", bad: t.lowStock > 0 },
+          { href: "/app/reminders", label: "Service due", value: count(t.serviceDue), hint: "Next 30 days, not yet contacted" },
+        ]
+      : []),
+  ];
+  return (
+    <section aria-label="Shop today" className="no-print mb-4 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
+      {items.map((i) => (
+        <Link key={i.href} href={i.href} className="group rounded-lg border border-line bg-surface-2 px-3 py-2.5 hover:border-line-strong hover:bg-surface">
+          <div className="text-[11px] font-semibold tracking-wider text-muted uppercase">{i.label}</div>
+          <div className={`num mt-0.5 text-lg font-semibold ${"bad" in i && i.bad ? "text-critical-ink" : ""}`}>{i.value}</div>
+          <div className="truncate text-xs text-muted group-hover:text-ink-2">{i.hint} →</div>
+        </Link>
+      ))}
+    </section>
   );
 }

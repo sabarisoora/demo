@@ -35,6 +35,7 @@ const NOTICES: Record<string, Record<string, { ok: boolean; text: string }>> = {
   },
   reset: { "1": { ok: true, text: "Password changed. You're signed in, and other devices were signed out." } },
   password: { "1": { ok: true, text: "Password changed. Other devices were signed out." } },
+  joined: { "1": { ok: true, text: "Welcome to the team! You're in." } },
 };
 
 /** One-off messages driven by ?verify=ok etc. after a redirect. */

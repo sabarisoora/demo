@@ -70,8 +70,80 @@ export const businesses = pgTable("businesses", {
   // KPI Scorecard goals; null = the niche's defaults.
   goals: jsonb("goals").$type<Goals>(),
   checklist: jsonb("checklist").$type<Record<string, Record<string, boolean>>>().notNull().default({}),
+  // Shop details printed on invoices and estimates.
+  address: text("address").notNull().default(""),
+  phone: text("phone").notNull().default(""),
+  email: text("email").notNull().default(""),
+  // Sales tax/VAT added on invoices (percent, null = none). Applies to parts, or to everything.
+  invoiceTaxRate: numeric("invoice_tax_rate", { precision: 6, scale: 3, mode: "number" }),
+  invoiceTaxOnLabor: boolean("invoice_tax_on_labor").notNull().default(false),
+  invoiceFooter: text("invoice_footer").notNull().default(""),
+  // Default labor rate for new labor lines, and how often vehicles are due for service.
+  laborRate: money("labor_rate"),
+  reminderMonths: integer("reminder_months").notNull().default(6),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
+
+export const customers = pgTable(
+  "customers",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    businessId: uuid("business_id")
+      .notNull()
+      .references(() => businesses.id, { onDelete: "cascade" }),
+    name: text("name").notNull(),
+    phone: text("phone").notNull().default(""),
+    email: text("email").notNull().default(""),
+    notes: text("notes").notNull().default(""),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("customers_business_name_idx").on(t.businessId, t.name)],
+);
+
+export const vehicles = pgTable(
+  "vehicles",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    businessId: uuid("business_id")
+      .notNull()
+      .references(() => businesses.id, { onDelete: "cascade" }),
+    customerId: uuid("customer_id")
+      .notNull()
+      .references(() => customers.id, { onDelete: "cascade" }),
+    year: integer("year"),
+    make: text("make").notNull().default(""),
+    model: text("model").notNull().default(""),
+    vin: text("vin").notNull().default(""),
+    plate: text("plate").notNull().default(""),
+    mileage: integer("mileage"),
+    // Service reminders: an explicit due date overrides "last visit + reminder interval".
+    nextServiceAt: date("next_service_at", { mode: "string" }),
+    lastRemindedAt: timestamp("last_reminded_at", { withTimezone: true }),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("vehicles_business_idx").on(t.businessId), index("vehicles_customer_idx").on(t.customerId)],
+);
+
+// Inventory (Elite).
+export const parts = pgTable(
+  "parts",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    businessId: uuid("business_id")
+      .notNull()
+      .references(() => businesses.id, { onDelete: "cascade" }),
+    sku: text("sku").notNull().default(""),
+    name: text("name").notNull(),
+    category: text("category").notNull().default(""),
+    supplier: text("supplier").notNull().default(""),
+    unitCost: money("unit_cost"),
+    unitPrice: money("unit_price"),
+    onHand: numeric("on_hand", { precision: 12, scale: 2, mode: "number" }).notNull().default(0),
+    reorderLevel: numeric("reorder_level", { precision: 12, scale: 2, mode: "number" }).notNull().default(0),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("parts_business_idx").on(t.businessId)],
+);
 
 // A sale/job. Each niche names the two revenue streams (auto repair: parts + labor).
 export const jobs = pgTable(
@@ -94,9 +166,44 @@ export const jobs = pgTable(
     hours: numeric("hours", { precision: 8, scale: 2, mode: "number" }).notNull().default(0),
     paid: boolean("paid").notNull().default(true),
     comeback: boolean("comeback").notNull().default(false),
+    // "estimate" | "open" | "completed". Only completed jobs count in the numbers.
+    status: text("status").notNull().default("completed"),
+    customerId: uuid("customer_id").references(() => customers.id, { onDelete: "set null" }),
+    vehicleId: uuid("vehicle_id").references(() => vehicles.id, { onDelete: "set null" }),
+    mileage: integer("mileage"),
+    notes: text("notes").notNull().default(""),
+    // Unguessable token for the customer-facing invoice/estimate link (null = not shared).
+    shareToken: text("share_token").unique(),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
-  (t) => [index("jobs_business_date_idx").on(t.businessId, t.date)],
+  (t) => [
+    index("jobs_business_date_idx").on(t.businessId, t.date),
+    index("jobs_customer_idx").on(t.customerId),
+    index("jobs_vehicle_idx").on(t.vehicleId),
+  ],
+);
+
+// Line items on a repair order. Their totals are written back onto the job's revenue/cost streams.
+export const jobLines = pgTable(
+  "job_lines",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    jobId: uuid("job_id")
+      .notNull()
+      .references(() => jobs.id, { onDelete: "cascade" }),
+    businessId: uuid("business_id")
+      .notNull()
+      .references(() => businesses.id, { onDelete: "cascade" }),
+    // "part" (stream A) | "labor" | "fee" (stream B)
+    kind: text("kind").notNull(),
+    description: text("description").notNull().default(""),
+    qty: numeric("qty", { precision: 12, scale: 2, mode: "number" }).notNull().default(1),
+    unitPrice: money("unit_price"),
+    unitCost: money("unit_cost"),
+    partId: uuid("part_id").references(() => parts.id, { onDelete: "set null" }),
+    sort: integer("sort").notNull().default(0),
+  },
+  (t) => [index("job_lines_job_idx").on(t.jobId)],
 );
 
 export const expenses = pgTable(
@@ -114,6 +221,39 @@ export const expenses = pgTable(
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [index("expenses_business_date_idx").on(t.businessId, t.date)],
+);
+
+// Team members of a shop (Elite). The owner is businesses.user_id; members join by invitation.
+// A user belongs to one shop: their own, or one they were invited to.
+export const memberships = pgTable("memberships", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  businessId: uuid("business_id")
+    .notNull()
+    .references(() => businesses.id, { onDelete: "cascade" }),
+  userId: uuid("user_id")
+    .notNull()
+    .unique()
+    .references(() => users.id, { onDelete: "cascade" }),
+  // "staff" (can enter and edit work) | "viewer" (read-only, e.g. an accountant)
+  role: text("role").notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
+export const invites = pgTable(
+  "invites",
+  {
+    // SHA-256 of the token in the invitation link.
+    id: text("id").primaryKey(),
+    businessId: uuid("business_id")
+      .notNull()
+      .references(() => businesses.id, { onDelete: "cascade" }),
+    email: text("email").notNull(),
+    role: text("role").notNull(),
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+    acceptedAt: timestamp("accepted_at", { withTimezone: true }),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("invites_business_idx").on(t.businessId)],
 );
 
 // One-time links for password reset and email verification. Only a hash of the token is stored.
@@ -155,3 +295,8 @@ export type User = typeof users.$inferSelect;
 export type Business = typeof businesses.$inferSelect;
 export type Job = typeof jobs.$inferSelect;
 export type Expense = typeof expenses.$inferSelect;
+export type Customer = typeof customers.$inferSelect;
+export type Vehicle = typeof vehicles.$inferSelect;
+export type Part = typeof parts.$inferSelect;
+export type JobLine = typeof jobLines.$inferSelect;
+export type Membership = typeof memberships.$inferSelect;

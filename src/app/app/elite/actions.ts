@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { eq } from "drizzle-orm";
 import { z } from "zod";
 import { db, businesses } from "@/db";
-import { isElite, requireSession } from "@/lib/auth";
+import { isElite, requireOwner } from "@/lib/auth";
 
 export type GoalsState = { error?: string; ok?: string } | undefined;
 
@@ -12,7 +12,7 @@ const amount = z.coerce.number().finite().min(0).max(1e12);
 const pct = z.coerce.number().finite().min(0).max(100).transform((v) => v / 100);
 
 export async function saveGoals(_: GoalsState, form: FormData): Promise<GoalsState> {
-  const { user, business } = await requireSession();
+  const { user, business } = await requireOwner();
   if (!isElite(user)) return { error: "Goals are an Elite feature." };
   const parsed = z
     .object({ revenue: amount, netProfit: z.coerce.number().finite().min(-1e12).max(1e12), avgTicket: amount, jobCount: amount, grossMargin: pct, netMargin: pct })

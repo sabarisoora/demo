@@ -8,7 +8,7 @@ export function DataTools() {
       <form
         action={loadSample}
         onSubmit={(e) => {
-          if (!confirm("Replace ALL your entries with sample data?")) e.preventDefault();
+          if (!confirm("Replace ALL your data (repair orders, expenses, customers, vehicles and inventory) with sample data?")) e.preventDefault();
         }}
       >
         <button className="btn btn-ghost">Load sample data</button>
@@ -16,10 +16,10 @@ export function DataTools() {
       <form
         action={clearData}
         onSubmit={(e) => {
-          if (!confirm("Delete ALL entries and expenses? This can't be undone.")) e.preventDefault();
+          if (!confirm("Delete ALL repair orders, expenses, customers, vehicles and inventory? This can't be undone.")) e.preventDefault();
         }}
       >
-        <button className="btn btn-danger">Delete all entries</button>
+        <button className="btn btn-danger">Delete all data</button>
       </form>
     </div>
   );

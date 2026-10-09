@@ -12,7 +12,18 @@ export type SampleData = {
     hours?: number;
     paid?: boolean;
     comeback?: boolean;
+    /** Index into the customer's `vehicles` (shop-management sample). */
+    vehicle?: number;
+    mileage?: number;
   }[];
+  /** Optional shop-management sample: customers with vehicles, and an inventory. */
+  customers?: {
+    name: string;
+    phone: string;
+    email: string;
+    vehicles: { year: number; make: string; model: string; vin: string; plate: string; mileage: number }[];
+  }[];
+  parts?: { sku: string; name: string; category: string; supplier: string; unitCost: number; unitPrice: number; onHand: number; reorderLevel: number }[];
   expenses: { ref: string; date: string; category: string; vendor: string; amount: number }[];
 };
 

@@ -2,12 +2,13 @@ import Link from "next/link";
 import { isElite, requireSession } from "@/lib/auth";
 import { eliteCheckoutUrl } from "@/lib/ds24";
 import { getNiche } from "@/niches";
-import { Card, PageHeader } from "@/components/ui";
+import { Card, OwnerOnly, PageHeader } from "@/components/ui";
 
 export const metadata = { title: "Upgrade to Elite" };
 
 export default async function UpgradePage() {
-  const { user, business } = await requireSession();
+  const { user, business, role } = await requireSession();
+  if (role !== "owner") return <OwnerOnly title="Upgrade to Elite" />;
   const niche = getNiche(business.niche);
   const checkout = eliteCheckoutUrl(user);
   const price = process.env.NEXT_PUBLIC_ELITE_PRICE_LABEL;

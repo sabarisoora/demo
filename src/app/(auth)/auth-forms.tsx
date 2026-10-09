@@ -71,10 +71,11 @@ export function SignupForm({ countries, niche }: { countries: string[]; niche: s
   );
 }
 
-export function LoginForm() {
+export function LoginForm({ next }: { next?: string }) {
   const [state, action, pending] = useActionState(login, undefined);
   return (
     <form action={action} className="space-y-4">
+      {next && <input type="hidden" name="next" value={next} />}
       <Field label="Email" name="email" type="email" autoComplete="email" />
       <Field label="Password" name="password" type="password" autoComplete="current-password" />
       <div className="-mt-2 text-right">

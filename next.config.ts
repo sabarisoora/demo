@@ -11,7 +11,9 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   // The postgres driver is server-only; keep it out of bundling.
-  serverExternalPackages: ["postgres"],
+  serverExternalPackages: ["postgres", "exceljs"],
+  // CSV and Excel workbook uploads go through server actions; Vercel caps requests at 4.5 MB.
+  experimental: { serverActions: { bodySizeLimit: "4mb" } },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

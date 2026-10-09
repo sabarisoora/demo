@@ -80,7 +80,9 @@ export async function login(_: FormState, form: FormData): Promise<FormState> {
     return { error: "Email or password is incorrect." };
   }
   await createSession(u.id);
-  redirect("/app");
+  // Only same-site paths ("/invite/…"), never "//evil.com" or absolute URLs.
+  const next = String(form.get("next") ?? "");
+  redirect(/^\/(?![\/\\])[\w\-./?=&%]*$/.test(next) ? next : "/app");
 }
 
 export async function logout() {

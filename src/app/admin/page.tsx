@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { and, count, desc, eq, gt, ilike, isNotNull, isNull, or, sql } from "drizzle-orm";
 import { db, businesses, ipnEvents, jobs, users } from "@/db";
+import { ref } from "@/db/ref";
 import { isElite, requireAdmin } from "@/lib/auth";
 import { count as fmtCount, percent } from "@/lib/format";
 import { Card, PageHeader, Stat } from "@/components/ui";
@@ -49,7 +50,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
     .select({
       user: users,
       business: businesses.name,
-      entries: sql<number>`(select count(*)::int from ${jobs} where ${jobs.businessId} = ${businesses.id})`,
+      entries: sql<number>`(select count(*)::int from jobs j where j.business_id = ${ref(businesses.id)})`,
     })
     .from(users)
     .leftJoin(businesses, eq(businesses.userId, users.id))

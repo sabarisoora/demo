@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   title: { default: "ProfitIQS — Business Intelligence for Small Businesses", template: "%s · ProfitIQS" },
   description:
     "Know your true profit, tax reserve and business health. Free profit dashboard for auto repair shops and other small businesses.",
+  icons: {
+    icon: [{ url: "/favicon.ico", sizes: "48x48" }, { url: "/icon.svg", type: "image/svg+xml" }],
+    apple: "/icons/apple-touch-icon.png",
+  },
+  appleWebApp: { capable: true, title: "ProfitIQS", statusBarStyle: "default" },
 };
 
 export const viewport: Viewport = {

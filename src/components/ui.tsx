@@ -111,3 +111,13 @@ export function Empty({ title, children }: { title: string; children?: React.Rea
 
 export const TAX_DISCLAIMER =
   "Rates are general planning estimates as of 2026, not tax advice. Confirm actual rates and obligations with a licensed accountant or your local tax authority.";
+
+/** Shown to team members on owner-only pages (settings, import, billing). */
+export function OwnerOnly({ title }: { title: string }) {
+  return (
+    <>
+      <PageHeader title={title} />
+      <Empty title="Only the shop owner can open this page">Ask the owner if something here needs changing.</Empty>
+    </>
+  );
+}

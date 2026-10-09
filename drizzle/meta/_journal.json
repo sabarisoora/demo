@@ -29,6 +29,20 @@
       "when": 1791476319918,
       "tag": "0003_job_details_digest",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1791520434496,
+      "tag": "0004_shop_management",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1791521851217,
+      "tag": "0005_team",
+      "breakpoints": true
     }
   ]
 }

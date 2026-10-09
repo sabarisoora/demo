@@ -1,5 +1,5 @@
 import "server-only";
-import { desc, eq } from "drizzle-orm";
+import { and, desc, eq } from "drizzle-orm";
 import { db, expenses, jobs, type Business } from "@/db";
 import { filterPeriod, periodStart, type Period, type Settings } from "./metrics";
 
@@ -15,9 +15,14 @@ export function settingsOf(b: Business): Settings {
   };
 }
 
+/** Jobs that count in the numbers (completed) and all expenses. Estimates and open work are excluded. */
 export async function loadEntries(businessId: string) {
   const [j, e] = await Promise.all([
-    db.select().from(jobs).where(eq(jobs.businessId, businessId)).orderBy(desc(jobs.date), desc(jobs.createdAt)),
+    db
+      .select()
+      .from(jobs)
+      .where(and(eq(jobs.businessId, businessId), eq(jobs.status, "completed")))
+      .orderBy(desc(jobs.date), desc(jobs.createdAt)),
     db.select().from(expenses).where(eq(expenses.businessId, businessId)).orderBy(desc(expenses.date), desc(expenses.createdAt)),
   ]);
   return { jobs: j, expenses: e };
@@ -32,4 +37,9 @@ export async function loadPeriod(b: Business, period: Period, today = new Date()
   const all = await loadEntries(b.id);
   const start = periodStart(period, today, b.fiscalYearStart);
   return { ...all, periodJobs: filterPeriod(all.jobs, start), periodExpenses: filterPeriod(all.expenses, start) };
+}
+
+/** Every job regardless of status (for the repair order list and exports). */
+export function loadAllJobs(businessId: string) {
+  return db.select().from(jobs).where(eq(jobs.businessId, businessId)).orderBy(desc(jobs.date), desc(jobs.createdAt));
 }

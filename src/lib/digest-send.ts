@@ -15,7 +15,7 @@ export async function sendDigest(user: User, business: Business, appUrl = site.u
   // A year of history is enough for the week, the month and the lapsed-customer check.
   const since = new Date(today.getTime() - 400 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
   const [j, e] = await Promise.all([
-    db.select().from(jobs).where(and(eq(jobs.businessId, business.id), gte(jobs.date, since))),
+    db.select().from(jobs).where(and(eq(jobs.businessId, business.id), eq(jobs.status, "completed"), gte(jobs.date, since))),
     db.select().from(expenses).where(and(eq(expenses.businessId, business.id), gte(expenses.date, since))),
   ]);
   if (j.length === 0 && e.length === 0) return false;

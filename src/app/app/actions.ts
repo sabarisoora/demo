@@ -4,11 +4,13 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { and, eq, sql } from "drizzle-orm";
 import { z } from "zod";
-import { db, businesses, expenses, jobs } from "@/db";
-import { requireSession } from "@/lib/auth";
+import { db, businesses, customers, expenses, jobLines, jobs, parts, vehicles } from "@/db";
+import { requireOwner, requireWriter } from "@/lib/auth";
 import { countries } from "@/lib/countries";
+import { rateLimit } from "@/lib/tokens";
 import { mapColumns, parseCsv, parseDate, parseMoney, type DateFormat } from "@/lib/csv";
 import { getNiche } from "@/niches";
+import { customerIdsByName, findOrCreateCustomer } from "@/lib/shop-data";
 
 const refresh = () => revalidatePath("/app", "layout");
 
@@ -47,11 +49,13 @@ async function nextRef(table: typeof jobs | typeof expenses, businessId: string,
 }
 
 export async function saveJob(_: ActionState, form: FormData): Promise<ActionState> {
-  const { business } = await requireSession();
+  const { business } = await requireWriter();
   const parsed = jobSchema.safeParse(Object.fromEntries(form));
   if (!parsed.success) return { error: parsed.error.issues[0].message };
   const { id, unpaid, comeback, ...rest } = parsed.data;
-  const v = { ...rest, paid: unpaid !== "on", comeback: comeback === "on" };
+  // Link the typed name to a customer record so it shows up under Customers.
+  const customerId = await findOrCreateCustomer(db, business.id, rest.customer);
+  const v = { ...rest, customerId, paid: unpaid !== "on", comeback: comeback === "on" };
   if (id) {
     await db.update(jobs).set(v).where(and(eq(jobs.id, id), eq(jobs.businessId, business.id)));
   } else {
@@ -65,7 +69,7 @@ export async function saveJob(_: ActionState, form: FormData): Promise<ActionSta
 }
 
 export async function setJobPaid(form: FormData) {
-  const { business } = await requireSession();
+  const { business } = await requireWriter();
   const id = z.string().uuid().parse(form.get("id"));
   const paid = form.get("paid") !== "false";
   await db.update(jobs).set({ paid }).where(and(eq(jobs.id, id), eq(jobs.businessId, business.id)));
@@ -73,7 +77,7 @@ export async function setJobPaid(form: FormData) {
 }
 
 export async function deleteJob(form: FormData) {
-  const { business } = await requireSession();
+  const { business } = await requireWriter();
   const id = z.string().uuid().parse(form.get("id"));
   await db.delete(jobs).where(and(eq(jobs.id, id), eq(jobs.businessId, business.id)));
   refresh();
@@ -91,7 +95,7 @@ const expenseSchema = z.object({
 });
 
 export async function saveExpense(_: ActionState, form: FormData): Promise<ActionState> {
-  const { business } = await requireSession();
+  const { business } = await requireWriter();
   const parsed = expenseSchema.safeParse(Object.fromEntries(form));
   if (!parsed.success) return { error: parsed.error.issues[0].message };
   const { id, ...v } = parsed.data;
@@ -107,7 +111,7 @@ export async function saveExpense(_: ActionState, form: FormData): Promise<Actio
 }
 
 export async function deleteExpense(form: FormData) {
-  const { business } = await requireSession();
+  const { business } = await requireWriter();
   const id = z.string().uuid().parse(form.get("id"));
   await db.delete(expenses).where(and(eq(expenses.id, id), eq(expenses.businessId, business.id)));
   refresh();
@@ -128,7 +132,7 @@ const settingsSchema = z.object({
 });
 
 export async function saveSettings(_: ActionState, form: FormData): Promise<ActionState> {
-  const { business } = await requireSession();
+  const { business } = await requireOwner();
   const parsed = settingsSchema.safeParse(Object.fromEntries(form));
   if (!parsed.success) return { error: parsed.error.issues[0].message };
   await db.update(businesses).set(parsed.data).where(eq(businesses.id, business.id));
@@ -137,7 +141,7 @@ export async function saveSettings(_: ActionState, form: FormData): Promise<Acti
 }
 
 export async function saveReserve(_: ActionState, form: FormData): Promise<ActionState> {
-  const { business } = await requireSession();
+  const { business } = await requireOwner();
   const parsed = money.safeParse(form.get("reserveSetAside"));
   if (!parsed.success) return { error: "Enter an amount of 0 or more." };
   await db.update(businesses).set({ reserveSetAside: parsed.data }).where(eq(businesses.id, business.id));
@@ -147,7 +151,7 @@ export async function saveReserve(_: ActionState, form: FormData): Promise<Actio
 
 /** Checklists: group is a month key ("2026-10") for the monthly list or "docs" for the accountant list. */
 export async function toggleChecklist(form: FormData) {
-  const { business } = await requireSession();
+  const { business } = await requireWriter();
   const group = z.string().regex(/^(\d{4}-\d{2}|docs)$/).parse(form.get("group"));
   const key = z.string().regex(/^[a-z-]{1,40}$/).parse(form.get("key"));
   const current = business.checklist ?? {};
@@ -169,7 +173,7 @@ function shiftMonths(iso: string, months: number) {
 
 /** Loads the niche's demo data, shifted so the newest month is the current month. */
 export async function loadSample() {
-  const { business } = await requireSession();
+  const { business } = await requireOwner();
   const { sample } = getNiche(business.niche);
   // Anchor on the newest job (not expenses, which can run a few days past the last job).
   const latest = sample.orders.map((r) => r.date).sort().at(-1)!;
@@ -186,21 +190,64 @@ export async function loadSample() {
   };
 
   await db.transaction(async (tx) => {
-    await tx.delete(jobs).where(eq(jobs.businessId, business.id));
-    await tx.delete(expenses).where(eq(expenses.businessId, business.id));
-    await tx.insert(jobs).values(sample.orders.map((o) => ({ ...o, date: shift(o.date), businessId: business.id })));
+    await wipe(tx, business.id);
+
+    // Customers and their vehicles.
+    const vehicleIds = new Map<string, string[]>(); // customer name -> vehicle ids
+    const customerIds = new Map<string, string>();
+    for (const c of sample.customers ?? []) {
+      const [row] = await tx.insert(customers).values({ businessId: business.id, name: c.name, phone: c.phone, email: c.email }).returning({ id: customers.id });
+      customerIds.set(c.name, row.id);
+      if (c.vehicles.length) {
+        const vs = await tx
+          .insert(vehicles)
+          .values(c.vehicles.map((v) => ({ ...v, businessId: business.id, customerId: row.id })))
+          .returning({ id: vehicles.id });
+        vehicleIds.set(c.name, vs.map((v) => v.id));
+      }
+    }
+    if (!sample.customers) for (const [k, id] of await customerIdsByName(tx, business.id, sample.orders.map((o) => o.customer))) customerIds.set(k, id);
+
+    // Jobs, each with a labor line and (if any) a parts line that add up to the original totals.
+    const rows = sample.orders.map((o) => ({
+      ...o,
+      vehicle: undefined,
+      date: shift(o.date),
+      businessId: business.id,
+      status: "completed",
+      customerId: customerIds.get(o.customer) ?? customerIds.get(o.customer.toLowerCase()) ?? null,
+      vehicleId: o.vehicle !== undefined ? (vehicleIds.get(o.customer)?.[o.vehicle] ?? null) : null,
+      mileage: o.mileage ?? null,
+    }));
+    for (let i = 0; i < rows.length; i += 200) {
+      const batch = rows.slice(i, i + 200);
+      const ids = await tx.insert(jobs).values(batch).returning({ id: jobs.id });
+      const lines = batch.flatMap((o, k) => [
+        ...(o.revenueB || o.costB
+          ? [{ jobId: ids[k].id, businessId: business.id, kind: "labor", description: `${o.category}${o.hours ? ` (${o.hours} hrs)` : ""}`, qty: 1, unitPrice: o.revenueB, unitCost: o.costB, sort: 0 }]
+          : []),
+        ...(o.revenueA || o.costA ? [{ jobId: ids[k].id, businessId: business.id, kind: "part", description: `Parts: ${o.category}`, qty: 1, unitPrice: o.revenueA, unitCost: o.costA, sort: 1 }] : []),
+      ]);
+      if (lines.length) await tx.insert(jobLines).values(lines);
+    }
     await tx.insert(expenses).values(sample.expenses.map((e) => ({ ...e, date: shift(e.date), businessId: business.id })));
+    if (sample.parts?.length) await tx.insert(parts).values(sample.parts.map((p) => ({ ...p, businessId: business.id })));
   });
   refresh();
   redirect("/app");
 }
 
+/** Removes every entry: jobs (and their lines), expenses, customers (and vehicles) and parts. */
+async function wipe(tx: Parameters<Parameters<typeof db.transaction>[0]>[0], businessId: string) {
+  await tx.delete(jobs).where(eq(jobs.businessId, businessId));
+  await tx.delete(expenses).where(eq(expenses.businessId, businessId));
+  await tx.delete(customers).where(eq(customers.businessId, businessId));
+  await tx.delete(parts).where(eq(parts.businessId, businessId));
+}
+
 export async function clearData() {
-  const { business } = await requireSession();
-  await db.transaction(async (tx) => {
-    await tx.delete(jobs).where(eq(jobs.businessId, business.id));
-    await tx.delete(expenses).where(eq(expenses.businessId, business.id));
-  });
+  const { business } = await requireOwner();
+  await db.transaction((tx) => wipe(tx, business.id));
   refresh();
   redirect("/app");
 }
@@ -245,12 +292,12 @@ export type ImportState = { error?: string; imported?: number; skipped?: string[
 const MAX_ROWS = 5000;
 
 export async function importCsv(_: ImportState, form: FormData): Promise<ImportState> {
-  const { business } = await requireSession();
+  const { business } = await requireOwner();
   const kind = form.get("kind") === "expenses" ? "expenses" : "jobs";
   const dateFormat = (["ymd", "mdy", "dmy"].includes(String(form.get("dateFormat"))) ? form.get("dateFormat") : "mdy") as DateFormat;
   const file = form.get("file");
   if (!(file instanceof File) || file.size === 0) return { error: "Choose a CSV file to import." };
-  if (file.size > 5 * 1024 * 1024) return { error: "That file is over 5 MB. Split it into smaller files." };
+  if (file.size > 4 * 1024 * 1024) return { error: "That file is over 4 MB. Split it into smaller files." };
 
   const rows = parseCsv(await file.text());
   if (rows.length < 2) return { error: "The file needs a header row and at least one data row." };
@@ -298,6 +345,9 @@ export async function importCsv(_: ImportState, form: FormData): Promise<ImportS
         comeback: parseYes(cell(r, col.comeback)),
       });
     });
+    // Link each customer name to a customer record (created if new).
+    const ids = await customerIdsByName(db, business.id, values.map((v) => v.customer ?? ""));
+    for (const v of values) v.customerId = ids.get((v.customer ?? "").trim().replace(/\s+/g, " ").toLowerCase()) ?? null;
     for (let i = 0; i < values.length; i += 500) await db.insert(jobs).values(values.slice(i, i + 500));
     refresh();
     return { imported: values.length, skipped, kind: niche.job.plural.toLowerCase() };
@@ -325,4 +375,93 @@ export async function importCsv(_: ImportState, form: FormData): Promise<ImportS
   for (let i = 0; i < values.length; i += 500) await db.insert(expenses).values(values.slice(i, i + 500));
   refresh();
   return { imported: values.length, skipped, kind: "expenses" };
+}
+
+// ───────────── Excel workbook import (ProfitIQS Essential / Elite) ─────────────
+
+export type WorkbookState = { error?: string; summary?: string[] } | undefined;
+
+export async function importWorkbook(_: WorkbookState, form: FormData): Promise<WorkbookState> {
+  const { business } = await requireOwner();
+  const file = form.get("file");
+  const replace = form.get("mode") === "replace";
+  if (!(file instanceof File) || file.size === 0) return { error: "Choose your ProfitIQS .xlsx workbook." };
+  if (file.size > 4 * 1024 * 1024) return { error: "That file is over 4 MB." };
+  if (!(await rateLimit(`wb-import:${business.id}`, 10, 3600))) return { error: "Too many imports in the last hour. Try again later." };
+
+  const { parseWorkbook } = await import("@/lib/workbook");
+  let wb;
+  try {
+    wb = await parseWorkbook(await file.arrayBuffer());
+  } catch (e) {
+    return { error: e instanceof Error && e.message.startsWith("This doesn't") ? e.message : "Couldn't read that file. Make sure it's an .xlsx workbook (not .xls or .csv)." };
+  }
+  if (!wb.jobs.length && !wb.expenses.length) return { error: "The workbook has no repair orders or expenses to import." };
+
+  await db.transaction(async (tx) => {
+    if (replace) await wipe(tx, business.id);
+
+    // Customers (Elite has a customer database; Essential has names on each RO).
+    const customerByKey = new Map<string, string>();
+    for (let i = 0; i < wb.customers.length; i += 500) {
+      const batch = wb.customers.slice(i, i + 500);
+      const rows = await tx.insert(customers).values(batch.map((c) => ({ businessId: business.id, name: c.name, phone: c.phone, email: c.email }))).returning({ id: customers.id });
+      batch.forEach((c, k) => customerByKey.set(c.key, rows[k].id));
+    }
+    const byName = await customerIdsByName(tx, business.id, wb.jobs.filter((j) => !j.customerKey || !customerByKey.has(j.customerKey)).map((j) => j.customer));
+    const vehicleByKey = new Map<string, string>();
+    const vs = wb.vehicles.filter((v) => customerByKey.has(v.customerKey));
+    for (let i = 0; i < vs.length; i += 500) {
+      const batch = vs.slice(i, i + 500);
+      const rows = await tx
+        .insert(vehicles)
+        .values(batch.map(({ key: _k, customerKey, ...v }) => ({ ...v, businessId: business.id, customerId: customerByKey.get(customerKey)! })))
+        .returning({ id: vehicles.id });
+      batch.forEach((v, k) => vehicleByKey.set(v.key, rows[k].id));
+    }
+
+    for (let i = 0; i < wb.jobs.length; i += 400) {
+      const batch = wb.jobs.slice(i, i + 400);
+      const rows = await tx
+        .insert(jobs)
+        .values(
+          batch.map(({ customerKey, vehicleKey, ...j }) => ({
+            ...j,
+            businessId: business.id,
+            customerId: (customerKey && customerByKey.get(customerKey)) || byName.get(j.customer.trim().replace(/\s+/g, " ").toLowerCase()) || null,
+            vehicleId: (vehicleKey && vehicleByKey.get(vehicleKey)) || null,
+          })),
+        )
+        .returning({ id: jobs.id });
+      const lines = batch.flatMap((j, k) => [
+        ...(j.revenueB || j.costB
+          ? [{ jobId: rows[k].id, businessId: business.id, kind: "labor", description: `${j.category}${j.hours ? ` (${j.hours} hrs)` : ""}`, qty: 1, unitPrice: j.revenueB, unitCost: j.costB, sort: 0 }]
+          : []),
+        ...(j.revenueA || j.costA ? [{ jobId: rows[k].id, businessId: business.id, kind: "part", description: `Parts: ${j.category}`, qty: 1, unitPrice: j.revenueA, unitCost: j.costA, sort: 1 }] : []),
+      ]);
+      if (lines.length) await tx.insert(jobLines).values(lines);
+    }
+    for (let i = 0; i < wb.expenses.length; i += 500) await tx.insert(expenses).values(wb.expenses.slice(i, i + 500).map((e) => ({ ...e, businessId: business.id })));
+    for (let i = 0; i < wb.parts.length; i += 500) await tx.insert(parts).values(wb.parts.slice(i, i + 500).map((p) => ({ ...p, businessId: business.id })));
+
+    // Essential workbooks carry the shop's setup; fill in only what's still blank/default.
+    const s = wb.settings;
+    const patch: Partial<typeof businesses.$inferInsert> = {};
+    if (s.country && countries.some((c) => c.name === s.country)) patch.country = s.country;
+    if (s.businessName && s.businessName !== "Your Auto Repair Shop LLC" && !business.name) patch.name = s.businessName;
+    if (s.openingCash && !business.openingCash) patch.openingCash = s.openingCash;
+    if (Object.keys(patch).length) await tx.update(businesses).set(patch).where(eq(businesses.id, business.id));
+  });
+  refresh();
+
+  const n = (x: number, w: string) => `${x.toLocaleString("en-US")} ${w}`;
+  return {
+    summary: [
+      `${wb.edition} workbook imported${replace ? " (replaced your previous data)" : ""}:`,
+      n(wb.jobs.length, "repair orders") + (wb.jobs.some((j) => j.status === "open") ? ` (${wb.jobs.filter((j) => j.status === "open").length} still open)` : ""),
+      n(wb.expenses.length, "expenses"),
+      ...(wb.customers.length ? [n(wb.customers.length, "customers"), n(wb.vehicles.length, "vehicles")] : []),
+      ...(wb.parts.length ? [n(wb.parts.length, "inventory parts")] : []),
+    ],
+  };
 }

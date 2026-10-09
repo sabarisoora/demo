@@ -9,20 +9,23 @@ import { Nav, type NavItem } from "./nav";
 import { Notices, VerifyBanner } from "./banners";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
-  const { user, business } = await requireSession();
+  const { user, business, role } = await requireSession();
   const niche = getNiche(business.niche);
   const elite = isElite(user);
 
   const items: NavItem[] = [
     { href: "/app", label: "Dashboard" },
     { href: "/app/jobs", label: niche.job.plural },
+    { href: "/app/customers", label: "Customers & vehicles" },
     { href: "/app/expenses", label: "Expenses" },
     { href: "/app/tax", label: "Tax & Deductions" },
     { href: "/app/health", label: "Health Snapshot" },
     { href: "/app/accountant", label: "Accountant Export" },
-    { href: "/app/import", label: "Import CSV" },
+    { href: "/app/import", label: "Import data" },
     { href: "/app/settings", label: "Settings" },
     { href: "/app/account", label: "Account" },
+    { href: "/app/inventory", label: "Inventory", elite: true },
+    { href: "/app/reminders", label: "Service reminders", elite: true },
     { href: "/app/elite/leaks", label: "Profit Leak Detector", elite: true },
     { href: "/app/elite/services", label: "Service Profitability", elite: true },
     { href: "/app/elite/forecast", label: "6-Month Forecast", elite: true },
@@ -32,7 +35,8 @@ export default async function AppLayout({ children }: { children: React.ReactNod
     { href: "/app/elite/cashflow", label: "Cash Flow", elite: true },
     { href: "/app/elite/receivables", label: "Receivables", elite: true },
     { href: "/app/elite/technicians", label: `${niche.details.technicianPlural} & ${niche.details.comeback}s`, elite: true },
-  ];
+    { href: "/app/team", label: "Team", elite: true },
+  ].filter((it) => role === "owner" || !["/app/import", "/app/settings", "/app/team", "/app/upgrade"].includes(it.href));
 
   return (
     <div className="lg:flex">
@@ -44,11 +48,14 @@ export default async function AppLayout({ children }: { children: React.ReactNod
           </span>
         </div>
         <div className="px-4 pb-1 text-xs text-muted lg:px-5">{business.name || niche.name}</div>
+        <form action="/app/search" role="search" className="px-3 pt-2 lg:px-4">
+          <input name="q" className="field py-1.5 text-sm" placeholder="Search customers, plates, ROs…" aria-label="Search" />
+        </form>
         <div className="px-2 pb-2 lg:flex-1 lg:px-3 lg:pt-2">
           <Nav items={items} elite={elite} />
         </div>
         <div className="hidden border-t border-line p-4 lg:block">
-          {!elite && (
+          {!elite && role === "owner" && (
             <Link href="/app/upgrade" className="btn btn-primary mb-3 w-full">
               Upgrade to Elite
             </Link>
@@ -74,6 +81,12 @@ export default async function AppLayout({ children }: { children: React.ReactNod
       <main className="min-w-0 flex-1 px-4 py-6 sm:px-6 lg:px-10 lg:py-10">
         <div className="mx-auto max-w-6xl">
           {!user.emailVerifiedAt && <VerifyBanner email={user.email} />}
+          {role !== "owner" && (
+            <div className="no-print mb-4 rounded-lg border border-line bg-surface-2 px-4 py-2 text-sm text-ink-2">
+              {role === "viewer" ? "Read-only access" : "Staff access"} to <strong>{business.name || "this shop"}</strong>
+              {role === "viewer" ? ". You can view everything; changes are made by the owner or staff." : ". Settings, team and imports are managed by the owner."}
+            </div>
+          )}
           <Suspense>
             <Notices />
           </Suspense>
@@ -83,7 +96,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
           <span className="truncate">{user.email}</span>
           <span className="flex shrink-0 gap-3 font-semibold text-ink-2">
             {isAdmin(user) && <Link href="/admin">Admin</Link>}
-            {!elite && <Link href="/app/upgrade">Upgrade</Link>}
+            {!elite && role === "owner" && <Link href="/app/upgrade">Upgrade</Link>}
             <form action={logout}>
               <button>Log out</button>
             </form>
