@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sam Call Drivers</title>
+<meta name="description" content="Sam Call Drivers: 100+ trained drivers on our own team for acting / call driver, outstation, hourly, monthly, valet parking, heavy vehicle, cab and pickup &amp; drop. 24 hrs, 7 days. Call +91 90929 16836.">
+<meta property="og:title" content="Sam Call Drivers · Your Journey, Our Responsibility">
+<meta property="og:description" content="Acting drivers, outstation, monthly, valet, heavy vehicle and cab service. 100+ drivers, 24×7.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#0f0e0c">
+<link rel="icon" href="assets/mark.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Barlow+Condensed:wght@500;600;700&family=Figtree:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: chauffeur's ledger. Ivory pages framed by black "duty" bands; gold is the one accent,
+   used for hairlines, plates and calls to action. Photos are real drivers on real duty. */
+:root{
+  --bg:#fbfaf6;        /* ivory page */
+  --surface:#ffffff;
+  --ink:#16140f;       /* warm black from the logo */
+  --muted:#5e584c;
+  --line:#e4dccb;
+  --gold:#b8892c;      /* brushed gold */
+  --gold-2:#e2bd63;    /* highlight gold */
+  --band:#0f0e0c;      /* black duty band (same in both themes) */
+  --band-ink:#f3eee2;
+  --band-muted:#b4ab98;
+  --plate-yellow:#f4c514;
+  --wa:#1f9d55;
+  --display:"Cinzel","Trajan Pro",Georgia,"Times New Roman",serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --label:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --r:14px;
+  --wrap:1180px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121110;--surface:#1b1a17;--ink:#f1ece0;--muted:#b0a794;--line:#2f2b24;
+  --gold:#d6a84a;--gold-2:#f0cd7a;--band:#0a0908;--band-ink:#f3eee2;--band-muted:#a89f8c;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121110;--surface:#1b1a17;--ink:#f1ece0;--muted:#b0a794;--line:#2f2b24;
+  --gold:#d6a84a;--gold-2:#f0cd7a;--band:#0a0908;--band-ink:#f3eee2;--band-muted:#a89f8c;color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.6 var(--body);overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;text-wrap:balance;margin:0}
+p{margin:0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(16px,4vw,32px)}
+.eyebrow{font:600 .95rem/1 var(--label);letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.7rem}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.sec{padding-block:clamp(64px,9vw,112px)}
+.sec-head{display:grid;gap:14px;max-width:46rem;margin-bottom:clamp(32px,5vw,52px)}
+.sec-head h2{font-size:clamp(1.9rem,4.2vw,3rem)}
+.sec-head p{color:var(--muted);font-size:1.08rem;max-width:40rem}
+
+/* logo swap per theme */
+.logo-dark{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo-on-bg .logo-light{display:none}:root:not([data-theme="light"]) .logo-on-bg .logo-dark{display:block}}
+:root[data-theme="dark"] .logo-on-bg .logo-light{display:none}
+:root[data-theme="dark"] .logo-on-bg .logo-dark{display:block}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:52px;padding:0 1.4rem;border-radius:999px;
+  font:700 1.08rem/1 var(--label);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-gold{background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#16140f;box-shadow:0 8px 24px -10px rgba(184,137,44,.8)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(184,137,44,.9)}
+.btn-ghost{border-color:currentColor;background:transparent}
+.btn-ghost:hover{background:color-mix(in srgb,currentColor 8%,transparent)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{transform:translateY(-2px)}
+
+/* top bar */
+.topbar{background:var(--band);color:var(--band-muted);font:600 .9rem/1 var(--label);letter-spacing:.14em;text-transform:uppercase}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-block:9px;flex-wrap:wrap}
+.topbar b{color:var(--gold-2);font-weight:600}
+.topbar a{text-decoration:none;color:var(--band-ink)}
+
+/* header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:74px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:50px;width:auto}
+.brand span{font:700 1.05rem/1.05 var(--display);letter-spacing:.06em}
+.brand small{display:block;font:600 .72rem/1.2 var(--label);letter-spacing:.2em;color:var(--gold);margin-top:3px}
+.nav{display:flex;gap:26px;font:600 1rem/1 var(--label);letter-spacing:.1em;text-transform:uppercase}
+.nav a{text-decoration:none;color:var(--muted);transition:color .2s}
+.nav a:hover{color:var(--ink)}
+.hdr .btn{min-height:44px;font-size:1rem}
+@media (max-width:960px){.nav{display:none}}
+@media (max-width:520px){.hdr .call-txt{display:none}.hdr .btn{padding:0 .9rem}.brand span{font-size:.95rem}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:clamp(40px,6vw,84px) clamp(56px,7vw,96px)}
+.hero::before{content:"";position:absolute;inset:auto -10% -40% 30%;height:80%;background:radial-gradient(closest-side,color-mix(in srgb,var(--gold-2) 22%,transparent),transparent);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,5vw,72px);align-items:center;position:relative}
+.hero-copy{display:grid;gap:22px;min-width:0}
+.hero-logo{width:min(340px,80%);height:auto;margin-left:-6px}
+.hero h1{font-size:clamp(2.4rem,6vw,4.6rem);letter-spacing:.01em}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,var(--gold),var(--gold-2) 55%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{font-size:clamp(1.05rem,1.6vw,1.22rem);color:var(--muted);max-width:34rem}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-photo{position:relative;min-width:0}
+.hero-photo .frame{border-radius:240px 240px var(--r) var(--r);overflow:hidden;aspect-ratio:4/5;max-width:100%;border:1px solid var(--line);box-shadow:0 40px 80px -40px rgba(15,14,12,.55)}
+.hero-photo .frame img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.hero-photo .ring{position:absolute;inset:-14px;border-radius:254px 254px 24px 24px;border:1px solid var(--gold);opacity:.55;pointer-events:none}
+.badge-24{position:absolute;left:-18px;bottom:44px;background:var(--band);color:var(--band-ink);border-radius:var(--r);padding:16px 18px;display:grid;gap:4px;box-shadow:0 20px 40px -20px rgba(0,0,0,.6)}
+.badge-24 b{font:700 2.2rem/1 var(--label);color:var(--gold-2);letter-spacing:.02em}
+.badge-24 span{font:600 .85rem/1.2 var(--label);letter-spacing:.16em;text-transform:uppercase;color:var(--band-muted)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-block:1px solid var(--line);margin-top:6px}
+.stats div{padding:16px 14px 14px 0;display:grid;gap:4px}
+.stats div+div{padding-left:18px;border-left:1px solid var(--line)}
+.stats b{font:700 clamp(1.7rem,3.2vw,2.3rem)/1 var(--label);font-variant-numeric:tabular-nums}
+.stats span{font-size:.88rem;color:var(--muted);line-height:1.3}
+@media (max-width:880px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-photo{max-width:440px;width:100%;margin-inline:auto;order:-1}
+  .hero-logo{display:none}
+  .badge-24{left:6px}
+}
+
+/* ticker */
+.ticker{background:var(--band);color:var(--band-ink);overflow:hidden;border-block:1px solid color-mix(in srgb,var(--gold) 50%,transparent)}
+.ticker-track{display:flex;width:max-content;animation:tick 38s linear infinite}
+.ticker-track span{font:600 1.25rem/1 var(--label);letter-spacing:.16em;text-transform:uppercase;padding:18px 0;display:flex;align-items:center;white-space:nowrap}
+.ticker-track span::after{content:"";width:7px;height:7px;transform:rotate(45deg);background:var(--gold-2);margin-inline:28px}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.svc{background:var(--surface);padding:28px 24px 26px;display:grid;gap:12px;align-content:start;min-width:0;transition:background .25s}
+.svc:hover{background:color-mix(in srgb,var(--gold-2) 10%,var(--surface))}
+.svc .ico{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:var(--band);color:var(--gold-2)}
+.svc .ico svg{width:26px;height:26px}
+.svc h3{font-size:1.12rem;letter-spacing:.02em}
+.svc p{color:var(--muted);font-size:.95rem;line-height:1.5}
+.svc .tag{font:600 .8rem/1 var(--label);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+@media (max-width:1020px){.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.svc-grid{grid-template-columns:1fr}}
+
+/* duty band: vehicles + boards */
+.band{background:var(--band);color:var(--band-ink)}
+.band .sec-head p{color:var(--band-muted)}
+.veh-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.veh{border:1px solid #2c2820;border-radius:var(--r);padding:22px 14px 18px;display:grid;justify-items:center;gap:12px;text-align:center;background:linear-gradient(180deg,#191712,#0f0e0c)}
+.veh svg{width:64px;height:40px;color:var(--gold-2)}
+.veh b{font:600 1.08rem/1 var(--label);letter-spacing:.12em;text-transform:uppercase}
+.veh span{font-size:.85rem;color:var(--band-muted);line-height:1.35}
+@media (max-width:960px){.veh-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:480px){.veh-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.boards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:40px}
+.board{display:flex;align-items:center;gap:22px;border:1px solid #2c2820;border-radius:var(--r);padding:22px;min-width:0}
+.plate{flex:none;font:700 1.35rem/1 var(--label);letter-spacing:.1em;padding:12px 16px;border-radius:7px;border:3px solid #16140f;box-shadow:0 0 0 2px #e8e1d0, inset 0 0 0 1px rgba(0,0,0,.2);color:#16140f;white-space:nowrap}
+.plate.t{background:var(--plate-yellow)}
+.plate.o{background:#fbfaf6}
+.board h3{font-size:1.15rem;margin-bottom:6px}
+.board p{color:var(--band-muted);font-size:.95rem;line-height:1.5}
+@media (max-width:760px){.boards{grid-template-columns:1fr}}
+@media (max-width:420px){.board{flex-direction:column;align-items:flex-start}}
+
+/* how it works */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,40px);counter-reset:s}
+.step{display:grid;gap:12px;align-content:start;padding-top:22px;border-top:2px solid var(--ink);position:relative}
+.step::before{counter-increment:s;content:"Step " counter(s);font:600 .9rem/1 var(--label);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.step h3{font-size:1.35rem}
+.step p{color:var(--muted)}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+
+/* founder */
+.founder{background:var(--surface);border-block:1px solid var(--line)}
+.founder .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,80px);align-items:center}
+.f-photo{position:relative;max-width:440px;width:100%;isolation:isolate}
+.f-photo img{border-radius:var(--r);aspect-ratio:4/5;object-fit:cover;width:100%;max-width:100%}
+.f-photo::after{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid var(--gold);border-radius:var(--r);z-index:-1}
+.f-copy{display:grid;gap:22px;min-width:0}
+.f-copy blockquote{margin:0;font:500 clamp(1.6rem,3.6vw,2.6rem)/1.18 var(--display);text-wrap:balance}
+.f-copy blockquote em{font-style:normal;color:var(--gold)}
+.f-copy p{color:var(--muted);max-width:38rem}
+.promise{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px;margin:6px 0 0;padding:0;list-style:none}
+.promise li{display:flex;gap:12px;align-items:flex-start;line-height:1.4}
+.promise svg{flex:none;width:22px;height:22px;color:var(--gold);margin-top:1px}
+.promise b{display:block}
+.promise span{color:var(--muted);font-size:.92rem}
+@media (max-width:820px){.founder .wrap{grid-template-columns:1fr}.f-photo{margin-inline:auto}}
+@media (max-width:460px){.promise{grid-template-columns:1fr}}
+
+/* gallery */
+.gallery{columns:4 220px;column-gap:14px}
+.gallery figure{margin:0 0 14px;break-inside:avoid;position:relative;border-radius:12px;overflow:hidden;background:var(--line)}
+.gallery img{width:100%;height:auto;transition:transform .5s}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{position:absolute;left:10px;bottom:10px;background:rgba(15,14,12,.78);color:#f3eee2;font:600 .82rem/1 var(--label);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px;border-radius:6px}
+
+/* booking */
+.book .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,64px);align-items:start}
+.book-info{display:grid;gap:22px;min-width:0}
+.phone-big{font:700 clamp(2.2rem,5.4vw,3.4rem)/1 var(--label);letter-spacing:.03em;color:var(--gold-2);text-decoration:none;font-variant-numeric:tabular-nums;user-select:all}
+.copy-row{display:flex;gap:10px;flex-wrap:wrap}
+.chip-btn{font:600 .9rem/1 var(--label);letter-spacing:.14em;text-transform:uppercase;padding:10px 14px;border-radius:999px;border:1px solid #3a352b;background:transparent;color:var(--band-ink);cursor:pointer;text-decoration:none}
+.chip-btn:hover{border-color:var(--gold-2);color:var(--gold-2)}
+.hours{display:grid;gap:10px;border-top:1px solid #2c2820;padding-top:20px}
+.hours div{display:flex;justify-content:space-between;gap:16px;color:var(--band-muted)}
+.hours b{color:var(--band-ink);font-weight:600}
+form.card{background:var(--surface);color:var(--ink);border-radius:18px;padding:clamp(20px,3vw,32px);display:grid;gap:16px;grid-template-columns:repeat(2,minmax(0,1fr));box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+form.card h3{grid-column:1/-1;font-size:1.45rem}
+.fld{display:grid;gap:6px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld label{font:600 .88rem/1 var(--label);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.fld input,.fld select,.fld textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%;min-height:48px}
+.fld textarea{min-height:88px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 25%,transparent)}
+form.card .btn{grid-column:1/-1}
+.form-note{grid-column:1/-1;font-size:.88rem;color:var(--muted)}
+.form-err{grid-column:1/-1;color:#b3261e;font-weight:600;font-size:.95rem}
+@media (max-width:880px){.book .wrap{grid-template-columns:1fr}}
+@media (max-width:480px){form.card{grid-template-columns:1fr}}
+
+/* faq */
+.faq{display:grid;gap:12px;max-width:820px}
+.faq details{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:0 20px}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:600;font-size:1.05rem;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:500 1.6rem/1 var(--body);color:var(--gold);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding-bottom:18px;color:var(--muted)}
+
+/* footer */
+.foot{background:var(--band);color:var(--band-muted);padding-block:56px 110px;border-top:1px solid color-mix(in srgb,var(--gold) 40%,transparent)}
+.foot .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px}
+.foot img{width:220px;height:auto}
+.foot h4{font:600 .95rem/1 var(--label);letter-spacing:.2em;text-transform:uppercase;color:var(--gold-2);margin:0 0 14px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.foot a{text-decoration:none;color:var(--band-ink)}
+.foot a:hover{color:var(--gold-2)}
+.foot .legal{grid-column:1/-1;border-top:1px solid #2c2820;padding-top:20px;font-size:.88rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:760px){.foot .wrap{grid-template-columns:1fr}}
+
+/* floating actions */
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:50;display:grid;gap:10px}
+.fab a{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.5);text-decoration:none}
+.fab svg{width:28px;height:28px}
+.fab .f-wa{background:var(--wa);color:#fff}
+.fab .f-call{background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#16140f}
+.fab .f-wa::before{content:"";position:absolute;width:58px;height:58px;border-radius:50%;border:2px solid var(--wa);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{from{transform:scale(1);opacity:.8}to{transform:scale(1.6);opacity:0}}
+
+/* entrance */
+@keyframes rise{from{transform:translateY(14px)}to{transform:none}}
+.hero-copy>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.hero-copy>*:nth-child(2){animation-delay:.06s}.hero-copy>*:nth-child(3){animation-delay:.12s}
+.hero-copy>*:nth-child(4){animation-delay:.18s}.hero-copy>*:nth-child(5){animation-delay:.24s}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6zM8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-wheel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.2"/><path d="M3.5 10.5c3-.8 5.5-.8 6.4.4M20.5 10.5c-3-.8-5.5-.8-6.4.4M12 14.2V21"/></g></symbol>
+  <symbol id="i-road" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 21M16 3l4 18M12 4v2.5M12 10.5v3M12 17.5V20"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></g></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17M8 14h3M8 17h6"/></g></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4"/><path d="m10.5 12.5 9-9M16 7l2.5 2.5M14 9l2 2"/></g></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6h11v10h-11zM13.5 9.5h4l3.5 3.5V16h-7.5"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></g></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16H3.5v-4l2-5h13l2 5v4H19M5 12h14"/><circle cx="7.5" cy="16.5" r="2"/><circle cx="16.5" cy="16.5" r="2"/><path d="M9.5 16.5h5"/></g></symbol>
+  <symbol id="i-taxi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 4h5l.5 3M5 17H3.5v-4.5L5.5 7h13l2 5.5V17H19M5 12.5h14"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/></g></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h14l-3.5-3.5M20 16H6l3.5 3.5"/></g></symbol>
+  <symbol id="i-city" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l5-3v15M10 21V4h7v17M19 21v-8h-2M13 8h1M13 11h1M13 14h1"/></g></symbol>
+  <symbol id="i-team" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c.5-3.5 3-5.5 6-5.5s5.5 2 6 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.5c2.5 0 4 1.6 4.5 4.5"/></g></symbol>
+  <symbol id="i-rupee" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 4h11M6.5 8.5h11M10 4c3.5 0 5 1.8 5 4.5S13 13 9.5 13h-3l8 7"/></g></symbol>
+</svg>
+
+<div class="topbar"><div class="wrap">
+  <span><b>24 hrs</b> · 7 days · No issues</span>
+  <span>Call / WhatsApp <a href="tel:+919092916836">+91 90929 16836</a></span>
+</div></div>
+
+<header class="hdr"><div class="wrap">
+  <a class="brand logo-on-bg" href="#top" aria-label="Sam Call Drivers home">
+    <img class="logo-light" src="assets/mark.webp" alt="" width="94" height="50">
+    <img class="logo-dark" src="assets/mark-light.webp" alt="" width="94" height="50">
+    <span>Sam Call Drivers<small>Your journey · Our responsibility</small></span>
+  </a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#services">Services</a>
+    <a href="#vehicles">Vehicles</a>
+    <a href="#how">How it works</a>
+    <a href="#gallery">On duty</a>
+    <a href="#book">Book</a>
+  </nav>
+  <a class="btn btn-gold" href="tel:+919092916836"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="call-txt">Call now</span><span class="sr">Call +91 90929 16836</span></a>
+</div></header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="logo-on-bg">
+        <img class="hero-logo logo-light" src="assets/logo.webp" alt="Sam Acting Call Drivers logo" width="900" height="694">
+        <img class="hero-logo logo-dark" src="assets/logo-light.webp" alt="Sam Acting Call Drivers logo" width="900" height="694">
+      </div>
+      <h1>We don't just drive. <em>We care.</em></h1>
+      <p class="lede">A trained driver for your car, your bus or your lorry, for an hour, a day, a month or a long outstation trip. Over 100 drivers on our own team, ready 24 hours a day.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#book"><svg aria-hidden="true"><use href="#i-wheel"/></svg>Book a driver</a>
+        <a class="btn btn-wa" href="https://wa.me/919092916836?text=Hi%20Sam%20Call%20Drivers%2C%20I%20need%20a%20driver." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+      </div>
+      <div class="stats" role="list">
+        <div role="listitem"><b>100+</b><span>Drivers on our own team</span></div>
+        <div role="listitem"><b>24×7</b><span>Day, night and holidays</span></div>
+        <div role="listitem"><b>All</b><span>Car, SUV, bus, lorry, van</span></div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="ring" aria-hidden="true"></div>
+      <div class="frame"><img src="assets/hero-bmw.webp" alt="Sam Call Drivers driver in a white shirt beside a black BMW" width="1122" height="1400" fetchpriority="high"></div>
+      <div class="badge-24"><b>24 HRS</b><span>7 days · No issues</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track">
+  <span>Acting drivers</span><span>Call drivers</span><span>Outstation</span><span>Hourly</span><span>Monthly</span><span>One day</span><span>Valet parking</span><span>Heavy vehicle</span><span>T-board &amp; own board</span><span>Cab service</span><span>Pickup &amp; drop</span>
+  <span>Acting drivers</span><span>Call drivers</span><span>Outstation</span><span>Hourly</span><span>Monthly</span><span>One day</span><span>Valet parking</span><span>Heavy vehicle</span><span>T-board &amp; own board</span><span>Cab service</span><span>Pickup &amp; drop</span>
+</div></div>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Our services</span>
+      <h2>Every kind of driver, one phone call</h2>
+      <p>Tell us the vehicle, the place and the time. We send a driver who suits the job, from a quick hour in the city to a full month on contract.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc"><div class="ico"><svg aria-hidden="true"><use href="#i-wheel"/></svg></div><span class="tag">Your car, our driver</span><h3>Acting &amp; call drivers</h3><p>You own the car, we bring the driver. For office runs, functions, late nights or when you just don't want to drive.</p></article>
+      <article class="svc"><div class="ico"><svg aria-hidden="true"><use href="#i-road"/></svg></div><span class="tag">Long trips</span><h3>Outstation drivers</h3><p>Temple trips, family visits, business travel. Experienced highway drivers for single and multi-day journeys.</p></article>
+      <article class="svc"><div class="ico"><svg aria-hidden="true"><use href="#i-clock"/></svg></div><span class="tag">Pay by the hour</span><h3>Hourly drivers</h3><p>Shopping, hospital visits, meetings across town. Book for a few hours and release the driver when you're done.</p></article>
+      <article class="svc"><div class="ico"><svg aria-hidden="true"><use href="#i-sun"/></svg></div><span class="tag">Full day</span><h3>One-day drivers</h3><p>A driver for the whole day, for weddings, events, airport runs or when your regular driver is on leave.</p></article>
+      <article class="svc"><div class="ico"><svg aria-hidden="true"><use href="#i-cal"/></svg></div><span class="tag">Contract</span><h3>Monthly drivers</h3><p>A dedicated driver for your family or company on a monthly basis, with a replacement if they take leave.</p></article>
+      <article class="svc"><div class="ico"><svg aria-hidden="true"><use href="#i-city"/></svg></div><span class="tag">Beyond city limits</span><h3>Out of city</h3><p>Need a car moved to another city, or a driver to bring it back? We handle one-way and return drops.</p></article>
+      <article class="svc"><div class="ico"><svg aria-hidden="true"><use href="#i-key"/></svg></div><span class="tag">Events &amp; venues</span><h3>Valet parking</h3><p>Uniformed valet teams for weddings, hotels, hospitals and corporate events. Cars parked and returned with care.</p></article>
+      <article class="svc"><div class="ico"><svg aria-hidden="true"><use href="#i-truck"/></svg></div><span class="tag">Heavy licence</span><h3>Heavy vehicle drivers</h3><p>Licensed drivers for buses, lorries, tippers and mini trucks, for trips, shifts or long-term contracts.</p></article>
+      <article class="svc"><div class="ico"><svg aria-hidden="true"><use href="#i-car"/></svg></div><span class="tag">Private vehicles</span><h3>Own vehicle drivers</h3><p>Drivers for your own board (white plate) car or SUV, including automatic and luxury models.</p></article>
+      <article class="svc"><div class="ico"><svg aria-hidden="true"><use href="#i-taxi"/></svg></div><span class="tag">We bring the car</span><h3>Cab &amp; rental cars</h3><p>Sedan, SUV, Innova and tempo traveller with driver. Local rides and outstation, anytime.</p></article>
+      <article class="svc"><div class="ico"><svg aria-hidden="true"><use href="#i-swap"/></svg></div><span class="tag">Door to door</span><h3>Pickup &amp; drop</h3><p>Airport, railway station, school, hospital and office pickups. On time, every time.</p></article>
+      <article class="svc"><div class="ico"><svg aria-hidden="true"><use href="#i-team"/></svg></div><span class="tag">Bulk &amp; corporate</span><h3>Fleet &amp; company drivers</h3><p>Need ten drivers tomorrow? With 100+ drivers on our team we staff fleets, factories and events.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec band" id="vehicles">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Vehicles we drive</span>
+      <h2>Car, bus or lorry. We have a driver for it.</h2>
+      <p>Every driver is matched to the licence and experience your vehicle needs.</p>
+    </div>
+    <div class="veh-grid">
+      <div class="veh"><svg viewBox="0 0 64 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 28v-6l6-2 8-8h20l10 8 8 2v6"/><circle cx="16" cy="29" r="5"/><circle cx="48" cy="29" r="5"/><path d="M21 29h22M2 29h9M53 29h9"/></g></svg><b>Car</b><span>Hatchback, sedan, automatic</span></div>
+      <div class="veh"><svg viewBox="0 0 64 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 29V17l7-8h30l9 8 8 2v10"/><circle cx="16" cy="29" r="5"/><circle cx="48" cy="29" r="5"/><path d="M21 29h22M12 17h39"/></g></svg><b>SUV &amp; Luxury</b><span>BMW, Mercedes, Jaguar, Fortuner</span></div>
+      <div class="veh"><svg viewBox="0 0 64 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 30V8h52l4 8v14z"/><path d="M8 13h8v7H8zM20 13h8v7h-8zM32 13h8v7h-8zM44 13h9v7h-9z"/><circle cx="16" cy="31" r="4"/><circle cx="48" cy="31" r="4"/></g></svg><b>Bus</b><span>School, staff, tourist</span></div>
+      <div class="veh"><svg viewBox="0 0 64 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 29V8h36v21M39 14h12l8 9v6"/><path d="M44 14v9h15"/><circle cx="13" cy="30" r="4.5"/><circle cx="50" cy="30" r="4.5"/><path d="M18 29h27"/></g></svg><b>Lorry</b><span>Goods, tipper, container</span></div>
+      <div class="veh"><svg viewBox="0 0 64 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 29V9h40l10 8 6 2v10"/><path d="M10 13h9v6h-9zM23 13h9v6h-9zM36 13h7v6h-7z"/><circle cx="15" cy="30" r="4.5"/><circle cx="48" cy="30" r="4.5"/></g></svg><b>Van &amp; Traveller</b><span>Innova, tempo traveller</span></div>
+      <div class="veh"><svg viewBox="0 0 64 40" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 29V19h28V9h14l8 8 6 2v10"/><path d="M36 13h8l5 5h-13z"/><circle cx="14" cy="30" r="4.5"/><circle cx="48" cy="30" r="4.5"/></g></svg><b>Pickup</b><span>Mini truck, goods carrier</span></div>
+    </div>
+    <div class="boards">
+      <div class="board"><div class="plate t" aria-hidden="true">TN · T BOARD</div><div><h3>T-board (yellow plate)</h3><p>Commercial taxis, cabs, travels and transport vehicles. Our drivers hold the badge and licence needed for commercial driving.</p></div></div>
+      <div class="board"><div class="plate o" aria-hidden="true">TN · OWN BOARD</div><div><h3>Own board (white plate)</h3><p>Your personal car or family vehicle. A polite, trained driver who treats your car the way you would.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>A driver at your door in three steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Call or WhatsApp</h3><p>Call +91 90929 16836 or send a WhatsApp message any time of day or night.</p></div>
+      <div class="step"><h3>Share the trip</h3><p>Tell us the vehicle, pickup point, date, time and how long you need the driver.</p></div>
+      <div class="step"><h3>Driver arrives</h3><p>We confirm the driver's name and number. They reach on time and you travel relaxed.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec founder" id="about">
+  <div class="wrap">
+    <div class="f-photo"><img src="assets/founder.webp" alt="Founder of Sam Call Drivers" width="750" height="1000" loading="lazy"></div>
+    <div class="f-copy">
+      <span class="eyebrow">Why Sam Call Drivers</span>
+      <blockquote>“Your journey is <em>our responsibility.</em> Every driver who leaves our office carries our name.”</blockquote>
+      <p>Sam Call Drivers is a driver company with our own team of more than 100 drivers. We don't hand your booking to strangers. We know every driver we send, and we stand behind every trip.</p>
+      <ul class="promise">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Safe &amp; trusted</b><span>Verified, licensed and experienced drivers</span></div></li>
+        <li><svg aria-hidden="true"><use href="#i-clock"/></svg><div><b>On time, always</b><span>We reach before you need us</span></div></li>
+        <li><svg aria-hidden="true"><use href="#i-team"/></svg><div><b>Professional drivers</b><span>Neat, polite and well behaved</span></div></li>
+        <li><svg aria-hidden="true"><use href="#i-rupee"/></svg><div><b>Honest rates</b><span>Clear charges told before the trip</span></div></li>
+      </ul>
+      <div class="ctas" style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn btn-gold" href="tel:+919092916836"><svg aria-hidden="true"><use href="#i-phone"/></svg>+91 90929 16836</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">On duty</span>
+      <h2>Our drivers, at the wheel</h2>
+      <p>Real photos from real trips: luxury cars, family cars and buses.</p>
+    </div>
+    <div class="gallery">
+      <figure><img src="assets/driver-wheel.webp" alt="Driver at the wheel of a BMW" width="1000" height="800" loading="lazy"><figcaption>Luxury car</figcaption></figure>
+      <figure><img src="assets/jaguar-1.webp" alt="White Jaguar ready for pickup" width="750" height="1000" loading="lazy"><figcaption>Jaguar</figcaption></figure>
+      <figure><img src="assets/bus.webp" alt="Our driver at the wheel of a bus" width="750" height="1000" loading="lazy"><figcaption>Heavy vehicle</figcaption></figure>
+      <figure><img src="assets/duty-1.webp" alt="Acting driver on duty in a car" width="750" height="1000" loading="lazy"><figcaption>Acting driver</figcaption></figure>
+      <figure><img src="assets/mercedes.webp" alt="Mercedes-Benz steering wheel and dashboard" width="1000" height="750" loading="lazy"><figcaption>Mercedes</figcaption></figure>
+      <figure><img src="assets/duty-4.webp" alt="Driver seated in a luxury car" width="750" height="1000" loading="lazy"><figcaption>Own board</figcaption></figure>
+      <figure><img src="assets/duty-2.webp" alt="Driver ready behind the wheel" width="1000" height="750" loading="lazy"><figcaption>Call driver</figcaption></figure>
+      <figure><img src="assets/jaguar-2.webp" alt="White Jaguar at a hotel porch" width="750" height="1000" loading="lazy"><figcaption>Valet</figcaption></figure>
+      <figure><img src="assets/duty-3.webp" alt="Driver checking a car before the trip" width="750" height="1000" loading="lazy"><figcaption>Pickup &amp; drop</figcaption></figure>
+      <figure><img src="assets/driver-smile.webp" alt="Smiling driver in a BMW" width="1000" height="800" loading="lazy"><figcaption>Outstation</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec band book" id="book">
+  <div class="wrap">
+    <div class="book-info">
+      <span class="eyebrow">Book a driver</span>
+      <h2 style="font-size:clamp(1.9rem,4.2vw,3rem)">One call. Any driver. Any time.</h2>
+      <p style="color:var(--band-muted)">Fill in the form and it opens WhatsApp with your booking ready to send. Or call us directly, we pick up 24 hours a day.</p>
+      <a class="phone-big" href="tel:+919092916836" id="phone">+91 90929 16836</a>
+      <div class="copy-row">
+        <a class="chip-btn" href="tel:+919092916836">Call</a>
+        <a class="chip-btn" href="https://wa.me/919092916836" target="_blank" rel="noopener">WhatsApp</a>
+        <button class="chip-btn" type="button" id="copyBtn">Copy number</button>
+      </div>
+      <div class="hours">
+        <div><span>Booking line</span><b>24 hrs · 7 days</b></div>
+        <div><span>Drivers</span><b>100+ on our team</b></div>
+        <div><span>Services</span><b>Acting · Rental · Cab</b></div>
+      </div>
+    </div>
+    <form class="card" id="bookForm" novalidate>
+      <h3>Driver booking</h3>
+      <div class="fld"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" placeholder="e.g. Karthik" required></div>
+      <div class="fld"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="10-digit mobile" required></div>
+      <div class="fld"><label for="f-svc">Service</label>
+        <select id="f-svc" name="service">
+          <option>Acting / call driver</option><option>Outstation driver</option><option>Hourly driver</option><option>One-day driver</option><option>Monthly driver</option><option>Out of city drop</option><option>Valet parking</option><option>Heavy vehicle driver</option><option>Cab / rental car</option><option>Pickup &amp; drop</option><option>Multiple drivers (fleet / event)</option>
+        </select></div>
+      <div class="fld"><label for="f-veh">Vehicle</label>
+        <select id="f-veh" name="vehicle">
+          <option>Car (manual)</option><option>Car (automatic)</option><option>SUV / luxury car</option><option>Van / tempo traveller</option><option>Bus</option><option>Lorry / truck</option><option>Pickup / mini truck</option><option>Need a car from you</option>
+        </select></div>
+      <div class="fld"><label for="f-board">Board</label>
+        <select id="f-board" name="board"><option>Own board (white plate)</option><option>T-board (yellow plate)</option><option>Not sure</option></select></div>
+      <div class="fld"><label for="f-date">Date &amp; time</label><input id="f-date" name="when" type="datetime-local"></div>
+      <div class="fld full"><label for="f-from">Pickup location</label><input id="f-from" name="from" placeholder="Area, landmark" autocomplete="street-address"></div>
+      <div class="fld full"><label for="f-note">Trip details</label><textarea id="f-note" name="note" placeholder="Where to, how many hours or days, anything else we should know"></textarea></div>
+      <p class="form-err" id="formErr" hidden></p>
+      <button class="btn btn-wa" type="submit"><svg aria-hidden="true"><use href="#i-wa"/></svg>Send booking on WhatsApp</button>
+      <p class="form-note">Opens WhatsApp with your details filled in. Nothing is sent until you press send there.</p>
+    </form>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Questions</span>
+      <h2>Before you book</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>What is an acting driver or call driver?</summary><p>A driver who comes to drive your own vehicle. You keep your car; we send a trained driver for the hours, days or trip you need.</p></details>
+      <details><summary>How fast can I get a driver?</summary><p>For most city bookings we can arrange a driver the same day. For outstation trips, monthly drivers and events, booking a day earlier helps us send the best match.</p></details>
+      <details><summary>Do you have drivers for buses and lorries?</summary><p>Yes. We have drivers with heavy vehicle licences for buses, lorries, tippers and mini trucks, for T-board and own board vehicles.</p></details>
+      <details><summary>Can I get a driver for a whole month?</summary><p>Yes. Our monthly drivers work on contract for families and companies. If your driver takes leave, we send a replacement.</p></details>
+      <details><summary>Do you also provide the car?</summary><p>Yes. Our cab and rental service gives you a sedan, SUV, Innova or tempo traveller with a driver, for local and outstation trips.</p></details>
+      <details><summary>How are charges decided?</summary><p>Charges depend on the service, vehicle, hours and distance. Call or WhatsApp us and we tell you the rate before the trip starts.</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div style="display:grid;gap:16px;align-content:start">
+      <img src="assets/logo-light.webp" alt="Sam Acting Call Drivers" width="900" height="694" loading="lazy">
+      <p>Acting · Rental · Cab. Anytime, anywhere.</p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul><li><a href="#services">Acting &amp; call drivers</a></li><li><a href="#services">Outstation &amp; out of city</a></li><li><a href="#services">Hourly, daily &amp; monthly</a></li><li><a href="#services">Valet parking</a></li><li><a href="#vehicles">Heavy vehicle drivers</a></li><li><a href="#services">Cab &amp; pickup drop</a></li></ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul><li><a href="tel:+919092916836">+91 90929 16836</a></li><li><a href="https://wa.me/919092916836" target="_blank" rel="noopener">WhatsApp us</a></li><li>Open 24 hrs · 7 days</li><li><a href="#book">Book a driver</a></li></ul>
+    </div>
+    <div class="legal"><span>© <span id="yr">2026</span> Sam Call Drivers. All rights reserved.</span><span>Your journey · Our responsibility</span></div>
+  </div>
+</footer>
+
+<div class="fab">
+  <a class="f-wa" href="https://wa.me/919092916836?text=Hi%20Sam%20Call%20Drivers%2C%20I%20need%20a%20driver." target="_blank" rel="noopener" aria-label="WhatsApp Sam Call Drivers"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+  <a class="f-call" href="tel:+919092916836" aria-label="Call Sam Call Drivers"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
+</div>
+
+<script>
+(function(){
+  var NUM='919092916836';
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  var btn=document.getElementById('copyBtn');
+  btn.addEventListener('click',function(){
+    var done=function(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy number'},1800)};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(document.getElementById('phone'));var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected';};
+    try{navigator.clipboard.writeText('+91 90929 16836').then(done,fallback)}catch(e){fallback()}
+  });
+
+  var form=document.getElementById('bookForm'),err=document.getElementById('formErr');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=form.elements,name=f.name.value.trim(),phone=f.phone.value.replace(/[^\d+]/g,'');
+    if(!name||phone.replace(/\D/g,'').length<10){
+      err.textContent=!name?'Please enter your name.':'Please enter a 10-digit phone number so our team can call you back.';
+      err.hidden=false;(!name?f.name:f.phone).focus();return;
+    }
+    err.hidden=true;
+    var when=f.when.value?new Date(f.when.value).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'}):'As soon as possible';
+    var lines=['*New driver booking*','Name: '+name,'Phone: '+phone,'Service: '+f.service.value,'Vehicle: '+f.vehicle.value,'Board: '+f.board.value,'When: '+when];
+    if(f.from.value.trim())lines.push('Pickup: '+f.from.value.trim());
+    if(f.note.value.trim())lines.push('Details: '+f.note.value.trim());
+    var url='https://wa.me/'+NUM+'?text='+encodeURIComponent(lines.join('\n'));
+    var a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+  });
+})();
+</script>
+</body>
+</html>
