@@ -1,0 +1,29 @@
+{
+  "_comment": "ProfitIQS affiliate program settings. Edit here; run `python3 scripts/build.py` to regenerate the pages.",
+  "brand": "ProfitIQS",
+  "site_url": "https://www.profitiqs.com",
+  "portal_path": "/affiliates",
+  "support_email": "support@profitiqs.com",
+  "affiliate_platform": {
+    "name": "Digistore24",
+    "home_url": "https://www.digistore24.com",
+    "_comment": "Add the verified vendor ID / promotion page once confirmed. Leave null until verified.",
+    "vendor_id": null,
+    "marketplace_url": null
+  },
+  "commission": {
+    "standard_percent": 80,
+    "verified": true,
+    "last_verified": "2026-10-12",
+    "note": "Commission is paid through Digistore24 on eligible sales. Exact payout terms follow your Digistore24 account."
+  },
+  "launch_promotion": {
+    "enabled": false,
+    "verified": false,
+    "percent": 90,
+    "start_date": null,
+    "end_date": null,
+    "_comment": "Shown on the site ONLY when enabled AND verified are true AND today is between start_date and end_date (YYYY-MM-DD)."
+  },
+  "last_updated": "2026-10-12"
+}

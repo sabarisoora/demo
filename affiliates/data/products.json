@@ -1,0 +1,1406 @@
+{
+  "_comment": "One entry per industry. Add a niche: copy an entry, edit it, add assets/products/<slug>-dashboard.png, run scripts/banners.py <slug> and scripts/build.py. business_phrase completes 'your ___' in the copy.",
+  "products": [
+    {
+      "id": "1099-contractor",
+      "slug": "1099-contractor",
+      "industry": "1099 Contractor",
+      "product_title": "1099 Contractor Business Intelligence System™",
+      "title_source": "Shipped product files (workbook, guides, ZIP names), 2026-10-12",
+      "title_needs_confirmation": false,
+      "audience": "Independent contractors, freelancers and self-employed professionals paid on 1099s",
+      "audience_short": "1099 contractors and freelancers",
+      "business_phrase": "1099 contracting business",
+      "one_liner": "See what your freelance work really earns after expenses, mileage and tax set-asides.",
+      "questions": [
+        "Which clients are actually worth my time?",
+        "How much should I set aside for taxes?",
+        "Where does my money go each month?"
+      ],
+      "essential_highlights": [
+        "Client setup and revenue log",
+        "Expense entry and mileage log",
+        "Client performance view",
+        "Tax set-aside estimate and deduction summary",
+        "Dashboard, health snapshot and accountant export"
+      ],
+      "elite_highlights": [
+        "Client and service profitability",
+        "Invoice tracker and accounts receivable",
+        "Cash flow and monthly profit centers",
+        "Estimated tax center and quarterly tax planner",
+        "Forecasting, KPI scorecard and profit leak detector",
+        "Year-end tax package and deduction maximizer"
+      ],
+      "essential_sheets": [
+        "START HERE",
+        "SETUP",
+        "CLIENT SETUP",
+        "REVENUE ENTRY",
+        "EXPENSE ENTRY",
+        "MILEAGE LOG",
+        "CLIENT PERFORMANCE",
+        "TAX & DEDUCTIONS",
+        "DASHBOARD",
+        "ACCOUNTANT EXPORT",
+        "BUSINESS HEALTH SNAPSHOT"
+      ],
+      "elite_sheets": [
+        "01 Start Here",
+        "02 Executive Dashboard",
+        "03 Executive Summary",
+        "04 Client Database",
+        "05 Revenue Center",
+        "06 Expense Center",
+        "07 Mileage Center",
+        "08 Invoice Tracker",
+        "09 Accounts Receivable",
+        "10 Cash Flow Center",
+        "11 Monthly Profit Center",
+        "12 Client Profitability",
+        "13 Service Profitability",
+        "14 KPI Scorecard",
+        "15 Business Health Score",
+        "16 Financial Goals Center",
+        "17 Forecasting Center",
+        "18 Profit Leak Detector",
+        "19 Insights Center",
+        "20 Estimated Tax Center",
+        "21 Quarterly Tax Planner",
+        "22 Deduction Maximizer",
+        "23 Year-End Tax Package",
+        "24 Settings",
+        "25 Glossary",
+        "26 Changelog"
+      ],
+      "multi_country_tax": false,
+      "tiers": [
+        {
+          "tier": "Essential",
+          "title": "1099 Contractor Business Intelligence System™ — Essential 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (11 sheets)",
+            "Field Guide PDF (44 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Elite",
+          "title": "1099 Contractor Business Intelligence System™ — Elite 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (26 sheets)",
+            "Field Guide PDF (62 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Complete",
+          "title": "1099 Contractor Business Intelligence System™ — Complete 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Essential 2026 edition (workbook, Field Guide, Quick Start)",
+            "Elite 2026 edition (workbook, Field Guide, Quick Start)",
+            "License, README and Support documents"
+          ]
+        }
+      ],
+      "image": "assets/products/1099-contractor-dashboard.png",
+      "image_alt": "1099 Contractor Business Intelligence System Elite 2026 executive dashboard with sample data",
+      "approval_status": "unverified",
+      "promotion_available": null,
+      "last_verified": "2026-10-12",
+      "custom_copy": {}
+    },
+    {
+      "id": "airbnb",
+      "slug": "airbnb",
+      "industry": "Airbnb",
+      "product_title": "Airbnb Business Intelligence System™",
+      "title_source": "Shipped product files (workbook, guides, ZIP names), 2026-10-12",
+      "title_needs_confirmation": false,
+      "audience": "Airbnb and short-term rental hosts and co-hosts managing one or more properties",
+      "audience_short": "short-term rental hosts",
+      "business_phrase": "Airbnb hosting business",
+      "one_liner": "See what each property really earns once cleaning, maintenance and fees are counted.",
+      "questions": [
+        "Which property is actually the most profitable?",
+        "How do occupancy, ADR and RevPAR compare?",
+        "How much should I set aside for taxes?"
+      ],
+      "essential_highlights": [
+        "Property setup and booking revenue log",
+        "Expense entry",
+        "Property performance view",
+        "Tax set-aside estimate and deduction summary",
+        "Dashboard, health snapshot and accountant export"
+      ],
+      "elite_highlights": [
+        "Occupancy tracker and ADR / RevPAR analytics",
+        "Cleaning operations and maintenance center",
+        "Property profitability, ROI center and property rankings",
+        "Cash flow and forecasting centers",
+        "KPI scorecard, business health score and profit leak detector",
+        "Tax reserve, deduction maximizer and accountant summary"
+      ],
+      "essential_sheets": [
+        "START HERE",
+        "SETUP",
+        "PROPERTY SETUP",
+        "BOOKING REVENUE",
+        "EXPENSE ENTRY",
+        "PROPERTY PERFORMANCE",
+        "TAX & DEDUCTIONS",
+        "DASHBOARD",
+        "ACCOUNTANT EXPORT",
+        "BUSINESS HEALTH SNAPSHOT"
+      ],
+      "elite_sheets": [
+        "01 Start Here",
+        "02 Executive Dashboard",
+        "03 Executive Summary",
+        "04 Property Setup",
+        "05 Occupancy Tracker",
+        "06 Cleaning Operations",
+        "07 Maintenance Center",
+        "08 Booking Revenue",
+        "09 Operating Expenses",
+        "10 Property Profitability",
+        "11 Cash Flow Center",
+        "12 ADR RevPAR Analytics",
+        "13 KPI Scorecard",
+        "14 Business Health Score",
+        "15 Forecasting Center",
+        "16 ROI Center",
+        "17 Property Rankings",
+        "18 Profit Leak Detector",
+        "19 Tax Setup",
+        "20 Tax Reserve & VAT Center",
+        "21 Deduction Maximizer",
+        "22 Tax Readiness Center",
+        "23 Accountant Summary",
+        "24 Glossary",
+        "25 Changelog"
+      ],
+      "multi_country_tax": true,
+      "tiers": [
+        {
+          "tier": "Essential",
+          "title": "Airbnb Business Intelligence System™ — Essential 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (10 sheets)",
+            "Field Guide PDF (37 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Elite",
+          "title": "Airbnb Business Intelligence System™ — Elite 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (25 sheets)",
+            "Field Guide PDF (54 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Complete",
+          "title": "Airbnb Business Intelligence System™ — Complete 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Essential 2026 edition (workbook, Field Guide, Quick Start)",
+            "Elite 2026 edition (workbook, Field Guide, Quick Start)",
+            "License, README and Support documents"
+          ]
+        }
+      ],
+      "image": "assets/products/airbnb-dashboard.png",
+      "image_alt": "Airbnb Business Intelligence System Elite 2026 executive dashboard with sample data",
+      "approval_status": "unverified",
+      "promotion_available": null,
+      "last_verified": "2026-10-12",
+      "custom_copy": {}
+    },
+    {
+      "id": "auto-repair",
+      "slug": "auto-repair",
+      "industry": "Auto Repair",
+      "product_title": "Auto Repair Shop Business Intelligence System™",
+      "title_source": "Shipped product files (workbook, guides, ZIP names), 2026-10-12",
+      "title_needs_confirmation": true,
+      "audience": "Independent auto repair shop owners and managers",
+      "audience_short": "auto repair shop owners",
+      "business_phrase": "auto repair shop",
+      "one_liner": "See what every repair order, bay and technician really contributes to profit.",
+      "questions": [
+        "Which services and technicians drive profit?",
+        "How busy are my bays?",
+        "Where are parts and labor margins slipping?"
+      ],
+      "essential_highlights": [
+        "Repair order entry",
+        "Expense entry",
+        "Tax set-aside estimate and deduction summary",
+        "Dashboard and business health snapshot",
+        "Accountant export"
+      ],
+      "elite_highlights": [
+        "Repair order, labor sales and parts sales tracking",
+        "Technician performance, service advisor and bay utilization centers",
+        "Inventory, supplier, warranty and comeback tracking",
+        "Customer, vehicle and fleet account analytics",
+        "Cash flow, forecasting, benchmarking and KPI scorecard",
+        "Tax reserve, deduction maximizer and accountant summary"
+      ],
+      "essential_sheets": [
+        "START HERE",
+        "SETUP",
+        "REPAIR ORDER ENTRY",
+        "EXPENSE ENTRY",
+        "TAX & DEDUCTIONS",
+        "DASHBOARD",
+        "ACCOUNTANT EXPORT",
+        "BUSINESS HEALTH SNAPSHOT"
+      ],
+      "elite_sheets": [
+        "01 Start Here",
+        "02 Executive Command Center",
+        "03 Lead Tracker",
+        "04 Customer Database",
+        "05 Vehicle Database",
+        "06 Repair Order Center",
+        "07 Service Advisor Center",
+        "08 Technician Performance",
+        "09 Labor Sales Tracker",
+        "10 Parts Sales Tracker",
+        "11 Inventory Control Center",
+        "12 Supplier Database",
+        "13 Warranty Tracker",
+        "14 Comeback Tracker",
+        "15 Expense Tracker",
+        "16 Revenue Tracker",
+        "17 Cash Flow Center",
+        "18 Accounts Receivable Center",
+        "19 Customer Analytics Center",
+        "20 Vehicle Analytics Center",
+        "21 Service Analytics Center",
+        "22 Bay Utilization Center",
+        "23 Shop Productivity Center",
+        "24 KPI Scorecard",
+        "25 Business Health Score",
+        "26 Profit Leak Detector",
+        "27 Forecasting Center",
+        "28 Benchmarking Center",
+        "29 Fleet Account Tracker",
+        "30 Equipment Tracker",
+        "31 Monthly Business Review",
+        "32 Annual Performance Center",
+        "33 Executive Report Center",
+        "34 Strategic Planning Center",
+        "35 Tax Setup",
+        "36 Tax Reserve & VAT Center",
+        "37 Deduction Maximizer",
+        "38 Tax Readiness Center",
+        "39 Accountant Summary",
+        "40 Glossary",
+        "41 Changelog"
+      ],
+      "multi_country_tax": true,
+      "tiers": [
+        {
+          "tier": "Essential",
+          "title": "Auto Repair Shop Business Intelligence System™ — Essential 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (8 sheets)",
+            "Field Guide PDF (36 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Elite",
+          "title": "Auto Repair Shop Business Intelligence System™ — Elite 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (41 sheets)",
+            "Field Guide PDF (65 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Complete",
+          "title": "Auto Repair Shop Business Intelligence System™ — Complete 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Essential 2026 edition (workbook, Field Guide, Quick Start)",
+            "Elite 2026 edition (workbook, Field Guide, Quick Start)",
+            "License, README and Support documents"
+          ]
+        }
+      ],
+      "image": "assets/products/auto-repair-dashboard.png",
+      "image_alt": "Auto Repair Shop Business Intelligence System Elite 2026 executive dashboard with sample data",
+      "approval_status": "unverified",
+      "promotion_available": null,
+      "last_verified": "2026-10-12",
+      "custom_copy": {}
+    },
+    {
+      "id": "cleaning-service",
+      "slug": "cleaning-service",
+      "industry": "Cleaning Service",
+      "product_title": "Cleaning Service Business Intelligence System™",
+      "title_source": "Shipped product files (workbook, guides, ZIP names), 2026-10-12",
+      "title_needs_confirmation": false,
+      "audience": "Residential and commercial cleaning business owners",
+      "audience_short": "cleaning business owners",
+      "business_phrase": "cleaning business",
+      "one_liner": "See which jobs, crews and recurring contracts really make you money.",
+      "questions": [
+        "Which jobs and customers are most profitable?",
+        "How productive is each crew?",
+        "How much recurring revenue do I have?"
+      ],
+      "essential_highlights": [
+        "Job revenue entry",
+        "Expense entry",
+        "Tax set-aside estimate and deduction summary",
+        "Dashboard and business health snapshot",
+        "Accountant export"
+      ],
+      "elite_highlights": [
+        "Customer database and retention tracking",
+        "Crew database and crew productivity",
+        "Job profitability, contracts and recurring revenue",
+        "Accounts receivable and cash flow center",
+        "KPI scorecard, health score, profit leak detector and forecasting",
+        "Tax reserve, deduction maximizer and accountant summary"
+      ],
+      "essential_sheets": [
+        "START HERE",
+        "SETUP",
+        "JOB REVENUE ENTRY",
+        "EXPENSE ENTRY",
+        "TAX & DEDUCTIONS",
+        "DASHBOARD",
+        "ACCOUNTANT EXPORT",
+        "BUSINESS HEALTH SNAPSHOT"
+      ],
+      "elite_sheets": [
+        "01 Start Here",
+        "02 Executive Dashboard",
+        "03 Executive Summary",
+        "04 Customer Database",
+        "05 Customer Retention",
+        "06 Crew Database",
+        "07 Crew Productivity",
+        "08 Service Revenue",
+        "09 Job Profitability",
+        "10 Contract Tracker",
+        "11 Recurring Revenue",
+        "12 Expense Tracker",
+        "13 Accounts Receivable",
+        "14 Cash Flow Center",
+        "15 KPI Scorecard",
+        "16 Business Health Score",
+        "17 Profit Leak Detector",
+        "18 Forecasting Center",
+        "19 Benchmarking Center",
+        "20 Customer Analytics Center",
+        "21 Tax Setup",
+        "22 Tax Reserve & VAT Center",
+        "23 Deduction Maximizer",
+        "24 Tax Readiness Center",
+        "25 Accountant Summary",
+        "26 Glossary",
+        "27 Changelog"
+      ],
+      "multi_country_tax": true,
+      "tiers": [
+        {
+          "tier": "Essential",
+          "title": "Cleaning Service Business Intelligence System™ — Essential 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (8 sheets)",
+            "Field Guide PDF (35 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Elite",
+          "title": "Cleaning Service Business Intelligence System™ — Elite 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (27 sheets)",
+            "Field Guide PDF (66 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Complete",
+          "title": "Cleaning Service Business Intelligence System™ — Complete 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Essential 2026 edition (workbook, Field Guide, Quick Start)",
+            "Elite 2026 edition (workbook, Field Guide, Quick Start)",
+            "License, README and Support documents"
+          ]
+        }
+      ],
+      "image": "assets/products/cleaning-service-dashboard.png",
+      "image_alt": "Cleaning Service Business Intelligence System Elite 2026 job profitability center with sample data",
+      "approval_status": "unverified",
+      "promotion_available": null,
+      "last_verified": "2026-10-12",
+      "custom_copy": {}
+    },
+    {
+      "id": "construction",
+      "slug": "construction",
+      "industry": "Construction",
+      "product_title": "Construction Job Cost Business Intelligence System™",
+      "title_source": "Shipped product files (workbook, guides, ZIP names), 2026-10-12",
+      "title_needs_confirmation": false,
+      "audience": "General contractors and construction business owners managing project budgets",
+      "audience_short": "construction contractors",
+      "business_phrase": "construction business",
+      "one_liner": "See job costs, work in progress and change orders before they eat your margin.",
+      "questions": [
+        "Is each project on budget?",
+        "Where are change orders and WIP heading?",
+        "Which projects are actually profitable?"
+      ],
+      "essential_highlights": [
+        "Project entry",
+        "Expense entry",
+        "Tax set-aside estimate and deduction summary",
+        "Dashboard and business health snapshot",
+        "Accountant export"
+      ],
+      "elite_highlights": [
+        "Project portfolio and job cost center",
+        "WIP center and change order center",
+        "Project profitability and customer analytics",
+        "Accounts receivable and cash flow center",
+        "KPI scorecard, health score, profit leak detector and forecasting",
+        "Tax reserve, deduction maximizer and accountant summary"
+      ],
+      "essential_sheets": [
+        "START HERE",
+        "SETUP",
+        "PROJECT ENTRY",
+        "EXPENSE ENTRY",
+        "TAX & DEDUCTIONS",
+        "DASHBOARD",
+        "ACCOUNTANT EXPORT",
+        "BUSINESS HEALTH SNAPSHOT"
+      ],
+      "elite_sheets": [
+        "01 Start Here",
+        "02 Executive Dashboard",
+        "03 Executive Summary",
+        "04 Project Portfolio",
+        "05 Job Cost Center",
+        "06 WIP Center",
+        "07 Change Order Center",
+        "08 Revenue Tracker",
+        "09 Expense Tracker",
+        "10 Cash Flow Center",
+        "11 Accounts Receivable",
+        "12 KPI Scorecard",
+        "13 Project Profitability",
+        "14 Business Health Score",
+        "15 Profit Leak Detector",
+        "16 Forecasting Center",
+        "17 Benchmarking Center",
+        "18 Customer Analytics Center",
+        "19 Tax Setup",
+        "20 Tax Reserve & VAT Center",
+        "21 Deduction Maximizer",
+        "22 Tax Readiness Center",
+        "23 Accountant Summary",
+        "24 Glossary",
+        "25 Changelog"
+      ],
+      "multi_country_tax": true,
+      "tiers": [
+        {
+          "tier": "Essential",
+          "title": "Construction Job Cost Business Intelligence System™ — Essential 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (8 sheets)",
+            "Field Guide PDF (34 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Elite",
+          "title": "Construction Job Cost Business Intelligence System™ — Elite 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (25 sheets)",
+            "Field Guide PDF (53 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Complete",
+          "title": "Construction Job Cost Business Intelligence System™ — Complete 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Essential 2026 edition (workbook, Field Guide, Quick Start)",
+            "Elite 2026 edition (workbook, Field Guide, Quick Start)",
+            "License, README and Support documents"
+          ]
+        }
+      ],
+      "image": "assets/products/construction-dashboard.png",
+      "image_alt": "Construction Job Cost Business Intelligence System Elite 2026 executive dashboard with sample data",
+      "approval_status": "unverified",
+      "promotion_available": null,
+      "last_verified": "2026-10-12",
+      "custom_copy": {}
+    },
+    {
+      "id": "dental",
+      "slug": "dental",
+      "industry": "Dental",
+      "product_title": "Dental Practice Business Intelligence System™",
+      "title_source": "Shipped product files (workbook, guides, ZIP names), 2026-10-12",
+      "title_needs_confirmation": false,
+      "audience": "Dental practice owners and practice managers",
+      "audience_short": "dental practice owners",
+      "business_phrase": "dental practice",
+      "one_liner": "See production, collections and patient flow across your whole practice in one workbook.",
+      "questions": [
+        "How are new patients, recalls and case acceptance trending?",
+        "What does each provider and procedure produce?",
+        "Where are collections and insurance claims stuck?"
+      ],
+      "essential_highlights": [
+        "Revenue entry",
+        "Expense entry",
+        "Tax set-aside estimate and deduction summary",
+        "Dashboard and business health snapshot",
+        "Accountant export"
+      ],
+      "elite_highlights": [
+        "Patient database, new patient tracker and recall tracker",
+        "Treatment tracking and case acceptance center",
+        "Provider productivity, hygiene department and procedure profitability",
+        "Insurance claims, collections and accounts receivable",
+        "Payroll, staff productivity, supplies, equipment and marketing ROI",
+        "Forecasting, benchmarking, KPI scorecard and tax centers"
+      ],
+      "essential_sheets": [
+        "START HERE",
+        "SETUP",
+        "REVENUE ENTRY",
+        "EXPENSE ENTRY",
+        "TAX & DEDUCTIONS",
+        "DASHBOARD",
+        "ACCOUNTANT EXPORT",
+        "BUSINESS HEALTH SNAPSHOT"
+      ],
+      "elite_sheets": [
+        "01 Start Here",
+        "02 Executive Dashboard",
+        "03 Executive Summary",
+        "04 Setup",
+        "05 Revenue Entry",
+        "06 Cost Entry",
+        "07 Patient Database",
+        "08 New Patient Tracker",
+        "09 Appointment Center",
+        "10 Recall Tracker",
+        "11 Treatment Tracker",
+        "12 Case Acceptance Center",
+        "13 Provider Productivity",
+        "14 Hygiene Department",
+        "15 Procedure Profitability",
+        "16 Patient Lifetime Value",
+        "17 Insurance Claims Center",
+        "18 Payroll Center",
+        "19 Staff Productivity",
+        "20 Dental Supply Center",
+        "21 Equipment Center",
+        "22 Marketing ROI Center",
+        "23 Accounts Receivable",
+        "24 Collections Center",
+        "25 Cash Flow Center",
+        "26 KPI Scorecard",
+        "27 Business Health Score",
+        "28 Profit Leak Detector",
+        "29 Forecasting Center",
+        "30 Provider Rankings",
+        "31 Patient Retention Center",
+        "32 Growth Opportunity Center",
+        "33 Benchmarking Center",
+        "34 Monthly Executive Review",
+        "35 Strategic Planner",
+        "36 Executive Reports",
+        "37 Tax Setup",
+        "38 Tax Reserve & VAT Center",
+        "39 Deduction Maximizer",
+        "40 Tax Readiness Center",
+        "41 Accountant Summary",
+        "42 Glossary"
+      ],
+      "multi_country_tax": true,
+      "tiers": [
+        {
+          "tier": "Essential",
+          "title": "Dental Practice Business Intelligence System™ — Essential 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (8 sheets)",
+            "Field Guide PDF (34 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Elite",
+          "title": "Dental Practice Business Intelligence System™ — Elite 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (42 sheets)",
+            "Field Guide PDF (84 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Complete",
+          "title": "Dental Practice Business Intelligence System™ — Complete 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Essential 2026 edition (workbook, Field Guide, Quick Start)",
+            "Elite 2026 edition (workbook, Field Guide, Quick Start)",
+            "License, README and Support documents"
+          ]
+        }
+      ],
+      "image": "assets/products/dental-dashboard.png",
+      "image_alt": "Dental Practice Business Intelligence System Elite 2026 executive dashboard with sample data",
+      "approval_status": "unverified",
+      "promotion_available": null,
+      "last_verified": "2026-10-12",
+      "custom_copy": {}
+    },
+    {
+      "id": "digital-marketing-agency",
+      "slug": "digital-marketing-agency",
+      "industry": "Digital Marketing Agency",
+      "product_title": "Digital Marketing Agency Business Intelligence System™",
+      "title_source": "Shipped product files (workbook, guides, ZIP names), 2026-10-12",
+      "title_needs_confirmation": false,
+      "audience": "Digital marketing agency owners and freelance marketers running client retainers",
+      "audience_short": "agency owners",
+      "business_phrase": "digital marketing agency",
+      "one_liner": "See which clients, retainers and services actually make your agency money.",
+      "questions": [
+        "Which clients and services are profitable?",
+        "How healthy are retainers and the sales pipeline?",
+        "Who owes us money?"
+      ],
+      "essential_highlights": [
+        "Client revenue entry",
+        "Expense entry",
+        "Tax set-aside estimate and deduction summary",
+        "Dashboard and business health snapshot",
+        "Accountant export"
+      ],
+      "elite_highlights": [
+        "Lead tracker and sales pipeline",
+        "Client retainer center and project tracker",
+        "Service and client profitability",
+        "Accounts receivable and cash flow center",
+        "KPI scorecard, health score, profit leak detector and forecasting",
+        "Tax reserve, deduction maximizer and accountant summary"
+      ],
+      "essential_sheets": [
+        "START HERE",
+        "SETUP",
+        "CLIENT REVENUE ENTRY",
+        "EXPENSE ENTRY",
+        "TAX & DEDUCTIONS",
+        "DASHBOARD",
+        "ACCOUNTANT EXPORT",
+        "BUSINESS HEALTH SNAPSHOT"
+      ],
+      "elite_sheets": [
+        "01 Start Here",
+        "02 Executive Dashboard",
+        "03 Executive Summary",
+        "04 Client Setup",
+        "05 Revenue Entry",
+        "06 Cost Entry",
+        "07 Lead Tracker",
+        "08 Sales Pipeline",
+        "09 Client Retainer Center",
+        "10 Project Tracker",
+        "11 Service Profitability",
+        "12 Accounts Receivable Center",
+        "13 Cash Flow Center",
+        "14 KPI Scorecard",
+        "15 Business Health Score",
+        "16 Profit Leak Detector",
+        "17 Forecasting Center",
+        "18 Benchmarking Center",
+        "19 Client Profitability Center",
+        "20 Tax Setup",
+        "21 Tax Reserve & VAT Center",
+        "22 Deduction Maximizer",
+        "23 Tax Readiness Center",
+        "24 Accountant Summary",
+        "25 Glossary",
+        "26 Changelog"
+      ],
+      "multi_country_tax": true,
+      "tiers": [
+        {
+          "tier": "Essential",
+          "title": "Digital Marketing Agency Business Intelligence System™ — Essential 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (8 sheets)",
+            "Field Guide PDF (42 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Elite",
+          "title": "Digital Marketing Agency Business Intelligence System™ — Elite 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (26 sheets)",
+            "Field Guide PDF (71 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Complete",
+          "title": "Digital Marketing Agency Business Intelligence System™ — Complete 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Essential 2026 edition (workbook, Field Guide, Quick Start)",
+            "Elite 2026 edition (workbook, Field Guide, Quick Start)",
+            "License, README and Support documents"
+          ]
+        }
+      ],
+      "image": "assets/products/digital-marketing-agency-dashboard.png",
+      "image_alt": "Digital Marketing Agency Business Intelligence System Elite 2026 executive dashboard with sample data",
+      "approval_status": "unverified",
+      "promotion_available": null,
+      "last_verified": "2026-10-12",
+      "custom_copy": {}
+    },
+    {
+      "id": "ecommerce",
+      "slug": "ecommerce",
+      "industry": "Ecommerce",
+      "product_title": "Ecommerce Business Intelligence System™",
+      "title_source": "Shipped product files (workbook, guides, ZIP names), 2026-10-12",
+      "title_needs_confirmation": false,
+      "audience": "Shopify, Amazon, Etsy and other online sellers",
+      "audience_short": "online store owners",
+      "business_phrase": "online store",
+      "one_liner": "See real profit per product and channel after costs, ads and refunds.",
+      "questions": [
+        "Which products and channels actually make money?",
+        "Are my ads paying back?",
+        "How much stock and cash is tied up?"
+      ],
+      "essential_highlights": [
+        "Product setup and sales tracker",
+        "Cost tracker",
+        "Dashboard with best and weakest months",
+        "Tax set-aside estimate and deduction summary",
+        "Business health snapshot and accountant export"
+      ],
+      "elite_highlights": [
+        "Product master, inventory center and purchase orders",
+        "Supplier management and order tracker",
+        "Sales channels, ad spend tracker and refunds & returns",
+        "SKU profitability and customer analytics",
+        "Cash flow, financial statements and forecasting",
+        "KPI scorecard, health score, benchmarking and tax centers"
+      ],
+      "essential_sheets": [
+        "Start Here",
+        "Product Setup",
+        "Sales Tracker",
+        "Cost Tracker",
+        "Dashboard",
+        "SETUP",
+        "TAX & DEDUCTIONS",
+        "ACCOUNTANT EXPORT",
+        "BUSINESS HEALTH SNAPSHOT"
+      ],
+      "elite_sheets": [
+        "01 Start Here",
+        "02 Executive Dashboard",
+        "03 Executive Summary",
+        "04 Product Master",
+        "05 Inventory Center",
+        "06 Purchase Orders",
+        "07 Supplier Management",
+        "08 Order Tracker",
+        "09 Sales Channels",
+        "10 Ad Spend Tracker",
+        "11 Refunds & Returns",
+        "12 Cash Flow Center",
+        "13 Financial Statements",
+        "14 SKU Profitability",
+        "15 Customer Analytics",
+        "16 KPI Scorecard",
+        "17 Business Health Score",
+        "18 Forecasting Center",
+        "19 Profit Leak Detector",
+        "20 Benchmarking Center",
+        "21 Tax Setup",
+        "22 Tax Reserve & VAT Center",
+        "23 Deduction Maximizer",
+        "24 Tax Readiness Center",
+        "25 Accountant Summary",
+        "26 Glossary"
+      ],
+      "multi_country_tax": true,
+      "tiers": [
+        {
+          "tier": "Essential",
+          "title": "Ecommerce Business Intelligence System™ — Essential 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (9 sheets)",
+            "Field Guide PDF (42 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Elite",
+          "title": "Ecommerce Business Intelligence System™ — Elite 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (26 sheets)",
+            "Field Guide PDF (72 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Complete",
+          "title": "Ecommerce Business Intelligence System™ — Complete 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Essential 2026 edition (workbook, Field Guide, Quick Start)",
+            "Elite 2026 edition (workbook, Field Guide, Quick Start)",
+            "License, README and Support documents"
+          ]
+        }
+      ],
+      "image": "assets/products/ecommerce-dashboard.png",
+      "image_alt": "Ecommerce Business Intelligence System Elite 2026 executive dashboard with sample data",
+      "approval_status": "unverified",
+      "promotion_available": null,
+      "last_verified": "2026-10-12",
+      "custom_copy": {}
+    },
+    {
+      "id": "electrical-contractor",
+      "slug": "electrical-contractor",
+      "industry": "Electrical Contractor",
+      "product_title": "Electrical Contractor Business Intelligence System™",
+      "title_source": "Shipped product files (workbook, guides, ZIP names), 2026-10-12",
+      "title_needs_confirmation": false,
+      "audience": "Electrical contractors and electrical service business owners",
+      "audience_short": "electrical contractors",
+      "business_phrase": "electrical contracting business",
+      "one_liner": "See what each job and electrician really contributes once materials and labor are counted.",
+      "questions": [
+        "Which jobs are profitable?",
+        "How does each electrician perform?",
+        "Which invoices are overdue?"
+      ],
+      "essential_highlights": [
+        "Job revenue entry",
+        "Expense entry",
+        "Tax set-aside estimate and deduction summary",
+        "Dashboard and business health snapshot",
+        "Accountant export"
+      ],
+      "elite_highlights": [
+        "Lead tracker and job management",
+        "Electrician setup and electrician performance",
+        "Customer database and customer analytics",
+        "AR aging and cash flow center",
+        "KPI scorecard, health score, profit leak detector and forecasting",
+        "Tax reserve, deduction maximizer and accountant summary"
+      ],
+      "essential_sheets": [
+        "START HERE",
+        "SETUP",
+        "JOB REVENUE ENTRY",
+        "EXPENSE ENTRY",
+        "TAX & DEDUCTIONS",
+        "DASHBOARD",
+        "ACCOUNTANT EXPORT",
+        "BUSINESS HEALTH SNAPSHOT"
+      ],
+      "elite_sheets": [
+        "01 Start Here",
+        "02 Executive Dashboard",
+        "03 Executive Summary",
+        "04 Lead Tracker",
+        "05 Electrician Setup",
+        "06 Job Management",
+        "07 Electrician Performance",
+        "08 Revenue Tracker",
+        "09 Expense Tracker",
+        "10 Customer Database",
+        "11 AR Aging",
+        "12 Cash Flow Center",
+        "13 KPI Scorecard",
+        "14 Business Health Score",
+        "15 Profit Leak Detector",
+        "16 Forecasting Center",
+        "17 Benchmarking Center",
+        "18 Customer Analytics Center",
+        "19 Tax Setup",
+        "20 Tax Reserve & VAT Center",
+        "21 Deduction Maximizer",
+        "22 Tax Readiness Center",
+        "23 Accountant Summary",
+        "24 Glossary"
+      ],
+      "multi_country_tax": true,
+      "tiers": [
+        {
+          "tier": "Essential",
+          "title": "Electrical Contractor Business Intelligence System™ — Essential 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (8 sheets)",
+            "Field Guide PDF (41 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Elite",
+          "title": "Electrical Contractor Business Intelligence System™ — Elite 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (24 sheets)",
+            "Field Guide PDF (71 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Complete",
+          "title": "Electrical Contractor Business Intelligence System™ — Complete 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Essential 2026 edition (workbook, Field Guide, Quick Start)",
+            "Elite 2026 edition (workbook, Field Guide, Quick Start)",
+            "License, README and Support documents"
+          ]
+        }
+      ],
+      "image": "assets/products/electrical-contractor-dashboard.png",
+      "image_alt": "Electrical Contractor Business Intelligence System Elite 2026 executive dashboard with sample data",
+      "approval_status": "unverified",
+      "promotion_available": null,
+      "last_verified": "2026-10-12",
+      "custom_copy": {}
+    },
+    {
+      "id": "hvac",
+      "slug": "hvac",
+      "industry": "HVAC",
+      "product_title": "HVAC Business Intelligence System™",
+      "title_source": "Shipped product files (workbook, guides, ZIP names), 2026-10-12",
+      "title_needs_confirmation": false,
+      "audience": "HVAC contractors and heating and cooling service business owners",
+      "audience_short": "HVAC contractors",
+      "business_phrase": "HVAC business",
+      "one_liner": "See service call margins, maintenance agreements and technician performance in one workbook.",
+      "questions": [
+        "Which service types and technicians are most profitable?",
+        "How many maintenance agreements are active or up for renewal?",
+        "Where do estimates and receivables stand?"
+      ],
+      "essential_highlights": [
+        "Job revenue entry",
+        "Expense entry",
+        "Tax set-aside estimate and deduction summary",
+        "Dashboard and business health snapshot",
+        "Accountant export"
+      ],
+      "elite_highlights": [
+        "Lead tracker, estimate center and work order center",
+        "Service call tracker and service analytics",
+        "Technician performance and vehicle & labor center",
+        "Maintenance agreements, installations and inventory",
+        "Accounts receivable, cash flow, KPI scorecard and forecasting",
+        "Tax reserve, deduction maximizer and accountant summary"
+      ],
+      "essential_sheets": [
+        "START HERE",
+        "SETUP",
+        "JOB REVENUE ENTRY",
+        "EXPENSE ENTRY",
+        "TAX & DEDUCTIONS",
+        "DASHBOARD",
+        "ACCOUNTANT EXPORT",
+        "BUSINESS HEALTH SNAPSHOT"
+      ],
+      "elite_sheets": [
+        "01 Start Here",
+        "02 Executive Dashboard",
+        "03 Executive Summary",
+        "04 Lead Tracker",
+        "05 Estimate Center",
+        "06 Work Order Center",
+        "07 Service Call Tracker",
+        "08 Revenue Tracker",
+        "09 Expense Tracker",
+        "10 Technician Performance",
+        "11 Customer Database",
+        "12 Maintenance Agreements",
+        "13 Installation Tracker",
+        "14 Inventory Center",
+        "15 Vehicle & Labor Center",
+        "16 Customer Analytics",
+        "17 Service Analytics",
+        "18 Cash Flow Center",
+        "19 Accounts Receivable",
+        "20 KPI Scorecard",
+        "21 Business Health Score",
+        "22 Profit Leak Detector",
+        "23 Forecasting Center",
+        "24 Benchmarking Center",
+        "25 Tax Setup",
+        "26 Tax Reserve & VAT Center",
+        "27 Deduction Maximizer",
+        "28 Tax Readiness Center",
+        "29 Accountant Summary",
+        "30 Glossary"
+      ],
+      "multi_country_tax": true,
+      "tiers": [
+        {
+          "tier": "Essential",
+          "title": "HVAC Business Intelligence System™ — Essential 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (8 sheets)",
+            "Field Guide PDF (41 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Elite",
+          "title": "HVAC Business Intelligence System™ — Elite 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (30 sheets)",
+            "Field Guide PDF (78 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Complete",
+          "title": "HVAC Business Intelligence System™ — Complete 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Essential 2026 edition (workbook, Field Guide, Quick Start)",
+            "Elite 2026 edition (workbook, Field Guide, Quick Start)",
+            "License, README and Support documents"
+          ]
+        }
+      ],
+      "image": "assets/products/hvac-dashboard.png",
+      "image_alt": "HVAC Business Intelligence System Elite 2026 executive dashboard with sample data",
+      "approval_status": "unverified",
+      "promotion_available": null,
+      "last_verified": "2026-10-12",
+      "custom_copy": {}
+    },
+    {
+      "id": "pest-control",
+      "slug": "pest-control",
+      "industry": "Pest Control",
+      "product_title": "Pest Control Business Intelligence System™",
+      "title_source": "Shipped product files (workbook, guides, ZIP names), 2026-10-12",
+      "title_needs_confirmation": false,
+      "audience": "Pest control business owners and operators",
+      "audience_short": "pest control operators",
+      "business_phrase": "pest control business",
+      "one_liner": "See service contracts, routes and technician performance alongside real profit.",
+      "questions": [
+        "Which contracts and routes are profitable?",
+        "Which contracts renew soon?",
+        "How much chemical inventory is on hand?"
+      ],
+      "essential_highlights": [
+        "Service entry",
+        "Expense entry",
+        "Tax set-aside estimate and deduction summary",
+        "Dashboard and business health snapshot",
+        "Accountant export"
+      ],
+      "elite_highlights": [
+        "Customer database and service contracts",
+        "Service call log and route management",
+        "Technician performance and revenue analytics",
+        "Chemical inventory and expense tracker",
+        "Accounts receivable, cash flow, KPI scorecard and forecasting",
+        "Tax reserve, deduction maximizer and accountant summary"
+      ],
+      "essential_sheets": [
+        "START HERE",
+        "SETUP",
+        "SERVICE ENTRY",
+        "EXPENSE ENTRY",
+        "TAX & DEDUCTIONS",
+        "DASHBOARD",
+        "ACCOUNTANT EXPORT",
+        "BUSINESS HEALTH SNAPSHOT"
+      ],
+      "elite_sheets": [
+        "01 Start Here",
+        "02 Executive Dashboard",
+        "03 Executive Summary",
+        "04 Customer Database",
+        "05 Service Contracts",
+        "06 Service Call Log",
+        "07 Route Management",
+        "08 Technician Performance",
+        "09 Revenue Analytics",
+        "10 Expense Tracker",
+        "11 Chemical Inventory",
+        "12 Accounts Receivable",
+        "13 Cash Flow Center",
+        "14 KPI Scorecard",
+        "15 Business Health Score",
+        "16 Profit Leak Detector",
+        "17 Forecasting Center",
+        "18 Benchmarking Center",
+        "19 Customer Analytics Center",
+        "20 Tax Setup",
+        "21 Tax Reserve & VAT Center",
+        "22 Deduction Maximizer",
+        "23 Tax Readiness Center",
+        "24 Accountant Summary",
+        "25 Glossary"
+      ],
+      "multi_country_tax": true,
+      "tiers": [
+        {
+          "tier": "Essential",
+          "title": "Pest Control Business Intelligence System™ — Essential 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (8 sheets)",
+            "Field Guide PDF (44 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Elite",
+          "title": "Pest Control Business Intelligence System™ — Elite 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Excel workbook (25 sheets)",
+            "Field Guide PDF (72 pages)",
+            "Quick Start PDF (6 pages)"
+          ]
+        },
+        {
+          "tier": "Complete",
+          "title": "Pest Control Business Intelligence System™ — Complete 2026",
+          "price": null,
+          "currency": null,
+          "price_verified": false,
+          "digistore24_product_id": null,
+          "sales_page_url": null,
+          "affiliate_promo_url": null,
+          "contents": [
+            "Essential 2026 edition (workbook, Field Guide, Quick Start)",
+            "Elite 2026 edition (workbook, Field Guide, Quick Start)",
+            "License, README and Support documents"
+          ]
+        }
+      ],
+      "image": "assets/products/pest-control-dashboard.png",
+      "image_alt": "Pest Control Business Intelligence System Elite 2026 executive dashboard with sample data",
+      "approval_status": "unverified",
+      "promotion_available": null,
+      "last_verified": "2026-10-12",
+      "custom_copy": {}
+    }
+  ]
+}
