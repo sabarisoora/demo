@@ -204,11 +204,11 @@ Each script runs about 20–45 seconds and can be recorded on a phone with a scr
 
 **Type:** Educational / demo  
 **Target audience:** The numbers-curious manager  
-**Length:** about 29 seconds
+**Length:** about 30 seconds
 
 **1. Opening hook (0–3s):** A 15-minute monthly review for your shop.
 
-**2. Spoken narration:** Open the dashboard. Check average repair order (ARO) and car count. Then open 10 Parts Sales Tracker. Parts sales and margin are tracked line by line. Write down one thing to change next month. That's it.
+**2. Spoken narration:** Open the dashboard. Check average repair order (ARO) and car count. Then open 10 Parts Sales Tracker. Parts revenue, cost and margin are broken down by service category. Write down one thing to change next month. That's it.
 
 **3. On-screen text:**
 - Open the dashboard
