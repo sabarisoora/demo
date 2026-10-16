@@ -1,0 +1,36 @@
+# Airbnb — 30 Short-Form Video Hooks
+
+For TikTok, Instagram Reels and YouTube Shorts. Each hook is the first 1–3 seconds; pair it with a script from `04-Video-Scripts.md`. No statistics, guarantees or fake urgency. Disclose your affiliate link in the caption.
+
+| # | Angle | Hook | Suggested visual |
+|---|---|---|---|
+| 1 | Problem and solution | Your payouts look great. Have you subtracted the cleaning yet? | Talking head, then cut to the dashboard |
+| 2 | Problem and solution | One of your listings might be carrying the others. Here is how to find out which. | Talking head, then cut to the dashboard |
+| 3 | Problem and solution | A full calendar is not the same as a profitable one. | Talking head, then cut to the dashboard |
+| 4 | Problem and solution | Do you know the return on your rental property, not just the payout? | Talking head, then cut to the dashboard |
+| 5 | Industry mistake | Host money mistake: judging a property by payouts instead of profit. | Talking head with on-screen text |
+| 6 | Industry mistake | Chasing occupancy and ignoring your nightly rate is an easy trap. | Talking head with on-screen text |
+| 7 | Industry mistake | Maintenance is not a surprise. It is a cost you can plan for. | Talking head with on-screen text |
+| 8 | Industry mistake | Stop leaving your booking income and receipts until tax season. | Talking head with on-screen text |
+| 9 | Operational inefficiency | Cleaning costs are small per turnover. Add them up and look again. | B-roll of the workplace, then the relevant sheet |
+| 10 | Operational inefficiency | Payouts in one app, receipts in another, repairs in your head. There is a simpler way. | B-roll of the workplace, then the relevant sheet |
+| 11 | Operational inefficiency | If you cannot compare your listings side by side, you are managing blind. | B-roll of the workplace, then the relevant sheet |
+| 12 | Owner frustration | Doing your rental books at midnight between guest messages? Watch this. | Relatable POV clip |
+| 13 | Owner frustration | That feeling when the accountant asks which costs belong to which property. | Relatable POV clip |
+| 14 | Owner frustration | Five-star reviews and still unsure if the property pays? | Relatable POV clip |
+| 15 | Curiosity | What does a whole short-term rental business look like on one screen? | Screen recording reveal |
+| 16 | Curiosity | I opened a 25-sheet Excel system built just for Airbnb hosts. Here is what is inside. | Screen recording reveal |
+| 17 | Curiosity | There is one number every Airbnb host should check every month. | Screen recording reveal |
+| 18 | Educational | ADR vs occupancy: which one is actually growing your rental income? | Whiteboard or on-screen definition |
+| 19 | Educational | RevPAR explained for Airbnb hosts in 30 seconds. | Whiteboard or on-screen definition |
+| 20 | Educational | Payout vs profit: what your Airbnb earnings are not telling you. | Whiteboard or on-screen definition |
+| 21 | Educational | How to think about return on investment for a rental property. | Whiteboard or on-screen definition |
+| 22 | Product demonstration | Here is the Executive Dashboard in the Airbnb Business Intelligence System. | Screen recording of the sample workbook |
+| 23 | Product demonstration | Watch me log a booking and see the dashboard update. | Screen recording of the sample workbook |
+| 24 | Product demonstration | This is what property rankings look like when they are built for hosts. | Screen recording of the sample workbook |
+| 25 | Product demonstration | ADR and RevPAR, calculated for you: here is the sheet. | Screen recording of the sample workbook |
+| 26 | Comparison and decision | Essential or Elite? How to pick the right edition for your rentals. | Split screen of the editions |
+| 27 | Comparison and decision | Platform earnings vs a host's Excel dashboard: they answer different questions. | Split screen of the editions |
+| 28 | Objection handling | "I am not an Excel person." You do not have to be. Here is why. | Talking head, objection as on-screen text |
+| 29 | Objection handling | "Airbnb already shows my earnings." Here is what it does not show. | Talking head, objection as on-screen text |
+| 30 | Objection handling | No, a spreadsheet will not get you more bookings. Here is what it will do. | Talking head, objection as on-screen text |
