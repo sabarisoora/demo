@@ -6,24 +6,30 @@ export const W = 1920;
 export const H = 1080;
 
 export const C = {
-  deep: "#061430",
-  brand: "#0b4fd0",
-  brand2: "#0a6cf0",
-  mint: "#9fd3f7",
-  cream: "#f2f6fd",
+  deep: "#0b1120",
+  navy: "#111a33",
+  brand: "#1d4ed8",
+  brand2: "#2563eb",
+  sky: "#60a5fa",
+  soft: "#dbeafe",
+  mint: "#93c5fd",
+  cream: "#f8fafc",
   paper: "#ffffff",
-  ink: "#0d1830",
-  ink2: "#3d4a63",
-  muted: "#7a879c",
-  line: "#dde6f3",
-  gold: "#4fb0ff",
-  goldDeep: "#0a6cf0",
-  red: "#d0603b",
+  ink: "#0b1120",
+  ink2: "#334155",
+  muted: "#64748b",
+  line: "#e2e8f0",
+  gold: "#60a5fa",
+  goldDeep: "#2563eb",
+  red: "#ef4444",
+  green: "#10b981",
+  amber: "#f59e0b",
 };
 
 export const FONT = {
-  display: "'Plus Jakarta Sans', system-ui, sans-serif",
-  body: "'Plus Jakarta Sans', system-ui, sans-serif",
+  display: "'Poppins', system-ui, sans-serif",
+  body: "'Poppins', system-ui, sans-serif",
+  serif: "'Playfair Display', Georgia, serif",
   mono: "'IBM Plex Mono', monospace",
 };
 

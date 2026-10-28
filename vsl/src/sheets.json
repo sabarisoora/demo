@@ -1,0 +1,102 @@
+{
+"tax": [
+1849,
+1770
+],
+"deductions": [
+1357,
+977
+],
+"forecast": [
+2301,
+1526
+],
+"ro-entry": [
+2426,
+2600
+],
+"tax-readiness": [
+1256,
+1032
+],
+"start": [
+2435,
+1272
+],
+"customers": [
+1736,
+1869
+],
+"bays": [
+1714,
+815
+],
+"leads": [
+1985,
+2600
+],
+"benchmark": [
+2019,
+769
+],
+"kpi": [
+1821,
+748
+],
+"cashflow": [
+3459,
+1022
+],
+"dashboard": [
+2171,
+2091
+],
+"setup": [
+916,
+933
+],
+"profit-leak": [
+1951,
+579
+],
+"health-score": [
+2194,
+978
+],
+"monthly-review": [
+1312,
+854
+],
+"comebacks": [
+1573,
+2600
+],
+"expense-entry": [
+1493,
+2600
+],
+"inventory": [
+2680,
+2600
+],
+"health-snapshot": [
+1629,
+544
+],
+"technicians": [
+2985,
+1823
+],
+"command-center": [
+2980,
+2600
+],
+"accountant": [
+849,
+1048
+],
+"receivables": [
+1753,
+2600
+]
+}

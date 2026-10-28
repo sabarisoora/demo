@@ -1,200 +1,392 @@
 1
-00:00:00,600 --> 00:00:02,587
-Running a business is hard enough.
+00:00:00,500 --> 00:00:01,555
+Quick question.
 
 2
-00:00:02,887 --> 00:00:04,929
-Finding your own numbers shouldn't be.
+00:00:01,825 --> 00:00:04,850
+Do you know which jobs actually made you money last month?
 
 3
-00:00:06,279 --> 00:00:08,854
-But when your numbers are scattered across spreadsheets,
+00:00:05,120 --> 00:00:07,108
+Not your revenue. Your profit.
 
 4
-00:00:09,154 --> 00:00:11,208
-expenses are difficult to track,
+00:00:07,378 --> 00:00:10,669
+If you had to stop and think about it, this video is for you.
 
 5
-00:00:11,508 --> 00:00:14,633
-and important information takes too long to find…
+00:00:10,939 --> 00:00:15,527
+In the next few minutes, I'll show you how to see the real numbers behind your business,
 
 6
-00:00:14,933 --> 00:00:17,567
-how can you make confident business decisions?
+00:00:15,797 --> 00:00:19,244
+in one Excel workbook, built for your exact industry.
 
 7
-00:00:17,867 --> 00:00:19,519
-You don't need more confusion.
+00:00:20,144 --> 00:00:21,926
+Here's what usually happens.
 
 8
-00:00:19,819 --> 00:00:23,105
-You need a better way to organize the numbers that matter.
+00:00:22,196 --> 00:00:25,705
+Jobs get done. Invoices go out. Money comes in.
 
 9
-00:00:24,455 --> 00:00:27,467
-Imagine a more structured way to track your business,
+00:00:25,975 --> 00:00:28,082
+And it feels like things are going fine.
 
 10
-00:00:27,767 --> 00:00:31,802
-understand your numbers, and keep important information organized.
+00:00:28,352 --> 00:00:30,075
+But your numbers live everywhere.
 
 11
-00:00:32,102 --> 00:00:35,887
-A system designed around the kind of business you actually run.
+00:00:30,345 --> 00:00:33,289
+Spreadsheets. Receipts. Bank apps. Your head.
 
 12
-00:00:36,187 --> 00:00:38,718
-That's the idea behind ProfitIQS.
+00:00:33,559 --> 00:00:35,069
+So you can see revenue…
 
 13
-00:00:40,068 --> 00:00:43,874
-Introducing ProfitIQS Business Intelligence Systems™.
+00:00:35,339 --> 00:00:37,955
+but not margin by job or by client.
 
 14
-00:00:44,174 --> 00:00:46,931
-A collection of business-focused digital tools,
+00:00:38,225 --> 00:00:40,212
+Not where costs are quietly growing.
 
 15
-00:00:47,231 --> 00:00:50,273
-designed to help owners organize key information
+00:00:40,482 --> 00:00:42,338
+Not how cash is really moving.
 
 16
-00:00:50,573 --> 00:00:53,550
-and manage important numbers with greater clarity.
+00:00:42,608 --> 00:00:44,847
+And not what deserves your attention next.
 
 17
-00:00:53,850 --> 00:00:56,286
-From contractors and cleaning businesses
+00:00:45,117 --> 00:00:46,812
+Then tax season shows up,
 
 18
-00:00:56,586 --> 00:01:00,498
-to dental practices, restaurants, property managers, and more…
+00:00:47,082 --> 00:00:50,658
+and meeting your accountant means a week of digging for receipts.
 
 19
-00:01:00,798 --> 00:01:06,691
-ProfitIQS brings business-specific tools into one practical, organized solution.
+00:00:51,558 --> 00:00:55,062
+You don't need more software. You don't need another subscription.
 
 20
-00:01:08,041 --> 00:01:09,862
-Instead of starting from scratch,
+00:00:55,332 --> 00:00:59,669
+You need your own numbers, organized the way your business actually works.
 
 21
-00:01:10,162 --> 00:01:13,338
-you get a structured system built for your business niche.
+00:01:00,569 --> 00:01:03,185
+That's exactly what ProfitIQS builds.
 
 22
-00:01:13,638 --> 00:01:17,148
-Use the included tools to organize relevant records,
+00:01:03,455 --> 00:01:06,206
+Business Intelligence Systems™, made in Excel,
 
 23
-00:01:17,448 --> 00:01:19,653
-track the metrics your system supports,
+00:01:06,476 --> 00:01:08,610
+for 21 different kinds of business.
 
 24
-00:01:19,953 --> 00:01:22,908
-and review information in a more consistent way.
+00:01:08,880 --> 00:01:13,095
+63 systems in total. Three editions for every industry.
 
 25
-00:01:24,258 --> 00:01:28,207
-Choose from three editions: Essential, Elite, and Complete.
+00:01:13,365 --> 00:01:14,978
+Let me show you a real one.
 
 26
-00:01:28,507 --> 00:01:32,609
-Whether you want a starting point or a more comprehensive set of tools,
+00:01:15,878 --> 00:01:18,367
+We'll walk through the workbook, the deeper tools,
 
 27
-00:01:32,909 --> 00:01:35,946
-you can explore the edition that best fits your needs.
+00:01:18,637 --> 00:01:22,304
+the questions owners usually ask, and how to pick your edition.
 
 28
-00:01:37,296 --> 00:01:40,935
-And because ProfitIQS offers niche-specific systems,
+00:01:23,204 --> 00:01:28,082
+This is the Auto Repair Shop system. Everything you see is sample data.
 
 29
-00:01:41,235 --> 00:01:46,006
-you're not simply choosing a generic spreadsheet and hoping it works for your business.
+00:01:28,352 --> 00:01:29,742
+Step one: Setup.
 
 30
-00:01:46,306 --> 00:01:49,079
-You're choosing tools built around your industry.
+00:01:30,012 --> 00:01:32,877
+Enter your business name, your name, and your country.
 
 31
-00:01:50,429 --> 00:01:54,345
-ProfitIQS covers 21 business niches, including…
+00:01:33,147 --> 00:01:37,212
+That sets your currency and tax reserve rate for the whole system.
 
 32
-00:01:54,645 --> 00:01:58,232
-auto repair, HVAC, plumbing, roofing, landscaping,
+00:01:38,112 --> 00:01:39,779
+Step two: enter your work.
 
 33
-00:01:58,532 --> 00:02:02,509
-ecommerce, digital marketing, restaurants, dental practices,
+00:01:40,049 --> 00:01:42,139
+Every repair order gets one line:
 
 34
-00:02:02,809 --> 00:02:05,259
-property management, trucking, and more.
+00:01:42,409 --> 00:01:46,250
+parts revenue, parts cost, labor revenue, labor cost.
 
 35
-00:02:05,559 --> 00:02:08,519
-Whatever your niche, explore the available system
+00:01:46,520 --> 00:01:49,199
+And the profit on that job calculates itself.
 
 36
-00:02:08,819 --> 00:02:12,369
-and see whether its tools match the way you manage your business.
+00:01:49,469 --> 00:01:52,201
+Expenses go in the same way, by category.
 
 37
-00:02:13,719 --> 00:02:15,717
-Choose the edition that works for you.
+00:01:53,101 --> 00:01:55,160
+Step three: open the Dashboard.
 
 38
-00:02:16,017 --> 00:02:18,981
-The Essential edition is $97.
+00:01:55,430 --> 00:01:59,698
+Total revenue. Total expenses. Net profit. Net margin.
 
 39
-00:02:19,281 --> 00:02:22,897
-The Elite edition is $197.
+00:01:59,968 --> 00:02:02,118
+Your average profit per repair order,
 
 40
-00:02:23,197 --> 00:02:26,897
-And the Complete edition is $249.
+00:02:02,388 --> 00:02:04,674
+and how much you should set aside for tax.
 
 41
-00:02:27,197 --> 00:02:30,795
-Review what's included in each edition, compare the options,
+00:02:04,944 --> 00:02:07,821
+Month by month, revenue against expenses.
 
 42
-00:02:31,095 --> 00:02:34,440
-and select the one that fits your business needs and budget.
+00:02:08,091 --> 00:02:11,788
+And below that, it tells you in plain words what the numbers mean.
 
 43
-00:02:35,790 --> 00:02:38,814
-Your business deserves a clearer view of its numbers.
+00:02:12,688 --> 00:02:15,428
+The Business Health Snapshot scores five areas:
 
 44
-00:02:39,114 --> 00:02:42,803
-Visit ProfitIQS.com and find your industry.
+00:02:15,698 --> 00:02:19,768
+profit, cash, tax readiness, expenses, and revenue trend.
 
 45
-00:02:43,103 --> 00:02:46,661
-Explore the Business Intelligence System™ built for your niche.
+00:02:20,038 --> 00:02:24,487
+And when your accountant asks for numbers, there's an export ready to hand over.
 
 46
-00:02:46,961 --> 00:02:49,434
-Choose your edition and take the next step
+00:02:24,757 --> 00:02:26,396
+That's the Essential edition.
 
 47
-00:02:49,734 --> 00:02:53,277
-toward a more organized approach to managing your business.
+00:02:27,296 --> 00:02:31,324
+Elite goes much deeper. In auto repair, that's dozens of sheets.
 
 48
-00:02:54,627 --> 00:02:58,418
-ProfitIQS. Business Intelligence for Better Decisions.
+00:02:31,594 --> 00:02:35,727
+An Executive Command Center: your last twelve months on one screen.
 
 49
-00:02:58,718 --> 00:03:01,047
-Find your niche. Explore your system.
+00:02:35,997 --> 00:02:40,463
+Technician performance: productivity and efficiency for every tech.
 
 50
-00:03:01,347 --> 00:03:03,966
-Make your next decision with greater clarity.
+00:02:40,733 --> 00:02:44,324
+A comeback tracker, so repeat repairs don't stay invisible.
+
+51
+00:02:44,594 --> 00:02:49,383
+Cash flow, receivables, and a six-month forecast in three scenarios.
+
+52
+00:02:50,283 --> 00:02:52,759
+And then there's the Profit Leak Detector™.
+
+53
+00:02:53,029 --> 00:02:58,882
+It flags low-margin jobs, warranty losses, inventory waste, and collection problems
+
+54
+00:02:59,152 --> 00:03:02,136
+with a simple traffic light: healthy, or review.
+
+55
+00:03:02,406 --> 00:03:05,920
+It all rolls up into one Business Health Score™, out of 100.
+
+56
+00:03:06,190 --> 00:03:09,328
+So instead of guessing where to look, you know where to start.
+
+57
+00:03:10,228 --> 00:03:12,218
+Now here's the important part.
+
+58
+00:03:12,488 --> 00:03:14,745
+Every industry gets its own system.
+
+59
+00:03:15,015 --> 00:03:18,859
+A restaurant system tracks menu cost, labor, and food waste.
+
+60
+00:03:19,129 --> 00:03:24,277
+An HVAC system tracks work orders, technicians, and maintenance agreements.
+
+61
+00:03:24,547 --> 00:03:28,023
+A trucking system shows real cost per mile and per load.
+
+62
+00:03:28,293 --> 00:03:32,102
+An Air B and B system shows the full picture behind every booking.
+
+63
+00:03:32,372 --> 00:03:37,226
+Built around the numbers your business actually watches. Not a generic template.
+
+64
+00:03:38,126 --> 00:03:42,807
+Auto repair, HVAC, plumbing, electrical, roofing, construction.
+
+65
+00:03:43,077 --> 00:03:46,371
+Cleaning, landscaping, lawn care, pest control.
+
+66
+00:03:46,641 --> 00:03:51,664
+Restaurants, dental practices, ecommerce, digital marketing agencies.
+
+67
+00:03:51,934 --> 00:03:56,255
+Property management, rental property, Airbnb, trucking,
+
+68
+00:03:56,525 --> 00:04:00,677
+manufacturing, 1099 contractors, and small business.
+
+69
+00:04:01,577 --> 00:04:03,553
+Now, a few honest questions.
+
+70
+00:04:03,823 --> 00:04:05,874
+First: “I'm not an Excel person.”
+
+71
+00:04:06,144 --> 00:04:11,019
+You don't need to be. No macros. Every calculation is a plain formula.
+
+72
+00:04:11,289 --> 00:04:14,843
+Every system comes with a Field Guide and a Quick Start
+
+73
+00:04:15,113 --> 00:04:17,541
+that walk you through setup and every sheet.
+
+74
+00:04:17,811 --> 00:04:24,349
+It runs in desktop Excel: 2019, 2021, or Microsoft 365.
+
+75
+00:04:25,249 --> 00:04:27,470
+Second: “Will it run my business for me?”
+
+76
+00:04:27,740 --> 00:04:29,567
+No. And we'll be straight with you.
+
+77
+00:04:29,837 --> 00:04:32,860
+The workbook does the math. You still have to look at it.
+
+78
+00:04:33,130 --> 00:04:37,125
+Open it every week, enter your numbers, and look. That's the whole deal.
+
+79
+00:04:38,025 --> 00:04:40,138
+Third: “Is this another subscription?”
+
+80
+00:04:40,408 --> 00:04:42,997
+No. It's one payment. No subscription.
+
+81
+00:04:43,267 --> 00:04:45,943
+Your files are delivered right after checkout.
+
+82
+00:04:46,213 --> 00:04:50,190
+And if it's not right for you, there's a 60-day money-back guarantee.
+
+83
+00:04:51,090 --> 00:04:52,899
+So which edition fits you?
+
+84
+00:04:53,169 --> 00:04:55,451
+Essential is $97:
+
+85
+00:04:55,721 --> 00:05:00,423
+the core entry, tracking, and dashboard sheets, plus the Business Health Snapshot.
+
+86
+00:05:00,693 --> 00:05:03,536
+Elite is $197:
+
+87
+00:05:03,806 --> 00:05:07,958
+deeper KPI tracking, forecasting, and the Business Health Score™.
+
+88
+00:05:08,228 --> 00:05:10,956
+Complete is $249:
+
+89
+00:05:11,226 --> 00:05:14,210
+both workbooks together, so you don't have to choose.
+
+90
+00:05:14,480 --> 00:05:17,833
+Every edition includes the Field Guide and Quick Start.
+
+91
+00:05:18,733 --> 00:05:20,044
+Here's your next step.
+
+92
+00:05:20,314 --> 00:05:22,432
+Go to ProfitIQS.com.
+
+93
+00:05:22,702 --> 00:05:25,600
+Find your industry and compare the three editions.
+
+94
+00:05:25,870 --> 00:05:28,313
+Pick the one that fits how deep you want to go.
+
+95
+00:05:28,583 --> 00:05:31,908
+Then open your workbook and start with this month's numbers.
+
+96
+00:05:32,808 --> 00:05:36,822
+ProfitIQS. Business Intelligence for Better Decisions.
+
+97
+00:05:37,092 --> 00:05:40,258
+P.S. Your business already produces the numbers.
+
+98
+00:05:40,528 --> 00:05:43,498
+ProfitIQS just helps you finally see them.
 

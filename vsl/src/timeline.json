@@ -1,355 +1,691 @@
 {
- "duration": 188.816,
+ "duration": 349.348,
  "lines": [
   {
    "scene": "hook",
-   "sub": "Running a business is hard enough.",
-   "say": "Running a business is hard enough.",
-   "start": 0.6,
-   "end": 2.437
+   "sub": "Quick question.",
+   "say": "Quick question.",
+   "start": 0.5,
+   "end": 1.405
   },
   {
    "scene": "hook",
-   "sub": "Finding your own numbers shouldn't be.",
-   "say": "Finding your own numbers shouldn't be.",
-   "start": 2.887,
-   "end": 4.779
+   "sub": "Do you know which jobs actually made you money last month?",
+   "say": "Do you know which jobs actually made you money last month?",
+   "start": 1.825,
+   "end": 4.7
   },
   {
-   "scene": "problem",
-   "sub": "But when your numbers are scattered across spreadsheets,",
-   "say": "But when your numbers are scattered across spreadsheets,",
-   "start": 6.279,
-   "end": 8.704
+   "scene": "hook",
+   "sub": "Not your revenue. Your profit.",
+   "say": "Not your revenue. Your profit.",
+   "start": 5.12,
+   "end": 6.958
   },
   {
-   "scene": "problem",
-   "sub": "expenses are difficult to track,",
-   "say": "expenses are difficult to track,",
-   "start": 9.154,
-   "end": 11.058
+   "scene": "hook",
+   "sub": "If you had to stop and think about it, this video is for you.",
+   "say": "If you had to stop and think about it, this video is for you.",
+   "start": 7.378,
+   "end": 10.519
   },
   {
-   "scene": "problem",
-   "sub": "and important information takes too long to find\u2026",
-   "say": "and important information takes too long to find...",
-   "start": 11.508,
-   "end": 14.483
+   "scene": "hook",
+   "sub": "In the next few minutes, I'll show you how to see the real numbers behind your business,",
+   "say": "In the next few minutes, I'll show you how to see the real numbers behind your business,",
+   "start": 10.939,
+   "end": 15.377
   },
   {
-   "scene": "problem",
-   "sub": "how can you make confident business decisions?",
-   "say": "how can you make confident business decisions?",
-   "start": 14.933,
-   "end": 17.417
+   "scene": "hook",
+   "sub": "in one Excel workbook, built for your exact industry.",
+   "say": "in one Excel workbook, built for your exact industry.",
+   "start": 15.797,
+   "end": 19.094
   },
   {
-   "scene": "problem",
-   "sub": "You don't need more confusion.",
-   "say": "You don't need more confusion.",
-   "start": 17.867,
-   "end": 19.369
+   "scene": "pain",
+   "sub": "Here's what usually happens.",
+   "say": "Here's what usually happens.",
+   "start": 20.144,
+   "end": 21.776
   },
   {
-   "scene": "problem",
-   "sub": "You need a better way to organize the numbers that matter.",
-   "say": "You need a better way to organize the numbers that matter.",
-   "start": 19.819,
-   "end": 22.955
+   "scene": "pain",
+   "sub": "Jobs get done. Invoices go out. Money comes in.",
+   "say": "Jobs get done. Invoices go out. Money comes in.",
+   "start": 22.196,
+   "end": 25.555
   },
   {
-   "scene": "realize",
-   "sub": "Imagine a more structured way to track your business,",
-   "say": "Imagine a more structured way to track your business,",
-   "start": 24.455,
-   "end": 27.317
+   "scene": "pain",
+   "sub": "And it feels like things are going fine.",
+   "say": "And it feels like things are going fine.",
+   "start": 25.975,
+   "end": 27.932
   },
   {
-   "scene": "realize",
-   "sub": "understand your numbers, and keep important information organized.",
-   "say": "understand your numbers, and keep important information organized.",
-   "start": 27.767,
-   "end": 31.652
+   "scene": "pain",
+   "sub": "But your numbers live everywhere.",
+   "say": "But your numbers live everywhere.",
+   "start": 28.352,
+   "end": 29.925
   },
   {
-   "scene": "realize",
-   "sub": "A system designed around the kind of business you actually run.",
-   "say": "A system designed around the kind of business you actually run.",
-   "start": 32.102,
-   "end": 35.737
+   "scene": "pain",
+   "sub": "Spreadsheets. Receipts. Bank apps. Your head.",
+   "say": "Spreadsheets. Receipts. Bank apps. Your head.",
+   "start": 30.345,
+   "end": 33.139
   },
   {
-   "scene": "realize",
-   "sub": "That's the idea behind ProfitIQS.",
-   "say": "That's the idea behind Profit IQS",
-   "start": 36.187,
-   "end": 38.568
+   "scene": "pain",
+   "sub": "So you can see revenue\u2026",
+   "say": "So you can see revenue...",
+   "start": 33.559,
+   "end": 34.919
+  },
+  {
+   "scene": "pain",
+   "sub": "but not margin by job or by client.",
+   "say": "but not margin by job, or by client.",
+   "start": 35.339,
+   "end": 37.805
+  },
+  {
+   "scene": "pain",
+   "sub": "Not where costs are quietly growing.",
+   "say": "Not where costs are quietly growing.",
+   "start": 38.225,
+   "end": 40.062
+  },
+  {
+   "scene": "pain",
+   "sub": "Not how cash is really moving.",
+   "say": "Not how cash is really moving.",
+   "start": 40.482,
+   "end": 42.188
+  },
+  {
+   "scene": "pain",
+   "sub": "And not what deserves your attention next.",
+   "say": "And not what deserves your attention next.",
+   "start": 42.608,
+   "end": 44.697
+  },
+  {
+   "scene": "pain",
+   "sub": "Then tax season shows up,",
+   "say": "Then tax season shows up,",
+   "start": 45.117,
+   "end": 46.662
+  },
+  {
+   "scene": "pain",
+   "sub": "and meeting your accountant means a week of digging for receipts.",
+   "say": "and meeting your accountant means a week of digging for receipts.",
+   "start": 47.082,
+   "end": 50.508
+  },
+  {
+   "scene": "turn",
+   "sub": "You don't need more software. You don't need another subscription.",
+   "say": "You don't need more software. You don't need another subscription.",
+   "start": 51.558,
+   "end": 54.912
+  },
+  {
+   "scene": "turn",
+   "sub": "You need your own numbers, organized the way your business actually works.",
+   "say": "You need your own numbers, organized the way your business actually works.",
+   "start": 55.332,
+   "end": 59.519
   },
   {
    "scene": "intro",
-   "sub": "Introducing ProfitIQS Business Intelligence Systems\u2122.",
-   "say": "Introducing Profit IQS Business Intelligence Systems.",
-   "start": 40.068,
-   "end": 43.724
+   "sub": "That's exactly what ProfitIQS builds.",
+   "say": "That's exactly what Profit IQS builds.",
+   "start": 60.569,
+   "end": 63.035
   },
   {
    "scene": "intro",
-   "sub": "A collection of business-focused digital tools,",
-   "say": "A collection of business-focused digital tools,",
-   "start": 44.174,
-   "end": 46.781
+   "sub": "Business Intelligence Systems\u2122, made in Excel,",
+   "say": "Business Intelligence Systems, made in Excel,",
+   "start": 63.455,
+   "end": 66.056
   },
   {
    "scene": "intro",
-   "sub": "designed to help owners organize key information",
-   "say": "designed to help owners organize key information,",
-   "start": 47.231,
-   "end": 50.123
+   "sub": "for 21 different kinds of business.",
+   "say": "for twenty-one different kinds of business.",
+   "start": 66.476,
+   "end": 68.46
   },
   {
    "scene": "intro",
-   "sub": "and manage important numbers with greater clarity.",
-   "say": "and manage important numbers with greater clarity.",
-   "start": 50.573,
-   "end": 53.4
+   "sub": "63 systems in total. Three editions for every industry.",
+   "say": "Sixty-three systems in total. Three editions for every industry.",
+   "start": 68.88,
+   "end": 72.945
   },
   {
    "scene": "intro",
-   "sub": "From contractors and cleaning businesses",
-   "say": "From contractors and cleaning businesses,",
-   "start": 53.85,
-   "end": 56.136
+   "sub": "Let me show you a real one.",
+   "say": "Let me show you a real one.",
+   "start": 73.365,
+   "end": 74.828
   },
   {
-   "scene": "intro",
-   "sub": "to dental practices, restaurants, property managers, and more\u2026",
-   "say": "to dental practices, restaurants, property managers, and more...",
-   "start": 56.586,
-   "end": 60.348
+   "scene": "plan",
+   "sub": "We'll walk through the workbook, the deeper tools,",
+   "say": "We'll walk through the workbook, the deeper tools,",
+   "start": 75.878,
+   "end": 78.217
   },
   {
-   "scene": "intro",
-   "sub": "ProfitIQS brings business-specific tools into one practical, organized solution.",
-   "say": "Profit IQS brings business-specific tools into one practical, organized solution.",
-   "start": 60.798,
-   "end": 66.541
+   "scene": "plan",
+   "sub": "the questions owners usually ask, and how to pick your edition.",
+   "say": "the questions owners usually ask, and how to pick your edition.",
+   "start": 78.637,
+   "end": 82.154
   },
   {
-   "scene": "product",
-   "sub": "Instead of starting from scratch,",
-   "say": "Instead of starting from scratch,",
-   "start": 68.041,
-   "end": 69.712
+   "scene": "setup",
+   "sub": "This is the Auto Repair Shop system. Everything you see is sample data.",
+   "say": "This is the Auto Repair Shop system. Everything you see here is sample data.",
+   "start": 83.204,
+   "end": 87.932
   },
   {
-   "scene": "product",
-   "sub": "you get a structured system built for your business niche.",
-   "say": "you get a structured system, built for your business niche.",
-   "start": 70.162,
-   "end": 73.188
+   "scene": "setup",
+   "sub": "Step one: Setup.",
+   "say": "Step one. Setup.",
+   "start": 88.352,
+   "end": 89.592
   },
   {
-   "scene": "product",
-   "sub": "Use the included tools to organize relevant records,",
-   "say": "Use the included tools to organize relevant records,",
-   "start": 73.638,
-   "end": 76.998
+   "scene": "setup",
+   "sub": "Enter your business name, your name, and your country.",
+   "say": "Enter your business name, your name, and your country.",
+   "start": 90.012,
+   "end": 92.727
   },
   {
-   "scene": "product",
-   "sub": "track the metrics your system supports,",
-   "say": "track the metrics your system supports,",
-   "start": 77.448,
-   "end": 79.503
+   "scene": "setup",
+   "sub": "That sets your currency and tax reserve rate for the whole system.",
+   "say": "That sets your currency, and your tax reserve rate, for the whole system.",
+   "start": 93.147,
+   "end": 97.062
   },
   {
-   "scene": "product",
-   "sub": "and review information in a more consistent way.",
-   "say": "and review information in a more consistent way.",
-   "start": 79.953,
-   "end": 82.758
+   "scene": "entry",
+   "sub": "Step two: enter your work.",
+   "say": "Step two. Enter your work.",
+   "start": 98.112,
+   "end": 99.629
   },
   {
-   "scene": "editions",
-   "sub": "Choose from three editions: Essential, Elite, and Complete.",
-   "say": "Choose from three editions. Essential. Elite. And Complete.",
-   "start": 84.258,
-   "end": 88.057
+   "scene": "entry",
+   "sub": "Every repair order gets one line:",
+   "say": "Every repair order gets one line.",
+   "start": 100.049,
+   "end": 101.989
   },
   {
-   "scene": "editions",
-   "sub": "Whether you want a starting point or a more comprehensive set of tools,",
-   "say": "Whether you want a starting point, or a more comprehensive set of tools,",
-   "start": 88.507,
-   "end": 92.459
+   "scene": "entry",
+   "sub": "parts revenue, parts cost, labor revenue, labor cost.",
+   "say": "Parts revenue. Parts cost. Labor revenue. Labor cost.",
+   "start": 102.409,
+   "end": 106.1
   },
   {
-   "scene": "editions",
-   "sub": "you can explore the edition that best fits your needs.",
-   "say": "you can explore the edition that best fits your needs.",
-   "start": 92.909,
-   "end": 95.796
+   "scene": "entry",
+   "sub": "And the profit on that job calculates itself.",
+   "say": "And the profit on that job calculates itself.",
+   "start": 106.52,
+   "end": 109.049
+  },
+  {
+   "scene": "entry",
+   "sub": "Expenses go in the same way, by category.",
+   "say": "Expenses go in the same way, by category.",
+   "start": 109.469,
+   "end": 112.051
+  },
+  {
+   "scene": "dashboard",
+   "sub": "Step three: open the Dashboard.",
+   "say": "Step three. Open the dashboard.",
+   "start": 113.101,
+   "end": 115.01
+  },
+  {
+   "scene": "dashboard",
+   "sub": "Total revenue. Total expenses. Net profit. Net margin.",
+   "say": "Total revenue. Total expenses. Net profit. Net margin.",
+   "start": 115.43,
+   "end": 119.548
+  },
+  {
+   "scene": "dashboard",
+   "sub": "Your average profit per repair order,",
+   "say": "Your average profit per repair order,",
+   "start": 119.968,
+   "end": 121.968
+  },
+  {
+   "scene": "dashboard",
+   "sub": "and how much you should set aside for tax.",
+   "say": "and how much you should set aside for tax.",
+   "start": 122.388,
+   "end": 124.524
+  },
+  {
+   "scene": "dashboard",
+   "sub": "Month by month, revenue against expenses.",
+   "say": "Month by month, revenue against expenses.",
+   "start": 124.944,
+   "end": 127.671
+  },
+  {
+   "scene": "dashboard",
+   "sub": "And below that, it tells you in plain words what the numbers mean.",
+   "say": "And below that, it tells you in plain words what the numbers mean.",
+   "start": 128.091,
+   "end": 131.638
+  },
+  {
+   "scene": "health",
+   "sub": "The Business Health Snapshot scores five areas:",
+   "say": "The Business Health Snapshot scores five areas.",
+   "start": 132.688,
+   "end": 135.278
+  },
+  {
+   "scene": "health",
+   "sub": "profit, cash, tax readiness, expenses, and revenue trend.",
+   "say": "Profit. Cash. Tax readiness. Expenses. And revenue trend.",
+   "start": 135.698,
+   "end": 139.618
+  },
+  {
+   "scene": "health",
+   "sub": "And when your accountant asks for numbers, there's an export ready to hand over.",
+   "say": "And when your accountant asks for numbers, there's an export ready to hand over.",
+   "start": 140.038,
+   "end": 144.337
+  },
+  {
+   "scene": "health",
+   "sub": "That's the Essential edition.",
+   "say": "That's the Essential edition.",
+   "start": 144.757,
+   "end": 146.246
+  },
+  {
+   "scene": "elite",
+   "sub": "Elite goes much deeper. In auto repair, that's dozens of sheets.",
+   "say": "Elite goes much deeper. In auto repair, that's dozens of sheets.",
+   "start": 147.296,
+   "end": 151.174
+  },
+  {
+   "scene": "elite",
+   "sub": "An Executive Command Center: your last twelve months on one screen.",
+   "say": "An Executive Command Center. Your last twelve months, on one screen.",
+   "start": 151.594,
+   "end": 155.577
+  },
+  {
+   "scene": "elite",
+   "sub": "Technician performance: productivity and efficiency for every tech.",
+   "say": "Technician performance. Productivity and efficiency, for every tech.",
+   "start": 155.997,
+   "end": 160.313
+  },
+  {
+   "scene": "elite",
+   "sub": "A comeback tracker, so repeat repairs don't stay invisible.",
+   "say": "A comeback tracker, so repeat repairs don't stay invisible.",
+   "start": 160.733,
+   "end": 164.174
+  },
+  {
+   "scene": "elite",
+   "sub": "Cash flow, receivables, and a six-month forecast in three scenarios.",
+   "say": "Cash flow. Receivables. And a six-month forecast, in three scenarios.",
+   "start": 164.594,
+   "end": 169.233
+  },
+  {
+   "scene": "leak",
+   "sub": "And then there's the Profit Leak Detector\u2122.",
+   "say": "And then, there's the Profit Leak Detector.",
+   "start": 170.283,
+   "end": 172.609
+  },
+  {
+   "scene": "leak",
+   "sub": "It flags low-margin jobs, warranty losses, inventory waste, and collection problems",
+   "say": "It flags low-margin jobs, warranty losses, inventory waste, and collection problems,",
+   "start": 173.029,
+   "end": 178.732
+  },
+  {
+   "scene": "leak",
+   "sub": "with a simple traffic light: healthy, or review.",
+   "say": "with a simple traffic light. Healthy, or review.",
+   "start": 179.152,
+   "end": 181.986
+  },
+  {
+   "scene": "leak",
+   "sub": "It all rolls up into one Business Health Score\u2122, out of 100.",
+   "say": "It all rolls up into one Business Health Score, out of a hundred.",
+   "start": 182.406,
+   "end": 185.77
+  },
+  {
+   "scene": "leak",
+   "sub": "So instead of guessing where to look, you know where to start.",
+   "say": "So instead of guessing where to look, you know where to start.",
+   "start": 186.19,
+   "end": 189.178
   },
   {
    "scene": "niche",
-   "sub": "And because ProfitIQS offers niche-specific systems,",
-   "say": "And because Profit IQS offers niche-specific systems,",
-   "start": 97.296,
-   "end": 100.785
+   "sub": "Now here's the important part.",
+   "say": "Now, here's the important part.",
+   "start": 190.228,
+   "end": 192.068
   },
   {
    "scene": "niche",
-   "sub": "you're not simply choosing a generic spreadsheet and hoping it works for your business.",
-   "say": "you're not simply choosing a generic spreadsheet, and hoping it works for your business.",
-   "start": 101.235,
-   "end": 105.856
+   "sub": "Every industry gets its own system.",
+   "say": "Every industry gets its own system.",
+   "start": 192.488,
+   "end": 194.595
   },
   {
    "scene": "niche",
-   "sub": "You're choosing tools built around your industry.",
-   "say": "You're choosing tools built around your industry.",
-   "start": 106.306,
-   "end": 108.929
+   "sub": "A restaurant system tracks menu cost, labor, and food waste.",
+   "say": "A restaurant system tracks menu cost, labor, and food waste.",
+   "start": 195.015,
+   "end": 198.709
+  },
+  {
+   "scene": "niche",
+   "sub": "An HVAC system tracks work orders, technicians, and maintenance agreements.",
+   "say": "An H-VAC system tracks work orders, technicians, and maintenance agreements.",
+   "start": 199.129,
+   "end": 204.127
+  },
+  {
+   "scene": "niche",
+   "sub": "A trucking system shows real cost per mile and per load.",
+   "say": "A trucking system shows real cost per mile, and per load.",
+   "start": 204.547,
+   "end": 207.873
+  },
+  {
+   "scene": "niche",
+   "sub": "An Air B and B system shows the full picture behind every booking.",
+   "say": "An Airbnb system shows the full picture behind every booking.",
+   "start": 208.293,
+   "end": 211.952
+  },
+  {
+   "scene": "niche",
+   "sub": "Built around the numbers your business actually watches. Not a generic template.",
+   "say": "Built around the numbers your business actually watches. Not a generic template.",
+   "start": 212.372,
+   "end": 217.076
   },
   {
    "scene": "niches",
-   "sub": "ProfitIQS covers 21 business niches, including\u2026",
-   "say": "Profit IQS covers twenty-one business niches, including...",
-   "start": 110.429,
-   "end": 114.195
+   "sub": "Auto repair, HVAC, plumbing, electrical, roofing, construction.",
+   "say": "Auto repair. H-VAC. Plumbing. Electrical. Roofing. Construction.",
+   "start": 218.126,
+   "end": 222.657
   },
   {
    "scene": "niches",
-   "sub": "auto repair, HVAC, plumbing, roofing, landscaping,",
-   "say": "auto repair, H-VAC, plumbing, roofing, landscaping,",
-   "start": 114.645,
-   "end": 118.082
+   "sub": "Cleaning, landscaping, lawn care, pest control.",
+   "say": "Cleaning. Landscaping. Lawn care. Pest control.",
+   "start": 223.077,
+   "end": 226.221
   },
   {
    "scene": "niches",
-   "sub": "ecommerce, digital marketing, restaurants, dental practices,",
-   "say": "e-commerce, digital marketing, restaurants, dental practices,",
-   "start": 118.532,
-   "end": 122.359
+   "sub": "Restaurants, dental practices, ecommerce, digital marketing agencies.",
+   "say": "Restaurants. Dental practices. E-commerce. Digital marketing agencies.",
+   "start": 226.641,
+   "end": 231.514
   },
   {
    "scene": "niches",
-   "sub": "property management, trucking, and more.",
-   "say": "property management, trucking, and more.",
-   "start": 122.809,
-   "end": 125.109
+   "sub": "Property management, rental property, Airbnb, trucking,",
+   "say": "Property management. Rental property. Air B and B. Trucking.",
+   "start": 231.934,
+   "end": 236.105
   },
   {
    "scene": "niches",
-   "sub": "Whatever your niche, explore the available system",
-   "say": "Whatever your niche, explore the available system,",
-   "start": 125.559,
-   "end": 128.369
+   "sub": "manufacturing, 1099 contractors, and small business.",
+   "say": "Manufacturing. Ten-ninety-nine contractors. And small business.",
+   "start": 236.525,
+   "end": 240.527
   },
   {
-   "scene": "niches",
-   "sub": "and see whether its tools match the way you manage your business.",
-   "say": "and see whether its tools match the way you manage your business.",
-   "start": 128.819,
-   "end": 132.219
+   "scene": "obj1",
+   "sub": "Now, a few honest questions.",
+   "say": "Now, a few honest questions.",
+   "start": 241.577,
+   "end": 243.403
+  },
+  {
+   "scene": "obj1",
+   "sub": "First: \u201cI'm not an Excel person.\u201d",
+   "say": "First. I'm not an Excel person.",
+   "start": 243.823,
+   "end": 245.724
+  },
+  {
+   "scene": "obj1",
+   "sub": "You don't need to be. No macros. Every calculation is a plain formula.",
+   "say": "You don't need to be. There are no macros. Every calculation is a plain formula.",
+   "start": 246.144,
+   "end": 250.869
+  },
+  {
+   "scene": "obj1",
+   "sub": "Every system comes with a Field Guide and a Quick Start",
+   "say": "And every system comes with a Field Guide, and a Quick Start,",
+   "start": 251.289,
+   "end": 254.693
+  },
+  {
+   "scene": "obj1",
+   "sub": "that walk you through setup and every sheet.",
+   "say": "that walk you through setup, and every sheet.",
+   "start": 255.113,
+   "end": 257.391
+  },
+  {
+   "scene": "obj1",
+   "sub": "It runs in desktop Excel: 2019, 2021, or Microsoft 365.",
+   "say": "It runs in desktop Excel. Twenty nineteen, twenty twenty-one, or Microsoft three sixty-five.",
+   "start": 257.811,
+   "end": 264.199
+  },
+  {
+   "scene": "obj2",
+   "sub": "Second: \u201cWill it run my business for me?\u201d",
+   "say": "Second. Will it run my business for me?",
+   "start": 265.249,
+   "end": 267.32
+  },
+  {
+   "scene": "obj2",
+   "sub": "No. And we'll be straight with you.",
+   "say": "No. And we'll be straight with you.",
+   "start": 267.74,
+   "end": 269.417
+  },
+  {
+   "scene": "obj2",
+   "sub": "The workbook does the math. You still have to look at it.",
+   "say": "The workbook does the math. You still have to look at it.",
+   "start": 269.837,
+   "end": 272.71
+  },
+  {
+   "scene": "obj2",
+   "sub": "Open it every week, enter your numbers, and look. That's the whole deal.",
+   "say": "Open it every week, enter your numbers, and look. That's the whole deal.",
+   "start": 273.13,
+   "end": 276.975
+  },
+  {
+   "scene": "obj3",
+   "sub": "Third: \u201cIs this another subscription?\u201d",
+   "say": "Third. Is this another subscription?",
+   "start": 278.025,
+   "end": 279.988
+  },
+  {
+   "scene": "obj3",
+   "sub": "No. It's one payment. No subscription.",
+   "say": "No. It's one payment. No subscription.",
+   "start": 280.408,
+   "end": 282.847
+  },
+  {
+   "scene": "obj3",
+   "sub": "Your files are delivered right after checkout.",
+   "say": "Your files are delivered right after checkout.",
+   "start": 283.267,
+   "end": 285.793
+  },
+  {
+   "scene": "obj3",
+   "sub": "And if it's not right for you, there's a 60-day money-back guarantee.",
+   "say": "And if it's not right for you, there's a sixty-day money-back guarantee.",
+   "start": 286.213,
+   "end": 290.04
   },
   {
    "scene": "pricing",
-   "sub": "Choose the edition that works for you.",
-   "say": "Choose the edition that works for you.",
-   "start": 133.719,
-   "end": 135.567
+   "sub": "So which edition fits you?",
+   "say": "So, which edition fits you?",
+   "start": 291.09,
+   "end": 292.749
   },
   {
    "scene": "pricing",
-   "sub": "The Essential edition is $97.",
-   "say": "The Essential edition is ninety-seven dollars.",
-   "start": 136.017,
-   "end": 138.831
+   "sub": "Essential is $97:",
+   "say": "Essential is ninety-seven dollars.",
+   "start": 293.169,
+   "end": 295.301
   },
   {
    "scene": "pricing",
-   "sub": "The Elite edition is $197.",
-   "say": "The Elite edition is one hundred and ninety-seven dollars.",
-   "start": 139.281,
-   "end": 142.747
+   "sub": "the core entry, tracking, and dashboard sheets, plus the Business Health Snapshot.",
+   "say": "The core entry, tracking, and dashboard sheets, plus the Business Health Snapshot.",
+   "start": 295.721,
+   "end": 300.273
   },
   {
    "scene": "pricing",
-   "sub": "And the Complete edition is $249.",
-   "say": "And the Complete edition is two hundred and forty-nine dollars.",
-   "start": 143.197,
-   "end": 146.747
+   "sub": "Elite is $197:",
+   "say": "Elite is one hundred and ninety-seven dollars.",
+   "start": 300.693,
+   "end": 303.386
   },
   {
    "scene": "pricing",
-   "sub": "Review what's included in each edition, compare the options,",
-   "say": "Review what's included in each edition, compare the options,",
-   "start": 147.197,
-   "end": 150.645
+   "sub": "deeper KPI tracking, forecasting, and the Business Health Score\u2122.",
+   "say": "Deeper KPI tracking, forecasting, and the Business Health Score.",
+   "start": 303.806,
+   "end": 307.808
   },
   {
    "scene": "pricing",
-   "sub": "and select the one that fits your business needs and budget.",
-   "say": "and select the one that fits your business needs, and budget.",
-   "start": 151.095,
-   "end": 154.29
+   "sub": "Complete is $249:",
+   "say": "Complete is two hundred and forty-nine dollars.",
+   "start": 308.228,
+   "end": 310.806
+  },
+  {
+   "scene": "pricing",
+   "sub": "both workbooks together, so you don't have to choose.",
+   "say": "Both workbooks together, so you don't have to choose.",
+   "start": 311.226,
+   "end": 314.06
+  },
+  {
+   "scene": "pricing",
+   "sub": "Every edition includes the Field Guide and Quick Start.",
+   "say": "Every edition includes the Field Guide, and Quick Start.",
+   "start": 314.48,
+   "end": 317.683
   },
   {
    "scene": "cta",
-   "sub": "Your business deserves a clearer view of its numbers.",
-   "say": "Your business deserves a clearer view of its numbers.",
-   "start": 155.79,
-   "end": 158.664
+   "sub": "Here's your next step.",
+   "say": "Here's your next step.",
+   "start": 318.733,
+   "end": 319.894
   },
   {
    "scene": "cta",
-   "sub": "Visit ProfitIQS.com and find your industry.",
-   "say": "Visit Profit IQS dot com, and find your industry.",
-   "start": 159.114,
-   "end": 162.653
+   "sub": "Go to ProfitIQS.com.",
+   "say": "Go to Profit IQS dot com.",
+   "start": 320.314,
+   "end": 322.282
   },
   {
    "scene": "cta",
-   "sub": "Explore the Business Intelligence System\u2122 built for your niche.",
-   "say": "Explore the Business Intelligence System built for your niche.",
-   "start": 163.103,
-   "end": 166.511
+   "sub": "Find your industry and compare the three editions.",
+   "say": "Find your industry, and compare the three editions.",
+   "start": 322.702,
+   "end": 325.45
   },
   {
    "scene": "cta",
-   "sub": "Choose your edition and take the next step",
-   "say": "Choose your edition, and take the next step",
-   "start": 166.961,
-   "end": 169.284
+   "sub": "Pick the one that fits how deep you want to go.",
+   "say": "Pick the one that fits how deep you want to go.",
+   "start": 325.87,
+   "end": 328.163
   },
   {
    "scene": "cta",
-   "sub": "toward a more organized approach to managing your business.",
-   "say": "toward a more organized approach to managing your business.",
-   "start": 169.734,
-   "end": 173.127
+   "sub": "Then open your workbook and start with this month's numbers.",
+   "say": "Then open your workbook, and start with this month's numbers.",
+   "start": 328.583,
+   "end": 331.758
   },
   {
    "scene": "end",
    "sub": "ProfitIQS. Business Intelligence for Better Decisions.",
-   "say": "Profit IQS Business Intelligence, for Better Decisions.",
-   "start": 174.627,
-   "end": 178.268
+   "say": "Profit IQS. Business Intelligence, for Better Decisions.",
+   "start": 332.808,
+   "end": 336.672
   },
   {
    "scene": "end",
-   "sub": "Find your niche. Explore your system.",
-   "say": "Find your niche. Explore your system.",
-   "start": 178.718,
-   "end": 180.897
+   "sub": "P.S. Your business already produces the numbers.",
+   "say": "P S. Your business already produces the numbers.",
+   "start": 337.092,
+   "end": 340.108
   },
   {
    "scene": "end",
-   "sub": "Make your next decision with greater clarity.",
-   "say": "Make your next decision, with greater clarity.",
-   "start": 181.347,
-   "end": 183.816
+   "sub": "ProfitIQS just helps you finally see them.",
+   "say": "Profit IQS just helps you finally see them.",
+   "start": 340.528,
+   "end": 343.348
   }
  ]
 }

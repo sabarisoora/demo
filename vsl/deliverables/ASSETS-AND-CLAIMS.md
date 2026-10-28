@@ -1,35 +1,40 @@
-# ProfitIQS VSL: missing assets, unsupported features, claims to verify
+# ProfitIQS VSL v2: sources, claims and open items
 
-The video was built only from the supplied script and what is in this repository. The production
-container could not reach profitiqs.com, and no workbook files, covers or screen recordings were supplied.
-Every scene without genuine footage is labelled **"Illustrative visual"** on screen.
+Runtime is 5:49. Every product visual is the real **Auto Repair Shop Complete 2026** package that the owner supplied.
+The sheets were rendered straight from the `.xlsx` files and are labelled **SAMPLE DATA** on screen. The covers are the
+63 real covers from profitiqs.com.
 
-## 1. Missing assets (swap them in via `src/assets.ts`, then re-render)
+## Where each claim comes from
 
-| Asset | Where it goes | Current stand-in |
-|---|---|---|
-| Screen recording of a real ProfitIQS workbook (data entry, tracking sheets, summaries) | Scene 4, product centrepiece (`productDemo`) | Neutral spreadsheet illustration: soft bars, no numbers, tabs "Records / Tracking / Review" |
-| Screen recording of profitiqs.com: niche directory → niche page → edition comparison | Scene 7, CTA browser (`websiteDemo`) | Neutral grid of placeholder tiles, URL typed in |
-| Workbook cover images for Essential, Elite, Complete | Scenes 4 and 6, edition cards (`editionCovers`) | Name-only cards |
-| Product covers for each of the 21 niches | Scene 5 niche montage | Text tiles |
-| Official logo files (SVG/PNG) | Throughout | Rebuilt from `src/app/icon.svg` in this repo, with "ProfitIQS™" set in Archivo |
-| Full list of all 21 niche names | Scene 5 | Only the 13 niches named in the script are shown, plus "…and more / See all 21 at ProfitIQS.com" |
-| Owner-recorded or professional human voiceover | Whole video | AI voice (Kokoro TTS, "af_heart"). Lines and timings are in `script/lines.json` and `deliverables/subtitles.srt` |
-| Licensed music | Whole video | Original ambient bed synthesized for this video, so there are no licensing issues |
+| Claim in the video | Source |
+|---|---|
+| 21 industries, 63 systems, 3 editions each | profitiqs.com home page and /products (63 product pages fetched) |
+| Essential $97 · Elite $197 · Complete $249 | profitiqs.com /compare and every product page; confirmed by the owner |
+| Essential = core entry, tracking and dashboard sheets plus Business Health Snapshot | /compare, the site FAQ, and the Essential workbook's tabs |
+| Elite = deeper KPI tracking, forecasting, Business Health Score™ | /compare, the site FAQ, and the Elite workbook's tabs |
+| Complete = both workbooks, so you don't have to choose | /compare ("Complete is for you if…"), the site FAQ |
+| Every edition includes the Field Guide and Quick Start | each product page's "What's included" list (all 3 tiers) |
+| Setup sets currency and tax reserve rate from business name, owner and country | Essential Quick Start p.3, SETUP sheet |
+| One line per repair order (parts and labor revenue and cost); RO profit calculates | REPAIR ORDER ENTRY sheet |
+| Dashboard: revenue, expenses, net profit, margin, avg RO profit, tax reserve, monthly chart, plain-words insights | DASHBOARD sheet |
+| Health Snapshot scores profit, cash, tax readiness, expenses, revenue trend | BUSINESS HEALTH SNAPSHOT sheet |
+| Accountant export | ACCOUNTANT EXPORT sheet |
+| Elite: Executive Command Center, Technician Performance, Comeback Tracker, Cash Flow, Receivables, 6-month forecast in 3 scenarios | Elite sheets 02, 08, 14, 17, 18, 27 |
+| Profit Leak Detector™ flags low-margin jobs, warranty losses, inventory waste, collection problems; Healthy/Review | Elite sheet 26 |
+| Business Health Score™ out of 100 | Elite sheet 25 |
+| Restaurant / HVAC / Trucking / Airbnb section names | each industry's Elite product page ("the real section list") |
+| No macros; every calculation is a plain formula | Elite Field Guide ("MACROS — None.") |
+| Desktop Excel 2019, 2021 or Microsoft 365 | Elite Field Guide |
+| "The workbook does the math. You still have to look at it." | Elite Field Guide, "The honest version" |
+| One payment, no subscription | profitiqs.com home page ("one payment, no subscription") |
+| Files delivered right after checkout | site FAQ (Digistore24 Download Vault after payment confirms) |
+| 60-day money-back guarantee | product pages ("60-day money-back guarantee, no questions asked") |
 
-## 2. Features not shown because they could not be verified
-- What each edition contains, and how Essential, Elite and Complete differ. The cards show only the name and price, plus "See what's included at ProfitIQS.com".
-- Specific dashboards, reports, charts, metrics or calculations inside the workbooks.
-- Which niches have which editions.
-- "Most popular" or "best value" badges. None were used.
+## Things to know or check
 
-## 3. Claims that need sign-off before publishing
-| Claim | Source | Status |
-|---|---|---|
-| Essential $97, Elite $197, Complete $249 | Supplied script | **Confirmed by owner (2026-10-28).** The web app in this repo describes Essential as free and Elite as a Digistore24 subscription. That is a different product from the workbooks, so make sure viewers can't confuse the two. |
-| "21 business niches" | Supplied script | This repo only contains the auto-repair niche, so verify the count on the live site. |
-| Niche names (auto repair, HVAC, plumbing, roofing, landscaping, ecommerce, digital marketing, restaurants, dental practices, property management, trucking, contractors, cleaning businesses) | Supplied script | Verify that each one is live. |
-| "Business Intelligence Systems™" / "ProfitIQS™" trademark marks | Supplied script | Confirm that the ™ use is intended. |
-| Pronunciation "Profit-I-Q-S" | Voice choice | **Confirmed by owner.** If it's different, change `say` in `script/lines.json` and re-run `make_vo.py`. |
-
-No testimonials, revenue results, integrations, or "guaranteed profit" claims appear anywhere in the video.
+- **All numbers on screen are sample data** from the workbook, and every sheet window says so. No results, testimonials or income claims are made.
+- **Guarantee wording:** product pages say "60-day money-back guarantee, no questions asked"; the FAQ says "60-day return window, processed through Digistore24". The video says "60-day money-back guarantee", so keep both pages consistent.
+- **Auto Repair only:** the walkthrough uses the Auto Repair system. Other industries have different sheets, which the video says out loud ("In auto repair…", "Every industry gets its own system").
+- **"Dozens of sheets" for Auto Repair Elite:** the workbook has 41 visible tabs, and the site lists 38 sections. The video avoids an exact number.
+- **Voice** is AI (Kokoro "af_heart"). An owner or professional read of `deliverables/voiceover-script.txt` will raise trust. Re-time with `scripts/make_vo.py` after swapping in the recording.
+- **Website scene** is a stylised URL bar and steps, not a screen recording of profitiqs.com.

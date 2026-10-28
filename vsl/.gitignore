@@ -1,3 +1,7 @@
 node_modules
-out/board
+out
 deliverables/audio
+public/sheets
+public/docs
+public/vo.wav
+public/_raw.wav

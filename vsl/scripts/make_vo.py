@@ -7,8 +7,8 @@ from kokoro_onnx import Kokoro
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL = sys.argv[1]
-VOICE, SPEED = "af_heart", 0.92
-START, GAP, SCENE_GAP, TAIL = 0.6, 0.45, 1.5, 5.0
+VOICE, SPEED = "af_heart", 0.95
+START, GAP, SCENE_GAP, TAIL = 0.5, 0.42, 1.05, 6.0
 
 lines = json.load(open(os.path.join(ROOT, "script/lines.json")))
 k = Kokoro(os.path.join(MODEL, "kokoro-v1.0.onnx"), os.path.join(MODEL, "voices-v1.0.bin"))

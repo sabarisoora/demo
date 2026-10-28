@@ -7,8 +7,8 @@ const Root: React.FC = () =>
   React.createElement(
     React.Fragment,
     null,
-    React.createElement(Composition, { id: "VSL", component: VSL, durationInFrames: TOTAL_FRAMES, fps: FPS, width: W, height: H, defaultProps: { captions: true } }),
-    React.createElement(Composition, { id: "VSL-NoCaptions", component: VSL, durationInFrames: TOTAL_FRAMES, fps: FPS, width: W, height: H, defaultProps: { captions: false } }),
+    React.createElement(Composition, { id: "VSL", component: VSL as React.FC<any>, durationInFrames: TOTAL_FRAMES, fps: FPS, width: W, height: H, defaultProps: { captions: true } }),
+    React.createElement(Composition, { id: "VSL-NoCaptions", component: VSL as React.FC<any>, durationInFrames: TOTAL_FRAMES, fps: FPS, width: W, height: H, defaultProps: { captions: false } }),
     React.createElement(Still, { id: "Thumbnail", component: Thumbnail, width: W, height: H }),
   );
 

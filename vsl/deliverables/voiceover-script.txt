@@ -1,72 +1,136 @@
 
 [HOOK]
-Running a business is hard enough.
-Finding your own numbers shouldn't be.
+Quick question.
+Do you know which jobs actually made you money last month?
+Not your revenue. Your profit.
+If you had to stop and think about it, this video is for you.
+In the next few minutes, I'll show you how to see the real numbers behind your business,
+in one Excel workbook, built for your exact industry.
 
-[PROBLEM]
-But when your numbers are scattered across spreadsheets,
-expenses are difficult to track,
-and important information takes too long to find…
-how can you make confident business decisions?
-You don't need more confusion.
-You need a better way to organize the numbers that matter.
+[PAIN]
+Here's what usually happens.
+Jobs get done. Invoices go out. Money comes in.
+And it feels like things are going fine.
+But your numbers live everywhere.
+Spreadsheets. Receipts. Bank apps. Your head.
+So you can see revenue…
+but not margin by job or by client.
+Not where costs are quietly growing.
+Not how cash is really moving.
+And not what deserves your attention next.
+Then tax season shows up,
+and meeting your accountant means a week of digging for receipts.
 
-[REALIZE]
-Imagine a more structured way to track your business,
-understand your numbers, and keep important information organized.
-A system designed around the kind of business you actually run.
-That's the idea behind ProfitIQS.
+[TURN]
+You don't need more software. You don't need another subscription.
+You need your own numbers, organized the way your business actually works.
 
 [INTRO]
-Introducing ProfitIQS Business Intelligence Systems™.
-A collection of business-focused digital tools,
-designed to help owners organize key information
-and manage important numbers with greater clarity.
-From contractors and cleaning businesses
-to dental practices, restaurants, property managers, and more…
-ProfitIQS brings business-specific tools into one practical, organized solution.
+That's exactly what ProfitIQS builds.
+Business Intelligence Systems™, made in Excel,
+for 21 different kinds of business.
+63 systems in total. Three editions for every industry.
+Let me show you a real one.
 
-[PRODUCT]
-Instead of starting from scratch,
-you get a structured system built for your business niche.
-Use the included tools to organize relevant records,
-track the metrics your system supports,
-and review information in a more consistent way.
+[PLAN]
+We'll walk through the workbook, the deeper tools,
+the questions owners usually ask, and how to pick your edition.
 
-[EDITIONS]
-Choose from three editions: Essential, Elite, and Complete.
-Whether you want a starting point or a more comprehensive set of tools,
-you can explore the edition that best fits your needs.
+[SETUP]
+This is the Auto Repair Shop system. Everything you see is sample data.
+Step one: Setup.
+Enter your business name, your name, and your country.
+That sets your currency and tax reserve rate for the whole system.
+
+[ENTRY]
+Step two: enter your work.
+Every repair order gets one line:
+parts revenue, parts cost, labor revenue, labor cost.
+And the profit on that job calculates itself.
+Expenses go in the same way, by category.
+
+[DASHBOARD]
+Step three: open the Dashboard.
+Total revenue. Total expenses. Net profit. Net margin.
+Your average profit per repair order,
+and how much you should set aside for tax.
+Month by month, revenue against expenses.
+And below that, it tells you in plain words what the numbers mean.
+
+[HEALTH]
+The Business Health Snapshot scores five areas:
+profit, cash, tax readiness, expenses, and revenue trend.
+And when your accountant asks for numbers, there's an export ready to hand over.
+That's the Essential edition.
+
+[ELITE]
+Elite goes much deeper. In auto repair, that's dozens of sheets.
+An Executive Command Center: your last twelve months on one screen.
+Technician performance: productivity and efficiency for every tech.
+A comeback tracker, so repeat repairs don't stay invisible.
+Cash flow, receivables, and a six-month forecast in three scenarios.
+
+[LEAK]
+And then there's the Profit Leak Detector™.
+It flags low-margin jobs, warranty losses, inventory waste, and collection problems
+with a simple traffic light: healthy, or review.
+It all rolls up into one Business Health Score™, out of 100.
+So instead of guessing where to look, you know where to start.
 
 [NICHE]
-And because ProfitIQS offers niche-specific systems,
-you're not simply choosing a generic spreadsheet and hoping it works for your business.
-You're choosing tools built around your industry.
+Now here's the important part.
+Every industry gets its own system.
+A restaurant system tracks menu cost, labor, and food waste.
+An HVAC system tracks work orders, technicians, and maintenance agreements.
+A trucking system shows real cost per mile and per load.
+An Air B and B system shows the full picture behind every booking.
+Built around the numbers your business actually watches. Not a generic template.
 
 [NICHES]
-ProfitIQS covers 21 business niches, including…
-auto repair, HVAC, plumbing, roofing, landscaping,
-ecommerce, digital marketing, restaurants, dental practices,
-property management, trucking, and more.
-Whatever your niche, explore the available system
-and see whether its tools match the way you manage your business.
+Auto repair, HVAC, plumbing, electrical, roofing, construction.
+Cleaning, landscaping, lawn care, pest control.
+Restaurants, dental practices, ecommerce, digital marketing agencies.
+Property management, rental property, Airbnb, trucking,
+manufacturing, 1099 contractors, and small business.
+
+[OBJ1]
+Now, a few honest questions.
+First: “I'm not an Excel person.”
+You don't need to be. No macros. Every calculation is a plain formula.
+Every system comes with a Field Guide and a Quick Start
+that walk you through setup and every sheet.
+It runs in desktop Excel: 2019, 2021, or Microsoft 365.
+
+[OBJ2]
+Second: “Will it run my business for me?”
+No. And we'll be straight with you.
+The workbook does the math. You still have to look at it.
+Open it every week, enter your numbers, and look. That's the whole deal.
+
+[OBJ3]
+Third: “Is this another subscription?”
+No. It's one payment. No subscription.
+Your files are delivered right after checkout.
+And if it's not right for you, there's a 60-day money-back guarantee.
 
 [PRICING]
-Choose the edition that works for you.
-The Essential edition is $97.
-The Elite edition is $197.
-And the Complete edition is $249.
-Review what's included in each edition, compare the options,
-and select the one that fits your business needs and budget.
+So which edition fits you?
+Essential is $97:
+the core entry, tracking, and dashboard sheets, plus the Business Health Snapshot.
+Elite is $197:
+deeper KPI tracking, forecasting, and the Business Health Score™.
+Complete is $249:
+both workbooks together, so you don't have to choose.
+Every edition includes the Field Guide and Quick Start.
 
 [CTA]
-Your business deserves a clearer view of its numbers.
-Visit ProfitIQS.com and find your industry.
-Explore the Business Intelligence System™ built for your niche.
-Choose your edition and take the next step
-toward a more organized approach to managing your business.
+Here's your next step.
+Go to ProfitIQS.com.
+Find your industry and compare the three editions.
+Pick the one that fits how deep you want to go.
+Then open your workbook and start with this month's numbers.
 
 [END]
 ProfitIQS. Business Intelligence for Better Decisions.
-Find your niche. Explore your system.
-Make your next decision with greater clarity.
+P.S. Your business already produces the numbers.
+ProfitIQS just helps you finally see them.
