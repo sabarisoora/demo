@@ -328,7 +328,7 @@ export const Reel: React.FC = () => {
       <Questions at={at("question")} until={fo(19.4)} />
       <Digital />
       <Pill at={at("whatIs")} until={at("twoTypes") - 2} y={196} bg={K.lime} color={K.black}>DIGITAL = ?</Pill>
-      <Pill at={at("twoTypes")} until={at("versus") - 2} y={196} bg="#fff" color={K.black} size={110}>2 TYPES</Pill>
+      <Pill at={at("twoTypes")} until={at("versus") - 2} y={196} bg="#fff" color={K.black} size={110}>RENDU TYPES</Pill>
       <Versus />
       <Captions />
       <Sting />
