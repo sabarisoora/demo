@@ -1,0 +1,355 @@
+{
+ "duration": 188.816,
+ "lines": [
+  {
+   "scene": "hook",
+   "sub": "Running a business is hard enough.",
+   "say": "Running a business is hard enough.",
+   "start": 0.6,
+   "end": 2.437
+  },
+  {
+   "scene": "hook",
+   "sub": "Finding your own numbers shouldn't be.",
+   "say": "Finding your own numbers shouldn't be.",
+   "start": 2.887,
+   "end": 4.779
+  },
+  {
+   "scene": "problem",
+   "sub": "But when your numbers are scattered across spreadsheets,",
+   "say": "But when your numbers are scattered across spreadsheets,",
+   "start": 6.279,
+   "end": 8.704
+  },
+  {
+   "scene": "problem",
+   "sub": "expenses are difficult to track,",
+   "say": "expenses are difficult to track,",
+   "start": 9.154,
+   "end": 11.058
+  },
+  {
+   "scene": "problem",
+   "sub": "and important information takes too long to find\u2026",
+   "say": "and important information takes too long to find...",
+   "start": 11.508,
+   "end": 14.483
+  },
+  {
+   "scene": "problem",
+   "sub": "how can you make confident business decisions?",
+   "say": "how can you make confident business decisions?",
+   "start": 14.933,
+   "end": 17.417
+  },
+  {
+   "scene": "problem",
+   "sub": "You don't need more confusion.",
+   "say": "You don't need more confusion.",
+   "start": 17.867,
+   "end": 19.369
+  },
+  {
+   "scene": "problem",
+   "sub": "You need a better way to organize the numbers that matter.",
+   "say": "You need a better way to organize the numbers that matter.",
+   "start": 19.819,
+   "end": 22.955
+  },
+  {
+   "scene": "realize",
+   "sub": "Imagine a more structured way to track your business,",
+   "say": "Imagine a more structured way to track your business,",
+   "start": 24.455,
+   "end": 27.317
+  },
+  {
+   "scene": "realize",
+   "sub": "understand your numbers, and keep important information organized.",
+   "say": "understand your numbers, and keep important information organized.",
+   "start": 27.767,
+   "end": 31.652
+  },
+  {
+   "scene": "realize",
+   "sub": "A system designed around the kind of business you actually run.",
+   "say": "A system designed around the kind of business you actually run.",
+   "start": 32.102,
+   "end": 35.737
+  },
+  {
+   "scene": "realize",
+   "sub": "That's the idea behind ProfitIQS.",
+   "say": "That's the idea behind Profit IQS",
+   "start": 36.187,
+   "end": 38.568
+  },
+  {
+   "scene": "intro",
+   "sub": "Introducing ProfitIQS Business Intelligence Systems\u2122.",
+   "say": "Introducing Profit IQS Business Intelligence Systems.",
+   "start": 40.068,
+   "end": 43.724
+  },
+  {
+   "scene": "intro",
+   "sub": "A collection of business-focused digital tools,",
+   "say": "A collection of business-focused digital tools,",
+   "start": 44.174,
+   "end": 46.781
+  },
+  {
+   "scene": "intro",
+   "sub": "designed to help owners organize key information",
+   "say": "designed to help owners organize key information,",
+   "start": 47.231,
+   "end": 50.123
+  },
+  {
+   "scene": "intro",
+   "sub": "and manage important numbers with greater clarity.",
+   "say": "and manage important numbers with greater clarity.",
+   "start": 50.573,
+   "end": 53.4
+  },
+  {
+   "scene": "intro",
+   "sub": "From contractors and cleaning businesses",
+   "say": "From contractors and cleaning businesses,",
+   "start": 53.85,
+   "end": 56.136
+  },
+  {
+   "scene": "intro",
+   "sub": "to dental practices, restaurants, property managers, and more\u2026",
+   "say": "to dental practices, restaurants, property managers, and more...",
+   "start": 56.586,
+   "end": 60.348
+  },
+  {
+   "scene": "intro",
+   "sub": "ProfitIQS brings business-specific tools into one practical, organized solution.",
+   "say": "Profit IQS brings business-specific tools into one practical, organized solution.",
+   "start": 60.798,
+   "end": 66.541
+  },
+  {
+   "scene": "product",
+   "sub": "Instead of starting from scratch,",
+   "say": "Instead of starting from scratch,",
+   "start": 68.041,
+   "end": 69.712
+  },
+  {
+   "scene": "product",
+   "sub": "you get a structured system built for your business niche.",
+   "say": "you get a structured system, built for your business niche.",
+   "start": 70.162,
+   "end": 73.188
+  },
+  {
+   "scene": "product",
+   "sub": "Use the included tools to organize relevant records,",
+   "say": "Use the included tools to organize relevant records,",
+   "start": 73.638,
+   "end": 76.998
+  },
+  {
+   "scene": "product",
+   "sub": "track the metrics your system supports,",
+   "say": "track the metrics your system supports,",
+   "start": 77.448,
+   "end": 79.503
+  },
+  {
+   "scene": "product",
+   "sub": "and review information in a more consistent way.",
+   "say": "and review information in a more consistent way.",
+   "start": 79.953,
+   "end": 82.758
+  },
+  {
+   "scene": "editions",
+   "sub": "Choose from three editions: Essential, Elite, and Complete.",
+   "say": "Choose from three editions. Essential. Elite. And Complete.",
+   "start": 84.258,
+   "end": 88.057
+  },
+  {
+   "scene": "editions",
+   "sub": "Whether you want a starting point or a more comprehensive set of tools,",
+   "say": "Whether you want a starting point, or a more comprehensive set of tools,",
+   "start": 88.507,
+   "end": 92.459
+  },
+  {
+   "scene": "editions",
+   "sub": "you can explore the edition that best fits your needs.",
+   "say": "you can explore the edition that best fits your needs.",
+   "start": 92.909,
+   "end": 95.796
+  },
+  {
+   "scene": "niche",
+   "sub": "And because ProfitIQS offers niche-specific systems,",
+   "say": "And because Profit IQS offers niche-specific systems,",
+   "start": 97.296,
+   "end": 100.785
+  },
+  {
+   "scene": "niche",
+   "sub": "you're not simply choosing a generic spreadsheet and hoping it works for your business.",
+   "say": "you're not simply choosing a generic spreadsheet, and hoping it works for your business.",
+   "start": 101.235,
+   "end": 105.856
+  },
+  {
+   "scene": "niche",
+   "sub": "You're choosing tools built around your industry.",
+   "say": "You're choosing tools built around your industry.",
+   "start": 106.306,
+   "end": 108.929
+  },
+  {
+   "scene": "niches",
+   "sub": "ProfitIQS covers 21 business niches, including\u2026",
+   "say": "Profit IQS covers twenty-one business niches, including...",
+   "start": 110.429,
+   "end": 114.195
+  },
+  {
+   "scene": "niches",
+   "sub": "auto repair, HVAC, plumbing, roofing, landscaping,",
+   "say": "auto repair, H-VAC, plumbing, roofing, landscaping,",
+   "start": 114.645,
+   "end": 118.082
+  },
+  {
+   "scene": "niches",
+   "sub": "ecommerce, digital marketing, restaurants, dental practices,",
+   "say": "e-commerce, digital marketing, restaurants, dental practices,",
+   "start": 118.532,
+   "end": 122.359
+  },
+  {
+   "scene": "niches",
+   "sub": "property management, trucking, and more.",
+   "say": "property management, trucking, and more.",
+   "start": 122.809,
+   "end": 125.109
+  },
+  {
+   "scene": "niches",
+   "sub": "Whatever your niche, explore the available system",
+   "say": "Whatever your niche, explore the available system,",
+   "start": 125.559,
+   "end": 128.369
+  },
+  {
+   "scene": "niches",
+   "sub": "and see whether its tools match the way you manage your business.",
+   "say": "and see whether its tools match the way you manage your business.",
+   "start": 128.819,
+   "end": 132.219
+  },
+  {
+   "scene": "pricing",
+   "sub": "Choose the edition that works for you.",
+   "say": "Choose the edition that works for you.",
+   "start": 133.719,
+   "end": 135.567
+  },
+  {
+   "scene": "pricing",
+   "sub": "The Essential edition is $97.",
+   "say": "The Essential edition is ninety-seven dollars.",
+   "start": 136.017,
+   "end": 138.831
+  },
+  {
+   "scene": "pricing",
+   "sub": "The Elite edition is $197.",
+   "say": "The Elite edition is one hundred and ninety-seven dollars.",
+   "start": 139.281,
+   "end": 142.747
+  },
+  {
+   "scene": "pricing",
+   "sub": "And the Complete edition is $249.",
+   "say": "And the Complete edition is two hundred and forty-nine dollars.",
+   "start": 143.197,
+   "end": 146.747
+  },
+  {
+   "scene": "pricing",
+   "sub": "Review what's included in each edition, compare the options,",
+   "say": "Review what's included in each edition, compare the options,",
+   "start": 147.197,
+   "end": 150.645
+  },
+  {
+   "scene": "pricing",
+   "sub": "and select the one that fits your business needs and budget.",
+   "say": "and select the one that fits your business needs, and budget.",
+   "start": 151.095,
+   "end": 154.29
+  },
+  {
+   "scene": "cta",
+   "sub": "Your business deserves a clearer view of its numbers.",
+   "say": "Your business deserves a clearer view of its numbers.",
+   "start": 155.79,
+   "end": 158.664
+  },
+  {
+   "scene": "cta",
+   "sub": "Visit ProfitIQS.com and find your industry.",
+   "say": "Visit Profit IQS dot com, and find your industry.",
+   "start": 159.114,
+   "end": 162.653
+  },
+  {
+   "scene": "cta",
+   "sub": "Explore the Business Intelligence System\u2122 built for your niche.",
+   "say": "Explore the Business Intelligence System built for your niche.",
+   "start": 163.103,
+   "end": 166.511
+  },
+  {
+   "scene": "cta",
+   "sub": "Choose your edition and take the next step",
+   "say": "Choose your edition, and take the next step",
+   "start": 166.961,
+   "end": 169.284
+  },
+  {
+   "scene": "cta",
+   "sub": "toward a more organized approach to managing your business.",
+   "say": "toward a more organized approach to managing your business.",
+   "start": 169.734,
+   "end": 173.127
+  },
+  {
+   "scene": "end",
+   "sub": "ProfitIQS. Business Intelligence for Better Decisions.",
+   "say": "Profit IQS Business Intelligence, for Better Decisions.",
+   "start": 174.627,
+   "end": 178.268
+  },
+  {
+   "scene": "end",
+   "sub": "Find your niche. Explore your system.",
+   "say": "Find your niche. Explore your system.",
+   "start": 178.718,
+   "end": 180.897
+  },
+  {
+   "scene": "end",
+   "sub": "Make your next decision with greater clarity.",
+   "say": "Make your next decision, with greater clarity.",
+   "start": 181.347,
+   "end": 183.816
+  }
+ ]
+}
