@@ -26,10 +26,10 @@ Every scene without genuine footage is labelled **"Illustrative visual"** on scr
 ## 3. Claims that need sign-off before publishing
 | Claim | Source | Status |
 |---|---|---|
-| Essential $97, Elite $197, Complete $249 | Supplied script | **Verify against current checkout pricing.** The web app in this repo describes Essential as free and Elite as a Digistore24 subscription. That is a different product from the workbooks, so make sure viewers can't confuse the two. |
+| Essential $97, Elite $197, Complete $249 | Supplied script | **Confirmed by owner (2026-10-28).** The web app in this repo describes Essential as free and Elite as a Digistore24 subscription. That is a different product from the workbooks, so make sure viewers can't confuse the two. |
 | "21 business niches" | Supplied script | This repo only contains the auto-repair niche, so verify the count on the live site. |
 | Niche names (auto repair, HVAC, plumbing, roofing, landscaping, ecommerce, digital marketing, restaurants, dental practices, property management, trucking, contractors, cleaning businesses) | Supplied script | Verify that each one is live. |
 | "Business Intelligence Systems™" / "ProfitIQS™" trademark marks | Supplied script | Confirm that the ™ use is intended. |
-| Pronunciation "Profit-I-Q-S" | Voice choice | Confirm how the brand is said. If it's different, change `say` in `script/lines.json` and re-run `make_vo.py`. |
+| Pronunciation "Profit-I-Q-S" | Voice choice | **Confirmed by owner.** If it's different, change `say` in `script/lines.json` and re-run `make_vo.py`. |
 
 No testimonials, revenue results, integrations, or "guaranteed profit" claims appear anywhere in the video.
