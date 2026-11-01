@@ -68,7 +68,7 @@ export const Eyebrow: React.FC<{ at: number; children: React.ReactNode; color?: 
 };
 
 export const Glass: React.FC<{ style?: React.CSSProperties; children?: React.ReactNode; glow?: string }> = ({ style, children, glow }) => (
-  <div style={{ background: "linear-gradient(160deg, rgba(255,255,255,0.12), rgba(255,255,255,0.03))", border: "1px solid rgba(255,255,255,0.16)", borderRadius: 26, boxShadow: `0 30px 80px rgba(0,0,0,0.45)${glow ? `, 0 0 50px ${glow}55, inset 0 0 0 1.5px ${glow}88` : ""}`, backdropFilter: "blur(14px)", ...style }}>{children}</div>
+  <div style={{ background: "linear-gradient(160deg, rgba(255,255,255,0.12), rgba(255,255,255,0.03))", border: "1px solid rgba(255,255,255,0.16)", borderRadius: 26, boxShadow: `0 30px 80px rgba(0,0,0,0.45)${glow ? `, 0 0 50px ${glow}55, inset 0 0 0 1.5px ${glow}88` : ""}`, ...style }}>{children}</div>
 );
 
 export const Paper: React.FC<{ style?: React.CSSProperties; children?: React.ReactNode }> = ({ style, children }) => (
@@ -228,7 +228,7 @@ export const Captions: React.FC<{ hide?: (gf: number) => boolean }> = ({ hide })
   const o = interpolate(gf, [f(l.end), f(l.end) + 6], [1, 0], cl);
   return (
     <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 40, pointerEvents: "none" }}>
-      <div style={{ opacity: Math.min(p, o), transform: `translateY(${(1 - p) * 12}px)`, display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center", maxWidth: 1500, background: "rgba(3,7,20,0.72)", padding: "10px 26px", borderRadius: 16, backdropFilter: "blur(6px)" }}>
+      <div style={{ opacity: Math.min(p, o), transform: `translateY(${(1 - p) * 12}px)`, display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center", maxWidth: 1500, background: "rgba(3,7,20,0.72)", padding: "10px 26px", borderRadius: 16 }}>
         {g.map((k) => {
           const w = ws[k];
           const next = ws[k + 1];

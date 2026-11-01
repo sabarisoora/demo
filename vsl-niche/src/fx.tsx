@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, interpolate, random, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Img, interpolate, random, staticFile, useCurrentFrame } from "remotion";
 import { C, cl, CUE_LIST, ez } from "./lib";
 
 // ---------- camera shake + chroma from impact cues (global frame) ----------
@@ -47,20 +47,9 @@ export const ImpactOverlay: React.FC = () => {
   );
 };
 
-export const Grain: React.FC<{ opacity?: number }> = ({ opacity = 0.07 }) => {
+export const Grain: React.FC<{ opacity?: number }> = ({ opacity = 0.06 }) => {
   const gf = useCurrentFrame();
-  const seed = gf % 6;
-  return (
-    <AbsoluteFill style={{ pointerEvents: "none", opacity, mixBlendMode: "overlay" }}>
-      <svg width="1920" height="1080">
-        <filter id={`n${seed}`}>
-          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed={seed} stitchTiles="stitch" />
-          <feColorMatrix type="saturate" values="0" />
-        </filter>
-        <rect width="1920" height="1080" filter={`url(#n${seed})`} />
-      </svg>
-    </AbsoluteFill>
-  );
+  return <Img src={staticFile(`fx/grain${gf % 6}.png`)} style={{ position: "absolute", inset: 0, width: 1920, height: 1080, opacity, mixBlendMode: "overlay", pointerEvents: "none" }} />;
 };
 
 export const Vignette: React.FC<{ strength?: number }> = ({ strength = 0.55 }) => (
@@ -87,8 +76,8 @@ export const SpaceBg: React.FC<{ hue?: string; hue2?: string; grid?: boolean }> 
   const a = fr / 90;
   return (
     <AbsoluteFill style={{ background: C.bg, overflow: "hidden" }}>
-      <div style={{ position: "absolute", left: 960 + Math.cos(a) * 420 - 700, top: 300 + Math.sin(a * 1.3) * 160 - 700, width: 1400, height: 1400, borderRadius: 700, background: `radial-gradient(circle, ${hue}88 0%, transparent 62%)`, filter: "blur(30px)" }} />
-      <div style={{ position: "absolute", left: 960 - Math.cos(a * 0.8) * 520 - 600, top: 760 + Math.cos(a) * 140 - 600, width: 1200, height: 1200, borderRadius: 600, background: `radial-gradient(circle, ${hue2}66 0%, transparent 60%)`, filter: "blur(30px)" }} />
+      <div style={{ position: "absolute", left: 960 + Math.cos(a) * 420 - 700, top: 300 + Math.sin(a * 1.3) * 160 - 700, width: 1400, height: 1400, borderRadius: 700, background: `radial-gradient(circle, ${hue}88 0%, transparent 62%)` }} />
+      <div style={{ position: "absolute", left: 960 - Math.cos(a * 0.8) * 520 - 600, top: 760 + Math.cos(a) * 140 - 600, width: 1200, height: 1200, borderRadius: 600, background: `radial-gradient(circle, ${hue2}66 0%, transparent 60%)` }} />
       {grid && (
         <AbsoluteFill
           style={{
@@ -105,7 +94,7 @@ export const SpaceBg: React.FC<{ hue?: string; hue2?: string; grid?: boolean }> 
         const sp = 0.4 + random(`ps${i}`) * 1.4;
         const y = (1150 - ((fr * sp + random(`py${i}`) * 1200) % 1250));
         const s = 2 + random(`pz${i}`) * 4;
-        return <div key={i} style={{ position: "absolute", left: x, top: y, width: s, height: s, borderRadius: s, background: i % 3 ? "#93c5fd" : "#67e8f9", opacity: 0.25 + random(`po${i}`) * 0.4, boxShadow: `0 0 ${s * 3}px #60a5fa` }} />;
+        return <div key={i} style={{ position: "absolute", left: x, top: y, width: s, height: s, borderRadius: s, background: i % 3 ? "#93c5fd" : "#67e8f9", opacity: 0.25 + random(`po${i}`) * 0.4, }} />;
       })}
     </AbsoluteFill>
   );
