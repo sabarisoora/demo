@@ -1,0 +1,83 @@
+[
+ ["hook", "You got paid three times this month."],
+ ["hook", "So tell me. How much of that money is actually [yours?]"],
+ ["hook", "Not what hit your bank account. What's left after expenses… and after [taxes.]"],
+ ["hook", "Every client reports what you earn on a 1099.", "Every client reports what you earn, on a ten ninety-nine."],
+ ["hook", "But who's tracking everything else? Your expenses. Your miles. Your [tax bill.]"],
+ ["hook", "If you work for yourself, the next five minutes are for you."],
+
+ ["pain", "Here's how freelance money usually works."],
+ ["pain", "Income lands in one app."],
+ ["pain", "Receipts pile up in your camera roll."],
+ ["pain", "And your mileage? It lives in your head."],
+ ["pain", "A payment comes in, and it feels like profit. So you spend it like profit."],
+ ["pain", "Then the quarterly deadline shows up."],
+ ["pain", "No employer is withholding your taxes. That bill is all yours."],
+ ["pain", "Your biggest client might not be your best client."],
+ ["pain", "Invoices slip past their due date, and quietly turn into a cash-flow problem."],
+ ["pain", "Then your tax preparer asks for “everything”… and nothing is organized.", "Then your tax preparer asks for everything. And nothing is organized."],
+ ["pain", "Busy every single week, and still not sure what you actually earned this year."],
+
+ ["turn", "That's not a discipline problem. It's a visibility problem."],
+ ["turn", "You already have the data. You just don't have one place that turns it into decisions."],
+
+ ["reveal", "That's why we built the 1099 Contractor Business Intelligence System™.", "That's why we built the ten ninety-nine Contractor Business Intelligence System."],
+ ["reveal", "A ready-built Excel system made only for contractors and freelancers paid on 1099s.", "A ready-built Excel system, made only for contractors and freelancers paid on ten ninety-nines."],
+ ["reveal", "Formulas, dashboards and reports already built in."],
+ ["reveal", "Sample data included, so every dashboard works the moment you open it."],
+
+ ["who", "It's for the first-year freelancer figuring out quarterly taxes."],
+ ["who", "The solo consultant with steady clients, but no idea which ones are worth the time."],
+ ["who", "The contractor who drives to clients and needs every mile logged."],
+ ["who", "And the side-hustler who wants it organized from day one."],
+
+ ["ess", "Let me show you what's inside. Start with Essential: eleven sheets."],
+ ["ess", "Set up your clients once."],
+ ["ess", "Log every payment. Log every expense."],
+ ["ess", "Log every business trip. The IRS mileage rate is built in, so each trip shows its deduction value.", "Log every business trip. The IRS mileage rate is built in, so each trip shows its deduction value."],
+ ["ess", "Client Performance shows who brings in the most revenue."],
+ ["ess", "Tax & Deductions estimates what to set aside, so the quarterly bill isn't a surprise.", "Tax and Deductions estimates what to set aside, so the quarterly bill isn't a surprise."],
+ ["ess", "And the Dashboard puts it on one screen: revenue, expenses, net profit, margin, tax liability, miles."],
+ ["ess", "At tax time, the Accountant Export gives your preparer a clean summary."],
+ ["ess", "Plus a Business Health Snapshot that scores where you stand."],
+
+ ["elite", "Now, Elite. Twenty-six sheets. This is the full command center."],
+ ["elite", "The Executive Dashboard: revenue, profit, cash, receivables, taxes owed, and your mileage deduction."],
+ ["elite", "The Invoice Tracker and Accounts Receivable show who owes you, and for how long."],
+ ["elite", "The Cash Flow Center, because a profitable freelancer can still run short on cash."],
+ ["elite", "Client Profitability ranks every client by what they actually earn you, after costs."],
+
+ ["tax", "Then the part every contractor dreads. Taxes."],
+ ["tax", "The Estimated Tax Center works out federal, self-employment and state estimates, plus a recommended reserve."],
+ ["tax", "The Quarterly Tax Planner lays out all four due dates, and tracks what's paid."],
+ ["tax", "The Deduction Maximizer organizes every deductible category, mapped to Schedule C lines.", "The Deduction Maximizer organizes every deductible category, mapped to Schedule C lines."],
+ ["tax", "And at year-end, a Year-End Tax Package is generated for your CPA or tax software.", "And at year end, a Year End Tax Package is generated for your CPA or tax software."],
+
+ ["leak", "Then there's the Profit Leak Detector™."],
+ ["leak", "Overdue invoices. Your weakest service line. Your least profitable client. Missed deductions."],
+ ["leak", "Flagged red, yellow or green, so you know exactly where to look first."],
+ ["leak", "Plus forecasting, a KPI scorecard, financial goals, and one Business Health Score™."],
+
+ ["obj", "Now, honest answers to the questions people ask."],
+ ["obj", "“I just use my bank app.” A bank app shows money in and out.", "I just use my bank app. A bank app shows money in and out."],
+ ["obj", "This adds client profitability, mileage, tax planning and a year-end package on top."],
+ ["obj", "“I'm not a spreadsheet person.” You don't have to be.", "I'm not a spreadsheet person. You don't have to be."],
+ ["obj", "Everything's built. You log income, expenses and miles. A Field Guide and Quick Start walk you through it."],
+ ["obj", "“Will it lower my taxes?” No tool can promise that.", "Will it lower my taxes? No tool can promise that."],
+ ["obj", "It keeps your deductions tracked and your estimates planned. Your tax preparer decides what applies."],
+ ["obj", "“Is it a subscription?” No. One payment. No macros, no outside connections. Your numbers stay in your file.", "Is it a subscription? No. One payment. No macros, no outside connections. Your numbers stay in your file."],
+
+ ["offer", "So, which edition fits you?"],
+ ["offer", "Essential, $97: clients, revenue, expenses, mileage, client performance, tax set-aside and the dashboard.", "Essential, ninety-seven dollars. Clients, revenue, expenses, mileage, client performance, tax set-aside, and the dashboard."],
+ ["offer", "Elite, $197: invoices, receivables, cash flow, profitability, forecasting, the full tax center and year-end package.", "Elite, one ninety-seven. Invoices, receivables, cash flow, profitability, forecasting, the full tax center, and the year end package."],
+ ["offer", "Or Complete, $249: both workbooks, both Field Guides. Start simple, grow into the full system.", "Or Complete, two forty-nine. Both workbooks, both Field Guides. Start simple, and grow into the full system."],
+ ["offer", "One-time payment. And a 60-day money-back guarantee, no questions asked.", "One-time payment. And a sixty-day money-back guarantee. No questions asked."],
+
+ ["cta", "Here's what to do right now."],
+ ["cta", "Pick your edition below this video."],
+ ["cta", "Open it, log this month's payments, and see your real numbers."],
+ ["cta", "Because every month you wait is another month of guessing."],
+
+ ["end", "P.S. Your clients already report what you earn.", "P S. Your clients already report what you earn."],
+ ["end", "ProfitIQS shows you what you keep.", "Profit IQS shows you what you keep."]
+]

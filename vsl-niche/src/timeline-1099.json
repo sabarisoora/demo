@@ -1,0 +1,3682 @@
+{
+ "duration": 297.393,
+ "lines": [
+  {
+   "scene": "hook",
+   "sub": "You got paid three times this month.",
+   "say": "You got paid three times this month.",
+   "start": 0.35,
+   "end": 2.046,
+   "words": [
+    {
+     "w": "You",
+     "s": 0.35
+    },
+    {
+     "w": "got",
+     "s": 0.558
+    },
+    {
+     "w": "paid",
+     "s": 0.765
+    },
+    {
+     "w": "three",
+     "s": 0.98
+    },
+    {
+     "w": "times",
+     "s": 1.202
+    },
+    {
+     "w": "this",
+     "s": 1.61
+    },
+    {
+     "w": "month.",
+     "s": 1.825
+    }
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "So tell me. How much of that money is actually [yours?]",
+   "say": "So tell me. How much of that money is actually yours?",
+   "start": 2.326,
+   "end": 5.45,
+   "words": [
+    {
+     "w": "So",
+     "s": 2.326
+    },
+    {
+     "w": "tell",
+     "s": 2.543
+    },
+    {
+     "w": "me.",
+     "s": 2.774
+    },
+    {
+     "w": "How",
+     "s": 2.99
+    },
+    {
+     "w": "much",
+     "s": 3.214
+    },
+    {
+     "w": "of",
+     "s": 3.445
+    },
+    {
+     "w": "that",
+     "s": 3.661
+    },
+    {
+     "w": "money",
+     "s": 3.892
+    },
+    {
+     "w": "is",
+     "s": 4.332
+    },
+    {
+     "w": "actually",
+     "s": 4.548
+    },
+    {
+     "w": "[yours?]",
+     "s": 5.212
+    }
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "Not what hit your bank account. What's left after expenses\u2026 and after [taxes.]",
+   "say": "Not what hit your bank account. What's left after expenses\u2026 and after taxes.",
+   "start": 5.731,
+   "end": 10.303,
+   "words": [
+    {
+     "w": "Not",
+     "s": 5.731
+    },
+    {
+     "w": "what",
+     "s": 5.97
+    },
+    {
+     "w": "hit",
+     "s": 6.217
+    },
+    {
+     "w": "your",
+     "s": 6.457
+    },
+    {
+     "w": "bank",
+     "s": 6.704
+    },
+    {
+     "w": "account.",
+     "s": 6.952
+    },
+    {
+     "w": "What's",
+     "s": 7.439
+    },
+    {
+     "w": "left",
+     "s": 7.694
+    },
+    {
+     "w": "after",
+     "s": 7.942
+    },
+    {
+     "w": "expenses\u2026",
+     "s": 8.412
+    },
+    {
+     "w": "and",
+     "s": 9.122
+    },
+    {
+     "w": "after",
+     "s": 9.362
+    },
+    {
+     "w": "[taxes.]",
+     "s": 9.833
+    }
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "Every client reports what you earn on a 1099.",
+   "say": "Every client reports what you earn, on a ten ninety-nine.",
+   "start": 10.583,
+   "end": 13.69,
+   "words": [
+    {
+     "w": "Every",
+     "s": 10.583
+    },
+    {
+     "w": "client",
+     "s": 11.257
+    },
+    {
+     "w": "reports",
+     "s": 11.516
+    },
+    {
+     "w": "what",
+     "s": 11.994
+    },
+    {
+     "w": "you",
+     "s": 12.237
+    },
+    {
+     "w": "earn",
+     "s": 12.472
+    },
+    {
+     "w": "on",
+     "s": 12.715
+    },
+    {
+     "w": "a",
+     "s": 12.942
+    },
+    {
+     "w": "1099.",
+     "s": 13.161
+    }
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "But who's tracking everything else? Your expenses. Your miles. Your [tax bill.]",
+   "say": "But who's tracking everything else? Your expenses. Your miles. Your tax bill.",
+   "start": 13.97,
+   "end": 18.012,
+   "words": [
+    {
+     "w": "But",
+     "s": 13.97
+    },
+    {
+     "w": "who's",
+     "s": 14.172
+    },
+    {
+     "w": "tracking",
+     "s": 14.38
+    },
+    {
+     "w": "everything",
+     "s": 14.797
+    },
+    {
+     "w": "else?",
+     "s": 15.591
+    },
+    {
+     "w": "Your",
+     "s": 15.981
+    },
+    {
+     "w": "expenses.",
+     "s": 16.189
+    },
+    {
+     "w": "Your",
+     "s": 16.788
+    },
+    {
+     "w": "miles.",
+     "s": 16.997
+    },
+    {
+     "w": "Your",
+     "s": 17.393
+    },
+    {
+     "w": "[tax",
+     "s": 17.602
+    },
+    {
+     "w": "bill.]",
+     "s": 17.804
+    }
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "If you work for yourself, the next five minutes are for you.",
+   "say": "If you work for yourself, the next five minutes are for you.",
+   "start": 18.292,
+   "end": 21.187,
+   "words": [
+    {
+     "w": "If",
+     "s": 18.292
+    },
+    {
+     "w": "you",
+     "s": 18.458
+    },
+    {
+     "w": "work",
+     "s": 18.63
+    },
+    {
+     "w": "for",
+     "s": 18.807
+    },
+    {
+     "w": "yourself,",
+     "s": 18.979
+    },
+    {
+     "w": "the",
+     "s": 19.334
+    },
+    {
+     "w": "next",
+     "s": 19.505
+    },
+    {
+     "w": "five",
+     "s": 19.683
+    },
+    {
+     "w": "minutes",
+     "s": 20.014
+    },
+    {
+     "w": "are",
+     "s": 20.517
+    },
+    {
+     "w": "for",
+     "s": 20.843
+    },
+    {
+     "w": "you.",
+     "s": 21.015
+    }
+   ]
+  },
+  {
+   "scene": "pain",
+   "sub": "Here's how freelance money usually works.",
+   "say": "Here's how freelance money usually works.",
+   "start": 21.887,
+   "end": 23.964,
+   "words": [
+    {
+     "w": "Here's",
+     "s": 21.887
+    },
+    {
+     "w": "how",
+     "s": 22.229
+    },
+    {
+     "w": "freelance",
+     "s": 22.403
+    },
+    {
+     "w": "money",
+     "s": 22.925
+    },
+    {
+     "w": "usually",
+     "s": 23.267
+    },
+    {
+     "w": "works.",
+     "s": 23.778
+    }
+   ]
+  },
+  {
+   "scene": "pain",
+   "sub": "Income lands in one app.",
+   "say": "Income lands in one app.",
+   "start": 24.244,
+   "end": 25.621,
+   "words": [
+    {
+     "w": "Income",
+     "s": 24.244
+    },
+    {
+     "w": "lands",
+     "s": 24.753
+    },
+    {
+     "w": "in",
+     "s": 24.941
+    },
+    {
+     "w": "one",
+     "s": 25.111
+    },
+    {
+     "w": "app.",
+     "s": 25.445
+    }
+   ]
+  },
+  {
+   "scene": "pain",
+   "sub": "Receipts pile up in your camera roll.",
+   "say": "Receipts pile up in your camera roll.",
+   "start": 25.901,
+   "end": 27.719,
+   "words": [
+    {
+     "w": "Receipts",
+     "s": 25.901
+    },
+    {
+     "w": "pile",
+     "s": 26.246
+    },
+    {
+     "w": "up",
+     "s": 26.568
+    },
+    {
+     "w": "in",
+     "s": 26.729
+    },
+    {
+     "w": "your",
+     "s": 26.891
+    },
+    {
+     "w": "camera",
+     "s": 27.063
+    },
+    {
+     "w": "roll.",
+     "s": 27.547
+    }
+   ]
+  },
+  {
+   "scene": "pain",
+   "sub": "And your mileage? It lives in your head.",
+   "say": "And your mileage? It lives in your head.",
+   "start": 27.999,
+   "end": 29.916,
+   "words": [
+    {
+     "w": "And",
+     "s": 27.999
+    },
+    {
+     "w": "your",
+     "s": 28.175
+    },
+    {
+     "w": "mileage?",
+     "s": 28.356
+    },
+    {
+     "w": "It",
+     "s": 28.87
+    },
+    {
+     "w": "lives",
+     "s": 29.039
+    },
+    {
+     "w": "in",
+     "s": 29.384
+    },
+    {
+     "w": "your",
+     "s": 29.553
+    },
+    {
+     "w": "head.",
+     "s": 29.734
+    }
+   ]
+  },
+  {
+   "scene": "pain",
+   "sub": "A payment comes in, and it feels like profit. So you spend it like profit.",
+   "say": "A payment comes in, and it feels like profit. So you spend it like profit.",
+   "start": 30.196,
+   "end": 34.311,
+   "words": [
+    {
+     "w": "A",
+     "s": 30.196
+    },
+    {
+     "w": "payment",
+     "s": 30.38
+    },
+    {
+     "w": "comes",
+     "s": 30.783
+    },
+    {
+     "w": "in,",
+     "s": 31.172
+    },
+    {
+     "w": "and",
+     "s": 31.363
+    },
+    {
+     "w": "it",
+     "s": 31.561
+    },
+    {
+     "w": "feels",
+     "s": 31.752
+    },
+    {
+     "w": "like",
+     "s": 31.963
+    },
+    {
+     "w": "profit.",
+     "s": 32.345
+    },
+    {
+     "w": "So",
+     "s": 32.741
+    },
+    {
+     "w": "you",
+     "s": 32.932
+    },
+    {
+     "w": "spend",
+     "s": 33.13
+    },
+    {
+     "w": "it",
+     "s": 33.341
+    },
+    {
+     "w": "like",
+     "s": 33.533
+    },
+    {
+     "w": "profit.",
+     "s": 33.915
+    }
+   ]
+  },
+  {
+   "scene": "pain",
+   "sub": "Then the quarterly deadline shows up.",
+   "say": "Then the quarterly deadline shows up.",
+   "start": 34.591,
+   "end": 36.395,
+   "words": [
+    {
+     "w": "Then",
+     "s": 34.591
+    },
+    {
+     "w": "the",
+     "s": 34.777
+    },
+    {
+     "w": "quarterly",
+     "s": 34.956
+    },
+    {
+     "w": "deadline",
+     "s": 35.496
+    },
+    {
+     "w": "shows",
+     "s": 36.029
+    },
+    {
+     "w": "up.",
+     "s": 36.221
+    }
+   ]
+  },
+  {
+   "scene": "pain",
+   "sub": "No employer is withholding your taxes. That bill is all yours.",
+   "say": "No employer is withholding your taxes. That bill is all yours.",
+   "start": 36.675,
+   "end": 40.491,
+   "words": [
+    {
+     "w": "No",
+     "s": 36.675
+    },
+    {
+     "w": "employer",
+     "s": 36.918
+    },
+    {
+     "w": "is",
+     "s": 37.438
+    },
+    {
+     "w": "withholding",
+     "s": 37.681
+    },
+    {
+     "w": "your",
+     "s": 38.453
+    },
+    {
+     "w": "taxes.",
+     "s": 38.713
+    },
+    {
+     "w": "That",
+     "s": 39.208
+    },
+    {
+     "w": "bill",
+     "s": 39.468
+    },
+    {
+     "w": "is",
+     "s": 39.728
+    },
+    {
+     "w": "all",
+     "s": 39.971
+    },
+    {
+     "w": "yours.",
+     "s": 40.223
+    }
+   ]
+  },
+  {
+   "scene": "pain",
+   "sub": "Your biggest client might not be your best client.",
+   "say": "Your biggest client might not be your best client.",
+   "start": 40.771,
+   "end": 43.27,
+   "words": [
+    {
+     "w": "Your",
+     "s": 40.771
+    },
+    {
+     "w": "biggest",
+     "s": 41.02
+    },
+    {
+     "w": "client",
+     "s": 41.51
+    },
+    {
+     "w": "might",
+     "s": 41.776
+    },
+    {
+     "w": "not",
+     "s": 42.033
+    },
+    {
+     "w": "be",
+     "s": 42.274
+    },
+    {
+     "w": "your",
+     "s": 42.507
+    },
+    {
+     "w": "best",
+     "s": 42.756
+    },
+    {
+     "w": "client.",
+     "s": 43.005
+    }
+   ]
+  },
+  {
+   "scene": "pain",
+   "sub": "Invoices slip past their due date, and quietly turn into a cash-flow problem.",
+   "say": "Invoices slip past their due date, and quietly turn into a cash-flow problem.",
+   "start": 43.55,
+   "end": 47.938,
+   "words": [
+    {
+     "w": "Invoices",
+     "s": 43.55
+    },
+    {
+     "w": "slip",
+     "s": 44.199
+    },
+    {
+     "w": "past",
+     "s": 44.425
+    },
+    {
+     "w": "their",
+     "s": 44.651
+    },
+    {
+     "w": "due",
+     "s": 44.884
+    },
+    {
+     "w": "date,",
+     "s": 45.103
+    },
+    {
+     "w": "and",
+     "s": 45.525
+    },
+    {
+     "w": "quietly",
+     "s": 45.744
+    },
+    {
+     "w": "turn",
+     "s": 46.189
+    },
+    {
+     "w": "into",
+     "s": 46.415
+    },
+    {
+     "w": "a",
+     "s": 46.837
+    },
+    {
+     "w": "cash-flow",
+     "s": 47.041
+    },
+    {
+     "w": "problem.",
+     "s": 47.493
+    }
+   ]
+  },
+  {
+   "scene": "pain",
+   "sub": "Then your tax preparer asks for \u201ceverything\u201d\u2026 and nothing is organized.",
+   "say": "Then your tax preparer asks for everything. And nothing is organized.",
+   "start": 48.218,
+   "end": 52.052,
+   "words": [
+    {
+     "w": "Then",
+     "s": 48.218
+    },
+    {
+     "w": "your",
+     "s": 48.417
+    },
+    {
+     "w": "tax",
+     "s": 48.616
+    },
+    {
+     "w": "preparer",
+     "s": 48.809
+    },
+    {
+     "w": "asks",
+     "s": 49.381
+    },
+    {
+     "w": "for",
+     "s": 49.58
+    },
+    {
+     "w": "\u201ceverything\u201d\u2026",
+     "s": 49.772
+    },
+    {
+     "w": "and",
+     "s": 50.53
+    },
+    {
+     "w": "nothing",
+     "s": 50.723
+    },
+    {
+     "w": "is",
+     "s": 51.115
+    },
+    {
+     "w": "organized.",
+     "s": 51.301
+    }
+   ]
+  },
+  {
+   "scene": "pain",
+   "sub": "Busy every single week, and still not sure what you actually earned this year.",
+   "say": "Busy every single week, and still not sure what you actually earned this year.",
+   "start": 52.332,
+   "end": 56.232,
+   "words": [
+    {
+     "w": "Busy",
+     "s": 52.332
+    },
+    {
+     "w": "every",
+     "s": 52.676
+    },
+    {
+     "w": "single",
+     "s": 53.186
+    },
+    {
+     "w": "week,",
+     "s": 53.543
+    },
+    {
+     "w": "and",
+     "s": 53.727
+    },
+    {
+     "w": "still",
+     "s": 53.905
+    },
+    {
+     "w": "not",
+     "s": 54.095
+    },
+    {
+     "w": "sure",
+     "s": 54.273
+    },
+    {
+     "w": "what",
+     "s": 54.617
+    },
+    {
+     "w": "you",
+     "s": 54.801
+    },
+    {
+     "w": "actually",
+     "s": 54.979
+    },
+    {
+     "w": "earned",
+     "s": 55.508
+    },
+    {
+     "w": "this",
+     "s": 55.864
+    },
+    {
+     "w": "year.",
+     "s": 56.048
+    }
+   ]
+  },
+  {
+   "scene": "turn",
+   "sub": "That's not a discipline problem. It's a visibility problem.",
+   "say": "That's not a discipline problem. It's a visibility problem.",
+   "start": 56.932,
+   "end": 60.088,
+   "words": [
+    {
+     "w": "That's",
+     "s": 56.932
+    },
+    {
+     "w": "not",
+     "s": 57.122
+    },
+    {
+     "w": "a",
+     "s": 57.299
+    },
+    {
+     "w": "discipline",
+     "s": 57.465
+    },
+    {
+     "w": "problem.",
+     "s": 58.164
+    },
+    {
+     "w": "It's",
+     "s": 58.525
+    },
+    {
+     "w": "a",
+     "s": 58.703
+    },
+    {
+     "w": "visibility",
+     "s": 58.869
+    },
+    {
+     "w": "problem.",
+     "s": 59.727
+    }
+   ]
+  },
+  {
+   "scene": "turn",
+   "sub": "You already have the data. You just don't have one place that turns it into decisions.",
+   "say": "You already have the data. You just don't have one place that turns it into decisions.",
+   "start": 60.368,
+   "end": 64.746,
+   "words": [
+    {
+     "w": "You",
+     "s": 60.368
+    },
+    {
+     "w": "already",
+     "s": 60.539
+    },
+    {
+     "w": "have",
+     "s": 61.039
+    },
+    {
+     "w": "the",
+     "s": 61.369
+    },
+    {
+     "w": "data.",
+     "s": 61.539
+    },
+    {
+     "w": "You",
+     "s": 61.869
+    },
+    {
+     "w": "just",
+     "s": 62.039
+    },
+    {
+     "w": "don't",
+     "s": 62.216
+    },
+    {
+     "w": "have",
+     "s": 62.392
+    },
+    {
+     "w": "one",
+     "s": 62.722
+    },
+    {
+     "w": "place",
+     "s": 63.046
+    },
+    {
+     "w": "that",
+     "s": 63.381
+    },
+    {
+     "w": "turns",
+     "s": 63.557
+    },
+    {
+     "w": "it",
+     "s": 63.739
+    },
+    {
+     "w": "into",
+     "s": 63.904
+    },
+    {
+     "w": "decisions.",
+     "s": 64.234
+    }
+   ]
+  },
+  {
+   "scene": "reveal",
+   "sub": "That's why we built the 1099 Contractor Business Intelligence System\u2122.",
+   "say": "That's why we built the ten ninety-nine Contractor Business Intelligence System.",
+   "start": 65.446,
+   "end": 69.626,
+   "words": [
+    {
+     "w": "That's",
+     "s": 65.446
+    },
+    {
+     "w": "why",
+     "s": 65.666
+    },
+    {
+     "w": "we",
+     "s": 65.872
+    },
+    {
+     "w": "built",
+     "s": 66.072
+    },
+    {
+     "w": "the",
+     "s": 66.292
+    },
+    {
+     "w": "1099",
+     "s": 66.499
+    },
+    {
+     "w": "Contractor",
+     "s": 66.963
+    },
+    {
+     "w": "Business",
+     "s": 67.589
+    },
+    {
+     "w": "Intelligence",
+     "s": 68.201
+    },
+    {
+     "w": "System\u2122.",
+     "s": 69.213
+    }
+   ]
+  },
+  {
+   "scene": "reveal",
+   "sub": "A ready-built Excel system made only for contractors and freelancers paid on 1099s.",
+   "say": "A ready-built Excel system, made only for contractors and freelancers paid on ten ninety-nines.",
+   "start": 69.906,
+   "end": 75.746,
+   "words": [
+    {
+     "w": "A",
+     "s": 69.906
+    },
+    {
+     "w": "ready-built",
+     "s": 70.131
+    },
+    {
+     "w": "Excel",
+     "s": 70.864
+    },
+    {
+     "w": "system",
+     "s": 71.339
+    },
+    {
+     "w": "made",
+     "s": 71.822
+    },
+    {
+     "w": "only",
+     "s": 72.288
+    },
+    {
+     "w": "for",
+     "s": 72.755
+    },
+    {
+     "w": "contractors",
+     "s": 72.997
+    },
+    {
+     "w": "and",
+     "s": 73.738
+    },
+    {
+     "w": "freelancers",
+     "s": 73.979
+    },
+    {
+     "w": "paid",
+     "s": 74.72
+    },
+    {
+     "w": "on",
+     "s": 74.97
+    },
+    {
+     "w": "1099s.",
+     "s": 75.203
+    }
+   ]
+  },
+  {
+   "scene": "reveal",
+   "sub": "Formulas, dashboards and reports already built in.",
+   "say": "Formulas, dashboards and reports already built in.",
+   "start": 76.026,
+   "end": 79.006,
+   "words": [
+    {
+     "w": "Formulas,",
+     "s": 76.026
+    },
+    {
+     "w": "dashboards",
+     "s": 76.701
+    },
+    {
+     "w": "and",
+     "s": 77.186
+    },
+    {
+     "w": "reports",
+     "s": 77.414
+    },
+    {
+     "w": "already",
+     "s": 77.876
+    },
+    {
+     "w": "built",
+     "s": 78.543
+    },
+    {
+     "w": "in.",
+     "s": 78.786
+    }
+   ]
+  },
+  {
+   "scene": "reveal",
+   "sub": "Sample data included, so every dashboard works the moment you open it.",
+   "say": "Sample data included, so every dashboard works the moment you open it.",
+   "start": 79.286,
+   "end": 83.249,
+   "words": [
+    {
+     "w": "Sample",
+     "s": 79.286
+    },
+    {
+     "w": "data",
+     "s": 79.667
+    },
+    {
+     "w": "included,",
+     "s": 80.035
+    },
+    {
+     "w": "so",
+     "s": 80.6
+    },
+    {
+     "w": "every",
+     "s": 80.785
+    },
+    {
+     "w": "dashboard",
+     "s": 81.33
+    },
+    {
+     "w": "works",
+     "s": 81.731
+    },
+    {
+     "w": "the",
+     "s": 81.934
+    },
+    {
+     "w": "moment",
+     "s": 82.125
+    },
+    {
+     "w": "you",
+     "s": 82.506
+    },
+    {
+     "w": "open",
+     "s": 82.697
+    },
+    {
+     "w": "it.",
+     "s": 83.065
+    }
+   ]
+  },
+  {
+   "scene": "who",
+   "sub": "It's for the first-year freelancer figuring out quarterly taxes.",
+   "say": "It's for the first-year freelancer figuring out quarterly taxes.",
+   "start": 83.949,
+   "end": 87.406,
+   "words": [
+    {
+     "w": "It's",
+     "s": 83.949
+    },
+    {
+     "w": "for",
+     "s": 84.152
+    },
+    {
+     "w": "the",
+     "s": 84.354
+    },
+    {
+     "w": "first-year",
+     "s": 84.557
+    },
+    {
+     "w": "freelancer",
+     "s": 84.982
+    },
+    {
+     "w": "figuring",
+     "s": 85.597
+    },
+    {
+     "w": "out",
+     "s": 86.198
+    },
+    {
+     "w": "quarterly",
+     "s": 86.4
+    },
+    {
+     "w": "taxes.",
+     "s": 87.008
+    }
+   ]
+  },
+  {
+   "scene": "who",
+   "sub": "The solo consultant with steady clients, but no idea which ones are worth the time.",
+   "say": "The solo consultant with steady clients, but no idea which ones are worth the time.",
+   "start": 87.686,
+   "end": 92.556,
+   "words": [
+    {
+     "w": "The",
+     "s": 87.686
+    },
+    {
+     "w": "solo",
+     "s": 87.899
+    },
+    {
+     "w": "consultant",
+     "s": 88.309
+    },
+    {
+     "w": "with",
+     "s": 88.953
+    },
+    {
+     "w": "steady",
+     "s": 89.173
+    },
+    {
+     "w": "clients,",
+     "s": 89.597
+    },
+    {
+     "w": "but",
+     "s": 89.838
+    },
+    {
+     "w": "no",
+     "s": 90.051
+    },
+    {
+     "w": "idea",
+     "s": 90.256
+    },
+    {
+     "w": "which",
+     "s": 90.666
+    },
+    {
+     "w": "ones",
+     "s": 90.893
+    },
+    {
+     "w": "are",
+     "s": 91.303
+    },
+    {
+     "w": "worth",
+     "s": 91.706
+    },
+    {
+     "w": "the",
+     "s": 91.933
+    },
+    {
+     "w": "time.",
+     "s": 92.145
+    }
+   ]
+  },
+  {
+   "scene": "who",
+   "sub": "The contractor who drives to clients and needs every mile logged.",
+   "say": "The contractor who drives to clients and needs every mile logged.",
+   "start": 92.836,
+   "end": 96.559,
+   "words": [
+    {
+     "w": "The",
+     "s": 92.836
+    },
+    {
+     "w": "contractor",
+     "s": 93.043
+    },
+    {
+     "w": "who",
+     "s": 93.67
+    },
+    {
+     "w": "drives",
+     "s": 93.877
+    },
+    {
+     "w": "to",
+     "s": 94.291
+    },
+    {
+     "w": "clients",
+     "s": 94.491
+    },
+    {
+     "w": "and",
+     "s": 94.725
+    },
+    {
+     "w": "needs",
+     "s": 94.932
+    },
+    {
+     "w": "every",
+     "s": 95.153
+    },
+    {
+     "w": "mile",
+     "s": 95.746
+    },
+    {
+     "w": "logged.",
+     "s": 96.145
+    }
+   ]
+  },
+  {
+   "scene": "who",
+   "sub": "And the side-hustler who wants it organized from day one.",
+   "say": "And the side-hustler who wants it organized from day one.",
+   "start": 96.839,
+   "end": 99.702,
+   "words": [
+    {
+     "w": "And",
+     "s": 96.839
+    },
+    {
+     "w": "the",
+     "s": 97.009
+    },
+    {
+     "w": "side-hustler",
+     "s": 97.179
+    },
+    {
+     "w": "who",
+     "s": 97.854
+    },
+    {
+     "w": "wants",
+     "s": 98.024
+    },
+    {
+     "w": "it",
+     "s": 98.206
+    },
+    {
+     "w": "organized",
+     "s": 98.37
+    },
+    {
+     "w": "from",
+     "s": 99.033
+    },
+    {
+     "w": "day",
+     "s": 99.209
+    },
+    {
+     "w": "one.",
+     "s": 99.379
+    }
+   ]
+  },
+  {
+   "scene": "ess",
+   "sub": "Let me show you what's inside. Start with Essential: eleven sheets.",
+   "say": "Let me show you what's inside. Start with Essential: eleven sheets.",
+   "start": 100.402,
+   "end": 104.154,
+   "words": [
+    {
+     "w": "Let",
+     "s": 100.402
+    },
+    {
+     "w": "me",
+     "s": 100.622
+    },
+    {
+     "w": "show",
+     "s": 100.834
+    },
+    {
+     "w": "you",
+     "s": 101.062
+    },
+    {
+     "w": "what's",
+     "s": 101.281
+    },
+    {
+     "w": "inside.",
+     "s": 101.516
+    },
+    {
+     "w": "Start",
+     "s": 102.153
+    },
+    {
+     "w": "with",
+     "s": 102.388
+    },
+    {
+     "w": "Essential:",
+     "s": 102.615
+    },
+    {
+     "w": "eleven",
+     "s": 103.274
+    },
+    {
+     "w": "sheets.",
+     "s": 103.912
+    }
+   ]
+  },
+  {
+   "scene": "ess",
+   "sub": "Set up your clients once.",
+   "say": "Set up your clients once.",
+   "start": 104.434,
+   "end": 105.8,
+   "words": [
+    {
+     "w": "Set",
+     "s": 104.434
+    },
+    {
+     "w": "up",
+     "s": 104.659
+    },
+    {
+     "w": "your",
+     "s": 104.877
+    },
+    {
+     "w": "clients",
+     "s": 105.109
+    },
+    {
+     "w": "once.",
+     "s": 105.365
+    }
+   ]
+  },
+  {
+   "scene": "ess",
+   "sub": "Log every payment. Log every expense.",
+   "say": "Log every payment. Log every expense.",
+   "start": 106.08,
+   "end": 108.617,
+   "words": [
+    {
+     "w": "Log",
+     "s": 106.08
+    },
+    {
+     "w": "every",
+     "s": 106.28
+    },
+    {
+     "w": "payment.",
+     "s": 106.853
+    },
+    {
+     "w": "Log",
+     "s": 107.259
+    },
+    {
+     "w": "every",
+     "s": 107.459
+    },
+    {
+     "w": "expense.",
+     "s": 108.031
+    }
+   ]
+  },
+  {
+   "scene": "ess",
+   "sub": "Log every business trip. The IRS mileage rate is built in, so each trip shows its deduction value.",
+   "say": "Log every business trip. The IRS mileage rate is built in, so each trip shows its deduction value.",
+   "start": 108.897,
+   "end": 115.419,
+   "words": [
+    {
+     "w": "Log",
+     "s": 108.897
+    },
+    {
+     "w": "every",
+     "s": 109.131
+    },
+    {
+     "w": "business",
+     "s": 109.804
+    },
+    {
+     "w": "trip.",
+     "s": 110.5
+    },
+    {
+     "w": "The",
+     "s": 110.742
+    },
+    {
+     "w": "IRS",
+     "s": 110.977
+    },
+    {
+     "w": "mileage",
+     "s": 111.211
+    },
+    {
+     "w": "rate",
+     "s": 111.9
+    },
+    {
+     "w": "is",
+     "s": 112.353
+    },
+    {
+     "w": "built",
+     "s": 112.58
+    },
+    {
+     "w": "in,",
+     "s": 112.83
+    },
+    {
+     "w": "so",
+     "s": 113.057
+    },
+    {
+     "w": "each",
+     "s": 113.284
+    },
+    {
+     "w": "trip",
+     "s": 113.526
+    },
+    {
+     "w": "shows",
+     "s": 113.769
+    },
+    {
+     "w": "its",
+     "s": 114.019
+    },
+    {
+     "w": "deduction",
+     "s": 114.254
+    },
+    {
+     "w": "value.",
+     "s": 114.958
+    }
+   ]
+  },
+  {
+   "scene": "ess",
+   "sub": "Client Performance shows who brings in the most revenue.",
+   "say": "Client Performance shows who brings in the most revenue.",
+   "start": 115.699,
+   "end": 118.519,
+   "words": [
+    {
+     "w": "Client",
+     "s": 115.699
+    },
+    {
+     "w": "Performance",
+     "s": 115.918
+    },
+    {
+     "w": "shows",
+     "s": 116.708
+    },
+    {
+     "w": "who",
+     "s": 116.92
+    },
+    {
+     "w": "brings",
+     "s": 117.119
+    },
+    {
+     "w": "in",
+     "s": 117.338
+    },
+    {
+     "w": "the",
+     "s": 117.531
+    },
+    {
+     "w": "most",
+     "s": 117.73
+    },
+    {
+     "w": "revenue.",
+     "s": 117.935
+    }
+   ]
+  },
+  {
+   "scene": "ess",
+   "sub": "Tax & Deductions estimates what to set aside, so the quarterly bill isn't a surprise.",
+   "say": "Tax and Deductions estimates what to set aside, so the quarterly bill isn't a surprise.",
+   "start": 118.799,
+   "end": 123.722,
+   "words": [
+    {
+     "w": "Tax",
+     "s": 118.799
+    },
+    {
+     "w": "&",
+     "s": 118.996
+    },
+    {
+     "w": "Deductions",
+     "s": 119.049
+    },
+    {
+     "w": "estimates",
+     "s": 119.646
+    },
+    {
+     "w": "what",
+     "s": 120.414
+    },
+    {
+     "w": "to",
+     "s": 120.618
+    },
+    {
+     "w": "set",
+     "s": 120.808
+    },
+    {
+     "w": "aside,",
+     "s": 121.005
+    },
+    {
+     "w": "so",
+     "s": 121.569
+    },
+    {
+     "w": "the",
+     "s": 121.759
+    },
+    {
+     "w": "quarterly",
+     "s": 121.956
+    },
+    {
+     "w": "bill",
+     "s": 122.547
+    },
+    {
+     "w": "isn't",
+     "s": 122.75
+    },
+    {
+     "w": "a",
+     "s": 122.954
+    },
+    {
+     "w": "surprise.",
+     "s": 123.138
+    }
+   ]
+  },
+  {
+   "scene": "ess",
+   "sub": "And the Dashboard puts it on one screen: revenue, expenses, net profit, margin, tax liability, miles.",
+   "say": "And the Dashboard puts it on one screen: revenue, expenses, net profit, margin, tax liability, miles.",
+   "start": 124.002,
+   "end": 130.556,
+   "words": [
+    {
+     "w": "And",
+     "s": 124.002
+    },
+    {
+     "w": "the",
+     "s": 124.237
+    },
+    {
+     "w": "Dashboard",
+     "s": 124.473
+    },
+    {
+     "w": "puts",
+     "s": 124.967
+    },
+    {
+     "w": "it",
+     "s": 125.211
+    },
+    {
+     "w": "on",
+     "s": 125.438
+    },
+    {
+     "w": "one",
+     "s": 125.666
+    },
+    {
+     "w": "screen:",
+     "s": 126.113
+    },
+    {
+     "w": "revenue,",
+     "s": 126.372
+    },
+    {
+     "w": "expenses,",
+     "s": 127.063
+    },
+    {
+     "w": "net",
+     "s": 127.761
+    },
+    {
+     "w": "profit,",
+     "s": 127.997
+    },
+    {
+     "w": "margin,",
+     "s": 128.468
+    },
+    {
+     "w": "tax",
+     "s": 128.939
+    },
+    {
+     "w": "liability,",
+     "s": 129.174
+    },
+    {
+     "w": "miles.",
+     "s": 130.092
+    }
+   ]
+  },
+  {
+   "scene": "ess",
+   "sub": "At tax time, the Accountant Export gives your preparer a clean summary.",
+   "say": "At tax time, the Accountant Export gives your preparer a clean summary.",
+   "start": 130.836,
+   "end": 134.844,
+   "words": [
+    {
+     "w": "At",
+     "s": 130.836
+    },
+    {
+     "w": "tax",
+     "s": 131.021
+    },
+    {
+     "w": "time,",
+     "s": 131.214
+    },
+    {
+     "w": "the",
+     "s": 131.586
+    },
+    {
+     "w": "Accountant",
+     "s": 131.778
+    },
+    {
+     "w": "Export",
+     "s": 132.362
+    },
+    {
+     "w": "gives",
+     "s": 132.747
+    },
+    {
+     "w": "your",
+     "s": 133.125
+    },
+    {
+     "w": "preparer",
+     "s": 133.324
+    },
+    {
+     "w": "a",
+     "s": 133.895
+    },
+    {
+     "w": "clean",
+     "s": 134.074
+    },
+    {
+     "w": "summary.",
+     "s": 134.28
+    }
+   ]
+  },
+  {
+   "scene": "ess",
+   "sub": "Plus a Business Health Snapshot that scores where you stand.",
+   "say": "Plus a Business Health Snapshot that scores where you stand.",
+   "start": 135.124,
+   "end": 137.971,
+   "words": [
+    {
+     "w": "Plus",
+     "s": 135.124
+    },
+    {
+     "w": "a",
+     "s": 135.318
+    },
+    {
+     "w": "Business",
+     "s": 135.493
+    },
+    {
+     "w": "Health",
+     "s": 136.05
+    },
+    {
+     "w": "Snapshot",
+     "s": 136.256
+    },
+    {
+     "w": "that",
+     "s": 136.644
+    },
+    {
+     "w": "scores",
+     "s": 136.838
+    },
+    {
+     "w": "where",
+     "s": 137.214
+    },
+    {
+     "w": "you",
+     "s": 137.583
+    },
+    {
+     "w": "stand.",
+     "s": 137.77
+    }
+   ]
+  },
+  {
+   "scene": "elite",
+   "sub": "Now, Elite. Twenty-six sheets. This is the full command center.",
+   "say": "Now, Elite. Twenty-six sheets. This is the full command center.",
+   "start": 138.671,
+   "end": 142.234,
+   "words": [
+    {
+     "w": "Now,",
+     "s": 138.671
+    },
+    {
+     "w": "Elite.",
+     "s": 138.893
+    },
+    {
+     "w": "Twenty-six",
+     "s": 139.53
+    },
+    {
+     "w": "sheets.",
+     "s": 140.197
+    },
+    {
+     "w": "This",
+     "s": 140.441
+    },
+    {
+     "w": "is",
+     "s": 140.671
+    },
+    {
+     "w": "the",
+     "s": 140.886
+    },
+    {
+     "w": "full",
+     "s": 141.108
+    },
+    {
+     "w": "command",
+     "s": 141.338
+    },
+    {
+     "w": "center.",
+     "s": 141.79
+    }
+   ]
+  },
+  {
+   "scene": "elite",
+   "sub": "The Executive Dashboard: revenue, profit, cash, receivables, taxes owed, and your mileage deduction.",
+   "say": "The Executive Dashboard: revenue, profit, cash, receivables, taxes owed, and your mileage deduction.",
+   "start": 142.514,
+   "end": 148.759,
+   "words": [
+    {
+     "w": "The",
+     "s": 142.514
+    },
+    {
+     "w": "Executive",
+     "s": 142.725
+    },
+    {
+     "w": "Dashboard:",
+     "s": 143.734
+    },
+    {
+     "w": "revenue,",
+     "s": 144.175
+    },
+    {
+     "w": "profit,",
+     "s": 144.792
+    },
+    {
+     "w": "cash,",
+     "s": 145.213
+    },
+    {
+     "w": "receivables,",
+     "s": 145.43
+    },
+    {
+     "w": "taxes",
+     "s": 146.264
+    },
+    {
+     "w": "owed,",
+     "s": 146.678
+    },
+    {
+     "w": "and",
+     "s": 147.084
+    },
+    {
+     "w": "your",
+     "s": 147.294
+    },
+    {
+     "w": "mileage",
+     "s": 147.512
+    },
+    {
+     "w": "deduction.",
+     "s": 148.128
+    }
+   ]
+  },
+  {
+   "scene": "elite",
+   "sub": "The Invoice Tracker and Accounts Receivable show who owes you, and for how long.",
+   "say": "The Invoice Tracker and Accounts Receivable show who owes you, and for how long.",
+   "start": 149.039,
+   "end": 153.335,
+   "words": [
+    {
+     "w": "The",
+     "s": 149.039
+    },
+    {
+     "w": "Invoice",
+     "s": 149.235
+    },
+    {
+     "w": "Tracker",
+     "s": 149.808
+    },
+    {
+     "w": "and",
+     "s": 150.206
+    },
+    {
+     "w": "Accounts",
+     "s": 150.402
+    },
+    {
+     "w": "Receivable",
+     "s": 150.806
+    },
+    {
+     "w": "show",
+     "s": 151.575
+    },
+    {
+     "w": "who",
+     "s": 151.777
+    },
+    {
+     "w": "owes",
+     "s": 151.972
+    },
+    {
+     "w": "you,",
+     "s": 152.35
+    },
+    {
+     "w": "and",
+     "s": 152.546
+    },
+    {
+     "w": "for",
+     "s": 152.741
+    },
+    {
+     "w": "how",
+     "s": 152.937
+    },
+    {
+     "w": "long.",
+     "s": 153.132
+    }
+   ]
+  },
+  {
+   "scene": "elite",
+   "sub": "The Cash Flow Center, because a profitable freelancer can still run short on cash.",
+   "say": "The Cash Flow Center, because a profitable freelancer can still run short on cash.",
+   "start": 153.615,
+   "end": 158.268,
+   "words": [
+    {
+     "w": "The",
+     "s": 153.615
+    },
+    {
+     "w": "Cash",
+     "s": 153.826
+    },
+    {
+     "w": "Flow",
+     "s": 154.044
+    },
+    {
+     "w": "Center,",
+     "s": 154.262
+    },
+    {
+     "w": "because",
+     "s": 154.685
+    },
+    {
+     "w": "a",
+     "s": 155.304
+    },
+    {
+     "w": "profitable",
+     "s": 155.501
+    },
+    {
+     "w": "freelancer",
+     "s": 156.332
+    },
+    {
+     "w": "can",
+     "s": 156.972
+    },
+    {
+     "w": "still",
+     "s": 157.184
+    },
+    {
+     "w": "run",
+     "s": 157.409
+    },
+    {
+     "w": "short",
+     "s": 157.62
+    },
+    {
+     "w": "on",
+     "s": 157.846
+    },
+    {
+     "w": "cash.",
+     "s": 158.05
+    }
+   ]
+  },
+  {
+   "scene": "elite",
+   "sub": "Client Profitability ranks every client by what they actually earn you, after costs.",
+   "say": "Client Profitability ranks every client by what they actually earn you, after costs.",
+   "start": 158.548,
+   "end": 163.583,
+   "words": [
+    {
+     "w": "Client",
+     "s": 158.548
+    },
+    {
+     "w": "Profitability",
+     "s": 158.789
+    },
+    {
+     "w": "ranks",
+     "s": 160.064
+    },
+    {
+     "w": "every",
+     "s": 160.297
+    },
+    {
+     "w": "client",
+     "s": 160.923
+    },
+    {
+     "w": "by",
+     "s": 161.164
+    },
+    {
+     "w": "what",
+     "s": 161.375
+    },
+    {
+     "w": "they",
+     "s": 161.601
+    },
+    {
+     "w": "actually",
+     "s": 161.827
+    },
+    {
+     "w": "earn",
+     "s": 162.476
+    },
+    {
+     "w": "you,",
+     "s": 162.702
+    },
+    {
+     "w": "after",
+     "s": 162.92
+    },
+    {
+     "w": "costs.",
+     "s": 163.35
+    }
+   ]
+  },
+  {
+   "scene": "tax",
+   "sub": "Then the part every contractor dreads. Taxes.",
+   "say": "Then the part every contractor dreads. Taxes.",
+   "start": 164.283,
+   "end": 166.996,
+   "words": [
+    {
+     "w": "Then",
+     "s": 164.283
+    },
+    {
+     "w": "the",
+     "s": 164.516
+    },
+    {
+     "w": "part",
+     "s": 164.742
+    },
+    {
+     "w": "every",
+     "s": 164.975
+    },
+    {
+     "w": "contractor",
+     "s": 165.621
+    },
+    {
+     "w": "dreads.",
+     "s": 166.304
+    },
+    {
+     "w": "Taxes.",
+     "s": 166.552
+    }
+   ]
+  },
+  {
+   "scene": "tax",
+   "sub": "The Estimated Tax Center works out federal, self-employment and state estimates, plus a recommended reserve.",
+   "say": "The Estimated Tax Center works out federal, self-employment and state estimates, plus a recommended reserve.",
+   "start": 167.276,
+   "end": 173.814,
+   "words": [
+    {
+     "w": "The",
+     "s": 167.276
+    },
+    {
+     "w": "Estimated",
+     "s": 167.476
+    },
+    {
+     "w": "Tax",
+     "s": 168.255
+    },
+    {
+     "w": "Center",
+     "s": 168.455
+    },
+    {
+     "w": "works",
+     "s": 168.855
+    },
+    {
+     "w": "out",
+     "s": 169.069
+    },
+    {
+     "w": "federal,",
+     "s": 169.269
+    },
+    {
+     "w": "self-employment",
+     "s": 169.855
+    },
+    {
+     "w": "and",
+     "s": 170.668
+    },
+    {
+     "w": "state",
+     "s": 170.868
+    },
+    {
+     "w": "estimates,",
+     "s": 171.262
+    },
+    {
+     "w": "plus",
+     "s": 172.041
+    },
+    {
+     "w": "a",
+     "s": 172.248
+    },
+    {
+     "w": "recommended",
+     "s": 172.435
+    },
+    {
+     "w": "reserve.",
+     "s": 173.228
+    }
+   ]
+  },
+  {
+   "scene": "tax",
+   "sub": "The Quarterly Tax Planner lays out all four due dates, and tracks what's paid.",
+   "say": "The Quarterly Tax Planner lays out all four due dates, and tracks what's paid.",
+   "start": 174.094,
+   "end": 178.144,
+   "words": [
+    {
+     "w": "The",
+     "s": 174.094
+    },
+    {
+     "w": "Quarterly",
+     "s": 174.316
+    },
+    {
+     "w": "Tax",
+     "s": 174.981
+    },
+    {
+     "w": "Planner",
+     "s": 175.202
+    },
+    {
+     "w": "lays",
+     "s": 175.653
+    },
+    {
+     "w": "out",
+     "s": 175.882
+    },
+    {
+     "w": "all",
+     "s": 176.104
+    },
+    {
+     "w": "four",
+     "s": 176.326
+    },
+    {
+     "w": "due",
+     "s": 176.555
+    },
+    {
+     "w": "dates,",
+     "s": 176.776
+    },
+    {
+     "w": "and",
+     "s": 177.212
+    },
+    {
+     "w": "tracks",
+     "s": 177.434
+    },
+    {
+     "w": "what's",
+     "s": 177.678
+    },
+    {
+     "w": "paid.",
+     "s": 177.915
+    }
+   ]
+  },
+  {
+   "scene": "tax",
+   "sub": "The Deduction Maximizer organizes every deductible category, mapped to Schedule C lines.",
+   "say": "The Deduction Maximizer organizes every deductible category, mapped to Schedule C lines.",
+   "start": 178.424,
+   "end": 184.226,
+   "words": [
+    {
+     "w": "The",
+     "s": 178.424
+    },
+    {
+     "w": "Deduction",
+     "s": 178.609
+    },
+    {
+     "w": "Maximizer",
+     "s": 179.165
+    },
+    {
+     "w": "organizes",
+     "s": 179.888
+    },
+    {
+     "w": "every",
+     "s": 180.611
+    },
+    {
+     "w": "deductible",
+     "s": 181.142
+    },
+    {
+     "w": "category,",
+     "s": 181.871
+    },
+    {
+     "w": "mapped",
+     "s": 182.588
+    },
+    {
+     "w": "to",
+     "s": 182.959
+    },
+    {
+     "w": "Schedule",
+     "s": 183.138
+    },
+    {
+     "w": "C",
+     "s": 183.688
+    },
+    {
+     "w": "lines.",
+     "s": 183.861
+    }
+   ]
+  },
+  {
+   "scene": "tax",
+   "sub": "And at year-end, a Year-End Tax Package is generated for your CPA or tax software.",
+   "say": "And at year end, a Year End Tax Package is generated for your CPA or tax software.",
+   "start": 184.506,
+   "end": 189.893,
+   "words": [
+    {
+     "w": "And",
+     "s": 184.506
+    },
+    {
+     "w": "at",
+     "s": 184.733
+    },
+    {
+     "w": "year-end,",
+     "s": 184.952
+    },
+    {
+     "w": "a",
+     "s": 185.414
+    },
+    {
+     "w": "Year-End",
+     "s": 185.625
+    },
+    {
+     "w": "Tax",
+     "s": 186.087
+    },
+    {
+     "w": "Package",
+     "s": 186.314
+    },
+    {
+     "w": "is",
+     "s": 186.98
+    },
+    {
+     "w": "generated",
+     "s": 187.199
+    },
+    {
+     "w": "for",
+     "s": 188.084
+    },
+    {
+     "w": "your",
+     "s": 188.311
+    },
+    {
+     "w": "CPA",
+     "s": 188.546
+    },
+    {
+     "w": "or",
+     "s": 188.773
+    },
+    {
+     "w": "tax",
+     "s": 188.992
+    },
+    {
+     "w": "software.",
+     "s": 189.219
+    }
+   ]
+  },
+  {
+   "scene": "leak",
+   "sub": "Then there's the Profit Leak Detector\u2122.",
+   "say": "Then there's the Profit Leak Detector.",
+   "start": 190.593,
+   "end": 192.6,
+   "words": [
+    {
+     "w": "Then",
+     "s": 190.593
+    },
+    {
+     "w": "there's",
+     "s": 190.8
+    },
+    {
+     "w": "the",
+     "s": 191.2
+    },
+    {
+     "w": "Profit",
+     "s": 191.4
+    },
+    {
+     "w": "Leak",
+     "s": 191.8
+    },
+    {
+     "w": "Detector\u2122.",
+     "s": 192.007
+    }
+   ]
+  },
+  {
+   "scene": "leak",
+   "sub": "Overdue invoices. Your weakest service line. Your least profitable client. Missed deductions.",
+   "say": "Overdue invoices. Your weakest service line. Your least profitable client. Missed deductions.",
+   "start": 192.88,
+   "end": 198.547,
+   "words": [
+    {
+     "w": "Overdue",
+     "s": 192.88
+    },
+    {
+     "w": "invoices.",
+     "s": 193.519
+    },
+    {
+     "w": "Your",
+     "s": 194.166
+    },
+    {
+     "w": "weakest",
+     "s": 194.391
+    },
+    {
+     "w": "service",
+     "s": 194.834
+    },
+    {
+     "w": "line.",
+     "s": 195.473
+    },
+    {
+     "w": "Your",
+     "s": 195.895
+    },
+    {
+     "w": "least",
+     "s": 196.12
+    },
+    {
+     "w": "profitable",
+     "s": 196.353
+    },
+    {
+     "w": "client.",
+     "s": 197.21
+    },
+    {
+     "w": "Missed",
+     "s": 197.45
+    },
+    {
+     "w": "deductions.",
+     "s": 197.886
+    }
+   ]
+  },
+  {
+   "scene": "leak",
+   "sub": "Flagged red, yellow or green, so you know exactly where to look first.",
+   "say": "Flagged red, yellow or green, so you know exactly where to look first.",
+   "start": 198.827,
+   "end": 202.67,
+   "words": [
+    {
+     "w": "Flagged",
+     "s": 198.827
+    },
+    {
+     "w": "red,",
+     "s": 199.26
+    },
+    {
+     "w": "yellow",
+     "s": 199.474
+    },
+    {
+     "w": "or",
+     "s": 199.9
+    },
+    {
+     "w": "green,",
+     "s": 200.106
+    },
+    {
+     "w": "so",
+     "s": 200.333
+    },
+    {
+     "w": "you",
+     "s": 200.539
+    },
+    {
+     "w": "know",
+     "s": 200.752
+    },
+    {
+     "w": "exactly",
+     "s": 200.972
+    },
+    {
+     "w": "where",
+     "s": 201.597
+    },
+    {
+     "w": "to",
+     "s": 202.017
+    },
+    {
+     "w": "look",
+     "s": 202.222
+    },
+    {
+     "w": "first.",
+     "s": 202.443
+    }
+   ]
+  },
+  {
+   "scene": "leak",
+   "sub": "Plus forecasting, a KPI scorecard, financial goals, and one Business Health Score\u2122.",
+   "say": "Plus forecasting, a KPI scorecard, financial goals, and one Business Health Score.",
+   "start": 202.95,
+   "end": 207.936,
+   "words": [
+    {
+     "w": "Plus",
+     "s": 202.95
+    },
+    {
+     "w": "forecasting,",
+     "s": 203.175
+    },
+    {
+     "w": "a",
+     "s": 204.037
+    },
+    {
+     "w": "KPI",
+     "s": 204.24
+    },
+    {
+     "w": "scorecard,",
+     "s": 204.458
+    },
+    {
+     "w": "financial",
+     "s": 205.11
+    },
+    {
+     "w": "goals,",
+     "s": 205.762
+    },
+    {
+     "w": "and",
+     "s": 205.994
+    },
+    {
+     "w": "one",
+     "s": 206.212
+    },
+    {
+     "w": "Business",
+     "s": 206.625
+    },
+    {
+     "w": "Health",
+     "s": 207.269
+    },
+    {
+     "w": "Score\u2122.",
+     "s": 207.509
+    }
+   ]
+  },
+  {
+   "scene": "obj",
+   "sub": "Now, honest answers to the questions people ask.",
+   "say": "Now, honest answers to the questions people ask.",
+   "start": 208.636,
+   "end": 211.441,
+   "words": [
+    {
+     "w": "Now,",
+     "s": 208.636
+    },
+    {
+     "w": "honest",
+     "s": 208.868
+    },
+    {
+     "w": "answers",
+     "s": 209.332
+    },
+    {
+     "w": "to",
+     "s": 209.803
+    },
+    {
+     "w": "the",
+     "s": 210.027
+    },
+    {
+     "w": "questions",
+     "s": 210.259
+    },
+    {
+     "w": "people",
+     "s": 210.746
+    },
+    {
+     "w": "ask.",
+     "s": 211.209
+    }
+   ]
+  },
+  {
+   "scene": "obj",
+   "sub": "\u201cI just use my bank app.\u201d A bank app shows money in and out.",
+   "say": "I just use my bank app. A bank app shows money in and out.",
+   "start": 211.721,
+   "end": 214.934,
+   "words": [
+    {
+     "w": "\u201cI",
+     "s": 211.721
+    },
+    {
+     "w": "just",
+     "s": 211.91
+    },
+    {
+     "w": "use",
+     "s": 212.12
+    },
+    {
+     "w": "my",
+     "s": 212.505
+    },
+    {
+     "w": "bank",
+     "s": 212.702
+    },
+    {
+     "w": "app.\u201d",
+     "s": 212.911
+    },
+    {
+     "w": "A",
+     "s": 213.114
+    },
+    {
+     "w": "bank",
+     "s": 213.303
+    },
+    {
+     "w": "app",
+     "s": 213.513
+    },
+    {
+     "w": "shows",
+     "s": 213.716
+    },
+    {
+     "w": "money",
+     "s": 213.933
+    },
+    {
+     "w": "in",
+     "s": 214.332
+    },
+    {
+     "w": "and",
+     "s": 214.528
+    },
+    {
+     "w": "out.",
+     "s": 214.731
+    }
+   ]
+  },
+  {
+   "scene": "obj",
+   "sub": "This adds client profitability, mileage, tax planning and a year-end package on top.",
+   "say": "This adds client profitability, mileage, tax planning and a year-end package on top.",
+   "start": 215.214,
+   "end": 220.282,
+   "words": [
+    {
+     "w": "This",
+     "s": 215.214
+    },
+    {
+     "w": "adds",
+     "s": 215.433
+    },
+    {
+     "w": "client",
+     "s": 215.653
+    },
+    {
+     "w": "profitability,",
+     "s": 215.887
+    },
+    {
+     "w": "mileage,",
+     "s": 217.125
+    },
+    {
+     "w": "tax",
+     "s": 217.748
+    },
+    {
+     "w": "planning",
+     "s": 217.96
+    },
+    {
+     "w": "and",
+     "s": 218.4
+    },
+    {
+     "w": "a",
+     "s": 218.612
+    },
+    {
+     "w": "year-end",
+     "s": 218.81
+    },
+    {
+     "w": "package",
+     "s": 219.242
+    },
+    {
+     "w": "on",
+     "s": 219.865
+    },
+    {
+     "w": "top.",
+     "s": 220.07
+    }
+   ]
+  },
+  {
+   "scene": "obj",
+   "sub": "\u201cI'm not a spreadsheet person.\u201d You don't have to be.",
+   "say": "I'm not a spreadsheet person. You don't have to be.",
+   "start": 220.562,
+   "end": 223.176,
+   "words": [
+    {
+     "w": "\u201cI'm",
+     "s": 220.562
+    },
+    {
+     "w": "not",
+     "s": 220.757
+    },
+    {
+     "w": "a",
+     "s": 220.959
+    },
+    {
+     "w": "spreadsheet",
+     "s": 221.147
+    },
+    {
+     "w": "person.\u201d",
+     "s": 221.584
+    },
+    {
+     "w": "You",
+     "s": 221.987
+    },
+    {
+     "w": "don't",
+     "s": 222.189
+    },
+    {
+     "w": "have",
+     "s": 222.397
+    },
+    {
+     "w": "to",
+     "s": 222.787
+    },
+    {
+     "w": "be.",
+     "s": 222.982
+    }
+   ]
+  },
+  {
+   "scene": "obj",
+   "sub": "Everything's built. You log income, expenses and miles. A Field Guide and Quick Start walk you through it.",
+   "say": "Everything's built. You log income, expenses and miles. A Field Guide and Quick Start walk you through it.",
+   "start": 223.456,
+   "end": 229.768,
+   "words": [
+    {
+     "w": "Everything's",
+     "s": 223.456
+    },
+    {
+     "w": "built.",
+     "s": 224.38
+    },
+    {
+     "w": "You",
+     "s": 224.629
+    },
+    {
+     "w": "log",
+     "s": 224.862
+    },
+    {
+     "w": "income,",
+     "s": 225.094
+    },
+    {
+     "w": "expenses",
+     "s": 225.769
+    },
+    {
+     "w": "and",
+     "s": 226.46
+    },
+    {
+     "w": "miles.",
+     "s": 226.693
+    },
+    {
+     "w": "A",
+     "s": 227.151
+    },
+    {
+     "w": "Field",
+     "s": 227.368
+    },
+    {
+     "w": "Guide",
+     "s": 227.617
+    },
+    {
+     "w": "and",
+     "s": 228.075
+    },
+    {
+     "w": "Quick",
+     "s": 228.308
+    },
+    {
+     "w": "Start",
+     "s": 228.556
+    },
+    {
+     "w": "walk",
+     "s": 228.805
+    },
+    {
+     "w": "you",
+     "s": 229.046
+    },
+    {
+     "w": "through",
+     "s": 229.278
+    },
+    {
+     "w": "it.",
+     "s": 229.543
+    }
+   ]
+  },
+  {
+   "scene": "obj",
+   "sub": "\u201cWill it lower my taxes?\u201d No tool can promise that.",
+   "say": "Will it lower my taxes? No tool can promise that.",
+   "start": 230.048,
+   "end": 233.003,
+   "words": [
+    {
+     "w": "\u201cWill",
+     "s": 230.048
+    },
+    {
+     "w": "it",
+     "s": 230.268
+    },
+    {
+     "w": "lower",
+     "s": 230.474
+    },
+    {
+     "w": "my",
+     "s": 230.893
+    },
+    {
+     "w": "taxes?\u201d",
+     "s": 231.099
+    },
+    {
+     "w": "No",
+     "s": 231.518
+    },
+    {
+     "w": "tool",
+     "s": 231.724
+    },
+    {
+     "w": "can",
+     "s": 231.945
+    },
+    {
+     "w": "promise",
+     "s": 232.158
+    },
+    {
+     "w": "that.",
+     "s": 232.783
+    }
+   ]
+  },
+  {
+   "scene": "obj",
+   "sub": "It keeps your deductions tracked and your estimates planned. Your tax preparer decides what applies.",
+   "say": "It keeps your deductions tracked and your estimates planned. Your tax preparer decides what applies.",
+   "start": 233.283,
+   "end": 238.661,
+   "words": [
+    {
+     "w": "It",
+     "s": 233.283
+    },
+    {
+     "w": "keeps",
+     "s": 233.475
+    },
+    {
+     "w": "your",
+     "s": 233.687
+    },
+    {
+     "w": "deductions",
+     "s": 233.892
+    },
+    {
+     "w": "tracked",
+     "s": 234.494
+    },
+    {
+     "w": "and",
+     "s": 234.897
+    },
+    {
+     "w": "your",
+     "s": 235.096
+    },
+    {
+     "w": "estimates",
+     "s": 235.301
+    },
+    {
+     "w": "planned.",
+     "s": 236.075
+    },
+    {
+     "w": "Your",
+     "s": 236.478
+    },
+    {
+     "w": "tax",
+     "s": 236.683
+    },
+    {
+     "w": "preparer",
+     "s": 236.882
+    },
+    {
+     "w": "decides",
+     "s": 237.47
+    },
+    {
+     "w": "what",
+     "s": 238.052
+    },
+    {
+     "w": "applies.",
+     "s": 238.257
+    }
+   ]
+  },
+  {
+   "scene": "obj",
+   "sub": "\u201cIs it a subscription?\u201d No. One payment. No macros, no outside connections. Your numbers stay in your file.",
+   "say": "Is it a subscription? No. One payment. No macros, no outside connections. Your numbers stay in your file.",
+   "start": 238.941,
+   "end": 245.518,
+   "words": [
+    {
+     "w": "\u201cIs",
+     "s": 238.941
+    },
+    {
+     "w": "it",
+     "s": 239.161
+    },
+    {
+     "w": "a",
+     "s": 239.382
+    },
+    {
+     "w": "subscription?\u201d",
+     "s": 239.594
+    },
+    {
+     "w": "No.",
+     "s": 240.302
+    },
+    {
+     "w": "One",
+     "s": 240.522
+    },
+    {
+     "w": "payment.",
+     "s": 240.956
+    },
+    {
+     "w": "No",
+     "s": 241.42
+    },
+    {
+     "w": "macros,",
+     "s": 241.64
+    },
+    {
+     "w": "no",
+     "s": 242.096
+    },
+    {
+     "w": "outside",
+     "s": 242.317
+    },
+    {
+     "w": "connections.",
+     "s": 242.986
+    },
+    {
+     "w": "Your",
+     "s": 243.686
+    },
+    {
+     "w": "numbers",
+     "s": 243.921
+    },
+    {
+     "w": "stay",
+     "s": 244.385
+    },
+    {
+     "w": "in",
+     "s": 244.621
+    },
+    {
+     "w": "your",
+     "s": 244.842
+    },
+    {
+     "w": "file.",
+     "s": 245.078
+    }
+   ]
+  },
+  {
+   "scene": "offer",
+   "sub": "So, which edition fits you?",
+   "say": "So, which edition fits you?",
+   "start": 246.218,
+   "end": 247.803,
+   "words": [
+    {
+     "w": "So,",
+     "s": 246.218
+    },
+    {
+     "w": "which",
+     "s": 246.437
+    },
+    {
+     "w": "edition",
+     "s": 246.679
+    },
+    {
+     "w": "fits",
+     "s": 247.343
+    },
+    {
+     "w": "you?",
+     "s": 247.577
+    }
+   ]
+  },
+  {
+   "scene": "offer",
+   "sub": "Essential, $97: clients, revenue, expenses, mileage, client performance, tax set-aside and the dashboard.",
+   "say": "Essential, ninety-seven dollars. Clients, revenue, expenses, mileage, client performance, tax set-aside, and the dashboard.",
+   "start": 248.083,
+   "end": 255.552,
+   "words": [
+    {
+     "w": "Essential,",
+     "s": 248.083
+    },
+    {
+     "w": "$97:",
+     "s": 248.849
+    },
+    {
+     "w": "clients,",
+     "s": 249.423
+    },
+    {
+     "w": "revenue,",
+     "s": 249.713
+    },
+    {
+     "w": "expenses,",
+     "s": 250.462
+    },
+    {
+     "w": "mileage,",
+     "s": 251.219
+    },
+    {
+     "w": "client",
+     "s": 251.968
+    },
+    {
+     "w": "performance,",
+     "s": 252.25
+    },
+    {
+     "w": "tax",
+     "s": 253.262
+    },
+    {
+     "w": "set-aside",
+     "s": 253.518
+    },
+    {
+     "w": "and",
+     "s": 254.505
+    },
+    {
+     "w": "the",
+     "s": 254.76
+    },
+    {
+     "w": "dashboard.",
+     "s": 255.016
+    }
+   ]
+  },
+  {
+   "scene": "offer",
+   "sub": "Elite, $197: invoices, receivables, cash flow, profitability, forecasting, the full tax center and year-end package.",
+   "say": "Elite, one ninety-seven. Invoices, receivables, cash flow, profitability, forecasting, the full tax center, and the year end package.",
+   "start": 255.832,
+   "end": 264.31,
+   "words": [
+    {
+     "w": "Elite,",
+     "s": 255.832
+    },
+    {
+     "w": "$197:",
+     "s": 256.528
+    },
+    {
+     "w": "invoices,",
+     "s": 257.074
+    },
+    {
+     "w": "receivables,",
+     "s": 257.794
+    },
+    {
+     "w": "cash",
+     "s": 258.757
+    },
+    {
+     "w": "flow,",
+     "s": 259.008
+    },
+    {
+     "w": "profitability,",
+     "s": 259.259
+    },
+    {
+     "w": "forecasting,",
+     "s": 260.675
+    },
+    {
+     "w": "the",
+     "s": 261.639
+    },
+    {
+     "w": "full",
+     "s": 261.881
+    },
+    {
+     "w": "tax",
+     "s": 262.132
+    },
+    {
+     "w": "center",
+     "s": 262.375
+    },
+    {
+     "w": "and",
+     "s": 262.861
+    },
+    {
+     "w": "year-end",
+     "s": 263.104
+    },
+    {
+     "w": "package.",
+     "s": 263.598
+    }
+   ]
+  },
+  {
+   "scene": "offer",
+   "sub": "Or Complete, $249: both workbooks, both Field Guides. Start simple, grow into the full system.",
+   "say": "Or Complete, two forty-nine. Both workbooks, both Field Guides. Start simple, and grow into the full system.",
+   "start": 264.59,
+   "end": 271.072,
+   "words": [
+    {
+     "w": "Or",
+     "s": 264.59
+    },
+    {
+     "w": "Complete,",
+     "s": 264.857
+    },
+    {
+     "w": "$249:",
+     "s": 265.675
+    },
+    {
+     "w": "both",
+     "s": 266.296
+    },
+    {
+     "w": "workbooks,",
+     "s": 266.581
+    },
+    {
+     "w": "both",
+     "s": 267.161
+    },
+    {
+     "w": "Field",
+     "s": 267.446
+    },
+    {
+     "w": "Guides.",
+     "s": 267.741
+    },
+    {
+     "w": "Start",
+     "s": 268.293
+    },
+    {
+     "w": "simple,",
+     "s": 268.587
+    },
+    {
+     "w": "grow",
+     "s": 269.139
+    },
+    {
+     "w": "into",
+     "s": 269.425
+    },
+    {
+     "w": "the",
+     "s": 269.958
+    },
+    {
+     "w": "full",
+     "s": 270.234
+    },
+    {
+     "w": "system.",
+     "s": 270.52
+    }
+   ]
+  },
+  {
+   "scene": "offer",
+   "sub": "One-time payment. And a 60-day money-back guarantee, no questions asked.",
+   "say": "One-time payment. And a sixty-day money-back guarantee. No questions asked.",
+   "start": 271.352,
+   "end": 275.976,
+   "words": [
+    {
+     "w": "One-time",
+     "s": 271.352
+    },
+    {
+     "w": "payment.",
+     "s": 272.192
+    },
+    {
+     "w": "And",
+     "s": 272.638
+    },
+    {
+     "w": "a",
+     "s": 272.858
+    },
+    {
+     "w": "60-day",
+     "s": 273.062
+    },
+    {
+     "w": "money-back",
+     "s": 273.555
+    },
+    {
+     "w": "guarantee,",
+     "s": 274.213
+    },
+    {
+     "w": "no",
+     "s": 274.872
+    },
+    {
+     "w": "questions",
+     "s": 275.084
+    },
+    {
+     "w": "asked.",
+     "s": 275.545
+    }
+   ]
+  },
+  {
+   "scene": "cta",
+   "sub": "Here's what to do right now.",
+   "say": "Here's what to do right now.",
+   "start": 276.676,
+   "end": 277.982,
+   "words": [
+    {
+     "w": "Here's",
+     "s": 276.676
+    },
+    {
+     "w": "what",
+     "s": 277.043
+    },
+    {
+     "w": "to",
+     "s": 277.236
+    },
+    {
+     "w": "do",
+     "s": 277.416
+    },
+    {
+     "w": "right",
+     "s": 277.597
+    },
+    {
+     "w": "now.",
+     "s": 277.796
+    }
+   ]
+  },
+  {
+   "scene": "cta",
+   "sub": "Pick your edition below this video.",
+   "say": "Pick your edition below this video.",
+   "start": 278.262,
+   "end": 280.023,
+   "words": [
+    {
+     "w": "Pick",
+     "s": 278.262
+    },
+    {
+     "w": "your",
+     "s": 278.445
+    },
+    {
+     "w": "edition",
+     "s": 278.628
+    },
+    {
+     "w": "below",
+     "s": 279.145
+    },
+    {
+     "w": "this",
+     "s": 279.493
+    },
+    {
+     "w": "video.",
+     "s": 279.675
+    }
+   ]
+  },
+  {
+   "scene": "cta",
+   "sub": "Open it, log this month's payments, and see your real numbers.",
+   "say": "Open it, log this month's payments, and see your real numbers.",
+   "start": 280.303,
+   "end": 283.717,
+   "words": [
+    {
+     "w": "Open",
+     "s": 280.303
+    },
+    {
+     "w": "it,",
+     "s": 280.767
+    },
+    {
+     "w": "log",
+     "s": 281.0
+    },
+    {
+     "w": "this",
+     "s": 281.24
+    },
+    {
+     "w": "month's",
+     "s": 281.488
+    },
+    {
+     "w": "payments,",
+     "s": 281.753
+    },
+    {
+     "w": "and",
+     "s": 282.25
+    },
+    {
+     "w": "see",
+     "s": 282.491
+    },
+    {
+     "w": "your",
+     "s": 282.731
+    },
+    {
+     "w": "real",
+     "s": 282.98
+    },
+    {
+     "w": "numbers.",
+     "s": 283.228
+    }
+   ]
+  },
+  {
+   "scene": "cta",
+   "sub": "Because every month you wait is another month of guessing.",
+   "say": "Because every month you wait is another month of guessing.",
+   "start": 283.997,
+   "end": 286.737,
+   "words": [
+    {
+     "w": "Because",
+     "s": 283.997
+    },
+    {
+     "w": "every",
+     "s": 284.473
+    },
+    {
+     "w": "month",
+     "s": 284.937
+    },
+    {
+     "w": "you",
+     "s": 285.11
+    },
+    {
+     "w": "wait",
+     "s": 285.272
+    },
+    {
+     "w": "is",
+     "s": 285.44
+    },
+    {
+     "w": "another",
+     "s": 285.596
+    },
+    {
+     "w": "month",
+     "s": 286.072
+    },
+    {
+     "w": "of",
+     "s": 286.245
+    },
+    {
+     "w": "guessing.",
+     "s": 286.402
+    }
+   ]
+  },
+  {
+   "scene": "end",
+   "sub": "P.S. Your clients already report what you earn.",
+   "say": "P S. Your clients already report what you earn.",
+   "start": 287.437,
+   "end": 290.041,
+   "words": [
+    {
+     "w": "P.S.",
+     "s": 287.437
+    },
+    {
+     "w": "Your",
+     "s": 287.663
+    },
+    {
+     "w": "clients",
+     "s": 287.905
+    },
+    {
+     "w": "already",
+     "s": 288.17
+    },
+    {
+     "w": "report",
+     "s": 288.856
+    },
+    {
+     "w": "what",
+     "s": 289.324
+    },
+    {
+     "w": "you",
+     "s": 289.565
+    },
+    {
+     "w": "earn.",
+     "s": 289.799
+    }
+   ]
+  },
+  {
+   "scene": "end",
+   "sub": "ProfitIQS shows you what you keep.",
+   "say": "Profit IQS shows you what you keep.",
+   "start": 290.321,
+   "end": 292.393,
+   "words": [
+    {
+     "w": "ProfitIQS",
+     "s": 290.321
+    },
+    {
+     "w": "shows",
+     "s": 291.085
+    },
+    {
+     "w": "you",
+     "s": 291.357
+    },
+    {
+     "w": "what",
+     "s": 291.612
+    },
+    {
+     "w": "you",
+     "s": 291.875
+    },
+    {
+     "w": "keep.",
+     "s": 292.13
+    }
+   ]
+  }
+ ]
+}
