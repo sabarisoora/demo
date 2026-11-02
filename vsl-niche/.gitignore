@@ -10,3 +10,7 @@ public/photos
 assets/
 build/
 src/gen/cur.ts
+script/n/*
+!script/n/plumbing-contractor.json
+deliverables/*
+!deliverables/1099/
