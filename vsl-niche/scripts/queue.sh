@@ -7,5 +7,5 @@ while true; do
   if [ -z "$next" ]; then sleep 30; continue; fi
   [ "$next" = END ] && { echo "QUEUE END $(date -u +%H:%M)"; exit 0; }
   echo "=== $next start $(date -u +%H:%M)"
-  if bash scripts/render_niche.sh $next 1500; then echo $next >> build/done.txt; else echo "=== $next FAILED"; echo $next >> build/done.txt; echo $next >> build/failed.txt; fi
+  if bash scripts/render_niche.sh $next 750; then echo $next >> build/done.txt; else echo "=== $next FAILED"; echo $next >> build/done.txt; echo $next >> build/failed.txt; fi
 done
