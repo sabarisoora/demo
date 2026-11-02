@@ -13,11 +13,11 @@ export function impactAt(gf: number) {
     const d = gf - c.frame;
     if (d < 0 || d > 14) continue;
     if (STRONG.has(c.kind)) {
-      shake = Math.max(shake, (1 - d / 14) * 22);
-      chroma = Math.max(chroma, (1 - d / 8) * 14);
-      flash = Math.max(flash, d < 4 ? (1 - d / 4) * 0.55 : 0);
+      shake = Math.max(shake, (1 - d / 14) * 13);
+      chroma = Math.max(chroma, (1 - d / 8) * 10);
+      flash = Math.max(flash, d < 4 ? (1 - d / 4) * 0.35 : 0);
     } else if (SOFT.has(c.kind)) {
-      shake = Math.max(shake, (1 - d / 10) * 9);
+      shake = Math.max(shake, (1 - d / 10) * 5);
       chroma = Math.max(chroma, (1 - d / 6) * 6);
     }
   }

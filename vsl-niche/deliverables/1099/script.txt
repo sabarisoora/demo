@@ -38,6 +38,7 @@ And the side-hustler who wants it organized from day one.
 
 [ESS]
 Let me show you what's inside. Start with Essential: eleven sheets.
+You enter the facts: payments, expenses, trips. The workbook does the arithmetic.
 Set up your clients once.
 Log every payment. Log every expense.
 Log every business trip. The IRS mileage rate is built in, so each trip shows its deduction value.
@@ -53,6 +54,7 @@ The Executive Dashboard: revenue, profit, cash, receivables, taxes owed, and you
 The Invoice Tracker and Accounts Receivable show who owes you, and for how long.
 The Cash Flow Center, because a profitable freelancer can still run short on cash.
 Client Profitability ranks every client by what they actually earn you, after costs.
+Plus revenue, expense and mileage centers, monthly profit, service profitability, and an insights center.
 
 [TAX]
 Then the part every contractor dreads. Taxes.
@@ -66,6 +68,12 @@ Then there's the Profit Leak Detector™.
 Overdue invoices. Your weakest service line. Your least profitable client. Missed deductions.
 Flagged red, yellow or green, so you know exactly where to look first.
 Plus forecasting, a KPI scorecard, financial goals, and one Business Health Score™.
+
+[GUIDE]
+And you're never left guessing how to use it.
+Every edition comes with a Quick Start: the exact steps for your first session, your first week, your first thirty days.
+And a full Field Guide that explains every sheet and every formula, screen by screen.
+Forty-four pages for Essential. Sixty-two for Elite. So when a number looks off, the answer's already written down.
 
 [OBJ]
 Now, honest answers to the questions people ask.

@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, interpolate, random, useCurrentFrame } from "remotion";
 import { Burst, Glitch, LightLeak, Shockwave, SpaceBg, Streaks } from "../fx";
 import { ap, at, C, cl, ez, FONT, out, pop, Win } from "../lib";
-import { Counter, Eyebrow, Glass, Icon, Pop, Slam } from "../ui";
+import { Counter, Eyebrow, Glass, Icon, PhotoBg, PhotoCard, Pop, Slam } from "../ui";
 
 // show block i while line i is current (crossfade/slide)
 export const Beat: React.FC<{ win: Win; i: number; until?: number; children: React.ReactNode; style?: React.CSSProperties; exit?: "up" | "zoom" | "left" }> = ({ win, i, until, children, style, exit = "up" }) => {
@@ -66,6 +66,7 @@ export const Hook: React.FC<{ win: Win }> = ({ win }) => {
     <AbsoluteFill>
       <SpaceBg />
       <Beat win={win} i={0} until={L[1].s - 2} exit="zoom">
+        <PhotoBg src="typing" at={L[0].s - 3} dim={0.7} />
         <div style={{ position: "absolute", top: 90, width: "100%", display: "flex", justifyContent: "center" }}>
           <Slam text="You got paid [three times] this month." at={L[0].s} size={86} />
         </div>
@@ -111,15 +112,12 @@ export const Hook: React.FC<{ win: Win }> = ({ win }) => {
         </div>
         <div style={{ display: "flex", gap: 46, marginTop: 120 }}>
           {[
-            ["receipt", "Your expenses", at(win, 4, 0.42), C.amber],
-            ["car", "Your miles", at(win, 4, 0.62), C.sky],
-            ["alert", "Your tax bill", at(win, 4, 0.86), C.red],
-          ].map(([ic, t, a, col]) => (
+            ["taxforms", "Your expenses", at(win, 4, 0.42), C.amber],
+            ["driving", "Your miles", at(win, 4, 0.62), C.sky],
+            ["calc", "Your tax bill", at(win, 4, 0.86), C.red],
+          ].map(([src, t, a, col]) => (
             <Pop key={t as string} at={a as number}>
-              <Glass style={{ width: 420, height: 330, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 22 }} glow={col as string}>
-                <Icon name={ic as string} size={110} color={col as string} />
-                <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 46, color: C.white }}>{t as string}</div>
-              </Glass>
+              <PhotoCard src={src as string} w={440} h={420} label={t as string} color={col as string} />
             </Pop>
           ))}
         </div>
@@ -191,6 +189,7 @@ export const Pain: React.FC<{ win: Win }> = ({ win }) => {
         </Beat>
       </Glitch>
       <Beat win={win} i={1} exit="left">
+        <PhotoBg src="card" at={L[1].s - 3} dim={0.66} />
         <Pop at={L[1].s}>
           <div style={{ width: 360, height: 680, borderRadius: 56, border: "10px solid #1f2937", background: "linear-gradient(180deg, #0f172a, #111827)", boxShadow: "0 50px 100px rgba(0,0,0,0.6)", position: "relative", overflow: "hidden" }}>
             <div style={{ position: "absolute", top: 80, left: 24, right: 24 }}>
@@ -204,6 +203,7 @@ export const Pain: React.FC<{ win: Win }> = ({ win }) => {
         <div style={{ position: "absolute", right: 260, top: 420 }}><Slam text="Income: [one app.]" at={L[1].s + 4} size={80} /></div>
       </Beat>
       <Beat win={win} i={2}>
+        <PhotoBg src="desk" at={L[2].s - 3} dim={0.6} />
         <Receipts at={L[2].s} />
         {[0.3, 0.45, 0.6].map((p) => {
           const d = fr - at(win, 2, p);
@@ -213,7 +213,7 @@ export const Pain: React.FC<{ win: Win }> = ({ win }) => {
       </Beat>
       <Beat win={win} i={3}>
         <div style={{ display: "flex", alignItems: "center", gap: 80 }}>
-          <Pop at={L[3].s}><div style={{ color: C.sky }}><Icon name="head" size={380} /></div></Pop>
+          <Pop at={L[3].s}><PhotoCard src="driving" w={620} h={560} color={C.sky} /></Pop>
           <Pop at={at(win, 3, 0.5)}>
             <Glass style={{ padding: "40px 54px" }} glow={C.amber}>
               <div style={{ fontFamily: FONT.sans, fontWeight: 600, fontSize: 30, color: C.muted, letterSpacing: "0.12em" }}>MILES DRIVEN</div>
@@ -224,6 +224,7 @@ export const Pain: React.FC<{ win: Win }> = ({ win }) => {
         </div>
       </Beat>
       <Beat win={win} i={4}>
+        <PhotoBg src="cash" at={L[4].s - 3} dim={0.68} />
         {Array.from({ length: 22 }).map((_, i) => {
           const t0 = at(win, 4, 0.55) + i * 1.2;
           const d = fr - t0;
@@ -281,6 +282,7 @@ export const Pain: React.FC<{ win: Win }> = ({ win }) => {
       </Beat>
       <Glitch at={at(win, 9, 0.62)} len={9}>
         <Beat win={win} i={9}>
+          <PhotoBg src="signing" at={L[9].s - 3} dim={0.62} />
           <Pop at={at(win, 9, 0.1)}>
             <Glass style={{ padding: "34px 44px", width: 760 }} glow={C.sky}>
               <div style={{ fontFamily: FONT.sans, fontWeight: 600, fontSize: 24, color: C.muted }}>Message from your tax preparer</div>
@@ -291,6 +293,7 @@ export const Pain: React.FC<{ win: Win }> = ({ win }) => {
         </Beat>
       </Glitch>
       <Beat win={win} i={10}>
+        <PhotoBg src="busy" at={L[10].s - 3} dim={0.74} />
         <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 150px)", gap: 18 }}>
           {"JAN FEB MAR APR MAY JUN JUL AUG SEP OCT NOV DEC".split(" ").map((m, i) => {
             const on = fr >= L[10].s + i * 2;

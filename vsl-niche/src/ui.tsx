@@ -254,3 +254,50 @@ export const tabsAround = (all: string[], active: string, n = 9) => {
   const s = Math.max(0, Math.min(all.length - n, i - 3));
   return all.slice(s, s + n);
 };
+
+// ---------- real photography (stock, CC/Unsplash licensed) ----------
+// full-bleed photo with a slow push-in and a brand-tinted dark grade so type stays readable
+export const PhotoBg: React.FC<{ src: string; at?: number; dim?: number; tint?: string; pos?: string; drift?: 1 | -1 }> = ({ src, at = 0, dim = 0.62, tint = "#050816", pos = "center", drift = 1 }) => {
+  const fr = useCurrentFrame();
+  const d = Math.max(0, fr - at);
+  const sc = 1.14 - Math.min(1, d / 240) * 0.1;
+  return (
+    <AbsoluteFill style={{ overflow: "hidden", opacity: ap(fr, at, 10) }}>
+      <Img src={staticFile(`photos/${src}.jpg`)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: pos, transform: `scale(${sc}) translateX(${drift * d * 0.12}px)` }} />
+      <AbsoluteFill style={{ background: `linear-gradient(180deg, ${tint}${Math.round(dim * 200).toString(16).padStart(2, "0")} 0%, ${tint}${Math.round(Math.min(1, dim + 0.18) * 255).toString(16).padStart(2, "0")} 100%)` }} />
+      <AbsoluteFill style={{ background: `radial-gradient(ellipse at center, transparent 30%, ${tint} 100%)`, opacity: 0.7 }} />
+    </AbsoluteFill>
+  );
+};
+
+// framed photo card with optional caption strip
+export const PhotoCard: React.FC<{ src: string; w: number; h: number; label?: string; sub?: string; color?: string; pos?: string; style?: React.CSSProperties }> = ({ src, w, h, label, sub, color = C.cyan, pos = "center", style }) => {
+  const fr = useCurrentFrame();
+  return (
+    <div style={{ width: w, height: h, borderRadius: 24, overflow: "hidden", position: "relative", boxShadow: `0 40px 90px -20px rgba(0,0,0,0.75), 0 0 0 2px ${color}88, 0 0 50px ${color}33`, ...style }}>
+      <Img src={staticFile(`photos/${src}.jpg`)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: pos, transform: `scale(${1.08 - Math.min(1, fr / 400) * 0.06})` }} />
+      {label && (
+        <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, padding: "70px 26px 22px", background: "linear-gradient(180deg, transparent, rgba(5,8,22,0.92))" }}>
+          <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: Math.round(w / 9.5), color: C.white, lineHeight: 1.08 }}>{label}</div>
+          {sub && <div style={{ marginTop: 8, fontFamily: FONT.serif, fontStyle: "italic", fontSize: Math.round(w / 15), color }}>{sub}</div>}
+        </div>
+      )}
+    </div>
+  );
+};
+
+// small real-sheet tile (top of the sheet) with its tab name
+export const SheetTile: React.FC<{ name: string; title: string; w: number; tag?: string; tagColor?: string; dimmed?: boolean }> = ({ name, title, w, tag, tagColor = C.green, dimmed }) => (
+  <div style={{ width: w, borderRadius: 12, overflow: "hidden", background: "#fff", boxShadow: "0 24px 50px -16px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.12)", opacity: dimmed ? 0.5 : 1, position: "relative" }}>
+    <div style={{ height: Math.round(w * 0.075), background: "#1f6e43", display: "flex", alignItems: "center", paddingLeft: 10, fontFamily: FONT.sans, fontWeight: 700, fontSize: Math.max(11, Math.round(w * 0.042)), color: "#fff", whiteSpace: "nowrap", overflow: "hidden" }}>{title}</div>
+    <Img src={staticFile(`sheets/thumb/${name}.jpg`)} style={{ width: w, height: Math.round(w * 0.625), objectFit: "cover", objectPosition: "top", display: "block" }} />
+    {tag && <div style={{ position: "absolute", right: 8, bottom: 8, background: tagColor, color: "#fff", fontFamily: FONT.sans, fontWeight: 800, fontSize: Math.max(11, Math.round(w * 0.04)), padding: "4px 9px", borderRadius: 6, letterSpacing: "0.06em" }}>{tag}</div>}
+  </div>
+);
+
+// a real guide page (A4 portrait)
+export const DocPage: React.FC<{ src: string; w: number; style?: React.CSSProperties }> = ({ src, w, style }) => (
+  <div style={{ width: w, height: Math.round(w * 1.414), borderRadius: 6, overflow: "hidden", background: "#fff", boxShadow: "0 30px 70px -18px rgba(0,0,0,0.75), 0 0 0 1px rgba(0,0,0,0.08)", ...style }}>
+    <Img src={staticFile(`docs/${src}`)} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+  </div>
+);

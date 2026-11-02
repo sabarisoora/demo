@@ -12,6 +12,7 @@ import { C, cl, ez, f, LINES, sceneWindow, Win } from "./lib";
 import { Hook, Pain, Turn } from "./scenes/a";
 import { Elite, Ess, Leak, Reveal, Tax, Who } from "./scenes/b";
 import { Cta, End, Obj, Offer } from "./scenes/c";
+import { Guide } from "./scenes/d";
 import { Captions } from "./ui";
 
 const SCENES: [string, React.FC<{ win: Win }>][] = [
@@ -24,6 +25,7 @@ const SCENES: [string, React.FC<{ win: Win }>][] = [
   ["elite", Elite],
   ["tax", Tax],
   ["leak", Leak],
+  ["guide", Guide],
   ["obj", Obj],
   ["offer", Offer],
   ["cta", Cta],

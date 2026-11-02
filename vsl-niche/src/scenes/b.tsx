@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { Burst, LightBg, LightLeak, Shockwave, SpaceBg, Streaks } from "../fx";
 import { ap, at, C, cl, ez, FONT, pop, Win } from "../lib";
-import { Cover, ELITE_FILE, ELITE_TABS, ESS_FILE, ESS_TABS, Eyebrow, FlyIn, Glass, Icon, LogoMark, Pop, Sheet, Slam, tabsAround, Wordmark } from "../ui";
+import { Cover, ELITE_FILE, ELITE_TABS, ESS_FILE, ESS_TABS, Eyebrow, FlyIn, Glass, Icon, LogoMark, PhotoCard, Pop, Sheet, SheetTile, Slam, tabsAround, Wordmark } from "../ui";
 import { Beat } from "./a";
 
 type R = [number, number, number, number];
@@ -59,30 +59,27 @@ export const Reveal: React.FC<{ win: Win }> = ({ win }) => {
 export const Who: React.FC<{ win: Win }> = ({ win }) => {
   const fr = useCurrentFrame();
   const P = [
-    ["sprout", "First-year freelancer", "figuring out quarterly taxes", C.green],
-    ["briefcase", "Solo consultant", "which clients are worth it?", C.sky],
-    ["car", "On-the-road contractor", "every mile logged", C.amber],
-    ["moon", "Side-hustler", "organized from day one", C.cyan],
+    ["firstyear", "First-year freelancer", "figuring out quarterly taxes", C.green, "center"],
+    ["consultant", "Solo consultant", "which clients are worth it?", C.sky, "center"],
+    ["contractor", "On-the-road contractor", "every mile logged", C.amber, "center"],
+    ["homedesk", "Side-hustler", "organized from day one", C.cyan, "center"],
   ];
   return (
     <AbsoluteFill>
       <SpaceBg grid={false} />
-      <div style={{ position: "absolute", top: 90, width: "100%", display: "flex", justifyContent: "center" }}>
+      <div style={{ position: "absolute", top: 80, width: "100%", display: "flex", justifyContent: "center" }}>
         <Eyebrow at={0}>Who it's for</Eyebrow>
       </div>
-      <div style={{ position: "absolute", top: 230, left: 90, right: 90, display: "flex", gap: 30 }}>
-        {P.map(([ic, t, d, col], i) => {
+      <div style={{ position: "absolute", top: 190, left: 80, right: 80, display: "flex", gap: 28 }}>
+        {P.map(([src, t, d, col, pos], i) => {
           const a = win.lines[i].s;
           const on = fr >= a && (i === 3 || fr < win.lines[i + 1].s);
+          const all = fr > win.lines[3].e;
           return (
-            <div key={t} style={{ flex: 1 }}><Pop at={a} from={120}>
-              <Glass style={{ height: 560, padding: 40, boxSizing: "border-box", display: "flex", flexDirection: "column", justifyContent: "space-between", transform: `scale(${on ? 1.04 : 1})`, opacity: on || fr > win.lines[3].e ? 1 : 0.55 }} glow={on ? col : undefined}>
-                <div style={{ width: 120, height: 120, borderRadius: 30, background: `${col}22`, border: `2px solid ${col}`, display: "flex", alignItems: "center", justifyContent: "center" }}><Icon name={ic} size={72} color={col} /></div>
-                <div>
-                  <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 44, color: C.white, lineHeight: 1.1 }}>{t}</div>
-                  <div style={{ marginTop: 14, fontFamily: FONT.serif, fontStyle: "italic", fontSize: 30, color: C.muted }}>{d}</div>
-                </div>
-              </Glass>
+            <div key={t} style={{ flex: 1 }}><Pop at={a} from={140}>
+              <div style={{ transform: `scale(${on ? 1.04 : 1})`, opacity: on || all ? 1 : 0.5, filter: on || all ? "none" : "grayscale(0.7)" }}>
+                <PhotoCard src={src} w={418} h={640} label={t} sub={d} color={on ? col : "rgba(255,255,255,0.25)"} pos={pos} />
+              </div>
             </Pop></div>
           );
         })}
@@ -95,14 +92,14 @@ export const Who: React.FC<{ win: Win }> = ({ win }) => {
 const Steps: React.FC<{ items: [number, string, string?][]; dark?: boolean; top?: number }> = ({ items, dark, top = 150 }) => {
   const fr = useCurrentFrame();
   return (
-    <div style={{ position: "absolute", left: 70, top, width: 470, display: "grid", gap: 20 }}>
+    <div style={{ position: "absolute", left: 50, top, width: 360, display: "grid", gap: 18 }}>
       {items.map(([a, t, d], i) => {
         const on = fr >= a && (i === items.length - 1 || fr < items[i + 1][0]);
         const p = ap(fr, a - 2, 10);
         return (
           <div key={t} style={{ opacity: p * (on ? 1 : 0.42), transform: `translateX(${(1 - p) * -40 + (on ? 10 : 0)}px)`, borderLeft: `6px solid ${on ? C.cyan : dark ? "rgba(255,255,255,0.15)" : C.line}`, paddingLeft: 20 }}>
-            <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 34, color: dark ? C.white : C.ink, lineHeight: 1.15 }}>{t}</div>
-            {d && <div style={{ fontFamily: FONT.sans, fontWeight: 500, fontSize: 22, color: dark ? C.muted : C.ink2 }}>{d}</div>}
+            <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 29, color: dark ? C.white : C.ink, lineHeight: 1.15 }}>{t}</div>
+            {d && <div style={{ fontFamily: FONT.sans, fontWeight: 500, fontSize: 20, color: dark ? C.muted : C.ink2 }}>{d}</div>}
           </div>
         );
       })}
@@ -110,7 +107,7 @@ const Steps: React.FC<{ items: [number, string, string?][]; dark?: boolean; top?
   );
 };
 
-const SW = { x: 590, y: 90, w: 1270, h: 820 };
+const SW = { x: 450, y: 76, w: 1410, h: 870 };
 const Swap: React.FC<{ from: number; to?: number; children: React.ReactNode; dir?: "right" | "bottom" | "zoom"; x?: number; y?: number }> = ({ from, to, children, dir = "right", x = SW.x, y = SW.y }) => (
   <FlyIn at={from} until={to} from={dir} style={{ left: x, top: y }}>{children}</FlyIn>
 );
@@ -136,49 +133,71 @@ export const Ess: React.FC<{ win: Win }> = ({ win }) => {
           </div>
         </div>
       </Beat>
-      {fr >= L[1].s - 6 && (
+      <Beat win={win} i={1} until={L[2].s - 4} exit="zoom">
+        <div style={{ position: "absolute", top: 70, width: "100%", display: "flex", justifyContent: "center" }}>
+          <Slam text="You enter the facts. [It does the math.]" at={L[1].s} size={64} />
+        </div>
+        <div style={{ position: "absolute", top: 200, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 330px)", gap: 26 }}>
+            {ESS_TABS.map((t, i) => {
+              const name = "ess-" + t.toLowerCase().replace(/ & /g, "-").replace(/ /g, "-");
+              const input = ["SETUP", "CLIENT SETUP", "REVENUE ENTRY", "EXPENSE ENTRY", "MILEAGE LOG"].includes(t);
+              const tagAt = input ? at(win, 1, 0.3) : at(win, 1, 0.68);
+              const lit = fr >= tagAt;
+              return (
+                <Pop key={t} at={L[1].s + i * 2} from={40}>
+                  <div style={{ transform: `scale(${lit && input && fr < at(win, 1, 0.68) ? 1.05 : 1})` }}>
+                    <SheetTile name={name} title={t} w={330} tag={lit ? (t === "START HERE" ? "GUIDE" : input ? "YOU ENTER" : "AUTO") : undefined} tagColor={input ? C.green : t === "START HERE" ? C.amber : C.blue} dimmed={!input && fr >= at(win, 1, 0.3) && fr < at(win, 1, 0.68)} />
+                  </div>
+                </Pop>
+              );
+            })}
+          </div>
+        </div>
+      </Beat>
+      {fr >= L[2].s - 6 && (
         <>
           <Steps
             dark
             items={[
-              [L[1].s, "Client Setup", "set up once"],
-              [L[2].s, "Revenue + Expense Entry", "log every payment & expense"],
-              [L[3].s, "Mileage Log", "IRS rate built in"],
-              [L[4].s, "Client Performance", "who brings in the most"],
-              [L[5].s, "Tax & Deductions", "what to set aside"],
-              [L[6].s, "Dashboard", "everything, one screen"],
-              [L[7].s, "Accountant Export", "clean summary"],
-              [L[8].s, "Health Snapshot", "where you stand"],
+              [L[2].s, "Client Setup", "set up once"],
+              [L[3].s, "Revenue + Expense Entry", "log every payment & expense"],
+              [L[4].s, "Mileage Log", "IRS rate built in"],
+              [L[5].s, "Client Performance", "who brings in the most"],
+              [L[6].s, "Tax & Deductions", "what to set aside"],
+              [L[7].s, "Dashboard", "everything, one screen"],
+              [L[8].s, "Accountant Export", "clean summary"],
+              [L[9].s, "Health Snapshot", "where you stand"],
             ]}
             top={110}
           />
-          <Swap from={L[1].s - 4} to={L[2].s - 4}><Sheet name="ess-client-setup" {...S("", "CLIENT SETUP")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 0.38] }]} /></Swap>
-          <Swap from={L[2].s - 4} to={at(win, 2, 0.5)}><Sheet name="ess-revenue-entry" {...S("", "REVENUE ENTRY")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 0.4] }]} /></Swap>
-          <Swap from={at(win, 2, 0.5)} to={L[3].s - 4} dir="bottom"><Sheet name="ess-expense-entry" {...S("", "EXPENSE ENTRY")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 0.42] }]} /></Swap>
-          <Swap from={L[3].s - 4} to={L[4].s - 4}>
-            <Sheet name="ess-mileage-log" {...S("", "MILEAGE LOG")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 0.42] }, { at: at(win, 3, 0.45), r: [0.55, 0.03, 0.45, 0.3] }]} hi={[{ at: at(win, 3, 0.45), r: [0.79, 0.04, 0.1, 0.26], label: "IRS rate", side: "bottom" }, { at: at(win, 3, 0.72), r: [0.89, 0.04, 0.11, 0.26], label: "Deduction value", color: C.green }]} />
-          </Swap>
+          <Swap from={L[2].s - 4} to={L[3].s - 4}><Sheet name="ess-client-setup" {...S("", "CLIENT SETUP")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 0.38] }]} /></Swap>
+          <Swap from={L[3].s - 4} to={at(win, 3, 0.5)}><Sheet name="ess-revenue-entry" {...S("", "REVENUE ENTRY")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 0.4] }]} /></Swap>
+          <Swap from={at(win, 3, 0.5)} to={L[4].s - 4} dir="bottom"><Sheet name="ess-expense-entry" {...S("", "EXPENSE ENTRY")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 0.42] }]} /></Swap>
           <Swap from={L[4].s - 4} to={L[5].s - 4}>
-            <Sheet name="ess-client-performance" {...S("", "CLIENT PERFORMANCE")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 0.35] }]} hi={[{ at: at(win, 4, 0.4), r: [0.2, 0.05, 0.35, 0.3], label: "Revenue by client" }, { at: at(win, 4, 0.65), r: [0.8, 0.05, 0.2, 0.3], label: "Rank", color: C.green }]} />
+            <Sheet name="ess-mileage-log" {...S("", "MILEAGE LOG")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 0.42] }, { at: at(win, 4, 0.45), r: [0.55, 0.03, 0.45, 0.3] }]} hi={[{ at: at(win, 4, 0.45), r: [0.79, 0.04, 0.1, 0.26], label: "IRS rate", side: "bottom" }, { at: at(win, 4, 0.72), r: [0.89, 0.04, 0.11, 0.26], label: "Deduction value", color: C.green }]} />
           </Swap>
           <Swap from={L[5].s - 4} to={L[6].s - 4}>
-            <Sheet name="ess-tax-deductions" {...S("", "TAX & DEDUCTIONS")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 1] }, { at: at(win, 5, 0.4), r: [0, 0.3, 0.6, 0.3] }]} hi={[{ at: at(win, 5, 0.45), r: [0, 0.425, 0.5, 0.03], label: "Total estimated tax liability", color: C.red }, { at: at(win, 5, 0.62), r: [0, 0.508, 0.5, 0.03], label: "Recommended tax reserve", color: C.green, side: "bottom" }]} />
+            <Sheet name="ess-client-performance" {...S("", "CLIENT PERFORMANCE")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 0.35] }]} hi={[{ at: at(win, 5, 0.4), r: [0.2, 0.05, 0.35, 0.3], label: "Revenue by client" }, { at: at(win, 5, 0.65), r: [0.8, 0.05, 0.2, 0.3], label: "Rank", color: C.green }]} />
           </Swap>
-          <Swap from={L[6].s - 4} to={L[7].s - 4} dir="zoom">
-            <Sheet name="ess-dashboard" {...S("", "DASHBOARD")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 0.5] }, { at: at(win, 6, 0.3), r: [0, 0.02, 1, 0.22] }]} hi={[
-              { at: at(win, 6, 0.36), until: at(win, 6, 0.9), r: kpi(0, 0.25), label: "Revenue" },
-              { at: at(win, 6, 0.46), until: at(win, 6, 0.9), r: kpi(0.25, 0.25) },
-              { at: at(win, 6, 0.56), until: at(win, 6, 0.9), r: kpi(0.5, 0.25), label: "Net profit", color: C.green },
-              { at: at(win, 6, 0.66), until: at(win, 6, 0.9), r: kpi(0.75, 0.25) },
-              { at: at(win, 6, 0.76), r: kpi(0, 0.25, 1), label: "Tax liability", color: C.red, side: "bottom" },
-              { at: at(win, 6, 0.88), r: kpi(0.5, 0.25, 1), label: "Miles", color: C.amber, side: "bottom" },
+          <Swap from={L[6].s - 4} to={L[7].s - 4}>
+            <Sheet name="ess-tax-deductions" {...S("", "TAX & DEDUCTIONS")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 1] }, { at: at(win, 6, 0.4), r: [0, 0.3, 0.6, 0.3] }]} hi={[{ at: at(win, 6, 0.45), r: [0, 0.425, 0.5, 0.03], label: "Total estimated tax liability", color: C.red }, { at: at(win, 6, 0.62), r: [0, 0.508, 0.5, 0.03], label: "Recommended tax reserve", color: C.green, side: "bottom" }]} />
+          </Swap>
+          <Swap from={L[7].s - 4} to={L[8].s - 4} dir="zoom">
+            <Sheet name="ess-dashboard" {...S("", "DASHBOARD")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 0.5] }, { at: at(win, 7, 0.3), r: [0, 0.02, 1, 0.22] }]} hi={[
+              { at: at(win, 7, 0.36), until: at(win, 7, 0.9), r: kpi(0, 0.25), label: "Revenue" },
+              { at: at(win, 7, 0.46), until: at(win, 7, 0.9), r: kpi(0.25, 0.25) },
+              { at: at(win, 7, 0.56), until: at(win, 7, 0.9), r: kpi(0.5, 0.25), label: "Net profit", color: C.green },
+              { at: at(win, 7, 0.66), until: at(win, 7, 0.9), r: kpi(0.75, 0.25) },
+              { at: at(win, 7, 0.76), r: kpi(0, 0.25, 1), label: "Tax liability", color: C.red, side: "bottom" },
+              { at: at(win, 7, 0.88), r: kpi(0.5, 0.25, 1), label: "Miles", color: C.amber, side: "bottom" },
             ]} />
           </Swap>
-          <Swap from={L[7].s - 4} to={L[8].s - 4}><Sheet name="ess-accountant-export" {...S("", "ACCOUNTANT EXPORT")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 1] }]} /></Swap>
-          <Swap from={L[8].s - 4} dir="zoom"><Sheet name="ess-business-health-snapshot" {...S("", "BUSINESS HEALTH SNAPSHOT")} w={SW.w} h={520} cam={[{ at: 0, r: [0, 0, 1, 1] }]} /></Swap>
+          <Swap from={L[8].s - 4} to={L[9].s - 4}><Sheet name="ess-accountant-export" {...S("", "ACCOUNTANT EXPORT")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 1] }]} /></Swap>
+          <Swap from={L[9].s - 4} dir="zoom"><Sheet name="ess-business-health-snapshot" {...S("", "BUSINESS HEALTH SNAPSHOT")} w={SW.w} h={520} cam={[{ at: 0, r: [0, 0, 1, 1] }]} /></Swap>
         </>
       )}
-      <Streaks at={L[1].s - 6} />
+      <Streaks at={L[2].s - 6} />
     </AbsoluteFill>
   );
 };
@@ -192,7 +211,7 @@ export const Elite: React.FC<{ win: Win }> = ({ win }) => {
     <AbsoluteFill>
       <SpaceBg hue="#4338ca" hue2="#0e7490" />
       <Beat win={win} i={0} until={L[1].s - 4}>
-        <div style={{ display: "flex", alignItems: "center", gap: 80 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 80, opacity: 1 - ap(fr, at(win, 0, 0.5), 8), transform: `scale(${1 - 0.2 * ap(fr, at(win, 0, 0.5), 10)})` }}>
           <Pop at={L[0].s}><Cover tier="Elite" width={360} /></Pop>
           <div style={{ width: 1000 }}>
             <Eyebrow at={L[0].s}>Edition 2</Eyebrow>
@@ -201,16 +220,23 @@ export const Elite: React.FC<{ win: Win }> = ({ win }) => {
               <span style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 150, color: C.cyan, transform: `scale(${pop(fr, at(win, 0, 0.36), 300, 12)})`, display: "inline-block" }}>26</span>
               <span style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 50, color: C.white }}>sheets</span>
             </div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 10 }}>
-              {ELITE_TABS.map((t, i) => {
-                const p = ap(fr, L[0].s + 18 + i * 1.6, 6);
-                return <div key={t} style={{ opacity: p, transform: `scale(${0.5 + 0.5 * p})`, fontFamily: FONT.sans, fontWeight: 600, fontSize: 17, color: C.white, background: "rgba(96,165,250,0.15)", border: "1px solid rgba(147,197,253,0.35)", padding: "5px 11px", borderRadius: 7 }}>{t}</div>;
-              })}
-            </div>
           </div>
         </div>
+        {fr >= at(win, 0, 0.48) && (
+          <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 232px)", gap: 14 }}>
+              {ELITE_TABS.map((t, i) => {
+                const name = "elite-" + t.toLowerCase().replace(/ /g, "-").replace(/[^a-z0-9-]/g, "");
+                const a0 = at(win, 0, 0.5) + (i % 7) + Math.floor(i / 7) * 2;
+                const s = pop(fr, a0, 220, 16);
+                return <div key={t} style={{ opacity: Math.min(1, s * 1.4), transform: `translateY(${(1 - s) * 80}px) scale(${0.7 + 0.3 * s}) rotateX(${(1 - s) * 40}deg)` }}><SheetTile name={name} title={t} w={232} /></div>;
+              })}
+              <div style={{ gridColumn: "span 2", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT.sans, fontWeight: 800, fontSize: 64, color: C.cyan, opacity: ap(fr, at(win, 0, 0.8)) }}>26 sheets</div>
+            </div>
+          </AbsoluteFill>
+        )}
       </Beat>
-      {fr >= L[1].s - 6 && (
+      {fr >= L[1].s - 6 && fr < L[5].s + 6 && (
         <>
           <Steps
             dark
@@ -239,10 +265,30 @@ export const Elite: React.FC<{ win: Win }> = ({ win }) => {
           <Swap from={L[3].s - 4} to={L[4].s - 4}>
             <Sheet name="elite-10-cash-flow-center" {...S("10 Cash Flow Center")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 0.55] }, { at: at(win, 3, 0.5), r: [0, 0.55, 1, 0.45] }]} hi={[{ at: at(win, 3, 0.25), until: at(win, 3, 0.5), r: [0.62, 0.1, 0.18, 0.44], label: "Cumulative cash", color: C.green }]} />
           </Swap>
-          <Swap from={L[4].s - 4} dir="zoom">
+          <Swap from={L[4].s - 4} to={L[5].s - 4} dir="zoom">
             <Sheet name="elite-12-client-profitability" {...S("12 Client Profitability")} w={SW.w} h={SW.h} cam={[{ at: 0, r: [0, 0, 1, 0.32] }]} hi={[{ at: at(win, 4, 0.35), r: [0.4, 0.065, 0.15, 0.25], label: "Revenue" }, { at: at(win, 4, 0.55), r: [0.79, 0.065, 0.11, 0.25], label: "Profit after costs", color: C.green }, { at: at(win, 4, 0.75), r: [0.9, 0.065, 0.1, 0.25], label: "Rank", color: C.cyan, side: "bottom" }]} />
           </Swap>
         </>
+      )}
+      {fr >= L[5].s - 6 && (
+        <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 520px)", gap: 30, marginTop: -40 }}>
+            {[
+              ["elite-05-revenue-center", "05 Revenue Center", 0.02],
+              ["elite-06-expense-center", "06 Expense Center", 0.12],
+              ["elite-07-mileage-center", "07 Mileage Center", 0.22],
+              ["elite-11-monthly-profit-center", "11 Monthly Profit Center", 0.42],
+              ["elite-13-service-profitability", "13 Service Profitability", 0.62],
+              ["elite-19-insights-center", "19 Insights Center", 0.82],
+            ].map(([n, t, p], i) => (
+              <div key={n as string} style={{ position: "relative", width: 520, height: 364 }}>
+                <FlyIn at={at(win, 5, p as number)} from={i % 2 ? "right" : "left"} style={{ left: 0, top: 0 }}>
+                  <SheetTile name={n as string} title={t as string} w={520} />
+                </FlyIn>
+              </div>
+            ))}
+          </div>
+        </AbsoluteFill>
       )}
       <Shockwave at={at(win, 0, 0.36)} x={1000} y={420} />
       <LightLeak at={L[0].s} />

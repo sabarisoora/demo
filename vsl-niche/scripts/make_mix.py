@@ -71,19 +71,19 @@ music *= 0.42 - 0.24 * duck
 # ---------- sfx ----------
 fx = np.zeros(N)
 def whoosh(d=0.45, g=0.4): n = int(d * SR); e = np.sin(np.pi * np.arange(n) / n) ** 2; return lp(rng.standard_normal(n), 0.1) * e * g
-def impact(g=0.9):
+def impact(g=0.6):
     tt = TT(1.6); return (np.sin(2 * np.pi * (38 + 90 * np.exp(-tt * 9)) * tt) * np.exp(-tt * 2.6) + lp(rng.standard_normal(len(tt)), 0.06) * np.exp(-tt * 7) * 0.8 + hp(rng.standard_normal(len(tt)), 0.3) * np.exp(-tt * 30) * 0.4) * g
 def hit(g=0.5): tt = TT(0.5); return (np.sin(2 * np.pi * (60 + 120 * np.exp(-tt * 25)) * tt) * np.exp(-tt * 9) + hp(rng.standard_normal(len(tt)), 0.4) * np.exp(-tt * 40) * 0.5) * g
-def pop(g=0.3, f0=900): tt = TT(0.1); return np.sin(2 * np.pi * (f0 * 0.4 + f0 * np.exp(-tt * 40)) * tt) * np.exp(-tt * 38) * g
+def pop(g=0.22, f0=900): tt = TT(0.1); return np.sin(2 * np.pi * (f0 * 0.4 + f0 * np.exp(-tt * 40)) * tt) * np.exp(-tt * 38) * g
 def ding(f0=1320, g=0.2): tt = TT(1.2); return sum(np.sin(2 * np.pi * f0 * r * tt) * a for r, a in ((1, 1), (2.01, 0.4), (3.02, 0.15))) * np.exp(-tt * 3.5) * g
-def notif(g=0.25): return np.concatenate([ding(1568, g)[: int(0.09 * SR)], ding(2093, g)])
-def stamp(g=0.8): tt = TT(0.45); return (lp(rng.standard_normal(len(tt)), 0.18) * np.exp(-tt * 26) + np.sin(2 * np.pi * 65 * tt) * np.exp(-tt * 9)) * g
+def notif(g=0.18): return np.concatenate([ding(1568, g)[: int(0.09 * SR)], ding(2093, g)])
+def stamp(g=0.5): tt = TT(0.45); return (lp(rng.standard_normal(len(tt)), 0.18) * np.exp(-tt * 26) + np.sin(2 * np.pi * 65 * tt) * np.exp(-tt * 9)) * g
 def glitch(g=0.3):
     tt = TT(0.35); x = np.sign(np.sin(2 * np.pi * 220 * tt * (1 + 3 * (rng.random(len(tt)) > 0.97)))) * (rng.random(len(tt)) > 0.5)
     return hp(x.astype(float), 0.2) * np.exp(-tt * 6) * g
 def shutter(g=0.35): tt = TT(0.12); return hp(rng.standard_normal(len(tt)), 0.4) * (np.exp(-tt * 60) + 0.6 * np.exp(-np.maximum(0, tt - 0.06) * 60) * (tt > 0.06)) * g
 def cash(g=0.3): return np.concatenate([ding(2637, g * 0.7)[: int(0.05 * SR)], ding(3136, g)])
-def alarm(g=0.25):
+def alarm(g=0.15):
     tt = TT(1.0); return np.sign(np.sin(2 * np.pi * (880 + 220 * np.sign(np.sin(2 * np.pi * 6 * tt))) * tt)) * np.exp(-tt * 1.5) * g * 0.4
 def swish(g=0.3): n = int(0.28 * SR); e = np.sin(np.pi * np.arange(n) / n) ** 3; return hp(rng.standard_normal(n), 0.35) * e * g
 def error(g=0.28): tt = TT(0.3); return np.sign(np.sin(2 * np.pi * 140 * tt)) * np.exp(-tt * 8) * g * 0.6
@@ -102,18 +102,17 @@ SFX = {"impact": impact, "hit": hit, "pop": pop, "ding": ding, "notif": notif, "
 for i, p, k in cues:
     l = L[i]; at = fr(l["start"] + (l["end"] - l["start"]) * p)
     if k == "riser": put(fx, riser(), at); continue
-    if k == "impact": put(fx, riser(0.7, 0.18), at - 0.7)
-    put(fx, SFX[k](), at)
+    if k == "impact": put(fx, riser(0.7, 0.1), at - 0.7)
+    g = 0.55 if l["scene"] == "hook" else 1.0  # the hook stays light: voice first
+    put(fx, SFX[k]() * g, at)
 # a whoosh into every scene change
-for sc, st in list(S.items())[1:]: put(fx, whoosh(0.5, 0.35), st - 0.4 - 0.3)
-# captions/kinetic: soft tick on each line start
-for l in L: put(fx, pop(0.06, 1400), fr(l["start"]))
+for sc, st in list(S.items())[1:]: put(fx, whoosh(0.5, 0.2), st - 0.4 - 0.3)
 
-mix = vo * 1.0 + music + fx * 0.6
+mix = vo * 1.0 + music + fx * 0.4
 os.makedirs(f"{ROOT}/deliverables/{N_}/audio", exist_ok=True)
 tmp = f"{ROOT}/public/_raw.wav"
 sf.write(tmp, mix / max(1, np.abs(mix).max()), SR, subtype="PCM_24")
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", tmp, "-af", "loudnorm=I=-14:TP=-1.2:LRA=11", "-ar", str(SR), f"{ROOT}/public/mix-{N_}.wav"], check=True)
 os.remove(tmp)
-for name, x in (("voiceover", vo), ("music", music), ("sfx", fx * 0.6)): sf.write(f"{ROOT}/deliverables/{N_}/audio/{name}.wav", x, SR, subtype="PCM_24")
+for name, x in (("voiceover", vo), ("music", music), ("sfx", fx * 0.4)): sf.write(f"{ROOT}/deliverables/{N_}/audio/{name}.wav", x, SR, subtype="PCM_24")
 print("mix", round(N / SR, 1), "s")
