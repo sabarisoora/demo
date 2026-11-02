@@ -1,0 +1,1401 @@
+{
+ "slug": "dental-practice",
+ "name": "Dental Practice Business Intelligence System™",
+ "short": "dental",
+ "file_ess": "Dental_Practice_Business_Intelligence_System_Essential_2026.xlsx",
+ "file_elite": "Dental_Practice_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 8,
+ "n_elite": 42,
+ "reveal": {
+  "title": "Dental Practice [Business Intelligence] System™",
+  "made": "Made only for [dental practices.]",
+  "chips": [
+   "Formulas",
+   "Dashboards",
+   "Reports",
+   "Tax set-aside",
+   "Sample data included"
+  ]
+ },
+ "who": [
+  [
+   "dental-clinic",
+   "New practice owner",
+   "production + collections"
+  ],
+  [
+   "dental-exam",
+   "Established solo practice",
+   "one view of everything"
+  ],
+  [
+   "woman-office",
+   "Practice manager",
+   "a monthly report"
+  ],
+  [
+   "meeting",
+   "Growth-minded group",
+   "compare providers"
+  ]
+ ],
+ "tiers": [
+  [
+   "Production & collections",
+   "Expenses",
+   "Dashboard + health snapshot",
+   "Tax set-aside estimate"
+  ],
+  [
+   "Providers & hygiene",
+   "Procedure profitability",
+   "Case acceptance & recalls",
+   "Claims, collections & cash"
+  ],
+  [
+   "Both workbooks",
+   "Both Field Guides",
+   "Both Quick Starts",
+   "Start simple, grow"
+  ]
+ ],
+ "guide": {
+  "ess": 34,
+  "elite": 84
+ },
+ "cta": [
+  "Enter this month's production",
+  "See what you kept",
+  "Every month you wait is [another month of guessing.]"
+ ],
+ "end": [
+  "Your schedule shows [what you produced.]",
+  "ProfitIQS shows you [what you keep.]"
+ ],
+ "lines": [
+  [
+   "hook",
+   "A full schedule. Cleanings, two crowns, a root canal, an emergency squeezed in at four.",
+   null,
+   {
+    "t": "notifs",
+    "text": "A full [schedule.]",
+    "head": "PRODUCTION",
+    "items": [
+     [
+      "Preventive · cleaning",
+      "$185.00"
+     ],
+     [
+      "Restorative · crown",
+      "$1,350.00"
+     ],
+     [
+      "Endodontic · root canal",
+      "$1,100.00"
+     ]
+    ],
+    "photo": "dental-clinic"
+   }
+  ],
+  [
+   "hook",
+   "But production isn't collections.",
+   null,
+   {
+    "t": "strike",
+    "from": "Production",
+    "to": "Collections.",
+    "toSize": 170
+   }
+  ],
+  [
+   "hook",
+   "Insurance delays and patient balances let the two drift apart, quietly, every month.",
+   null,
+   {
+    "t": "bars",
+    "text": "Produced vs. [collected.]",
+    "bars": [
+     [
+      "Production",
+      1,
+      "sky"
+     ],
+     [
+      "Collected",
+      0.74,
+      "amber"
+     ],
+     [
+      "Still owed",
+      0.26,
+      "red"
+     ]
+    ],
+    "note": "illustrative"
+   }
+  ],
+  [
+   "hook",
+   "And treatment presented but not accepted? That's revenue that never shows up at all.",
+   null,
+   {
+    "t": "rows",
+    "text": "Revenue that [never shows up.]",
+    "rows": [
+     [
+      "Crown · presented",
+      "ACCEPTED",
+      "green"
+     ],
+     [
+      "Implant · presented",
+      "THINKING ABOUT IT",
+      "amber"
+     ],
+     [
+      "Perio plan · presented",
+      "DECLINED",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "hook",
+   "So here's the question. How much of your production actually turns into [profit?]",
+   null,
+   {
+    "t": "slam",
+    "text": "How much production [becomes profit?]",
+    "photo": "dentist-xray",
+    "size": 96
+   }
+  ],
+  [
+   "hook",
+   "If you run a dental practice, the next few minutes are for you.",
+   null,
+   {
+    "t": "ring",
+    "n": "7",
+    "unit": "MINUTES",
+    "text": "If you run a dental practice — [this is for you.]"
+   }
+  ],
+  [
+   "pain",
+   "Here's how the money side of a dental practice usually works.",
+   null,
+   {
+    "t": "slam",
+    "text": "How the money side [usually works.]",
+    "glitch": 0,
+    "size": 92
+   }
+  ],
+  [
+   "pain",
+   "The schedule lives in your practice software. The costs live in statements and invoices.",
+   null,
+   {
+    "t": "papers",
+    "text": "Costs: [everywhere.]",
+    "label": "LAB INVOICE",
+    "photo": "taxdocs"
+   }
+  ],
+  [
+   "pain",
+   "The practice can be busy, while recall patients quietly stop coming back.",
+   null,
+   {
+    "t": "rows",
+    "text": "Recalls that [quietly slip.]",
+    "icon": "calendar",
+    "rows": [
+     [
+      "6-month recall · J. Smith",
+      "BOOKED",
+      "green"
+     ],
+     [
+      "6-month recall · L. Brown",
+      "OVERDUE",
+      "amber"
+     ],
+     [
+      "6-month recall · R. Wilson",
+      "LAPSED",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Without a side-by-side view, it's hard to compare providers and hygienists fairly.",
+   null,
+   {
+    "t": "bars",
+    "text": "Compare providers [fairly.]",
+    "bars": [
+     [
+      "Dr. A",
+      0.9,
+      "sky"
+     ],
+     [
+      "Dr. B",
+      0.66,
+      "sky"
+     ],
+     [
+      "Hygiene",
+      0.5,
+      "sky"
+     ]
+    ],
+    "q": "Per hour?",
+    "qv": 0.45
+   }
+  ],
+  [
+   "pain",
+   "Some procedure categories carry far more margin than others. Which ones?",
+   null,
+   {
+    "t": "cards",
+    "text": "Which procedures [carry the margin?]",
+    "cards": [
+     [
+      "dental-exam",
+      "Restorative",
+      "green"
+     ],
+     [
+      "aligner",
+      "Orthodontic",
+      "sky"
+     ],
+     [
+      "dental-clinic",
+      "Preventive",
+      "amber"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Outstanding insurance claims and patient balances tie up cash.",
+   null,
+   {
+    "t": "rows",
+    "text": "Claims that [tie up cash.]",
+    "rows": [
+     [
+      "Claim · submitted",
+      "PENDING",
+      "sky"
+     ],
+     [
+      "Claim · 45 days",
+      "OUTSTANDING",
+      "amber"
+     ],
+     [
+      "Patient balance · 90+",
+      "AT RISK",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Then tax time: payroll, supplies, lab costs and equipment, all needing to be organized.",
+   null,
+   {
+    "t": "papers",
+    "text": "Tax time: [scattered everywhere.]",
+    "label": "RECEIPT",
+    "photo": "taxdocs"
+   }
+  ],
+  [
+   "pain",
+   "Your accountant asks for everything. And nothing's in one place.",
+   null,
+   {
+    "t": "slam",
+    "text": "“Send me [everything.]”",
+    "photo": "signing",
+    "glitch": 0.6
+   }
+  ],
+  [
+   "pain",
+   "A full schedule all year, and still not sure what the practice actually kept.",
+   null,
+   {
+    "t": "months",
+    "text": "Kept this year:",
+    "photo": "busy"
+   }
+  ],
+  [
+   "turn",
+   "That's not a work-ethic problem. It's a visibility problem.",
+   null,
+   {
+    "t": "strike",
+    "from": "Work ethic",
+    "to": "Visibility."
+   }
+  ],
+  [
+   "turn",
+   "You already have the data: production, collections, claims, recalls, costs.",
+   null,
+   {
+    "t": "converge",
+    "text": "You already [have the data.]",
+    "labels": [
+     "PROD",
+     "CLAIM",
+     "$",
+     "RECALL",
+     "CASE",
+     "%",
+     "HYGIENE"
+    ],
+    "box": "One place."
+   }
+  ],
+  [
+   "turn",
+   "You just don't have one place that turns it into decisions.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "That's why we built the Dental Practice Business Intelligence System™.",
+   "That's why we built the Dental Practice Business Intelligence System.",
+   null
+  ],
+  [
+   "reveal",
+   "A ready-built Excel system, made only for dental practices.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "Formulas, dashboards and reports are already built in. Tax set-aside too.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "And it ships with sample data, so every dashboard works the moment you open it.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "It's for the new practice owner who wants a clear view of production, collections and costs.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The established solo practice with a busy schedule, but no single view of performance.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The practice manager who reports to the dentist-owner every month.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "And the growth-minded group with several providers, who wants to compare them and plan growth.",
+   null,
+   null
+  ],
+  [
+   "ess",
+   "Let me show you what's inside. Start with Essential: eight sheets.",
+   null,
+   {
+    "t": "cover",
+    "ed": "ess",
+    "n": 8
+   }
+  ],
+  [
+   "ess",
+   "You enter the facts, production, collections and expenses. The workbook does the math.",
+   null,
+   {
+    "t": "wall",
+    "ed": "ess",
+    "text": "You enter the facts. [It does the math.]",
+    "inputs": [
+     "SETUP",
+     "REVENUE ENTRY",
+     "EXPENSE ENTRY"
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Set up once: your country, currency and tax-rate presets.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "SETUP",
+    "label": "Setup",
+    "d": "once",
+    "hi": [
+     [
+      "Country",
+      "Country preset",
+      "cyan",
+      "row"
+     ],
+     [
+      "Tax Reserve Rate % — default",
+      "Tax-rate preset",
+      "green",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Log production and collections by category: preventive, restorative, cosmetic, orthodontics, emergency.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "REVENUE ENTRY",
+    "label": "Revenue Entry",
+    "d": "production + collections",
+    "hi": [
+     [
+      "Production",
+      "Production",
+      "blue",
+      "cell"
+     ],
+     [
+      "Collections",
+      "Collections",
+      "green",
+      "cell"
+     ],
+     [
+      "Category",
+      "Category",
+      "amber",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Log every expense: payroll, rent, insurance, continuing education.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "EXPENSE ENTRY",
+    "label": "Expense Entry",
+    "d": "every expense",
+    "hi": [
+     [
+      "Category",
+      "Category",
+      "amber",
+      "cell"
+     ],
+     [
+      "Vendor#0",
+      "Vendor",
+      "cyan",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ess",
+   "Tax & Deductions works out your recommended tax reserve, and totals every deductible category.",
+   "Tax and Deductions works out your recommended tax reserve, and totals every deductible category.",
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "TAX & DEDUCTIONS",
+    "label": "Tax & Deductions",
+    "d": "reserve + deductions",
+    "hi": [
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "DEDUCTION SUMMARY BY CATEGORY",
+      "Every category",
+      "cyan",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "The Dashboard: collections, production, net profit, your collection rate, and how funded your tax reserve is.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "DASHBOARD",
+    "label": "Dashboard",
+    "d": "one screen",
+    "hi": [
+     [
+      "TOTAL COLLECTIONS",
+      "Collections",
+      "blue",
+      "kpi"
+     ],
+     [
+      "NET PROFIT",
+      "Net profit",
+      "green",
+      "kpi"
+     ],
+     [
+      "TOTAL PRODUCTION",
+      "Production",
+      "cyan",
+      "kpi"
+     ],
+     [
+      "TAX RESERVE FUNDED %",
+      "Reserve funded",
+      "amber",
+      "kpi"
+     ]
+    ],
+    "dir": "zoom"
+   }
+  ],
+  [
+   "ess",
+   "The Accountant Export hands over a clean summary and a document checklist.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "ACCOUNTANT EXPORT",
+    "label": "Accountant Export",
+    "d": "clean summary",
+    "hi": [
+     [
+      "Net Profit",
+      "Summary",
+      "blue",
+      "row"
+     ],
+     [
+      "DOCUMENT CHECKLIST",
+      "Document checklist",
+      "green",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "And the Business Health Snapshot scores profit, cash, tax readiness, expenses and revenue trend.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "BUSINESS HEALTH SNAPSHOT",
+    "label": "Health Snapshot",
+    "d": "scored 0–100",
+    "hi": [
+     [
+      "Profit Status",
+      "5 categories",
+      "cyan",
+      "block"
+     ],
+     [
+      "OVERALL SCORE (0-100)",
+      "Overall score",
+      "green",
+      "row"
+     ]
+    ],
+    "cam": "full"
+   }
+  ],
+  [
+   "elite",
+   "Now, Elite. Forty-two sheets. The full operating system for a dental practice.",
+   null,
+   {
+    "t": "cover",
+    "ed": "elite",
+    "n": 42,
+    "fx": "shock",
+    "fxAt": 0.5
+   }
+  ],
+  [
+   "elite",
+   "Patients, recalls, case acceptance, providers, hygiene, procedures, claims, payroll, supplies, collections, reviews and taxes.",
+   null,
+   {
+    "t": "wall",
+    "ed": "elite",
+    "tags": false,
+    "text": "[42 sheets,] one operating system."
+   }
+  ],
+  [
+   "ops",
+   "It opens on the Executive Dashboard: production, collections, profit margin, case acceptance, new patients, and recall compliance.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "02 Executive Dashboard",
+    "label": "Executive Dashboard",
+    "d": "the whole practice",
+    "hi": [
+     [
+      "PRODUCTION & PROFITABILITY",
+      "Production + profit",
+      "blue",
+      "block"
+     ],
+     [
+      "PATIENTS & CASE ACCEPTANCE",
+      "Patients + case acceptance",
+      "green",
+      "block"
+     ]
+    ],
+    "dir": "zoom"
+   }
+  ],
+  [
+   "ops",
+   "Provider Productivity compares every dentist and hygienist on production, collections, and revenue per hour.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "13 Provider Productivity",
+    "label": "Provider Productivity",
+    "d": "every provider",
+    "hi": [
+     [
+      "Production ($)",
+      "Production",
+      "blue",
+      "cell"
+     ],
+     [
+      "Rev per Hour",
+      "Revenue per hour",
+      "green",
+      "cell"
+     ],
+     [
+      "Collection %",
+      "Collection %",
+      "cyan",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "ops",
+   "Procedure Profitability shows revenue, cost and margin, by category and by procedure code.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "15 Procedure Profitability",
+    "label": "Procedure Profitability",
+    "d": "margin by procedure",
+    "hi": [
+     [
+      "PROFITABILITY BY CATEGORY",
+      "By category",
+      "green",
+      "block"
+     ],
+     [
+      "PROFITABILITY BY PROCEDURE CODE",
+      "By procedure code",
+      "cyan",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "ops",
+   "The Case Acceptance Center tracks every treatment plan presented, and whether it was accepted.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "12 Case Acceptance",
+    "label": "Case Acceptance",
+    "d": "presented vs. accepted",
+    "hi": [
+     [
+      "Case-level presentation",
+      "Presented vs. accepted",
+      "amber",
+      "cell"
+     ],
+     [
+      "Plan ID",
+      "Every plan",
+      "blue",
+      "row"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ops",
+   "The Recall Tracker lists hygiene recall due dates, and who needs reactivating.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "10 Recall Tracker",
+    "label": "Recall Tracker",
+    "d": "due + reactivation",
+    "hi": [
+     [
+      "Hygiene recall due dates",
+      "Recall due dates",
+      "cyan",
+      "cell"
+     ],
+     [
+      "RECALL LIST",
+      "Recall list",
+      "amber",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ops",
+   "Plus new patient sources, hygiene, insurance claims, patient lifetime value and retention.",
+   null,
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Every patient, [every claim.]",
+    "items": [
+     {
+      "tab": "08 New Patient",
+      "label": "New Patients"
+     },
+     {
+      "tab": "14 Hygiene",
+      "label": "Hygiene"
+     },
+     {
+      "tab": "17 Insurance Claims",
+      "label": "Insurance Claims"
+     },
+     {
+      "tab": "31 Patient Retention",
+      "label": "Retention"
+     }
+    ]
+   }
+  ],
+  [
+   "money",
+   "Then, the money side.",
+   null,
+   {
+    "t": "slam",
+    "text": "Then, [the money side.]",
+    "photo": "cash-pile",
+    "size": 110
+   }
+  ],
+  [
+   "money",
+   "The Collections Center puts collections against production, month by month, with your collection rate.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "24 Collections Center",
+    "label": "Collections Center",
+    "d": "vs. production",
+    "hi": [
+     [
+      "Collection Rate",
+      "Collection rate",
+      "green",
+      "cell"
+     ],
+     [
+      "Prior AR Recovered",
+      "AR recovered",
+      "cyan",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "money",
+   "And the Cash Flow Center shows cash in, payroll, supplies, lab costs and equipment, month by month.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "25 Cash Flow Center",
+    "label": "Cash Flow Center",
+    "d": "month by month",
+    "hi": [
+     [
+      "Cash In",
+      "Cash in",
+      "green",
+      "cell"
+     ],
+     [
+      "Lab Costs",
+      "Lab costs",
+      "amber",
+      "cell"
+     ],
+     [
+      "Net Cash Flow",
+      "Net cash flow",
+      "cyan",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "money",
+   "Plus payroll, staff productivity, dental supplies, equipment and marketing ROI.",
+   null,
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Payroll, supplies, [marketing.]",
+    "items": [
+     {
+      "tab": "18 Payroll",
+      "label": "Payroll"
+     },
+     {
+      "tab": "20 Dental Supply",
+      "label": "Supplies"
+     },
+     {
+      "tab": "21 Equipment",
+      "label": "Equipment"
+     },
+     {
+      "tab": "22 Marketing ROI",
+      "label": "Marketing ROI"
+     }
+    ]
+   }
+  ],
+  [
+   "leak",
+   "Then there's the Profit Leak Detector™.",
+   "Then there's the Profit Leak Detector.",
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "28 Profit Leak Detector",
+    "text": "The Profit Leak [Detector™]",
+    "cam": "full",
+    "zoom": false,
+    "hi": [
+     [
+      "PROFIT LEAK SCAN",
+      "Profit leak scan",
+      "amber",
+      "cell",
+      0.2
+     ],
+     [
+      "Declined Case Value",
+      "Declined cases",
+      "red",
+      "row",
+      0.36
+     ],
+     [
+      "No-Show Lost Production",
+      "No-shows",
+      "red",
+      "row",
+      0.5
+     ],
+     [
+      "Missed Recall Reactivation Value",
+      "Missed recalls",
+      "amber",
+      "row",
+      0.66
+     ],
+     [
+      "TOTAL IDENTIFIED PROFIT LEAKAGE",
+      "Total leakage",
+      "red",
+      "row",
+      0.84
+     ]
+    ]
+   }
+  ],
+  [
+   "leak",
+   "It scans for unscheduled treatment, declined cases, no-show lost production, and outstanding claims.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "Plus excess supply cost, receivables past ninety days, and missed recall reactivations.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "And adds it all up into your total identified profit leakage.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "Add a KPI Scorecard, a Business Health Score™, forecasting and benchmarking.",
+   "Add a KPI Scorecard, a Business Health Score, forecasting and benchmarking.",
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Scored, forecast, [benchmarked.]",
+    "items": [
+     {
+      "tab": "26 KPI Scorecard",
+      "label": "KPI Scorecard"
+     },
+     {
+      "tab": "27 Business Health Score",
+      "label": "Health Score™"
+     },
+     {
+      "tab": "29 Forecasting Center",
+      "label": "Forecasting"
+     },
+     {
+      "tab": "33 Benchmarking Center",
+      "label": "Benchmarking"
+     }
+    ]
+   }
+  ],
+  [
+   "leak",
+   "Plus provider rankings, a growth opportunity center, a monthly executive review and a strategic planner.",
+   null,
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Ranked, reviewed, [planned.]",
+    "items": [
+     {
+      "tab": "30 Provider Rankings",
+      "label": "Provider Rankings"
+     },
+     {
+      "tab": "32 Growth",
+      "label": "Growth Opportunities"
+     },
+     {
+      "tab": "34 Monthly",
+      "label": "Monthly Review"
+     },
+     {
+      "tab": "35 Strategic",
+      "label": "Strategic Planner"
+     }
+    ]
+   }
+  ],
+  [
+   "tax",
+   "Then the part every practice owner dreads. Taxes.",
+   null,
+   {
+    "t": "zero",
+    "eyebrow": "The part every practice owner dreads",
+    "big": "TAXES.",
+    "impact": true,
+    "fxAt": 0.2,
+    "fx": "shockred"
+   }
+  ],
+  [
+   "tax",
+   "The Tax Reserve Center works out a recommended reserve, and how much of it you've funded.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "38 Tax Reserve & VAT Center",
+    "label": "Tax Reserve",
+    "d": "what to set aside",
+    "hi": [
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "Reserve Funded %",
+      "Funded %",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "The Deduction Maximizer groups the year's expenses by category, to review with your accountant.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "39 Deduction Maximizer",
+    "label": "Deduction Maximizer",
+    "d": "by category",
+    "hi": [
+     [
+      "Typically Deductible?",
+      "Deductible?",
+      "green",
+      "cell"
+     ],
+     [
+      "Total Deductible",
+      "Total",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "The Tax Readiness Center tracks due dates, and scores how ready your records are.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "40 Tax Readiness Center",
+    "label": "Tax Readiness",
+    "d": "due dates + score",
+    "hi": [
+     [
+      "TAX CALENDAR",
+      "Due dates",
+      "amber",
+      "block"
+     ],
+     [
+      "TAX READINESS SCORE",
+      "Readiness score",
+      "green",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "And the Accountant Summary is a print-ready package to hand over at filing time.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "41 Accountant Summary",
+    "label": "Accountant Summary",
+    "d": "print-ready",
+    "hi": [
+     [
+      "Accountant Package Status:",
+      "Package status",
+      "green",
+      "row"
+     ],
+     [
+      "Net Profit",
+      "P&L summary",
+      "blue",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "guide",
+   "And you're never left guessing how to use it.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Every edition comes with a Quick Start: the exact steps for your first session, your first week, and your first thirty days.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "And a full Field Guide that walks through every sheet, screen by screen.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Thirty-four pages for Essential. Eighty-four for Elite. Including what to do when a number looks wrong.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "Now, honest answers to the questions practice owners ask.",
+   null,
+   {
+    "t": "slam",
+    "text": "Honest answers to [real questions.]",
+    "size": 92
+   }
+  ],
+  [
+   "obj",
+   "“My practice management software has reports.” Good. Keep it.",
+   "My practice management software has reports. Good. Keep it.",
+   {
+    "t": "qa",
+    "q": "My practice management software has reports.",
+    "eyebrow": "Honest answer 1 of 5",
+    "liftAt": 0.7,
+    "chips": [
+     "Keep your practice software",
+     "Production vs. collections",
+     "Case acceptance",
+     "Recalls",
+     "Tax reserve"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "This sits next to it, and pulls the whole business into one view: production, collections, case acceptance, recalls and taxes.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“I'm not an Excel person.” You don't need to be.",
+   "I'm not an Excel person. You don't need to be.",
+   {
+    "t": "qa",
+    "q": "I'm not an Excel person.",
+    "eyebrow": "Honest answer 2 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "Formulas built in",
+     "Formula cells locked",
+     "You enter production, collections and expenses",
+     "Quick Start included"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "Every calculation is already built, and the formula cells are locked, so you can't break them. You just enter production, collections and expenses.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Which edition do I need?” Start with what you'll use.",
+   "Which edition do I need? Start with what you'll use.",
+   {
+    "t": "qa",
+    "q": "Which edition do I need?",
+    "eyebrow": "Honest answer 3 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "Essential: 8 sheets",
+     "Elite: 42 sheets",
+     "Complete: both"
+    ],
+    "big": "Start with what you'll use.",
+    "bigSize": 72
+   }
+  ],
+  [
+   "obj",
+   "Essential tracks production, collections and expenses. Elite adds providers, procedures, claims, recalls and case acceptance.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Will it grow my practice?” No tool can promise that.",
+   "Will it grow my practice? No tool can promise that.",
+   {
+    "t": "qa",
+    "q": "Will it grow my practice?",
+    "eyebrow": "Honest answer 4 of 5",
+    "liftAt": 0.55,
+    "chips": [
+     "Leaks identified",
+     "Opportunities listed",
+     "You decide what to act on"
+    ],
+    "answer": "No tool can promise that."
+   }
+  ],
+  [
+   "obj",
+   "It shows where production is leaking: declined cases, no-shows, missed recalls. What you do about it is up to you.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Is it a subscription?” No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   "Is it a subscription? No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   {
+    "t": "qa",
+    "q": "Is it a subscription?",
+    "eyebrow": "Honest answer 5 of 5",
+    "liftAt": 0.25,
+    "big": "No.",
+    "bigSize": 150,
+    "chips": [
+     "One payment",
+     "No macros",
+     "Plain formulas"
+    ],
+    "foot": "Your numbers stay in your file."
+   }
+  ],
+  [
+   "offer",
+   "So, which edition fits you?",
+   null,
+   null
+  ],
+  [
+   "offer",
+   "Essential, $97: production and collections, expenses, a dashboard, a health snapshot and a tax set-aside estimate.",
+   "Essential, ninety-seven dollars. Production and collections, expenses, a dashboard, a health snapshot and a tax set-aside estimate.",
+   null
+  ],
+  [
+   "offer",
+   "Elite, $197: providers, hygiene, procedures, case acceptance, recalls, claims, payroll, supplies, collections, cash flow and forecasting.",
+   "Elite, one ninety-seven. Providers, hygiene, procedures, case acceptance, recalls, claims, payroll, supplies, collections, cash flow and forecasting.",
+   null
+  ],
+  [
+   "offer",
+   "Or Complete, $249: both workbooks, both Field Guides, both Quick Starts. Start simple, grow into the full system.",
+   "Or Complete, two forty-nine. Both workbooks, both Field Guides, both Quick Starts. Start simple, and grow into the full system.",
+   null
+  ],
+  [
+   "offer",
+   "One-time payment. And a 60-day money-back guarantee, no questions asked.",
+   "One-time payment. And a sixty-day money-back guarantee. No questions asked.",
+   null
+  ],
+  [
+   "cta",
+   "Here's what to do right now.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Pick your edition below this video.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Open it, enter this month's production and collections, and see what the practice actually kept.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Because every month you wait is another month of guessing.",
+   null,
+   null
+  ],
+  [
+   "end",
+   "P.S. Your schedule shows what you produced.",
+   "P S. Your schedule shows what you produced.",
+   null
+  ],
+  [
+   "end",
+   "ProfitIQS shows you what you keep.",
+   "Profit IQS shows you what you keep.",
+   null
+  ]
+ ]
+}

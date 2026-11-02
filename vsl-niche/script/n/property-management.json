@@ -1,0 +1,1270 @@
+{
+ "slug": "property-management",
+ "name": "Property Management Business Intelligence System™",
+ "short": "property management",
+ "file_ess": "Property_Management_Business_Intelligence_System_Essential_2026.xlsx",
+ "file_elite": "Property_Management_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 12,
+ "n_elite": 31,
+ "reveal": {
+  "title": "Property Management [Business Intelligence] System™",
+  "made": "Made only for [property managers.]",
+  "chips": [
+   "Formulas",
+   "Dashboards",
+   "Reports",
+   "Tax set-aside",
+   "Sample data included"
+  ]
+ },
+ "who": [
+  [
+   "house-keys",
+   "Solo property manager",
+   "statements by hand"
+  ],
+  [
+   "apartments",
+   "Growing management company",
+   "per-owner numbers"
+  ],
+  [
+   "handshake",
+   "Owner-relations manager",
+   "defensible statements"
+  ],
+  [
+   "handyman",
+   "Maintenance-heavy portfolio",
+   "which units are worth it"
+  ]
+ ],
+ "tiers": [
+  [
+   "Properties & rent",
+   "Vacancy tracker",
+   "Property P&L + NOI",
+   "Tax set-aside estimate"
+  ],
+  [
+   "Leases & renewals",
+   "Maintenance & owners",
+   "Unit profitability",
+   "Forecast & action center"
+  ],
+  [
+   "Both workbooks",
+   "Both Field Guides",
+   "Both Quick Starts",
+   "Start simple, grow"
+  ]
+ ],
+ "guide": {
+  "ess": 39,
+  "elite": 54
+ },
+ "cta": [
+  "Enter this month's rent",
+  "See what each unit nets",
+  "Every month you wait is [another month of guessing.]"
+ ],
+ "end": [
+  "Your rent roll shows [what came in.]",
+  "ProfitIQS shows you [what you kept.]"
+ ],
+ "lines": [
+  [
+   "hook",
+   "Rent in from forty units. A drain call at the fourplex. A turnover paint job at Unit 6.",
+   null,
+   {
+    "t": "notifs",
+    "text": "Forty doors, [one month.]",
+    "head": "RENT RECEIVED",
+    "items": [
+     [
+      "Magnolia Court · 12 units",
+      "$16,800.00"
+     ],
+     [
+      "Riverside Flats · 6 units",
+      "$8,100.00"
+     ],
+     [
+      "Cedar Park Duplex",
+      "$2,650.00"
+     ]
+    ],
+    "photo": "apartments"
+   }
+  ],
+  [
+   "hook",
+   "Then the first of the month: an owner statement for every owner. Built by hand.",
+   null,
+   {
+    "t": "papers",
+    "text": "Owner statements, [by hand.]",
+    "label": "STATEMENT",
+    "photo": "taxdocs"
+   }
+  ],
+  [
+   "hook",
+   "And when your fee income blends in with owner rent, it's hard to see what your own business actually earns.",
+   null,
+   {
+    "t": "split",
+    "left": [
+     "Rent collected",
+     [
+      "Owner money",
+      "Passes through",
+      "Looks like revenue"
+     ]
+    ],
+    "right": [
+     "What you earn",
+     [
+      "Management fees",
+      "Leasing fees",
+      "Your real margin"
+     ]
+    ],
+    "rightAt": 0.55
+   }
+  ],
+  [
+   "hook",
+   "So here's the question. Which units are actually worth [managing?]",
+   null,
+   {
+    "t": "slam",
+    "text": "Which units are [worth managing?]",
+    "photo": "apt-living",
+    "size": 100
+   }
+  ],
+  [
+   "hook",
+   "A lease that expires without a renewal conversation turns into an unplanned vacancy.",
+   null,
+   {
+    "t": "rows",
+    "text": "Leases that [slip past.]",
+    "icon": "calendar",
+    "rows": [
+     [
+      "Unit 2 · lease",
+      "CURRENT",
+      "green"
+     ],
+     [
+      "Unit 1 · lease",
+      "RENEWAL DUE",
+      "amber"
+     ],
+     [
+      "Unit 5 · lease",
+      "VACANT",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "hook",
+   "If you run a property management company, the next few minutes are for you.",
+   null,
+   {
+    "t": "ring",
+    "n": "7",
+    "unit": "MINUTES",
+    "text": "If you run a property management company — [this is for you.]"
+   }
+  ],
+  [
+   "pain",
+   "Here's how the money side of property management usually works.",
+   null,
+   {
+    "t": "slam",
+    "text": "How the money side [usually works.]",
+    "glitch": 0,
+    "size": 92
+   }
+  ],
+  [
+   "pain",
+   "Rent lives in one system. Work orders in another. Vendor invoices in your inbox.",
+   null,
+   {
+    "t": "phone",
+    "text": "Numbers in [three places.]",
+    "items": [
+     [
+      "RENT PORTAL",
+      "Payments"
+     ],
+     [
+      "WORK ORDERS",
+      "Repairs"
+     ],
+     [
+      "INBOX",
+      "Vendor bills"
+     ]
+    ],
+    "photo": "house-keys"
+   }
+  ],
+  [
+   "pain",
+   "An empty unit costs lost rent every day, and owners will ask about it.",
+   null,
+   {
+    "t": "counter",
+    "to": 6875,
+    "prefix": "$",
+    "text": "Vacancy cost, [every month.]",
+    "eyebrow": "Lost rent per month",
+    "color": "red",
+    "note": "illustrative"
+   }
+  ],
+  [
+   "pain",
+   "Repairs get coordinated and paid. The total cost per unit rarely gets added up.",
+   null,
+   {
+    "t": "rows",
+    "text": "Repairs, [never totaled.]",
+    "icon": "alert",
+    "rows": [
+     [
+      "Clogged drain · Unit 6",
+      "$185",
+      "amber"
+     ],
+     [
+      "Turnover paint · Unit 1",
+      "$1,240",
+      "amber"
+     ],
+     [
+      "Water heater · Unit 3",
+      "$1,650",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Some properties take more maintenance and owner attention than their fees justify.",
+   null,
+   {
+    "t": "bars",
+    "text": "Worth [the attention?]",
+    "bars": [
+     [
+      "Property A",
+      0.9,
+      "green"
+     ],
+     [
+      "Property B",
+      0.6,
+      "sky"
+     ],
+     [
+      "Property C",
+      0.22,
+      "red"
+     ]
+    ],
+    "q": "NOI?",
+    "qv": 0.4
+   }
+  ],
+  [
+   "pain",
+   "Late rent, and balances owed, while vendors still need paying.",
+   null,
+   {
+    "t": "rows",
+    "text": "Rent [still owed.]",
+    "rows": [
+     [
+      "Unit 6 · Riverside",
+      "CURRENT",
+      "sky"
+     ],
+     [
+      "Unit 1 · Birchwood",
+      "LATE",
+      "amber"
+     ],
+     [
+      "Unit 6 · Stonebridge",
+      "OVERDUE",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Your accountant asks for everything. And nothing's in one place.",
+   null,
+   {
+    "t": "slam",
+    "text": "“Send me [everything.]”",
+    "photo": "signing",
+    "glitch": 0.6
+   }
+  ],
+  [
+   "pain",
+   "Busy every month, and still not sure what the business actually kept.",
+   null,
+   {
+    "t": "months",
+    "text": "Kept this year:",
+    "photo": "apartments"
+   }
+  ],
+  [
+   "turn",
+   "That's not a work-ethic problem. It's a visibility problem.",
+   null,
+   {
+    "t": "strike",
+    "from": "Work ethic",
+    "to": "Visibility."
+   }
+  ],
+  [
+   "turn",
+   "You already have the data: rent rolls, leases, work orders, owner statements.",
+   null,
+   {
+    "t": "converge",
+    "text": "You already [have the data.]",
+    "labels": [
+     "RENT",
+     "LEASE",
+     "$",
+     "UNIT",
+     "OWNER",
+     "%",
+     "WORK ORDER"
+    ],
+    "box": "One place."
+   }
+  ],
+  [
+   "turn",
+   "You just don't have one place that turns it into decisions.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "That's why we built the Property Management Business Intelligence System™.",
+   "That's why we built the Property Management Business Intelligence System.",
+   null
+  ],
+  [
+   "reveal",
+   "A ready-built Excel system, made only for property managers.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "Formulas, dashboards and reports are already built in. Tax set-aside too.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "And it ships with sample data, so every dashboard works the moment you open it.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "It's for the solo property manager handling leasing, maintenance and owner statements personally.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The growing management company adding doors faster than its numbers can keep up.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The owner-relations manager who wants every statement clean and easy to defend.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "And the maintenance-heavy manager who wants to know which units are worth keeping.",
+   null,
+   null
+  ],
+  [
+   "ess",
+   "Let me show you what's inside. Start with Essential: twelve sheets.",
+   null,
+   {
+    "t": "cover",
+    "ed": "ess",
+    "n": 12
+   }
+  ],
+  [
+   "ess",
+   "You enter the facts: properties, rent and expenses. The workbook does the math.",
+   null,
+   {
+    "t": "wall",
+    "ed": "ess",
+    "text": "You enter the facts. [It does the math.]",
+    "inputs": [
+     "SETUP",
+     "PROPERTY_SETUP",
+     "RENT_ENTRY",
+     "EXPENSE_ENTRY",
+     "VACANCY_TRACKER"
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Set up each property once: type, address, units.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "PROPERTY_SETUP",
+    "label": "Property Setup",
+    "d": "once",
+    "hi": [
+     [
+      "Property ID",
+      "Every property",
+      "blue",
+      "row"
+     ],
+     [
+      "Type",
+      "Type",
+      "cyan",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ess",
+   "Log rent by property, and expenses as they come in.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "RENT_ENTRY",
+    "label": "Rent Entry",
+    "d": "every payment",
+    "hi": [
+     [
+      "Property",
+      "Property",
+      "blue",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ess",
+   "The Vacancy Tracker shows every unit's status and days vacant.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "VACANCY_TRACKER",
+    "label": "Vacancy Tracker",
+    "d": "days vacant",
+    "hi": [
+     [
+      "Days Vacant",
+      "Days vacant",
+      "red",
+      "cell"
+     ],
+     [
+      "Status",
+      "Status",
+      "amber",
+      "cell"
+     ]
+    ],
+    "cam": "full"
+   }
+  ],
+  [
+   "ess",
+   "The Property P&L builds net operating income, and cash flow after debt service.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "PROPERTY_PNL",
+    "label": "Property P&L",
+    "d": "NOI + cash flow",
+    "hi": [
+     [
+      "NET OPERATING INCOME",
+      "NOI",
+      "green",
+      "block"
+     ],
+     [
+      "Cash Flow (after debt service):",
+      "Cash flow after debt",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "And the Dashboard: occupancy, vacancy rate, NOI and margin, outstanding rent, and lost revenue.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "DASHBOARD",
+    "label": "Dashboard",
+    "d": "one screen",
+    "hi": [
+     [
+      "Occupancy %",
+      "Occupancy",
+      "blue",
+      "kpi"
+     ],
+     [
+      "NOI Margin",
+      "NOI margin",
+      "green",
+      "kpi"
+     ],
+     [
+      "Outstanding Rent",
+      "Outstanding rent",
+      "amber",
+      "kpi"
+     ],
+     [
+      "Total Lost Revenue",
+      "Lost revenue",
+      "red",
+      "kpi"
+     ]
+    ],
+    "dir": "zoom"
+   }
+  ],
+  [
+   "ess",
+   "Plus a tax set-aside, an accountant export, and a health snapshot.",
+   null,
+   {
+    "t": "mini",
+    "ed": "ess",
+    "text": "Taxes, [handled.]",
+    "items": [
+     {
+      "tab": "TAX & DEDUCTIONS",
+      "label": "Tax & Deductions"
+     },
+     {
+      "tab": "ACCOUNTANT EXPORT",
+      "label": "Accountant Export"
+     },
+     {
+      "tab": "BUSINESS HEALTH SNAPSHOT",
+      "label": "Health Snapshot"
+     }
+    ]
+   }
+  ],
+  [
+   "elite",
+   "Now, Elite. Thirty-one sheets. The full operating system for a management company.",
+   null,
+   {
+    "t": "cover",
+    "ed": "elite",
+    "n": 31,
+    "fx": "shock",
+    "fxAt": 0.5
+   }
+  ],
+  [
+   "elite",
+   "Properties, tenants, leases, vacancy, maintenance, owners, rent, expenses, P&L, unit profitability, forecasts and taxes.",
+   null,
+   {
+    "t": "wall",
+    "ed": "elite",
+    "tags": false,
+    "text": "[31 sheets,] one operating system."
+   }
+  ],
+  [
+   "ops",
+   "It opens on the Dashboard: properties, units, occupancy, NOI, vacancy cost per month, collection rate and your health score.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "02 Executive Dashboard",
+    "label": "Executive Dashboard",
+    "d": "the whole portfolio",
+    "hi": [
+     [
+      "OCCUPANCY",
+      "Occupancy",
+      "blue",
+      "kpi"
+     ],
+     [
+      "NOI (12MO)",
+      "NOI",
+      "green",
+      "kpi"
+     ],
+     [
+      "VACANCY COST/MO",
+      "Vacancy cost",
+      "red",
+      "kpi"
+     ],
+     [
+      "COLLECTION RATE",
+      "Collection rate",
+      "cyan",
+      "kpi"
+     ]
+    ],
+    "dir": "zoom"
+   }
+  ],
+  [
+   "ops",
+   "The Lease Tracker shows every lease end date, days until expiration, and a renewal alert.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "06 Lease Tracker",
+    "label": "Lease Tracker",
+    "d": "renewal alerts",
+    "hi": [
+     [
+      "Days Until",
+      "Days until expiration",
+      "amber",
+      "cell"
+     ],
+     [
+      "Renewal Status",
+      "Renewal status",
+      "green",
+      "cell"
+     ],
+     [
+      "Alert",
+      "Alert",
+      "red",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "ops",
+   "The Vacancy Tracker puts a dollar figure on every empty unit: days vacant, and lost revenue.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "07 Vacancy Tracker",
+    "label": "Vacancy Tracker",
+    "d": "lost revenue",
+    "hi": [
+     [
+      "Days Vacant",
+      "Days vacant",
+      "amber",
+      "cell"
+     ],
+     [
+      "Lost Revenue",
+      "Lost revenue",
+      "red",
+      "cell"
+     ]
+    ],
+    "cam": "full"
+   }
+  ],
+  [
+   "ops",
+   "The Maintenance Tracker logs every work order: priority, vendor, cost and response time.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "08 Maintenance Tracker",
+    "label": "Maintenance Tracker",
+    "d": "every work order",
+    "hi": [
+     [
+      "Cost",
+      "Cost",
+      "red",
+      "cell"
+     ],
+     [
+      "Response (Days)",
+      "Response time",
+      "cyan",
+      "cell"
+     ]
+    ],
+    "cam": "full"
+   }
+  ],
+  [
+   "ops",
+   "Unit Profitability ranks every single unit by its NOI.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "16 Unit Profitability",
+    "label": "Unit Profitability",
+    "d": "ranked by NOI",
+    "hi": [
+     [
+      "UNIT-LEVEL PROFITABILITY RANKING",
+      "Every unit ranked",
+      "green",
+      "cell"
+     ],
+     [
+      "Rank",
+      "Rank",
+      "cyan",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "ops",
+   "And the Owner Tracker and Owner Analytics Center keep every owner's numbers clean and separate.",
+   null,
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Every owner, [clean and separate.]",
+    "items": [
+     {
+      "tab": "09 Owner Tracker",
+      "label": "Owner Tracker"
+     },
+     {
+      "tab": "22 Owner Analytics",
+      "label": "Owner Analytics"
+     },
+     {
+      "tab": "14 Property P&L",
+      "label": "Property P&L"
+     }
+    ]
+   }
+  ],
+  [
+   "money",
+   "Then, the money side.",
+   null,
+   {
+    "t": "slam",
+    "text": "Then, [the money side.]",
+    "photo": "cash-pile",
+    "size": 110
+   }
+  ],
+  [
+   "money",
+   "Accounts Receivable lists every rent charge with a real balance owed.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "15 Accounts Receivable",
+    "label": "Accounts Receivable",
+    "d": "balances owed",
+    "hi": [
+     [
+      "Total Outstanding",
+      "Total outstanding",
+      "red",
+      "cell"
+     ],
+     [
+      "Tenant",
+      "Tenant",
+      "amber",
+      "cell"
+     ]
+    ],
+    "cam": "full"
+   }
+  ],
+  [
+   "money",
+   "And the Cashflow Forecast projects best, expected and worst cases, from assumptions you can edit.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "19 Cashflow Forecast",
+    "label": "Cashflow Forecast",
+    "d": "3 scenarios",
+    "hi": [
+     [
+      "FORECAST ASSUMPTIONS (EDITABLE)",
+      "Editable assumptions",
+      "cyan",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "risk",
+   "Then there's the Action Center.",
+   null,
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "21 Action Center",
+    "text": "The Action [Center]",
+    "hi": [
+     [
+      "TOP 5 RISKS",
+      "Top 5 risks",
+      "red",
+      "cell",
+      0.3
+     ],
+     [
+      "Severity",
+      "Severity",
+      "amber",
+      "cell",
+      0.55
+     ],
+     [
+      "TOP 5 OPPORTUNITIES",
+      "Top 5 opportunities",
+      "green",
+      "cell",
+      0.8
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "risk",
+   "It lists your top five risks, like vacancy carrying cost and leases expiring in the next sixty days, each with a severity.",
+   null,
+   null
+  ],
+  [
+   "risk",
+   "And your top five opportunities, with what to do about them.",
+   null,
+   null
+  ],
+  [
+   "risk",
+   "Plus a KPI command center, a portfolio health score, and benchmarks against industry figures.",
+   null,
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Scored and [benchmarked.]",
+    "items": [
+     {
+      "tab": "17 KPI Command",
+      "label": "KPI Command Center"
+     },
+     {
+      "tab": "18 Business Health",
+      "label": "Health Score"
+     },
+     {
+      "tab": "20 Benchmarks",
+      "label": "Benchmarks"
+     }
+    ]
+   }
+  ],
+  [
+   "tax",
+   "Then the part every property manager dreads. Taxes.",
+   null,
+   {
+    "t": "zero",
+    "eyebrow": "The part every property manager dreads",
+    "big": "TAXES.",
+    "impact": true,
+    "fxAt": 0.2,
+    "fx": "shockred"
+   }
+  ],
+  [
+   "tax",
+   "The Tax Reserve Center works out a recommended reserve, and how much of it you've funded.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "24 Tax Reserve & VAT Center",
+    "label": "Tax Reserve",
+    "d": "what to set aside",
+    "hi": [
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "Reserve Funded %",
+      "Funded %",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "The Deduction Maximizer groups the year's expenses by category, to review with your accountant.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "25 Deduction Maximizer",
+    "label": "Deduction Maximizer",
+    "d": "by category",
+    "hi": [
+     [
+      "Deductible expense categories",
+      "Deductible categories",
+      "green",
+      "cell"
+     ],
+     [
+      "TOTAL DEDUCTIBLE",
+      "Total",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "The Tax Readiness Center tracks due dates, and scores how ready your records are.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "26 Tax Readiness Center",
+    "label": "Tax Readiness",
+    "d": "due dates + score",
+    "hi": [
+     [
+      "5 automatic filing-readiness checks",
+      "5 automatic checks",
+      "amber",
+      "cell"
+     ],
+     [
+      "TAX READINESS SCORE",
+      "Readiness score",
+      "green",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "And the Accountant Summary is a print-ready package to hand over at filing time.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "27 Accountant Summary",
+    "label": "Accountant Summary",
+    "d": "print-ready",
+    "hi": [
+     [
+      "Net Profit",
+      "P&L summary",
+      "blue",
+      "row"
+     ],
+     [
+      "DOCUMENT CHECKLIST",
+      "Document checklist",
+      "green",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "guide",
+   "And you're never left guessing how to use it.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Every edition comes with a Quick Start: the exact steps for your first session, your first week, and your first thirty days.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "And a full Field Guide that walks through every sheet, screen by screen.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Thirty-nine pages for Essential. Fifty-four for Elite. Including what to do when a number looks wrong.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "Now, honest answers to the questions property managers ask.",
+   null,
+   {
+    "t": "slam",
+    "text": "Honest answers to [real questions.]",
+    "size": 92
+   }
+  ],
+  [
+   "obj",
+   "“My property management software already does this.” Good. Keep it.",
+   "My property management software already does this. Good. Keep it.",
+   {
+    "t": "qa",
+    "q": "My property management software already does this.",
+    "eyebrow": "Honest answer 1 of 5",
+    "liftAt": 0.7,
+    "chips": [
+     "Keep your PM software",
+     "Unit profitability",
+     "Vacancy cost",
+     "Owner analytics",
+     "Tax reserve"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "This sits next to it, and pulls the whole business into one view: unit profitability, vacancy cost, owner numbers and taxes.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“I'm not an Excel person.” You don't need to be.",
+   "I'm not an Excel person. You don't need to be.",
+   {
+    "t": "qa",
+    "q": "I'm not an Excel person.",
+    "eyebrow": "Honest answer 2 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "Formulas built in",
+     "Elite: formula cells locked",
+     "You enter rent and expenses",
+     "Quick Start included"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "Every calculation is already built. In Elite, the formula cells are locked, so you can't break them. You just enter rent and expenses.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“I only manage a handful of doors.” Then start with Essential.",
+   "I only manage a handful of doors. Then start with Essential.",
+   {
+    "t": "qa",
+    "q": "I only manage a handful of doors.",
+    "eyebrow": "Honest answer 3 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "12 sheets",
+     "Rent + expenses",
+     "Vacancy + P&L",
+     "Go Elite as you grow"
+    ],
+    "big": "Start with Essential.",
+    "bigSize": 80
+   }
+  ],
+  [
+   "obj",
+   "Twelve sheets: properties, rent, expenses, vacancy, a property P&L and a dashboard. Move up to Elite as you add doors and owners.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Will it fill my vacancies?” No tool can promise that.",
+   "Will it fill my vacancies? No tool can promise that.",
+   {
+    "t": "qa",
+    "q": "Will it fill my vacancies?",
+    "eyebrow": "Honest answer 4 of 5",
+    "liftAt": 0.55,
+    "chips": [
+     "Vacancy cost in dollars",
+     "Lease renewal alerts",
+     "You act first"
+    ],
+    "answer": "No tool can promise that."
+   }
+  ],
+  [
+   "obj",
+   "It shows what each vacancy costs, and which leases are coming up, so you can act before a unit sits empty.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Is it a subscription?” No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   "Is it a subscription? No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   {
+    "t": "qa",
+    "q": "Is it a subscription?",
+    "eyebrow": "Honest answer 5 of 5",
+    "liftAt": 0.25,
+    "big": "No.",
+    "bigSize": 150,
+    "chips": [
+     "One payment",
+     "No macros",
+     "Plain formulas"
+    ],
+    "foot": "Your numbers stay in your file."
+   }
+  ],
+  [
+   "offer",
+   "So, which edition fits you?",
+   null,
+   null
+  ],
+  [
+   "offer",
+   "Essential, $97: properties, rent, expenses, vacancy, a property P&L, a dashboard and a tax set-aside estimate.",
+   "Essential, ninety-seven dollars. Properties, rent, expenses, vacancy, a property P&L, a dashboard and a tax set-aside estimate.",
+   null
+  ],
+  [
+   "offer",
+   "Elite, $197: tenants, leases, vacancy cost, maintenance, owners, unit profitability, receivables, a cash flow forecast and an action center.",
+   "Elite, one ninety-seven. Tenants, leases, vacancy cost, maintenance, owners, unit profitability, receivables, a cash flow forecast and an action center.",
+   null
+  ],
+  [
+   "offer",
+   "Or Complete, $249: both workbooks, both Field Guides, both Quick Starts. Start simple, grow into the full system.",
+   "Or Complete, two forty-nine. Both workbooks, both Field Guides, both Quick Starts. Start simple, and grow into the full system.",
+   null
+  ],
+  [
+   "offer",
+   "One-time payment. And a 60-day money-back guarantee, no questions asked.",
+   "One-time payment. And a sixty-day money-back guarantee. No questions asked.",
+   null
+  ],
+  [
+   "cta",
+   "Here's what to do right now.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Pick your edition below this video.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Open it, enter this month's rent, and see what each unit actually nets.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Because every month you wait is another month of guessing.",
+   null,
+   null
+  ],
+  [
+   "end",
+   "P.S. Your rent roll shows what came in.",
+   "P S. Your rent roll shows what came in.",
+   null
+  ],
+  [
+   "end",
+   "ProfitIQS shows you what you kept.",
+   "Profit IQS shows you what you kept.",
+   null
+  ]
+ ]
+}

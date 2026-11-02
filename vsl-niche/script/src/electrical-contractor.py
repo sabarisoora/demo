@@ -1,0 +1,72 @@
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _common import *
+
+D = {
+ "name": "Electrical Contractor Business Intelligence System™", "short": "electrical",
+ "title": "Electrical Contractor [Business Intelligence] System™", "aud": "electrical contractors", "aud_short": "electrical contractors", "people": "electrical contractors",
+ "file_ess": "Electrical_Contractor_Business_Intelligence_System_Essential_2026.xlsx", "file_elite": "Electrical_Contractor_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 8, "n_elite": 24, "guide": (41, 71), "dreads": "contractor",
+ "hook": [
+  ["A panel upgrade on Monday. A rewire on Wednesday. A commercial project that runs all month.", {"t": "notifs", "text": "Booked [solid.]", "head": "JOB INVOICED", "items": [["Panel upgrade", "$3,400.00"], ["Rewire", "$7,850.00"], ["Commercial project", "$24,600.00"]], "photo": "electrician"}],
+  ["The quote looked great. Then the materials landed.", {"t": "bars", "text": "Then [the materials landed.]", "bars": [["Quoted margin", 1, "green"], ["+ Materials", 0.62, "amber"], ["+ Labor overrun", 0.34, "red"]], "q": "Kept", "qv": 0.3}],
+  ["So here's the question. Which of your jobs actually made you [money?]", {"t": "slam", "text": "Which jobs actually [made you money?]", "photo": "electrician2", "size": 100}],
+  ["Material and labor costs that arrive after the quote can erase a job's margin.", {"t": "rows", "text": "Costs that [arrive late.]", "rows": [["Quote sent", "28% MARGIN", "green"], ["Wire + breakers landed", "16% MARGIN", "amber"], ["Extra labor day", "4% MARGIN", "red"]]}],
+  ["And if you only look at the bank balance, you never see which jobs did it.", {"t": "slam", "text": "The bank balance [doesn't say which job.]", "photo": "cash-count", "size": 88}],
+  ring("an electrical contracting business", "an electrical business"),
+ ],
+ "pain": [
+  money_side_line("electrical contracting"),
+  ["Jobs live in your field app. Receipts for wire and breakers live in the van.", {"t": "papers", "text": "Receipts: [the van.]", "label": "SUPPLY", "photo": "tools"}],
+  ["You know which electrician feels fastest. Not whose hours produce the most revenue.", {"t": "bars", "text": "Fastest isn't [most profitable.]", "bars": [["Electrician A", 0.9, "sky"], ["Electrician B", 0.6, "sky"], ["Electrician C", 0.75, "sky"]], "q": "Most revenue?", "qv": 0.5}],
+  ["Leads come in from referrals, Google, trade shows. Which ones turn into jobs?", {"t": "cards", "text": "Which leads [become jobs?]", "cards": [["office-open", "Referral", "green"], ["analytics", "Google Ads", "sky"], ["meeting", "Trade show", "amber"]]}],
+  ["Some customers bring steady, profitable work. Others don't. Without numbers, they all look the same.", {"t": "split", "left": ["Gut feel", ["Big customer = good", "Busy = profitable", "All look the same"]], "right": ["With numbers", ["Lifetime revenue", "Margin per job", "Who pays on time"]], "rightAt": 0.55}],
+  ["Invoices age past thirty, sixty, ninety days, while payroll and suppliers are still due.", {"t": "rows", "text": "Unpaid. [Payroll still due.]", "rows": [["INV-3105 · Panel upgrade", "30 DAYS", "sky"], ["INV-3112 · Rewire", "60 DAYS", "amber"], ["INV-3120 · Commercial", "90+ DAYS", "red"]]}],
+  ["Then tax time: materials, vans, tools and payroll costs, scattered everywhere.", {"t": "papers", "text": "Tax time: [scattered everywhere.]", "label": "RECEIPT", "photo": "taxdocs"}],
+  send_everything(),
+  months_line(),
+ ],
+ "turn2": "You already have the data: jobs, invoices, leads, receipts.",
+ "labels": ["JOB", "INVOICE", "$", "LEAD", "WIRE", "%", "PERMIT"],
+ "who": [["electrician", "Owner-electrician", "on the tools all day"], ["electrician3", "Growing service shop", "who produces what"], ["blueprint", "Project-focused contractor", "which bids really pay"], ["woman-office", "Office manager", "invoicing + receivables"]],
+ "who_lines": ["It's for the owner-electrician who's still on the tools most days, and invoices at night.", "The growing service shop with several electricians, and no side-by-side view of who produces what.", "The project-focused contractor who bids larger jobs, and needs to know which ones pay.", "And the office manager handling invoicing and receivables, who wants a clear monthly picture."],
+ "ess_wall": "You enter the facts, jobs and expenses. The workbook does the math.",
+ "inputs": ["SETUP", "JOB REVENUE ENTRY", "EXPENSE ENTRY"],
+ "ess_tour": [
+  setup_line(),
+  ["Log every job by type: service calls, panel upgrades, rewires, commercial projects.", S("ess", "JOB REVENUE ENTRY", "Job Revenue Entry", "every job", [["Job Type", "Job type", "blue", "cell"]], minW=0.8)],
+  ["Log every expense, including permits and inspections, tools, and insurance and bonding.", S("ess", "EXPENSE ENTRY", "Expense Entry", "every expense", [["Category", "Category", "amber", "cell"], ["Vendor", "Vendor", "cyan", "cell"]], minW=0.8)],
+ ] + ess_tail(tax_cost=("Job Materials + Labor Cost", "Materials + labor"), tax_line="Tax & Deductions separates job materials and labor from overhead, and works out your tax reserve."),
+ "elite_tag": "The full operating system for an electrical contractor.",
+ "elite_wall": "Leads, electricians, jobs, revenue, expenses, customers, receivables, cash, scorecards and taxes.",
+ "sections": [
+  ("ops", [
+   ["It opens on the Executive Dashboard: revenue, net profit, gross margin, receivables, and cash position.", S("elite", "02 Executive Dashboard", "Executive Dashboard", "the whole company", [["TOTAL REVENUE", "Revenue", "blue", "kpi"], ["NET PROFIT", "Net profit", "green", "kpi"], ["GROSS MARGIN %", "Gross margin", "cyan", "kpi"], ["AR OUTSTANDING $", "Receivables", "amber", "kpi"], ["CASH POSITION", "Cash", "violet", "kpi"]], dir="zoom")],
+   ["The Lead Tracker records every lead and its source: referral, Google Ads, trade show, website.", S("elite", "04 Lead Tracker", "Lead Tracker", "every lead", [["Source", "Lead source", "blue", "cell"]], minW=0.8)],
+   ["Electrician Setup holds each person's hourly cost, billable rate and monthly target.", S("elite", "05 Electrician Setup", "Electrician Setup", "cost vs. billable", [["Hourly Cost", "Hourly cost", "amber", "cell"], ["Billable Rate", "Billable rate", "green", "cell"], ["Monthly Target", "Monthly target", "cyan", "cell"]])],
+   ["And Electrician Performance compares jobs, revenue, labor hours, revenue per hour and average margin.", S("elite", "07 Electrician Performance", "Electrician Performance", "real output", [["Total Revenue", "Revenue", "blue", "cell"], ["Revenue / Labor", "Revenue per hour", "green", "cell"], ["Avg Job Margin %", "Avg margin", "cyan", "cell"]])],
+   ["Job Management tracks every job by type, from service calls to new construction.", S("elite", "06 Job Management", "Job Management", "every job", [["Job Type", "Job type", "violet", "cell"]], minW=0.8)],
+   ["Plus a revenue tracker, an expense tracker, a customer database and customer analytics.", mini("Every invoice, [every customer.]", [("08 Revenue", "Revenue Tracker"), ("09 Expense", "Expense Tracker"), ("10 Customer Database", "Customers"), ("18 Customer Analytics", "Customer Analytics")])],
+  ]),
+  ("money", [
+   money_slam(),
+   ["AR Aging lists every unpaid or partly paid invoice, with balance due, days overdue, and an aging bucket.", S("elite", "11 AR Aging", "AR Aging", "days overdue", [["Balance Due", "Balance due", "amber", "cell"], ["Days Overdue", "Days overdue", "red", "cell"], ["Aging Bucket", "Aging bucket", "violet", "cell"]])],
+   ["The Cash Flow Center shows cash received, costs and expenses, net, and your running balance, month by month.", S("elite", "12 Cash Flow Center", "Cash Flow Center", "month by month", [["Inflow (Cash", "Cash in", "green", "cell"], ["Outflow (Costs +", "Cash out", "red", "cell"], ["Running Balance", "Running balance", "cyan", "cell"]])],
+  ]),
+ ],
+ "leak": {"hi": [["LOW-MARGIN JOBS (MARGIN BELOW 15%)", "Jobs under 15% margin", "red", "cell", 0.25], ["Margin %", "Margin", "amber", "cell", 0.45], ["Possible Cause", "Possible cause", "cyan", "cell", 0.65], ["Recommended Action", "Recommended action", "green", "cell", 0.85]],
+          "lines": ["It automatically flags every job with a margin below fifteen percent.", "And shows what drove it, like materials cost or labor.", "Each with a possible cause, and a recommended action."]},
+ "objs": [
+  obj_app("My field service app already has reports.", "margins, electricians, receivables, cash and taxes", ["Keep your field app", "Margin by job", "Electrician output", "AR aging", "Tax reserve"]),
+  obj_excel(),
+  {"q": "I'm a one-person shop.", "a1": "Then start with Essential.", "a2": "Eight sheets: jobs, expenses, a dashboard and a tax set-aside. Move up to Elite when you add electricians.", "big": "Start with Essential.", "bigSize": 80, "chips": ["8 sheets", "Jobs + expenses", "Dashboard + tax set-aside", "Go Elite when you grow"]},
+  {"q": "Will it make my jobs more profitable?", "a1": "No tool can promise that.", "a2": "It shows you which jobs fell below fifteen percent margin, and why, so you can decide what to change.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["Low-margin jobs flagged", "Possible cause shown", "You decide the fix"]},
+ ],
+ "offer_ess": "job revenue, expenses, a dashboard, a health snapshot and a tax set-aside estimate",
+ "offer_elite": "leads, electricians, job management, customers, AR aging, cash flow, scorecards and forecasting",
+ "tiers": [["Job revenue & expenses", "Dashboard + health snapshot", "Tax set-aside estimate", "Accountant export"], ["Leads & job management", "Electrician performance", "AR aging & cash flow", "Scorecards & forecasting"], TIER_C],
+ "cta_line": "Open it, enter this month's jobs, and see what each one actually kept.",
+ "cta": ["Enter this month's jobs", "See what each job kept", "Every month you wait is [another month of guessing.]"],
+ "ps": ["Your quotes show what you expected.", "what you kept."],
+ "end": ["Your quotes show [what you expected.]", "ProfitIQS shows you [what you kept.]"],
+}

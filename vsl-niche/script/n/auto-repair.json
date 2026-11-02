@@ -1,0 +1,1414 @@
+{
+ "slug": "auto-repair",
+ "name": "Auto Repair Shop Business Intelligence System™",
+ "short": "auto repair",
+ "file_ess": "Auto_Repair_Shop_Business_Intelligence_System_Essential_2026.xlsx",
+ "file_elite": "Auto_Repair_Shop_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 8,
+ "n_elite": 41,
+ "reveal": {
+  "title": "Auto Repair Shop [Business Intelligence] System™",
+  "made": "Made only for [auto repair shops.]",
+  "chips": [
+   "Formulas",
+   "Dashboards",
+   "Reports",
+   "Tax set-aside",
+   "Sample data included"
+  ]
+ },
+ "who": [
+  [
+   "mechanic",
+   "Busy owner-operator",
+   "books done at night"
+  ],
+  [
+   "cars",
+   "Growing multi-bay shop",
+   "techs, bays, parts margin"
+  ],
+  [
+   "meeting",
+   "Numbers-curious manager",
+   "a clean monthly review"
+  ],
+  [
+   "semi",
+   "Fleet-account shop",
+   "fleet work tracked apart"
+  ]
+ ],
+ "tiers": [
+  [
+   "Repair orders & expenses",
+   "Dashboard + health snapshot",
+   "Tax set-aside estimate",
+   "Accountant export"
+  ],
+  [
+   "Techs, labor & parts",
+   "Comebacks & warranties",
+   "Bays & fleet accounts",
+   "Cash, AR & forecasting"
+  ],
+  [
+   "Both workbooks",
+   "Both Field Guides",
+   "Both Quick Starts",
+   "Start simple, grow"
+  ]
+ ],
+ "guide": {
+  "ess": 36,
+  "elite": 65
+ },
+ "cta": [
+  "Enter this month's ROs",
+  "See which work pays",
+  "Every month you wait is [another month of guessing.]"
+ ],
+ "end": [
+  "Your bays show [how busy you are.]",
+  "ProfitIQS shows you [what you keep.]"
+ ],
+ "lines": [
+  [
+   "hook",
+   "Every bay full. Brakes, a diagnostic, an engine repair, three oil changes before lunch.",
+   null,
+   {
+    "t": "notifs",
+    "text": "Every bay [full.]",
+    "head": "RO CLOSED",
+    "items": [
+     [
+      "Brake service",
+      "$486.00"
+     ],
+     [
+      "Engine repair",
+      "$2,340.00"
+     ],
+     [
+      "Oil change",
+      "$79.00"
+     ]
+    ],
+    "photo": "mechanic"
+   }
+  ],
+  [
+   "hook",
+   "And still, the month ends with less than you expected.",
+   null,
+   {
+    "t": "slam",
+    "text": "Busy bays. [Thin profit.]",
+    "photo": "engine",
+    "size": 104
+   }
+  ],
+  [
+   "hook",
+   "Because labor, parts and comebacks are rarely looked at side by side.",
+   null,
+   {
+    "t": "bars",
+    "text": "Never [side by side.]",
+    "bars": [
+     [
+      "Labor sales",
+      1,
+      "sky"
+     ],
+     [
+      "Parts margin",
+      0.6,
+      "amber"
+     ],
+     [
+      "Comeback hours",
+      0.3,
+      "red"
+     ]
+    ],
+    "note": "illustrative"
+   }
+  ],
+  [
+   "hook",
+   "A comeback eats bay time and technician hours that nobody bills. And it's forgotten once the car leaves.",
+   null,
+   {
+    "t": "rows",
+    "text": "Comebacks [nobody bills.]",
+    "icon": "alert",
+    "rows": [
+     [
+      "RO 10019 · brake job",
+      "CLOSED",
+      "green"
+     ],
+     [
+      "Same car, back again",
+      "COMEBACK",
+      "amber"
+     ],
+     [
+      "Bay hours, unbilled",
+      "LOST",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "hook",
+   "So here's the question. Which services, which techs, and which bays actually make you [money?]",
+   null,
+   {
+    "t": "slam",
+    "text": "Which work actually [makes you money?]",
+    "photo": "mechanic-hands",
+    "size": 96
+   }
+  ],
+  [
+   "hook",
+   "If you run an auto repair shop, the next few minutes are for you.",
+   null,
+   {
+    "t": "ring",
+    "n": "7",
+    "unit": "MINUTES",
+    "text": "If you run an auto repair shop — [this is for you.]"
+   }
+  ],
+  [
+   "pain",
+   "Here's how the money side of an auto repair shop usually works.",
+   null,
+   {
+    "t": "slam",
+    "text": "How the money side [usually works.]",
+    "glitch": 0,
+    "size": 92
+   }
+  ],
+  [
+   "pain",
+   "Repair orders live in your shop system. Receipts live in a shoebox.",
+   null,
+   {
+    "t": "papers",
+    "text": "Receipts: [a shoebox.]",
+    "label": "PARTS",
+    "photo": "tools"
+   }
+  ],
+  [
+   "pain",
+   "Parts priced on the fly. Supplier costs creep up. Returns never get credited.",
+   null,
+   {
+    "t": "rows",
+    "text": "Parts margin [leaks.]",
+    "icon": "alert",
+    "rows": [
+     [
+      "Priced on the fly",
+      "THIN",
+      "amber"
+     ],
+     [
+      "Supplier cost creep",
+      "UP",
+      "amber"
+     ],
+     [
+      "Return not credited",
+      "LOST",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "You know who feels fastest. Not whose hours produce the most labor sales.",
+   null,
+   {
+    "t": "bars",
+    "text": "Fastest isn't [most productive.]",
+    "bars": [
+     [
+      "Tech A",
+      0.9,
+      "sky"
+     ],
+     [
+      "Tech B",
+      0.62,
+      "sky"
+     ],
+     [
+      "Tech C",
+      0.78,
+      "sky"
+     ]
+    ],
+    "q": "Labor sales?",
+    "qv": 0.5
+   }
+  ],
+  [
+   "pain",
+   "Is the shop growing by more cars, or by better tickets? Without your average repair order, you can't tell.",
+   null,
+   {
+    "t": "split",
+    "left": [
+     "Gut feel",
+     [
+      "Feels busier",
+      "More cars?",
+      "Bigger tickets?"
+     ]
+    ],
+    "right": [
+     "The numbers",
+     [
+      "Car count",
+      "Average repair order",
+      "Where growth came from"
+     ]
+    ],
+    "rightAt": 0.55
+   }
+  ],
+  [
+   "pain",
+   "Fleet accounts pay late, while payroll and parts suppliers are due.",
+   null,
+   {
+    "t": "rows",
+    "text": "Unpaid. [Suppliers still due.]",
+    "rows": [
+     [
+      "Fleet · delivery vans",
+      "CURRENT",
+      "sky"
+     ],
+     [
+      "Fleet · contractor trucks",
+      "60 DAYS",
+      "amber"
+     ],
+     [
+      "Retail · engine job",
+      "90+ DAYS",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Then tax time. The accountant gets a shoebox, instead of a summary.",
+   null,
+   {
+    "t": "papers",
+    "text": "Tax time: [a shoebox.]",
+    "label": "RECEIPT",
+    "photo": "taxdocs"
+   }
+  ],
+  [
+   "pain",
+   "Your accountant asks for everything. And nothing's in one place.",
+   null,
+   {
+    "t": "slam",
+    "text": "“Send me [everything.]”",
+    "photo": "signing",
+    "glitch": 0.6
+   }
+  ],
+  [
+   "pain",
+   "Busy all year, and still not sure what the business actually kept.",
+   null,
+   {
+    "t": "months",
+    "text": "Kept this year:",
+    "photo": "busy"
+   }
+  ],
+  [
+   "turn",
+   "That's not a work-ethic problem. It's a visibility problem.",
+   null,
+   {
+    "t": "strike",
+    "from": "Work ethic",
+    "to": "Visibility."
+   }
+  ],
+  [
+   "turn",
+   "You already have the data: repair orders, parts, labor, invoices.",
+   null,
+   {
+    "t": "converge",
+    "text": "You already [have the data.]",
+    "labels": [
+     "RO",
+     "PARTS",
+     "$",
+     "LABOR",
+     "BAY",
+     "%",
+     "TECH"
+    ],
+    "box": "One place."
+   }
+  ],
+  [
+   "turn",
+   "You just don't have one place that turns it into decisions.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "That's why we built the Auto Repair Shop Business Intelligence System™.",
+   "That's why we built the Auto Repair Shop Business Intelligence System.",
+   null
+  ],
+  [
+   "reveal",
+   "A ready-built Excel system, made only for auto repair shops.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "Formulas, dashboards and reports are already built in. Tax set-aside too.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "And it ships with sample data, so every dashboard works the moment you open it.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "It's for the busy owner-operator who still writes service, and does the books at night.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The growing multi-bay shop that needs to see technician output, bay use and parts margin.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The service manager who wants a clean monthly review, instead of building spreadsheets.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "And the fleet-account shop that wants fleet work tracked separately.",
+   null,
+   null
+  ],
+  [
+   "ess",
+   "Let me show you what's inside. Start with Essential: eight sheets.",
+   null,
+   {
+    "t": "cover",
+    "ed": "ess",
+    "n": 8
+   }
+  ],
+  [
+   "ess",
+   "You enter the facts, repair orders and expenses. The workbook does the math.",
+   null,
+   {
+    "t": "wall",
+    "ed": "ess",
+    "text": "You enter the facts. [It does the math.]",
+    "inputs": [
+     "SETUP",
+     "REPAIR ORDER ENTRY",
+     "EXPENSE ENTRY"
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Set up once: your country, currency and tax-rate presets.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "SETUP",
+    "label": "Setup",
+    "d": "once",
+    "hi": [
+     [
+      "Country",
+      "Country preset",
+      "cyan",
+      "row"
+     ],
+     [
+      "Tax Reserve Rate % — default",
+      "Tax-rate preset",
+      "green",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Log every repair order: the service type, the customer, parts and labor.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "REPAIR ORDER ENTRY",
+    "label": "Repair Order Entry",
+    "d": "every RO",
+    "hi": [
+     [
+      "Service Type",
+      "Service type",
+      "blue",
+      "cell"
+     ],
+     [
+      "Parts Revenue",
+      "Parts revenue",
+      "amber",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ess",
+   "Log every expense: shop rent, supplies, insurance, software, marketing.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "EXPENSE ENTRY",
+    "label": "Expense Entry",
+    "d": "every expense",
+    "hi": [
+     [
+      "Category",
+      "Category",
+      "amber",
+      "cell"
+     ],
+     [
+      "Vendor#0",
+      "Vendor",
+      "cyan",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ess",
+   "Tax & Deductions separates parts and labor cost from overhead, and works out your tax reserve.",
+   "Tax and Deductions separates parts and labor cost from overhead, and works out your tax reserve.",
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "TAX & DEDUCTIONS",
+    "label": "Tax & Deductions",
+    "d": "reserve + deductions",
+    "hi": [
+     [
+      "Parts + Labor Cost",
+      "Parts + labor",
+      "amber",
+      "row"
+     ],
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "DEDUCTION SUMMARY BY CATEGORY",
+      "Every category",
+      "cyan",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "The Dashboard: revenue, net profit, average profit per repair order, and how funded your tax reserve is.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "DASHBOARD",
+    "label": "Dashboard",
+    "d": "one screen",
+    "hi": [
+     [
+      "TOTAL REVENUE",
+      "Revenue",
+      "blue",
+      "kpi"
+     ],
+     [
+      "NET PROFIT",
+      "Net profit",
+      "green",
+      "kpi"
+     ],
+     [
+      "AVG RO PROFIT",
+      "Avg RO profit",
+      "cyan",
+      "kpi"
+     ],
+     [
+      "TAX RESERVE FUNDED %",
+      "Reserve funded",
+      "amber",
+      "kpi"
+     ]
+    ],
+    "dir": "zoom"
+   }
+  ],
+  [
+   "ess",
+   "The Accountant Export hands over a clean summary and a document checklist.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "ACCOUNTANT EXPORT",
+    "label": "Accountant Export",
+    "d": "clean summary",
+    "hi": [
+     [
+      "Net Profit",
+      "Summary",
+      "blue",
+      "row"
+     ],
+     [
+      "DOCUMENT CHECKLIST",
+      "Document checklist",
+      "green",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "And the Business Health Snapshot scores profit, cash, tax readiness, expenses and revenue trend.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "BUSINESS HEALTH SNAPSHOT",
+    "label": "Health Snapshot",
+    "d": "scored 0–100",
+    "hi": [
+     [
+      "Profit Status",
+      "5 categories",
+      "cyan",
+      "block"
+     ],
+     [
+      "OVERALL SCORE (0-100)",
+      "Overall score",
+      "green",
+      "row"
+     ]
+    ],
+    "cam": "full"
+   }
+  ],
+  [
+   "elite",
+   "Now, Elite. Forty-one sheets. The full operating system for a repair shop.",
+   null,
+   {
+    "t": "cover",
+    "ed": "elite",
+    "n": 41,
+    "fx": "shock",
+    "fxAt": 0.5
+   }
+  ],
+  [
+   "elite",
+   "Repair orders, technicians, labor and parts, inventory, warranties, comebacks, bays, fleets, equipment, reviews and taxes.",
+   null,
+   {
+    "t": "wall",
+    "ed": "elite",
+    "tags": false,
+    "text": "[41 sheets,] one operating system."
+   }
+  ],
+  [
+   "ops",
+   "It opens on the Executive Command Center: revenue, gross and net margin, car count, and your average repair order.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "02 Executive Command",
+    "label": "Executive Command Center",
+    "d": "the whole shop",
+    "hi": [
+     [
+      "TOTAL REVENUE",
+      "Revenue",
+      "blue",
+      "kpi"
+     ],
+     [
+      "GROSS MARGIN %",
+      "Gross margin",
+      "green",
+      "kpi"
+     ],
+     [
+      "REPAIR ORDERS",
+      "Car count",
+      "cyan",
+      "kpi"
+     ],
+     [
+      "AVERAGE RO (ARO)",
+      "Average RO",
+      "amber",
+      "kpi"
+     ]
+    ],
+    "dir": "zoom"
+   }
+  ],
+  [
+   "ops",
+   "Technician Performance automatically tracks every tech's roster, capacity and productivity.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "08 Technician Performance",
+    "label": "Technician Performance",
+    "d": "capacity + productivity",
+    "hi": [
+     [
+      "Roster, capacity & productivity",
+      "Capacity · productivity",
+      "cyan",
+      "cell"
+     ],
+     [
+      "Tech ID",
+      "Every tech",
+      "blue",
+      "row"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ops",
+   "Service Analytics shows revenue, gross profit and margin, for every service category.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "21 Service Analytics",
+    "label": "Service Analytics",
+    "d": "margin by service",
+    "hi": [
+     [
+      "Gross Margin %",
+      "Gross margin",
+      "green",
+      "cell"
+     ],
+     [
+      "Avg Ticket",
+      "Avg ticket",
+      "cyan",
+      "cell"
+     ],
+     [
+      "Brakes",
+      "Brakes",
+      "blue",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "ops",
+   "The Parts Sales Tracker breaks down parts revenue, cost and margin by category.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "10 Parts Sales",
+    "label": "Parts Sales",
+    "d": "parts margin",
+    "hi": [
+     [
+      "Margin %",
+      "Parts margin",
+      "green",
+      "cell"
+     ],
+     [
+      "Cost",
+      "Cost",
+      "amber",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "ops",
+   "The Comeback Tracker logs every repeat repair, with your comeback rate.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "14 Comeback Tracker",
+    "label": "Comeback Tracker",
+    "d": "repeat repairs",
+    "hi": [
+     [
+      "Repeat repairs",
+      "Comeback rate",
+      "red",
+      "cell"
+     ],
+     [
+      "RO Number",
+      "Every comeback",
+      "amber",
+      "row"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ops",
+   "And Bay Utilization shows capacity, hours used, utilization and revenue, for every bay.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "22 Bay Utilization",
+    "label": "Bay Utilization",
+    "d": "every bay",
+    "hi": [
+     [
+      "Utilization %",
+      "Utilization",
+      "cyan",
+      "cell"
+     ],
+     [
+      "Revenue Per Bay (TTM)",
+      "Revenue per bay",
+      "green",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "ops",
+   "Plus warranties, inventory control, suppliers, fleet accounts and equipment.",
+   null,
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Parts, warranties, [fleets.]",
+    "items": [
+     {
+      "tab": "13 Warranty",
+      "label": "Warranties"
+     },
+     {
+      "tab": "11 Inventory",
+      "label": "Inventory"
+     },
+     {
+      "tab": "29 Fleet",
+      "label": "Fleet Accounts"
+     },
+     {
+      "tab": "30 Equipment",
+      "label": "Equipment"
+     }
+    ]
+   }
+  ],
+  [
+   "money",
+   "Then, the money side.",
+   null,
+   {
+    "t": "slam",
+    "text": "Then, [the money side.]",
+    "photo": "cash-pile",
+    "size": 110
+   }
+  ],
+  [
+   "money",
+   "The Cash Flow Center shows cash collected, cash out, net cash flow and your rolling cash position.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "17 Cash Flow Center",
+    "label": "Cash Flow Center",
+    "d": "rolling position",
+    "hi": [
+     [
+      "Cash Inflows (Revenue",
+      "Cash collected",
+      "green",
+      "cell"
+     ],
+     [
+      "Net Cash Flow",
+      "Net cash flow",
+      "cyan",
+      "cell"
+     ],
+     [
+      "Cumulative Cash Position",
+      "Cash position",
+      "amber",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "money",
+   "And Accounts Receivable ages every open balance by days outstanding.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "18 Accounts Receivable",
+    "label": "Accounts Receivable",
+    "d": "aged balances",
+    "hi": [
+     [
+      "Open balances aged",
+      "Aged by days outstanding",
+      "amber",
+      "cell"
+     ],
+     [
+      "RO Number",
+      "Every open RO",
+      "red",
+      "row"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "leak",
+   "Then there's the Profit Leak Detector™.",
+   "Then there's the Profit Leak Detector.",
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "26 Profit Leak Detector",
+    "text": "The Profit Leak [Detector™]",
+    "cam": "full",
+    "minW": 0.7,
+    "hi": [
+     [
+      "Traffic-light view",
+      "Traffic-light view",
+      "amber",
+      "cell",
+      0.18
+     ],
+     [
+      "Low Margin Jobs",
+      "Low-margin jobs",
+      "red",
+      "row",
+      0.34
+     ],
+     [
+      "Excess Parts Cost",
+      "Excess parts cost",
+      "amber",
+      "row",
+      0.5
+     ],
+     [
+      "Warranty Losses",
+      "Warranty losses",
+      "red",
+      "row",
+      0.66
+     ],
+     [
+      "Collection Problems",
+      "Collections",
+      "red",
+      "row",
+      0.82
+     ]
+    ]
+   }
+  ],
+  [
+   "leak",
+   "It's a traffic-light view of every leak: low-margin repair orders, excess labor cost, excess parts cost.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "Plus warranty losses, inventory waste, and balances past ninety days.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "So you know exactly where to look first.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "Add a KPI Scorecard, a Business Health Score™, forecasting and benchmarking.",
+   "Add a KPI Scorecard, a Business Health Score, forecasting and benchmarking.",
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Scored, forecast, [benchmarked.]",
+    "items": [
+     {
+      "tab": "24 KPI Scorecard",
+      "label": "KPI Scorecard"
+     },
+     {
+      "tab": "25 Business Health Score",
+      "label": "Health Score™"
+     },
+     {
+      "tab": "27 Forecasting Center",
+      "label": "Forecasting"
+     },
+     {
+      "tab": "28 Benchmarking Center",
+      "label": "Benchmarking"
+     }
+    ]
+   }
+  ],
+  [
+   "leak",
+   "Plus a monthly business review, an annual performance center, executive reports and a strategic planner.",
+   null,
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Reviewed, reported, [planned.]",
+    "items": [
+     {
+      "tab": "31 Monthly",
+      "label": "Monthly Review"
+     },
+     {
+      "tab": "32 Annual",
+      "label": "Annual Performance"
+     },
+     {
+      "tab": "33 Executive Report",
+      "label": "Executive Reports"
+     },
+     {
+      "tab": "34 Strategic",
+      "label": "Strategic Planner"
+     }
+    ]
+   }
+  ],
+  [
+   "tax",
+   "Then the part every owner dreads. Taxes.",
+   null,
+   {
+    "t": "zero",
+    "eyebrow": "The part every owner dreads",
+    "big": "TAXES.",
+    "impact": true,
+    "fxAt": 0.2,
+    "fx": "shockred"
+   }
+  ],
+  [
+   "tax",
+   "The Tax Reserve Center works out a recommended reserve, and how much of it you've funded.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "36 Tax Reserve & VAT Center",
+    "label": "Tax Reserve",
+    "d": "what to set aside",
+    "hi": [
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "Reserve Funded %",
+      "Funded %",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "The Deduction Maximizer groups the year's expenses by category, to review with your accountant.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "37 Deduction Maximizer",
+    "label": "Deduction Maximizer",
+    "d": "by category",
+    "hi": [
+     [
+      "Typically Deductible?",
+      "Deductible?",
+      "green",
+      "cell"
+     ],
+     [
+      "Total Deductible",
+      "Total",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "The Tax Readiness Center tracks due dates, and scores how ready your records are.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "38 Tax Readiness Center",
+    "label": "Tax Readiness",
+    "d": "due dates + score",
+    "hi": [
+     [
+      "TAX CALENDAR",
+      "Due dates",
+      "amber",
+      "block"
+     ],
+     [
+      "TAX READINESS SCORE",
+      "Readiness score",
+      "green",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "And the Accountant Summary is a print-ready package to hand over at filing time.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "39 Accountant Summary",
+    "label": "Accountant Summary",
+    "d": "print-ready",
+    "hi": [
+     [
+      "Accountant Package Status:",
+      "Package status",
+      "green",
+      "row"
+     ],
+     [
+      "Net Profit",
+      "P&L summary",
+      "blue",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "guide",
+   "And you're never left guessing how to use it.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Every edition comes with a Quick Start: the exact steps for your first session, your first week, and your first thirty days.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "And a full Field Guide that walks through every sheet, screen by screen.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Thirty-six pages for Essential. Sixty-five for Elite. Including what to do when a number looks wrong.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "Now, honest answers to the questions shop owners ask.",
+   null,
+   {
+    "t": "slam",
+    "text": "Honest answers to [real questions.]",
+    "size": 92
+   }
+  ],
+  [
+   "obj",
+   "“My shop management system already has reports.” Good. Keep it.",
+   "My shop management system already has reports. Good. Keep it.",
+   {
+    "t": "qa",
+    "q": "My shop management system already has reports.",
+    "eyebrow": "Honest answer 1 of 5",
+    "liftAt": 0.7,
+    "chips": [
+     "Keep your shop system",
+     "Parts margin",
+     "Comebacks",
+     "Bay utilization",
+     "Tax reserve"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "This sits next to it, and pulls the whole business into one view: labor, parts margin, comebacks, bays, cash and taxes.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“I'm not an Excel person.” You don't need to be.",
+   "I'm not an Excel person. You don't need to be.",
+   {
+    "t": "qa",
+    "q": "I'm not an Excel person.",
+    "eyebrow": "Honest answer 2 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "Formulas built in",
+     "You enter repair orders and expenses",
+     "Quick Start included",
+     "Field Guide included"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "Every calculation is already built, and the Quick Start and Field Guide walk you through it. You just enter repair orders and expenses.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“I'm a two-bay shop.” Then start with Essential.",
+   "I'm a two-bay shop. Then start with Essential.",
+   {
+    "t": "qa",
+    "q": "I'm a two-bay shop.",
+    "eyebrow": "Honest answer 3 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "8 sheets",
+     "ROs + expenses",
+     "Dashboard + tax set-aside",
+     "Go Elite when you grow"
+    ],
+    "big": "Start with Essential.",
+    "bigSize": 80
+   }
+  ],
+  [
+   "obj",
+   "Eight sheets: repair orders, expenses, a dashboard and a tax set-aside. Move up to Elite when you add bays and techs.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Will it stop my comebacks?” No tool can promise that.",
+   "Will it stop my comebacks? No tool can promise that.",
+   {
+    "t": "qa",
+    "q": "Will it stop my comebacks?",
+    "eyebrow": "Honest answer 4 of 5",
+    "liftAt": 0.55,
+    "chips": [
+     "Every comeback logged",
+     "Warranty losses shown",
+     "You decide the fix"
+    ],
+    "answer": "No tool can promise that."
+   }
+  ],
+  [
+   "obj",
+   "It logs every comeback and warranty claim, by technician, so you can see the pattern and decide what to fix.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Is it a subscription?” No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   "Is it a subscription? No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   {
+    "t": "qa",
+    "q": "Is it a subscription?",
+    "eyebrow": "Honest answer 5 of 5",
+    "liftAt": 0.25,
+    "big": "No.",
+    "bigSize": 150,
+    "chips": [
+     "One payment",
+     "No macros",
+     "Plain formulas"
+    ],
+    "foot": "Your numbers stay in your file."
+   }
+  ],
+  [
+   "offer",
+   "So, which edition fits you?",
+   null,
+   null
+  ],
+  [
+   "offer",
+   "Essential, $97: repair orders, expenses, a dashboard, a health snapshot and a tax set-aside estimate.",
+   "Essential, ninety-seven dollars. Repair orders, expenses, a dashboard, a health snapshot and a tax set-aside estimate.",
+   null
+  ],
+  [
+   "offer",
+   "Elite, $197: technicians, labor and parts sales, inventory, warranties, comebacks, bays, fleet accounts, cash flow and forecasting.",
+   "Elite, one ninety-seven. Technicians, labor and parts sales, inventory, warranties, comebacks, bays, fleet accounts, cash flow and forecasting.",
+   null
+  ],
+  [
+   "offer",
+   "Or Complete, $249: both workbooks, both Field Guides, both Quick Starts. Start simple, grow into the full system.",
+   "Or Complete, two forty-nine. Both workbooks, both Field Guides, both Quick Starts. Start simple, and grow into the full system.",
+   null
+  ],
+  [
+   "offer",
+   "One-time payment. And a 60-day money-back guarantee, no questions asked.",
+   "One-time payment. And a sixty-day money-back guarantee. No questions asked.",
+   null
+  ],
+  [
+   "cta",
+   "Here's what to do right now.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Pick your edition below this video.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Open it, enter this month's repair orders, and see which work actually pays.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Because every month you wait is another month of guessing.",
+   null,
+   null
+  ],
+  [
+   "end",
+   "P.S. Your bays show how busy you are.",
+   "P S. Your bays show how busy you are.",
+   null
+  ],
+  [
+   "end",
+   "ProfitIQS shows you what you keep.",
+   "Profit IQS shows you what you keep.",
+   null
+  ]
+ ]
+}

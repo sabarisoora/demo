@@ -1,0 +1,72 @@
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _common import *
+
+D = {
+ "name": "Digital Marketing Agency Business Intelligence System™", "short": "agency",
+ "title": "Digital Marketing Agency [Business Intelligence] System™", "aud": "digital marketing agencies", "aud_short": "marketing agencies", "people": "agency owners",
+ "file_ess": "Digital_Marketing_Agency_Business_Intelligence_System_Essential_2026.xlsx", "file_elite": "Digital_Marketing_Agency_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 8, "n_elite": 26, "guide": (42, 71), "dreads": "agency owner",
+ "hook": [
+  ["Twelve clients on retainer. A website redesign. An ad account overhaul. An SEO sprint.", {"t": "notifs", "text": "A full [client roster.]", "head": "INVOICE PAID", "items": [["Monthly retainer · dental", "$3,500.00"], ["Website redesign", "$8,000.00"], ["Ad management · fitness", "$2,200.00"]], "photo": "agency-team"}],
+  ["Revenue looks great. So here's the question. Which clients actually make you [money?]", {"t": "slam", "text": "Which clients actually [make you money?]", "photo": "agency-desk", "size": 96}],
+  ["Because scope creep and extra revisions can make a retainer unprofitable, without anyone noticing.", {"t": "bars", "text": "The retainer that [quietly loses.]", "bars": [["Retainer", 1, "sky"], ["− Contractor hours", 0.58, "amber"], ["− Revisions + scope creep", 0.22, "red"]], "q": "Kept", "qv": 0.2}],
+  ["And a retainer that reaches its end date with no renewal conversation? It just stops.", {"t": "rows", "text": "Retainers that [just stop.]", "icon": "calendar", "rows": [["Bluepeak Dental", "RENEWED", "green"], ["Summit Fitness", "RENEWAL DUE", "amber"], ["Coastal Motors", "ENDED", "red"]]}],
+  ["Next quarter's revenue? Without a pipeline, it's a guess.", {"t": "slam", "text": "Next quarter is [a guess.]", "photo": "meeting", "size": 100}],
+  ring("an agency", "an agency"),
+ ],
+ "pain": [
+  money_side_line("an agency"),
+  ["Hours live in your project tool. Invoices in your accounting app. Contractor bills in your inbox.", {"t": "phone", "text": "Numbers in [three tools.]", "items": [["PROJECT TOOL", "Hours"], ["ACCOUNTING", "Invoices"], ["INBOX", "Contractor bills"]], "photo": "agency-desk"}],
+  ["SEO, paid ads, web design, funnels, email. Which service line earns the most, after delivery costs?", {"t": "bars", "text": "Which service [earns the most?]", "bars": [["SEO", 0.7, "sky"], ["Paid ads", 0.9, "green"], ["Web design", 0.45, "amber"], ["Funnels", 0.3, "red"]], "note": "illustrative"}],
+  ["You hired help. Does each client still pay, after contractor costs?", {"t": "split", "left": ["What you invoice", ["Retainer", "Project fee", "Looks profitable"]], "right": ["What it costs", ["Contractor hours", "Payroll allocation", "Ad spend passthrough"]], "rightAt": 0.55}],
+  ["Leads come from LinkedIn, podcasts, Google Ads, referrals. Which ones close?", {"t": "cards", "text": "Which leads [actually close?]", "cards": [["office-open", "LinkedIn", "sky"], ["meeting", "Referral", "green"], ["analytics", "Google Ads", "amber"]]}],
+  ["Clients pay late, while contractors and software get paid on time.", {"t": "rows", "text": "Unpaid. [Contractors still due.]", "rows": [["Norwood Realty", "CURRENT", "sky"], ["LumaGlow Beauty", "30 DAYS", "amber"], ["Harbor Finance", "60+ DAYS", "red"]]}],
+  ["Then tax time: subscriptions, contractors and expenses, piled up for the accountant.", {"t": "papers", "text": "Tax time: [piled up.]", "label": "INVOICE", "photo": "taxdocs"}],
+  send_everything(),
+  months_line("Busy all year, and still not sure what the agency actually kept.", "office-big"),
+ ],
+ "turn2": "You already have the data: retainers, invoices, hours, contractor costs.",
+ "labels": ["CLIENT", "MRR", "$", "LEAD", "HOURS", "%", "RETAINER"],
+ "who": [["agency-team", "Boutique agency owner", "finance at month end"], ["agency-desk", "Freelancer turned agency", "profit after contractors"], ["woman-office", "Operations lead", "pipeline, retainers, AR"], ["highfive", "Specialist agency", "most profitable service"]],
+ "who_lines": ["It's for the boutique agency owner with clients on retainer, who does finance at month end.", "The freelancer turning agency, who needs to know each client still pays after contractor costs.", "The operations lead tracking pipeline, retainers and receivables for the founder.", "And the specialist agency that wants to know which service is most profitable."],
+ "ess_wall": "You enter the facts, client revenue and expenses. The workbook does the math.",
+ "inputs": ["SETUP", "CLIENT REVENUE ENTRY", "EXPENSE ENTRY"],
+ "ess_tour": [
+  setup_line(),
+  ["Log client revenue by service type: retainers, SEO and content, ad management, projects.", S("ess", "CLIENT REVENUE ENTRY", "Client Revenue Entry", "every invoice", [["Service Type", "Service type", "blue", "cell"]], minW=0.8)],
+  ["Log every expense, including non-billable contractors, software, and your own marketing.", S("ess", "EXPENSE ENTRY", "Expense Entry", "every expense", [["Category", "Category", "amber", "cell"], ["Vendor#0", "Vendor", "cyan", "cell"]], minW=0.8)],
+ ] + ess_tail(dash_kpi3=("ACTIVE CLIENTS", "Active clients"), dash_line="The Dashboard: revenue, net profit, active clients, and how funded your tax reserve is.", tax_cost=("Contractor Costs (client work)", "Contractor costs"), tax_line="Tax & Deductions separates contractor costs on client work from overhead, and works out your tax reserve."),
+ "elite_tag": "The full operating system for an agency.",
+ "elite_wall": "Clients, revenue and costs, leads, pipeline, retainers, projects, service and client profitability, receivables, cash and taxes.",
+ "sections": [
+  ("ops", [
+   ["It opens on the Executive Command Center: MRR, ARR, net margin, client retention and churn, pipeline value, and renewals due.", S("elite", "02 Executive Dashboard", "Executive Dashboard", "the whole agency", [["MRR", "MRR", "blue", "kpi"], ["NET MARGIN (ALL ENTRIES)", "Net margin", "green", "kpi"], ["CLIENT RETENTION", "Retention", "cyan", "kpi"], ["RENEWALS DUE (45D)", "Renewals due", "amber", "kpi"]], dir="zoom")],
+   ["The Client Profitability Center shows every client's revenue, tagged cost, and net profit.", S("elite", "19 Client Profitability", "Client Profitability", "every client", [["Client Net", "Client net profit", "green", "cell"], ["PORTFOLIO SUMMARY", "Portfolio summary", "cyan", "block"]])],
+   ["Service Profitability models revenue, cost and margin, by service line.", S("elite", "11 Service Profitability", "Service Profitability", "by service line", [["Margin %", "Margin", "green", "cell"], ["Revenue Share", "Revenue share", "blue", "cell"]], cam="full")],
+   ["The Client Retainer Center tracks every retainer, with total MRR and ARR.", S("elite", "09 Client Retainer", "Retainer Center", "MRR + ARR", [["RECURRING REVENUE SUMMARY", "Recurring summary", "green", "block"], ["Start Date", "Start date", "amber", "cell"]])],
+   ["The Lead Tracker and Sales Pipeline show sources, stages, close rate, and a weighted sales forecast.", S("elite", "08 Sales Pipeline", "Sales Pipeline", "weighted forecast", [["Proposals Sent", "Proposals", "blue", "row"], ["Close Rate", "Close rate", "green", "row"], ["Monthly Sales Forecast (Weighted)", "Weighted forecast", "cyan", "row"]], cam="full")],
+   ["Plus client setup, revenue and cost entry, a lead tracker and a project tracker.", mini("Every client, [every project.]", [("04 Client Setup", "Clients"), ("07 Lead Tracker", "Leads"), ("10 Project Tracker", "Projects")])],
+  ]),
+  ("money", [
+   money_slam(),
+   ["Accounts Receivable lists every open invoice, by client.", S("elite", "12 Accounts Receivable", "Accounts Receivable", "by client", [["Client", "Client", "amber", "cell"], ["Invoice Date", "Invoice date", "red", "cell"]], minW=0.8)],
+   ["And the Cash Flow Center shows cash in, cash out, net cash flow and your running balance.", S("elite", "13 Cash Flow Center", "Cash Flow Center", "month by month", [["Cash In", "Cash in", "green", "cell"], ["12-MONTH SUMMARY", "12-month summary", "cyan", "block"]])],
+  ]),
+ ],
+ "leak": {"hi": [["LOW-MARGIN CLIENTS (MARGIN BELOW 15%)", "Clients under 15% margin", "red", "cell", 0.25], ["Margin %", "Margin", "amber", "cell", 0.45], ["Possible Cause", "Possible cause", "cyan", "cell", 0.65], ["Recommended Action", "Recommended action", "green", "cell", 0.85]],
+          "lines": ["It automatically flags every client with a margin below fifteen percent.", "The ones where scope creep and delivery cost ate the retainer.", "Each with a possible cause, and a recommended action."]},
+ "objs": [
+  obj_app("Our project tool already tracks this.", "client profit, service margins, retainers, pipeline and taxes", ["Keep your project tool", "Client profitability", "Service margins", "Retainers + pipeline", "Tax reserve"]),
+  obj_excel("revenue and expenses"),
+  {"q": "We're too small for this.", "a1": "Then start with Essential.", "a2": "Eight sheets: client revenue, expenses, a dashboard and a tax set-aside. Move up to Elite when you add team and clients.", "big": "Start with Essential.", "bigSize": 80, "chips": ["8 sheets", "Revenue + expenses", "Dashboard + tax set-aside", "Go Elite when you grow"]},
+  {"q": "Will it get us more clients?", "a1": "No tool can promise that.", "a2": "It shows which lead sources close, and which clients and services are actually worth more of.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["Lead sources tracked", "Profitable clients shown", "You decide where to focus"]},
+ ],
+ "offer_ess": "client revenue, expenses, a dashboard, a health snapshot and a tax set-aside estimate",
+ "offer_elite": "client and service profitability, retainers, leads, pipeline, projects, receivables, cash flow and forecasting",
+ "tiers": [["Client revenue & expenses", "Dashboard + health snapshot", "Tax set-aside estimate", "Accountant export"], ["Client profitability", "Service profitability", "Retainers & pipeline", "AR & cash flow"], TIER_C],
+ "cta_line": "Open it, enter this month's invoices, and see what each client actually earns you.",
+ "cta": ["Enter this month's invoices", "See what each client earns", "Every month you wait is [another month of guessing.]"],
+ "ps": ["Your retainers show what you bill.", "what you keep."],
+ "end": ["Your retainers show [what you bill.]", "ProfitIQS shows you [what you keep.]"],
+}

@@ -1,0 +1,73 @@
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _common import *
+
+D = {
+ "name": "Airbnb Business Intelligence System™", "short": "airbnb",
+ "title": "Airbnb [Business Intelligence] System™", "aud": "short-term rental hosts", "aud_short": "short-term rental hosts", "people": "hosts",
+ "file_ess": "Airbnb_Business_Intelligence_System_Essential_2026.xlsx", "file_elite": "Airbnb_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 10, "n_elite": 25, "guide": (37, 54), "dreads": "host",
+ "tax_hi": {"deduct": [["Deductible expense categories", "Deductible categories", "green", "cell"], ["TOTAL DEDUCTIBLE", "Total", "cyan", "row"]], "ready": [["5 automatic filing-readiness checks", "5 automatic checks", "amber", "cell"], ["TAX READINESS SCORE", "Readiness score", "green", "row"]], "acct": [["Net Profit", "P&L summary", "blue", "row"], ["DOCUMENT CHECKLIST", "Document checklist", "green", "cell"]]},
+ "hook": [
+  ["A booked weekend at the cabin. Five nights at the loft. Payouts landing every few days.", {"t": "notifs", "text": "Booked [all month.]", "head": "PAYOUT", "items": [["Lakeside Cabin · 2 nights", "$612.00"], ["Downtown Loft · 5 nights", "$1,420.00"], ["Sunset Villa · 4 nights", "$2,180.00"]], "photo": "resort"}],
+  ["Payouts look healthy. Until cleaning, platform fees, supplies and repairs come out.", {"t": "bars", "text": "Payouts [hide the real profit.]", "bars": [["Payout", 1, "green"], ["− Cleaning", 0.72, "amber"], ["− Fees + supplies", 0.5, "amber"], ["− Repairs", 0.32, "red"]], "note": "illustrative"}],
+  ["So here's the question. Which of your properties actually makes you [money?]", {"t": "slam", "text": "Which property actually [makes you money?]", "photo": "str-living", "size": 96}],
+  ["A full calendar at a low nightly rate can earn less than fewer, better-priced nights.", {"t": "split", "left": ["Full calendar", ["28 nights booked", "Low nightly rate", "Heavy cleaning"]], "right": ["Fewer, better nights", ["20 nights booked", "Higher rate", "Better RevPAR"]], "rightAt": 0.5}],
+  ["And one weak listing can quietly drag down the whole portfolio.", {"t": "slam", "text": "One weak listing [drags down the rest.]", "photo": "apt-living", "size": 90}],
+  ring("short-term rentals", "short-term rentals"),
+ ],
+ "pain": [
+  money_side_line("hosting"),
+  ["Bookings live in the platform. Cleaning invoices live in your email. Repair receipts live in a drawer.", {"t": "papers", "text": "Receipts: [everywhere.]", "label": "CLEANING", "photo": "bathroom"}],
+  ["Turnovers and repairs are frequent, small, and easy to lose track of.", {"t": "rows", "text": "Small costs, [every turnover.]", "icon": "alert", "rows": [["Turnover clean · Loft", "$85", "amber"], ["Smoke detector · Cabin", "$40", "amber"], ["Garage sensor · Villa", "$210", "red"]]}],
+  ["Occupancy, nightly rate, RevPAR. Each one tells half the story on its own.", {"t": "cards", "text": "Half the story [each.]", "cards": [["smartlock", "Occupancy", "sky"], ["living-modern", "Nightly rate", "green"], ["villa", "RevPAR", "amber"]]}],
+  ["You know the payout. Not the return on what you actually invested in the property.", {"t": "rows", "text": "Payout known. [Return unknown.]", "rows": [["Monthly payout", "KNOWN", "green"], ["Purchase + furnishing", "SOMEWHERE", "amber"], ["Return on investment", "UNKNOWN", "red"]]}],
+  ["Then tax season: booking income, expenses and deductions, scattered across platforms and receipts.", {"t": "papers", "text": "Tax time: [scattered everywhere.]", "label": "RECEIPT", "photo": "taxdocs"}],
+  send_everything(),
+  months_line("Booked all year, and still not sure what the properties actually kept.", "house-keys"),
+ ],
+ "turn2": "You already have the data: bookings, payouts, cleanings, repairs.",
+ "labels": ["BOOKING", "NIGHTS", "$", "ADR", "CLEAN", "%", "REPAIR"],
+ "who": [["apt-bright", "Single-listing host", "does it really pay?"], ["villa", "Multi-property host", "listings side by side"], ["house-keys", "Co-host or manager", "clean monthly numbers"], ["modern-house", "Investor-host", "return on the property"]],
+ "who_lines": ["It's for the single-listing host who wants to know if it really pays, after cleaning, fees and repairs.", "The growing multi-property host who needs to compare listings side by side.", "The co-host or small manager who wants clean monthly numbers to share with owners.", "And the investor-host tracking the return on what they bought."],
+ "ess_wall": "You enter the facts: properties, bookings and expenses. The workbook does the math.",
+ "inputs": ["SETUP", "PROPERTY SETUP", "BOOKING REVENUE", "EXPENSE ENTRY"],
+ "ess_tour": [
+  ["Set up each property once: type, guests, base nightly rate and cleaning fee.", S("ess", "PROPERTY SETUP", "Property Setup", "once", [["Base Nightly", "Base nightly rate", "green", "cell"], ["Cleaning Fee", "Cleaning fee", "amber", "cell"]], cam="full")],
+  ["Log every booking, by check-in date and listing.", S("ess", "BOOKING REVENUE", "Booking Revenue", "every booking", [["Check-In", "Check-in", "blue", "cell"], ["Listing", "Listing", "cyan", "cell"]], minW=0.8)],
+  ["Log every expense, by listing and category.", S("ess", "EXPENSE ENTRY", "Expense Entry", "by listing", [["Category", "Category", "amber", "cell"]], minW=0.8)],
+  ["Property Performance compares every listing on revenue, expenses, net profit, nightly rate and occupancy.", S("ess", "PROPERTY PERFORMANCE", "Property Performance", "every listing", [["Net Profit", "Net profit", "green", "cell"], ["Occupancy %", "Occupancy", "cyan", "cell"]], cam="full")],
+ ] + ess_tail(dash_kpi3=("AVG DAILY RATE (ADR)", "ADR"), dash_line="The Dashboard: revenue, net profit, average daily rate, and revenue and expenses by listing."),
+ "elite_tag": "The full operating system for a short-term rental portfolio.",
+ "elite_wall": "Properties, occupancy, cleaning, maintenance, bookings, expenses, profitability, cash, ADR and RevPAR, ROI, rankings and taxes.",
+ "sections": [
+  ("ops", [
+   ["It opens on the Executive Dashboard: revenue, net profit, portfolio occupancy, blended ADR and RevPAR, guest rating, and ROI.", S("elite", "02 Executive Dashboard", "Executive Dashboard", "the whole portfolio", [["Net Profit", "Net profit", "green", "kpi"], ["Portfolio Occupancy %", "Occupancy", "cyan", "kpi"], ["Blended RevPAR", "RevPAR", "amber", "kpi"], ["Portfolio ROI (total)", "ROI", "violet", "kpi"]], dir="zoom")],
+   ["It even names your top and lowest performing property.", S("elite", "02 Executive Dashboard", "Top vs. lowest", "named for you", [["TOP PERFORMING PROPERTY", "Top performer", "green", "cell"], ["LOWEST PERFORMING PROPERTY", "Lowest performer", "red", "cell"]])],
+   ["Property Profitability is a fully linked P&L, by property and month.", S("elite", "10 Property Profitability", "Property Profitability", "P&L per property", [["Fully-linked P&L", "Linked P&L", "green", "cell"], ["Total Revenue", "Total revenue", "blue", "cell"]], minW=0.8)],
+   ["ADR and RevPAR Analytics shows rate and yield by property and month, with a seasonality index.", S("elite", "12 ADR RevPAR", "ADR & RevPAR", "rate + yield", [["RevPAR ($/available", "RevPAR", "amber", "cell"], ["Seasonality", "Seasonality index", "cyan", "cell"]])],
+   ["Cleaning Operations tracks turnover cost and quality, and the Maintenance Center logs every repair by property.", mini("Turnovers + [repairs.]", [("06 Cleaning", "Cleaning Operations"), ("07 Maintenance", "Maintenance Center"), ("05 Occupancy", "Occupancy")])],
+   ["The ROI Center works out annual return for every property, against its purchase price.", S("elite", "16 ROI Center", "ROI Center", "return per property", [["Purchase Price", "Purchase price", "amber", "cell"], ["Annual return metrics", "Annual return", "green", "cell"]])],
+   ["And Property Rankings scores every listing with a multi-metric Property Score™.", S("elite", "17 Property Rankings", "Property Rankings", "Property Score™", [["Multi-metric ranking", "Property Score™", "cyan", "cell"]], minW=0.8)],
+  ]),
+  ("money", [
+   money_slam(),
+   ["The Cash Flow Center shows portfolio cash in, cash out, net cash flow and cumulative cash, month by month.", S("elite", "11 Cash Flow Center", "Cash Flow Center", "portfolio-wide", [["Cash In", "Cash in", "green", "cell"], ["Net Cash", "Net cash flow", "cyan", "cell"], ["Cumulative Cash", "Cumulative", "amber", "cell"]], cam="full")],
+  ]),
+ ],
+ "leak": {"hi": [["Automated flags for underperformance", "Automated flags", "amber", "cell", 0.22], ["Thresholds:", "Your thresholds", "cyan", "cell", 0.42], ["Min Occupancy", "Min occupancy", "red", "cell", 0.6], ["Flag", "Flag", "red", "cell", 0.8]],
+          "lines": ["It automatically flags underperforming properties, against thresholds you set.", "Like occupancy below your minimum, or cleaning costs eating too much of revenue.", "Property by property."]},
+ "objs": [
+  obj_app("Airbnb already shows my earnings.", "profit per property, RevPAR, cleaning, ROI and taxes", ["Keep your host dashboard", "Profit per property", "ADR + RevPAR", "ROI", "Tax reserve"]),
+  obj_excel("bookings and expenses"),
+  {"q": "I only have one listing.", "a1": "Then start with Essential.", "a2": "Ten sheets: your property, bookings, expenses, performance, a dashboard and a tax set-aside. Move up to Elite when you add properties.", "big": "Start with Essential.", "bigSize": 80, "chips": ["10 sheets", "Bookings + expenses", "Property performance", "Go Elite when you grow"]},
+  {"q": "Will it get me more bookings?", "a1": "No tool can promise that.", "a2": "It shows occupancy, nightly rate and RevPAR together, so you can see which listings and seasons to price differently.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["Occupancy + ADR + RevPAR", "Seasonality index", "You set the price"]},
+ ],
+ "offer_ess": "properties, bookings, expenses, property performance, a dashboard and a tax set-aside estimate",
+ "offer_elite": "occupancy, cleaning and maintenance, property profitability, ADR and RevPAR, ROI, rankings, cash flow and forecasting",
+ "tiers": [["Properties & bookings", "Expenses by listing", "Property performance", "Tax set-aside estimate"], ["Property profitability", "ADR, RevPAR & occupancy", "Cleaning & maintenance", "ROI & rankings"], TIER_C],
+ "cta_line": "Open it, enter this month's bookings, and see what each property actually kept.",
+ "cta": ["Enter this month's bookings", "See what each property kept", "Every month you wait is [another month of guessing.]"],
+ "ps": ["Your payouts show what came in.", "what you kept."],
+ "end": ["Your payouts show [what came in.]", "ProfitIQS shows you [what you kept.]"],
+}

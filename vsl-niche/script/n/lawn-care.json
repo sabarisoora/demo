@@ -1,0 +1,1419 @@
+{
+ "slug": "lawn-care",
+ "name": "Lawn Care Business Intelligence System™",
+ "short": "lawn",
+ "file_ess": "Lawn_Care_Business_Intelligence_System_Essential_2026.xlsx",
+ "file_elite": "Lawn_Care_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 9,
+ "n_elite": 45,
+ "reveal": {
+  "title": "Lawn Care [Business Intelligence] System™",
+  "made": "Made only for [lawn care companies.]",
+  "chips": [
+   "Formulas",
+   "Dashboards",
+   "Reports",
+   "Tax set-aside",
+   "Sample data included"
+  ]
+ },
+ "who": [
+  [
+   "mower",
+   "Owner-operator",
+   "on the mower all day"
+  ],
+  [
+   "tractor",
+   "Multi-crew company",
+   "route + crew profit"
+  ],
+  [
+   "lawn",
+   "Program-based company",
+   "each program tracked"
+  ],
+  [
+   "woman-office",
+   "Office or route manager",
+   "routes, contracts, AR"
+  ]
+ ],
+ "tiers": [
+  [
+   "Visits & expenses",
+   "Dashboard + health snapshot",
+   "Tax set-aside estimate",
+   "Accountant export"
+  ],
+  [
+   "Routes & route density",
+   "Every program tracked",
+   "Crews & contracts",
+   "Equipment, fuel & cash"
+  ],
+  [
+   "Both workbooks",
+   "Both Field Guides",
+   "Both Quick Starts",
+   "Start simple, grow"
+  ]
+ ],
+ "guide": {
+  "ess": 45,
+  "elite": 79
+ },
+ "cta": [
+  "Enter this month's visits",
+  "See what each route earns",
+  "Every month you wait is [another month of guessing.]"
+ ],
+ "end": [
+  "Your route shows [how busy you are.]",
+  "ProfitIQS shows you [what you keep.]"
+ ],
+ "lines": [
+  [
+   "hook",
+   "Forty mows on the route this week. Two fertilization rounds. An aeration package.",
+   null,
+   {
+    "t": "notifs",
+    "text": "Routes [full every week.]",
+    "head": "VISIT COMPLETED",
+    "items": [
+     [
+      "Mowing · weekly route",
+      "$55.00"
+     ],
+     [
+      "Fertilization round",
+      "$85.00"
+     ],
+     [
+      "Aeration + overseeding",
+      "$320.00"
+     ]
+    ],
+    "photo": "mower"
+   }
+  ],
+  [
+   "hook",
+   "But drive time and stop count vary, and some routes earn far less per hour than others.",
+   null,
+   {
+    "t": "bars",
+    "text": "Not every route [pays its way.]",
+    "bars": [
+     [
+      "North",
+      1,
+      "green"
+     ],
+     [
+      "Central",
+      0.72,
+      "sky"
+     ],
+     [
+      "East",
+      0.38,
+      "red"
+     ]
+    ],
+    "q": "Per drive-minute?",
+    "qv": 0.5
+   }
+  ],
+  [
+   "hook",
+   "So here's the question. Which routes and which services actually make you [money?]",
+   null,
+   {
+    "t": "slam",
+    "text": "Which routes actually [make you money?]",
+    "photo": "lawn",
+    "size": 96
+   }
+  ],
+  [
+   "hook",
+   "Mowing, fertilization, weed control, aeration, overseeding, irrigation. Tracked as one lump, you can't see which ones pay.",
+   null,
+   {
+    "t": "split",
+    "left": [
+     "One lump",
+     [
+      "All services blended",
+      "One revenue number",
+      "No margin per program"
+     ]
+    ],
+    "right": [
+     "Each program",
+     [
+      "Mowing margin",
+      "Fertilization margin",
+      "Aeration margin"
+     ]
+    ],
+    "rightAt": 0.55
+   }
+  ],
+  [
+   "hook",
+   "And when a season-long program reaches renewal with no contact, it quietly ends.",
+   null,
+   {
+    "t": "rows",
+    "text": "Programs that [quietly end.]",
+    "icon": "calendar",
+    "rows": [
+     [
+      "Full Season Bundle",
+      "RENEWED",
+      "green"
+     ],
+     [
+      "Fert + Weed Combo",
+      "NO CONTACT",
+      "amber"
+     ],
+     [
+      "Mowing Only",
+      "CANCELLED",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "hook",
+   "If you run a lawn care business, the next few minutes are for you.",
+   null,
+   {
+    "t": "ring",
+    "n": "7",
+    "unit": "MINUTES",
+    "text": "If you run a lawn care business — [this is for you.]"
+   }
+  ],
+  [
+   "pain",
+   "Here's how the money side of lawn care usually works.",
+   null,
+   {
+    "t": "slam",
+    "text": "How the money side [usually works.]",
+    "glitch": 0,
+    "size": 92
+   }
+  ],
+  [
+   "pain",
+   "Visits live in your scheduling app. Fuel and seed receipts live in the truck.",
+   null,
+   {
+    "t": "papers",
+    "text": "Receipts: [the truck.]",
+    "label": "FUEL",
+    "photo": "tools"
+   }
+  ],
+  [
+   "pain",
+   "Mowers, trucks, fuel and fertilizer draw down cash in small amounts, that add up by season's end.",
+   null,
+   {
+    "t": "rows",
+    "text": "Small costs, [big total.]",
+    "icon": "alert",
+    "rows": [
+     [
+      "Fuel · weekly",
+      "ADDS UP",
+      "amber"
+     ],
+     [
+      "Mower repairs",
+      "ADDS UP",
+      "amber"
+     ],
+     [
+      "Seed & soil amendments",
+      "ADDS UP",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "You know which crew feels fast. Not which one covers the most route for the hours it works.",
+   null,
+   {
+    "t": "bars",
+    "text": "Fast isn't [productive.]",
+    "bars": [
+     [
+      "Crew 1",
+      0.88,
+      "sky"
+     ],
+     [
+      "Crew 2",
+      0.6,
+      "sky"
+     ],
+     [
+      "Crew 3",
+      0.76,
+      "sky"
+     ]
+    ],
+    "q": "Rev per hour?",
+    "qv": 0.5
+   }
+  ],
+  [
+   "pain",
+   "Customers go quiet. No visit in forty-five days, and nobody noticed.",
+   null,
+   {
+    "t": "rows",
+    "text": "Customers who [go quiet.]",
+    "rows": [
+     [
+      "Lewis home",
+      "VISITED",
+      "green"
+     ],
+     [
+      "Green property",
+      "45+ DAYS",
+      "amber"
+     ],
+     [
+      "Adams residence",
+      "CHURNED",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Commercial accounts pay late, while crew wages are due every week.",
+   null,
+   {
+    "t": "rows",
+    "text": "Unpaid. [Payroll still due.]",
+    "rows": [
+     [
+      "INV · Office park",
+      "0-30 DAYS",
+      "sky"
+     ],
+     [
+      "INV · School district",
+      "61-90 DAYS",
+      "amber"
+     ],
+     [
+      "INV · HOA",
+      "90+ DAYS",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Then tax time: equipment, fuel, payroll and chemical receipts, scattered everywhere.",
+   null,
+   {
+    "t": "papers",
+    "text": "Tax time: [scattered everywhere.]",
+    "label": "RECEIPT",
+    "photo": "taxdocs"
+   }
+  ],
+  [
+   "pain",
+   "Your accountant asks for everything. And nothing's in one place.",
+   null,
+   {
+    "t": "slam",
+    "text": "“Send me [everything.]”",
+    "photo": "signing",
+    "glitch": 0.6
+   }
+  ],
+  [
+   "pain",
+   "Busy all season, and still not sure what the business actually kept.",
+   null,
+   {
+    "t": "months",
+    "text": "Kept this year:",
+    "photo": "busy"
+   }
+  ],
+  [
+   "turn",
+   "That's not a work-ethic problem. It's a visibility problem.",
+   null,
+   {
+    "t": "strike",
+    "from": "Work ethic",
+    "to": "Visibility."
+   }
+  ],
+  [
+   "turn",
+   "You already have the data: visits, routes, programs, invoices, receipts.",
+   null,
+   {
+    "t": "converge",
+    "text": "You already [have the data.]",
+    "labels": [
+     "VISIT",
+     "ROUTE",
+     "$",
+     "CREW",
+     "FUEL",
+     "%",
+     "PROGRAM"
+    ],
+    "box": "One place."
+   }
+  ],
+  [
+   "turn",
+   "You just don't have one place that turns it into decisions.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "That's why we built the Lawn Care Business Intelligence System™.",
+   "That's why we built the Lawn Care Business Intelligence System.",
+   null
+  ],
+  [
+   "reveal",
+   "A ready-built Excel system, made only for lawn care companies.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "Formulas, dashboards and reports are already built in. Tax set-aside too.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "And it ships with sample data, so every dashboard works the moment you open it.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "It's for the owner-operator who runs the mower and the route, and does the books at night.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The multi-crew company with several crews and trucks, and no side-by-side view of route profit.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The program-based company selling fertilization, weed control, aeration and overseeding.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "And the office or route manager tracking routes, contracts, equipment and receivables.",
+   null,
+   null
+  ],
+  [
+   "ess",
+   "Let me show you what's inside. Start with Essential: nine sheets.",
+   null,
+   {
+    "t": "cover",
+    "ed": "ess",
+    "n": 9
+   }
+  ],
+  [
+   "ess",
+   "You enter the facts, visits and expenses. The workbook does the math.",
+   null,
+   {
+    "t": "wall",
+    "ed": "ess",
+    "text": "You enter the facts. [It does the math.]",
+    "inputs": [
+     "SETUP",
+     "SERVICE VISITS",
+     "EXPENSE ENTRY"
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Set up once: your country, currency and tax-rate presets.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "SETUP",
+    "label": "Setup",
+    "d": "once",
+    "hi": [
+     [
+      "Country",
+      "Country preset",
+      "cyan",
+      "row"
+     ],
+     [
+      "Tax Reserve Rate % — default",
+      "Tax-rate preset",
+      "green",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Log every service visit, by customer.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "SERVICE VISITS",
+    "label": "Service Visits",
+    "d": "every visit",
+    "hi": [
+     [
+      "Visit ID",
+      "Every visit",
+      "blue",
+      "row"
+     ]
+    ],
+    "minW": 0.9
+   }
+  ],
+  [
+   "ess",
+   "Log every expense: crew wages, fuel, equipment, seed and soil amendments.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "EXPENSE ENTRY",
+    "label": "Expense Entry",
+    "d": "every expense",
+    "hi": [
+     [
+      "Category",
+      "Category",
+      "amber",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ess",
+   "Tax & Deductions works out your recommended tax reserve, and totals every deductible category.",
+   "Tax and Deductions works out your recommended tax reserve, and totals every deductible category.",
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "TAX & DEDUCTIONS",
+    "label": "Tax & Deductions",
+    "d": "reserve + deductions",
+    "hi": [
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "DEDUCTION SUMMARY BY CATEGORY",
+      "Every category",
+      "cyan",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "The Dashboard puts it on one screen: revenue, net profit, average revenue per visit, and how funded your tax reserve is.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "DASHBOARD",
+    "label": "Dashboard",
+    "d": "one screen",
+    "hi": [
+     [
+      "TOTAL REVENUE",
+      "Revenue",
+      "blue",
+      "kpi"
+     ],
+     [
+      "NET PROFIT",
+      "Net profit",
+      "green",
+      "kpi"
+     ],
+     [
+      "AVG REVENUE PER VISIT",
+      "Per visit",
+      "cyan",
+      "kpi"
+     ],
+     [
+      "TAX RESERVE FUNDED %",
+      "Reserve funded",
+      "amber",
+      "kpi"
+     ]
+    ],
+    "dir": "zoom"
+   }
+  ],
+  [
+   "ess",
+   "The Accountant Export hands over a clean summary and a document checklist.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "ACCOUNTANT EXPORT",
+    "label": "Accountant Export",
+    "d": "clean summary",
+    "hi": [
+     [
+      "Net Profit",
+      "Summary",
+      "blue",
+      "row"
+     ],
+     [
+      "DOCUMENT CHECKLIST",
+      "Document checklist",
+      "green",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "And the Business Health Snapshot scores profit, cash, tax readiness, expenses and revenue trend.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "BUSINESS HEALTH SNAPSHOT",
+    "label": "Health Snapshot",
+    "d": "scored 0–100",
+    "hi": [
+     [
+      "Profit Status",
+      "5 categories",
+      "cyan",
+      "block"
+     ],
+     [
+      "OVERALL SCORE (0-100)",
+      "Overall score",
+      "green",
+      "row"
+     ]
+    ],
+    "cam": "full"
+   }
+  ],
+  [
+   "elite",
+   "Now, Elite. Forty-five sheets. The full operating system for a lawn care company.",
+   null,
+   {
+    "t": "cover",
+    "ed": "elite",
+    "n": 45,
+    "fx": "shock",
+    "fxAt": 0.5
+   }
+  ],
+  [
+   "elite",
+   "Leads, contracts, routes, every program, crews, equipment, vehicles, fuel, receivables, cash and taxes.",
+   null,
+   {
+    "t": "wall",
+    "ed": "elite",
+    "tags": false,
+    "text": "[45 sheets,] every program, its own sheet."
+   }
+  ],
+  [
+   "ops",
+   "It opens on the Executive Command Center: revenue, net profit, recurring revenue, route efficiency, retention and your Health Score.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "02 Executive Dashboard",
+    "label": "Executive Dashboard",
+    "d": "the whole company",
+    "hi": [
+     [
+      "Revenue (last 12 full months)",
+      "Revenue",
+      "blue",
+      "kpi"
+     ],
+     [
+      "Net Profit",
+      "Net profit",
+      "green",
+      "kpi"
+     ],
+     [
+      "Monthly Recurring Revenue",
+      "MRR",
+      "cyan",
+      "kpi"
+     ],
+     [
+      "Route Efficiency (Rev/Drive-Min)",
+      "Route efficiency",
+      "amber",
+      "kpi"
+     ]
+    ],
+    "dir": "zoom"
+   }
+  ],
+  [
+   "ops",
+   "Route Management shows every route's zone, crew, stops and drive time.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "08 Route Mgmt",
+    "label": "Route Management",
+    "d": "every route",
+    "hi": [
+     [
+      "Route Name",
+      "Every route",
+      "blue",
+      "cell"
+     ],
+     [
+      "Crew Assigned",
+      "Crew",
+      "violet",
+      "cell"
+     ],
+     [
+      "Stops",
+      "Stops",
+      "amber",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "ops",
+   "And Route Density Analytics ranks every zone on revenue per drive-minute.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "09 Route Density",
+    "label": "Route Density",
+    "d": "revenue per drive-minute",
+    "hi": [
+     [
+      "Revenue per Drive-Minute",
+      "Rev per drive-minute",
+      "green",
+      "cell"
+     ],
+     [
+      "Most Efficient Zone",
+      "Most efficient",
+      "cyan",
+      "cell"
+     ],
+     [
+      "Least Efficient Zone",
+      "Least efficient",
+      "red",
+      "cell"
+     ]
+    ],
+    "cam": "full"
+   }
+  ],
+  [
+   "ops",
+   "Every program gets its own sheet: mowing, fertilization, weed control, aeration, overseeding, irrigation. Each with its margin, and a recommendation.",
+   null,
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Every program, [its own margin.]",
+    "items": [
+     {
+      "tab": "10 Lawn Mowing",
+      "label": "Mowing"
+     },
+     {
+      "tab": "11 Fertilization",
+      "label": "Fertilization"
+     },
+     {
+      "tab": "12 Weed Control",
+      "label": "Weed Control"
+     },
+     {
+      "tab": "13 Aeration",
+      "label": "Aeration"
+     }
+    ]
+   }
+  ],
+  [
+   "ops",
+   "Crew Performance ranks every crew on jobs, revenue, gross profit, margin and revenue per hour.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "16 Crew Performance",
+    "label": "Crew Performance",
+    "d": "ranked",
+    "hi": [
+     [
+      "Revenue per Hour",
+      "Revenue per hour",
+      "green",
+      "cell"
+     ],
+     [
+      "Rank",
+      "Rank",
+      "cyan",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "ops",
+   "The Service Contract and Recurring Revenue centers track every contract, and your monthly recurring revenue.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "07 Recurring Revenue",
+    "label": "Recurring Revenue",
+    "d": "MRR + ARR",
+    "hi": [
+     [
+      "MRR",
+      "MRR",
+      "green",
+      "row"
+     ],
+     [
+      "Cancelled Contracts",
+      "Cancelled",
+      "red",
+      "row"
+     ],
+     [
+      "Net Contract Growth",
+      "Net growth",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "ops",
+   "And the Customer Retention Center lists at-risk customers with no visit in forty-five days.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "32 Customer Retention",
+    "label": "Customer Retention",
+    "d": "at-risk list",
+    "hi": [
+     [
+      "Retention Rate",
+      "Retention",
+      "cyan",
+      "cell"
+     ],
+     [
+      "AT-RISK CUSTOMERS",
+      "At-risk customers",
+      "red",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "money",
+   "Then, the money side.",
+   null,
+   {
+    "t": "slam",
+    "text": "Then, [the money side.]",
+    "photo": "cash-pile",
+    "size": 110
+   }
+  ],
+  [
+   "money",
+   "Equipment, vehicle and fuel tracking show what every mower, truck and fill-up really costs.",
+   null,
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Equipment, trucks, [fuel.]",
+    "items": [
+     {
+      "tab": "19 Equipment",
+      "label": "Equipment"
+     },
+     {
+      "tab": "20 Vehicle",
+      "label": "Vehicles"
+     },
+     {
+      "tab": "21 Fuel",
+      "label": "Fuel"
+     }
+    ]
+   }
+  ],
+  [
+   "money",
+   "Accounts Receivable buckets what's owed, and ranks your top ten overdue invoices.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "23 Accounts Receivable",
+    "label": "Accounts Receivable",
+    "d": "aging + top overdue",
+    "hi": [
+     [
+      "AGING BUCKETS",
+      "Aging buckets",
+      "amber",
+      "cell"
+     ],
+     [
+      "TOP 10 OVERDUE INVOICES",
+      "Top 10 overdue",
+      "red",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "money",
+   "And the Cash Flow Center shows cash collected, payroll, fuel and overhead, month by month.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "24 Cash Flow Center",
+    "label": "Cash Flow Center",
+    "d": "month by month",
+    "hi": [
+     [
+      "Cash In (collected that",
+      "Cash collected",
+      "green",
+      "cell"
+     ],
+     [
+      "Net Cash Flow",
+      "Net cash flow",
+      "cyan",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "leak",
+   "Then there's the Profit Leak Detector™.",
+   "Then there's the Profit Leak Detector.",
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "27 Profit Leak Detector",
+    "text": "The Profit Leak [Detector™]",
+    "cam": "full",
+    "minW": 0.7,
+    "hi": [
+     [
+      "Top 10 Lowest-Margin Visits",
+      "Lowest-margin visits",
+      "red",
+      "cell",
+      0.25
+     ],
+     [
+      "Low-Margin Visit Count (< 10%)",
+      "Visits under 10%",
+      "amber",
+      "row",
+      0.5
+     ],
+     [
+      "Revenue Exposed to Low Margin ($)",
+      "Revenue exposed",
+      "red",
+      "row",
+      0.75
+     ]
+    ]
+   }
+  ],
+  [
+   "leak",
+   "It ranks your ten lowest-margin visits, with the service type and the crew behind each one.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "And counts every visit below ten percent margin, and how much revenue is exposed.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "Add a KPI Scorecard, a Business Health Score™, forecasting and benchmarking.",
+   "Add a KPI Scorecard, a Business Health Score, forecasting and benchmarking.",
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Scored, forecast, [benchmarked.]",
+    "items": [
+     {
+      "tab": "25 KPI Scorecard",
+      "label": "KPI Scorecard"
+     },
+     {
+      "tab": "26 Business Health Score",
+      "label": "Health Score™"
+     },
+     {
+      "tab": "28 Forecasting Center",
+      "label": "Forecasting"
+     },
+     {
+      "tab": "29 Benchmarking Center",
+      "label": "Benchmarking"
+     }
+    ]
+   }
+  ],
+  [
+   "leak",
+   "And a Monthly Business Review compares the latest month to the one before, with a top priority.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "34 Monthly Business Review",
+    "label": "Monthly Review",
+    "d": "auto-generated",
+    "hi": [
+     [
+      "Business Status",
+      "Business status",
+      "green",
+      "row"
+     ],
+     [
+      "Top Priority",
+      "Top priority",
+      "amber",
+      "row"
+     ]
+    ],
+    "cam": "full"
+   }
+  ],
+  [
+   "tax",
+   "Then the part every owner dreads. Taxes.",
+   null,
+   {
+    "t": "zero",
+    "eyebrow": "The part every owner dreads",
+    "big": "TAXES.",
+    "impact": true,
+    "fxAt": 0.2,
+    "fx": "shockred"
+   }
+  ],
+  [
+   "tax",
+   "The Tax Reserve Center works out a recommended reserve, and how much of it you've funded.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "38 Tax Reserve & VAT Center",
+    "label": "Tax Reserve",
+    "d": "what to set aside",
+    "hi": [
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "Reserve Funded %",
+      "Funded %",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "The Deduction Maximizer groups the year's expenses by category, to review with your accountant.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "39 Deduction Maximizer",
+    "label": "Deduction Maximizer",
+    "d": "by category",
+    "hi": [
+     [
+      "Typically Deductible?",
+      "Deductible?",
+      "green",
+      "cell"
+     ],
+     [
+      "Total Deductible",
+      "Total",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "The Tax Readiness Center tracks due dates, and scores how ready your records are.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "40 Tax Readiness Center",
+    "label": "Tax Readiness",
+    "d": "due dates + score",
+    "hi": [
+     [
+      "TAX CALENDAR",
+      "Due dates",
+      "amber",
+      "block"
+     ],
+     [
+      "TAX READINESS SCORE",
+      "Readiness score",
+      "green",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "And the Accountant Summary is a print-ready package to hand over at filing time.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "41 Accountant Summary",
+    "label": "Accountant Summary",
+    "d": "print-ready",
+    "hi": [
+     [
+      "Accountant Package Status:",
+      "Package status",
+      "green",
+      "row"
+     ],
+     [
+      "Net Profit",
+      "P&L summary",
+      "blue",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "guide",
+   "And you're never left guessing how to use it.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Every edition comes with a Quick Start: the exact steps for your first session, your first week, and your first thirty days.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "And a full Field Guide that walks through every sheet, screen by screen.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Forty-five pages for Essential. Seventy-nine for Elite. Including what to do when a number looks wrong.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "Now, honest answers to the questions lawn care owners ask.",
+   null,
+   {
+    "t": "slam",
+    "text": "Honest answers to [real questions.]",
+    "size": 92
+   }
+  ],
+  [
+   "obj",
+   "“My scheduling app already has reports.” Good. Keep it.",
+   "My scheduling app already has reports. Good. Keep it.",
+   {
+    "t": "qa",
+    "q": "My scheduling app already has reports.",
+    "eyebrow": "Honest answer 1 of 5",
+    "liftAt": 0.7,
+    "chips": [
+     "Keep your scheduling app",
+     "Route profit",
+     "Program margins",
+     "Crew performance",
+     "Tax reserve"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "This sits next to it, and pulls the whole business into one view: routes, programs, crews, cash and taxes.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“I'm not an Excel person.” You don't need to be.",
+   "I'm not an Excel person. You don't need to be.",
+   {
+    "t": "qa",
+    "q": "I'm not an Excel person.",
+    "eyebrow": "Honest answer 2 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "Formulas built in",
+     "You enter visits and expenses",
+     "Quick Start included",
+     "Field Guide included"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "Every calculation is already built, and the Quick Start and Field Guide walk you through it. You just enter visits and expenses.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“I'm a one-truck operation.” Then start with Essential.",
+   "I'm a one-truck operation. Then start with Essential.",
+   {
+    "t": "qa",
+    "q": "I'm a one-truck operation.",
+    "eyebrow": "Honest answer 3 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "9 sheets",
+     "Visits + expenses",
+     "Dashboard + tax set-aside",
+     "Go Elite when you grow"
+    ],
+    "big": "Start with Essential.",
+    "bigSize": 80
+   }
+  ],
+  [
+   "obj",
+   "Nine sheets: visits, expenses, a dashboard and a tax set-aside. Move up to Elite when you add crews and routes.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Will it get my programs renewed?” No tool can promise that.",
+   "Will it get my programs renewed? No tool can promise that.",
+   {
+    "t": "qa",
+    "q": "Will it get my programs renewed?",
+    "eyebrow": "Honest answer 4 of 5",
+    "liftAt": 0.55,
+    "chips": [
+     "Contracts tracked",
+     "At-risk customers listed",
+     "You reach out first"
+    ],
+    "answer": "No tool can promise that."
+   }
+  ],
+  [
+   "obj",
+   "It shows every contract, cancellations, and at-risk customers, so you can reach them before the season starts.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Is it a subscription?” No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   "Is it a subscription? No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   {
+    "t": "qa",
+    "q": "Is it a subscription?",
+    "eyebrow": "Honest answer 5 of 5",
+    "liftAt": 0.25,
+    "big": "No.",
+    "bigSize": 150,
+    "chips": [
+     "One payment",
+     "No macros",
+     "Plain formulas"
+    ],
+    "foot": "Your numbers stay in your file."
+   }
+  ],
+  [
+   "offer",
+   "So, which edition fits you?",
+   null,
+   null
+  ],
+  [
+   "offer",
+   "Essential, $97: service visits, expenses, a dashboard, a health snapshot and a tax set-aside estimate.",
+   "Essential, ninety-seven dollars. Service visits, expenses, a dashboard, a health snapshot and a tax set-aside estimate.",
+   null
+  ],
+  [
+   "offer",
+   "Elite, $197: routes and route density, every program, crews, contracts, equipment, vehicles, fuel, receivables, cash flow and forecasting.",
+   "Elite, one ninety-seven. Routes and route density, every program, crews, contracts, equipment, vehicles, fuel, receivables, cash flow and forecasting.",
+   null
+  ],
+  [
+   "offer",
+   "Or Complete, $249: both workbooks, both Field Guides, both Quick Starts. Start simple, grow into the full system.",
+   "Or Complete, two forty-nine. Both workbooks, both Field Guides, both Quick Starts. Start simple, and grow into the full system.",
+   null
+  ],
+  [
+   "offer",
+   "One-time payment. And a 60-day money-back guarantee, no questions asked.",
+   "One-time payment. And a sixty-day money-back guarantee. No questions asked.",
+   null
+  ],
+  [
+   "cta",
+   "Here's what to do right now.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Pick your edition below this video.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Open it, enter this month's visits, and see what each route actually earns.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Because every month you wait is another month of guessing.",
+   null,
+   null
+  ],
+  [
+   "end",
+   "P.S. Your route shows how busy you are.",
+   "P S. Your route shows how busy you are.",
+   null
+  ],
+  [
+   "end",
+   "ProfitIQS shows you what you keep.",
+   "Profit IQS shows you what you keep.",
+   null
+  ]
+ ]
+}

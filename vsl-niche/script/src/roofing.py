@@ -1,0 +1,72 @@
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _common import *
+
+D = {
+ "name": "Roofing Business Intelligence System™", "short": "roofing",
+ "title": "Roofing [Business Intelligence] System™", "aud": "roofing contractors", "aud_short": "roofing contractors", "people": "roofers",
+ "file_ess": "Roofing_Business_Intelligence_System_Essential_2026.xlsx", "file_elite": "Roofing_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 9, "n_elite": 28, "guide": (37, 54), "dreads": "contractor",
+ "hook": [
+  ["A residential re-roof. A commercial tear-off. Three storm repairs in one week.", {"t": "notifs", "text": "Crews out [every day.]", "head": "JOB INVOICED", "items": [["Residential re-roof", "$14,200.00"], ["Commercial re-roof", "$46,800.00"], ["Storm repair", "$1,950.00"]], "photo": "roofer"}],
+  ["The bid looked fine. Then the materials and the extra labor day landed.", {"t": "bars", "text": "The bid [looked fine.]", "bars": [["Bid margin", 1, "green"], ["+ Materials", 0.6, "amber"], ["+ Extra crew day", 0.3, "red"]], "q": "Kept", "qv": 0.25}],
+  ["So here's the question. Which roofs actually made you [money?]", {"t": "slam", "text": "Which roofs actually [made you money?]", "photo": "house-siding", "size": 100}],
+  ["And the insurance job? It can sit in receivables for months, while an adjuster processes the payout.", {"t": "rows", "text": "Done. [Still not paid.]", "rows": [["Insurance claim · roof done", "INVOICED", "sky"], ["Adjuster review", "60 DAYS", "amber"], ["Payout", "STILL WAITING", "red"]]}],
+  ["A strong season can hide a slow one, and weather-driven revenue is easy to misread.", {"t": "bars", "text": "Weather-driven [revenue.]", "bars": [["Spring", 0.7, "sky"], ["Summer", 1, "green"], ["Fall", 0.6, "sky"], ["Winter", 0.25, "red"]], "note": "illustrative"}],
+  ring("a roofing company", "a roofing company"),
+ ],
+ "pain": [
+  money_side_line("roofing"),
+  ["Leads come from storm response, door knocking, home shows and referrals. Some never become estimates.", {"t": "cards", "text": "Leads that [never become estimates.]", "cards": [["roofer", "Storm response", "amber"], ["house-lawn", "Door knocking", "sky"], ["meeting", "Home show", "green"]]}],
+  ["Several crews on several roofs at once. Which one finishes faster, and costs less per job?", {"t": "bars", "text": "Which crew [really performs?]", "bars": [["Crew Alpha", 0.85, "sky"], ["Crew Bravo", 0.65, "sky"], ["Crew Charlie", 0.75, "sky"]], "q": "Best?", "qv": 0.5}],
+  ["Material receipts pile up. Crew payroll and permit costs end up scattered.", {"t": "papers", "text": "Receipts: [scattered.]", "label": "MATERIAL", "photo": "tools"}],
+  ["Insurance and financed jobs collect slowly, while payroll is due every week.", {"t": "rows", "text": "Slow money. [Weekly payroll.]", "rows": [["INV-2208 · Re-roof", "CURRENT", "sky"], ["INV-2214 · Insurance claim", "61-90 DAYS", "amber"], ["INV-2219 · Commercial", "120+ DAYS", "red"]]}],
+  ["Your estimate said one number. The job said another. Nobody went back to compare.", {"t": "split", "left": ["The estimate", ["Materials guessed", "Labor guessed", "Margin assumed"]], "right": ["The actual job", ["Real material cost", "Real labor + equipment", "Real margin"]], "rightAt": 0.55}],
+  send_everything(),
+  months_line("Busy all season, and still not sure what the business actually kept."),
+ ],
+ "turn2": "You already have the data: leads, estimates, jobs, invoices, receipts.",
+ "labels": ["LEAD", "ESTIMATE", "$", "CREW", "SQUARE", "%", "CLAIM"],
+ "who": [["roofer", "Owner-operator roofer", "on the ladder all day"], ["construction", "Multi-crew company", "which crew performs"], ["house-siding", "Insurance restoration", "slow claim payouts"], ["woman-office", "Office manager", "estimates, costs, AR"]],
+ "who_lines": ["It's for the owner-operator roofer who still runs the ladder, and does the books after dark.", "The multi-crew company that needs to see which crew produces the most profitable work.", "The insurance-restoration contractor tracking claims that take months to collect.", "And the office manager handling estimates, job costs and receivables."],
+ "ess_wall": "You enter the facts, jobs and expenses. The workbook does the math.",
+ "inputs": ["SETUP", "JOB REVENUE ENTRY", "EXPENSE ENTRY"],
+ "ess_tour": [
+  setup_line(),
+  ["Log every job by type: repair, residential re-roof, commercial re-roof, insurance claim.", S("ess", "JOB REVENUE ENTRY", "Job Revenue Entry", "every job", [["Job Type", "Job type", "blue", "cell"]], minW=0.8)],
+  ["Log every expense: fuel, insurance, office, marketing, admin payroll.", S("ess", "EXPENSE ENTRY", "Expense Entry", "every expense", [["Category", "Category", "amber", "cell"], ["Vendor#0", "Vendor", "cyan", "cell"]], minW=0.8)],
+ ] + ess_tail(dash_kpi=("REVENUE (12 MO)", "Revenue"), dash_kpi2=("NET PROFIT (12 MO)", "Net profit"), dash_kpi3=("REVENUE PER SQUARE", "Per square"), dash_line="The Dashboard puts it on one screen: revenue, net profit, revenue per square, and how funded your tax reserve is.", tax_cost=("Job Materials + Labor Cost", "Materials + labor"), tax_line="Tax & Deductions separates job materials and labor from overhead, and works out your tax reserve."),
+ "elite_tag": "The full operating system for a roofing company.",
+ "elite_wall": "From lead, to estimate, to job, to job costing, to invoice, to cash. Plus crews, scorecards and taxes.",
+ "sections": [
+  ("ops", [
+   ["It opens on the Executive Command Center: revenue, net profit, margin, estimate win rate, and your Business Health Score.", S("elite", "Executive Dashboard", "Executive Dashboard", "the whole company", [["TOTAL REVENUE", "Revenue", "blue", "kpi"], ["NET PROFIT", "Net profit", "green", "kpi"], ["PROFIT MARGIN", "Margin", "cyan", "kpi"], ["ESTIMATE WIN RATE", "Win rate", "amber", "kpi"]], dir="zoom")],
+   ["The Lead Tracker records every lead, and where it came from: storm response, door knocking, home shows, referrals.", S("elite", "Lead Tracker", "Lead Tracker", "every lead", [["Source", "Lead source", "blue", "cell"]], minW=0.8)],
+   ["The Estimate Center tracks every estimate, so you can see which leads became signed work.", S("elite", "Estimate Center", "Estimate Center", "every estimate", [["Estimate ID", "Every estimate", "blue", "row"]], minW=0.8)],
+   ["Job Management assigns every job to a crew, with the customer and address.", S("elite", "Job Management", "Job Management", "every job, every crew", [["Crew", "Crew", "violet", "cell"]], minW=0.8)],
+   ["Then Job Costing: materials, labor, equipment, fuel and overhead for every job, against the contract.", S("elite", "Job Costing", "Job Costing", "contract vs. cost", [["Material Cost", "Materials", "amber", "cell"], ["Labor Cost", "Labor", "red", "cell"], ["PORTFOLIO METRICS", "Portfolio margin", "green", "block"]])],
+   ["And Crew Performance compares every crew on jobs completed, revenue, labor hours and profit contribution.", S("elite", "Crew Performance", "Crew Performance", "every crew", [["TEAM TOTALS", "Team totals", "cyan", "block"], ["Efficiency", "Efficiency score", "green", "cell"]])],
+   ["Plus a revenue tracker, an expense tracker, a customer database and customer analytics.", mini("Every invoice, [every customer.]", [("Revenue Tracker", "Revenue Tracker"), ("Expense Tracker", "Expense Tracker"), ("Customer Database", "Customers"), ("Customer Analytics", "Customer Analytics")])],
+  ]),
+  ("money", [
+   money_slam(),
+   ["AR Aging buckets every open invoice, from current to a hundred-and-twenty-plus days. Including the slow insurance jobs.", S("elite", "AR Aging", "AR Aging", "aging buckets", [["AGING SUMMARY", "Aging summary", "amber", "block"]])],
+   ["And the Cash Flow Center shows inflows, outflows, net cash flow and your running balance, month by month.", S("elite", "Cash Flow Center", "Cash Flow Center", "month by month", [["Cash Inflows", "Cash in", "green", "cell"], ["12-MONTH SUMMARY", "12-month summary", "cyan", "block"]])],
+  ]),
+ ],
+ "leak": {"hi": [["LOW-MARGIN JOBS (MARGIN BELOW 15%)", "Jobs under 15% margin", "red", "cell", 0.25], ["Margin %", "Margin", "amber", "cell", 0.45], ["Possible Cause", "Possible cause", "cyan", "cell", 0.65], ["Recommended Action", "Recommended action", "green", "cell", 0.85]],
+          "lines": ["It automatically flags every job with a margin below fifteen percent.", "And shows what drove it, like materials cost or labor.", "Each with a possible cause, and a recommended action."]},
+ "objs": [
+  obj_app("My roofing software already tracks bids and jobs.", "job costing, crews, receivables, cash and taxes", ["Keep your roofing software", "Job costing", "Crew performance", "AR aging", "Tax reserve"]),
+  obj_excel(locked=True),
+  {"q": "I run one crew. I'm too small for this.", "a1": "Then start with Essential.", "a2": "Nine sheets: jobs, expenses, a dashboard and a tax set-aside. Move up to Elite when you add crews.", "big": "Start with Essential.", "bigSize": 80, "chips": ["9 sheets", "Jobs + expenses", "Dashboard + tax set-aside", "Go Elite when you grow"]},
+  {"q": "Will it make my bids more accurate?", "a1": "No tool can promise that.", "a2": "Job Costing puts every job's real cost next to its contract, so you can see where your bids missed, and adjust.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["Real cost vs. contract", "Low-margin jobs flagged", "You adjust the bid"]},
+ ],
+ "offer_ess": "job revenue, expenses, a dashboard, a health snapshot and a tax set-aside estimate",
+ "offer_elite": "leads, estimates, job management, job costing, crews, customers, AR aging, cash flow and forecasting",
+ "tiers": [["Job revenue & expenses", "Dashboard + health snapshot", "Tax set-aside estimate", "Accountant export"], ["Leads & estimates", "Job costing", "Crew performance", "AR aging & cash flow"], TIER_C],
+ "cta_line": "Open it, enter this month's jobs, and see what each roof actually kept.",
+ "cta": ["Enter this month's jobs", "See what each roof kept", "Every month you wait is [another month of guessing.]"],
+ "ps": ["Your bids show what you expected.", "what you kept."],
+ "end": ["Your bids show [what you expected.]", "ProfitIQS shows you [what you kept.]"],
+}

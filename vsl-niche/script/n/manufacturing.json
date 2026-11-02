@@ -1,0 +1,1358 @@
+{
+ "slug": "manufacturing",
+ "name": "Manufacturing Business Intelligence System™",
+ "short": "manufacturing",
+ "file_ess": "Manufacturing_Business_Intelligence_System_Essential_2026.xlsx",
+ "file_elite": "Manufacturing_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 10,
+ "n_elite": 29,
+ "reveal": {
+  "title": "Manufacturing [Business Intelligence] System™",
+  "made": "Made only for [small manufacturers.]",
+  "chips": [
+   "Formulas",
+   "Dashboards",
+   "Reports",
+   "Tax set-aside",
+   "Sample data included"
+  ]
+ },
+ "who": [
+  [
+   "factory-worker",
+   "Contract manufacturer",
+   "every run, costed"
+  ],
+  [
+   "welding",
+   "Job shop",
+   "margin per job"
+  ],
+  [
+   "factory",
+   "Single-product producer",
+   "cost per unit"
+  ],
+  [
+   "warehouse",
+   "Growing shop",
+   "which lines carry it"
+  ]
+ ],
+ "tiers": [
+  [
+   "Products & production",
+   "Expenses",
+   "Dashboard + health snapshot",
+   "Tax set-aside estimate"
+  ],
+  [
+   "Cost accounting",
+   "Product profitability",
+   "Production & sales orders",
+   "Inventory, AR & cash"
+  ],
+  [
+   "Both workbooks",
+   "Both Field Guides",
+   "Both Quick Starts",
+   "Start simple, grow"
+  ]
+ ],
+ "guide": {
+  "ess": 46,
+  "elite": 74
+ },
+ "cta": [
+  "Enter this month's production",
+  "See what each product keeps",
+  "Every month you wait is [another month of guessing.]"
+ ],
+ "end": [
+  "Your orders show [what you sold.]",
+  "ProfitIQS shows you [what you kept.]"
+ ],
+ "lines": [
+  [
+   "hook",
+   "Steel brackets, machined shafts, a custom assembly order. The floor ran all week.",
+   null,
+   {
+    "t": "notifs",
+    "text": "The floor ran [all week.]",
+    "head": "ORDER SHIPPED",
+    "items": [
+     [
+      "Steel Bracket A100 · 2,000 units",
+      "$9,400.00"
+     ],
+     [
+      "Machined Shaft D300 · 300 units",
+      "$12,750.00"
+     ],
+     [
+      "Custom Assembly J600",
+      "$18,200.00"
+     ]
+    ],
+    "photo": "factory-worker"
+   }
+  ],
+  [
+   "hook",
+   "But the real cost of a run? Materials, labor and overhead often get totaled after it ships. After the price was already set.",
+   null,
+   {
+    "t": "rows",
+    "text": "Costed [after it ships.]",
+    "rows": [
+     [
+      "Price quoted",
+      "SET",
+      "sky"
+     ],
+     [
+      "Run produced + shipped",
+      "DONE",
+      "green"
+     ],
+     [
+      "True cost per unit",
+      "FOUND OUT LATER",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "hook",
+   "One product line can carry the shop, while another barely covers its own materials.",
+   null,
+   {
+    "t": "bars",
+    "text": "Not every line [pays.]",
+    "bars": [
+     [
+      "Line A",
+      1,
+      "green"
+     ],
+     [
+      "Line B",
+      0.65,
+      "sky"
+     ],
+     [
+      "Line C",
+      0.22,
+      "red"
+     ]
+    ],
+    "q": "Margin?",
+    "qv": 0.4
+   }
+  ],
+  [
+   "hook",
+   "So here's the question. Which of your products actually make you [money?]",
+   null,
+   {
+    "t": "slam",
+    "text": "Which products actually [make you money?]",
+    "photo": "factory",
+    "size": 96
+   }
+  ],
+  [
+   "hook",
+   "And the raw materials and finished goods on the shelf? That's cash you can't use.",
+   null,
+   {
+    "t": "slam",
+    "text": "Inventory is [cash on a shelf.]",
+    "photo": "warehouse",
+    "size": 96
+   }
+  ],
+  [
+   "hook",
+   "If you run a manufacturing business, the next few minutes are for you.",
+   null,
+   {
+    "t": "ring",
+    "n": "7",
+    "unit": "MINUTES",
+    "text": "If you run a manufacturing business — [this is for you.]"
+   }
+  ],
+  [
+   "pain",
+   "Here's how the money side of manufacturing usually works.",
+   null,
+   {
+    "t": "slam",
+    "text": "How the money side [usually works.]",
+    "glitch": 0,
+    "size": 92
+   }
+  ],
+  [
+   "pain",
+   "Orders live in one place. Material receipts in another. Production records on the floor.",
+   null,
+   {
+    "t": "papers",
+    "text": "Records: [everywhere.]",
+    "label": "MATERIAL",
+    "photo": "welding"
+   }
+  ],
+  [
+   "pain",
+   "What the floor is making, and what customers actually ordered, quietly stop matching.",
+   null,
+   {
+    "t": "split",
+    "left": [
+     "Production orders",
+     [
+      "What's being made",
+      "When it's done",
+      "How many units"
+     ]
+    ],
+    "right": [
+     "Sales orders",
+     [
+      "What was ordered",
+      "When it's due",
+      "Who's waiting"
+     ]
+    ],
+    "rightAt": 0.5
+   }
+  ],
+  [
+   "pain",
+   "Margin swings from run to run, and from product to product. Without a per-product view, you can't tell which is which.",
+   null,
+   {
+    "t": "bars",
+    "text": "Margin [swings by product.]",
+    "bars": [
+     [
+      "Bracket",
+      0.8,
+      "green"
+     ],
+     [
+      "Housing",
+      0.45,
+      "amber"
+     ],
+     [
+      "Gasket set",
+      0.2,
+      "red"
+     ],
+     [
+      "Gear",
+      0.65,
+      "sky"
+     ]
+    ],
+    "note": "illustrative"
+   }
+  ],
+  [
+   "pain",
+   "Late production orders push out deliveries, and customers notice.",
+   null,
+   {
+    "t": "rows",
+    "text": "Orders [running late.]",
+    "rows": [
+     [
+      "PO · Steel brackets",
+      "ON TIME",
+      "green"
+     ],
+     [
+      "PO · Machined shafts",
+      "AT RISK",
+      "amber"
+     ],
+     [
+      "PO · Welded frames",
+      "LATE",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Commercial customers pay late, and cash gets tight fast.",
+   null,
+   {
+    "t": "rows",
+    "text": "Shipped. [Not paid.]",
+    "rows": [
+     [
+      "Titan Industries",
+      "CURRENT",
+      "sky"
+     ],
+     [
+      "Meridian Machine Works",
+      "45 DAYS",
+      "amber"
+     ],
+     [
+      "Sterling Equipment Co",
+      "90+ DAYS",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Then tax time: material receipts, payroll and production records, scattered everywhere.",
+   null,
+   {
+    "t": "papers",
+    "text": "Tax time: [scattered everywhere.]",
+    "label": "RECEIPT",
+    "photo": "taxdocs"
+   }
+  ],
+  [
+   "pain",
+   "Your accountant asks for everything. And nothing's in one place.",
+   null,
+   {
+    "t": "slam",
+    "text": "“Send me [everything.]”",
+    "photo": "signing",
+    "glitch": 0.6
+   }
+  ],
+  [
+   "pain",
+   "Busy all year, and still not sure what the business actually kept.",
+   null,
+   {
+    "t": "months",
+    "text": "Kept this year:",
+    "photo": "busy"
+   }
+  ],
+  [
+   "turn",
+   "That's not a work-ethic problem. It's a visibility problem.",
+   null,
+   {
+    "t": "strike",
+    "from": "Work ethic",
+    "to": "Visibility."
+   }
+  ],
+  [
+   "turn",
+   "You already have the data: orders, production runs, materials, invoices.",
+   null,
+   {
+    "t": "converge",
+    "text": "You already [have the data.]",
+    "labels": [
+     "ORDER",
+     "RUN",
+     "$",
+     "UNIT",
+     "MATERIAL",
+     "%",
+     "SKU"
+    ],
+    "box": "One place."
+   }
+  ],
+  [
+   "turn",
+   "You just don't have one place that turns it into decisions.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "That's why we built the Manufacturing Business Intelligence System™.",
+   "That's why we built the Manufacturing Business Intelligence System.",
+   null
+  ],
+  [
+   "reveal",
+   "A ready-built Excel system, made only for small manufacturers.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "Formulas, dashboards and reports are already built in. Tax set-aside too.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "And it ships with sample data, so every dashboard works the moment you open it.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "It's for the contract manufacturer who needs every production run costed against its order.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The job shop pricing custom and small-batch work, with margin that swings run to run.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The single-product producer who lives or dies on cost per unit.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "And the growing shop adding product lines, that needs to see which ones carry the business.",
+   null,
+   null
+  ],
+  [
+   "ess",
+   "Let me show you what's inside. Start with Essential: ten sheets.",
+   null,
+   {
+    "t": "cover",
+    "ed": "ess",
+    "n": 10
+   }
+  ],
+  [
+   "ess",
+   "You enter the facts: products, production and expenses. The workbook does the math.",
+   null,
+   {
+    "t": "wall",
+    "ed": "ess",
+    "text": "You enter the facts. [It does the math.]",
+    "inputs": [
+     "SETUP",
+     "PRODUCT SETUP",
+     "PRODUCTION ENTRY",
+     "EXPENSE ENTRY"
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Set up once: your country, currency and tax-rate presets.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "SETUP",
+    "label": "Setup",
+    "d": "once",
+    "hi": [
+     [
+      "Country",
+      "Country preset",
+      "cyan",
+      "row"
+     ],
+     [
+      "Tax Reserve Rate % — default",
+      "Tax-rate preset",
+      "green",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Set up your products once, with their selling price per unit.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "PRODUCT SETUP",
+    "label": "Product Setup",
+    "d": "once",
+    "hi": [
+     [
+      "Selling Price per Unit",
+      "Selling price",
+      "green",
+      "cell"
+     ],
+     [
+      "Product Name",
+      "Every product",
+      "blue",
+      "cell"
+     ]
+    ],
+    "cam": "full"
+   }
+  ],
+  [
+   "ess",
+   "Log every production run: the product, the units, the cost.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "PRODUCTION ENTRY",
+    "label": "Production Entry",
+    "d": "every run",
+    "hi": [
+     [
+      "Product Name",
+      "Product",
+      "blue",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ess",
+   "Log every overhead expense: rent, utilities, maintenance, logistics.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "EXPENSE ENTRY",
+    "label": "Expense Entry",
+    "d": "every expense",
+    "hi": [
+     [
+      "Category",
+      "Category",
+      "amber",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ess",
+   "Tax & Deductions separates production cost from overhead, and works out your tax reserve.",
+   "Tax and Deductions separates production cost from overhead, and works out your tax reserve.",
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "TAX & DEDUCTIONS",
+    "label": "Tax & Deductions",
+    "d": "reserve + deductions",
+    "hi": [
+     [
+      "Production Cost (Materials + Labor)",
+      "Production cost",
+      "amber",
+      "row"
+     ],
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "DEDUCTION SUMMARY BY CATEGORY",
+      "Every category",
+      "cyan",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "The Dashboard: revenue, net profit, units produced and sold, and how funded your tax reserve is.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "DASHBOARD",
+    "label": "Dashboard",
+    "d": "one screen",
+    "hi": [
+     [
+      "TOTAL REVENUE",
+      "Revenue",
+      "blue",
+      "kpi"
+     ],
+     [
+      "NET PROFIT",
+      "Net profit",
+      "green",
+      "kpi"
+     ],
+     [
+      "UNITS PRODUCED",
+      "Units produced",
+      "cyan",
+      "kpi"
+     ],
+     [
+      "TAX RESERVE FUNDED %",
+      "Reserve funded",
+      "amber",
+      "kpi"
+     ]
+    ],
+    "dir": "zoom"
+   }
+  ],
+  [
+   "ess",
+   "The Accountant Export hands over a clean summary and a document checklist.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "ACCOUNTANT EXPORT",
+    "label": "Accountant Export",
+    "d": "clean summary",
+    "hi": [
+     [
+      "Net Profit",
+      "Summary",
+      "blue",
+      "row"
+     ],
+     [
+      "DOCUMENT CHECKLIST",
+      "Document checklist",
+      "green",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "And the Business Health Snapshot scores profit, cash, tax readiness, expenses and revenue trend.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "BUSINESS HEALTH SNAPSHOT",
+    "label": "Health Snapshot",
+    "d": "scored 0–100",
+    "hi": [
+     [
+      "Profit Status",
+      "5 categories",
+      "cyan",
+      "block"
+     ],
+     [
+      "OVERALL SCORE (0-100)",
+      "Overall score",
+      "green",
+      "row"
+     ]
+    ],
+    "cam": "full"
+   }
+  ],
+  [
+   "elite",
+   "Now, Elite. Twenty-nine sheets. The full operating system for a manufacturer.",
+   null,
+   {
+    "t": "cover",
+    "ed": "elite",
+    "n": 29,
+    "fx": "shock",
+    "fxAt": 0.5
+   }
+  ],
+  [
+   "elite",
+   "Products, production orders, sales orders, cost accounting, product profitability, inventory, customers, receivables, cash and taxes.",
+   null,
+   {
+    "t": "wall",
+    "ed": "elite",
+    "tags": false,
+    "text": "[29 sheets,] one operating system."
+   }
+  ],
+  [
+   "ops",
+   "It opens on the Executive Command Center: revenue, margins, production efficiency, on-time delivery, inventory and WIP value.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "02 Executive Dashboard",
+    "label": "Executive Dashboard",
+    "d": "the whole operation",
+    "hi": [
+     [
+      "TOTAL REVENUE",
+      "Revenue",
+      "blue",
+      "kpi"
+     ],
+     [
+      "GROSS MARGIN %",
+      "Gross margin",
+      "green",
+      "kpi"
+     ],
+     [
+      "ON-TIME DELIVERY",
+      "On-time delivery",
+      "cyan",
+      "kpi"
+     ],
+     [
+      "INVENTORY VALUE",
+      "Inventory",
+      "amber",
+      "kpi"
+     ]
+    ],
+    "dir": "zoom"
+   }
+  ],
+  [
+   "ops",
+   "Cost Accounting works out the true cost of every product: materials, labor and overhead.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "09 Cost Accounting",
+    "label": "Cost Accounting",
+    "d": "true unit cost",
+    "hi": [
+     [
+      "COST ACCOUNTING CENTER",
+      "Every product, costed",
+      "amber",
+      "row"
+     ],
+     [
+      "Product ID",
+      "Every product",
+      "blue",
+      "row"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ops",
+   "Product Profitability shows what every product actually keeps.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "10 Product Profitability",
+    "label": "Product Profitability",
+    "d": "every product",
+    "hi": [
+     [
+      "PRODUCT PROFITABILITY CENTER",
+      "Margin per product",
+      "green",
+      "row"
+     ],
+     [
+      "Product ID",
+      "Every product",
+      "blue",
+      "row"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ops",
+   "Production Orders and Sales Orders sit side by side, so what's made matches what's ordered.",
+   null,
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Made vs. [ordered.]",
+    "items": [
+     {
+      "tab": "05 Production Orders",
+      "label": "Production Orders"
+     },
+     {
+      "tab": "06 Sales Orders",
+      "label": "Sales Orders"
+     }
+    ]
+   }
+  ],
+  [
+   "ops",
+   "And Inventory Control tracks raw materials and finished goods, with an inventory summary.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "11 Inventory Control",
+    "label": "Inventory Control",
+    "d": "stock + summary",
+    "hi": [
+     [
+      "INVENTORY SUMMARY",
+      "Inventory summary",
+      "violet",
+      "cell"
+     ],
+     [
+      "Record ID",
+      "Every record",
+      "blue",
+      "row"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ops",
+   "Plus a product master, a customer database and customer analytics.",
+   null,
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Every product, [every customer.]",
+    "items": [
+     {
+      "tab": "04 Product Master",
+      "label": "Product Master"
+     },
+     {
+      "tab": "12 Customer Database",
+      "label": "Customers"
+     },
+     {
+      "tab": "20 Customer Analytics",
+      "label": "Customer Analytics"
+     }
+    ]
+   }
+  ],
+  [
+   "money",
+   "Then, the money side.",
+   null,
+   {
+    "t": "slam",
+    "text": "Then, [the money side.]",
+    "photo": "cash-pile",
+    "size": 110
+   }
+  ],
+  [
+   "money",
+   "AR Aging lists every unpaid or partly paid order, by customer.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "13 AR Aging",
+    "label": "AR Aging",
+    "d": "by customer",
+    "hi": [
+     [
+      "Customer",
+      "Customer",
+      "amber",
+      "cell"
+     ],
+     [
+      "Order #",
+      "Every open order",
+      "red",
+      "row"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "money",
+   "And the Cash Flow Center shows cash received, expenses paid, net, and your running balance.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "14 Cash Flow Center",
+    "label": "Cash Flow Center",
+    "d": "month by month",
+    "hi": [
+     [
+      "Inflow (Cash Received)",
+      "Cash in",
+      "green",
+      "cell"
+     ],
+     [
+      "Running Balance",
+      "Running balance",
+      "cyan",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "leak",
+   "Then there's the Profit Leak Detector™.",
+   "Then there's the Profit Leak Detector.",
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "17 Profit Leak Detector",
+    "text": "The Profit Leak [Detector™]",
+    "cam": "full",
+    "minW": 0.7,
+    "hi": [
+     [
+      "Automated risk flags",
+      "Automated flags",
+      "amber",
+      "cell",
+      0.2
+     ],
+     [
+      "Late Production Orders",
+      "Late orders",
+      "red",
+      "row",
+      0.36
+     ],
+     [
+      "Low-Margin Product Exposure",
+      "Low-margin products",
+      "red",
+      "row",
+      0.52
+     ],
+     [
+      "Excess Inventory",
+      "Excess inventory",
+      "amber",
+      "row",
+      0.68
+     ],
+     [
+      "Possible Cause",
+      "Possible cause",
+      "cyan",
+      "cell",
+      0.84
+     ]
+    ]
+   }
+  ],
+  [
+   "leak",
+   "It automatically flags late production orders, and products under twenty percent margin.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "Plus excess inventory, and slow-moving finished goods.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "Each against a threshold, with a possible cause.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "Add a KPI Scorecard, a Business Health Score™, forecasting and benchmarking.",
+   "Add a KPI Scorecard, a Business Health Score, forecasting and benchmarking.",
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Scored, forecast, [benchmarked.]",
+    "items": [
+     {
+      "tab": "15 KPI Scorecard",
+      "label": "KPI Scorecard"
+     },
+     {
+      "tab": "16 Business Health Score",
+      "label": "Health Score™"
+     },
+     {
+      "tab": "18 Forecasting Center",
+      "label": "Forecasting"
+     },
+     {
+      "tab": "19 Benchmarking Center",
+      "label": "Benchmarking"
+     }
+    ]
+   }
+  ],
+  [
+   "tax",
+   "Then the part every owner dreads. Taxes.",
+   null,
+   {
+    "t": "zero",
+    "eyebrow": "The part every owner dreads",
+    "big": "TAXES.",
+    "impact": true,
+    "fxAt": 0.2,
+    "fx": "shockred"
+   }
+  ],
+  [
+   "tax",
+   "The Tax Reserve Center works out a recommended reserve, and how much of it you've funded.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "22 Tax Reserve & VAT Center",
+    "label": "Tax Reserve",
+    "d": "what to set aside",
+    "hi": [
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "Reserve Funded %",
+      "Funded %",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "The Deduction Maximizer groups the year's expenses by category, to review with your accountant.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "23 Deduction Maximizer",
+    "label": "Deduction Maximizer",
+    "d": "by category",
+    "hi": [
+     [
+      "Typically Deductible?",
+      "Deductible?",
+      "green",
+      "cell"
+     ],
+     [
+      "Total Deductible",
+      "Total",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "The Tax Readiness Center tracks due dates, and scores how ready your records are.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "24 Tax Readiness Center",
+    "label": "Tax Readiness",
+    "d": "due dates + score",
+    "hi": [
+     [
+      "TAX CALENDAR",
+      "Due dates",
+      "amber",
+      "block"
+     ],
+     [
+      "TAX READINESS SCORE",
+      "Readiness score",
+      "green",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "And the Accountant Summary is a print-ready package to hand over at filing time.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "25 Accountant Summary",
+    "label": "Accountant Summary",
+    "d": "print-ready",
+    "hi": [
+     [
+      "Accountant Package Status:",
+      "Package status",
+      "green",
+      "row"
+     ],
+     [
+      "Net Profit",
+      "P&L summary",
+      "blue",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "guide",
+   "And you're never left guessing how to use it.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Every edition comes with a Quick Start: the exact steps for your first session, your first week, and your first thirty days.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "And a full Field Guide that walks through every sheet, screen by screen.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Forty-six pages for Essential. Seventy-four for Elite. Including what to do when a number looks wrong.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "Now, honest answers to the questions manufacturers ask.",
+   null,
+   {
+    "t": "slam",
+    "text": "Honest answers to [real questions.]",
+    "size": 92
+   }
+  ],
+  [
+   "obj",
+   "“My accounting software already tracks this.” Good. Keep it.",
+   "My accounting software already tracks this. Good. Keep it.",
+   {
+    "t": "qa",
+    "q": "My accounting software already tracks this.",
+    "eyebrow": "Honest answer 1 of 5",
+    "liftAt": 0.7,
+    "chips": [
+     "Keep your accounting software",
+     "True unit cost",
+     "Product margin",
+     "Orders in sync",
+     "Inventory"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "This sits next to it, and pulls the whole business into one view: unit cost, product margin, orders, inventory and cash.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“I'm not an Excel person.” You don't need to be.",
+   "I'm not an Excel person. You don't need to be.",
+   {
+    "t": "qa",
+    "q": "I'm not an Excel person.",
+    "eyebrow": "Honest answer 2 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "Formulas built in",
+     "Elite: formula cells locked",
+     "You enter products, production runs and expenses",
+     "Quick Start included"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "Every calculation is already built. In Elite, the formula cells are locked, so you can't break them. You just enter products, production runs and expenses.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“We only make a few products.” Then start with Essential.",
+   "We only make a few products. Then start with Essential.",
+   {
+    "t": "qa",
+    "q": "We only make a few products.",
+    "eyebrow": "Honest answer 3 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "10 sheets",
+     "Products + production",
+     "Dashboard + tax set-aside",
+     "Go Elite for cost accounting"
+    ],
+    "big": "Start with Essential.",
+    "bigSize": 80
+   }
+  ],
+  [
+   "obj",
+   "Ten sheets: products, production, expenses, a dashboard and a tax set-aside. Move up to Elite for cost accounting and orders.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Will it lower my costs?” No tool can promise that.",
+   "Will it lower my costs? No tool can promise that.",
+   {
+    "t": "qa",
+    "q": "Will it lower my costs?",
+    "eyebrow": "Honest answer 4 of 5",
+    "liftAt": 0.55,
+    "chips": [
+     "True unit cost",
+     "Low-margin products flagged",
+     "You decide what to change"
+    ],
+    "answer": "No tool can promise that."
+   }
+  ],
+  [
+   "obj",
+   "It shows the true cost and margin of every product, so you can see which ones to reprice, rework, or drop.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Is it a subscription?” No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   "Is it a subscription? No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   {
+    "t": "qa",
+    "q": "Is it a subscription?",
+    "eyebrow": "Honest answer 5 of 5",
+    "liftAt": 0.25,
+    "big": "No.",
+    "bigSize": 150,
+    "chips": [
+     "One payment",
+     "No macros",
+     "Plain formulas"
+    ],
+    "foot": "Your numbers stay in your file."
+   }
+  ],
+  [
+   "offer",
+   "So, which edition fits you?",
+   null,
+   null
+  ],
+  [
+   "offer",
+   "Essential, $97: products, production runs, expenses, a dashboard, a health snapshot and a tax set-aside estimate.",
+   "Essential, ninety-seven dollars. Products, production runs, expenses, a dashboard, a health snapshot and a tax set-aside estimate.",
+   null
+  ],
+  [
+   "offer",
+   "Elite, $197: cost accounting, product profitability, production and sales orders, inventory control, customers, receivables, cash flow and forecasting.",
+   "Elite, one ninety-seven. Cost accounting, product profitability, production and sales orders, inventory control, customers, receivables, cash flow and forecasting.",
+   null
+  ],
+  [
+   "offer",
+   "Or Complete, $249: both workbooks, both Field Guides, both Quick Starts. Start simple, grow into the full system.",
+   "Or Complete, two forty-nine. Both workbooks, both Field Guides, both Quick Starts. Start simple, and grow into the full system.",
+   null
+  ],
+  [
+   "offer",
+   "One-time payment. And a 60-day money-back guarantee, no questions asked.",
+   "One-time payment. And a sixty-day money-back guarantee. No questions asked.",
+   null
+  ],
+  [
+   "cta",
+   "Here's what to do right now.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Pick your edition below this video.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Open it, enter this month's production, and see what each product actually keeps.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Because every month you wait is another month of guessing.",
+   null,
+   null
+  ],
+  [
+   "end",
+   "P.S. Your orders show what you sold.",
+   "P S. Your orders show what you sold.",
+   null
+  ],
+  [
+   "end",
+   "ProfitIQS shows you what you kept.",
+   "Profit IQS shows you what you kept.",
+   null
+  ]
+ ]
+}

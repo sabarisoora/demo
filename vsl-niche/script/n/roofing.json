@@ -1,0 +1,1352 @@
+{
+ "slug": "roofing",
+ "name": "Roofing Business Intelligence System™",
+ "short": "roofing",
+ "file_ess": "Roofing_Business_Intelligence_System_Essential_2026.xlsx",
+ "file_elite": "Roofing_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 9,
+ "n_elite": 28,
+ "reveal": {
+  "title": "Roofing [Business Intelligence] System™",
+  "made": "Made only for [roofing contractors.]",
+  "chips": [
+   "Formulas",
+   "Dashboards",
+   "Reports",
+   "Tax set-aside",
+   "Sample data included"
+  ]
+ },
+ "who": [
+  [
+   "roofer",
+   "Owner-operator roofer",
+   "on the ladder all day"
+  ],
+  [
+   "construction",
+   "Multi-crew company",
+   "which crew performs"
+  ],
+  [
+   "house-siding",
+   "Insurance restoration",
+   "slow claim payouts"
+  ],
+  [
+   "woman-office",
+   "Office manager",
+   "estimates, costs, AR"
+  ]
+ ],
+ "tiers": [
+  [
+   "Job revenue & expenses",
+   "Dashboard + health snapshot",
+   "Tax set-aside estimate",
+   "Accountant export"
+  ],
+  [
+   "Leads & estimates",
+   "Job costing",
+   "Crew performance",
+   "AR aging & cash flow"
+  ],
+  [
+   "Both workbooks",
+   "Both Field Guides",
+   "Both Quick Starts",
+   "Start simple, grow"
+  ]
+ ],
+ "guide": {
+  "ess": 37,
+  "elite": 54
+ },
+ "cta": [
+  "Enter this month's jobs",
+  "See what each roof kept",
+  "Every month you wait is [another month of guessing.]"
+ ],
+ "end": [
+  "Your bids show [what you expected.]",
+  "ProfitIQS shows you [what you kept.]"
+ ],
+ "lines": [
+  [
+   "hook",
+   "A residential re-roof. A commercial tear-off. Three storm repairs in one week.",
+   null,
+   {
+    "t": "notifs",
+    "text": "Crews out [every day.]",
+    "head": "JOB INVOICED",
+    "items": [
+     [
+      "Residential re-roof",
+      "$14,200.00"
+     ],
+     [
+      "Commercial re-roof",
+      "$46,800.00"
+     ],
+     [
+      "Storm repair",
+      "$1,950.00"
+     ]
+    ],
+    "photo": "roofer"
+   }
+  ],
+  [
+   "hook",
+   "The bid looked fine. Then the materials and the extra labor day landed.",
+   null,
+   {
+    "t": "bars",
+    "text": "The bid [looked fine.]",
+    "bars": [
+     [
+      "Bid margin",
+      1,
+      "green"
+     ],
+     [
+      "+ Materials",
+      0.6,
+      "amber"
+     ],
+     [
+      "+ Extra crew day",
+      0.3,
+      "red"
+     ]
+    ],
+    "q": "Kept",
+    "qv": 0.25
+   }
+  ],
+  [
+   "hook",
+   "So here's the question. Which roofs actually made you [money?]",
+   null,
+   {
+    "t": "slam",
+    "text": "Which roofs actually [made you money?]",
+    "photo": "house-siding",
+    "size": 100
+   }
+  ],
+  [
+   "hook",
+   "And the insurance job? It can sit in receivables for months, while an adjuster processes the payout.",
+   null,
+   {
+    "t": "rows",
+    "text": "Done. [Still not paid.]",
+    "rows": [
+     [
+      "Insurance claim · roof done",
+      "INVOICED",
+      "sky"
+     ],
+     [
+      "Adjuster review",
+      "60 DAYS",
+      "amber"
+     ],
+     [
+      "Payout",
+      "STILL WAITING",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "hook",
+   "A strong season can hide a slow one, and weather-driven revenue is easy to misread.",
+   null,
+   {
+    "t": "bars",
+    "text": "Weather-driven [revenue.]",
+    "bars": [
+     [
+      "Spring",
+      0.7,
+      "sky"
+     ],
+     [
+      "Summer",
+      1,
+      "green"
+     ],
+     [
+      "Fall",
+      0.6,
+      "sky"
+     ],
+     [
+      "Winter",
+      0.25,
+      "red"
+     ]
+    ],
+    "note": "illustrative"
+   }
+  ],
+  [
+   "hook",
+   "If you run a roofing company, the next few minutes are for you.",
+   null,
+   {
+    "t": "ring",
+    "n": "7",
+    "unit": "MINUTES",
+    "text": "If you run a roofing company — [this is for you.]"
+   }
+  ],
+  [
+   "pain",
+   "Here's how the money side of roofing usually works.",
+   null,
+   {
+    "t": "slam",
+    "text": "How the money side [usually works.]",
+    "glitch": 0,
+    "size": 92
+   }
+  ],
+  [
+   "pain",
+   "Leads come from storm response, door knocking, home shows and referrals. Some never become estimates.",
+   null,
+   {
+    "t": "cards",
+    "text": "Leads that [never become estimates.]",
+    "cards": [
+     [
+      "roofer",
+      "Storm response",
+      "amber"
+     ],
+     [
+      "house-lawn",
+      "Door knocking",
+      "sky"
+     ],
+     [
+      "meeting",
+      "Home show",
+      "green"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Several crews on several roofs at once. Which one finishes faster, and costs less per job?",
+   null,
+   {
+    "t": "bars",
+    "text": "Which crew [really performs?]",
+    "bars": [
+     [
+      "Crew Alpha",
+      0.85,
+      "sky"
+     ],
+     [
+      "Crew Bravo",
+      0.65,
+      "sky"
+     ],
+     [
+      "Crew Charlie",
+      0.75,
+      "sky"
+     ]
+    ],
+    "q": "Best?",
+    "qv": 0.5
+   }
+  ],
+  [
+   "pain",
+   "Material receipts pile up. Crew payroll and permit costs end up scattered.",
+   null,
+   {
+    "t": "papers",
+    "text": "Receipts: [scattered.]",
+    "label": "MATERIAL",
+    "photo": "tools"
+   }
+  ],
+  [
+   "pain",
+   "Insurance and financed jobs collect slowly, while payroll is due every week.",
+   null,
+   {
+    "t": "rows",
+    "text": "Slow money. [Weekly payroll.]",
+    "rows": [
+     [
+      "INV-2208 · Re-roof",
+      "CURRENT",
+      "sky"
+     ],
+     [
+      "INV-2214 · Insurance claim",
+      "61-90 DAYS",
+      "amber"
+     ],
+     [
+      "INV-2219 · Commercial",
+      "120+ DAYS",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Your estimate said one number. The job said another. Nobody went back to compare.",
+   null,
+   {
+    "t": "split",
+    "left": [
+     "The estimate",
+     [
+      "Materials guessed",
+      "Labor guessed",
+      "Margin assumed"
+     ]
+    ],
+    "right": [
+     "The actual job",
+     [
+      "Real material cost",
+      "Real labor + equipment",
+      "Real margin"
+     ]
+    ],
+    "rightAt": 0.55
+   }
+  ],
+  [
+   "pain",
+   "Your accountant asks for everything. And nothing's in one place.",
+   null,
+   {
+    "t": "slam",
+    "text": "“Send me [everything.]”",
+    "photo": "signing",
+    "glitch": 0.6
+   }
+  ],
+  [
+   "pain",
+   "Busy all season, and still not sure what the business actually kept.",
+   null,
+   {
+    "t": "months",
+    "text": "Kept this year:",
+    "photo": "busy"
+   }
+  ],
+  [
+   "turn",
+   "That's not a work-ethic problem. It's a visibility problem.",
+   null,
+   {
+    "t": "strike",
+    "from": "Work ethic",
+    "to": "Visibility."
+   }
+  ],
+  [
+   "turn",
+   "You already have the data: leads, estimates, jobs, invoices, receipts.",
+   null,
+   {
+    "t": "converge",
+    "text": "You already [have the data.]",
+    "labels": [
+     "LEAD",
+     "ESTIMATE",
+     "$",
+     "CREW",
+     "SQUARE",
+     "%",
+     "CLAIM"
+    ],
+    "box": "One place."
+   }
+  ],
+  [
+   "turn",
+   "You just don't have one place that turns it into decisions.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "That's why we built the Roofing Business Intelligence System™.",
+   "That's why we built the Roofing Business Intelligence System.",
+   null
+  ],
+  [
+   "reveal",
+   "A ready-built Excel system, made only for roofing contractors.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "Formulas, dashboards and reports are already built in. Tax set-aside too.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "And it ships with sample data, so every dashboard works the moment you open it.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "It's for the owner-operator roofer who still runs the ladder, and does the books after dark.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The multi-crew company that needs to see which crew produces the most profitable work.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The insurance-restoration contractor tracking claims that take months to collect.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "And the office manager handling estimates, job costs and receivables.",
+   null,
+   null
+  ],
+  [
+   "ess",
+   "Let me show you what's inside. Start with Essential: nine sheets.",
+   null,
+   {
+    "t": "cover",
+    "ed": "ess",
+    "n": 9
+   }
+  ],
+  [
+   "ess",
+   "You enter the facts, jobs and expenses. The workbook does the math.",
+   null,
+   {
+    "t": "wall",
+    "ed": "ess",
+    "text": "You enter the facts. [It does the math.]",
+    "inputs": [
+     "SETUP",
+     "JOB REVENUE ENTRY",
+     "EXPENSE ENTRY"
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Set up once: your country, currency and tax-rate presets.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "SETUP",
+    "label": "Setup",
+    "d": "once",
+    "hi": [
+     [
+      "Country",
+      "Country preset",
+      "cyan",
+      "row"
+     ],
+     [
+      "Tax Reserve Rate % — default",
+      "Tax-rate preset",
+      "green",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Log every job by type: repair, residential re-roof, commercial re-roof, insurance claim.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "JOB REVENUE ENTRY",
+    "label": "Job Revenue Entry",
+    "d": "every job",
+    "hi": [
+     [
+      "Job Type",
+      "Job type",
+      "blue",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ess",
+   "Log every expense: fuel, insurance, office, marketing, admin payroll.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "EXPENSE ENTRY",
+    "label": "Expense Entry",
+    "d": "every expense",
+    "hi": [
+     [
+      "Category",
+      "Category",
+      "amber",
+      "cell"
+     ],
+     [
+      "Vendor#0",
+      "Vendor",
+      "cyan",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ess",
+   "Tax & Deductions separates job materials and labor from overhead, and works out your tax reserve.",
+   "Tax and Deductions separates job materials and labor from overhead, and works out your tax reserve.",
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "TAX & DEDUCTIONS",
+    "label": "Tax & Deductions",
+    "d": "reserve + deductions",
+    "hi": [
+     [
+      "Job Materials + Labor Cost",
+      "Materials + labor",
+      "amber",
+      "row"
+     ],
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "DEDUCTION SUMMARY BY CATEGORY",
+      "Every category",
+      "cyan",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "The Dashboard puts it on one screen: revenue, net profit, revenue per square, and how funded your tax reserve is.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "DASHBOARD",
+    "label": "Dashboard",
+    "d": "one screen",
+    "hi": [
+     [
+      "REVENUE (12 MO)",
+      "Revenue",
+      "blue",
+      "kpi"
+     ],
+     [
+      "NET PROFIT (12 MO)",
+      "Net profit",
+      "green",
+      "kpi"
+     ],
+     [
+      "REVENUE PER SQUARE",
+      "Per square",
+      "cyan",
+      "kpi"
+     ],
+     [
+      "TAX RESERVE FUNDED %",
+      "Reserve funded",
+      "amber",
+      "kpi"
+     ]
+    ],
+    "dir": "zoom"
+   }
+  ],
+  [
+   "ess",
+   "The Accountant Export hands over a clean summary and a document checklist.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "ACCOUNTANT EXPORT",
+    "label": "Accountant Export",
+    "d": "clean summary",
+    "hi": [
+     [
+      "Net Profit",
+      "Summary",
+      "blue",
+      "row"
+     ],
+     [
+      "DOCUMENT CHECKLIST",
+      "Document checklist",
+      "green",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "And the Business Health Snapshot scores profit, cash, tax readiness, expenses and revenue trend.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "BUSINESS HEALTH SNAPSHOT",
+    "label": "Health Snapshot",
+    "d": "scored 0–100",
+    "hi": [
+     [
+      "Profit Status",
+      "5 categories",
+      "cyan",
+      "block"
+     ],
+     [
+      "OVERALL SCORE (0-100)",
+      "Overall score",
+      "green",
+      "row"
+     ]
+    ],
+    "cam": "full"
+   }
+  ],
+  [
+   "elite",
+   "Now, Elite. Twenty-eight sheets. The full operating system for a roofing company.",
+   null,
+   {
+    "t": "cover",
+    "ed": "elite",
+    "n": 28,
+    "fx": "shock",
+    "fxAt": 0.5
+   }
+  ],
+  [
+   "elite",
+   "From lead, to estimate, to job, to job costing, to invoice, to cash. Plus crews, scorecards and taxes.",
+   null,
+   {
+    "t": "wall",
+    "ed": "elite",
+    "tags": false,
+    "text": "[28 sheets,] one operating system."
+   }
+  ],
+  [
+   "ops",
+   "It opens on the Executive Command Center: revenue, net profit, margin, estimate win rate, and your Business Health Score.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "Executive Dashboard",
+    "label": "Executive Dashboard",
+    "d": "the whole company",
+    "hi": [
+     [
+      "TOTAL REVENUE",
+      "Revenue",
+      "blue",
+      "kpi"
+     ],
+     [
+      "NET PROFIT",
+      "Net profit",
+      "green",
+      "kpi"
+     ],
+     [
+      "PROFIT MARGIN",
+      "Margin",
+      "cyan",
+      "kpi"
+     ],
+     [
+      "ESTIMATE WIN RATE",
+      "Win rate",
+      "amber",
+      "kpi"
+     ]
+    ],
+    "dir": "zoom"
+   }
+  ],
+  [
+   "ops",
+   "The Lead Tracker records every lead, and where it came from: storm response, door knocking, home shows, referrals.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "Lead Tracker",
+    "label": "Lead Tracker",
+    "d": "every lead",
+    "hi": [
+     [
+      "Source",
+      "Lead source",
+      "blue",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ops",
+   "The Estimate Center tracks every estimate, so you can see which leads became signed work.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "Estimate Center",
+    "label": "Estimate Center",
+    "d": "every estimate",
+    "hi": [
+     [
+      "Estimate ID",
+      "Every estimate",
+      "blue",
+      "row"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ops",
+   "Job Management assigns every job to a crew, with the customer and address.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "Job Management",
+    "label": "Job Management",
+    "d": "every job, every crew",
+    "hi": [
+     [
+      "Crew",
+      "Crew",
+      "violet",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ops",
+   "Then Job Costing: materials, labor, equipment, fuel and overhead for every job, against the contract.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "Job Costing",
+    "label": "Job Costing",
+    "d": "contract vs. cost",
+    "hi": [
+     [
+      "Material Cost",
+      "Materials",
+      "amber",
+      "cell"
+     ],
+     [
+      "Labor Cost",
+      "Labor",
+      "red",
+      "cell"
+     ],
+     [
+      "PORTFOLIO METRICS",
+      "Portfolio margin",
+      "green",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "ops",
+   "And Crew Performance compares every crew on jobs completed, revenue, labor hours and profit contribution.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "Crew Performance",
+    "label": "Crew Performance",
+    "d": "every crew",
+    "hi": [
+     [
+      "TEAM TOTALS",
+      "Team totals",
+      "cyan",
+      "block"
+     ],
+     [
+      "Efficiency",
+      "Efficiency score",
+      "green",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "ops",
+   "Plus a revenue tracker, an expense tracker, a customer database and customer analytics.",
+   null,
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Every invoice, [every customer.]",
+    "items": [
+     {
+      "tab": "Revenue Tracker",
+      "label": "Revenue Tracker"
+     },
+     {
+      "tab": "Expense Tracker",
+      "label": "Expense Tracker"
+     },
+     {
+      "tab": "Customer Database",
+      "label": "Customers"
+     },
+     {
+      "tab": "Customer Analytics",
+      "label": "Customer Analytics"
+     }
+    ]
+   }
+  ],
+  [
+   "money",
+   "Then, the money side.",
+   null,
+   {
+    "t": "slam",
+    "text": "Then, [the money side.]",
+    "photo": "cash-pile",
+    "size": 110
+   }
+  ],
+  [
+   "money",
+   "AR Aging buckets every open invoice, from current to a hundred-and-twenty-plus days. Including the slow insurance jobs.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "AR Aging",
+    "label": "AR Aging",
+    "d": "aging buckets",
+    "hi": [
+     [
+      "AGING SUMMARY",
+      "Aging summary",
+      "amber",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "money",
+   "And the Cash Flow Center shows inflows, outflows, net cash flow and your running balance, month by month.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "Cash Flow Center",
+    "label": "Cash Flow Center",
+    "d": "month by month",
+    "hi": [
+     [
+      "Cash Inflows",
+      "Cash in",
+      "green",
+      "cell"
+     ],
+     [
+      "12-MONTH SUMMARY",
+      "12-month summary",
+      "cyan",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "leak",
+   "Then there's the Profit Leak Detector™.",
+   "Then there's the Profit Leak Detector.",
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "16 - Profit Leak Detector",
+    "text": "The Profit Leak [Detector™]",
+    "cam": "full",
+    "zoom": false,
+    "hi": [
+     [
+      "LOW-MARGIN JOBS (MARGIN BELOW 15%)",
+      "Jobs under 15% margin",
+      "red",
+      "cell",
+      0.25
+     ],
+     [
+      "Margin %",
+      "Margin",
+      "amber",
+      "cell",
+      0.45
+     ],
+     [
+      "Possible Cause",
+      "Possible cause",
+      "cyan",
+      "cell",
+      0.65
+     ],
+     [
+      "Recommended Action",
+      "Recommended action",
+      "green",
+      "cell",
+      0.85
+     ]
+    ]
+   }
+  ],
+  [
+   "leak",
+   "It automatically flags every job with a margin below fifteen percent.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "And shows what drove it, like materials cost or labor.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "Each with a possible cause, and a recommended action.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "Add a KPI Scorecard, a Business Health Score™, forecasting and benchmarking.",
+   "Add a KPI Scorecard, a Business Health Score, forecasting and benchmarking.",
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Scored, forecast, [benchmarked.]",
+    "items": [
+     {
+      "tab": "14 - KPI Scorecard",
+      "label": "KPI Scorecard"
+     },
+     {
+      "tab": "15 - Business Health Score",
+      "label": "Health Score™"
+     },
+     {
+      "tab": "17 - Forecasting Center",
+      "label": "Forecasting"
+     },
+     {
+      "tab": "18 - Benchmarking Center",
+      "label": "Benchmarking"
+     }
+    ]
+   }
+  ],
+  [
+   "tax",
+   "Then the part every contractor dreads. Taxes.",
+   null,
+   {
+    "t": "zero",
+    "eyebrow": "The part every contractor dreads",
+    "big": "TAXES.",
+    "impact": true,
+    "fxAt": 0.2,
+    "fx": "shockred"
+   }
+  ],
+  [
+   "tax",
+   "The Tax Reserve Center works out a recommended reserve, and how much of it you've funded.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "21 - Tax Reserve & VAT Center",
+    "label": "Tax Reserve",
+    "d": "what to set aside",
+    "hi": [
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "Reserve Funded %",
+      "Funded %",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "The Deduction Maximizer groups the year's expenses by category, to review with your accountant.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "22 - Deduction Maximizer",
+    "label": "Deduction Maximizer",
+    "d": "by category",
+    "hi": [
+     [
+      "Typically Deductible?",
+      "Deductible?",
+      "green",
+      "cell"
+     ],
+     [
+      "Total Deductible",
+      "Total",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "The Tax Readiness Center tracks due dates, and scores how ready your records are.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "23 - Tax Readiness Center",
+    "label": "Tax Readiness",
+    "d": "due dates + score",
+    "hi": [
+     [
+      "TAX CALENDAR",
+      "Due dates",
+      "amber",
+      "block"
+     ],
+     [
+      "TAX READINESS SCORE",
+      "Readiness score",
+      "green",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "And the Accountant Summary is a print-ready package to hand over at filing time.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "24 - Accountant Summary",
+    "label": "Accountant Summary",
+    "d": "print-ready",
+    "hi": [
+     [
+      "Accountant Package Status:",
+      "Package status",
+      "green",
+      "row"
+     ],
+     [
+      "Net Profit",
+      "P&L summary",
+      "blue",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "guide",
+   "And you're never left guessing how to use it.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Every edition comes with a Quick Start: the exact steps for your first session, your first week, and your first thirty days.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "And a full Field Guide that walks through every sheet, screen by screen.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Thirty-seven pages for Essential. Fifty-four for Elite. Including what to do when a number looks wrong.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "Now, honest answers to the questions roofers ask.",
+   null,
+   {
+    "t": "slam",
+    "text": "Honest answers to [real questions.]",
+    "size": 92
+   }
+  ],
+  [
+   "obj",
+   "“My roofing software already tracks bids and jobs.” Good. Keep it.",
+   "My roofing software already tracks bids and jobs. Good. Keep it.",
+   {
+    "t": "qa",
+    "q": "My roofing software already tracks bids and jobs.",
+    "eyebrow": "Honest answer 1 of 5",
+    "liftAt": 0.7,
+    "chips": [
+     "Keep your roofing software",
+     "Job costing",
+     "Crew performance",
+     "AR aging",
+     "Tax reserve"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "This sits next to it, and pulls the whole business into one view: job costing, crews, receivables, cash and taxes.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“I'm not an Excel person.” You don't need to be.",
+   "I'm not an Excel person. You don't need to be.",
+   {
+    "t": "qa",
+    "q": "I'm not an Excel person.",
+    "eyebrow": "Honest answer 2 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "Formulas built in",
+     "Formula cells locked",
+     "You enter jobs and expenses",
+     "Quick Start included"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "Every calculation is already built, and the formula cells are locked, so you can't break them. You just enter jobs and expenses.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“I run one crew. I'm too small for this.” Then start with Essential.",
+   "I run one crew. I'm too small for this. Then start with Essential.",
+   {
+    "t": "qa",
+    "q": "I run one crew. I'm too small for this.",
+    "eyebrow": "Honest answer 3 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "9 sheets",
+     "Jobs + expenses",
+     "Dashboard + tax set-aside",
+     "Go Elite when you grow"
+    ],
+    "big": "Start with Essential.",
+    "bigSize": 80
+   }
+  ],
+  [
+   "obj",
+   "Nine sheets: jobs, expenses, a dashboard and a tax set-aside. Move up to Elite when you add crews.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Will it make my bids more accurate?” No tool can promise that.",
+   "Will it make my bids more accurate? No tool can promise that.",
+   {
+    "t": "qa",
+    "q": "Will it make my bids more accurate?",
+    "eyebrow": "Honest answer 4 of 5",
+    "liftAt": 0.55,
+    "chips": [
+     "Real cost vs. contract",
+     "Low-margin jobs flagged",
+     "You adjust the bid"
+    ],
+    "answer": "No tool can promise that."
+   }
+  ],
+  [
+   "obj",
+   "Job Costing puts every job's real cost next to its contract, so you can see where your bids missed, and adjust.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Is it a subscription?” No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   "Is it a subscription? No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   {
+    "t": "qa",
+    "q": "Is it a subscription?",
+    "eyebrow": "Honest answer 5 of 5",
+    "liftAt": 0.25,
+    "big": "No.",
+    "bigSize": 150,
+    "chips": [
+     "One payment",
+     "No macros",
+     "Plain formulas"
+    ],
+    "foot": "Your numbers stay in your file."
+   }
+  ],
+  [
+   "offer",
+   "So, which edition fits you?",
+   null,
+   null
+  ],
+  [
+   "offer",
+   "Essential, $97: job revenue, expenses, a dashboard, a health snapshot and a tax set-aside estimate.",
+   "Essential, ninety-seven dollars. Job revenue, expenses, a dashboard, a health snapshot and a tax set-aside estimate.",
+   null
+  ],
+  [
+   "offer",
+   "Elite, $197: leads, estimates, job management, job costing, crews, customers, AR aging, cash flow and forecasting.",
+   "Elite, one ninety-seven. Leads, estimates, job management, job costing, crews, customers, AR aging, cash flow and forecasting.",
+   null
+  ],
+  [
+   "offer",
+   "Or Complete, $249: both workbooks, both Field Guides, both Quick Starts. Start simple, grow into the full system.",
+   "Or Complete, two forty-nine. Both workbooks, both Field Guides, both Quick Starts. Start simple, and grow into the full system.",
+   null
+  ],
+  [
+   "offer",
+   "One-time payment. And a 60-day money-back guarantee, no questions asked.",
+   "One-time payment. And a sixty-day money-back guarantee. No questions asked.",
+   null
+  ],
+  [
+   "cta",
+   "Here's what to do right now.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Pick your edition below this video.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Open it, enter this month's jobs, and see what each roof actually kept.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Because every month you wait is another month of guessing.",
+   null,
+   null
+  ],
+  [
+   "end",
+   "P.S. Your bids show what you expected.",
+   "P S. Your bids show what you expected.",
+   null
+  ],
+  [
+   "end",
+   "ProfitIQS shows you what you kept.",
+   "Profit IQS shows you what you kept.",
+   null
+  ]
+ ]
+}

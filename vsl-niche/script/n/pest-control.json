@@ -1,0 +1,1356 @@
+{
+ "slug": "pest-control",
+ "name": "Pest Control Business Intelligence System™",
+ "short": "pest",
+ "file_ess": "Pest_Control_Business_Intelligence_System_Essential_2026.xlsx",
+ "file_elite": "Pest_Control_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 8,
+ "n_elite": 25,
+ "reveal": {
+  "title": "Pest Control [Business Intelligence] System™",
+  "made": "Made only for [pest control companies.]",
+  "chips": [
+   "Formulas",
+   "Dashboards",
+   "Reports",
+   "Tax set-aside",
+   "Sample data included"
+  ]
+ },
+ "who": [
+  [
+   "spray2",
+   "Owner-operator",
+   "runs the routes"
+  ],
+  [
+   "team2",
+   "Multi-technician company",
+   "route + tech profit"
+  ],
+  [
+   "house-lawn",
+   "Contract-heavy business",
+   "renewals that matter"
+  ],
+  [
+   "woman-office",
+   "Office manager",
+   "contracts, AR, stock"
+  ]
+ ],
+ "tiers": [
+  [
+   "Services & expenses",
+   "Dashboard + health snapshot",
+   "Tax set-aside estimate",
+   "Accountant export"
+  ],
+  [
+   "Contracts & renewals",
+   "Routes & technicians",
+   "Chemical inventory",
+   "AR & rolling cash flow"
+  ],
+  [
+   "Both workbooks",
+   "Both Field Guides",
+   "Both Quick Starts",
+   "Start simple, grow"
+  ]
+ ],
+ "guide": {
+  "ess": 44,
+  "elite": 72
+ },
+ "cta": [
+  "Enter this month's services",
+  "See what each route earns",
+  "Every month you wait is [another month of guessing.]"
+ ],
+ "end": [
+  "Your contracts show [what you're owed.]",
+  "ProfitIQS shows you [what you keep.]"
+ ],
+ "lines": [
+  [
+   "hook",
+   "Termite treatment on Monday. Rodent control Tuesday. A full mosquito route by Friday.",
+   null,
+   {
+    "t": "notifs",
+    "text": "Routes [full every week.]",
+    "head": "SERVICE COMPLETED",
+    "items": [
+     [
+      "Termite control",
+      "$1,150.00"
+     ],
+     [
+      "Rodent control",
+      "$225.00"
+     ],
+     [
+      "Mosquito route",
+      "$1,840.00"
+     ]
+    ],
+    "photo": "spray"
+   }
+  ],
+  [
+   "hook",
+   "But some routes earn far less per hour than others. The drive time eats them.",
+   null,
+   {
+    "t": "bars",
+    "text": "Not every route [pays its way.]",
+    "bars": [
+     [
+      "Route 1",
+      1,
+      "green"
+     ],
+     [
+      "Route 2",
+      0.7,
+      "sky"
+     ],
+     [
+      "Route 3",
+      0.35,
+      "red"
+     ]
+    ],
+    "q": "Per hour?",
+    "qv": 0.5
+   }
+  ],
+  [
+   "hook",
+   "So here's the question. Which routes, and which contracts, actually make you [money?]",
+   null,
+   {
+    "t": "slam",
+    "text": "Which routes actually [make you money?]",
+    "photo": "driving2",
+    "size": 96
+   }
+  ],
+  [
+   "hook",
+   "And the contracts? They reach their renewal date with no contact, and quietly end.",
+   null,
+   {
+    "t": "rows",
+    "text": "Contracts that [quietly end.]",
+    "icon": "calendar",
+    "rows": [
+     [
+      "Quarterly · residential",
+      "ACTIVE",
+      "green"
+     ],
+     [
+      "Monthly · restaurant",
+      "RENEWAL DUE",
+      "amber"
+     ],
+     [
+      "Annual · warehouse",
+      "EXPIRED",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "hook",
+   "Recurring revenue is the whole business. Losing it silently is the biggest leak there is.",
+   null,
+   {
+    "t": "slam",
+    "text": "Recurring revenue, [lost silently.]",
+    "photo": "house-pool",
+    "size": 92
+   }
+  ],
+  [
+   "hook",
+   "If you run a pest control company, the next few minutes are for you.",
+   null,
+   {
+    "t": "ring",
+    "n": "7",
+    "unit": "MINUTES",
+    "text": "If you run a pest control company — [this is for you.]"
+   }
+  ],
+  [
+   "pain",
+   "Here's how the money side of pest control usually works.",
+   null,
+   {
+    "t": "slam",
+    "text": "How the money side [usually works.]",
+    "glitch": 0,
+    "size": 92
+   }
+  ],
+  [
+   "pain",
+   "Visits live in your routing app. Chemical receipts live in the truck.",
+   null,
+   {
+    "t": "papers",
+    "text": "Receipts: [the truck.]",
+    "label": "CHEMICALS",
+    "photo": "spray2"
+   }
+  ],
+  [
+   "pain",
+   "Product on the shelf and in the trucks ties up cash, and it's easy to lose track of.",
+   null,
+   {
+    "t": "rows",
+    "text": "Stock that [ties up cash.]",
+    "icon": "alert",
+    "rows": [
+     [
+      "Termiticide",
+      "IN STOCK",
+      "green"
+     ],
+     [
+      "Rodent bait",
+      "LOW",
+      "amber"
+     ],
+     [
+      "Insect growth regulator",
+      "UNTRACKED",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "You know which technician seems efficient. Not who produces the most profitable work.",
+   null,
+   {
+    "t": "bars",
+    "text": "Busy isn't [profitable.]",
+    "bars": [
+     [
+      "Tech A",
+      0.9,
+      "sky"
+     ],
+     [
+      "Tech B",
+      0.62,
+      "sky"
+     ],
+     [
+      "Tech C",
+      0.78,
+      "sky"
+     ]
+    ],
+    "q": "Most profit?",
+    "qv": 0.5
+   }
+  ],
+  [
+   "pain",
+   "Residential, commercial, termite, rodent, mosquito, wildlife. Which service line actually pays best?",
+   null,
+   {
+    "t": "cards",
+    "text": "Which service [pays best?]",
+    "cards": [
+     [
+      "spray",
+      "Residential",
+      "green"
+     ],
+     [
+      "warehouse",
+      "Commercial",
+      "sky"
+     ],
+     [
+      "house-siding",
+      "Termite",
+      "amber"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Commercial accounts pay late, and cash gets tight while payroll is still due.",
+   null,
+   {
+    "t": "rows",
+    "text": "Unpaid. [Payroll still due.]",
+    "rows": [
+     [
+      "INV · Restaurant account",
+      "CURRENT",
+      "sky"
+     ],
+     [
+      "INV · Property manager",
+      "45 DAYS",
+      "amber"
+     ],
+     [
+      "INV · Warehouse",
+      "90+ DAYS",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Then tax time: chemicals, vehicles, equipment and payroll costs, scattered everywhere.",
+   null,
+   {
+    "t": "papers",
+    "text": "Tax time: [scattered everywhere.]",
+    "label": "RECEIPT",
+    "photo": "taxdocs"
+   }
+  ],
+  [
+   "pain",
+   "Your accountant asks for everything. And nothing's in one place.",
+   null,
+   {
+    "t": "slam",
+    "text": "“Send me [everything.]”",
+    "photo": "signing",
+    "glitch": 0.6
+   }
+  ],
+  [
+   "pain",
+   "Busy all year, and still not sure what the business actually kept.",
+   null,
+   {
+    "t": "months",
+    "text": "Kept this year:",
+    "photo": "busy"
+   }
+  ],
+  [
+   "turn",
+   "That's not a work-ethic problem. It's a visibility problem.",
+   null,
+   {
+    "t": "strike",
+    "from": "Work ethic",
+    "to": "Visibility."
+   }
+  ],
+  [
+   "turn",
+   "You already have the data: visits, contracts, routes, invoices, receipts.",
+   null,
+   {
+    "t": "converge",
+    "text": "You already [have the data.]",
+    "labels": [
+     "VISIT",
+     "CONTRACT",
+     "$",
+     "ROUTE",
+     "TECH",
+     "%",
+     "CHEM"
+    ],
+    "box": "One place."
+   }
+  ],
+  [
+   "turn",
+   "You just don't have one place that turns it into decisions.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "That's why we built the Pest Control Business Intelligence System™.",
+   "That's why we built the Pest Control Business Intelligence System.",
+   null
+  ],
+  [
+   "reveal",
+   "A ready-built Excel system, made only for pest control companies.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "Formulas, dashboards and reports are already built in. Tax set-aside too.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "And it ships with sample data, so every dashboard works the moment you open it.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "It's for the owner-operator who runs routes, sells contracts, and does the paperwork at night.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The multi-technician company with several routes, and no side-by-side view of route profit.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The contract-heavy business, where most revenue comes from contracts that need renewing.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "And the office manager tracking contracts, receivables and chemical stock.",
+   null,
+   null
+  ],
+  [
+   "ess",
+   "Let me show you what's inside. Start with Essential: eight sheets.",
+   null,
+   {
+    "t": "cover",
+    "ed": "ess",
+    "n": 8
+   }
+  ],
+  [
+   "ess",
+   "You enter the facts, services and expenses. The workbook does the math.",
+   null,
+   {
+    "t": "wall",
+    "ed": "ess",
+    "text": "You enter the facts. [It does the math.]",
+    "inputs": [
+     "SETUP",
+     "SERVICE ENTRY",
+     "EXPENSE ENTRY"
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Set up once: your country, currency and tax-rate presets.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "SETUP",
+    "label": "Setup",
+    "d": "once",
+    "hi": [
+     [
+      "Country",
+      "Country preset",
+      "cyan",
+      "row"
+     ],
+     [
+      "Tax Reserve Rate % — default",
+      "Tax-rate preset",
+      "green",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Log every service by type: residential, commercial, termite, rodent, mosquito, wildlife.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "SERVICE ENTRY",
+    "label": "Service Entry",
+    "d": "every service",
+    "hi": [
+     [
+      "Service Type",
+      "Service type",
+      "blue",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ess",
+   "Log every expense: chemicals, vehicle fuel and maintenance, equipment, insurance.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "EXPENSE ENTRY",
+    "label": "Expense Entry",
+    "d": "every expense",
+    "hi": [
+     [
+      "Category",
+      "Category",
+      "amber",
+      "cell"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ess",
+   "Tax & Deductions works out your recommended tax reserve, and totals every deductible category.",
+   "Tax and Deductions works out your recommended tax reserve, and totals every deductible category.",
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "TAX & DEDUCTIONS",
+    "label": "Tax & Deductions",
+    "d": "reserve + deductions",
+    "hi": [
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "DEDUCTION SUMMARY BY CATEGORY",
+      "Every category",
+      "cyan",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "The Dashboard puts it on one screen: revenue, net profit, revenue per service, and how funded your tax reserve is.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "DASHBOARD",
+    "label": "Dashboard",
+    "d": "one screen",
+    "hi": [
+     [
+      "TOTAL REVENUE",
+      "Revenue",
+      "blue",
+      "kpi"
+     ],
+     [
+      "NET PROFIT",
+      "Net profit",
+      "green",
+      "kpi"
+     ],
+     [
+      "REVENUE PER SERVICE",
+      "Per service",
+      "cyan",
+      "kpi"
+     ],
+     [
+      "TAX RESERVE FUNDED %",
+      "Reserve funded",
+      "amber",
+      "kpi"
+     ]
+    ],
+    "dir": "zoom"
+   }
+  ],
+  [
+   "ess",
+   "The Accountant Export hands over a clean summary and a document checklist.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "ACCOUNTANT EXPORT",
+    "label": "Accountant Export",
+    "d": "clean summary",
+    "hi": [
+     [
+      "Net Profit",
+      "Summary",
+      "blue",
+      "row"
+     ],
+     [
+      "DOCUMENT CHECKLIST",
+      "Document checklist",
+      "green",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "ess",
+   "And the Business Health Snapshot scores profit, cash, tax readiness, expenses and revenue trend.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "BUSINESS HEALTH SNAPSHOT",
+    "label": "Health Snapshot",
+    "d": "scored 0–100",
+    "hi": [
+     [
+      "Profit Status",
+      "5 categories",
+      "cyan",
+      "block"
+     ],
+     [
+      "OVERALL SCORE (0-100)",
+      "Overall score",
+      "green",
+      "row"
+     ]
+    ],
+    "cam": "full"
+   }
+  ],
+  [
+   "elite",
+   "Now, Elite. Twenty-five sheets. The full operating system for a pest control company.",
+   null,
+   {
+    "t": "cover",
+    "ed": "elite",
+    "n": 25,
+    "fx": "shock",
+    "fxAt": 0.5
+   }
+  ],
+  [
+   "elite",
+   "Customers, contracts, service calls, routes, technicians, chemicals, receivables, cash and taxes.",
+   null,
+   {
+    "t": "wall",
+    "ed": "elite",
+    "tags": false,
+    "text": "[25 sheets,] one operating system."
+   }
+  ],
+  [
+   "ops",
+   "It opens on the Executive Dashboard: revenue, gross and net profit, margins, and your Business Health Score.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "02 Executive Dashboard",
+    "label": "Executive Dashboard",
+    "d": "the whole company",
+    "hi": [
+     [
+      "TOTAL REVENUE",
+      "Revenue",
+      "blue",
+      "kpi"
+     ],
+     [
+      "NET PROFIT",
+      "Net profit",
+      "green",
+      "kpi"
+     ],
+     [
+      "GROSS MARGIN %",
+      "Gross margin",
+      "cyan",
+      "kpi"
+     ],
+     [
+      "BUSINESS HEALTH SCORE™",
+      "Health score",
+      "amber",
+      "kpi"
+     ]
+    ],
+    "dir": "zoom"
+   }
+  ],
+  [
+   "ops",
+   "The Service Contract Center tracks every recurring agreement, and its renewal.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "05 Service Contracts",
+    "label": "Service Contracts",
+    "d": "renewals",
+    "hi": [
+     [
+      "Recurring service agreements",
+      "Recurring agreements",
+      "green",
+      "cell"
+     ],
+     [
+      "Contract ID",
+      "Every contract",
+      "blue",
+      "row"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ops",
+   "Route Management shows revenue, mileage and density for every route.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "07 Route Management",
+    "label": "Route Management",
+    "d": "every route",
+    "hi": [
+     [
+      "Route-level revenue",
+      "Revenue · mileage · density",
+      "amber",
+      "cell"
+     ],
+     [
+      "Route ID",
+      "Every route",
+      "blue",
+      "row"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ops",
+   "Technician Performance auto-ranks every technician on productivity and revenue.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "08 Technician Performance",
+    "label": "Technician Performance",
+    "d": "auto-ranked",
+    "hi": [
+     [
+      "Auto-ranked technician",
+      "Auto-ranked",
+      "cyan",
+      "cell"
+     ],
+     [
+      "Tech ID",
+      "Every tech",
+      "blue",
+      "row"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ops",
+   "Revenue Analytics breaks revenue down by service line, month by month.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "09 Revenue Analytics",
+    "label": "Revenue Analytics",
+    "d": "by service line",
+    "hi": [
+     [
+      "Monthly revenue by service line",
+      "By service line",
+      "green",
+      "cell"
+     ],
+     [
+      "Termite Control",
+      "Termite",
+      "amber",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "ops",
+   "And the Chemical Inventory Center tracks product stock, supplier costs and usage.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "11 Chemical Inventory",
+    "label": "Chemical Inventory",
+    "d": "stock + usage",
+    "hi": [
+     [
+      "Product stock",
+      "Stock · cost · usage",
+      "violet",
+      "cell"
+     ],
+     [
+      "Chem ID",
+      "Every product",
+      "blue",
+      "row"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "ops",
+   "Plus a customer database, a service call log and customer analytics.",
+   null,
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Every visit, [every customer.]",
+    "items": [
+     {
+      "tab": "04 Customer Database",
+      "label": "Customers"
+     },
+     {
+      "tab": "06 Service Call Log",
+      "label": "Service Calls"
+     },
+     {
+      "tab": "19 Customer Analytics",
+      "label": "Customer Analytics"
+     }
+    ]
+   }
+  ],
+  [
+   "money",
+   "Then, the money side.",
+   null,
+   {
+    "t": "slam",
+    "text": "Then, [the money side.]",
+    "photo": "cash-pile",
+    "size": 110
+   }
+  ],
+  [
+   "money",
+   "Accounts Receivable ages every outstanding invoice, so late commercial accounts don't hide.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "12 Accounts Receivable",
+    "label": "Accounts Receivable",
+    "d": "aged invoices",
+    "hi": [
+     [
+      "Outstanding invoices aged",
+      "Aged invoices",
+      "amber",
+      "cell"
+     ],
+     [
+      "Invoice ID",
+      "Every invoice",
+      "blue",
+      "row"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "money",
+   "And the Cash Flow Center rolls your cash position: eighteen months of actuals, plus a forecast.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "13 Cash Flow Center",
+    "label": "Cash Flow Center",
+    "d": "rolling cash",
+    "hi": [
+     [
+      "Rolling cash position",
+      "18 months + forecast",
+      "green",
+      "cell"
+     ],
+     [
+      "Cash Inflow",
+      "Cash in",
+      "cyan",
+      "cell"
+     ]
+    ]
+   }
+  ],
+  [
+   "leak",
+   "Then there's the Profit Leak Detector™.",
+   "Then there's the Profit Leak Detector.",
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "16 Profit Leak Detector",
+    "text": "The Profit Leak [Detector™]",
+    "cam": "full",
+    "zoom": false,
+    "hi": [
+     [
+      "Automatic traffic-light scan",
+      "Traffic-light scan",
+      "amber",
+      "cell",
+      0.2
+     ],
+     [
+      "Route Inefficiency",
+      "Route inefficiency",
+      "red",
+      "row",
+      0.38
+     ],
+     [
+      "Contract Expiration Exposure",
+      "Contract expirations",
+      "red",
+      "row",
+      0.55
+     ],
+     [
+      "Possible Cause",
+      "Possible cause",
+      "cyan",
+      "cell",
+      0.72
+     ],
+     [
+      "Recommended Action",
+      "Recommended action",
+      "green",
+      "cell",
+      0.86
+     ]
+    ]
+   }
+  ],
+  [
+   "leak",
+   "It runs an automatic traffic-light scan for leaks: inefficient routes, low-margin services, collections problems.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "Plus customer churn risk, contracts about to expire, and inventory reorder risk.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "Each with a possible cause, and a recommended action.",
+   null,
+   null
+  ],
+  [
+   "leak",
+   "Add a KPI Scorecard, a Business Health Score™, forecasting and benchmarking.",
+   "Add a KPI Scorecard, a Business Health Score, forecasting and benchmarking.",
+   {
+    "t": "mini",
+    "ed": "elite",
+    "text": "Scored, forecast, [benchmarked.]",
+    "items": [
+     {
+      "tab": "14 KPI Scorecard",
+      "label": "KPI Scorecard"
+     },
+     {
+      "tab": "15 Business Health Score",
+      "label": "Health Score™"
+     },
+     {
+      "tab": "17 Forecasting Center",
+      "label": "Forecasting"
+     },
+     {
+      "tab": "18 Benchmarking Center",
+      "label": "Benchmarking"
+     }
+    ]
+   }
+  ],
+  [
+   "tax",
+   "Then the part every owner dreads. Taxes.",
+   null,
+   {
+    "t": "zero",
+    "eyebrow": "The part every owner dreads",
+    "big": "TAXES.",
+    "impact": true,
+    "fxAt": 0.2,
+    "fx": "shockred"
+   }
+  ],
+  [
+   "tax",
+   "The Tax Reserve Center works out a recommended reserve, and how much of it you've funded.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "21 Tax Reserve & VAT Center",
+    "label": "Tax Reserve",
+    "d": "what to set aside",
+    "hi": [
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "Reserve Funded %",
+      "Funded %",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "The Deduction Maximizer groups the year's expenses by category, to review with your accountant.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "22 Deduction Maximizer",
+    "label": "Deduction Maximizer",
+    "d": "by category",
+    "hi": [
+     [
+      "Typically Deductible?",
+      "Deductible?",
+      "green",
+      "cell"
+     ],
+     [
+      "Total Deductible",
+      "Total",
+      "cyan",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "The Tax Readiness Center tracks due dates, and scores how ready your records are.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "23 Tax Readiness Center",
+    "label": "Tax Readiness",
+    "d": "due dates + score",
+    "hi": [
+     [
+      "TAX CALENDAR",
+      "Due dates",
+      "amber",
+      "block"
+     ],
+     [
+      "TAX READINESS SCORE",
+      "Readiness score",
+      "green",
+      "block"
+     ]
+    ]
+   }
+  ],
+  [
+   "tax",
+   "And the Accountant Summary is a print-ready package to hand over at filing time.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "24 Accountant Summary",
+    "label": "Accountant Summary",
+    "d": "print-ready",
+    "hi": [
+     [
+      "Accountant Package Status:",
+      "Package status",
+      "green",
+      "row"
+     ],
+     [
+      "Net Profit",
+      "P&L summary",
+      "blue",
+      "row"
+     ]
+    ]
+   }
+  ],
+  [
+   "guide",
+   "And you're never left guessing how to use it.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Every edition comes with a Quick Start: the exact steps for your first session, your first week, and your first thirty days.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "And a full Field Guide that walks through every sheet, screen by screen.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Forty-four pages for Essential. Seventy-two for Elite. Including what to do when a number looks wrong.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "Now, honest answers to the questions pest control owners ask.",
+   null,
+   {
+    "t": "slam",
+    "text": "Honest answers to [real questions.]",
+    "size": 92
+   }
+  ],
+  [
+   "obj",
+   "“My routing software already has reports.” Good. Keep it.",
+   "My routing software already has reports. Good. Keep it.",
+   {
+    "t": "qa",
+    "q": "My routing software already has reports.",
+    "eyebrow": "Honest answer 1 of 5",
+    "liftAt": 0.7,
+    "chips": [
+     "Keep your routing app",
+     "Route profit",
+     "Contract renewals",
+     "Chemical stock",
+     "Tax reserve"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "This sits next to it, and pulls the whole business into one view: routes, contracts, technicians, cash and taxes.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“I'm not an Excel person.” You don't need to be.",
+   "I'm not an Excel person. You don't need to be.",
+   {
+    "t": "qa",
+    "q": "I'm not an Excel person.",
+    "eyebrow": "Honest answer 2 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "Formulas built in",
+     "Formula cells locked",
+     "You enter services and expenses",
+     "Quick Start included"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "Every calculation is already built, and the formula cells are locked, so you can't break them. You just enter services and expenses.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“I only have a few routes.” Then start with Essential.",
+   "I only have a few routes. Then start with Essential.",
+   {
+    "t": "qa",
+    "q": "I only have a few routes.",
+    "eyebrow": "Honest answer 3 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "8 sheets",
+     "Services + expenses",
+     "Dashboard + tax set-aside",
+     "Go Elite when you grow"
+    ],
+    "big": "Start with Essential.",
+    "bigSize": 80
+   }
+  ],
+  [
+   "obj",
+   "Eight sheets: services, expenses, a dashboard and a tax set-aside. Move up to Elite when you add routes and technicians.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Will it stop customers cancelling?” No tool can promise that.",
+   "Will it stop customers cancelling? No tool can promise that.",
+   {
+    "t": "qa",
+    "q": "Will it stop customers cancelling?",
+    "eyebrow": "Honest answer 4 of 5",
+    "liftAt": 0.55,
+    "chips": [
+     "Renewals tracked",
+     "Churn risk flagged",
+     "You reach out first"
+    ],
+    "answer": "No tool can promise that."
+   }
+  ],
+  [
+   "obj",
+   "It shows you which contracts are coming up for renewal, and which customers are at risk, so you can reach them first.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Is it a subscription?” No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   "Is it a subscription? No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   {
+    "t": "qa",
+    "q": "Is it a subscription?",
+    "eyebrow": "Honest answer 5 of 5",
+    "liftAt": 0.25,
+    "big": "No.",
+    "bigSize": 150,
+    "chips": [
+     "One payment",
+     "No macros",
+     "Plain formulas"
+    ],
+    "foot": "Your numbers stay in your file."
+   }
+  ],
+  [
+   "offer",
+   "So, which edition fits you?",
+   null,
+   null
+  ],
+  [
+   "offer",
+   "Essential, $97: services, expenses, a dashboard, a health snapshot and a tax set-aside estimate.",
+   "Essential, ninety-seven dollars. Services, expenses, a dashboard, a health snapshot and a tax set-aside estimate.",
+   null
+  ],
+  [
+   "offer",
+   "Elite, $197: contracts, routes, technicians, service analytics, chemical inventory, receivables, cash flow and forecasting.",
+   "Elite, one ninety-seven. Contracts, routes, technicians, service analytics, chemical inventory, receivables, cash flow and forecasting.",
+   null
+  ],
+  [
+   "offer",
+   "Or Complete, $249: both workbooks, both Field Guides, both Quick Starts. Start simple, grow into the full system.",
+   "Or Complete, two forty-nine. Both workbooks, both Field Guides, both Quick Starts. Start simple, and grow into the full system.",
+   null
+  ],
+  [
+   "offer",
+   "One-time payment. And a 60-day money-back guarantee, no questions asked.",
+   "One-time payment. And a sixty-day money-back guarantee. No questions asked.",
+   null
+  ],
+  [
+   "cta",
+   "Here's what to do right now.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Pick your edition below this video.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Open it, enter this month's services, and see what each route actually earns.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Because every month you wait is another month of guessing.",
+   null,
+   null
+  ],
+  [
+   "end",
+   "P.S. Your contracts show what you're owed.",
+   "P S. Your contracts show what you're owed.",
+   null
+  ],
+  [
+   "end",
+   "ProfitIQS shows you what you keep.",
+   "Profit IQS shows you what you keep.",
+   null
+  ]
+ ]
+}

@@ -1,0 +1,73 @@
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _common import *
+
+D = {
+ "name": "Construction Job Cost Business Intelligence System™", "short": "construction",
+ "title": "Construction Job Cost [Business Intelligence] System™", "aud": "contractors and builders", "aud_short": "contractors and builders", "people": "contractors",
+ "file_ess": "Construction_Job_Cost_Business_Intelligence_System_Essential_2026.xlsx", "file_elite": "Construction_Job_Cost_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 8, "n_elite": 25, "guide": (34, 53), "dreads": "contractor",
+ "hook": [
+  ["A kitchen remodel. A small addition. A commercial buildout. All running at once.", {"t": "notifs", "text": "Three projects, [all at once.]", "head": "PROGRESS DRAW", "items": [["Residential remodel", "$18,400.00"], ["Small addition", "$32,000.00"], ["Commercial buildout", "$61,750.00"]], "photo": "construction"}],
+  ["Every one looked profitable on the estimate.", {"t": "slam", "text": "Every one looked [profitable.]", "photo": "blueprint", "size": 100}],
+  ["Then the costs landed after the estimate, and the real margin only showed up when the project closed.", {"t": "bars", "text": "The real margin [shows up last.]", "bars": [["Estimated margin", 1, "green"], ["Mid-project", 0.62, "amber"], ["At close-out", 0.3, "red"]], "note": "illustrative"}],
+  ["And the extra work agreed on site? Some of it never got priced, or billed.", {"t": "rows", "text": "Change orders [never billed.]", "rows": [["CO-01 · extra outlets", "BILLED", "green"], ["CO-02 · moved wall", "NOT PRICED", "amber"], ["CO-03 · upgraded fixtures", "NEVER BILLED", "red"]]}],
+  ["So here's the question. Which of your projects is actually making [money,] right now?", {"t": "slam", "text": "Which project is [making money, right now?]", "photo": "site-crew", "size": 92}],
+  ring("a construction or remodeling business", "a construction business"),
+ ],
+ "pain": [
+  money_side_line("construction"),
+  ["Estimates live in one tool. Receipts live in the truck. Sub invoices live in your inbox.", {"t": "papers", "text": "Receipts: [everywhere.]", "label": "INVOICE", "photo": "plans"}],
+  ["You bill ahead of the work on one job, and behind it on another. And the business looks healthier, or sicker, than it is.", {"t": "split", "left": ["What the bank says", ["Deposit landed", "Feels profitable", "Spend it"]], "right": ["What the work says", ["% complete", "Revenue earned", "Over or under billed"]], "rightAt": 0.55}],
+  ["Crews and suppliers get paid before the next draw arrives.", {"t": "rows", "text": "Paid out [before the draw.]", "rows": [["Framing sub", "PAID", "sky"], ["Lumber supplier", "PAID", "sky"], ["Next draw", "NOT YET", "red"]]}],
+  ["Remodels, additions, new builds, buildouts. Which kind of job actually pays?", {"t": "cards", "text": "Which jobs [actually pay?]", "cards": [["kitchen-white", "Remodel", "green"], ["construction", "New build", "sky"], ["office-open", "Buildout", "amber"]]}],
+  ["Open invoices and draws age, while payroll is due on Friday.", {"t": "rows", "text": "Unpaid. [Payroll Friday.]", "rows": [["Draw 3 · Remodel", "CURRENT", "sky"], ["Draw 2 · Addition", "60 DAYS", "amber"], ["Final draw · Buildout", "90+ DAYS", "red"]]}],
+  ["Then tax time: job costs, receipts and sub payments, scattered everywhere.", {"t": "papers", "text": "Tax time: [scattered everywhere.]", "label": "RECEIPT", "photo": "taxdocs"}],
+  send_everything(),
+  months_line(),
+ ],
+ "turn2": "You already have the data: estimates, job costs, draws, change orders.",
+ "labels": ["JOB", "DRAW", "$", "CO", "SUB", "%", "WIP"],
+ "who": [["kitchen-white", "Remodeling contractor", "several projects at once"], ["construction", "Small general contractor", "subs, COs, progress billing"], ["saw", "Owner-operator builder", "job costing at night"], ["woman-office", "Office manager", "project profit + WIP"]],
+ "who_lines": ["It's for the remodeling contractor running several projects at once.", "The small general contractor managing subs, change orders and progress billing.", "The owner-operator builder who works on site all day, and does job costing at night.", "And the office manager who wants a clean view of project profit, and work in progress."],
+ "ess_wall": "You enter the facts, projects and expenses. The workbook does the math.",
+ "inputs": ["SETUP", "PROJECT ENTRY", "EXPENSE ENTRY"],
+ "ess_tour": [
+  setup_line(),
+  ["Log every project by type: remodels, additions, new home builds, commercial buildouts.", S("ess", "PROJECT ENTRY", "Project Entry", "every project", [["Project Type", "Project type", "blue", "cell"]], minW=0.8)],
+  ["Log every overhead expense: vehicles and fuel, marketing, software, insurance.", S("ess", "EXPENSE ENTRY", "Expense Entry", "every expense", [["Category", "Category", "amber", "cell"], ["Vendor#0", "Vendor", "cyan", "cell"]], minW=0.8)],
+ ] + ess_tail(dash_kpi=("TOTAL CONTRACT REVENUE", "Contract revenue"), dash_kpi3=("AVG PROJECT PROFIT", "Avg project profit"), dash_line="The Dashboard: contract revenue, net profit, average project profit, and how funded your tax reserve is.", tax_cost=("Project Actual Cost", "Project costs"), tax_line="Tax & Deductions separates project costs from overhead, and works out your tax reserve."),
+ "elite_tag": "Job costing, work in progress, and change orders, for the whole company.",
+ "elite_wall": "Project portfolio, job costs, WIP, change orders, revenue, expenses, cash, receivables, profitability and taxes.",
+ "sections": [
+  ("ops", [
+   ["It opens on the Executive Command Center: contract revenue, revenue earned, margins, backlog, change orders, and over or under billing.", S("elite", "02 Executive Dashboard", "Executive Dashboard", "the whole company", [["REVENUE EARNED (WIP)", "Revenue earned", "blue", "kpi"], ["GROSS MARGIN %", "Gross margin", "green", "kpi"], ["BACKLOG VALUE", "Backlog", "cyan", "kpi"], ["NET WIP OVER/(UNDER)", "Over/under billing", "amber", "kpi"]], dir="zoom")],
+   ["The Project Portfolio is your master project list. Every other sheet reads from it.", S("elite", "04 Project Portfolio", "Project Portfolio", "master list", [["Master project list", "Master list", "blue", "cell"], ["Project ID", "Every project", "cyan", "row"]], minW=0.8)],
+   ["The Job Cost Center puts budget against actual cost, for every project, while it's still running.", S("elite", "05 Job Cost Center", "Job Cost Center", "budget vs. actual", [["Budget vs. actual cost", "Budget vs. actual", "amber", "cell"], ["Project ID", "Every project", "cyan", "row"]], minW=0.8)],
+   ["The WIP Center works out percent complete, revenue earned, and whether you're over or under billed.", S("elite", "06 WIP Center", "WIP Center", "over / under billing", [["Percentage-of-completion", "% complete · earned · billing", "green", "cell"], ["Project ID", "Every project", "cyan", "row"]], minW=0.8)],
+   ["The Change Order Center logs every change order, with its revenue, cost and margin. So extra work gets billed.", S("elite", "07 Change Order Center", "Change Orders", "billed, not forgotten", [["Change order log", "Revenue · cost · margin", "violet", "cell"], ["CO Number", "Every change order", "cyan", "row"]], minW=0.8)],
+   ["And Project Profitability ranks every project, best to worst, by gross margin.", S("elite", "13 Project Profitability", "Project Profitability", "best to worst", [["Every project ranked", "Ranked best to worst", "green", "cell"], ["Contract Value", "Contract value", "blue", "cell"]], minW=0.8)],
+  ]),
+  ("money", [
+   money_slam(),
+   ["The Revenue Tracker rolls up revenue by type, including progress billing, month by month.", S("elite", "08 Revenue Tracker", "Revenue Tracker", "progress billing", [["Progress Billing", "Progress billing", "green", "cell"]], minW=0.8)],
+   ["The Cash Flow Center shows inflows, outflows and net cash flow, so the gap between draws is visible.", S("elite", "10 Cash Flow Center", "Cash Flow Center", "between draws", [["Cash Inflows", "Cash in", "green", "cell"], ["Monthly inflows, outflows", "Net cash flow", "cyan", "cell"]], minW=0.8)],
+   ["And Accounts Receivable ages every open invoice automatically.", S("elite", "11 Accounts Receivable", "Accounts Receivable", "auto-aged", [["Open invoices with an automatic aging", "Automatic aging", "amber", "cell"], ["Invoice #", "Every invoice", "cyan", "row"]], minW=0.8)],
+  ]),
+ ],
+ "leak": {"hi": [["LOW-MARGIN PROJECTS (MARGIN BELOW 15%)", "Projects under 15% margin", "red", "cell", 0.25], ["Margin %", "Margin", "amber", "cell", 0.45], ["Possible Cause", "Possible cause", "cyan", "cell", 0.65], ["Recommended Action", "Recommended action", "green", "cell", 0.85]],
+          "lines": ["It automatically flags every project with a margin below fifteen percent.", "Like the ones where actual cost is running very close to the contract.", "Each with a possible cause, and a recommended action."]},
+ "objs": [
+  obj_app("My estimating software already does this.", "job costs, WIP, change orders, cash and taxes", ["Keep your estimating tool", "Budget vs. actual", "WIP + billing", "Change orders", "Tax reserve"]),
+  obj_excel("projects and expenses"),
+  {"q": "I only run a few jobs a year.", "a1": "Then start with Essential.", "a2": "Eight sheets: projects, expenses, a dashboard and a tax set-aside. Move up to Elite when you need job costing and WIP.", "big": "Start with Essential.", "bigSize": 80, "chips": ["8 sheets", "Projects + expenses", "Dashboard + tax set-aside", "Go Elite for job costing"]},
+  {"q": "Will it fix my estimates?", "a1": "No tool can promise that.", "a2": "It puts budget next to actual cost on every project, so you see where the estimate missed, while there's still time to act.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["Budget vs. actual", "Low-margin projects flagged", "You adjust the next bid"]},
+ ],
+ "offer_ess": "projects, expenses, a dashboard, a health snapshot and a tax set-aside estimate",
+ "offer_elite": "project portfolio, job costing, work in progress, change orders, project profitability, cash flow, receivables and forecasting",
+ "tiers": [["Projects & expenses", "Dashboard + health snapshot", "Tax set-aside estimate", "Accountant export"], ["Job cost: budget vs. actual", "WIP & over/under billing", "Change orders", "Project profitability"], TIER_C],
+ "cta_line": "Open it, enter your active projects, and see each one's real margin while it's still running.",
+ "cta": ["Enter your active projects", "See each real margin", "Every month you wait is [another month of guessing.]"],
+ "ps": ["Your estimates show what you expected.", "what you kept."],
+ "end": ["Your estimates show [what you expected.]", "ProfitIQS shows you [what you kept.]"],
+}

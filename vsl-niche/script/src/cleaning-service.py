@@ -1,0 +1,73 @@
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _common import *
+
+D = {
+ "name": "Cleaning Service Business Intelligence System™", "short": "cleaning",
+ "title": "Cleaning Service [Business Intelligence] System™", "aud": "cleaning businesses", "aud_short": "cleaning businesses", "people": "cleaning business owners",
+ "file_ess": "Cleaning_Service_Business_Intelligence_System_Essential_2026.xlsx", "file_elite": "Cleaning_Service_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 8, "n_elite": 27, "guide": (35, 66),
+ "hook": [
+  ["Four recurring homes on Monday. An office contract on Tuesday. A move-out deep clean on Saturday.", {"t": "notifs", "text": "Booked [all week.]", "head": "JOB COMPLETED", "items": [["Recurring residential", "$165.00"], ["Office contract", "$1,200.00"], ["Move-out deep clean", "$480.00"]], "photo": "cleaner"}],
+  ["So here's the question. Which of those jobs actually made you [money?]", {"t": "slam", "text": "Which jobs actually [made you money?]", "photo": "living-bright", "size": 100}],
+  ["Not the price you quoted. What's left after crew time and supplies.", {"t": "bars", "bars": [["Quoted price", 1, "sky"], ["− Crew time", 0.6, "amber"], ["− Supplies + travel", 0.38, "red"]], "q": "Kept", "qv": 0.36}],
+  ["Quotes priced by habit can leave some jobs barely covering the crew.", {"t": "rows", "text": "Priced [by feel.]", "rows": [["Weekly home · priced 2 years ago", "THIN", "amber"], ["Office · long drive", "BARELY COVERS", "red"], ["Deep clean · quoted fast", "UNKNOWN", "red"]]}],
+  ["And your regular customers? A quiet cancellation is easy to miss.", {"t": "slam", "text": "A quiet cancellation is [easy to miss.]", "photo": "apt-bright", "size": 90}],
+  ring("a cleaning business", "a cleaning business"),
+ ],
+ "pain": [
+  money_side_line("cleaning"),
+  ["Bookings live in your scheduling app. Supply receipts live in your bag.", {"t": "papers", "text": "Receipts: [everywhere.]", "label": "SUPPLIES", "photo": "spray2"}],
+  ["Supplies, fuel, and travel time between jobs add up, without anyone noticing.", {"t": "rows", "text": "Costs that [creep.]", "icon": "alert", "rows": [["Cleaning supplies", "UP", "amber"], ["Fuel & travel", "UP", "amber"], ["Drive time between jobs", "UNPAID", "red"]]}],
+  ["You know which crew feels efficient. Not which one produces the most profitable hours.", {"t": "bars", "text": "Efficient isn't [profitable.]", "bars": [["Crew A", 0.88, "sky"], ["Crew B", 0.6, "sky"], ["Crew C", 0.75, "sky"]], "q": "Rev per hour?", "qv": 0.5}],
+  ["Recurring customers are the backbone. Some pause. Some just stop booking.", {"t": "rows", "text": "Recurring revenue [at risk.]", "icon": "calendar", "rows": [["Weekly · Garcia home", "ACTIVE", "green"], ["Biweekly · Jones home", "PAUSED", "amber"], ["Monthly · Wilson home", "LOST", "red"]]}],
+  ["Commercial accounts pay late, and the pressure lands on your cash.", {"t": "rows", "text": "Unpaid. [Payroll still due.]", "rows": [["INV · Office building", "1-30 DAYS", "sky"], ["INV · Clinic", "61-90 DAYS", "amber"], ["INV · Property manager", "90+ DAYS", "red"]]}],
+  ["Then tax time: receipts, payroll and job records, scattered everywhere.", {"t": "papers", "text": "Tax time: [scattered everywhere.]", "label": "RECEIPT", "photo": "taxdocs"}],
+  send_everything(),
+  months_line(),
+ ],
+ "turn2": "You already have the data: jobs, customers, crews, invoices, receipts.",
+ "labels": ["JOB", "CREW", "$", "CUSTOMER", "SUPPLY", "%", "INVOICE"],
+ "who": [["cleaner", "Owner-cleaner", "admin done at night"], ["team", "Crew-based company", "crew productivity"], ["office-big", "Commercial contract cleaner", "contracts in view"], ["living-bright", "Growing residential service", "customers coming back"]],
+ "who_lines": ["It's for the owner-cleaner who still cleans most days, and does the admin at night.", "The crew-based company that needs to see crew productivity, and job profit.", "The commercial contract cleaner who wants recurring revenue and contract terms in view.", "And the growing residential service that wants customers to keep coming back."],
+ "ess_wall": "You enter the facts, jobs and expenses. The workbook does the math.",
+ "inputs": ["SETUP", "JOB REVENUE ENTRY", "EXPENSE ENTRY"],
+ "ess_tour": [
+  setup_line(),
+  ["Log every job by type: recurring residential, commercial, deep cleans, move-in and move-out.", S("ess", "JOB REVENUE ENTRY", "Job Revenue Entry", "every job", [["Job Type", "Job type", "blue", "cell"]], minW=0.8)],
+  ["Log every expense: cleaning supplies, fuel, marketing, office.", S("ess", "EXPENSE ENTRY", "Expense Entry", "every expense", [["Category", "Category", "amber", "cell"], ["Vendor#0", "Vendor", "cyan", "cell"]], minW=0.8)],
+ ] + ess_tail(dash_kpi3=("AVG JOB PROFIT", "Avg job profit"), dash_line="The Dashboard puts it on one screen: revenue, net profit, average job profit, and how funded your tax reserve is.", tax_cost=("Job Labor Cost", "Job labor"), tax_line="Tax & Deductions separates job labor from overhead, and works out your tax reserve."),
+ "elite_tag": "The full operating system for a cleaning company.",
+ "elite_wall": "Customers and retention, crews, jobs, contracts, recurring revenue, receivables, cash, scorecards and taxes.",
+ "sections": [
+  ("ops", [
+   ["It opens on the Executive Dashboard: revenue, gross margin, retention, recurring revenue, receivables and your Health Score.", S("elite", "02 Executive Dashboard", "Executive Dashboard", "the whole company", [["REVENUE 12/12 MO", "Revenue", "blue", "kpi"], ["GROSS MARGIN %", "Gross margin", "green", "kpi"], ["RETENTION %", "Retention", "cyan", "kpi"], ["RECURRING REV. / MO", "Recurring", "amber", "kpi"]], dir="zoom")],
+   ["Job Profitability shows what every job leaves after crew time and supplies.", S("elite", "09 Job Profitability", "Job Profitability", "every job", [["JOB PROFITABILITY CENTER", "Every job's profit", "green", "row"]], minW=0.8)],
+   ["Crew Productivity compares every cleaner on jobs completed, revenue, hours, and revenue per hour.", S("elite", "07 Crew Productivity", "Crew Productivity", "revenue per hour", [["Revenue", "Revenue", "blue", "cell"], ["Revenue Per", "Revenue per hour", "green", "cell"]])],
+   ["The Customer Retention Center counts active, lost and paused customers, and lists who to win back.", S("elite", "05 Customer Retention", "Customer Retention", "who to win back", [["Retention %", "Retention", "cyan", "row"], ["REACTIVATION OPPORTUNITIES", "Reactivation list", "amber", "cell"]])],
+   ["The Contract Tracker and Recurring Revenue Center show monthly and annual recurring revenue.", S("elite", "11 Recurring Revenue", "Recurring Revenue", "MRR + ARR", [["Monthly Recurring Revenue", "Monthly recurring", "green", "row"], ["Annual Recurring Revenue", "Annual recurring", "cyan", "row"]], cam="full")],
+   ["Plus a customer database, a crew database, a service revenue log and customer analytics.", mini("Every job, [every customer.]", [("04 Customer Database", "Customers"), ("06 Crew Database", "Crews"), ("08 Service Revenue", "Job Log"), ("10 Contract Tracker", "Contracts")])],
+  ]),
+  ("money", [
+   money_slam(),
+   ["The Expense Tracker breaks spending down by category, month by month.", S("elite", "12 Expense Tracker", "Expense Tracker", "by category", [["MONTHLY EXPENSE BY CATEGORY", "By category", "amber", "cell"]], minW=0.8)],
+   ["Accounts Receivable ages every invoice, from one to thirty days, all the way to ninety-plus.", S("elite", "13 Accounts Receivable", "Accounts Receivable", "aging buckets", [["AGING SUMMARY", "Aging summary", "amber", "cell"], ["Aging Bucket", "Aging bucket", "red", "cell"]])],
+   ["And the Cash Flow Center shows cash in, cash out, and net cash flow, month by month.", S("elite", "14 Cash Flow Center", "Cash Flow Center", "month by month", [["Cash In", "Cash in", "green", "cell"], ["Net Cash Flow", "Net cash flow", "cyan", "cell"]])],
+  ]),
+ ],
+ "leak": {"hi": [["Automated risk flags", "Automated flags", "amber", "cell", 0.2], ["Low-Margin Jobs (<30% margin)", "Low-margin jobs", "red", "row", 0.38], ["Customer Retention Risk", "Retention risk", "red", "row", 0.55], ["Crew Underperformance", "Crew underperformance", "amber", "row", 0.72], ["Status", "Status", "green", "cell", 0.86]],
+          "lines": ["It automatically flags low-margin jobs, cancelled jobs, and customers at risk of leaving.", "Plus overdue receivables past ninety days, and crews earning below the revenue-per-hour threshold.", "Each one checked against a threshold, with a clear status."]},
+ "objs": [
+  obj_app("My scheduling app already has reports.", "job profit, crews, retention, cash and taxes", ["Keep your scheduling app", "Job profitability", "Crew productivity", "Retention", "Tax reserve"]),
+  obj_excel(),
+  {"q": "It's just me and a few clients.", "a1": "Then start with Essential.", "a2": "Eight sheets: jobs, expenses, a dashboard and a tax set-aside. Move up to Elite when you add crews.", "big": "Start with Essential.", "bigSize": 80, "chips": ["8 sheets", "Jobs + expenses", "Dashboard + tax set-aside", "Go Elite when you grow"]},
+  {"q": "Will it stop customers cancelling?", "a1": "No tool can promise that.", "a2": "It shows who's paused or lost, and flags retention risk early, so you can reach them before they're gone.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["Paused + lost tracked", "Retention risk flagged", "You reach out first"]},
+ ],
+ "offer_ess": "job revenue, expenses, a dashboard, a health snapshot and a tax set-aside estimate",
+ "offer_elite": "customers and retention, crews, job profitability, contracts, recurring revenue, receivables, cash flow and forecasting",
+ "tiers": [["Job revenue & expenses", "Dashboard + health snapshot", "Tax set-aside estimate", "Accountant export"], ["Job profitability", "Crew productivity", "Retention & contracts", "AR & cash flow"], TIER_C],
+ "cta_line": "Open it, enter this month's jobs, and see what each one actually kept.",
+ "cta": ["Enter this month's jobs", "See what each job kept", "Every month you wait is [another month of guessing.]"],
+ "ps": ["Your schedule shows how busy you are.", "what you keep."],
+ "end": ["Your schedule shows [how busy you are.]", "ProfitIQS shows you [what you keep.]"],
+}

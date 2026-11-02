@@ -1,0 +1,73 @@
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _common import *
+
+D = {
+ "name": "Manufacturing Business Intelligence System™", "short": "manufacturing",
+ "title": "Manufacturing [Business Intelligence] System™", "aud": "small manufacturers", "aud_short": "small manufacturers", "people": "manufacturers",
+ "file_ess": "Manufacturing_Business_Intelligence_System_Essential_2026.xlsx", "file_elite": "Manufacturing_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 10, "n_elite": 29, "guide": (46, 74),
+ "hook": [
+  ["Steel brackets, machined shafts, a custom assembly order. The floor ran all week.", {"t": "notifs", "text": "The floor ran [all week.]", "head": "ORDER SHIPPED", "items": [["Steel Bracket A100 · 2,000 units", "$9,400.00"], ["Machined Shaft D300 · 300 units", "$12,750.00"], ["Custom Assembly J600", "$18,200.00"]], "photo": "factory-worker"}],
+  ["But the real cost of a run? Materials, labor and overhead often get totaled after it ships. After the price was already set.", {"t": "rows", "text": "Costed [after it ships.]", "rows": [["Price quoted", "SET", "sky"], ["Run produced + shipped", "DONE", "green"], ["True cost per unit", "FOUND OUT LATER", "red"]]}],
+  ["One product line can carry the shop, while another barely covers its own materials.", {"t": "bars", "text": "Not every line [pays.]", "bars": [["Line A", 1, "green"], ["Line B", 0.65, "sky"], ["Line C", 0.22, "red"]], "q": "Margin?", "qv": 0.4}],
+  ["So here's the question. Which of your products actually make you [money?]", {"t": "slam", "text": "Which products actually [make you money?]", "photo": "factory", "size": 96}],
+  ["And the raw materials and finished goods on the shelf? That's cash you can't use.", {"t": "slam", "text": "Inventory is [cash on a shelf.]", "photo": "warehouse", "size": 96}],
+  ring("a manufacturing business", "a manufacturing business"),
+ ],
+ "pain": [
+  money_side_line("manufacturing"),
+  ["Orders live in one place. Material receipts in another. Production records on the floor.", {"t": "papers", "text": "Records: [everywhere.]", "label": "MATERIAL", "photo": "welding"}],
+  ["What the floor is making, and what customers actually ordered, quietly stop matching.", {"t": "split", "left": ["Production orders", ["What's being made", "When it's done", "How many units"]], "right": ["Sales orders", ["What was ordered", "When it's due", "Who's waiting"]], "rightAt": 0.5}],
+  ["Margin swings from run to run, and from product to product. Without a per-product view, you can't tell which is which.", {"t": "bars", "text": "Margin [swings by product.]", "bars": [["Bracket", 0.8, "green"], ["Housing", 0.45, "amber"], ["Gasket set", 0.2, "red"], ["Gear", 0.65, "sky"]], "note": "illustrative"}],
+  ["Late production orders push out deliveries, and customers notice.", {"t": "rows", "text": "Orders [running late.]", "rows": [["PO · Steel brackets", "ON TIME", "green"], ["PO · Machined shafts", "AT RISK", "amber"], ["PO · Welded frames", "LATE", "red"]]}],
+  ["Commercial customers pay late, and cash gets tight fast.", {"t": "rows", "text": "Shipped. [Not paid.]", "rows": [["Titan Industries", "CURRENT", "sky"], ["Meridian Machine Works", "45 DAYS", "amber"], ["Sterling Equipment Co", "90+ DAYS", "red"]]}],
+  ["Then tax time: material receipts, payroll and production records, scattered everywhere.", {"t": "papers", "text": "Tax time: [scattered everywhere.]", "label": "RECEIPT", "photo": "taxdocs"}],
+  send_everything(),
+  months_line(),
+ ],
+ "turn2": "You already have the data: orders, production runs, materials, invoices.",
+ "labels": ["ORDER", "RUN", "$", "UNIT", "MATERIAL", "%", "SKU"],
+ "who": [["factory-worker", "Contract manufacturer", "every run, costed"], ["welding", "Job shop", "margin per job"], ["factory", "Single-product producer", "cost per unit"], ["warehouse", "Growing shop", "which lines carry it"]],
+ "who_lines": ["It's for the contract manufacturer who needs every production run costed against its order.", "The job shop pricing custom and small-batch work, with margin that swings run to run.", "The single-product producer who lives or dies on cost per unit.", "And the growing shop adding product lines, that needs to see which ones carry the business."],
+ "ess_wall": "You enter the facts: products, production and expenses. The workbook does the math.",
+ "inputs": ["SETUP", "PRODUCT SETUP", "PRODUCTION ENTRY", "EXPENSE ENTRY"],
+ "ess_tour": [
+  setup_line(),
+  ["Set up your products once, with their selling price per unit.", S("ess", "PRODUCT SETUP", "Product Setup", "once", [["Selling Price per Unit", "Selling price", "green", "cell"], ["Product Name", "Every product", "blue", "cell"]], cam="full")],
+  ["Log every production run: the product, the units, the cost.", S("ess", "PRODUCTION ENTRY", "Production Entry", "every run", [["Product Name", "Product", "blue", "cell"]], minW=0.8)],
+  ["Log every overhead expense: rent, utilities, maintenance, logistics.", S("ess", "EXPENSE ENTRY", "Expense Entry", "every expense", [["Category", "Category", "amber", "cell"]], minW=0.8)],
+ ] + ess_tail(dash_kpi3=("UNITS PRODUCED", "Units produced"), dash_line="The Dashboard: revenue, net profit, units produced and sold, and how funded your tax reserve is.", tax_cost=("Production Cost (Materials + Labor)", "Production cost"), tax_line="Tax & Deductions separates production cost from overhead, and works out your tax reserve."),
+ "elite_tag": "The full operating system for a manufacturer.",
+ "elite_wall": "Products, production orders, sales orders, cost accounting, product profitability, inventory, customers, receivables, cash and taxes.",
+ "sections": [
+  ("ops", [
+   ["It opens on the Executive Command Center: revenue, margins, production efficiency, on-time delivery, inventory and WIP value.", S("elite", "02 Executive Dashboard", "Executive Dashboard", "the whole operation", [["TOTAL REVENUE", "Revenue", "blue", "kpi"], ["GROSS MARGIN %", "Gross margin", "green", "kpi"], ["ON-TIME DELIVERY", "On-time delivery", "cyan", "kpi"], ["INVENTORY VALUE", "Inventory", "amber", "kpi"]], dir="zoom")],
+   ["Cost Accounting works out the true cost of every product: materials, labor and overhead.", S("elite", "09 Cost Accounting", "Cost Accounting", "true unit cost", [["COST ACCOUNTING CENTER", "Every product, costed", "amber", "row"], ["Product ID", "Every product", "blue", "row"]], minW=0.8)],
+   ["Product Profitability shows what every product actually keeps.", S("elite", "10 Product Profitability", "Product Profitability", "every product", [["PRODUCT PROFITABILITY CENTER", "Margin per product", "green", "row"], ["Product ID", "Every product", "blue", "row"]], minW=0.8)],
+   ["Production Orders and Sales Orders sit side by side, so what's made matches what's ordered.", mini("Made vs. [ordered.]", [("05 Production Orders", "Production Orders"), ("06 Sales Orders", "Sales Orders")])],
+   ["And Inventory Control tracks raw materials and finished goods, with an inventory summary.", S("elite", "11 Inventory Control", "Inventory Control", "stock + summary", [["INVENTORY SUMMARY", "Inventory summary", "violet", "cell"], ["Record ID", "Every record", "blue", "row"]], minW=0.8)],
+   ["Plus a product master, a customer database and customer analytics.", mini("Every product, [every customer.]", [("04 Product Master", "Product Master"), ("12 Customer Database", "Customers"), ("20 Customer Analytics", "Customer Analytics")])],
+  ]),
+  ("money", [
+   money_slam(),
+   ["AR Aging lists every unpaid or partly paid order, by customer.", S("elite", "13 AR Aging", "AR Aging", "by customer", [["Customer", "Customer", "amber", "cell"], ["Order #", "Every open order", "red", "row"]], minW=0.8)],
+   ["And the Cash Flow Center shows cash received, expenses paid, net, and your running balance.", S("elite", "14 Cash Flow Center", "Cash Flow Center", "month by month", [["Inflow (Cash Received)", "Cash in", "green", "cell"], ["Running Balance", "Running balance", "cyan", "cell"]])],
+  ]),
+ ],
+ "leak": {"hi": [["Automated risk flags", "Automated flags", "amber", "cell", 0.2], ["Late Production Orders", "Late orders", "red", "row", 0.36], ["Low-Margin Product Exposure", "Low-margin products", "red", "row", 0.52], ["Excess Inventory", "Excess inventory", "amber", "row", 0.68], ["Possible Cause", "Possible cause", "cyan", "cell", 0.84]],
+          "lines": ["It automatically flags late production orders, and products under twenty percent margin.", "Plus excess inventory, and slow-moving finished goods.", "Each against a threshold, with a possible cause."]},
+ "objs": [
+  obj_app("My accounting software already tracks this.", "unit cost, product margin, orders, inventory and cash", ["Keep your accounting software", "True unit cost", "Product margin", "Orders in sync", "Inventory"]),
+  obj_excel("products, production runs and expenses", locked=True),
+  {"q": "We only make a few products.", "a1": "Then start with Essential.", "a2": "Ten sheets: products, production, expenses, a dashboard and a tax set-aside. Move up to Elite for cost accounting and orders.", "big": "Start with Essential.", "bigSize": 80, "chips": ["10 sheets", "Products + production", "Dashboard + tax set-aside", "Go Elite for cost accounting"]},
+  {"q": "Will it lower my costs?", "a1": "No tool can promise that.", "a2": "It shows the true cost and margin of every product, so you can see which ones to reprice, rework, or drop.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["True unit cost", "Low-margin products flagged", "You decide what to change"]},
+ ],
+ "offer_ess": "products, production runs, expenses, a dashboard, a health snapshot and a tax set-aside estimate",
+ "offer_elite": "cost accounting, product profitability, production and sales orders, inventory control, customers, receivables, cash flow and forecasting",
+ "tiers": [["Products & production", "Expenses", "Dashboard + health snapshot", "Tax set-aside estimate"], ["Cost accounting", "Product profitability", "Production & sales orders", "Inventory, AR & cash"], TIER_C],
+ "cta_line": "Open it, enter this month's production, and see what each product actually keeps.",
+ "cta": ["Enter this month's production", "See what each product keeps", "Every month you wait is [another month of guessing.]"],
+ "ps": ["Your orders show what you sold.", "what you kept."],
+ "end": ["Your orders show [what you sold.]", "ProfitIQS shows you [what you kept.]"],
+}

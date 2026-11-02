@@ -7,3 +7,6 @@ deliverables/audio
 public/mix-*.wav
 deliverables/*/audio
 public/photos
+assets/
+build/
+src/gen/cur.ts

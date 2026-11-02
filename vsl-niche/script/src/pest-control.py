@@ -1,0 +1,73 @@
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _common import *
+
+D = {
+ "name": "Pest Control Business Intelligence System™", "short": "pest",
+ "title": "Pest Control [Business Intelligence] System™", "aud": "pest control companies", "aud_short": "pest control companies", "people": "pest control owners",
+ "file_ess": "Pest_Control_Business_Intelligence_System_Essential_2026.xlsx", "file_elite": "Pest_Control_Business_Intelligence_System_Elite_2026.xlsx",
+ "n_ess": 8, "n_elite": 25, "guide": (44, 72),
+ "hook": [
+  ["Termite treatment on Monday. Rodent control Tuesday. A full mosquito route by Friday.", {"t": "notifs", "text": "Routes [full every week.]", "head": "SERVICE COMPLETED", "items": [["Termite control", "$1,150.00"], ["Rodent control", "$225.00"], ["Mosquito route", "$1,840.00"]], "photo": "spray"}],
+  ["But some routes earn far less per hour than others. The drive time eats them.", {"t": "bars", "text": "Not every route [pays its way.]", "bars": [["Route 1", 1, "green"], ["Route 2", 0.7, "sky"], ["Route 3", 0.35, "red"]], "q": "Per hour?", "qv": 0.5}],
+  ["So here's the question. Which routes, and which contracts, actually make you [money?]", {"t": "slam", "text": "Which routes actually [make you money?]", "photo": "driving2", "size": 96}],
+  ["And the contracts? They reach their renewal date with no contact, and quietly end.", {"t": "rows", "text": "Contracts that [quietly end.]", "icon": "calendar", "rows": [["Quarterly · residential", "ACTIVE", "green"], ["Monthly · restaurant", "RENEWAL DUE", "amber"], ["Annual · warehouse", "EXPIRED", "red"]]}],
+  ["Recurring revenue is the whole business. Losing it silently is the biggest leak there is.", {"t": "slam", "text": "Recurring revenue, [lost silently.]", "photo": "house-pool", "size": 92}],
+  ring("a pest control company", "a pest control company"),
+ ],
+ "pain": [
+  money_side_line("pest control"),
+  ["Visits live in your routing app. Chemical receipts live in the truck.", {"t": "papers", "text": "Receipts: [the truck.]", "label": "CHEMICALS", "photo": "spray2"}],
+  ["Product on the shelf and in the trucks ties up cash, and it's easy to lose track of.", {"t": "rows", "text": "Stock that [ties up cash.]", "icon": "alert", "rows": [["Termiticide", "IN STOCK", "green"], ["Rodent bait", "LOW", "amber"], ["Insect growth regulator", "UNTRACKED", "red"]]}],
+  ["You know which technician seems efficient. Not who produces the most profitable work.", {"t": "bars", "text": "Busy isn't [profitable.]", "bars": [["Tech A", 0.9, "sky"], ["Tech B", 0.62, "sky"], ["Tech C", 0.78, "sky"]], "q": "Most profit?", "qv": 0.5}],
+  ["Residential, commercial, termite, rodent, mosquito, wildlife. Which service line actually pays best?", {"t": "cards", "text": "Which service [pays best?]", "cards": [["spray", "Residential", "green"], ["warehouse", "Commercial", "sky"], ["house-siding", "Termite", "amber"]]}],
+  ["Commercial accounts pay late, and cash gets tight while payroll is still due.", {"t": "rows", "text": "Unpaid. [Payroll still due.]", "rows": [["INV · Restaurant account", "CURRENT", "sky"], ["INV · Property manager", "45 DAYS", "amber"], ["INV · Warehouse", "90+ DAYS", "red"]]}],
+  ["Then tax time: chemicals, vehicles, equipment and payroll costs, scattered everywhere.", {"t": "papers", "text": "Tax time: [scattered everywhere.]", "label": "RECEIPT", "photo": "taxdocs"}],
+  send_everything(),
+  months_line(),
+ ],
+ "turn2": "You already have the data: visits, contracts, routes, invoices, receipts.",
+ "labels": ["VISIT", "CONTRACT", "$", "ROUTE", "TECH", "%", "CHEM"],
+ "who": [["spray2", "Owner-operator", "runs the routes"], ["team2", "Multi-technician company", "route + tech profit"], ["house-lawn", "Contract-heavy business", "renewals that matter"], ["woman-office", "Office manager", "contracts, AR, stock"]],
+ "who_lines": ["It's for the owner-operator who runs routes, sells contracts, and does the paperwork at night.", "The multi-technician company with several routes, and no side-by-side view of route profit.", "The contract-heavy business, where most revenue comes from contracts that need renewing.", "And the office manager tracking contracts, receivables and chemical stock."],
+ "ess_wall": "You enter the facts, services and expenses. The workbook does the math.",
+ "inputs": ["SETUP", "SERVICE ENTRY", "EXPENSE ENTRY"],
+ "ess_tour": [
+  setup_line(),
+  ["Log every service by type: residential, commercial, termite, rodent, mosquito, wildlife.", S("ess", "SERVICE ENTRY", "Service Entry", "every service", [["Service Type", "Service type", "blue", "cell"]], minW=0.8)],
+  ["Log every expense: chemicals, vehicle fuel and maintenance, equipment, insurance.", S("ess", "EXPENSE ENTRY", "Expense Entry", "every expense", [["Category", "Category", "amber", "cell"]], minW=0.8)],
+ ] + ess_tail(dash_kpi3=("REVENUE PER SERVICE", "Per service"), dash_line="The Dashboard puts it on one screen: revenue, net profit, revenue per service, and how funded your tax reserve is."),
+ "elite_tag": "The full operating system for a pest control company.",
+ "elite_wall": "Customers, contracts, service calls, routes, technicians, chemicals, receivables, cash and taxes.",
+ "sections": [
+  ("ops", [
+   ["It opens on the Executive Dashboard: revenue, gross and net profit, margins, and your Business Health Score.", S("elite", "02 Executive Dashboard", "Executive Dashboard", "the whole company", [["TOTAL REVENUE", "Revenue", "blue", "kpi"], ["NET PROFIT", "Net profit", "green", "kpi"], ["GROSS MARGIN %", "Gross margin", "cyan", "kpi"], ["BUSINESS HEALTH SCORE™", "Health score", "amber", "kpi"]], dir="zoom")],
+   ["The Service Contract Center tracks every recurring agreement, and its renewal.", S("elite", "05 Service Contracts", "Service Contracts", "renewals", [["Recurring service agreements", "Recurring agreements", "green", "cell"], ["Contract ID", "Every contract", "blue", "row"]], minW=0.8)],
+   ["Route Management shows revenue, mileage and density for every route.", S("elite", "07 Route Management", "Route Management", "every route", [["Route-level revenue", "Revenue · mileage · density", "amber", "cell"], ["Route ID", "Every route", "blue", "row"]], minW=0.8)],
+   ["Technician Performance auto-ranks every technician on productivity and revenue.", S("elite", "08 Technician Performance", "Technician Performance", "auto-ranked", [["Auto-ranked technician", "Auto-ranked", "cyan", "cell"], ["Tech ID", "Every tech", "blue", "row"]], minW=0.8)],
+   ["Revenue Analytics breaks revenue down by service line, month by month.", S("elite", "09 Revenue Analytics", "Revenue Analytics", "by service line", [["Monthly revenue by service line", "By service line", "green", "cell"], ["Termite Control", "Termite", "amber", "row"]])],
+   ["And the Chemical Inventory Center tracks product stock, supplier costs and usage.", S("elite", "11 Chemical Inventory", "Chemical Inventory", "stock + usage", [["Product stock", "Stock · cost · usage", "violet", "cell"], ["Chem ID", "Every product", "blue", "row"]], minW=0.8)],
+   ["Plus a customer database, a service call log and customer analytics.", mini("Every visit, [every customer.]", [("04 Customer Database", "Customers"), ("06 Service Call Log", "Service Calls"), ("19 Customer Analytics", "Customer Analytics")])],
+  ]),
+  ("money", [
+   money_slam(),
+   ["Accounts Receivable ages every outstanding invoice, so late commercial accounts don't hide.", S("elite", "12 Accounts Receivable", "Accounts Receivable", "aged invoices", [["Outstanding invoices aged", "Aged invoices", "amber", "cell"], ["Invoice ID", "Every invoice", "blue", "row"]], minW=0.8)],
+   ["And the Cash Flow Center rolls your cash position: eighteen months of actuals, plus a forecast.", S("elite", "13 Cash Flow Center", "Cash Flow Center", "rolling cash", [["Rolling cash position", "18 months + forecast", "green", "cell"], ["Cash Inflow", "Cash in", "cyan", "cell"]])],
+  ]),
+ ],
+ "leak": {"hi": [["Automatic traffic-light scan", "Traffic-light scan", "amber", "cell", 0.2], ["Route Inefficiency", "Route inefficiency", "red", "row", 0.38], ["Contract Expiration Exposure", "Contract expirations", "red", "row", 0.55], ["Possible Cause", "Possible cause", "cyan", "cell", 0.72], ["Recommended Action", "Recommended action", "green", "cell", 0.86]],
+          "lines": ["It runs an automatic traffic-light scan for leaks: inefficient routes, low-margin services, collections problems.", "Plus customer churn risk, contracts about to expire, and inventory reorder risk.", "Each with a possible cause, and a recommended action."]},
+ "objs": [
+  obj_app("My routing software already has reports.", "routes, contracts, technicians, cash and taxes", ["Keep your routing app", "Route profit", "Contract renewals", "Chemical stock", "Tax reserve"]),
+  obj_excel("services and expenses", locked=True),
+  {"q": "I only have a few routes.", "a1": "Then start with Essential.", "a2": "Eight sheets: services, expenses, a dashboard and a tax set-aside. Move up to Elite when you add routes and technicians.", "big": "Start with Essential.", "bigSize": 80, "chips": ["8 sheets", "Services + expenses", "Dashboard + tax set-aside", "Go Elite when you grow"]},
+  {"q": "Will it stop customers cancelling?", "a1": "No tool can promise that.", "a2": "It shows you which contracts are coming up for renewal, and which customers are at risk, so you can reach them first.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["Renewals tracked", "Churn risk flagged", "You reach out first"]},
+ ],
+ "offer_ess": "services, expenses, a dashboard, a health snapshot and a tax set-aside estimate",
+ "offer_elite": "contracts, routes, technicians, service analytics, chemical inventory, receivables, cash flow and forecasting",
+ "tiers": [["Services & expenses", "Dashboard + health snapshot", "Tax set-aside estimate", "Accountant export"], ["Contracts & renewals", "Routes & technicians", "Chemical inventory", "AR & rolling cash flow"], TIER_C],
+ "cta_line": "Open it, enter this month's services, and see what each route actually earns.",
+ "cta": ["Enter this month's services", "See what each route earns", "Every month you wait is [another month of guessing.]"],
+ "ps": ["Your contracts show what you're owed.", "what you keep."],
+ "end": ["Your contracts show [what you're owed.]", "ProfitIQS shows you [what you keep.]"],
+}

@@ -1,0 +1,71 @@
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _common import *
+
+D = {
+ "name": "Small Business Command Center™", "short": "small business",
+ "title": "Small Business [Command Center™]", "aud": "small business owners", "aud_short": "small business owners", "people": "business owners",
+ "file_ess": "Small_Business_Command_Center_Essential_2026.xlsx", "file_elite": "Small_Business_Command_Center_Elite_2026.xlsx",
+ "n_ess": 9, "n_elite": 27, "guide": (37, 55),
+ "hook": [
+  ["Six client payments this week. A retainer, two projects, a product order, a renewal.", {"t": "notifs", "text": "Money [coming in.]", "head": "PAYMENT RECEIVED", "items": [["Vantage Legal Group · retainer", "$4,150.00"], ["Northstar Clinic · project", "$2,800.00"], ["Ridgeway Retail · order", "$960.00"]], "photo": "highfive"}],
+  ["A busy month and a profitable month aren't always the same month.", {"t": "strike", "from": "Busy", "to": "Profitable?", "toSize": 170}],
+  ["So here's the question. How much of that money did the business actually [keep?]", {"t": "slam", "text": "How much did the business [actually keep?]", "photo": "office-open", "size": 96}],
+  ["Your bank app, your invoicing tool, and a shoebox of receipts rarely add up to one clear picture.", {"t": "phone", "text": "Three places. [No picture.]", "items": [["BANK APP", "Balance"], ["INVOICING", "Sent + paid"], ["SHOEBOX", "Receipts"]], "photo": "desk"}],
+  ["And small cost creep across a few categories doesn't show up, until it's already a pattern.", {"t": "rows", "text": "Cost creep, [unnoticed.]", "icon": "alert", "rows": [["Software & tools", "+12%", "amber"], ["Contractors", "+18%", "amber"], ["Marketing", "+25%", "red"]]}],
+  ring("a small business", "a small business"),
+ ],
+ "pain": [
+  money_side_line("a small business"),
+  ["Some customers bring in most of the revenue. Some barely register. Nobody's ranked them.", {"t": "bars", "text": "Who [really drives revenue?]", "bars": [["Customer A", 1, "green"], ["Customer B", 0.55, "sky"], ["Customer C", 0.3, "sky"], ["Customer D", 0.12, "red"]], "note": "illustrative"}],
+  ["Unpaid invoices drift, because nothing tracks how old they are.", {"t": "rows", "text": "Invoices that [drift.]", "rows": [["Elm & Oak Studio", "CURRENT", "sky"], ["Brightline Agency", "45 DAYS", "amber"], ["Summit Fitness Co.", "90+ DAYS", "red"]]}],
+  ["Cash runway? Without a forecast, you find out when the balance is already low.", {"t": "slam", "text": "Runway, [found out too late.]", "photo": "cash-count", "size": 96}],
+  ["Revenue goals for the year? Set in January, forgotten by March.", {"t": "rows", "text": "Goals [set and forgotten.]", "icon": "calendar", "rows": [["Revenue goal", "SET IN JAN", "sky"], ["Profit goal", "NOT TRACKED", "amber"], ["Cash goal", "UNKNOWN", "red"]]}],
+  ["Then tax season: deductions, estimates and a set-aside, worked out from memory.", {"t": "papers", "text": "Tax time: [from memory.]", "label": "RECEIPT", "photo": "taxdocs"}],
+  send_everything(),
+  months_line(),
+ ],
+ "turn2": "You already have the data: payments, invoices, expenses, customers.",
+ "labels": ["SALE", "INVOICE", "$", "CUSTOMER", "COST", "%", "GOAL"],
+ "who": [["meeting", "Service or consulting firm", "one clean view"], ["shop-pay", "Doesn't fit a trade niche", "no job costing needed"], ["office-open", "Several revenue streams", "rolled into one"], ["desk", "Starting simple", "good habits first"]],
+ "who_lines": ["It's for the service or consulting firm that wants one clean view of revenue, expenses and margin.", "The business that doesn't fit a trade niche, and has no use for job costing or crews.", "The owner with a few revenue streams who wants them rolled into one dashboard.", "And the owner starting simple, building the habit before anything bigger."],
+ "ess_wall": "You enter the facts, revenue and expenses. The workbook does the math.",
+ "inputs": ["SETUP", "REVENUE ENTRY", "EXPENSE ENTRY"],
+ "ess_tour": [
+  setup_line(),
+  ["Log every sale, by customer.", S("ess", "REVENUE ENTRY", "Revenue Entry", "every sale", [["Customer", "Customer", "blue", "cell"]], minW=0.8)],
+  ["Log every expense: payroll, rent and utilities, software, contractors, marketing.", S("ess", "EXPENSE ENTRY", "Expense Entry", "every expense", [["Category", "Category", "amber", "cell"]], minW=0.8)],
+ ] + ess_tail(dash_kpi=("REVENUE (12 MO)", "Revenue"), dash_kpi2=("NET PROFIT (12 MO)", "Net profit"), dash_kpi3=("NET MARGIN %", "Net margin"), dash_line="The Dashboard: revenue, net profit, net margin, average transaction, and how funded your tax reserve is."),
+ "elite_tag": "A command center for the whole business.",
+ "elite_wall": "Business profile, revenue, expenses, cash, receivables, scorecards, customer, profit and growth intelligence, planning, scenarios and taxes.",
+ "sections": [
+  ("ops", [
+   ["It opens on the Executive Dashboard: revenue, expenses, net profit and margin, each against your goal or budget, plus cash and growth.", S("elite", "02 Executive Dashboard", "Executive Dashboard", "vs. goal + budget", [["Revenue (12 mo)", "Revenue", "blue", "kpi"], ["Net Profit (12 mo)", "Net profit", "green", "kpi"], ["vs Goal: 92.5%", "vs goal", "amber", "cell"], ["Cash Position", "Cash", "cyan", "kpi"]], dir="zoom")],
+   ["Customer Intelligence ranks every customer by revenue, deal size and estimated lifetime value.", S("elite", "14 Customer Analytics", "Customer Intelligence", "every customer ranked", [["CUSTOMER RANKING & PROFITABILITY", "Ranked customers", "green", "cell"], ["Avg Deal Size", "Avg deal size", "blue", "cell"], ["Est. Lifetime", "Lifetime value", "cyan", "cell"]])],
+   ["Profit Intelligence shows monthly profit and margin, and where you're gaining or losing ground.", S("elite", "15 Profit Intelligence", "Profit Intelligence", "monthly margin", [["MONTHLY PROFIT & MARGIN", "Monthly profit + margin", "green", "cell"], ["vs Avg Margin", "vs average", "amber", "cell"]])],
+   ["Growth Intelligence tracks momentum, and forecasts the next three months.", S("elite", "16 Growth Intelligence", "Growth Intelligence", "3-month forecast", [["GROWTH DASHBOARD", "Growth dashboard", "cyan", "block"], ["GROWTH FORECAST (NEXT 3 MONTHS)", "3-month forecast", "green", "cell"]])],
+   ["Annual Planning puts your goals against actuals, with the gap remaining.", S("elite", "17 Annual Planning", "Annual Planning", "goals vs. actuals", [["Achievement %", "Achievement", "green", "cell"], ["Gap Remaining", "Gap remaining", "red", "cell"]])],
+   ["And Scenario Planning models what-ifs instantly: raise revenue, cut expenses, add customers.", S("elite", "18 Scenario Planning", "Scenario Planning", "what-if", [["SCENARIO INPUTS (EDIT THE BLUE CELLS)", "Scenario inputs", "amber", "cell"], ["Revenue Increase", "Revenue up", "green", "row"], ["Expense Decrease", "Expenses down", "cyan", "row"]])],
+  ]),
+  ("money", [
+   money_slam(),
+   ["The Cash Flow Command Center tracks cash in and out, your closing balance, and a cash runway forecast.", S("elite", "07 Cash Flow Center", "Cash Flow Center", "runway forecast", [["Cash Inflows", "Cash in", "green", "cell"], ["CASH FLOW FORECAST & RUNWAY", "Forecast + runway", "cyan", "cell"]])],
+   ["And AR Aging lists every pending and partly paid invoice, by customer.", S("elite", "08 AR Aging", "AR Aging", "by customer", [["Customer", "Customer", "amber", "cell"], ["Amount", "Amount", "red", "cell"]], minW=0.8)],
+  ]),
+ ],
+ "leak": {"hi": [["20+ automated rules", "20+ automated rules", "cyan", "cell", 0.25], ["Automated Insight", "Automated insights", "green", "cell", 0.55]], "minW": 0.8,
+          "lines": ["It's a decision support center: more than twenty automated rules that scan your numbers.", "Expense growth, cash against your safe threshold, profitability, customer concentration.", "Each one with a plain-English insight."]},
+ "objs": [
+  obj_app("My accounting software already does this.", "health score, profit leaks, customer ranking, planning and taxes", ["Keep your accounting app", "Health score", "Leak rules", "Customer ranking", "Tax reserve"]),
+  obj_excel("revenue and expenses", locked=True),
+  {"q": "Should I get an industry-specific system instead?", "a1": "Maybe.", "a2": "If your business is a trade we cover, that system goes deeper. If it isn't, this is built for exactly that.", "big": "If you don't fit a niche, this is for you.", "bigSize": 64, "chips": ["No job costing needed", "No crew tracking needed", "One clean picture"]},
+  {"q": "Will it grow my business?", "a1": "No tool can promise that.", "a2": "It shows where you're gaining and losing ground, and lets you model scenarios, so your decisions are based on numbers.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["Growth tracked", "Scenarios modeled", "You make the call"]},
+ ],
+ "offer_ess": "revenue, expenses, a dashboard, a health snapshot and a tax set-aside estimate",
+ "offer_elite": "customer, profit and growth intelligence, annual and scenario planning, cash runway, receivables, scorecards and forecasting",
+ "tiers": [["Revenue & expenses", "Dashboard", "Health snapshot", "Tax set-aside estimate"], ["Customer intelligence", "Profit & growth intelligence", "Annual + scenario planning", "Cash runway & AR"], TIER_C],
+ "cta_line": "Open it, enter this month's revenue and expenses, and see what the business actually kept.",
+ "cta": ["Enter this month's numbers", "See what you kept", "Every month you wait is [another month of guessing.]"],
+ "ps": ["Your bank shows your balance.", "what the business actually kept."],
+ "end": ["Your bank shows [your balance.]", "ProfitIQS shows you [what you kept.]"],
+}
