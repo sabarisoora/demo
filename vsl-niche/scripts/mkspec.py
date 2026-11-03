@@ -195,7 +195,8 @@ add("elite", [
 tabs = META["elite"]
 G = 8
 groups = [tabs[i:i + G] for i in range(0, len(tabs), G)]
-if len(groups) > 1 and len(groups[-1]) < 4: groups[-2] += groups.pop()
+if len(groups) > 1 and len(groups[-1]) < 4:
+    _last = groups.pop(); groups[-1] = groups[-1] + _last
 themes = {"ess": "light", "guide": "light"}
 taxfirst = next((t for t in tabs if re.search(r"tax setup|tax reserve", t, re.I)), None)
 idx = 0
@@ -212,6 +213,20 @@ for gi, grp in enumerate(groups):
         lines += tour("elite", [t], idx)
         idx += 1
     add(sc, lines)
+
+# ---- problem -> solution recap ----
+FX = runpy.run_path(f"{ROOT}/script/src/_fixes.py")["FIXES"].get(slug)
+if FX:
+    def ftab(k):
+        h = [t for t in META["elite"] + META["ess"] if k.lower() in t.lower()]
+        if not h: raise SystemExit(f"fix sheet {k!r} not found")
+        return h[0]
+    for _, k in FX: ftab(k)
+    nfx = words(len(FX))
+    lines = [[f"So let's go back to every problem from the start of this video, and the sheet that answers it.", {"t": "fixes", "text": "Every problem. [Its answer.]", "items": FX}]]
+    lines += [[f"{p}? {k}."] for p, k in FX]
+    lines.append([f"{cap(nfx)} problems. {cap(nfx)} answers. All in one workbook."])
+    add("fix", lines)
 
 # ---- guides (shared) ----
 ge, gx = D["guide"]

@@ -254,6 +254,37 @@ const ChecklistT: React.FC<B> = ({ v, A }) => {
   );
 };
 
+const FixesT: React.FC<B> = ({ v, i, L }) => {
+  const fr = useCurrentFrame();
+  const items: [string, string][] = v.items;
+  const n = items.length;
+  const rowH = n > 7 ? 74 : 84;
+  return (
+    <>
+      <Top y={60}><Slam text={v.text} at={L(i, 0)} size={64} /></Top>
+      <div style={{ position: "absolute", top: 190, left: 150, right: 150, display: "flex", flexDirection: "column", gap: 14 }}>
+        {items.map(([p, k], q) => {
+          const a0 = L(Math.min(i + 1 + q, i + n), 0) - 4;
+          const a1 = L(Math.min(i + 1 + q, i + n), 0.5);
+          const o = ap(fr, a0, 10);
+          const f = ap(fr, a1, 10);
+          const done = fr >= a1;
+          return (
+            <div key={q} style={{ height: rowH, display: "flex", alignItems: "center", gap: 26, opacity: o, transform: `translateX(${(1 - o) * -60}px)`, background: done ? "rgba(34,197,94,0.07)" : "rgba(239,68,68,0.07)", border: `1px solid ${done ? "rgba(34,197,94,0.35)" : "rgba(239,68,68,0.35)"}`, borderRadius: 18, padding: "0 26px" }}>
+              <div style={{ width: 50, height: 50, flex: "none", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", background: done ? `${C.green}33` : `${C.red}33`, border: `2px solid ${done ? C.green : C.red}`, transform: `scale(${done ? pop(fr, a1, 300, 12) : 1})` }}>
+                <Icon name={done ? "check" : "x"} size={32} color={done ? C.green : C.red} />
+              </div>
+              <div style={{ flex: 1, fontFamily: FONT.sans, fontWeight: 700, fontSize: 34, color: done ? C.muted : C.white, textDecoration: done ? "line-through" : "none", textDecorationColor: C.red, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{p}</div>
+              <div style={{ fontFamily: FONT.sans, fontSize: 34, color: C.muted, opacity: f }}>→</div>
+              <div style={{ flex: "none", minWidth: 480, fontFamily: FONT.sans, fontWeight: 800, fontSize: 34, color: C.green, opacity: f, transform: `translateX(${(1 - f) * 40}px)` }}>{k}</div>
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+};
+
 const RingT: React.FC<B> = ({ v, A }) => {
   const fr = useCurrentFrame();
   return (
@@ -615,7 +646,7 @@ const ChapterT: React.FC<B> = ({ v, A }) => {
 
 export const TEMPLATES: Record<string, React.FC<any>> = {
   slam: SlamT, notifs: NotifsT, counter: CounterT, bars: BarsT, cards: CardsT, rows: RowsT, zero: ZeroT, months: MonthsT, strike: StrikeT, converge: ConvergeT,
-  split: SplitT, checklist: ChecklistT, ring: RingT, calendar: CalendarT, papers: PapersT, phone: PhoneT, qa: QAT, cover: CoverT, wall: WallT, grid: GridT, sheet: SheetT, hero: HeroSheetT, mini: MiniT, chapter: ChapterT,
+  split: SplitT, checklist: ChecklistT, ring: RingT, calendar: CalendarT, papers: PapersT, phone: PhoneT, qa: QAT, cover: CoverT, wall: WallT, grid: GridT, sheet: SheetT, hero: HeroSheetT, mini: MiniT, chapter: ChapterT, fixes: FixesT,
 };
 export const NO_BEAT = new Set(["sheet", "qa"]);
 export { Burst, Glitch, LightLeak, LogoMark, Shockwave, Streaks, cl, ez, interpolate };

@@ -98,6 +98,9 @@ for i, j, v, sc in blocks:
     elif t == "strike": cue(i, j, 0.3, "hit"); cue(i, j, 0.7, "swish")
     elif t == "converge": cue(i, j, 0.45, "swish"); cue(i, j, 0.75, "ding")
     elif t == "split": cue(i, j, 0.08, "pop"); cue(i, j, v.get("rightAt", 0.5), "ding")
+    elif t == "fixes":
+        cue(i, i, 0.02, "pop")
+        for k_ in range(n("items")): CUES.append([min(i + 1 + k_, j), 0.0, "error"]); CUES.append([min(i + 1 + k_, j), 0.5, "tick"])
     elif t == "checklist": [cue(i, j, 0.12 + k_ * 0.78 / n("items"), "tick") for k_ in range(n("items"))]
     elif t == "papers": [cue(i, j, p, "shutter") for p in (0.3, 0.5)]
     elif t == "phone": cue(i, j, 0.1, "notif")

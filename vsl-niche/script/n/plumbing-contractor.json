@@ -1963,6 +1963,103 @@
    }
   ],
   [
+   "fix",
+   "So let's go back to every problem from the start of this video, and the sheet that answers it.",
+   null,
+   {
+    "t": "fixes",
+    "text": "Every problem. [Its answer.]",
+    "items": [
+     [
+      "Callbacks eating the margin",
+      "Callback Tracker"
+     ],
+     [
+      "Service calls and installs blended",
+      "Job Profitability Center"
+     ],
+     [
+      "Guessing which tech performs",
+      "Technician Scorecard"
+     ],
+     [
+      "Memberships sold, then forgotten",
+      "Membership Plan Center"
+     ],
+     [
+      "Big invoices sitting unpaid",
+      "Collections Center"
+     ],
+     [
+      "Receipts in the truck",
+      "Expense Entry"
+     ],
+     [
+      "Tax time scramble",
+      "Accountant Summary"
+     ],
+     [
+      "Not sure what you kept",
+      "Executive Dashboard"
+     ]
+    ]
+   }
+  ],
+  [
+   "fix",
+   "Callbacks eating the margin? Callback Tracker.",
+   null,
+   null
+  ],
+  [
+   "fix",
+   "Service calls and installs blended? Job Profitability Center.",
+   null,
+   null
+  ],
+  [
+   "fix",
+   "Guessing which tech performs? Technician Scorecard.",
+   null,
+   null
+  ],
+  [
+   "fix",
+   "Memberships sold, then forgotten? Membership Plan Center.",
+   null,
+   null
+  ],
+  [
+   "fix",
+   "Big invoices sitting unpaid? Collections Center.",
+   null,
+   null
+  ],
+  [
+   "fix",
+   "Receipts in the truck? Expense Entry.",
+   null,
+   null
+  ],
+  [
+   "fix",
+   "Tax time scramble? Accountant Summary.",
+   null,
+   null
+  ],
+  [
+   "fix",
+   "Not sure what you kept? Executive Dashboard.",
+   null,
+   null
+  ],
+  [
+   "fix",
+   "Eight problems. Eight answers. All in one workbook.",
+   null,
+   null
+  ],
+  [
    "guide",
    "And you're never left guessing how to use it.",
    null,
