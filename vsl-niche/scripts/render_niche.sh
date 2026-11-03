@@ -36,10 +36,10 @@ for ((A=0; A<TOTAL; A+=STEP)); do
 done
 # loudness: measure the mix, gain to -14 LUFS with a true-peak ceiling
 I=$(ffmpeg -hide_banner -i assets/$SLUG/mix.wav -af ebur128 -f null - 2>&1 | grep -E "^\s+I:" | tail -1 | awk '{print $2}')
-G=$(python3 -c "print(round(-14.0-($I)+1.9,2))")
+G=$(python3 -c "print(round(-14.0-($I)+2.7,2))")
 mkdir -p out
 ffmpeg -y -hide_banner -loglevel error -f concat -safe 0 -i $O/list.txt -i assets/$SLUG/mix.wav -map 0:v:0 -map 1:a:0 \
   -vf "vignette=angle=PI/4.6,noise=alls=7:allf=t+u" -c:v libx264 -crf 21 -preset medium -pix_fmt yuv420p \
-  -af "aresample=192000,volume=${G}dB,alimiter=limit=0.66:attack=1:release=50:level=false,aresample=48000" -c:a aac -b:a 224k -shortest -movflags +faststart out/ProfitIQS-$SLUG-VSL.mp4
+  -af "aresample=192000,volume=${G}dB,alimiter=limit=0.62:attack=1:release=50:level=false,alimiter=limit=0.62:attack=0.1:release=20:level=false,aresample=48000" -c:a aac -b:a 224k -shortest -movflags +faststart out/ProfitIQS-$SLUG-VSL.mp4
 ffmpeg -hide_banner -i out/ProfitIQS-$SLUG-VSL.mp4 -af ebur128=peak=true -f null - 2>&1 | grep -E "^\s+(I:|Peak:)" | tail -2 | tr -s ' ' | tr '\n' ' '
 echo; echo "$SLUG RENDERED $(date -u +%H:%M)"
