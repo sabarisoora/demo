@@ -96,7 +96,7 @@ print(f"{len(lines)} lines, {total:.1f}s")
 
 # ---------- word sync: when a highlighted label / item is spoken, as a fraction of its block ----------
 STOP = set("the a an and of for to in on your you with by at as is it its every each per vs versus".split())
-def toks(q): return [norm(x) for x in re.sub(r"\([^)]*\)", " ", q).replace("/", " ").replace("-", " ").split() if norm(x) and norm(x) not in STOP]
+def toks(q): return [norm(x) for x in re.sub(r"\([^)]*\)", " ", q).replace("/", " ").split() if norm(x) and norm(x) not in STOP]
 def spoken(i, j, q, after=-1.0):
     """block fraction where the words of q are first spoken in lines i..j (after a given time), else None"""
     tq = toks(q)
