@@ -1,4 +1,6 @@
-import React from "react";
+import React, { createContext, useContext } from "react";
+export const LightCtx = createContext(false);
+export const useLight = () => useContext(LightCtx);
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from "remotion";
 import { ap, C, cl, ez, f, FONT, LINES, pop } from "./lib";
 
@@ -15,6 +17,9 @@ export const Slam: React.FC<{ text: string; at: number; size?: number; color?: s
   accent,
 }) => {
   const fr = useCurrentFrame();
+  const light = useLight();
+  if (light && color === C.white) color = C.ink;
+  if (light && !accent) accent = C.blue;
   let inA = false;
   return (
     <div style={{ display: "flex", flexWrap: "wrap", justifyContent: align === "center" ? "center" : "flex-start", alignItems: "baseline", gap: `0 ${size * 0.24}px`, maxWidth, lineHeight: 1.08 }}>
@@ -36,7 +41,7 @@ export const Slam: React.FC<{ text: string; at: number; size?: number; color?: s
               fontSize: isA ? size * 1.08 : size,
               letterSpacing: isA ? "-0.01em" : "-0.035em",
               color: isA ? undefined : color,
-              backgroundImage: isA ? `linear-gradient(100deg, ${accent ?? C.sky}, ${C.cyan})` : undefined,
+              backgroundImage: isA ? `linear-gradient(100deg, ${accent ?? C.sky}, ${light ? "#0891b2" : C.cyan})` : undefined,
               WebkitBackgroundClip: isA ? "text" : undefined,
               backgroundClip: isA ? "text" : undefined,
               WebkitTextFillColor: isA ? "transparent" : undefined,
@@ -54,8 +59,9 @@ export const Slam: React.FC<{ text: string; at: number; size?: number; color?: s
   );
 };
 
-export const Eyebrow: React.FC<{ at: number; children: React.ReactNode; color?: string; light?: boolean }> = ({ at, children, color, light }) => {
+export const Eyebrow: React.FC<{ at: number; children: React.ReactNode; color?: string; light?: boolean }> = ({ at, children, color, light: lightProp }) => {
   const fr = useCurrentFrame();
+  const light = lightProp ?? useLight();
   const p = ap(fr, at, 10);
   const col = color ?? (light ? C.blue : C.cyan);
   return (

@@ -6,7 +6,7 @@ S=$1; SP=/tmp/claude-0/-home-user/79cdc2d5-92ff-5c6b-ba90-85f62602d77a/scratchpa
 [ -f script/src/$S.py ] && python3 -I scripts/mkspec.py $S
 python3 $SP/check.py $S | grep -E "NO |BAD" 
 python3 $SP/check.py $S | grep -q "BAD 0" || { echo "$S CHECK FAILED"; exit 1; }
-H=$(sha1sum script/n/$S.json | cut -c1-40)
+H=$(python3 -c "import json,hashlib,sys;s=json.load(open('script/n/$S.json'));print(hashlib.sha1(json.dumps([[l[0],l[1],l[2]] for l in s['lines']]).encode()).hexdigest())")
 if [ -f build/$S/spec.sha ] && [ "$(cat build/$S/spec.sha)" = "$H" ] && [ -f assets/$S/mix.wav ]; then echo "$S audio up to date"; else
 python3 -I scripts/gen_audio.py $S $SP/tts > build/$S.audio.log 2>&1 || { echo "$S AUDIO FAILED"; exit 1; }
 echo $H > build/$S/spec.sha; fi

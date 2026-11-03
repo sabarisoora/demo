@@ -2,7 +2,7 @@ import React from "react";
 import { AbsoluteFill, interpolate, random, useCurrentFrame } from "remotion";
 import { Burst, Glitch, LightLeak, Shockwave, Streaks } from "./fx";
 import { ap, C, cl, col, ez, findSheet, FONT, M, out, pop, S, tabOf, V, Win } from "./lib";
-import { Counter, Cover, Eyebrow, FlyIn, Glass, Icon, LogoMark, PhotoBg, PhotoCard, Pop, Sheet, SheetTile, Slam, tabsAround } from "./ui";
+import { Counter, Cover, Eyebrow, FlyIn, Glass, Icon, LogoMark, PhotoBg, PhotoCard, Pop, Sheet, SheetTile, Slam, tabsAround, useLight } from "./ui";
 
 // A block = one visual spanning lines i..j of a scene window.
 export type B = { win: Win; i: number; j: number; v: V; a: number; b: number; A: (p: number) => number; L: (k: number, p?: number) => number };
@@ -373,6 +373,7 @@ const fileOf = (e: string) => (e === "ess" ? S.file_ess : S.file_elite);
 
 const CoverT: React.FC<B> = ({ v, A }) => {
   const fr = useCurrentFrame();
+  const fg = useLight() ? C.ink : C.white;
   const e = ed(v.ed);
   const n = v.n ?? (e === "ess" ? S.n_ess : S.n_elite);
   return (
@@ -380,11 +381,12 @@ const CoverT: React.FC<B> = ({ v, A }) => {
       <Pop at={A(0)}><Cover tier={tierName(e) as "Essential" | "Elite"} width={380} /></Pop>
       <div>
         <Eyebrow at={A(0)}>{v.eyebrow ?? (e === "ess" ? "Edition 1" : "Edition 2")}</Eyebrow>
-        <div style={big(150, { letterSpacing: "-0.05em" })}>{tierName(e)}</div>
+        <div style={big(150, { letterSpacing: "-0.05em", color: fg })}>{tierName(e)}</div>
         <div style={{ display: "flex", alignItems: "baseline", gap: 20, opacity: ap(fr, A(v.nAt ?? 0.6)), transform: `scale(${0.7 + 0.3 * pop(fr, A(v.nAt ?? 0.6), 300, 12)})`, transformOrigin: "left" }}>
           <span style={{ ...big(200), color: C.cyan }}>{n}</span>
-          <span style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 60, color: C.white }}>sheets</span>
+          <span style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 60, color: fg }}>sheets</span>
         </div>
+        {v.sub && <div style={{ fontFamily: FONT.sans, fontWeight: 600, fontSize: 34, color: useLight() ? C.ink2 : C.soft, opacity: ap(fr, A(v.subAt ?? 0.75)), maxWidth: 820, lineHeight: 1.3 }}>{v.sub}</div>}
         {v.price && <div style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 40, color: C.muted, opacity: ap(fr, A(0.8)) }}>{v.price}</div>}
       </div>
     </div>
@@ -531,18 +533,24 @@ const SheetT: React.FC<B & { k: number }> = ({ v, A, a, b, k }) => (
 
 export const Steps: React.FC<{ items: [number, number, string, string?][] }> = ({ items }) => {
   const fr = useCurrentFrame();
-  const n = items.length;
-  const gap = n > 7 ? 10 : 18;
-  const fs = n > 7 ? 25 : 29;
+  const light = useLight();
+  const cur = Math.max(0, items.findIndex(([a, b]) => fr >= a && fr < b + 4));
+  const WIN = 9;
+  const s0 = Math.max(0, Math.min(items.length - WIN, cur - 3));
+  const vis = items.slice(s0, s0 + WIN);
+  const n = vis.length;
+  const fg = light ? C.ink : C.white;
   return (
-    <div style={{ position: "absolute", left: 50, top: n > 7 ? 90 : 130, width: 370, display: "grid", gap }}>
-      {items.map(([a, b, t, d], k) => {
-        const on = fr >= a && fr < b + 4;
-        const p = ap(fr, items[0][0] - 2 + k * 2, 10);
+    <div style={{ position: "absolute", left: 50, top: n > 7 ? 90 : 130, width: 370, display: "grid", gap: n > 7 ? 12 : 18 }}>
+      {items.length > WIN && <div style={{ fontFamily: FONT.mono, fontWeight: 600, fontSize: 18, color: light ? C.ink2 : C.muted, letterSpacing: "0.12em" }}>{String(cur + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}</div>}
+      {vis.map(([a, b, t, d], j) => {
+        const k = s0 + j;
+        const on = k === cur && fr >= a;
+        const p = ap(fr, items[0][0] - 2 + j * 2, 10);
         return (
-          <div key={k} style={{ opacity: p * (on ? 1 : 0.42), transform: `translateX(${(1 - p) * -40 + (on ? 10 : 0)}px)`, borderLeft: `6px solid ${on ? C.cyan : "rgba(255,255,255,0.15)"}`, paddingLeft: 20 }}>
-            <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: fs, color: C.white, lineHeight: 1.15 }}>{t}</div>
-            {d && <div style={{ fontFamily: FONT.sans, fontWeight: 500, fontSize: n > 7 ? 18 : 20, color: C.muted }}>{d}</div>}
+          <div key={k} style={{ opacity: p * (on ? 1 : 0.42), transform: `translateX(${(1 - p) * -40 + (on ? 10 : 0)}px)`, borderLeft: `6px solid ${on ? (light ? C.blue : C.cyan) : light ? "rgba(11,17,32,0.12)" : "rgba(255,255,255,0.15)"}`, paddingLeft: 20 }}>
+            <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: n > 7 ? 24 : 29, color: fg, lineHeight: 1.15 }}>{t}</div>
+            {d && <div style={{ fontFamily: FONT.sans, fontWeight: 500, fontSize: n > 7 ? 17 : 20, color: light ? C.ink2 : C.muted }}>{d}</div>}
           </div>
         );
       })}
@@ -562,6 +570,7 @@ const HeroSheetT: React.FC<B> = ({ v, A, a, b }) => (
 
 // several small live sheets side by side with titles
 const MiniT: React.FC<B> = ({ v, A }) => {
+  const light = useLight();
   const items: any[] = v.items;
   const n = items.length;
   const w = n >= 4 ? 400 : 520;
@@ -573,7 +582,7 @@ const MiniT: React.FC<B> = ({ v, A }) => {
           const vv = { ed: v.ed, ...it, hi: it.hi ?? [] };
           return (
             <FlyIn key={k} at={A(0.04 + (k * 0.6) / n)} from="bottom" style={{ position: "relative" }}>
-              <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 32, color: C.white, marginBottom: 14, textAlign: "center" }}>{it.label}</div>
+              <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 32, color: light ? C.ink : C.white, marginBottom: 14, textAlign: "center" }}>{it.label}</div>
               <Sheet {...sheetProps({ ...vv, cam: it.cam ?? "full", zoom: false }, A, w, 480)} tabs={[tabOf(ed(v.ed), it.tab)]} />
             </FlyIn>
           );
@@ -583,9 +592,30 @@ const MiniT: React.FC<B> = ({ v, A }) => {
   );
 };
 
+const ChapterT: React.FC<B> = ({ v, A }) => {
+  const fr = useCurrentFrame();
+  const light = useLight();
+  const fg = light ? C.ink : C.white;
+  const items: string[] = v.items ?? [];
+  return (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 26 }}>
+      <Eyebrow at={A(0)}>{v.eyebrow}</Eyebrow>
+      <div style={{ ...big(180, { color: light ? C.blue : C.cyan }), transform: `scale(${pop(fr, A(0), 260, 13)})` }}>{v.num}</div>
+      <Slam text={v.text} at={A(0.05)} size={v.size ?? 78} />
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 14, justifyContent: "center", maxWidth: 1500, marginTop: 10 }}>
+        {items.map((t, k) => (
+          <Pop key={k} at={A(0.2 + (k * 0.6) / Math.max(1, items.length))} from={24}>
+            <div style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 28, color: fg, padding: "10px 20px", borderRadius: 12, background: light ? "rgba(37,99,235,0.08)" : "rgba(255,255,255,0.06)", border: `1.5px solid ${light ? "rgba(37,99,235,0.25)" : "rgba(255,255,255,0.16)"}` }}>{t}</div>
+          </Pop>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 export const TEMPLATES: Record<string, React.FC<any>> = {
   slam: SlamT, notifs: NotifsT, counter: CounterT, bars: BarsT, cards: CardsT, rows: RowsT, zero: ZeroT, months: MonthsT, strike: StrikeT, converge: ConvergeT,
-  split: SplitT, checklist: ChecklistT, ring: RingT, calendar: CalendarT, papers: PapersT, phone: PhoneT, qa: QAT, cover: CoverT, wall: WallT, grid: GridT, sheet: SheetT, hero: HeroSheetT, mini: MiniT,
+  split: SplitT, checklist: ChecklistT, ring: RingT, calendar: CalendarT, papers: PapersT, phone: PhoneT, qa: QAT, cover: CoverT, wall: WallT, grid: GridT, sheet: SheetT, hero: HeroSheetT, mini: MiniT, chapter: ChapterT,
 };
 export const NO_BEAT = new Set(["sheet", "qa"]);
 export { Burst, Glitch, LightLeak, LogoMark, Shockwave, Streaks, cl, ez, interpolate };

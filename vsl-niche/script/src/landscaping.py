@@ -64,7 +64,7 @@ D = {
  "objs": [
   obj_app("My scheduling app already has reports.", "job profit, crews, equipment, cash and taxes", ["Keep your scheduling app", "Job costing", "Crew performance", "Equipment + vehicles", "Tax reserve"]),
   obj_excel("jobs, revenue and expenses"),
-  {"q": "I'm a one-crew operation.", "a1": "Then start with Essential.", "a2": "Fifteen sheets: jobs, revenue, expenses, labor, a traffic-light dashboard and a tax estimate. Move up to Elite when you add crews.", "big": "Start with Essential.", "bigSize": 80, "chips": ["15 sheets", "Job tracker + labor", "Traffic-light dashboard", "Go Elite when you grow"]},
+  {"q": "I'm a one-crew operation.", "a1": "Then start with Essential.", "a2": "Fourteen sheets: jobs, revenue, expenses, labor, a traffic-light dashboard and a tax estimate. Move up to Elite when you add crews.", "big": "Start with Essential.", "bigSize": 80, "chips": ["14 sheets", "Job tracker + labor", "Traffic-light dashboard", "Go Elite when you grow"]},
   {"q": "Will it get me through the off-season?", "a1": "No tool can promise that.", "a2": "It shows your month-by-month cash flow and a twelve-month forecast, so you can plan for the slow months instead of being surprised.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["Month-by-month cash flow", "12-month forecast", "You plan ahead"]},
  ],
  "offer_ess": "a job tracker, revenue, expenses, labor, a traffic-light dashboard, reports and a tax set-aside estimate",

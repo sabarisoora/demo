@@ -60,7 +60,7 @@ D = {
  "objs": [
   obj_app("My accounting software already tracks this.", "unit cost, product margin, orders, inventory and cash", ["Keep your accounting software", "True unit cost", "Product margin", "Orders in sync", "Inventory"]),
   obj_excel("products, production runs and expenses", locked=True),
-  {"q": "We only make a few products.", "a1": "Then start with Essential.", "a2": "Ten sheets: products, production, expenses, a dashboard and a tax set-aside. Move up to Elite for cost accounting and orders.", "big": "Start with Essential.", "bigSize": 80, "chips": ["10 sheets", "Products + production", "Dashboard + tax set-aside", "Go Elite for cost accounting"]},
+  {"q": "We only make a few products.", "a1": "Then start with Essential.", "a2": "Nine sheets: products, production, expenses, a dashboard and a tax set-aside. Move up to Elite for cost accounting and orders.", "big": "Start with Essential.", "bigSize": 80, "chips": ["9 sheets", "Products + production", "Dashboard + tax set-aside", "Go Elite for cost accounting"]},
   {"q": "Will it lower my costs?", "a1": "No tool can promise that.", "a2": "It shows the true cost and margin of every product, so you can see which ones to reprice, rework, or drop.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["True unit cost", "Low-margin products flagged", "You decide what to change"]},
  ],
  "offer_ess": "products, production runs, expenses, a dashboard, a health snapshot and a tax set-aside estimate",

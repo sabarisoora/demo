@@ -67,7 +67,7 @@ D = {
  "objs": [
   obj_app("My property management software already does this.", "unit profitability, vacancy cost, owner numbers and taxes", ["Keep your PM software", "Unit profitability", "Vacancy cost", "Owner analytics", "Tax reserve"]),
   obj_excel("rent and expenses", locked=True),
-  {"q": "I only manage a handful of doors.", "a1": "Then start with Essential.", "a2": "Twelve sheets: properties, rent, expenses, vacancy, a property P&L and a dashboard. Move up to Elite as you add doors and owners.", "big": "Start with Essential.", "bigSize": 80, "chips": ["12 sheets", "Rent + expenses", "Vacancy + P&L", "Go Elite as you grow"]},
+  {"q": "I only manage a handful of doors.", "a1": "Then start with Essential.", "a2": "Eleven sheets: properties, rent, expenses, vacancy, a property P&L and a dashboard. Move up to Elite as you add doors and owners.", "big": "Start with Essential.", "bigSize": 80, "chips": ["11 sheets", "Rent + expenses", "Vacancy + P&L", "Go Elite as you grow"]},
   {"q": "Will it fill my vacancies?", "a1": "No tool can promise that.", "a2": "It shows what each vacancy costs, and which leases are coming up, so you can act before a unit sits empty.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["Vacancy cost in dollars", "Lease renewal alerts", "You act first"]},
  ],
  "offer_ess": "properties, rent, expenses, vacancy, a property P&L, a dashboard and a tax set-aside estimate",

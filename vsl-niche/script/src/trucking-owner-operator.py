@@ -61,7 +61,7 @@ D = {
  "objs": [
   obj_app("My load board app already tracks my loads.", "cost per mile, fuel, deadhead, cash and taxes", ["Keep your load board", "Cost per mile", "Fuel per mile", "Deadhead %", "Tax reserve"]),
   obj_excel("loads and expenses", locked=True),
-  {"q": "I'm just one truck.", "a1": "Then start with Essential.", "a2": "Nine sheets: loads, expenses, a dashboard with revenue per mile, and a tax set-aside. Move up to Elite for fuel, mileage and load profitability.", "big": "Start with Essential.", "bigSize": 80, "chips": ["9 sheets", "Loads + expenses", "Revenue per mile", "Go Elite for cost per mile"]},
+  {"q": "I'm just one truck.", "a1": "Then start with Essential.", "a2": "Eight sheets: loads, expenses, a dashboard with revenue per mile, and a tax set-aside. Move up to Elite for fuel, mileage and load profitability.", "big": "Start with Essential.", "bigSize": 80, "chips": ["8 sheets", "Loads + expenses", "Revenue per mile", "Go Elite for cost per mile"]},
   {"q": "Will it get me better rates?", "a1": "No tool can promise that.", "a2": "It shows what each load really paid after fuel and deadhead, so you know which lanes and brokers are worth taking again.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["Best + worst loads", "Cost per mile", "You choose the loads"]},
  ],
  "offer_ess": "loads, expenses, a dashboard with revenue per mile, a health snapshot and a tax set-aside estimate",

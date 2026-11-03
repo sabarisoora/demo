@@ -4,119 +4,2177 @@
  "short": "plumbing",
  "file_ess": "Plumbing_Contractor_Business_Intelligence_System_Essential_2026.xlsx",
  "file_elite": "Plumbing_Contractor_Business_Intelligence_System_Elite_2026.xlsx",
- "n_ess": 9,
- "n_elite": 51,
- "reveal": {"title": "Plumbing Contractor [Business Intelligence] System™", "made": "Made only for [plumbing contractors.]", "chips": ["Formulas", "Dashboards", "Reports", "Tax set-aside", "Sample data included"]},
- "who": [["handyman", "Owner-plumber", "books done at night"], ["plans-tools", "Growing service company", "every tech, side by side"], ["pipes", "Install-focused contractor", "which installs really pay"], ["woman-office", "Office & dispatch manager", "a clear monthly picture"]],
- "tiers": [["Job revenue & expenses", "Dashboard + health snapshot", "Tax set-aside estimate", "Accountant export"], ["Techs, dispatch & callbacks", "Installs & job profitability", "Memberships & marketing", "AR, cash flow & inventory"], ["Both workbooks", "Both Field Guides", "Both Quick Starts", "Start simple, grow"]],
- "guide": {"ess": 37, "elite": 54},
- "cta": ["Enter this month's jobs", "See what each job kept", "Every month you wait is [another month of guessing.]"],
- "end": ["Your invoices show [what you charged.]", "ProfitIQS shows you [what you kept.]"],
+ "n_ess": 8,
+ "n_elite": 48,
+ "themes": {
+  "ess": "light",
+  "guide": "light",
+  "x1": "light",
+  "x3": "light",
+  "x5": "light"
+ },
+ "reveal": {
+  "title": "Plumbing Contractor [Business Intelligence] System™",
+  "made": "Made only for [plumbing contractors.]",
+  "chips": [
+   "Formulas",
+   "Dashboards",
+   "Reports",
+   "Tax set-aside",
+   "Sample data included"
+  ]
+ },
+ "who": [
+  [
+   "handyman",
+   "Owner-plumber",
+   "books done at night"
+  ],
+  [
+   "plans-tools",
+   "Growing service company",
+   "every tech, side by side"
+  ],
+  [
+   "pipes",
+   "Install-focused contractor",
+   "which installs really pay"
+  ],
+  [
+   "woman-office",
+   "Office & dispatch manager",
+   "a clear monthly picture"
+  ]
+ ],
+ "tiers": [
+  [
+   "Job revenue & expenses",
+   "Dashboard + health snapshot",
+   "Tax set-aside estimate",
+   "Accountant export"
+  ],
+  [
+   "Techs, dispatch & callbacks",
+   "Installs & job profitability",
+   "Memberships & marketing",
+   "AR, cash flow & inventory"
+  ],
+  [
+   "Both workbooks",
+   "Both Field Guides",
+   "Both Quick Starts",
+   "Start simple, grow"
+  ]
+ ],
+ "guide": {
+  "ess": 37,
+  "elite": 54
+ },
+ "cta": [
+  "Enter this month's jobs",
+  "See what each job kept",
+  "Every month you wait is [another month of guessing.]"
+ ],
+ "end": [
+  "Your invoices show [what you charged.]",
+  "ProfitIQS shows you [what you kept.]"
+ ],
  "lines": [
-  ["hook", "Monday, a water heater install. Tuesday, three drain calls. Wednesday, an emergency repipe.", null, {"t": "notifs", "text": "Busy [every single day.]", "head": "JOB COMPLETED", "items": [["Water heater install", "$2,850.00"], ["Drain clear", "$289.00"], ["Emergency repipe", "$4,100.00"]], "photo": "pipes"}],
-  ["hook", "So here's the question. Which of those jobs actually made you [money?]", null, {"t": "slam", "text": "Which job actually [made you money?]", "photo": "plans-tools", "size": 100}],
-  ["hook", "Not the biggest invoice. The one that kept the most after labor and [materials.]", null, {"t": "bars", "bars": [["Invoice", 1, "sky"], ["− Labor", 0.7, "amber"], ["− Materials", 0.44, "red"]], "q": "Kept", "qv": 0.44}],
-  ["hook", "Because one callback can erase the margin the original job was supposed to earn.", null, {"t": "rows", "text": "One callback can [erase the job.]", "rows": [["Water heater install", "COMPLETED", "green"], ["Same address, days later", "CALLBACK", "amber"], ["Margin on the job", "GONE", "red"]]}],
-  ["hook", "And without job-level numbers, you don't see it until the year is already over.", null, {"t": "slam", "text": "You don't see it until [the year is over.]", "photo": "cash-count"}],
-  ["hook", "If you run a plumbing business, the next few minutes are for you.", null, {"t": "ring", "n": "7", "unit": "MINUTES", "text": "If you run a plumbing business — [this is for you.]"}],
-
-  ["pain", "Here's how the money side of plumbing usually works.", null, {"t": "slam", "text": "How the money side [usually works.]", "glitch": 0, "size": 92}],
-  ["pain", "Jobs live in your dispatch app.", null, {"t": "phone", "text": "Jobs: [one app.]", "items": [["DISPATCH APP", "Jobs booked"], ["CALENDAR", "Calls scheduled"]], "photo": "pos"}],
-  ["pain", "Receipts for parts live in the truck.", null, {"t": "papers", "text": "Receipts: [the truck.]", "label": "PARTS", "photo": "tools"}],
-  ["pain", "Service calls and installs get blended into one revenue number.", null, {"t": "bars", "text": "One number. [No margin.]", "bars": [["Service calls", 0.5, "sky"], ["Installs", 0.75, "violet"], ["Blended total", 1, "amber"]]}],
-  ["pain", "So a drain clear and a repipe look the same, until you compare them on margin.", null, {"t": "split", "left": ["Revenue view", ["Drain clear: $289", "Repipe: $4,100", "Bigger looks better"]], "right": ["Margin view", ["Labor counted", "Materials counted", "Real margin per job"]], "rightAt": 0.55}],
-  ["pain", "Every tech feels busy. But whose hours produce the most profitable work?", null, {"t": "bars", "text": "Busy isn't [profitable.]", "bars": [["Tech A", 0.9, "sky"], ["Tech B", 0.62, "sky"], ["Tech C", 0.78, "sky"]], "q": "Most profit?", "qv": 0.5}],
-  ["pain", "Memberships get sold once, then forgotten, until someone calls to cancel.", null, {"t": "rows", "text": "Sold once. [Then forgotten.]", "icon": "calendar", "rows": [["Gold plan · J. Smith", "ACTIVE", "green"], ["Silver plan · R. Lee", "NOT RENEWED", "amber"], ["Gold plan · M. Diaz", "CANCELLED", "red"]]}],
-  ["pain", "A big install invoice sits unpaid past thirty days, while payroll and suppliers are still due.", null, {"t": "rows", "text": "Unpaid. [Payroll still due.]", "rows": [["INV-2041 · Repipe", "DUE", "sky"], ["INV-2042 · Sewer line", "30 DAYS LATE", "amber"], ["INV-2043 · Remodel", "60 DAYS LATE", "red"]]}],
-  ["pain", "Then tax time arrives, and parts, trucks, tools and payroll costs are scattered everywhere.", null, {"t": "papers", "text": "Tax time: [scattered everywhere.]", "label": "RECEIPT", "photo": "taxdocs"}],
-  ["pain", "Your accountant asks for everything. And nothing's in one place.", null, {"t": "slam", "text": "“Send me [everything.]”", "photo": "signing", "glitch": 0.6}],
-  ["pain", "Busy all year, and still not sure what the business actually kept.", null, {"t": "months", "text": "Kept this year:", "photo": "busy"}],
-
-  ["turn", "That's not a work-ethic problem. It's a visibility problem.", null, {"t": "strike", "from": "Work ethic", "to": "Visibility."}],
-  ["turn", "You already have the data: jobs, invoices, receipts.", null, {"t": "converge", "text": "You already [have the data.]", "labels": ["JOB", "INVOICE", "$", "PARTS", "TECH", "%", "RECEIPT"], "box": "One place."}],
-  ["turn", "You just don't have one place that turns it into decisions.", null, null],
-
-  ["reveal", "That's why we built the Plumbing Contractor Business Intelligence System™.", "That's why we built the Plumbing Contractor Business Intelligence System.", null],
-  ["reveal", "A ready-built Excel system, made only for plumbing contractors.", null, null],
-  ["reveal", "Formulas, dashboards and reports are already built in. Tax set-aside too.", null, null],
-  ["reveal", "And it ships with sample data, so every dashboard works the moment you open it.", null, null],
-
-  ["who", "It's for the owner-plumber who still runs calls, and does the books at night.", null, null],
-  ["who", "The growing service company with several techs and trucks, and no side-by-side view.", null, null],
-  ["who", "The install-focused contractor who needs to know which jobs actually pay.", null, null],
-  ["who", "And the office or dispatch manager who wants a clear monthly picture.", null, null],
-
-  ["ess", "Let me show you what's inside. Start with Essential: nine sheets.", null, {"t": "cover", "ed": "ess", "n": 9}],
-  ["ess", "You enter the facts, jobs and expenses. The workbook does the math.", null, {"t": "wall", "ed": "ess", "text": "You enter the facts. [It does the math.]", "inputs": ["SETUP", "JOB REVENUE ENTRY", "EXPENSE ENTRY"]}],
-  ["ess", "Set up once: your country, currency and tax-rate presets.", null, {"t": "sheet", "ed": "ess", "tab": "SETUP", "label": "Setup", "d": "once", "hi": [["Country", "Country preset", "cyan", "row"], ["Tax Reserve Rate % — default", "Tax-rate preset", "green", "row"]]}],
-  ["ess", "Log every job in Job Revenue Entry.", null, {"t": "sheet", "ed": "ess", "tab": "JOB REVENUE ENTRY", "label": "Job Revenue Entry", "d": "every job", "hi": [["JOB-1000", "One row per job", "blue", "row"]], "minW": 0.9}],
-  ["ess", "Log every expense: payroll, materials, fuel.", null, {"t": "sheet", "ed": "ess", "tab": "EXPENSE ENTRY", "label": "Expense Entry", "d": "every expense", "hi": [["EXP-2000", "One row per expense", "amber", "row"]], "minW": 0.9}],
-  ["ess", "Tax & Deductions estimates your tax reserve, and totals every deductible category.", "Tax and Deductions estimates your tax reserve, and totals every deductible category.", {"t": "sheet", "ed": "ess", "tab": "TAX & DEDUCTIONS", "label": "Tax & Deductions", "d": "reserve + deductions", "hi": [["Recommended Tax Reserve $", "Recommended reserve", "green", "row"], ["DEDUCTION SUMMARY BY CATEGORY", "Every category", "cyan", "block"]]}],
-  ["ess", "The Dashboard puts it on one screen: revenue, net profit, revenue per job, and how funded your tax reserve is.", null, {"t": "sheet", "ed": "ess", "tab": "DASHBOARD", "label": "Dashboard", "d": "one screen", "dir": "zoom", "hi": [["TOTAL REVENUE", "Revenue", "blue", "kpi"], ["NET PROFIT", "Net profit", "green", "kpi"], ["REVENUE PER JOB", "Per job", "cyan", "kpi"], ["TAX RESERVE FUNDED %", "Reserve funded", "amber", "kpi"]]}],
-  ["ess", "At tax time, the Accountant Export hands over a clean summary and a document checklist.", null, {"t": "sheet", "ed": "ess", "tab": "ACCOUNTANT EXPORT", "label": "Accountant Export", "d": "clean summary", "hi": [["Net Profit", "Summary", "blue", "row"], ["DOCUMENT CHECKLIST", "Document checklist", "green", "block"]]}],
-  ["ess", "And the Business Health Snapshot scores profit, cash, tax readiness, expenses and revenue trend.", null, {"t": "sheet", "ed": "ess", "tab": "BUSINESS HEALTH SNAPSHOT", "label": "Health Snapshot", "d": "scored 0–100", "cam": "full", "hi": [["Profit Status", "5 categories", "cyan", "block"], ["OVERALL SCORE (0-100)", "Overall score", "green", "row"]]}],
-
-  ["elite", "Now, Elite. Fifty-one sheets. The full operating system for a plumbing company.", null, {"t": "cover", "ed": "elite", "n": 51, "fx": "shock", "fxAt": 0.5}],
-  ["elite", "Organized in phases: customers, service, installs, memberships, marketing, finance, inventory, and executive intelligence.", null, {"t": "wall", "ed": "elite", "tags": false, "text": "[51 sheets,] organized in phases."}],
-
-  ["ops", "It opens on the Executive Dashboard: revenue, net profit, average ticket, and your Business Health Score.", null, {"t": "sheet", "ed": "elite", "tab": "02 Executive Dashboard", "label": "Executive Dashboard", "d": "the whole company", "dir": "zoom", "hi": [["REVENUE (12 MO)", "Revenue", "blue", "kpi"], ["NET PROFIT (12 MO)", "Net profit", "green", "kpi"], ["AVERAGE TICKET", "Avg ticket", "cyan", "kpi"], ["BUSINESS HEALTH SCORE", "Health score", "amber", "kpi"]]}],
-  ["ops", "Technician Productivity shows billable hours, jobs and utilization for every tech.", null, {"t": "sheet", "ed": "elite", "tab": "12 Technician Productivity", "label": "Technician Productivity", "d": "every tech", "hi": [["Billable Hours", "Billable hours", "blue", "cell"], ["Utilization %", "Utilization", "cyan", "cell"]]}],
-  ["ops", "The Technician Scorecard ranks them on revenue, profit, memberships sold and callbacks.", null, {"t": "sheet", "ed": "elite", "tab": "13 Technician Scorecard", "label": "Technician Scorecard", "d": "ranked", "hi": [["Rank#1", "Ranked", "cyan", "cell"], ["Callback Rate", "Callback rate", "red", "cell"]]}],
-  ["ops", "The Callback Tracker logs every callback, with its rework cost.", null, {"t": "sheet", "ed": "elite", "tab": "14 Callback Tracker", "label": "Callback Tracker", "d": "with rework cost", "hi": [["Every callback flagged", "Every callback", "red", "row"]], "minW": 0.8}],
-  ["ops", "Job Profitability compares service, install, commercial and emergency work on margin.", null, {"t": "sheet", "ed": "elite", "tab": "16 Job Profitability Center", "label": "Job Profitability", "d": "margin by job type", "hi": [["Service#1", "Service", "blue", "row"], ["Install", "Install", "violet", "row"], ["Emergency", "Emergency", "red", "row"]]}],
-  ["ops", "The Install Project Tracker puts contract value next to actual cost, and actual profit.", null, {"t": "sheet", "ed": "elite", "tab": "15 Install Project Tracker", "label": "Install Projects", "d": "contract vs. actual", "hi": [["Contract Value", "Contract value", "blue", "cell"], ["Actual Cost", "Actual cost", "amber", "cell"], ["Actual Profit", "Actual profit", "green", "cell"]]}],
-  ["ops", "The Estimating Center tracks every quote, your win rate, and expected margin.", null, {"t": "sheet", "ed": "elite", "tab": "17 Estimating Center", "label": "Estimating Center", "d": "quotes + win rate", "hi": [["WIN RATE SUMMARY", "Win rate", "green", "block"]]}],
-  ["ops", "Memberships get their own centers: the plan roster, recurring revenue, and sales by technician.", null, {"t": "mini", "ed": "elite", "text": "Memberships, [finally tracked.]", "items": [{"tab": "18 Membership Plan Center", "label": "Membership Plans", "cam": "top"}, {"tab": "19 Recurring Revenue Center", "label": "Recurring Revenue"}, {"tab": "20 Membership Sales Tracker", "label": "Membership Sales"}]}],
-  ["ops", "And marketing: lead sources, marketing ROI, and your sales pipeline.", null, {"t": "mini", "ed": "elite", "text": "Where your jobs [come from.]", "items": [{"tab": "21 Lead Source Tracker", "label": "Lead Sources"}, {"tab": "22 Marketing ROI Center", "label": "Marketing ROI"}, {"tab": "23 Sales Pipeline", "label": "Sales Pipeline"}]}],
-
-  ["money", "Then, the money side.", null, {"t": "slam", "text": "Then, [the money side.]", "photo": "cash-pile", "size": 110}],
-  ["money", "Accounts Receivable ages every open invoice.", null, {"t": "sheet", "ed": "elite", "tab": "26 Accounts Receivable", "label": "Accounts Receivable", "d": "every open invoice", "hi": [["Invoice #", "Every open invoice", "amber", "row"]]}],
-  ["money", "And the Collections Center shows what's ninety days or more past due.", null, {"t": "sheet", "ed": "elite", "tab": "27 Collections Center", "label": "Collections", "d": "what's at risk", "cam": "full", "hi": [["90+ DAYS AT RISK", "90+ days at risk", "red", "cell"], ["AVG DAYS OUTSTANDING", "Avg days outstanding", "amber", "cell"]]}],
-  ["money", "The Cash Flow Center shows cash in, cash out by category, and net cash flow, month by month.", null, {"t": "sheet", "ed": "elite", "tab": "28 Cash Flow Center", "label": "Cash Flow Center", "d": "month by month", "hi": [["Cash In (Revenue)", "Cash in", "green", "cell"], ["Net Cash Flow", "Net cash flow", "cyan", "cell"]]}],
-  ["money", "Payroll Center works out technician pay, and payroll as a share of revenue.", null, {"t": "sheet", "ed": "elite", "tab": "29 Payroll Center", "label": "Payroll Center", "d": "pay + % of revenue", "hi": [["TOTAL PAYROLL", "Total payroll", "amber", "row"], ["PAYROLL % OF REVENUE", "% of revenue", "cyan", "row"]]}],
-  ["money", "And the Inventory, Vendor and Purchase Order centers track parts, water heaters and fixtures, with reorder alerts.", null, {"t": "mini", "ed": "elite", "text": "Parts and stock, [with reorder alerts.]", "items": [{"tab": "31 Inventory Center", "label": "Inventory"}, {"tab": "32 Vendor Center", "label": "Vendors"}, {"tab": "33 Purchase Order Center", "label": "Purchase Orders"}]}],
-
-  ["leak", "Then there's the Profit Leak Detector™.", "Then there's the Profit Leak Detector.", {"t": "hero", "ed": "elite", "tab": "36 Profit Leak Detector", "text": "The Profit Leak [Detector™]", "cam": "full", "zoom": false, "hi": [["LOW-MARGIN JOB CATEGORIES", "Low-margin jobs", "amber", "cell", 0.22], ["UNDERPERFORMING TECHNICIANS", "Underperforming techs", "red", "cell", 0.4], ["OTHER LEAK SIGNALS", "Churn · AR · reorders · callbacks", "red", "cell", 0.62], ["Recommended Action", "Recommended action", "green", "cell", 0.86]]}],
-  ["leak", "It automatically flags low-margin job categories, and underperforming technicians.", null, null],
-  ["leak", "Plus membership churn, aging receivables, reorder alerts and your overall callback rate.", null, null],
-  ["leak", "Each with a possible cause, and a recommended action.", null, null],
-  ["leak", "Add a thirteen-metric KPI Scorecard, a Business Health Score™, forecasting and benchmarking.", "Add a thirteen-metric KPI Scorecard, a Business Health Score, forecasting and benchmarking.", {"t": "mini", "ed": "elite", "text": "Scored, forecast, [benchmarked.]", "items": [{"tab": "34 KPI Scorecard", "label": "KPI Scorecard"}, {"tab": "35 Business Health Score", "label": "Health Score™"}, {"tab": "37 Forecasting Center", "label": "Forecasting", "cam": "top"}, {"tab": "38 Benchmarking Center", "label": "Benchmarking"}]}],
-  ["leak", "And a Monthly Executive Review that generates your recommended actions for you.", null, {"t": "hero", "ed": "elite", "tab": "40 Monthly Executive Review", "text": "Your month, [reviewed for you.]", "hi": [["RECOMMENDED ACTIONS", "Auto-generated actions", "green", "block"]], "minW": 0.8}],
-
-  ["tax", "Then the part every contractor dreads. Taxes.", null, {"t": "zero", "eyebrow": "The part every contractor dreads", "big": "TAXES.", "impact": true, "fxAt": 0.2, "fx": "shockred"}],
-  ["tax", "The Tax Reserve Center works out a recommended reserve, and how much of it you've funded.", null, {"t": "sheet", "ed": "elite", "tab": "44 Tax Reserve & VAT Center", "label": "Tax Reserve", "d": "what to set aside", "hi": [["Recommended Tax Reserve $", "Recommended reserve", "green", "row"], ["Reserve Funded %", "Funded %", "cyan", "row"]]}],
-  ["tax", "The Deduction Maximizer groups the year's expenses by category, to review with your accountant.", null, {"t": "sheet", "ed": "elite", "tab": "45 Deduction Maximizer", "label": "Deduction Maximizer", "d": "by category", "hi": [["Typically Deductible?", "Deductible?", "green", "cell"], ["Total Deductible Expenses", "Total", "cyan", "row"]]}],
-  ["tax", "The Tax Readiness Center tracks due dates, and scores how ready your records are.", null, {"t": "sheet", "ed": "elite", "tab": "46 Tax Readiness Center", "label": "Tax Readiness", "d": "due dates + score", "hi": [["TAX CALENDAR", "Due dates", "amber", "block"], ["READINESS SCORE (out of 100)", "Readiness score", "green", "row"]]}],
-  ["tax", "And the Accountant Summary is a print-ready package to hand over at filing time.", null, {"t": "sheet", "ed": "elite", "tab": "47 Accountant Summary", "label": "Accountant Summary", "d": "print-ready", "hi": [["Ready to send", "Package status", "green", "cell"], ["PROFIT & LOSS SUMMARY", "P&L summary", "blue", "block"]]}],
-
-  ["guide", "And you're never left guessing how to use it.", null, null],
-  ["guide", "Every edition comes with a Quick Start: the exact steps for your first session, your first week, and your first thirty days.", null, null],
-  ["guide", "And a full Field Guide that walks through every sheet, screen by screen.", null, null],
-  ["guide", "Thirty-seven pages for Essential. Fifty-four for Elite. Including what to do when a number looks wrong.", null, null],
-
-  ["obj", "Now, honest answers to the questions plumbers ask.", null, {"t": "slam", "text": "Honest answers to [real questions.]", "size": 92}],
-  ["obj", "“My dispatch software already has reports.” Good. Keep it.", "My dispatch software already has reports. Good. Keep it.", {"t": "qa", "q": "My dispatch software already has reports.", "eyebrow": "Honest answer 1 of 5", "liftAt": 0.7, "chips": ["Keep your dispatch app", "Job margin by category", "Tech scorecards", "Cash flow", "Tax reserve"]}],
-  ["obj", "This sits next to it, and pulls the whole business into one view: margins, techs, cash and taxes.", null, null],
-  ["obj", "“I'm not an Excel person.” You don't need to be.", "I'm not an Excel person. You don't need to be.", {"t": "qa", "q": "I'm not an Excel person.", "eyebrow": "Honest answer 2 of 5", "liftAt": 0.6, "chips": ["Formulas built in", "Elite: formula cells locked", "You enter jobs + expenses", "Quick Start included"]}],
-  ["obj", "Every calculation is already built. In Elite, the formula cells are locked, so you can't break them. You just enter jobs and expenses.", null, null],
-  ["obj", "“I'm a one-truck operation.” Then start with Essential.", "I'm a one-truck operation. Then start with Essential.", {"t": "qa", "q": "I'm a one-truck operation.", "eyebrow": "Honest answer 3 of 5", "liftAt": 0.6, "big": "Start with Essential.", "bigSize": 80, "chips": ["9 sheets", "Jobs + expenses", "Dashboard + tax set-aside", "Go Elite when you grow"]}],
-  ["obj", "Nine sheets: jobs, expenses, a dashboard and a tax set-aside. Move up to Elite when you add techs.", null, null],
-  ["obj", "“Will it stop my callbacks?” No tool can promise that.", "Will it stop my callbacks? No tool can promise that.", {"t": "qa", "q": "Will it stop my callbacks?", "eyebrow": "Honest answer 4 of 5", "liftAt": 0.55, "answer": "No tool can promise that.", "chips": ["Every callback logged", "Rework cost shown", "You decide the fix"]}],
-  ["obj", "It logs every callback and its rework cost, so you can see the pattern, and decide what to fix.", null, null],
-  ["obj", "“Is it a subscription?” No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.", "Is it a subscription? No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.", {"t": "qa", "q": "Is it a subscription?", "eyebrow": "Honest answer 5 of 5", "liftAt": 0.25, "big": "No.", "bigSize": 150, "chips": ["One payment", "No macros", "Plain formulas"], "foot": "Your numbers stay in your file."}],
-
-  ["offer", "So, which edition fits you?", null, null],
-  ["offer", "Essential, $97: job revenue, expenses, a dashboard, a health snapshot, and a tax set-aside estimate.", "Essential, ninety-seven dollars. Job revenue, expenses, a dashboard, a health snapshot, and a tax set-aside estimate.", null],
-  ["offer", "Elite, $197: techs and dispatch, callbacks, estimating, memberships, marketing, collections, inventory and forecasting.", "Elite, one ninety-seven. Techs and dispatch, callbacks, estimating, memberships, marketing, collections, inventory, and forecasting.", null],
-  ["offer", "Or Complete, $249: both workbooks, both Field Guides, both Quick Starts. Start simple, grow into the full system.", "Or Complete, two forty-nine. Both workbooks, both Field Guides, both Quick Starts. Start simple, and grow into the full system.", null],
-  ["offer", "One-time payment. And a 60-day money-back guarantee, no questions asked.", "One-time payment. And a sixty-day money-back guarantee. No questions asked.", null],
-
-  ["cta", "Here's what to do right now.", null, null],
-  ["cta", "Pick your edition below this video.", null, null],
-  ["cta", "Open it, enter this month's jobs, and see what each one actually kept.", null, null],
-  ["cta", "Because every month you wait is another month of guessing.", null, null],
-
-  ["end", "P.S. Your invoices show what you charged.", "P S. Your invoices show what you charged.", null],
-  ["end", "ProfitIQS shows you what you kept.", "Profit IQS shows you what you kept.", null]
+  [
+   "hook",
+   "Monday, a water heater install. Tuesday, three drain calls. Wednesday, an emergency repipe.",
+   null,
+   {
+    "t": "notifs",
+    "text": "Busy [every single day.]",
+    "head": "JOB COMPLETED",
+    "items": [
+     [
+      "Water heater install",
+      "$2,850.00"
+     ],
+     [
+      "Drain clear",
+      "$289.00"
+     ],
+     [
+      "Emergency repipe",
+      "$4,100.00"
+     ]
+    ],
+    "photo": "pipes"
+   }
+  ],
+  [
+   "hook",
+   "So here's the question. Which of those jobs actually made you [money?]",
+   null,
+   {
+    "t": "slam",
+    "text": "Which job actually [made you money?]",
+    "photo": "plans-tools",
+    "size": 100
+   }
+  ],
+  [
+   "hook",
+   "Not the biggest invoice. The one that kept the most after labor and [materials.]",
+   null,
+   {
+    "t": "bars",
+    "bars": [
+     [
+      "Invoice",
+      1,
+      "sky"
+     ],
+     [
+      "− Labor",
+      0.7,
+      "amber"
+     ],
+     [
+      "− Materials",
+      0.44,
+      "red"
+     ]
+    ],
+    "q": "Kept",
+    "qv": 0.44
+   }
+  ],
+  [
+   "hook",
+   "Because one callback can erase the margin the original job was supposed to earn.",
+   null,
+   {
+    "t": "rows",
+    "text": "One callback can [erase the job.]",
+    "rows": [
+     [
+      "Water heater install",
+      "COMPLETED",
+      "green"
+     ],
+     [
+      "Same address, days later",
+      "CALLBACK",
+      "amber"
+     ],
+     [
+      "Margin on the job",
+      "GONE",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "hook",
+   "And without job-level numbers, you don't see it until the year is already over.",
+   null,
+   {
+    "t": "slam",
+    "text": "You don't see it until [the year is over.]",
+    "photo": "cash-count"
+   }
+  ],
+  [
+   "hook",
+   "If you run a plumbing business, the next few minutes are for you.",
+   null,
+   {
+    "t": "ring",
+    "n": "11",
+    "unit": "MINUTES",
+    "text": "If you run a plumbing business — [this is for you.]"
+   }
+  ],
+  [
+   "pain",
+   "Here's how the money side of plumbing usually works.",
+   null,
+   {
+    "t": "slam",
+    "text": "How the money side [usually works.]",
+    "glitch": 0,
+    "size": 92
+   }
+  ],
+  [
+   "pain",
+   "Jobs live in your dispatch app.",
+   null,
+   {
+    "t": "phone",
+    "text": "Jobs: [one app.]",
+    "items": [
+     [
+      "DISPATCH APP",
+      "Jobs booked"
+     ],
+     [
+      "CALENDAR",
+      "Calls scheduled"
+     ]
+    ],
+    "photo": "pos"
+   }
+  ],
+  [
+   "pain",
+   "Receipts for parts live in the truck.",
+   null,
+   {
+    "t": "papers",
+    "text": "Receipts: [the truck.]",
+    "label": "PARTS",
+    "photo": "tools"
+   }
+  ],
+  [
+   "pain",
+   "Service calls and installs get blended into one revenue number.",
+   null,
+   {
+    "t": "bars",
+    "text": "One number. [No margin.]",
+    "bars": [
+     [
+      "Service calls",
+      0.5,
+      "sky"
+     ],
+     [
+      "Installs",
+      0.75,
+      "violet"
+     ],
+     [
+      "Blended total",
+      1,
+      "amber"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "So a drain clear and a repipe look the same, until you compare them on margin.",
+   null,
+   {
+    "t": "split",
+    "left": [
+     "Revenue view",
+     [
+      "Drain clear: $289",
+      "Repipe: $4,100",
+      "Bigger looks better"
+     ]
+    ],
+    "right": [
+     "Margin view",
+     [
+      "Labor counted",
+      "Materials counted",
+      "Real margin per job"
+     ]
+    ],
+    "rightAt": 0.55
+   }
+  ],
+  [
+   "pain",
+   "Every tech feels busy. But whose hours produce the most profitable work?",
+   null,
+   {
+    "t": "bars",
+    "text": "Busy isn't [profitable.]",
+    "bars": [
+     [
+      "Tech A",
+      0.9,
+      "sky"
+     ],
+     [
+      "Tech B",
+      0.62,
+      "sky"
+     ],
+     [
+      "Tech C",
+      0.78,
+      "sky"
+     ]
+    ],
+    "q": "Most profit?",
+    "qv": 0.5
+   }
+  ],
+  [
+   "pain",
+   "Memberships get sold once, then forgotten, until someone calls to cancel.",
+   null,
+   {
+    "t": "rows",
+    "text": "Sold once. [Then forgotten.]",
+    "icon": "calendar",
+    "rows": [
+     [
+      "Gold plan · J. Smith",
+      "ACTIVE",
+      "green"
+     ],
+     [
+      "Silver plan · R. Lee",
+      "NOT RENEWED",
+      "amber"
+     ],
+     [
+      "Gold plan · M. Diaz",
+      "CANCELLED",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "A big install invoice sits unpaid past thirty days, while payroll and suppliers are still due.",
+   null,
+   {
+    "t": "rows",
+    "text": "Unpaid. [Payroll still due.]",
+    "rows": [
+     [
+      "INV-2041 · Repipe",
+      "DUE",
+      "sky"
+     ],
+     [
+      "INV-2042 · Sewer line",
+      "30 DAYS LATE",
+      "amber"
+     ],
+     [
+      "INV-2043 · Remodel",
+      "60 DAYS LATE",
+      "red"
+     ]
+    ]
+   }
+  ],
+  [
+   "pain",
+   "Then tax time arrives, and parts, trucks, tools and payroll costs are scattered everywhere.",
+   null,
+   {
+    "t": "papers",
+    "text": "Tax time: [scattered everywhere.]",
+    "label": "RECEIPT",
+    "photo": "taxdocs"
+   }
+  ],
+  [
+   "pain",
+   "Your accountant asks for everything. And nothing's in one place.",
+   null,
+   {
+    "t": "slam",
+    "text": "“Send me [everything.]”",
+    "photo": "signing",
+    "glitch": 0.6
+   }
+  ],
+  [
+   "pain",
+   "Busy all year, and still not sure what the business actually kept.",
+   null,
+   {
+    "t": "months",
+    "text": "Kept this year:",
+    "photo": "busy"
+   }
+  ],
+  [
+   "turn",
+   "That's not a work-ethic problem. It's a visibility problem.",
+   null,
+   {
+    "t": "strike",
+    "from": "Work ethic",
+    "to": "Visibility."
+   }
+  ],
+  [
+   "turn",
+   "You already have the data: jobs, invoices, receipts.",
+   null,
+   {
+    "t": "converge",
+    "text": "You already [have the data.]",
+    "labels": [
+     "JOB",
+     "INVOICE",
+     "$",
+     "PARTS",
+     "TECH",
+     "%",
+     "RECEIPT"
+    ],
+    "box": "One place."
+   }
+  ],
+  [
+   "turn",
+   "You just don't have one place that turns it into decisions.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "That's why we built the Plumbing Contractor Business Intelligence System™.",
+   "That's why we built the Plumbing Contractor Business Intelligence System.",
+   null
+  ],
+  [
+   "reveal",
+   "A ready-built Excel system, made only for plumbing contractors.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "Formulas, dashboards and reports are already built in. Tax set-aside too.",
+   null,
+   null
+  ],
+  [
+   "reveal",
+   "And it ships with sample data, so every dashboard works the moment you open it.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "It's for the owner-plumber who still runs calls, and does the books at night.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The growing service company with several techs and trucks, and no side-by-side view.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "The install-focused contractor who needs to know which jobs actually pay.",
+   null,
+   null
+  ],
+  [
+   "who",
+   "And the office or dispatch manager who wants a clear monthly picture.",
+   null,
+   null
+  ],
+  [
+   "ess",
+   "Let me show you what's inside. Start with Essential: eight sheets you work in, plus a tax-rate reference behind the scenes.",
+   null,
+   {
+    "t": "cover",
+    "ed": "ess",
+    "n": 8,
+    "sub": "+ 1 working behind the scenes"
+   }
+  ],
+  [
+   "ess",
+   "You enter the facts, jobs and expenses. The workbook does the math.",
+   null,
+   {
+    "t": "wall",
+    "ed": "ess",
+    "text": "You enter the facts. [It does the math.]",
+    "inputs": [
+     "SETUP",
+     "JOB REVENUE ENTRY",
+     "EXPENSE ENTRY"
+    ]
+   }
+  ],
+  [
+   "ess",
+   "Now every sheet, in order.",
+   null,
+   {
+    "t": "slam",
+    "text": "Every sheet, [in order.]",
+    "size": 96
+   }
+  ],
+  [
+   "ess",
+   "Start Here shows how the workbook is organized, and where to begin.",
+   "Start Here shows how the workbook is organized, and where to begin.",
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "START HERE",
+    "label": "Start Here",
+    "cam": "full",
+    "zoom": false,
+    "hi": []
+   }
+  ],
+  [
+   "ess",
+   "Set up once: your country, currency and tax-rate presets.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "SETUP",
+    "label": "Setup",
+    "hi": [
+     [
+      "Country",
+      "Country preset",
+      "cyan",
+      "row"
+     ],
+     [
+      "Tax Reserve Rate % — default",
+      "Tax-rate preset",
+      "green",
+      "row"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "ess",
+   "Log every job in Job Revenue Entry.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "JOB REVENUE ENTRY",
+    "label": "Job Revenue Entry",
+    "hi": [
+     [
+      "JOB-1000",
+      "One row per job",
+      "blue",
+      "row"
+     ]
+    ],
+    "minW": 0.9,
+    "d": null
+   }
+  ],
+  [
+   "ess",
+   "Log every expense: payroll, materials, fuel.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "EXPENSE ENTRY",
+    "label": "Expense Entry",
+    "hi": [
+     [
+      "EXP-2000",
+      "One row per expense",
+      "amber",
+      "row"
+     ]
+    ],
+    "minW": 0.9,
+    "d": null
+   }
+  ],
+  [
+   "ess",
+   "Tax & Deductions estimates your tax reserve, and totals every deductible category.",
+   "Tax and Deductions estimates your tax reserve, and totals every deductible category.",
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "TAX & DEDUCTIONS",
+    "label": "Tax & Deductions",
+    "hi": [
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "DEDUCTION SUMMARY BY CATEGORY",
+      "Every category",
+      "cyan",
+      "block"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "ess",
+   "The Dashboard puts it on one screen: revenue, net profit, revenue per job, and how funded your tax reserve is.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "DASHBOARD",
+    "label": "Dashboard",
+    "dir": "zoom",
+    "hi": [
+     [
+      "TOTAL REVENUE",
+      "Revenue",
+      "blue",
+      "kpi"
+     ],
+     [
+      "NET PROFIT",
+      "Net profit",
+      "green",
+      "kpi"
+     ],
+     [
+      "REVENUE PER JOB",
+      "Per job",
+      "cyan",
+      "kpi"
+     ],
+     [
+      "TAX RESERVE FUNDED %",
+      "Reserve funded",
+      "amber",
+      "kpi"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "ess",
+   "At tax time, the Accountant Export hands over a clean summary and a document checklist.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "ACCOUNTANT EXPORT",
+    "label": "Accountant Export",
+    "hi": [
+     [
+      "Net Profit",
+      "Summary",
+      "blue",
+      "row"
+     ],
+     [
+      "DOCUMENT CHECKLIST",
+      "Document checklist",
+      "green",
+      "block"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "ess",
+   "And the Business Health Snapshot scores profit, cash, tax readiness, expenses and revenue trend.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "ess",
+    "tab": "BUSINESS HEALTH SNAPSHOT",
+    "label": "Health Snapshot",
+    "cam": "full",
+    "hi": [
+     [
+      "Profit Status",
+      "5 categories",
+      "cyan",
+      "block"
+     ],
+     [
+      "OVERALL SCORE (0-100)",
+      "Overall score",
+      "green",
+      "row"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "elite",
+   "Now, Elite. Forty-eight sheets you work in, plus a tax-rate reference, a changelog and the calculation engine working behind the scenes. The full operating system for a plumbing company.",
+   null,
+   {
+    "t": "cover",
+    "ed": "elite",
+    "n": 48,
+    "sub": "+ 3 working behind the scenes",
+    "fx": "shock",
+    "fxAt": 0.3
+   }
+  ],
+  [
+   "elite",
+   "Organized in phases: customers, service, installs, memberships, marketing, finance, inventory, and executive intelligence.",
+   null,
+   {
+    "t": "wall",
+    "ed": "elite",
+    "tags": false,
+    "text": "[48 sheets,] one operating system."
+   }
+  ],
+  [
+   "elite",
+   "Let's walk through every one of them.",
+   null,
+   {
+    "t": "slam",
+    "text": "Every sheet. [In order.]",
+    "size": 96
+   }
+  ],
+  [
+   "x1",
+   "Part one of six: sheets one to eight.",
+   null,
+   {
+    "t": "chapter",
+    "eyebrow": "Elite · part 1 of 6",
+    "num": "01–08",
+    "text": "Part [1]",
+    "items": [
+     "Start Here",
+     "Executive Dashboard",
+     "Executive Summary",
+     "Technician Setup",
+     "Job Revenue Entry",
+     "Install Direct Cost",
+     "Customer Database",
+     "Customer Retention Center"
+    ]
+   }
+  ],
+  [
+   "x1",
+   "Start Here shows how the workbook is organized, and where to begin.",
+   "Start Here shows how the workbook is organized, and where to begin.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "01 Start Here",
+    "label": "Start Here",
+    "cam": "full",
+    "zoom": false,
+    "hi": []
+   }
+  ],
+  [
+   "x1",
+   "It opens on the Executive Dashboard: revenue, net profit, average ticket, and your Business Health Score.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "02 Executive Dashboard",
+    "label": "Executive Dashboard",
+    "dir": "zoom",
+    "hi": [
+     [
+      "REVENUE (12 MO)",
+      "Revenue",
+      "blue",
+      "kpi"
+     ],
+     [
+      "NET PROFIT (12 MO)",
+      "Net profit",
+      "green",
+      "kpi"
+     ],
+     [
+      "AVERAGE TICKET",
+      "Avg ticket",
+      "cyan",
+      "kpi"
+     ],
+     [
+      "BUSINESS HEALTH SCORE",
+      "Health score",
+      "amber",
+      "kpi"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "x1",
+   "Executive Summary: Total Revenue, Total Expenses, Net Profit and Cash Position.",
+   "Executive Summary: Total Revenue, Total Expenses, Net Profit and Cash Position.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "03 Executive Summary",
+    "label": "Executive Summary",
+    "hi": [],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x1",
+   "Technician Setup. Master technician roster, referenced by every productivity, payroll, and scorecard sheet.",
+   "Technician Setup. Master technician roster, referenced by every productivity, payroll, and scorecard sheet.",
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "04 Technician Setup",
+    "text": "[Technician Setup]",
+    "size": 64,
+    "hi": [
+     [
+      "Tech ID",
+      null,
+      "cyan",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x1",
+   "Job Revenue Entry. Every completed or scheduled job, the core revenue feed for the entire system.",
+   "Job Revenue Entry. Every completed or scheduled job, the core revenue feed for the entire system.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "05 Job Revenue Entry",
+    "label": "Job Revenue Entry",
+    "hi": [
+     [
+      "Job ID",
+      null,
+      "blue",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x1",
+   "Install Direct Cost. Direct job costing for Install-category jobs from Job Revenue Entry.",
+   "Install Direct Cost. Direct job costing for Install-category jobs from Job Revenue Entry.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "06 Install Direct Cost",
+    "label": "Install Direct Cost",
+    "hi": [
+     [
+      "Job ID",
+      null,
+      "green",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x1",
+   "Customer Database. Master customer file, Lifetime Revenue and service dates pull live from Job Revenue Entry.",
+   "Customer Database. Master customer file, Lifetime Revenue and service dates pull live from Job Revenue Entry.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "07 Customer Database",
+    "label": "Customer Database",
+    "hi": [
+     [
+      "Address",
+      null,
+      "amber",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x1",
+   "Customer Retention Center. Active versus lapsed customers, year-over-year retention, repeat-service rate, and reactivation targets.",
+   "Customer Retention Center. Active versus lapsed customers, year-over-year retention, repeat-service rate, and reactivation targets.",
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "08 Customer Retention Center",
+    "text": "[Customer Retention Center]",
+    "size": 64,
+    "hi": [
+     [
+      "ACTIVE CUSTOMERS",
+      null,
+      "cyan",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x2",
+   "Part two of six: sheets nine to sixteen.",
+   null,
+   {
+    "t": "chapter",
+    "eyebrow": "Elite · part 2 of 6",
+    "num": "09–16",
+    "text": "Part [2]",
+    "items": [
+     "Customer Lifetime Value",
+     "Service Call Tracker",
+     "Dispatch Center",
+     "Technician Productivity",
+     "Technician Scorecard",
+     "Callback Tracker",
+     "Install Project Tracker",
+     "Job Profitability Center"
+    ]
+   }
+  ],
+  [
+   "x2",
+   "Customer Lifetime Value. Top 15 customers by lifetime revenue, revenue, completed jobs, and average ticket, live from Job Revenue Entry.",
+   "Customer Lifetime Value. Top 15 customers by lifetime revenue, revenue, completed jobs, and average ticket, live from Job Revenue Entry.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "09 Customer Lifetime Value",
+    "label": "Customer Lifetime Value",
+    "hi": [],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x2",
+   "Service Call Tracker. Call-level log of your latest 300 service and emergency calls, booked, closed, and time on site.",
+   "Service Call Tracker. Call-level log of your latest 300 service and emergency calls, booked, closed, and time on site.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "10 Service Call Tracker",
+    "label": "Service Call Tracker",
+    "hi": [
+     [
+      "Call Date",
+      null,
+      "green",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x2",
+   "Dispatch Center. Dispatch-to-arrival-to-completion timing and technician efficiency.",
+   "Dispatch Center. Dispatch-to-arrival-to-completion timing and technician efficiency.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "11 Dispatch Center",
+    "label": "Dispatch Center",
+    "hi": [
+     [
+      "David Jackson",
+      null,
+      "amber",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x2",
+   "Technician Productivity shows billable hours, jobs and utilization for every tech.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "12 Technician Productivity",
+    "label": "Technician Productivity",
+    "hi": [
+     [
+      "Billable Hours",
+      "Billable hours",
+      "blue",
+      "cell"
+     ],
+     [
+      "Utilization %",
+      "Utilization",
+      "cyan",
+      "cell"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "x2",
+   "The Technician Scorecard ranks them on revenue, profit, memberships sold and callbacks.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "13 Technician Scorecard",
+    "label": "Technician Scorecard",
+    "hi": [
+     [
+      "Rank#1",
+      "Ranked",
+      "cyan",
+      "cell"
+     ],
+     [
+      "Callback Rate",
+      "Callback rate",
+      "red",
+      "cell"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "x2",
+   "The Callback Tracker logs every callback, with its rework cost.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "14 Callback Tracker",
+    "label": "Callback Tracker",
+    "hi": [
+     [
+      "Every callback flagged",
+      "Every callback",
+      "red",
+      "row"
+     ]
+    ],
+    "minW": 0.8,
+    "d": null
+   }
+  ],
+  [
+   "x2",
+   "The Install Project Tracker puts contract value next to actual cost, and actual profit.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "15 Install Project Tracker",
+    "label": "Install Projects",
+    "hi": [
+     [
+      "Contract Value",
+      "Contract value",
+      "blue",
+      "cell"
+     ],
+     [
+      "Actual Cost",
+      "Actual cost",
+      "amber",
+      "cell"
+     ],
+     [
+      "Actual Profit",
+      "Actual profit",
+      "green",
+      "cell"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "x2",
+   "Job Profitability compares service, install, commercial and emergency work on margin.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "16 Job Profitability Center",
+    "label": "Job Profitability",
+    "hi": [
+     [
+      "Service#1",
+      "Service",
+      "blue",
+      "row"
+     ],
+     [
+      "Install",
+      "Install",
+      "violet",
+      "row"
+     ],
+     [
+      "Emergency",
+      "Emergency",
+      "red",
+      "row"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "x3",
+   "Part three of six: sheets seventeen to twenty-four.",
+   null,
+   {
+    "t": "chapter",
+    "eyebrow": "Elite · part 3 of 6",
+    "num": "17–24",
+    "text": "Part [3]",
+    "items": [
+     "Estimating Center",
+     "Membership Plan Center",
+     "Recurring Revenue Center",
+     "Membership Sales Tracker",
+     "Lead Source Tracker",
+     "Marketing ROI Center",
+     "Sales Pipeline",
+     "Expense Entry"
+    ]
+   }
+  ],
+  [
+   "x3",
+   "The Estimating Center tracks every quote, your win rate, and expected margin.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "17 Estimating Center",
+    "label": "Estimating Center",
+    "hi": [
+     [
+      "WIN RATE SUMMARY",
+      "Win rate",
+      "green",
+      "block"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "x3",
+   "Membership Plan Center. Membership roster with plan revenue, next renewal, and status, months active and renewals count to your latest entry.",
+   "Membership Plan Center. Membership roster with plan revenue, next renewal, and status, months active and renewals count to your latest entry.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "18 Membership Plan Center",
+    "label": "Membership Plan Center",
+    "hi": [
+     [
+      "Member Name",
+      null,
+      "green",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x3",
+   "Recurring Revenue Center. MRR or ARR, forecast, and retention, Membership Growth Score.",
+   "Recurring Revenue Center. M R R or A R R, forecast, and retention, Membership Growth Score.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "19 Recurring Revenue Center",
+    "label": "Recurring Revenue Center",
+    "hi": [
+     [
+      "RETENTION RATE",
+      null,
+      "amber",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x3",
+   "Membership Sales Tracker. Membership pitches by technician, opportunities, sales logged on jobs in the last twelve months.",
+   "Membership Sales Tracker. Membership pitches by technician, opportunities, sales logged on jobs in the last twelve months.",
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "20 Membership Sales Tracker",
+    "text": "[Membership Sales Tracker]",
+    "size": 64,
+    "hi": [
+     [
+      "Technician",
+      null,
+      "cyan",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x3",
+   "Lead Source Tracker. Completed jobs and revenue by lead source over the last twelve months, live from Job Revenue Entry.",
+   "Lead Source Tracker. Completed jobs and revenue by lead source over the last twelve months, live from Job Revenue Entry.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "21 Lead Source Tracker",
+    "label": "Lead Source Tracker",
+    "hi": [
+     [
+      "Lead Source",
+      null,
+      "blue",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x3",
+   "Marketing ROI Center. Enter average monthly spend per channel; leads, jobs sold and revenue are the last twelve months.",
+   "Marketing R O I Center. Enter average monthly spend per channel; leads, jobs sold and revenue are the last twelve months.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "22 Marketing ROI Center",
+    "label": "Marketing ROI Center",
+    "hi": [],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x3",
+   "Sales Pipeline. Estimate-stage opportunities not yet booked as jobs, follow-up days count from your latest entry.",
+   "Sales Pipeline. Estimate-stage opportunities not yet booked as jobs, follow-up days count from your latest entry.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "23 Sales Pipeline",
+    "label": "Sales Pipeline",
+    "hi": [
+     [
+      "Lead",
+      null,
+      "amber",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x3",
+   "Expense Entry. All operating expenses, feeds Cash Flow, Budget, P&L, and Profit Leak Detector.",
+   "Expense Entry. All operating expenses, feeds Cash Flow, Budget, PandL, and Profit Leak Detector.",
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "24 Expense Entry",
+    "text": "[Expense Entry]",
+    "size": 64,
+    "hi": [
+     [
+      "Date",
+      null,
+      "cyan",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x4",
+   "Part four of six: sheets twenty-five to thirty-two.",
+   null,
+   {
+    "t": "chapter",
+    "eyebrow": "Elite · part 4 of 6",
+    "num": "25–32",
+    "text": "Part [4]",
+    "items": [
+     "Revenue Tracker",
+     "Accounts Receivable",
+     "Collections Center",
+     "Cash Flow Center",
+     "Payroll Center",
+     "Budget Center",
+     "Inventory Center",
+     "Vendor Center"
+    ]
+   }
+  ],
+  [
+   "x4",
+   "Revenue Tracker. Over the last twelve months: completed jobs by category, direct job costs, overhead and profit.",
+   "Revenue Tracker. Over the last twelve months: completed jobs by category, direct job costs, overhead and profit.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "25 Revenue Tracker",
+    "label": "Revenue Tracker",
+    "hi": [
+     [
+      "Commercial",
+      null,
+      "blue",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x4",
+   "Accounts Receivable ages every open invoice.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "26 Accounts Receivable",
+    "label": "Accounts Receivable",
+    "hi": [
+     [
+      "Invoice #",
+      "Every open invoice",
+      "amber",
+      "row"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "x4",
+   "And the Collections Center shows what's ninety days or more past due.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "27 Collections Center",
+    "label": "Collections",
+    "cam": "full",
+    "hi": [
+     [
+      "90+ DAYS AT RISK",
+      "90+ days at risk",
+      "red",
+      "cell"
+     ],
+     [
+      "AVG DAYS OUTSTANDING",
+      "Avg days outstanding",
+      "amber",
+      "cell"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "x4",
+   "The Cash Flow Center shows cash in, cash out by category, and net cash flow, month by month.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "28 Cash Flow Center",
+    "label": "Cash Flow Center",
+    "hi": [
+     [
+      "Cash In (Revenue)",
+      "Cash in",
+      "green",
+      "cell"
+     ],
+     [
+      "Net Cash Flow",
+      "Net cash flow",
+      "cyan",
+      "cell"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "x4",
+   "Payroll Center works out technician pay, and payroll as a share of revenue.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "29 Payroll Center",
+    "label": "Payroll Center",
+    "hi": [
+     [
+      "TOTAL PAYROLL",
+      "Total payroll",
+      "amber",
+      "row"
+     ],
+     [
+      "PAYROLL % OF REVENUE",
+      "% of revenue",
+      "cyan",
+      "row"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "x4",
+   "Budget Center. Annual revenue, expense, and profit goals versus actuals from the summary.",
+   "Budget Center. Annual revenue, expense, and profit goals versus actuals from the summary.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "30 Budget Center",
+    "label": "Budget Center",
+    "hi": [
+     [
+      "Month",
+      null,
+      "green",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x4",
+   "Inventory Center. Parts, materials, water heaters and fixtures, stock value, usage, and reorder alerts.",
+   "Inventory Center. Parts, materials, water heaters and fixtures, stock value, usage, and reorder alerts.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "31 Inventory Center",
+    "label": "Inventory Center",
+    "hi": [
+     [
+      "Item",
+      null,
+      "amber",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x4",
+   "Vendor Center. Vendor spend and performance over the last twelve months, totals pull from Expense Entry by vendor name.",
+   "Vendor Center. Vendor spend and performance over the last twelve months, totals pull from Expense Entry by vendor name.",
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "32 Vendor Center",
+    "text": "[Vendor Center]",
+    "size": 64,
+    "hi": [
+     [
+      "Vendor",
+      null,
+      "cyan",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x5",
+   "Part five of six: sheets thirty-three to forty.",
+   null,
+   {
+    "t": "chapter",
+    "eyebrow": "Elite · part 5 of 6",
+    "num": "33–40",
+    "text": "Part [5]",
+    "items": [
+     "Purchase Order Center",
+     "KPI Scorecard",
+     "Business Health Score",
+     "Profit Leak Detector",
+     "Forecasting Center",
+     "Benchmarking Center",
+     "Customer Analytics Center",
+     "Monthly Executive Review"
+    ]
+   }
+  ],
+  [
+   "x5",
+   "Purchase Order Center: PO Number, Vendor, Item or Description and Amount.",
+   "Purchase Order Center: PO Number, Vendor, Item or Description and Amount.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "33 Purchase Order Center",
+    "label": "Purchase Order Center",
+    "hi": [
+     [
+      "PO Number",
+      null,
+      "blue",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x5",
+   "KPI Scorecard. Live snapshot of the 13 metrics that run this business, pulled from every operating sheet.",
+   "K P I Scorecard. Live snapshot of the 13 metrics that run this business, pulled from every operating sheet.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "34 KPI Scorecard",
+    "label": "KPI Scorecard",
+    "hi": [
+     [
+      "KPI",
+      null,
+      "green",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x5",
+   "Business Health Score. Zero-to-100 composite score across profitability, cash, retention, membership, technician efficiency, collections, and tax readiness.",
+   "Business Health Score. Zero-to-100 composite score across profitability, cash, retention, membership, technician efficiency, collections, and tax readiness.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "35 Business Health Score",
+    "label": "Business Health Score",
+    "hi": [],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x5",
+   "Then there's the Profit Leak Detector™.",
+   "Then there's the Profit Leak Detector.",
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "36 Profit Leak Detector",
+    "text": "The Profit Leak [Detector™]",
+    "cam": "full",
+    "minW": 0.7,
+    "hi": [
+     [
+      "LOW-MARGIN JOB CATEGORIES",
+      "Low-margin jobs",
+      "amber",
+      "cell",
+      0.22
+     ],
+     [
+      "UNDERPERFORMING TECHNICIANS",
+      "Underperforming techs",
+      "red",
+      "cell",
+      0.4
+     ],
+     [
+      "OTHER LEAK SIGNALS",
+      "Churn · AR · reorders · callbacks",
+      "red",
+      "cell",
+      0.62
+     ],
+     [
+      "Recommended Action",
+      "Recommended action",
+      "green",
+      "cell",
+      0.86
+     ]
+    ]
+   }
+  ],
+  [
+   "x5",
+   "It automatically flags low-margin job categories, and underperforming technicians.",
+   null,
+   null
+  ],
+  [
+   "x5",
+   "Plus membership churn, aging receivables, reorder alerts and your overall callback rate.",
+   null,
+   null
+  ],
+  [
+   "x5",
+   "Each with a possible cause, and a recommended action.",
+   null,
+   null
+  ],
+  [
+   "x5",
+   "Forecasting Center. 12-month forward revenue, profit, and membership forecast from your last twelve months.",
+   "Forecasting Center. 12-month forward revenue, profit, and membership forecast from your last twelve months.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "37 Forecasting Center",
+    "label": "Forecasting Center",
+    "hi": [
+     [
+      "Metric",
+      null,
+      "blue",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x5",
+   "Benchmarking Center. Your KPIs versus typical residential plumbing contractor planning references.",
+   "Benchmarking Center. Your K P Is versus typical residential plumbing contractor planning references.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "38 Benchmarking Center",
+    "label": "Benchmarking Center",
+    "hi": [
+     [
+      "KPI",
+      null,
+      "green",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x5",
+   "Customer Analytics Center: Rank, Customer, Lifetime Revenue and percent of Total.",
+   "Customer Analytics Center: Rank, Customer, Lifetime Revenue and percent of Total.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "39 Customer Analytics Center",
+    "label": "Customer Analytics Center",
+    "hi": [
+     [
+      "Rank",
+      null,
+      "amber",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x5",
+   "And a Monthly Executive Review that generates your recommended actions for you.",
+   null,
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "40 Monthly Executive Review",
+    "text": "Your month, [reviewed for you.]",
+    "hi": [
+     [
+      "RECOMMENDED ACTIONS",
+      "Auto-generated actions",
+      "green",
+      "block"
+     ]
+    ],
+    "minW": 0.8
+   }
+  ],
+  [
+   "x6",
+   "Part six of six: sheets forty-one to forty-eight.",
+   null,
+   {
+    "t": "chapter",
+    "eyebrow": "Elite · part 6 of 6",
+    "num": "41–48",
+    "text": "Part [6]",
+    "items": [
+     "Strategic Planner",
+     "Executive Reports",
+     "Tax Setup",
+     "Tax Reserve & VAT Center",
+     "Deduction Maximizer",
+     "Tax Readiness Center",
+     "Accountant Summary",
+     "Glossary"
+    ]
+   }
+  ],
+  [
+   "x6",
+   "Strategic Planner. Annual revenue, profit, hiring, and truck expansion goals versus your last twelve months run-rate.",
+   "Strategic Planner. Annual revenue, profit, hiring, and truck expansion goals versus your last twelve months run-rate.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "41 Strategic Planner",
+    "label": "Strategic Planner",
+    "hi": [
+     [
+      "Goal",
+      null,
+      "blue",
+      "row",
+      0.35
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x6",
+   "Executive Reports. Condensed print-ready summaries for Owner, Partner, Management, and Investor audiences.",
+   "Executive Reports. Condensed print-ready summaries for Owner, Partner, Management, and Investor audiences.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "42 Executive Reports",
+    "label": "Executive Reports",
+    "hi": [],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x6",
+   "Then the part every contractor dreads. Taxes.",
+   null,
+   {
+    "t": "zero",
+    "eyebrow": "The part every contractor dreads",
+    "big": "TAXES.",
+    "impact": true,
+    "fxAt": 0.2,
+    "fx": "shockred"
+   }
+  ],
+  [
+   "x6",
+   "Tax Setup holds your country, currency and tax-rate presets.",
+   "Tax Setup holds your country, currency and tax-rate presets.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "43 Tax Setup",
+    "label": "Tax Setup",
+    "hi": [],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x6",
+   "The Tax Reserve Center works out a recommended reserve, and how much of it you've funded.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "44 Tax Reserve & VAT Center",
+    "label": "Tax Reserve",
+    "hi": [
+     [
+      "Recommended Tax Reserve $",
+      "Recommended reserve",
+      "green",
+      "row"
+     ],
+     [
+      "Reserve Funded %",
+      "Funded %",
+      "cyan",
+      "row"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "x6",
+   "The Deduction Maximizer groups the year's expenses by category, to review with your accountant.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "45 Deduction Maximizer",
+    "label": "Deduction Maximizer",
+    "hi": [
+     [
+      "Typically Deductible?",
+      "Deductible?",
+      "green",
+      "cell"
+     ],
+     [
+      "Total Deductible Expenses",
+      "Total",
+      "cyan",
+      "row"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "x6",
+   "The Tax Readiness Center tracks due dates, and scores how ready your records are.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "46 Tax Readiness Center",
+    "label": "Tax Readiness",
+    "hi": [
+     [
+      "TAX CALENDAR",
+      "Due dates",
+      "amber",
+      "block"
+     ],
+     [
+      "READINESS SCORE (out of 100)",
+      "Readiness score",
+      "green",
+      "row"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "x6",
+   "The Accountant Summary is a print-ready package to hand over at filing time.",
+   null,
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "47 Accountant Summary",
+    "label": "Accountant Summary",
+    "hi": [
+     [
+      "Ready to send",
+      "Package status",
+      "green",
+      "cell"
+     ],
+     [
+      "PROFIT & LOSS SUMMARY",
+      "P&L summary",
+      "blue",
+      "block"
+     ]
+    ],
+    "d": null
+   }
+  ],
+  [
+   "x6",
+   "And a Glossary, with a plain-English definition for every term.",
+   "And a Glossary, with a plain-English definition for every term.",
+   {
+    "t": "hero",
+    "ed": "elite",
+    "tab": "48 Glossary",
+    "text": "[Glossary]",
+    "size": 64,
+    "hi": [],
+    "minW": 0.85
+   }
+  ],
+  [
+   "guide",
+   "And you're never left guessing how to use it.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Every edition comes with a Quick Start: the exact steps for your first session, your first week, and your first thirty days.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "And a full Field Guide that walks through every sheet, screen by screen.",
+   null,
+   null
+  ],
+  [
+   "guide",
+   "Thirty-seven pages for Essential. Fifty-four for Elite. Including what to do when a number looks wrong.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "Now, honest answers to the questions plumbers ask.",
+   null,
+   {
+    "t": "slam",
+    "text": "Honest answers to [real questions.]",
+    "size": 92
+   }
+  ],
+  [
+   "obj",
+   "“My dispatch software already has reports.” Good. Keep it.",
+   "My dispatch software already has reports. Good. Keep it.",
+   {
+    "t": "qa",
+    "q": "My dispatch software already has reports.",
+    "eyebrow": "Honest answer 1 of 5",
+    "liftAt": 0.7,
+    "chips": [
+     "Keep your dispatch app",
+     "Job margin by category",
+     "Tech scorecards",
+     "Cash flow",
+     "Tax reserve"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "This sits next to it, and pulls the whole business into one view: margins, techs, cash and taxes.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“I'm not an Excel person.” You don't need to be.",
+   "I'm not an Excel person. You don't need to be.",
+   {
+    "t": "qa",
+    "q": "I'm not an Excel person.",
+    "eyebrow": "Honest answer 2 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "Formulas built in",
+     "Elite: formula cells locked",
+     "You enter jobs + expenses",
+     "Quick Start included"
+    ]
+   }
+  ],
+  [
+   "obj",
+   "Every calculation is already built. In Elite, the formula cells are locked, so you can't break them. You just enter jobs and expenses.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“I'm a one-truck operation.” Then start with Essential.",
+   "I'm a one-truck operation. Then start with Essential.",
+   {
+    "t": "qa",
+    "q": "I'm a one-truck operation.",
+    "eyebrow": "Honest answer 3 of 5",
+    "liftAt": 0.6,
+    "chips": [
+     "9 sheets",
+     "Jobs + expenses",
+     "Dashboard + tax set-aside",
+     "Go Elite when you grow"
+    ],
+    "big": "Start with Essential.",
+    "bigSize": 80
+   }
+  ],
+  [
+   "obj",
+   "Eight sheets: jobs, expenses, a dashboard and a tax set-aside. Move up to Elite when you add techs.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Will it stop my callbacks?” No tool can promise that.",
+   "Will it stop my callbacks? No tool can promise that.",
+   {
+    "t": "qa",
+    "q": "Will it stop my callbacks?",
+    "eyebrow": "Honest answer 4 of 5",
+    "liftAt": 0.55,
+    "chips": [
+     "Every callback logged",
+     "Rework cost shown",
+     "You decide the fix"
+    ],
+    "answer": "No tool can promise that."
+   }
+  ],
+  [
+   "obj",
+   "It logs every callback and its rework cost, so you can see the pattern, and decide what to fix.",
+   null,
+   null
+  ],
+  [
+   "obj",
+   "“Is it a subscription?” No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   "Is it a subscription? No. One payment. No macros. Every calculation is a plain formula, and your numbers stay in your file.",
+   {
+    "t": "qa",
+    "q": "Is it a subscription?",
+    "eyebrow": "Honest answer 5 of 5",
+    "liftAt": 0.25,
+    "big": "No.",
+    "bigSize": 150,
+    "chips": [
+     "One payment",
+     "No macros",
+     "Plain formulas"
+    ],
+    "foot": "Your numbers stay in your file."
+   }
+  ],
+  [
+   "offer",
+   "So, which edition fits you?",
+   null,
+   null
+  ],
+  [
+   "offer",
+   "Essential, $97: job revenue, expenses, a dashboard, a health snapshot, and a tax set-aside estimate.",
+   "Essential, ninety-seven dollars. Job revenue, expenses, a dashboard, a health snapshot, and a tax set-aside estimate.",
+   null
+  ],
+  [
+   "offer",
+   "Elite, $197: techs and dispatch, callbacks, estimating, memberships, marketing, collections, inventory and forecasting.",
+   "Elite, one ninety-seven. Techs and dispatch, callbacks, estimating, memberships, marketing, collections, inventory and forecasting.",
+   null
+  ],
+  [
+   "offer",
+   "Or Complete, $249: both workbooks, both Field Guides, both Quick Starts. Start simple, grow into the full system.",
+   "Or Complete, two forty-nine. Both workbooks, both Field Guides, both Quick Starts. Start simple, and grow into the full system.",
+   null
+  ],
+  [
+   "offer",
+   "One-time payment. And a 60-day money-back guarantee, no questions asked.",
+   "One-time payment. And a sixty-day money-back guarantee. No questions asked.",
+   null
+  ],
+  [
+   "cta",
+   "Here's what to do right now.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Pick your edition below this video.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Open it, enter this month's jobs, and see what each one actually kept.",
+   null,
+   null
+  ],
+  [
+   "cta",
+   "Because every month you wait is another month of guessing.",
+   null,
+   null
+  ],
+  [
+   "end",
+   "P.S. Your invoices show what you charged.",
+   "P S. Your invoices show what you charged.",
+   null
+  ],
+  [
+   "end",
+   "ProfitIQS shows you what you kept.",
+   "Profit IQS shows you what you kept.",
+   null
+  ]
  ]
 }

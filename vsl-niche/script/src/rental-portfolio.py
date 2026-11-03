@@ -62,7 +62,7 @@ D = {
  "objs": [
   obj_app("My property manager sends me reports.", "NOI, cap rate, cash-on-cash, DSCR and taxes", ["Keep their reports", "NOI per property", "Cap rate + cash-on-cash", "DSCR", "Depreciation estimate"]),
   obj_excel("rent and expenses", locked=True),
-  {"q": "I only own two properties.", "a1": "Then start with Essential.", "a2": "Eleven sheets: properties, income, expenses, performance and cap rate, a dashboard and a tax set-aside. Move up to Elite as you scale.", "big": "Start with Essential.", "bigSize": 80, "chips": ["11 sheets", "Income + expenses", "Cap rate per property", "Go Elite as you scale"]},
+  {"q": "I only own two properties.", "a1": "Then start with Essential.", "a2": "Ten sheets: properties, income, expenses, performance and cap rate, a dashboard and a tax set-aside. Move up to Elite as you scale.", "big": "Start with Essential.", "bigSize": 80, "chips": ["10 sheets", "Income + expenses", "Cap rate per property", "Go Elite as you scale"]},
   {"q": "Will it get my refinance approved?", "a1": "No tool can promise that.", "a2": "It shows your DSCR, equity and a refinance scenario, so you walk in knowing your numbers. The lender still decides.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["DSCR calculated", "Refinance scenario", "The lender decides"]},
  ],
  "offer_ess": "properties, income, expenses, property performance and cap rate, a dashboard and a tax set-aside estimate",

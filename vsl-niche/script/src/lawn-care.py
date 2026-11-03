@@ -63,7 +63,7 @@ D = {
  "objs": [
   obj_app("My scheduling app already has reports.", "routes, programs, crews, cash and taxes", ["Keep your scheduling app", "Route profit", "Program margins", "Crew performance", "Tax reserve"]),
   obj_excel("visits and expenses"),
-  {"q": "I'm a one-truck operation.", "a1": "Then start with Essential.", "a2": "Nine sheets: visits, expenses, a dashboard and a tax set-aside. Move up to Elite when you add crews and routes.", "big": "Start with Essential.", "bigSize": 80, "chips": ["9 sheets", "Visits + expenses", "Dashboard + tax set-aside", "Go Elite when you grow"]},
+  {"q": "I'm a one-truck operation.", "a1": "Then start with Essential.", "a2": "Eight sheets: visits, expenses, a dashboard and a tax set-aside. Move up to Elite when you add crews and routes.", "big": "Start with Essential.", "bigSize": 80, "chips": ["8 sheets", "Visits + expenses", "Dashboard + tax set-aside", "Go Elite when you grow"]},
   {"q": "Will it get my programs renewed?", "a1": "No tool can promise that.", "a2": "It shows every contract, cancellations, and at-risk customers, so you can reach them before the season starts.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["Contracts tracked", "At-risk customers listed", "You reach out first"]},
  ],
  "offer_ess": "service visits, expenses, a dashboard, a health snapshot and a tax set-aside estimate",

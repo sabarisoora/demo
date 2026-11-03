@@ -3,7 +3,8 @@ import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { Burst, Glitch, LightLeak, Shockwave, SpaceBg, Streaks } from "./fx";
 import { ap, at, C, cl, ez, FONT, M, pop, S, V, VIS, Win } from "./lib";
 import { Beat, NO_BEAT, Steps, TEMPLATES } from "./T";
-import { Counter, Cover, DocPage, Eyebrow, Glass, Icon, LogoMark, PhotoCard, Pop, Slam, Wordmark } from "./ui";
+import { Counter, Cover, DocPage, Eyebrow, Glass, Icon, LightCtx, LogoMark, PhotoCard, Pop, Slam, Wordmark } from "./ui";
+import { LightBg } from "./fx";
 
 const BG: [RegExp, string, string, boolean][] = [
   [/^pain|^cost/, "#7f1d1d", "#1e3a8a", true],
@@ -53,9 +54,11 @@ export const Flow: React.FC<{ win: Win }> = ({ win }) => {
   const stepItems = sheets.filter((b) => b.v.label).map((b) => { const [a, e] = span(b); return [a + 3, e, b.v.label as string, b.v.d as string | undefined] as [number, number, string, string?]; });
   const s0 = sheets.length ? span(sheets[0])[0] : 0;
   const s1 = sheets.length ? span(sheets[sheets.length - 1])[1] : 0;
+  const light = ((S as any).themes ?? {})[win.name] === "light";
   return (
+    <LightCtx.Provider value={light}>
     <AbsoluteFill>
-      <SpaceBg hue={h1} hue2={h2} grid={grid} />
+      {light ? <LightBg /> : <SpaceBg hue={h1} hue2={h2} grid={grid} />}
       {bl.map((b, k) => {
         const [a, e] = span(b);
         if (fr < a - 2 || fr > e + 12) return null;
@@ -76,6 +79,7 @@ export const Flow: React.FC<{ win: Win }> = ({ win }) => {
       })}
       {stepItems.length > 1 && fr >= s0 - 6 && fr <= s1 + 6 && <AbsoluteFill style={{ opacity: 1 - ap(fr, s1, 8) }}><Steps items={stepItems} /></AbsoluteFill>}
     </AbsoluteFill>
+    </LightCtx.Provider>
   );
 };
 
@@ -173,8 +177,10 @@ export const Guide: React.FC<{ win: Win }> = ({ win }) => {
   const fe = M.fg.ess, fx = M.fg.elite;
   const q = (k: string, n: number) => `${k}/${D[k][Math.min(n, D[k].length - 1)]}`;
   return (
+    <LightCtx.Provider value={true}>
+    
     <AbsoluteFill>
-      <SpaceBg hue="#1d4ed8" hue2="#7c3aed" grid={false} />
+      <LightBg />
       <Beat a={L[0].s - 3} b={L[1].s - 4} exit="zoom">
         <div style={{ position: "absolute", top: 90, width: "100%", display: "flex", justifyContent: "center" }}>
           <Slam text="Never left [guessing.]" at={L[0].s} size={84} />
@@ -202,8 +208,8 @@ export const Guide: React.FC<{ win: Win }> = ({ win }) => {
             const s = pop(fr, a - (i === 0 ? 0 : 6), 200, 16);
             return (
               <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 18, opacity: Math.min(1, s * 1.5), transform: `translateY(${(1 - s) * 120}px) scale(${on ? 1.06 : 1})` }}>
-                <DocPage src={src as string} w={360} style={{ boxShadow: on ? `0 0 0 4px ${C.cyan}, 0 0 60px ${C.cyan}88` : undefined }} />
-                <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 36, color: on ? C.cyan : C.white }}>{label as string}</div>
+                <DocPage src={src as string} w={360} style={{ boxShadow: on ? `0 0 0 4px ${C.blue}, 0 0 60px ${C.blue}66` : undefined }} />
+                <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 36, color: on ? C.blue : C.ink }}>{label as string}</div>
               </div>
             );
           })}
@@ -219,7 +225,7 @@ export const Guide: React.FC<{ win: Win }> = ({ win }) => {
             </div>
           );
         })}
-        <AbsoluteFill style={{ background: "radial-gradient(ellipse at center, rgba(5,8,22,0.85) 30%, rgba(5,8,22,0.4) 80%)" }} />
+        <AbsoluteFill style={{ background: "radial-gradient(ellipse at center, rgba(238,244,255,0.9) 30%, rgba(238,244,255,0.45) 80%)" }} />
         <div style={{ position: "absolute", top: 60, width: "100%", display: "flex", justifyContent: "center" }}>
           <Eyebrow at={L[2].s}>Field Guide · screen by screen</Eyebrow>
         </div>
@@ -254,10 +260,10 @@ export const Guide: React.FC<{ win: Win }> = ({ win }) => {
                 <div style={{ position: "absolute", left: 0, top: 0 }}><DocPage src={g.cover} w={400} /></div>
               </div>
               <div style={{ marginTop: 34, textAlign: "center" }}>
-                <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 110, color: C.white, lineHeight: 1 }}>
-                  <Counter to={g.n} at={g.a + 4} len={22} /> <span style={{ fontSize: 46, color: C.cyan }}>pages</span>
+                <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 110, color: C.ink, lineHeight: 1 }}>
+                  <Counter to={g.n} at={g.a + 4} len={22} /> <span style={{ fontSize: 46, color: C.blue }}>pages</span>
                 </div>
-                <div style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 30, color: C.muted }}>{g.label}</div>
+                <div style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 30, color: C.ink2 }}>{g.label}</div>
               </div>
             </div>
           );
@@ -271,6 +277,7 @@ export const Guide: React.FC<{ win: Win }> = ({ win }) => {
       </Beat>
       <LightLeak at={L[0].s + 2} color="rgba(167,139,250,0.5)" />
     </AbsoluteFill>
+    </LightCtx.Provider>
   );
 };
 

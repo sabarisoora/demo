@@ -59,7 +59,7 @@ D = {
  "objs": [
   obj_app("My roofing software already tracks bids and jobs.", "job costing, crews, receivables, cash and taxes", ["Keep your roofing software", "Job costing", "Crew performance", "AR aging", "Tax reserve"]),
   obj_excel(locked=True),
-  {"q": "I run one crew. I'm too small for this.", "a1": "Then start with Essential.", "a2": "Nine sheets: jobs, expenses, a dashboard and a tax set-aside. Move up to Elite when you add crews.", "big": "Start with Essential.", "bigSize": 80, "chips": ["9 sheets", "Jobs + expenses", "Dashboard + tax set-aside", "Go Elite when you grow"]},
+  {"q": "I run one crew. I'm too small for this.", "a1": "Then start with Essential.", "a2": "Eight sheets: jobs, expenses, a dashboard and a tax set-aside. Move up to Elite when you add crews.", "big": "Start with Essential.", "bigSize": 80, "chips": ["8 sheets", "Jobs + expenses", "Dashboard + tax set-aside", "Go Elite when you grow"]},
   {"q": "Will it make my bids more accurate?", "a1": "No tool can promise that.", "a2": "Job Costing puts every job's real cost next to its contract, so you can see where your bids missed, and adjust.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["Real cost vs. contract", "Low-margin jobs flagged", "You adjust the bid"]},
  ],
  "offer_ess": "job revenue, expenses, a dashboard, a health snapshot and a tax set-aside estimate",
