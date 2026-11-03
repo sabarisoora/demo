@@ -103,8 +103,8 @@ export const SpaceBg: React.FC<{ hue?: string; hue2?: string; grid?: boolean }> 
 export const LightBg: React.FC = () => {
   const fr = useCurrentFrame();
   return (
-    <AbsoluteFill style={{ background: `radial-gradient(1500px 900px at ${900 + Math.sin(fr / 90) * 120}px 300px, #ffffff 0%, #eef4ff 55%, #dbe7fb 100%)` }}>
-      <AbsoluteFill style={{ backgroundImage: "radial-gradient(rgba(37,99,235,0.14) 1.6px, transparent 1.6px)", backgroundSize: "36px 36px", backgroundPosition: `0 ${-fr * 0.6}px`, maskImage: "radial-gradient(ellipse at center, black 20%, transparent 75%)" }} />
+    <AbsoluteFill style={{ background: "#ffffff" }}>
+      <AbsoluteFill style={{ backgroundImage: "radial-gradient(rgba(15,23,42,0.07) 1.5px, transparent 1.5px)", backgroundSize: "40px 40px", backgroundPosition: `0 ${-fr * 0.5}px` }} />
     </AbsoluteFill>
   );
 };

@@ -21,6 +21,8 @@ def etab(k):
     return hit[0]
 
 name = D["name"]; plain = name.replace("™", "")
+NI = sorted(x[:-3] for x in os.listdir(f"{ROOT}/script/src") if not x.startswith("_")).index(slug)
+def V(*opts): return opts[NI % len(opts)]
 ne, nx = D["n_ess"], D["n_elite"]
 L = []
 def add(scene, lines):
@@ -32,15 +34,15 @@ def add(scene, lines):
 add("hook", D["hook"])
 add("pain", D["pain"])
 add("turn", [
-    [D.get("turn1", "That's not a work-ethic problem. It's a visibility problem."), {"t": "strike", "from": D.get("strike", "Work ethic"), "to": "Visibility."}],
+    [D.get("turn1", V("That's not a work-ethic problem. It's a visibility problem.", "You're not short on effort. You're short on visibility.", "The problem isn't how hard you work. It's what you can't see.")), {"t": "strike", "from": D.get("strike", "Work ethic"), "to": "Visibility."}],
     [D["turn2"], {"t": "converge", "text": "You already [have the data.]", "labels": D["labels"], "box": "One place."}],
-    ["You just don't have one place that turns it into decisions."],
+    [V("You just don't have one place that turns it into decisions.", "What's missing is one place that turns it into answers.", "It just isn't in one place, turned into decisions.")],
 ])
 add("reveal", [
-    [f"That's why we built the {name}.", None, f"That's why we built the {D.get('say_name', plain)}."],
-    [f"A ready-built Excel system, made only for {D['aud']}."],
-    ["Formulas, dashboards and reports are already built in. Tax set-aside too."],
-    ["And it ships with sample data, so every dashboard works the moment you open it."],
+    [V("That's why we built the {}.", "So we built the {}.", "Which is exactly why we built the {}.").format(name), None, V("That's why we built the {}.", "So we built the {}.", "Which is exactly why we built the {}.").format(D.get('say_name', plain))],
+    [V("A ready-built Excel system, made only for {}.", "A ready-to-use Excel system, built only for {}.", "An Excel system built from the ground up for {}.").format(D['aud'])],
+    [V("Formulas, dashboards and reports are already built in. Tax set-aside too.", "The formulas, dashboards and reports are already done, tax set-aside included.", "Every formula, dashboard and report is already built, including your tax set-aside.")],
+    [V("And it ships with sample data, so every dashboard works the moment you open it.", "It comes loaded with sample data, so you see every dashboard working on day one.", "And the sample data is already in, so every dashboard is live the moment you open it.")],
 ])
 add("who", [[w] for w in D["who_lines"]])
 # ---- every sheet, in workbook order ----
@@ -113,31 +115,43 @@ def labels(ed, tab):
         if t.lower() in (x.lower() for x in out) or t.lower() == nice(tab).lower(): continue
         out.append(t)
     return out
+AUTO = []
+ACR = {"KPI": "K P I", "ROI": "R O I", "AR": "A R", "MRR": "M R R", "ARR": "A R R", "RO": "R O", "ADR": "A D R", "NOI": "N O I", "DSCR": "D S C R", "HOA": "H O A", "SKU": "S K U", "RevPAR": "Rev Par", "VAT": "VAT", "AOV": "A O V"}
+def sayify(t):
+    t = t.replace("&", "and")
+    return re.sub(r"\b(" + "|".join(sorted(ACR, key=len, reverse=True)) + r")\b", lambda m: ACR[m.group(1)], t)
+HAND = runpy.run_path(f"{ROOT}/script/src/_lines.py")["LINES"].get(slug, {})
+NOMAP = {"lawn-care"}
+GLOSS = ["And a Glossary, with a plain-English definition for every term.", "Last, a Glossary that explains every term in plain English.", "And a Glossary, so no term ever leaves you guessing."]
 def auto_line(ed, tab, k):
     nm = nice(tab)
-    d = DESC.get(f"{ed}::{tab}", {}).get("desc", "")
+    AUTO.append((ed, tab))
     low = nm.lower()
-    if low == "start here": text = "Start Here shows how the workbook is organized, and where to begin."
-    elif low == "glossary": text = "And a Glossary, with a plain-English definition for every term."
+    hand = HAND.get(tab)
+    if low == "start here":
+        text = "Start Here gives you the quick-start steps, so you know exactly where to begin." if ed == "ess" else ("Elite opens with its own Start Here, and a map of every sheet." if slug not in NOMAP else "Elite opens with its own Start Here, so you know where to begin.")
+    elif low == "glossary": text = GLOSS[NI % 3]
     elif low == "changelog": text = "Plus a Changelog of what changed in each version."
-    elif low == "tax setup": text = "Tax Setup holds your country, currency and tax-rate presets."
-    elif d and len(d) > 35 and not BAD_DESC.search(d) and "|" not in d: text = f"{nm}. {clean_desc(d)}."
-    else:
-        hs = [h for h in headers(ed, tab) if h.lower() != nm.lower()][:4]
-        if len(hs) < 3: hs = labels(ed, tab)[:4]
-        hs = [h.lower() if h.isupper() else h for h in hs]
-        hs = [re.sub(r"\s*\([^)]*\)", "", h).replace(" / ", " or ").replace("% of", "percent of") for h in hs]
-        text = f"{nm}: " + (", ".join(hs[:-1]) + " and " + hs[-1] if len(hs) >= 2 else "every number for this part of the business, in one place") + "."
+    elif low == "tax setup": text = "Tax Setup holds your country, currency and tax-rate presets, set once."
+    elif hand: text = hand[0]
+    else: raise SystemExit(f"no hand-written line for {ed}::{tab}")
     hs = headers(ed, tab)
-    hi = [[hs[0], None, ["blue", "green", "amber", "cyan"][k % 4], "row", 0.35]] if hs else []
+    col = ["blue", "green", "amber", "cyan"][k % 4]
+    hk = None
+    if hand and hand[1]:
+        rows = [r[0] for r in META["sheets"][f"{ed}::{tab}"]["rows"]]
+        ws = hand[1].split()
+        for c in [hand[1], " ".join(ws[:2]), " ".join(ws[:1])]:
+            if len(c) >= 3 and any(c in r or c.lower() in r.lower() for r in rows): hk = c; break
+    if hk: hi = [[hk, None, col, "cell", 0.45]]
+    else: hi = [[hs[0], None, col, "row", 0.35]] if hs else []
     if low == "start here":
         return [text, {"t": "sheet", "ed": ed, "tab": tab, "label": nm, "cam": "full", "zoom": False, "hi": []}, text]
     if k % 4 == 3:
         v = {"t": "hero", "ed": ed, "tab": tab, "text": f"[{nm}]", "size": 64, "hi": hi, "minW": 0.85}
     else:
         v = {"t": "sheet", "ed": ed, "tab": tab, "label": nm, "hi": hi, "minW": 0.85}
-    say = text.replace("&", "and").replace("P and L", "P and L").replace("KPI", "K P I").replace("ROI", "R O I").replace("AR ", "A R ").replace("MRR", "M R R").replace("ARR", "A R R")
-    return [text, v, say]
+    return [text, v, sayify(text)]
 
 # featured lines written per niche, keyed by exact tab: list of [sub, v, say] (continuation lines follow)
 FEAT = {}
@@ -180,24 +194,24 @@ def tour(ed, tabs, start_k=0):
 
 ve, vx = len(META["ess"]), len(META["elite"])
 he, hx = INV["ess_hidden"], INV["elite_hidden"]
-ess_cover = f"Let me show you what's inside. Start with Essential: {words(ve)} sheets you work in" + (f", plus {hidden_phrase(he)} behind the scenes." if he else ".")
+ess_cover = V("Let me show you what's inside.", "Here's what's inside.", "Let's open it up.") + f" Start with Essential: {words(ve)} sheets you work in" + (f", plus {hidden_phrase(he)} behind the scenes." if he else ".")
 add("ess", [
     [ess_cover, {"t": "cover", "ed": "ess", "n": ve, "sub": (f"+ {len(he)} working behind the scenes" if he else None)}],
     [D["ess_wall"], {"t": "wall", "ed": "ess", "text": "You enter the facts. [It does the math.]", "inputs": D["inputs"]}],
-    ["Now every sheet, in order.", {"t": "slam", "text": "Every sheet, [in order.]", "size": 96}],
+    [V("Now every sheet, in order.", "Here's every sheet, one by one.", "Let's go through every sheet, in order."), {"t": "slam", "text": "Every sheet, [in order.]", "size": 96}],
 ] + tour("ess", META["ess"]))
 elite_cover = f"Now, Elite. {cap(words(vx))} sheets you work in" + (f", plus {hidden_phrase(hx)} working behind the scenes. " if hx else ". ") + D["elite_tag"]
 add("elite", [
     [elite_cover, {"t": "cover", "ed": "elite", "n": vx, "sub": (f"+ {len(hx)} working behind the scenes" if hx else None), "fx": "shock", "fxAt": 0.3}],
     [D["elite_wall"], {"t": "wall", "ed": "elite", "tags": False, "text": f"[{vx} sheets,] {D.get('wall_text', 'one operating system.')}"}],
-    ["Let's walk through every one of them.", {"t": "slam", "text": "Every sheet. [In order.]", "size": 96}],
+    [V("Let's walk through every one of them.", "Here's every one, in order.", "Let's go through all of them."), {"t": "slam", "text": "Every sheet. [In order.]", "size": 96}],
 ])
 tabs = META["elite"]
 G = 8
 groups = [tabs[i:i + G] for i in range(0, len(tabs), G)]
 if len(groups) > 1 and len(groups[-1]) < 4:
     _last = groups.pop(); groups[-1] = groups[-1] + _last
-themes = {"ess": "light", "guide": "light"}
+themes = {"ess": "light", "guide": "light", "fix": "light", "turn": "light"}
 taxfirst = next((t for t in tabs if re.search(r"tax setup|tax reserve", t, re.I)), None)
 idx = 0
 who_dreads = D.get("dreads", "owner")
@@ -223,24 +237,24 @@ if FX:
         return h[0]
     for _, k in FX: ftab(k)
     nfx = words(len(FX))
-    lines = [[f"So let's go back to every problem from the start of this video, and the sheet that answers it.", {"t": "fixes", "text": "Every problem. [Its answer.]", "items": FX}]]
+    lines = [[V("So let's go back to every problem from the start of this video, and the sheet that answers it.", "Now, remember every problem from the start? Here's the sheet that answers each one.", "Let's go back to every problem we started with, and match each one to its answer."), {"t": "fixes", "text": "Every problem. [Its answer.]", "items": FX}]]
     lines += [[f"{p}? {k}."] for p, k in FX]
-    lines.append([f"{cap(nfx)} problems. {cap(nfx)} answers. All in one workbook."])
+    lines.append([V(f"{cap(nfx)} problems. {cap(nfx)} answers. All in one workbook.", f"{cap(nfx)} problems, {nfx} answers, one workbook.", f"Every one of those {nfx} problems, answered in one workbook.")])
     add("fix", lines)
 
 # ---- guides (shared) ----
 ge, gx = D["guide"]
 add("guide", [
-    ["And you're never left guessing how to use it."],
-    ["Every edition comes with a Quick Start: the exact steps for your first session, your first week, and your first thirty days."],
-    ["And a full Field Guide that walks through every sheet, screen by screen."],
+    [V("And you're never left guessing how to use it.", "And you won't be left guessing how to use it.", "And you're never on your own with it.")],
+    [V("Every edition comes with a Quick Start: the exact steps for your first session, your first week, and your first thirty days.", "Every edition includes a Quick Start: what to do in your first session, your first week, and your first thirty days.", "Each edition has a Quick Start, with the steps for your first session, your first week, and your first thirty days.")],
+    [V("And a full Field Guide that walks through every sheet, screen by screen.", "Plus a full Field Guide that explains every sheet, screen by screen.", "And a Field Guide that takes you through every sheet, one screen at a time.")],
     [f"{cap(words(ge))} pages for Essential. {cap(words(gx))} for Elite. Including what to do when a number looks wrong."],
 ])
 
 # ---- objections ----
 objs = D["objs"]
 n_obj = len(objs) + 1
-add("obj", [[D.get("obj_intro", f"Now, honest answers to the questions {D['people']} ask."), {"t": "slam", "text": "Honest answers to [real questions.]", "size": 92}]])
+add("obj", [[D.get("obj_intro", V(f"Now, honest answers to the questions {D['people']} ask.", f"Now, the questions {D['people']} ask, answered honestly.", f"Let's answer the real questions {D['people']} ask.")), {"t": "slam", "text": "Honest answers to [real questions.]", "size": 92}]])
 for k, o in enumerate(objs):
     v = {"t": "qa", "q": o["q"], "eyebrow": f"Honest answer {k + 1} of {n_obj}", "liftAt": o.get("liftAt", 0.6), "chips": o["chips"]}
     for key in ("big", "bigSize", "answer", "foot", "fine"):
@@ -252,13 +266,13 @@ add("obj", [[f"“Is it a subscription?” No. One payment. {macro}", {"t": "qa"
 
 # ---- offer / cta / end (shared) ----
 add("offer", [
-    ["So, which edition fits you?"],
+    [V("So, which edition fits you?", "So which edition is right for you?", "Now, which edition fits your business?")],
     [f"Essential, $97: {D['offer_ess']}.", None, f"Essential, ninety-seven dollars. {cap(D['offer_ess'])}."],
     [f"Elite, $197: {D['offer_elite']}.", None, f"Elite, one ninety-seven. {cap(D['offer_elite'])}."],
     ["Or Complete, $249: both workbooks, both Field Guides, both Quick Starts. Start simple, grow into the full system.", None, "Or Complete, two forty-nine. Both workbooks, both Field Guides, both Quick Starts. Start simple, and grow into the full system."],
     ["One-time payment. And a 60-day money-back guarantee, no questions asked.", None, "One-time payment. And a sixty-day money-back guarantee. No questions asked."],
 ])
-add("cta", [["Here's what to do right now."], ["Pick your edition below this video."], [D["cta_line"]], ["Because every month you wait is another month of guessing."]])
+add("cta", [["Here's what to do right now."], [V("Pick your edition below this video.", "Choose your edition below this video.", "Pick the edition that fits, below this video.")], [D["cta_line"]], [V("Because every month you wait is another month of guessing.", "Every month you wait is another month of guessing.", "Because another month without these numbers is another month of guessing.")]])
 add("end", [[f"P.S. {D['ps'][0]}", None, f"P S. {D['ps'][0]}"], ["ProfitIQS shows you " + D["ps"][1], None, "Profit IQS shows you " + D["ps"][1]]])
 
 _w = sum(len((x[2] or x[1]).split()) for x in L)
@@ -273,3 +287,5 @@ spec = {
 os.makedirs(f"{ROOT}/script/n", exist_ok=True)
 json.dump(spec, open(f"{ROOT}/script/n/{slug}.json", "w"), indent=1, ensure_ascii=False)
 print(slug, len(L), "lines")
+if os.environ.get("DUMP_AUTO"):
+    json.dump(AUTO, open(os.environ["DUMP_AUTO"], "w"))

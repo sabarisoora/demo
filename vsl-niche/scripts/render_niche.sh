@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Render one niche VSL end to end (assets + audio must exist): bundle, chunked render, grain/vignette + loudness pass.
+# Render one niche VSL end to end (assets + audio must exist): bundle, chunked render, clean encode + loudness pass.
 # Usage: scripts/render_niche.sh <slug> [chunk frames] [from-frame to-frame (preview)]
 set -euo pipefail
 SLUG=$1; STEP=${2:-1500}
@@ -10,8 +10,9 @@ cat > src/gen/cur.ts <<EOF
 import SPEC from "../../script/n/$SLUG.json";
 import TL from "../../build/$SLUG/timeline.json";
 import CUES from "../../build/$SLUG/cues.json";
+import SYNC from "../../build/$SLUG/sync.json";
 import META from "../../assets/$SLUG/meta.json";
-export { CUES, META, SPEC, TL };
+export { CUES, META, SPEC, SYNC, TL };
 EOF
 rm -rf assets/$SLUG/photos && cp -r public/photos assets/$SLUG/photos
 B=build/$SLUG/bundle; O=build/$SLUG/chunks; mkdir -p $O
@@ -38,7 +39,7 @@ done
 mkdir -p out
 bash scripts/master_audio.sh $SLUG build/$SLUG/master.m4a
 ffmpeg -y -hide_banner -loglevel error -f concat -safe 0 -i $O/list.txt -i build/$SLUG/master.m4a -map 0:v:0 -map 1:a:0 \
-  -vf "vignette=angle=PI/4.6,noise=alls=7:allf=t+u" -c:v libx264 -crf 21 -preset medium -pix_fmt yuv420p \
+  -c:v libx264 -crf 21 -preset medium -pix_fmt yuv420p \
   -c:a copy -shortest -movflags +faststart out/ProfitIQS-$SLUG-VSL.mp4
 ffmpeg -hide_banner -i out/ProfitIQS-$SLUG-VSL.mp4 -af ebur128=peak=true -f null - 2>&1 | grep -E "^\s+(I:|Peak:)" | tail -2 | tr -s ' ' | tr '\n' ' '
 echo; echo "$SLUG RENDERED $(date -u +%H:%M)"

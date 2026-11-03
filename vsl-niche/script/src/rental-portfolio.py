@@ -60,7 +60,7 @@ D = {
  "leak": {"hi": [["Vacancy Losses, Overruns", "Vacancy · overruns · underperformance", "red", "cell", 0.3], ["Property Name", "Every property", "amber", "cell", 0.6]], "minW": 0.8,
           "lines": ["It flags vacancy losses, cost overruns, and underperforming properties.", "Property by property, across the whole portfolio."]},
  "objs": [
-  obj_app("My property manager sends me reports.", "NOI, cap rate, cash-on-cash, DSCR and taxes", ["Keep their reports", "NOI per property", "Cap rate + cash-on-cash", "DSCR", "Depreciation estimate"]),
+  obj_app("My property manager sends me reports.", "NOI, cap rate, cash-on-cash, DSCR and taxes", a1="Keep their reports.", a2="ProfitIQS gives you your own owner-level view, tracked independently: NOI, cap rate, cash-on-cash, DSCR and taxes.", chips=["Keep their reports", "NOI per property", "Cap rate + cash-on-cash", "DSCR", "Depreciation estimate"]),
   obj_excel("rent and expenses", locked=True),
   {"q": "I only own two properties.", "a1": "Then start with Essential.", "a2": "Ten sheets: properties, income, expenses, performance and cap rate, a dashboard and a tax set-aside. Move up to Elite as you scale.", "big": "Start with Essential.", "bigSize": 80, "chips": ["10 sheets", "Income + expenses", "Cap rate per property", "Go Elite as you scale"]},
   {"q": "Will it get my refinance approved?", "a1": "No tool can promise that.", "a2": "It shows your DSCR, equity and a refinance scenario, so you walk in knowing your numbers. The lender still decides.", "answer": "No tool can promise that.", "liftAt": 0.55, "chips": ["DSCR calculated", "Refinance scenario", "The lender decides"]},

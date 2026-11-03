@@ -21,11 +21,18 @@ def ess_tail(dash_kpi=("TOTAL REVENUE", "Revenue"), dash_kpi2=("NET PROFIT", "Ne
 
 def obj_excel(enter="jobs and expenses", locked=False):
     if locked:
-        return {"q": "I'm not an Excel person.", "a1": "You don't need to be.", "a2": f"Every calculation is already built. In Elite, the formula cells are locked, so you can't break them. You just enter {enter}.", "chips": ["Formulas built in", "Elite: formula cells locked", f"You enter {enter}", "Quick Start included"]}
+        return {"q": "I'm not an Excel person.", "a1": "You don't need to be.", "a2": f"Every calculation is already built. In Elite, the formula cells are locked, so you can't break them by accident. All you do is enter {enter}.", "chips": ["Formulas built in", "Elite: formula cells locked", f"You enter {enter}", "Quick Start included"]}
     return {"q": "I'm not an Excel person.", "a1": "You don't need to be.", "a2": f"Every calculation is already built, and the Quick Start and Field Guide walk you through it. You just enter {enter}.", "chips": ["Formulas built in", f"You enter {enter}", "Quick Start included", "Field Guide included"]}
 
-def obj_app(q, keep, chips):
-    return {"q": q, "a1": "Good. Keep it.", "a2": f"This sits next to it, and pulls the whole business into one view: {keep}.", "chips": chips, "liftAt": 0.7}
+def obj_app(q, keep, chips, a1=None, a2=None):
+    """'My software already has reports.' Keep the app (it runs the day-to-day); ProfitIQS sits beside it and shows what the business kept."""
+    a1_, a2_ = a1, a2
+    v = len(q) % 3
+    a1 = ["Keep it. It runs your day-to-day.", "Keep using it. It runs the work.", "Keep it. It does its job."][v]
+    a2 = [f"ProfitIQS sits next to it, and shows what all that work actually made you: {keep}, in one place.",
+          f"ProfitIQS doesn't replace it. It sits beside it, and pulls {keep} into one view.",
+          f"ProfitIQS adds the owner's view on top: {keep}, all in one place."][v]
+    return {"q": q, "a1": a1_ or a1, "a2": a2_ or a2, "chips": chips, "liftAt": 0.7}
 
 def money_slam():
     return ["Then, the money side.", {"t": "slam", "text": "Then, [the money side.]", "photo": "cash-pile", "size": 110}]

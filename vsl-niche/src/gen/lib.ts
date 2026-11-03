@@ -1,5 +1,5 @@
 import { Easing, interpolate, spring } from "remotion";
-import { CUES, META, SPEC, TL } from "./cur";
+import { CUES, META, SPEC, SYNC, TL } from "./cur";
 
 export const FPS = 30;
 export const W = 1920;
@@ -58,7 +58,18 @@ export type Spec = {
   lines: SpecLine[];
 };
 export const S = SPEC as unknown as Spec;
-export const VIS: (V | null)[] = S.lines.map((l) => l[3]);
+// word-sync from the audio step: block fractions at which each highlight / item is spoken
+const SY = SYNC as unknown as Record<string, { hi?: number[]; at?: number[]; flip?: number[] }>;
+export const VIS: (V | null)[] = S.lines.map((l, idx) => {
+  const v = l[3];
+  const sy = SY[String(idx)];
+  if (!v || !sy) return v;
+  const o: V = { ...v };
+  if (sy.hi && Array.isArray(v.hi)) o.hi = v.hi.map((h: any[], k: number) => { const c = [...h]; while (c.length < 5) c.push(undefined); c[4] = sy.hi![k] ?? c[4]; return c; });
+  if (sy.at) o.syncAt = sy.at;
+  if (sy.flip) o.syncFlip = sy.flip;
+  return o;
+});
 
 // ---------- generated asset metadata ----------
 export type SheetMeta = { img: string; w: number; h: number; rows: [string, number, number, number, number][] };
@@ -80,6 +91,7 @@ export function tabOf(ed: string, tab: string) {
 
 export const SCENE_ORDER = [...new Set(LINES.map((l) => l.scene))];
 export const SCENE_LEAD = 0.4;
+export const VIS_LEAD = 6; // frames the picture leads the voice (gen_audio.py LEAD = 0.2 s)
 
 export type WLine = Line & { s: number; e: number; idx: number };
 export type Win = { name: string; from: number; duration: number; lines: WLine[] };
@@ -89,14 +101,14 @@ export function sceneWindow(name: string): Win {
   const nextLine = next ? LINES.find((l) => l.scene === next)! : null;
   const from = f(Math.max(0, LINES[first].start - SCENE_LEAD));
   const to = nextLine ? f(nextLine.start - SCENE_LEAD) : TOTAL_FRAMES;
-  const lines = LINES.map((l, idx) => ({ ...l, idx, s: f(l.start) - from, e: f(l.end) - from })).filter((l) => l.scene === name);
+  const lines = LINES.map((l, idx) => ({ ...l, idx, s: Math.max(0, f(l.start) - from - VIS_LEAD), e: f(l.end) - from - VIS_LEAD })).filter((l) => l.scene === name);
   return { name, from, duration: to - from, lines };
 }
 export const at = (w: Win, i: number, p = 0) => Math.round(w.lines[i].s + (w.lines[i].e - w.lines[i].s) * p);
 
 export type Cue = { frame: number; kind: string };
 export const CUE_LIST: Cue[] = (CUES as [number, number, string][]).map(([i, p, kind]) => ({
-  frame: f(LINES[i].start + (LINES[i].end - LINES[i].start) * p),
+  frame: f(LINES[i].start + (LINES[i].end - LINES[i].start) * p) - VIS_LEAD,
   kind,
 }));
 

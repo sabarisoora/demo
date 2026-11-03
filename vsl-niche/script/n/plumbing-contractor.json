@@ -9,6 +9,8 @@
  "themes": {
   "ess": "light",
   "guide": "light",
+  "fix": "light",
+  "turn": "light",
   "x1": "light",
   "x3": "light",
   "x5": "light"
@@ -185,7 +187,7 @@
    null,
    {
     "t": "ring",
-    "n": "11",
+    "n": "12",
     "unit": "MINUTES",
     "text": "If you run a plumbing business — [this is for you.]"
    }
@@ -427,31 +429,31 @@
   ],
   [
    "turn",
-   "You just don't have one place that turns it into decisions.",
+   "What's missing is one place that turns it into answers.",
    null,
    null
   ],
   [
    "reveal",
-   "That's why we built the Plumbing Contractor Business Intelligence System™.",
-   "That's why we built the Plumbing Contractor Business Intelligence System.",
+   "So we built the Plumbing Contractor Business Intelligence System™.",
+   "So we built the Plumbing Contractor Business Intelligence System.",
    null
   ],
   [
    "reveal",
-   "A ready-built Excel system, made only for plumbing contractors.",
+   "A ready-to-use Excel system, built only for plumbing contractors.",
    null,
    null
   ],
   [
    "reveal",
-   "Formulas, dashboards and reports are already built in. Tax set-aside too.",
+   "The formulas, dashboards and reports are already done, tax set-aside included.",
    null,
    null
   ],
   [
    "reveal",
-   "And it ships with sample data, so every dashboard works the moment you open it.",
+   "It comes loaded with sample data, so you see every dashboard working on day one.",
    null,
    null
   ],
@@ -481,7 +483,7 @@
   ],
   [
    "ess",
-   "Let me show you what's inside. Start with Essential: eight sheets you work in, plus a tax-rate reference behind the scenes.",
+   "Here's what's inside. Start with Essential: eight sheets you work in, plus a tax-rate reference behind the scenes.",
    null,
    {
     "t": "cover",
@@ -507,7 +509,7 @@
   ],
   [
    "ess",
-   "Now every sheet, in order.",
+   "Here's every sheet, one by one.",
    null,
    {
     "t": "slam",
@@ -517,8 +519,8 @@
   ],
   [
    "ess",
-   "Start Here shows how the workbook is organized, and where to begin.",
-   "Start Here shows how the workbook is organized, and where to begin.",
+   "Start Here gives you the quick-start steps, so you know exactly where to begin.",
+   "Start Here gives you the quick-start steps, so you know exactly where to begin.",
    {
     "t": "sheet",
     "ed": "ess",
@@ -741,7 +743,7 @@
   ],
   [
    "elite",
-   "Let's walk through every one of them.",
+   "Here's every one, in order.",
    null,
    {
     "t": "slam",
@@ -772,8 +774,8 @@
   ],
   [
    "x1",
-   "Start Here shows how the workbook is organized, and where to begin.",
-   "Start Here shows how the workbook is organized, and where to begin.",
+   "Elite opens with its own Start Here, and a map of every sheet.",
+   "Elite opens with its own Start Here, and a map of every sheet.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -825,8 +827,8 @@
   ],
   [
    "x1",
-   "Executive Summary: Total Revenue, Total Expenses, Net Profit and Cash Position.",
-   "Executive Summary: Total Revenue, Total Expenses, Net Profit and Cash Position.",
+   "The Executive Summary explains the business in plain language: the last twelve months, your top risks, and the actions to take.",
+   "The Executive Summary explains the business in plain language: the last twelve months, your top risks, and the actions to take.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -838,8 +840,8 @@
   ],
   [
    "x1",
-   "Technician Setup. Master technician roster, referenced by every productivity, payroll, and scorecard sheet.",
-   "Technician Setup. Master technician roster, referenced by every productivity, payroll, and scorecard sheet.",
+   "Technician Setup is your crew roster, entered once: role, hourly rate, commission and truck. Every scorecard reads from it.",
+   "Technician Setup is your crew roster, entered once: role, hourly rate, commission and truck. Every scorecard reads from it.",
    {
     "t": "hero",
     "ed": "elite",
@@ -848,11 +850,11 @@
     "size": 64,
     "hi": [
      [
-      "Tech ID",
+      "Commission %",
       null,
       "cyan",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -860,8 +862,8 @@
   ],
   [
    "x1",
-   "Job Revenue Entry. Every completed or scheduled job, the core revenue feed for the entire system.",
-   "Job Revenue Entry. Every completed or scheduled job, the core revenue feed for the entire system.",
+   "Job Revenue Entry is the core feed. Each job, its technician, category, lead source and revenue, plus whether a membership was sold or it was a callback.",
+   "Job Revenue Entry is the core feed. Each job, its technician, category, lead source and revenue, plus whether a membership was sold or it was a callback.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -869,11 +871,11 @@
     "label": "Job Revenue Entry",
     "hi": [
      [
-      "Job ID",
+      "Callback (Y/N)",
       null,
       "blue",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -881,8 +883,8 @@
   ],
   [
    "x1",
-   "Install Direct Cost. Direct job costing for Install-category jobs from Job Revenue Entry.",
-   "Install Direct Cost. Direct job costing for Install-category jobs from Job Revenue Entry.",
+   "Install Direct Cost breaks every install into materials, labor, permits and equipment, so you see what each one really cost.",
+   "Install Direct Cost breaks every install into materials, labor, permits and equipment, so you see what each one really cost.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -890,11 +892,11 @@
     "label": "Install Direct Cost",
     "hi": [
      [
-      "Job ID",
+      "Total Cost",
       null,
       "green",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -902,8 +904,8 @@
   ],
   [
    "x1",
-   "Customer Database. Master customer file, Lifetime Revenue and service dates pull live from Job Revenue Entry.",
-   "Customer Database. Master customer file, Lifetime Revenue and service dates pull live from Job Revenue Entry.",
+   "The Customer Database is your master customer file, with first and last service dates and lifetime revenue pulled in live.",
+   "The Customer Database is your master customer file, with first and last service dates and lifetime revenue pulled in live.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -911,11 +913,11 @@
     "label": "Customer Database",
     "hi": [
      [
-      "Address",
+      "Lifetime Revenue",
       null,
       "amber",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -923,8 +925,8 @@
   ],
   [
    "x1",
-   "Customer Retention Center. Active versus lapsed customers, year-over-year retention, repeat-service rate, and reactivation targets.",
-   "Customer Retention Center. Active versus lapsed customers, year-over-year retention, repeat-service rate, and reactivation targets.",
+   "Customer Retention splits active from lapsed customers, after a hundred and eighty days without service, and builds your reactivation list.",
+   "Customer Retention splits active from lapsed customers, after a hundred and eighty days without service, and builds your reactivation list.",
    {
     "t": "hero",
     "ed": "elite",
@@ -933,11 +935,11 @@
     "size": 64,
     "hi": [
      [
-      "ACTIVE CUSTOMERS",
+      "LAPSED CUSTOMERS (>180D)",
       null,
       "cyan",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -966,33 +968,20 @@
   ],
   [
    "x2",
-   "Customer Lifetime Value. Top 15 customers by lifetime revenue, revenue, completed jobs, and average ticket, live from Job Revenue Entry.",
-   "Customer Lifetime Value. Top 15 customers by lifetime revenue, revenue, completed jobs, and average ticket, live from Job Revenue Entry.",
+   "Who are your best customers? Customer Lifetime Value ranks the top fifteen by revenue, jobs, and average ticket.",
+   "Who are your best customers? Customer Lifetime Value ranks the top fifteen by revenue, jobs, and average ticket.",
    {
     "t": "sheet",
     "ed": "elite",
     "tab": "09 Customer Lifetime Value",
     "label": "Customer Lifetime Value",
-    "hi": [],
-    "minW": 0.85
-   }
-  ],
-  [
-   "x2",
-   "Service Call Tracker. Call-level log of your latest 300 service and emergency calls, booked, closed, and time on site.",
-   "Service Call Tracker. Call-level log of your latest 300 service and emergency calls, booked, closed, and time on site.",
-   {
-    "t": "sheet",
-    "ed": "elite",
-    "tab": "10 Service Call Tracker",
-    "label": "Service Call Tracker",
     "hi": [
      [
-      "Call Date",
+      "Average Ticket",
       null,
-      "green",
-      "row",
-      0.35
+      "blue",
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1000,8 +989,29 @@
   ],
   [
    "x2",
-   "Dispatch Center. Dispatch-to-arrival-to-completion timing and technician efficiency.",
-   "Dispatch Center. Dispatch-to-arrival-to-completion timing and technician efficiency.",
+   "The Service Call Tracker logs your latest three hundred calls: booked, closed, and how long the tech was on site.",
+   "The Service Call Tracker logs your latest three hundred calls: booked, closed, and how long the tech was on site.",
+   {
+    "t": "sheet",
+    "ed": "elite",
+    "tab": "10 Service Call Tracker",
+    "label": "Service Call Tracker",
+    "hi": [
+     [
+      "Closed (Y/N)",
+      null,
+      "green",
+      "cell",
+      0.45
+     ]
+    ],
+    "minW": 0.85
+   }
+  ],
+  [
+   "x2",
+   "The Dispatch Center times every job from dispatch to arrival to completion, with a response time and an efficiency score.",
+   "The Dispatch Center times every job from dispatch to arrival to completion, with a response time and an efficiency score.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1009,11 +1019,11 @@
     "label": "Dispatch Center",
     "hi": [
      [
-      "David Jackson",
+      "Response (min)",
       null,
       "amber",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1199,8 +1209,8 @@
   ],
   [
    "x3",
-   "Membership Plan Center. Membership roster with plan revenue, next renewal, and status, months active and renewals count to your latest entry.",
-   "Membership Plan Center. Membership roster with plan revenue, next renewal, and status, months active and renewals count to your latest entry.",
+   "The Membership Plan Center lists every member: plan type, monthly revenue, renewal date, and a flag when one is at risk.",
+   "The Membership Plan Center lists every member: plan type, monthly revenue, renewal date, and a flag when one is at risk.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1208,11 +1218,11 @@
     "label": "Membership Plan Center",
     "hi": [
      [
-      "Member Name",
+      "Retention Flag",
       null,
       "green",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1220,8 +1230,8 @@
   ],
   [
    "x3",
-   "Recurring Revenue Center. MRR or ARR, forecast, and retention, Membership Growth Score.",
-   "Recurring Revenue Center. M R R or A R R, forecast, and retention, Membership Growth Score.",
+   "Recurring Revenue adds up what memberships bring in every month and every year, broken down by plan.",
+   "Recurring Revenue adds up what memberships bring in every month and every year, broken down by plan.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1229,11 +1239,11 @@
     "label": "Recurring Revenue Center",
     "hi": [
      [
-      "RETENTION RATE",
+      "% of MRR",
       null,
       "amber",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1241,8 +1251,8 @@
   ],
   [
    "x3",
-   "Membership Sales Tracker. Membership pitches by technician, opportunities, sales logged on jobs in the last twelve months.",
-   "Membership Sales Tracker. Membership pitches by technician, opportunities, sales logged on jobs in the last twelve months.",
+   "Membership Sales shows which technicians pitch memberships, how many they close, and the revenue it adds.",
+   "Membership Sales shows which technicians pitch memberships, how many they close, and the revenue it adds.",
    {
     "t": "hero",
     "ed": "elite",
@@ -1251,11 +1261,11 @@
     "size": 64,
     "hi": [
      [
-      "Technician",
+      "Conversion Rate",
       null,
       "cyan",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1263,8 +1273,8 @@
   ],
   [
    "x3",
-   "Lead Source Tracker. Completed jobs and revenue by lead source over the last twelve months, live from Job Revenue Entry.",
-   "Lead Source Tracker. Completed jobs and revenue by lead source over the last twelve months, live from Job Revenue Entry.",
+   "Which lead sources actually pay? The Lead Source Tracker shows jobs, revenue and average ticket for each one.",
+   "Which lead sources actually pay? The Lead Source Tracker shows jobs, revenue and average ticket for each one.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1272,11 +1282,11 @@
     "label": "Lead Source Tracker",
     "hi": [
      [
-      "Lead Source",
+      "Avg Ticket",
       null,
       "blue",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1284,21 +1294,29 @@
   ],
   [
    "x3",
-   "Marketing ROI Center. Enter average monthly spend per channel; leads, jobs sold and revenue are the last twelve months.",
-   "Marketing R O I Center. Enter average monthly spend per channel; leads, jobs sold and revenue are the last twelve months.",
+   "In the Marketing ROI Center you enter what each channel costs, and it shows the jobs, revenue, return and cost per job it brought in.",
+   "In the Marketing R O I Center you enter what each channel costs, and it shows the jobs, revenue, return and cost per job it brought in.",
    {
     "t": "sheet",
     "ed": "elite",
     "tab": "22 Marketing ROI Center",
     "label": "Marketing ROI Center",
-    "hi": [],
+    "hi": [
+     [
+      "ROI % (12 mo)",
+      null,
+      "green",
+      "cell",
+      0.45
+     ]
+    ],
     "minW": 0.85
    }
   ],
   [
    "x3",
-   "Sales Pipeline. Estimate-stage opportunities not yet booked as jobs, follow-up days count from your latest entry.",
-   "Sales Pipeline. Estimate-stage opportunities not yet booked as jobs, follow-up days count from your latest entry.",
+   "The Sales Pipeline keeps every open estimate in front of you: its value, its stage, its odds, and when to follow up.",
+   "The Sales Pipeline keeps every open estimate in front of you: its value, its stage, its odds, and when to follow up.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1306,11 +1324,11 @@
     "label": "Sales Pipeline",
     "hi": [
      [
-      "Lead",
+      "Expected Revenue",
       null,
       "amber",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1318,8 +1336,8 @@
   ],
   [
    "x3",
-   "Expense Entry. All operating expenses, feeds Cash Flow, Budget, P&L, and Profit Leak Detector.",
-   "Expense Entry. All operating expenses, feeds Cash Flow, Budget, PandL, and Profit Leak Detector.",
+   "Every expense goes into Expense Entry once, by category and vendor, and it feeds cash flow, the budget and the Profit Leak Detector.",
+   "Every expense goes into Expense Entry once, by category and vendor, and it feeds cash flow, the budget and the Profit Leak Detector.",
    {
     "t": "hero",
     "ed": "elite",
@@ -1328,11 +1346,11 @@
     "size": 64,
     "hi": [
      [
-      "Date",
+      "Category",
       null,
       "cyan",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1361,8 +1379,8 @@
   ],
   [
    "x4",
-   "Revenue Tracker. Over the last twelve months: completed jobs by category, direct job costs, overhead and profit.",
-   "Revenue Tracker. Over the last twelve months: completed jobs by category, direct job costs, overhead and profit.",
+   "The Revenue Tracker is your monthly P and L: service, install, commercial and emergency revenue, costs, and your gross and net margin.",
+   "The Revenue Tracker is your monthly P and L: service, install, commercial and emergency revenue, costs, and your gross and net margin.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1370,11 +1388,11 @@
     "label": "Revenue Tracker",
     "hi": [
      [
-      "Commercial",
+      "Net Margin %",
       null,
       "blue",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1481,8 +1499,8 @@
   ],
   [
    "x4",
-   "Budget Center. Annual revenue, expense, and profit goals versus actuals from the summary.",
-   "Budget Center. Annual revenue, expense, and profit goals versus actuals from the summary.",
+   "Set yearly goals in the Budget Center, and see revenue, expenses and profit against them, month by month.",
+   "Set yearly goals in the Budget Center, and see revenue, expenses and profit against them, month by month.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1490,11 +1508,11 @@
     "label": "Budget Center",
     "hi": [
      [
-      "Month",
+      "Variance",
       null,
       "green",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1502,8 +1520,8 @@
   ],
   [
    "x4",
-   "Inventory Center. Parts, materials, water heaters and fixtures, stock value, usage, and reorder alerts.",
-   "Inventory Center. Parts, materials, water heaters and fixtures, stock value, usage, and reorder alerts.",
+   "The Inventory Center tracks parts, water heaters and fixtures on hand, what they're worth, and when to reorder.",
+   "The Inventory Center tracks parts, water heaters and fixtures on hand, what they're worth, and when to reorder.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1511,11 +1529,11 @@
     "label": "Inventory Center",
     "hi": [
      [
-      "Item",
+      "Reorder Alert",
       null,
       "amber",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1523,8 +1541,8 @@
   ],
   [
    "x4",
-   "Vendor Center. Vendor spend and performance over the last twelve months, totals pull from Expense Entry by vendor name.",
-   "Vendor Center. Vendor spend and performance over the last twelve months, totals pull from Expense Entry by vendor name.",
+   "The Vendor Center totals what you spend with each supplier, with an average cost per order and a performance score.",
+   "The Vendor Center totals what you spend with each supplier, with an average cost per order and a performance score.",
    {
     "t": "hero",
     "ed": "elite",
@@ -1533,11 +1551,11 @@
     "size": 64,
     "hi": [
      [
-      "Vendor",
+      "Total Spend",
       null,
       "cyan",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1566,8 +1584,8 @@
   ],
   [
    "x5",
-   "Purchase Order Center: PO Number, Vendor, Item or Description and Amount.",
-   "Purchase Order Center: PO Number, Vendor, Item or Description and Amount.",
+   "And the Purchase Order Center tracks every open order, its amount, and when it's due to arrive.",
+   "And the Purchase Order Center tracks every open order, its amount, and when it's due to arrive.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1575,11 +1593,11 @@
     "label": "Purchase Order Center",
     "hi": [
      [
-      "PO Number",
+      "Expected Delivery",
       null,
       "blue",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1587,8 +1605,8 @@
   ],
   [
    "x5",
-   "KPI Scorecard. Live snapshot of the 13 metrics that run this business, pulled from every operating sheet.",
-   "K P I Scorecard. Live snapshot of the 13 metrics that run this business, pulled from every operating sheet.",
+   "The KPI Scorecard is a live snapshot of the thirteen numbers that run a plumbing business, each one against its target.",
+   "The K P I Scorecard is a live snapshot of the thirteen numbers that run a plumbing business, each one against its target.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1596,11 +1614,11 @@
     "label": "KPI Scorecard",
     "hi": [
      [
-      "KPI",
+      "Target",
       null,
       "green",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1608,14 +1626,22 @@
   ],
   [
    "x5",
-   "Business Health Score. Zero-to-100 composite score across profitability, cash, retention, membership, technician efficiency, collections, and tax readiness.",
-   "Business Health Score. Zero-to-100 composite score across profitability, cash, retention, membership, technician efficiency, collections, and tax readiness.",
+   "The Business Health Score turns profit, cash, retention, memberships, technician efficiency, collections and tax readiness into one score out of a hundred.",
+   "The Business Health Score turns profit, cash, retention, memberships, technician efficiency, collections and tax readiness into one score out of a hundred.",
    {
     "t": "sheet",
     "ed": "elite",
     "tab": "35 Business Health Score",
     "label": "Business Health Score",
-    "hi": [],
+    "hi": [
+     [
+      "Component Score",
+      null,
+      "amber",
+      "cell",
+      0.45
+     ]
+    ],
     "minW": 0.85
    }
   ],
@@ -1682,8 +1708,8 @@
   ],
   [
    "x5",
-   "Forecasting Center. 12-month forward revenue, profit, and membership forecast from your last twelve months.",
-   "Forecasting Center. 12-month forward revenue, profit, and membership forecast from your last twelve months.",
+   "The Forecasting Center projects the next twelve months of revenue, profit and membership income, from your own last twelve.",
+   "The Forecasting Center projects the next twelve months of revenue, profit and membership income, from your own last twelve.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1691,11 +1717,11 @@
     "label": "Forecasting Center",
     "hi": [
      [
-      "Metric",
+      "Forecast Revenue",
       null,
       "blue",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1703,8 +1729,8 @@
   ],
   [
    "x5",
-   "Benchmarking Center. Your KPIs versus typical residential plumbing contractor planning references.",
-   "Benchmarking Center. Your K P Is versus typical residential plumbing contractor planning references.",
+   "The Benchmarking Center compares your numbers with typical plumbing contractors, and with the top performers.",
+   "The Benchmarking Center compares your numbers with typical plumbing contractors, and with the top performers.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1712,11 +1738,11 @@
     "label": "Benchmarking Center",
     "hi": [
      [
-      "KPI",
+      "Typical Planning Reference*",
       null,
       "green",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1724,8 +1750,8 @@
   ],
   [
    "x5",
-   "Customer Analytics Center: Rank, Customer, Lifetime Revenue and percent of Total.",
-   "Customer Analytics Center: Rank, Customer, Lifetime Revenue and percent of Total.",
+   "Customer Analytics ranks your top ten customers by lifetime revenue, and their share of the total.",
+   "Customer Analytics ranks your top ten customers by lifetime revenue, and their share of the total.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1733,11 +1759,11 @@
     "label": "Customer Analytics Center",
     "hi": [
      [
-      "Rank",
+      "% of Total",
       null,
       "amber",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1786,8 +1812,8 @@
   ],
   [
    "x6",
-   "Strategic Planner. Annual revenue, profit, hiring, and truck expansion goals versus your last twelve months run-rate.",
-   "Strategic Planner. Annual revenue, profit, hiring, and truck expansion goals versus your last twelve months run-rate.",
+   "The Strategic Planner sets yearly goals for revenue, profit, hiring and trucks, and shows the gap to your current pace.",
+   "The Strategic Planner sets yearly goals for revenue, profit, hiring and trucks, and shows the gap to your current pace.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1795,11 +1821,11 @@
     "label": "Strategic Planner",
     "hi": [
      [
-      "Goal",
+      "Gap",
       null,
       "blue",
-      "row",
-      0.35
+      "cell",
+      0.45
      ]
     ],
     "minW": 0.85
@@ -1807,8 +1833,8 @@
   ],
   [
    "x6",
-   "Executive Reports. Condensed print-ready summaries for Owner, Partner, Management, and Investor audiences.",
-   "Executive Reports. Condensed print-ready summaries for Owner, Partner, Management, and Investor audiences.",
+   "And Executive Reports gives you print-ready summaries for an owner, a partner, management, or an investor.",
+   "And Executive Reports gives you print-ready summaries for an owner, a partner, management, or an investor.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1833,8 +1859,8 @@
   ],
   [
    "x6",
-   "Tax Setup holds your country, currency and tax-rate presets.",
-   "Tax Setup holds your country, currency and tax-rate presets.",
+   "Tax Setup holds your country, currency and tax-rate presets, set once.",
+   "Tax Setup holds your country, currency and tax-rate presets, set once.",
    {
     "t": "sheet",
     "ed": "elite",
@@ -1950,8 +1976,8 @@
   ],
   [
    "x6",
-   "And a Glossary, with a plain-English definition for every term.",
-   "And a Glossary, with a plain-English definition for every term.",
+   "Last, a Glossary that explains every term in plain English.",
+   "Last, a Glossary that explains every term in plain English.",
    {
     "t": "hero",
     "ed": "elite",
@@ -1964,7 +1990,7 @@
   ],
   [
    "fix",
-   "So let's go back to every problem from the start of this video, and the sheet that answers it.",
+   "Now, remember every problem from the start? Here's the sheet that answers each one.",
    null,
    {
     "t": "fixes",
@@ -2055,25 +2081,25 @@
   ],
   [
    "fix",
-   "Eight problems. Eight answers. All in one workbook.",
+   "Eight problems, eight answers, one workbook.",
    null,
    null
   ],
   [
    "guide",
-   "And you're never left guessing how to use it.",
+   "And you won't be left guessing how to use it.",
    null,
    null
   ],
   [
    "guide",
-   "Every edition comes with a Quick Start: the exact steps for your first session, your first week, and your first thirty days.",
+   "Every edition includes a Quick Start: what to do in your first session, your first week, and your first thirty days.",
    null,
    null
   ],
   [
    "guide",
-   "And a full Field Guide that walks through every sheet, screen by screen.",
+   "Plus a full Field Guide that explains every sheet, screen by screen.",
    null,
    null
   ],
@@ -2085,7 +2111,7 @@
   ],
   [
    "obj",
-   "Now, honest answers to the questions plumbers ask.",
+   "Now, the questions plumbers ask, answered honestly.",
    null,
    {
     "t": "slam",
@@ -2095,8 +2121,8 @@
   ],
   [
    "obj",
-   "“My dispatch software already has reports.” Good. Keep it.",
-   "My dispatch software already has reports. Good. Keep it.",
+   "“My dispatch software already has reports.” Keep it. It runs your jobs.",
+   "My dispatch software already has reports. Keep it. It runs your jobs.",
    {
     "t": "qa",
     "q": "My dispatch software already has reports.",
@@ -2113,7 +2139,7 @@
   ],
   [
    "obj",
-   "This sits next to it, and pulls the whole business into one view: margins, techs, cash and taxes.",
+   "ProfitIQS sits next to it, and shows what those jobs actually made you: margins, techs, cash and taxes, in one place.",
    null,
    null
   ],
@@ -2209,7 +2235,7 @@
   ],
   [
    "offer",
-   "So, which edition fits you?",
+   "So which edition is right for you?",
    null,
    null
   ],
@@ -2245,7 +2271,7 @@
   ],
   [
    "cta",
-   "Pick your edition below this video.",
+   "Choose your edition below this video.",
    null,
    null
   ],
@@ -2257,7 +2283,7 @@
   ],
   [
    "cta",
-   "Because every month you wait is another month of guessing.",
+   "Every month you wait is another month of guessing.",
    null,
    null
   ],

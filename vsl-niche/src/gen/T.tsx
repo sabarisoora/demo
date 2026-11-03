@@ -175,20 +175,22 @@ const MonthsT: React.FC<B> = ({ v, A }) => {
 
 const StrikeT: React.FC<B> = ({ v, A }) => {
   const fr = useCurrentFrame();
+  const light = useLight();
   const strike = ap(fr, A(0.3), 8);
   return (
     <>
-      <div style={{ position: "relative", ...big(130), color: C.muted, opacity: 1 - 0.5 * strike, letterSpacing: "-0.03em" }}>
+      <div style={{ position: "relative", ...big(130), color: light ? "#94a3b8" : C.muted, opacity: 1 - 0.5 * strike, letterSpacing: "-0.03em" }}>
         {v.from}
         <div style={{ position: "absolute", left: -20, right: -20, top: "52%", height: 16, borderRadius: 8, background: C.red, transformOrigin: "left", transform: `scaleX(${strike}) rotate(-3deg)` }} />
       </div>
-      <div style={{ transform: `scale(${pop(fr, A(0.7), 300, 12)})`, fontFamily: FONT.serif, fontStyle: "italic", fontWeight: 700, fontSize: v.toSize ?? 190, backgroundImage: `linear-gradient(100deg, ${C.sky}, ${C.cyan})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", filter: `drop-shadow(0 0 40px ${C.cyan}88)`, paddingRight: 20 }}>{v.to}</div>
+      <div style={{ transform: `scale(${pop(fr, A(0.7), 300, 12)})`, fontFamily: FONT.serif, fontStyle: "italic", fontWeight: 700, fontSize: v.toSize ?? 190, backgroundImage: light ? `linear-gradient(100deg, ${C.blue}, #0891b2)` : `linear-gradient(100deg, ${C.sky}, ${C.cyan})`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", filter: light ? undefined : `drop-shadow(0 0 40px ${C.cyan}88)`, paddingRight: 20 }}>{v.to}</div>
     </>
   );
 };
 
 const ConvergeT: React.FC<B> = ({ v, A }) => {
   const fr = useCurrentFrame();
+  const light = useLight();
   const conv = ap(fr, A(0.45), 30);
   const labels: string[] = v.labels ?? ["$", "#", "%", "?"];
   return (
@@ -198,9 +200,9 @@ const ConvergeT: React.FC<B> = ({ v, A }) => {
         const sy = 540 + (random(`dy${k}`) - 0.5) * 900;
         const x = sx + (960 - sx) * conv;
         const y = sy + (520 - sy) * conv;
-        return <div key={k} style={{ position: "absolute", left: x - 34, top: y - 30, minWidth: 68, height: 60, padding: "0 8px", boxSizing: "border-box", borderRadius: 14, background: "rgba(96,165,250,0.18)", border: `2px solid ${C.sky}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT.sans, fontWeight: 700, fontSize: 19, color: C.white, opacity: 1 - conv * 0.9, transform: `scale(${1 - conv * 0.6})`, whiteSpace: "nowrap" }}>{labels[k % labels.length]}</div>;
+        return <div key={k} style={{ position: "absolute", left: x - 34, top: y - 30, minWidth: 68, height: 60, padding: "0 8px", boxSizing: "border-box", borderRadius: 14, background: light ? "#eff6ff" : "rgba(96,165,250,0.18)", border: `2px solid ${light ? C.blue : C.sky}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT.sans, fontWeight: 700, fontSize: 19, color: light ? C.ink : C.white, opacity: 1 - conv * 0.9, transform: `scale(${1 - conv * 0.6})`, whiteSpace: "nowrap" }}>{labels[k % labels.length]}</div>;
       })}
-      <div style={{ opacity: conv, transform: `scale(${0.5 + 0.5 * conv})`, width: 560, height: 320, borderRadius: 26, border: `4px solid ${C.cyan}`, background: "rgba(34,211,238,0.08)", boxShadow: `0 0 90px ${C.cyan}66`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT.sans, fontWeight: 800, fontSize: 52, color: C.white, marginTop: 40 }}>{v.box ?? "One place."}</div>
+      <div style={{ opacity: conv, transform: `scale(${0.5 + 0.5 * conv})`, width: 560, height: 320, borderRadius: 26, border: `4px solid ${light ? C.blue : C.cyan}`, background: light ? "#ffffff" : "rgba(34,211,238,0.08)", boxShadow: light ? "0 20px 60px rgba(37,99,235,0.18)" : `0 0 90px ${C.cyan}66`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT.sans, fontWeight: 800, fontSize: 52, color: light ? C.ink : C.white, marginTop: 40 }}>{v.box ?? "One place."}</div>
       <Top y={110}><Slam text={v.text} at={A(0)} size={v.size ?? 70} /></Top>
     </>
   );
@@ -241,7 +243,7 @@ const ChecklistT: React.FC<B> = ({ v, A }) => {
       <Top y={80}><Slam text={v.text} at={A(0)} size={v.size ?? 74} /></Top>
       <div style={{ display: "grid", gridTemplateColumns: two ? "1fr 1fr" : "1fr", gap: "22px 60px", marginTop: 130, position: "relative" }}>
         {items.map((x, k) => {
-          const a0 = A(0.12 + (k * 0.78) / items.length);
+          const a0 = A(v.syncAt?.[k] ?? 0.12 + (k * 0.78) / items.length);
           return (
             <div key={k} style={{ display: "flex", gap: 20, alignItems: "center", opacity: ap(fr, a0), transform: `translateX(${(1 - ap(fr, a0)) * -40}px)`, fontFamily: FONT.sans, fontWeight: 700, fontSize: 40, color: C.white }}>
               <div style={{ width: 54, height: 54, borderRadius: 14, background: `${col(v.color ?? "green")}33`, border: `2px solid ${col(v.color ?? "green")}`, display: "flex", alignItems: "center", justifyContent: "center", transform: `scale(${pop(fr, a0, 300, 12)})` }}><Icon name={v.icon ?? "check"} size={34} color={col(v.color ?? "green")} /></div>
@@ -254,8 +256,11 @@ const ChecklistT: React.FC<B> = ({ v, A }) => {
   );
 };
 
-const FixesT: React.FC<B> = ({ v, i, L }) => {
+const FixesT: React.FC<B> = ({ v, i, j, L, A }) => {
   const fr = useCurrentFrame();
+  const light = useLight();
+  const fg = light ? C.ink : C.white;
+  const dim = light ? "#64748b" : C.muted;
   const items: [string, string][] = v.items;
   const n = items.length;
   const rowH = n > 7 ? 74 : 84;
@@ -264,19 +269,22 @@ const FixesT: React.FC<B> = ({ v, i, L }) => {
       <Top y={60}><Slam text={v.text} at={L(i, 0)} size={64} /></Top>
       <div style={{ position: "absolute", top: 190, left: 150, right: 150, display: "flex", flexDirection: "column", gap: 14 }}>
         {items.map(([p, k], q) => {
-          const a0 = L(Math.min(i + 1 + q, i + n), 0) - 4;
-          const a1 = L(Math.min(i + 1 + q, i + n), 0.5);
+          const a0 = L(i, 0.25 + (0.6 * q) / n);
+          const a1 = A(v.syncFlip?.[q] ?? 0.2 + (0.75 * (q + 0.5)) / n);
+          const lineIdx = Math.min(i + 1 + q, j);
+          const talking = fr >= L(lineIdx, 0) - 2 && fr < (lineIdx + 1 <= j ? L(lineIdx + 1, 0) - 2 : L(j, 1));
           const o = ap(fr, a0, 10);
           const f = ap(fr, a1, 10);
           const done = fr >= a1;
+          const g = done ? C.green : C.red;
           return (
-            <div key={q} style={{ height: rowH, display: "flex", alignItems: "center", gap: 26, opacity: o, transform: `translateX(${(1 - o) * -60}px)`, background: done ? "rgba(34,197,94,0.07)" : "rgba(239,68,68,0.07)", border: `1px solid ${done ? "rgba(34,197,94,0.35)" : "rgba(239,68,68,0.35)"}`, borderRadius: 18, padding: "0 26px" }}>
-              <div style={{ width: 50, height: 50, flex: "none", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", background: done ? `${C.green}33` : `${C.red}33`, border: `2px solid ${done ? C.green : C.red}`, transform: `scale(${done ? pop(fr, a1, 300, 12) : 1})` }}>
-                <Icon name={done ? "check" : "x"} size={32} color={done ? C.green : C.red} />
+            <div key={q} style={{ height: rowH, display: "flex", alignItems: "center", gap: 26, opacity: o, transform: `translateX(${(1 - o) * -60}px) scale(${talking ? 1.02 : 1})`, background: light ? (done ? "#ecfdf3" : talking ? "#fef2f2" : "#f8fafc") : done ? "rgba(34,197,94,0.07)" : "rgba(239,68,68,0.07)", border: `${talking ? 3 : 1}px solid ${done ? (light ? "#86efac" : "rgba(34,197,94,0.35)") : light ? "#fca5a5" : "rgba(239,68,68,0.35)"}`, borderRadius: 18, padding: "0 26px", boxShadow: talking && light ? "0 10px 30px rgba(15,23,42,0.10)" : undefined }}>
+              <div style={{ width: 50, height: 50, flex: "none", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", background: `${g}${light ? "22" : "33"}`, border: `2px solid ${g}`, transform: `scale(${done ? pop(fr, a1, 300, 12) : 1})` }}>
+                <Icon name={done ? "check" : "x"} size={32} color={g} />
               </div>
-              <div style={{ flex: 1, fontFamily: FONT.sans, fontWeight: 700, fontSize: 34, color: done ? C.muted : C.white, textDecoration: done ? "line-through" : "none", textDecorationColor: C.red, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{p}</div>
-              <div style={{ fontFamily: FONT.sans, fontSize: 34, color: C.muted, opacity: f }}>→</div>
-              <div style={{ flex: "none", minWidth: 480, fontFamily: FONT.sans, fontWeight: 800, fontSize: 34, color: C.green, opacity: f, transform: `translateX(${(1 - f) * 40}px)` }}>{k}</div>
+              <div style={{ flex: 1, fontFamily: FONT.sans, fontWeight: 700, fontSize: 34, color: done ? dim : fg, textDecoration: done ? "line-through" : "none", textDecorationColor: C.red, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{p}</div>
+              <div style={{ fontFamily: FONT.sans, fontSize: 34, color: dim, opacity: f }}>→</div>
+              <div style={{ flex: "none", minWidth: 480, fontFamily: FONT.sans, fontWeight: 800, fontSize: 34, color: light ? "#15803d" : C.green, opacity: f, transform: `translateX(${(1 - f) * 40}px)` }}>{k}</div>
             </div>
           );
         })}
@@ -371,7 +379,7 @@ const QAT: React.FC<B> = ({ v, A, L, i, j }) => {
   const fr = useCurrentFrame();
   const lift = ap(fr, L(i, v.liftAt ?? 0.6), 14);
   const chips: string[] = v.chips ?? [];
-  const ca = (k: number) => A(0.35 + (k * 0.5) / Math.max(1, chips.length));
+  const ca = (k: number) => A(v.syncAt?.[k] ?? 0.35 + (k * 0.5) / Math.max(1, chips.length));
   return (
     <AbsoluteFill>
       <div style={{ position: "absolute", left: 0, right: 0, top: 380 - lift * 330, display: "flex", flexDirection: "column", alignItems: "center", gap: 18, transform: `scale(${1 - lift * 0.4})`, transformOrigin: "top center" }}>
@@ -612,7 +620,7 @@ const MiniT: React.FC<B> = ({ v, A }) => {
         {items.map((it, k) => {
           const vv = { ed: v.ed, ...it, hi: it.hi ?? [] };
           return (
-            <FlyIn key={k} at={A(0.04 + (k * 0.6) / n)} from="bottom" style={{ position: "relative" }}>
+            <FlyIn key={k} at={A(v.syncAt?.[k] ?? 0.04 + (k * 0.6) / n)} from="bottom" style={{ position: "relative" }}>
               <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 32, color: light ? C.ink : C.white, marginBottom: 14, textAlign: "center" }}>{it.label}</div>
               <Sheet {...sheetProps({ ...vv, cam: it.cam ?? "full", zoom: false }, A, w, 480)} tabs={[tabOf(ed(v.ed), it.tab)]} />
             </FlyIn>
