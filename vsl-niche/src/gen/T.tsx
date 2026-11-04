@@ -558,7 +558,8 @@ export const sheetProps = (v: V, A: (p: number) => number, w = SW.w, h = SW.h) =
   cam = [{ at: 0, r: start }];
   if (hi.length && v.zoom !== false) {
     const u = hi.reduce<R>((acc, x) => { const x0 = Math.min(acc[0], x.r[0]), y0 = Math.min(acc[1], x.r[1]); return [x0, y0, Math.max(acc[0] + acc[2], x.r[0] + x.r[2]) - x0, Math.max(acc[1] + acc[3], x.r[1] + x.r[3]) - y0]; }, hi[0].r);
-    cam.push({ at: Math.max(A(0.12), hi[0].at - 10), r: focusCam(u, sm.w, sm.h, v.minW ?? 0.5) });
+    // move in on the area being talked about early; the highlight itself pops when its words are spoken
+    cam.push({ at: Math.min(Math.max(A(0.12), hi[0].at - 10), A(0.12) + 12), r: focusCam(u, sm.w, sm.h, v.minW ?? 0.5) });
   }
   if (v.pan) cam.push({ at: A(v.panAt ?? 0.6), r: v.pan === "bottom" ? [0, Math.max(0, 1 - start[3]), 1, start[3]] : v.pan });
   return { name: sm.img, iw: sm.w, ih: sm.h, file: fileOf(e), tabs: tabsAround(all, tab), active: tab, w, h, cam, hi };
