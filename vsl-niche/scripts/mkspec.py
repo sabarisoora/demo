@@ -187,6 +187,9 @@ def tour(ed, tabs, start_k=0):
             v = ls[0][1]
             if v.get("t") == "sheet":
                 v.setdefault("label", nice(t)); v.pop("d", None); v["d"] = None
+            sm = META["sheets"].get(f"{ed}::{t}")
+            if v.get("cam") == "full" and sm and sm["h"] / sm["w"] > 1.0 and "start here" not in t.lower():
+                v.pop("cam")  # tall sheet: open on the readable top, not the whole page
             out += ls
         else:
             out.append(auto_line(ed, t, start_k + k))
