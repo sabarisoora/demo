@@ -39,15 +39,15 @@ const Pedestal: React.FC<{ slug: string; col: string; at: number; n: number }> =
   return (
     <div style={{ position: "relative", width: 520, height: 900 }}>
       {/* spotlight cone */}
-      <div style={{ position: "absolute", left: 260 - 330, top: -120, width: 660, height: 980, background: `radial-gradient(ellipse at 50% 0%, ${col}30 0%, ${col}10 45%, transparent 70%)`, clipPath: "polygon(38% 0, 62% 0, 100% 100%, 0 100%)", opacity: ap(fr, at - 6, 14) }} />
+      <div style={{ position: "absolute", left: 260 - 330, top: -120, width: 660, height: 980, background: `${col}26`, filter: "blur(26px)", clipPath: "polygon(38% 0, 62% 0, 100% 100%, 0 100%)", opacity: ap(fr, at - 6, 14) }} />
       {/* cover */}
       <div style={{ position: "absolute", left: 260 - 170, top: 90 + bob + (1 - s) * 200, transform: `perspective(1400px) rotateY(${Math.sin(fr / 30) * 10}deg) scale(${0.6 + 0.4 * Math.min(1.1, s)})`, opacity: Math.min(1, s * 1.5) }}>
         <CoverImg slug={slug} width={340} />
         <div style={{ position: "absolute", right: -26, top: -22 }}><Chip col={col} size={24}>Elite · {n} sheets</Chip></div>
       </div>
       {/* pedestal */}
-      <div style={{ position: "absolute", left: 60, top: 640, width: 400, height: 230, borderRadius: "0 0 40px 40px", background: "linear-gradient(180deg,#FFFFFF,#F4F0FF)", border: `2px solid ${C.line}`, boxShadow: "0 40px 70px -30px rgba(139,92,246,0.35)" }} />
-      <div style={{ position: "absolute", left: 50, top: 610, width: 420, height: 70, borderRadius: "50%", background: `linear-gradient(90deg, #FFE1F1, #EFE8FF, #DDF9FE)`, border: `2px solid ${C.line}` }} />
+      <div style={{ position: "absolute", left: 60, top: 640, width: 400, height: 230, borderRadius: "0 0 40px 40px", background: "#FFFFFF", border: `2px solid ${C.line}`, boxShadow: "0 40px 70px -30px rgba(255,94,26,0.35)" }} />
+      <div style={{ position: "absolute", left: 50, top: 610, width: 420, height: 70, borderRadius: "50%", background: "#E2E2E6", border: `2px solid ${C.line}` }} />
       <div style={{ position: "absolute", left: 160, top: 860 - bob * 0.3, width: 200, height: 24, borderRadius: "50%", background: `${col}22`, filter: "blur(6px)" }} />
     </div>
   );
@@ -71,7 +71,7 @@ export const Showroom: React.FC = () => {
         <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}>
           <div style={{ transform: `scale(${0.8 + 0.2 * doors})`, opacity: ap(fr, cf(L0, "doors") + 6, 12), textAlign: "center" }}>
             <div style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 36, letterSpacing: "0.5em", color: C.ink2, marginBottom: 10 }}>WELCOME TO THE</div>
-            <div style={{ fontFamily: FONT.serif, fontStyle: "italic", fontWeight: 700, fontSize: 210, lineHeight: 1 }}><GText>Showroom</GText></div>
+            <div style={{ fontFamily: FONT.serif, fontWeight: 700, fontSize: 210, lineHeight: 1 }}><GText>Showroom</GText></div>
             <div style={{ display: "flex", gap: 22, justifyContent: "center", marginTop: 40 }}>
               {["plumbing-contractor", "hvac", "dental-practice", "restaurant", "airbnb"].map((s, k) => (
                 <Pop key={s} at={cf(L0, "chime") + k * 3} from={50}><CoverImg slug={s} width={150} /></Pop>
@@ -86,17 +86,17 @@ export const Showroom: React.FC = () => {
           <Sparkle at={cf(L0, "chime")} x={960} y={420} n={14} r={520} />
         </AbsoluteFill>
         {/* doors sliding open */}
-        <div style={{ position: "absolute", left: -doors * 980, top: 0, width: 960, height: 1080, background: "linear-gradient(90deg,#FFFFFF,#F6F1FF)", borderRight: `10px solid transparent`, borderImage: `${GRAD} 1`, boxShadow: "20px 0 60px rgba(139,92,246,0.18)" }}>
+        <div style={{ position: "absolute", left: -doors * 980, top: 0, width: 960, height: 1080, background: "#F6F6F7", borderRight: `10px solid ${C.mag}`, boxShadow: "20px 0 60px rgba(255,94,26,0.18)" }}>
           <div style={{ position: "absolute", right: 60, top: 500, width: 18, height: 120, borderRadius: 9, background: GRAD }} />
         </div>
-        <div style={{ position: "absolute", left: 960 + doors * 980, top: 0, width: 960, height: 1080, background: "linear-gradient(270deg,#FFFFFF,#F6F1FF)", borderLeft: `10px solid transparent`, borderImage: `${GRAD} 1`, boxShadow: "-20px 0 60px rgba(139,92,246,0.18)" }}>
+        <div style={{ position: "absolute", left: 960 + doors * 980, top: 0, width: 960, height: 1080, background: "#F6F6F7", borderLeft: `10px solid ${C.mag}`, boxShadow: "-20px 0 60px rgba(255,94,26,0.18)" }}>
           <div style={{ position: "absolute", left: 60, top: 500, width: 18, height: 120, borderRadius: 9, background: GRAD }} />
         </div>
       </Phase>
       {/* the gallery */}
       <Phase a={first - 10} b={le(li(NICHES[5].a)) + 8}>
         {/* floor line */}
-        <div style={{ position: "absolute", left: 0, right: 0, top: 890, height: 2, background: `linear-gradient(90deg, transparent, ${C.line}, transparent)` }} />
+        <div style={{ position: "absolute", left: 0, right: 0, top: 890, height: 2, background: C.line }} />
         {NICHES.map((n, k) => {
           const Lp = li(n.p), La = li(n.a);
           const enter = slide(k);
@@ -113,9 +113,9 @@ export const Showroom: React.FC = () => {
                 <Pop at={ls(Lp)}><Chip col={n.col} size={38}><Icon name={n.icon} size={46} color={n.col} /> {n.trade}</Chip></Pop>
                 <div style={{ height: 34 }} />
                 <Pop at={cf(Lp, "pop")} from={40}>
-                  <Card style={{ padding: "30px 32px", background: answered ? "#FFFFFF" : C.pinkL, border: `2px solid ${answered ? C.line : "#FFC2D4"}`, opacity: answered ? 0.55 : 1 }} glow="rgba(255,92,138,0.35)">
+                  <Card style={{ padding: "30px 32px", background: answered ? "#FFFFFF" : C.pinkL, border: `2px solid ${answered ? C.line : "#F2A9A4"}`, opacity: answered ? 0.55 : 1 }} glow="rgba(255,61,46,0.35)">
                     <div style={{ display: "flex", gap: 18, alignItems: "flex-start" }}>
-                      <div style={{ width: 54, height: 54, borderRadius: 16, background: answered ? C.grnL : "#FFD1DE", flex: "none", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <div style={{ width: 54, height: 54, borderRadius: 16, background: answered ? C.grnL : "#FDECEB", flex: "none", display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <Icon name={answered ? "check" : "x"} size={34} color={answered ? C.grn : C.pink} />
                       </div>
                       <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 52, color: C.ink, lineHeight: 1.18, textDecoration: answered ? "line-through" : "none", textDecorationColor: C.pink }}>{problemText(LINES[Lp].sub)}</div>
@@ -126,7 +126,7 @@ export const Showroom: React.FC = () => {
               {/* the answer: real sheet names (right) */}
               <div style={{ position: "absolute", left: 1270, top: 220, width: 610, display: "flex", flexDirection: "column", gap: 24 }}>
                 {fr >= ls(La) - 4 && (
-                  <Pop at={cf(La, "sparkle")}><div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 36, letterSpacing: "0.25em", color: n.col }}>THE ANSWER</div></Pop>
+                  <Pop at={cf(La, "sparkle")}><div style={{ fontFamily: FONT.mono, fontWeight: 800, fontSize: 36, letterSpacing: "0.25em", color: n.col }}>THE ANSWER</div></Pop>
                 )}
                 {n.chips.map(([w, label], q) => (
                   <Pop key={q} at={cf(La, "pop", q)} from={40}>
@@ -143,7 +143,7 @@ export const Showroom: React.FC = () => {
         })}
         {/* progress dots */}
         <div style={{ position: "absolute", left: 0, right: 0, top: 960, display: "flex", justifyContent: "center", gap: 18 }}>
-          {NICHES.map((n, k) => <div key={k} style={{ width: k === idx ? 46 : 16, height: 16, borderRadius: 8, background: k === idx ? GRAD : k < idx ? "#CDBEFF" : C.line }} />)}
+          {NICHES.map((n, k) => <div key={k} style={{ width: k === idx ? 46 : 16, height: 16, borderRadius: 8, background: k === idx ? GRAD : k < idx ? "#FFB48A" : C.line }} />)}
         </div>
       </Phase>
     </>
@@ -178,9 +178,9 @@ export const Wall: React.FC = () => {
           const s = pop(fr, t.at, 300, 12);
           const pulse = done ? 1 + 0.05 * Math.sin((fr - ls(Le)) / 4 - k * 0.5) * Math.exp(-(fr - ls(Le)) / 40) : 1;
           return (
-            <div key={k} style={{ height: 200, borderRadius: 26, background: lit ? "#FFFFFF" : "#F6F4FB", border: lit ? "3px solid transparent" : `2px dashed ${C.line}`, backgroundImage: lit ? `linear-gradient(#fff,#fff), ${GRAD}` : undefined, backgroundOrigin: "border-box", backgroundClip: lit ? "padding-box, border-box" : undefined, boxShadow: lit ? "0 20px 40px -18px rgba(139,92,246,0.45)" : "none", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14, transform: `scale(${(lit ? 0.85 + 0.15 * Math.min(1.12, s) : 0.92) * pulse})`, position: "relative" }}>
-              <Icon name={t.i} size={64} color={lit ? [C.mag, C.pur, C.cya][k % 3] : "#CFC9E2"} />
-              <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 25, color: lit ? C.ink : "#B9B3CF", textAlign: "center", lineHeight: 1.1, padding: "0 8px" }}>{t.t}</div>
+            <div key={k} style={{ height: 200, borderRadius: 26, background: lit ? "#FFFFFF" : "#F6F6F7", border: lit ? `3px solid ${C.mag}` : `2px dashed ${C.line}`, boxShadow: lit ? "0 20px 40px -18px rgba(255,94,26,0.45)" : "none", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14, transform: `scale(${(lit ? 0.85 + 0.15 * Math.min(1.12, s) : 0.92) * pulse})`, position: "relative" }}>
+              <Icon name={t.i} size={64} color={lit ? [C.mag, C.pur, C.cya][k % 3] : "#B0B0B8"} />
+              <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 25, color: lit ? C.ink : "#8A8A92", textAlign: "center", lineHeight: 1.1, padding: "0 8px" }}>{t.t}</div>
               {lit && <div style={{ position: "absolute", right: 12, top: 12, width: 32, height: 32, borderRadius: 16, background: C.grnL, display: "flex", alignItems: "center", justifyContent: "center" }}><Icon name="check" size={22} color={C.grn} /></div>}
             </div>
           );
@@ -202,13 +202,13 @@ const TierCard: React.FC<{ tier: "Essential" | "Elite" | "Complete"; price: stri
   return (
     <div style={{ width: 470, opacity: Math.min(1, s * 1.5), transform: `translateY(${(1 - s) * 200}px)` }}>
       <Card style={{ padding: 34, display: "flex", flexDirection: "column", alignItems: "center", gap: 22, position: "relative" }} glow={`${col}66`}>
-        {ribbon && <div style={{ position: "absolute", top: -26, right: 30, background: GRAD, color: "#fff", fontFamily: FONT.sans, fontWeight: 800, fontSize: 26, padding: "8px 22px", borderRadius: 999, boxShadow: "0 12px 30px -10px rgba(255,62,165,0.6)" }}>{ribbon}</div>}
+        {ribbon && <div style={{ position: "absolute", top: -26, right: 30, background: GRAD, color: "#fff", fontFamily: FONT.sans, fontWeight: 800, fontSize: 26, padding: "8px 22px", borderRadius: 999, boxShadow: "0 12px 30px -10px rgba(255,94,26,0.6)" }}>{ribbon}</div>}
         <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 52, color: C.ink, letterSpacing: "-0.03em" }}>{tier}</div>
         <div style={{ position: "relative", width: 240, height: 320 }}>
           <div style={{ position: "absolute", opacity: 1 - (xf > 0.75 ? (xf - 0.75) * 4 : 0) }}><CoverImg slug={CYCLE[idx]} tier={tier} width={240} /></div>
           <div style={{ position: "absolute", opacity: xf > 0.75 ? (xf - 0.75) * 4 : 0 }}><CoverImg slug={CYCLE[nxt]} tier={tier} width={240} /></div>
         </div>
-        <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 96, letterSpacing: "-0.05em", lineHeight: 1, transform: `scale(${fr >= priceAt - 1 ? 0.5 + 0.5 * pop(fr, priceAt, 300, 11) : 0})` }}><GText>{price}</GText></div>
+        <div style={{ fontFamily: FONT.num, fontWeight: 900, fontSize: 77, letterSpacing: "-0.03em", lineHeight: 1, transform: `scale(${fr >= priceAt - 1 ? 0.5 + 0.5 * pop(fr, priceAt, 300, 11) : 0})` }}><GText>{price}</GText></div>
         <div style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 30, color: C.ink2, textAlign: "center", minHeight: 80, opacity: ap(fr, priceAt + 4, 10) }}>{desc}</div>
       </Card>
       <Sparkle at={priceAt} x={235} y={560} n={8} r={180} />
@@ -265,11 +265,11 @@ export const Inside: React.FC = () => {
       </AbsoluteFill>
       {/* the box */}
       <div style={{ position: "absolute", left: 960 - 190, top: 760, width: 380, height: 230 }}>
-        <div style={{ position: "absolute", inset: 0, borderRadius: 26, background: "linear-gradient(180deg,#F3EDFF,#E6DBFF)", border: `3px solid #D7C9FF`, boxShadow: "0 40px 70px -30px rgba(139,92,246,0.5)" }} />
-        <div style={{ position: "absolute", left: 150, top: 0, width: 80, height: 230, background: "linear-gradient(180deg,#FFD1EA,#FFB8DD)" }} />
-        <div style={{ position: "absolute", left: -10, top: -40, width: 200, height: 46, borderRadius: 14, background: "linear-gradient(180deg,#F8F4FF,#E9DFFF)", border: "3px solid #D7C9FF", transformOrigin: "left bottom", transform: `rotate(${-open * 120}deg)` }} />
-        <div style={{ position: "absolute", left: 190, top: -40, width: 200, height: 46, borderRadius: 14, background: "linear-gradient(180deg,#F8F4FF,#E9DFFF)", border: "3px solid #D7C9FF", transformOrigin: "right bottom", transform: `rotate(${open * 120}deg)` }} />
-        <div style={{ position: "absolute", left: 40, top: -160, width: 300, height: 200, background: `radial-gradient(ellipse at 50% 100%, rgba(255,201,77,0.55), transparent 70%)`, opacity: open }} />
+        <div style={{ position: "absolute", inset: 0, borderRadius: 26, background: "#E2E2E6", border: `3px solid #B0B0B8`, boxShadow: "0 40px 70px -30px rgba(255,94,26,0.5)" }} />
+        <div style={{ position: "absolute", left: 150, top: 0, width: 80, height: 230, background: C.mag }} />
+        <div style={{ position: "absolute", left: -10, top: -40, width: 200, height: 46, borderRadius: 14, background: "#D0D0D6", border: "3px solid #B0B0B8", transformOrigin: "left bottom", transform: `rotate(${-open * 120}deg)` }} />
+        <div style={{ position: "absolute", left: 190, top: -40, width: 200, height: 46, borderRadius: 14, background: "#D0D0D6", border: "3px solid #B0B0B8", transformOrigin: "right bottom", transform: `rotate(${open * 120}deg)` }} />
+        <div style={{ position: "absolute", left: 40, top: -160, width: 300, height: 200, background: "#FFB21E55", filter: "blur(40px)", borderRadius: "50%", opacity: open }} />
       </div>
       {items.map((it, k) => {
         const s = pop(fr, it.at, 170, 14);
@@ -303,12 +303,12 @@ export const How: React.FC = () => {
     const on = act === k;
     return (
       <div style={{ width: 520, opacity: Math.min(1, s * 1.5), transform: `translateY(${(1 - s) * 120 + (on ? -20 : 0)}px) scale(${on ? 1.04 : 1})` }}>
-        <Card style={{ padding: 30, height: 560, display: "flex", flexDirection: "column", gap: 20, border: on ? "3px solid transparent" : `2px solid ${C.line}`, backgroundImage: on ? `linear-gradient(#fff,#fff), ${GRAD}` : undefined, backgroundOrigin: "border-box", backgroundClip: on ? "padding-box, border-box" : undefined }}>
+        <Card style={{ padding: 30, height: 560, display: "flex", flexDirection: "column", gap: 20, border: on ? `3px solid ${C.mag}` : `2px solid ${C.line}` }}>
           <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
-            <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 90, lineHeight: 1, letterSpacing: "-0.05em" }}><GText>{k + 1}</GText></div>
+            <div style={{ fontFamily: FONT.num, fontWeight: 900, fontSize: 72, lineHeight: 1, letterSpacing: "-0.03em" }}><GText>{k + 1}</GText></div>
             <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 38, color: C.ink, lineHeight: 1.1 }}>{title}</div>
           </div>
-          <div style={{ flex: 1, borderRadius: 20, background: "#FBF9FF", border: `2px solid ${C.line}`, position: "relative", overflow: "hidden" }}>{children}</div>
+          <div style={{ flex: 1, borderRadius: 20, background: "#F6F6F7", border: `2px solid ${C.line}`, position: "relative", overflow: "hidden" }}>{children}</div>
         </Card>
       </div>
     );
@@ -327,7 +327,7 @@ export const How: React.FC = () => {
         <Step k={0} title="Open it" at={ls(L1) - 4}>
           {/* file icon gets clicked, window opens on a live dashboard */}
           <div style={{ position: "absolute", left: 140, top: 60, opacity: 1 - ap(fr, click + 4, 8), transform: `scale(${fr >= click && fr < click + 4 ? 0.9 : 1})` }}>
-            <IconBubble name="sheet" size={170} col={C.grn} bg="#E7FBF2" />
+            <IconBubble name="sheet" size={170} col={C.grn} bg="#E5F7EC" />
           </div>
           <div style={{ position: "absolute", left: 300 + Math.max(0, 40 - (fr - ls(L1)) * 2), top: 200 - Math.max(0, 40 - (fr - ls(L1)) * 2), opacity: 1 - ap(fr, click + 4, 8) }}><Icon name="play" size={56} color={C.ink} /></div>
           <div style={{ position: "absolute", inset: 20, opacity: ap(fr, click + 4, 10), display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
@@ -381,7 +381,7 @@ export const Honest: React.FC = () => {
     return (
       <div style={{ position: "absolute", left: 240, top: y, width: 1440, opacity: Math.min(1, s * 1.5), transform: `translateX(${(1 - s) * -200}px)` }}>
         <Card style={{ padding: "30px 40px", display: "flex", alignItems: "center", gap: 30 }}>
-          <div style={{ fontFamily: FONT.serif, fontStyle: "italic", fontWeight: 700, fontSize: 70, lineHeight: 1 }}><GText>Q</GText></div>
+          <div style={{ fontFamily: FONT.serif, fontWeight: 700, fontSize: 70, lineHeight: 1 }}><GText>Q</GText></div>
           <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 46, color: C.ink, flex: 1 }}>{q}</div>
           {fr >= stamp - 1 && (
             <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
@@ -450,7 +450,7 @@ export const Cta: React.FC = () => {
           <div style={{ display: "flex", alignItems: "center", gap: 60, transform: `scale(${0.6 + 0.4 * zoom})`, opacity: zoom }}>
             <div style={{ position: "relative" }}>
               <CoverImg slug="hvac" width={300} />
-              <div style={{ position: "absolute", left: 150 - 60, top: 200 - 60, width: 120, height: 120, borderRadius: 60, background: GRAD, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 20px 50px -10px rgba(255,62,165,0.6)", transform: `scale(${1 + 0.06 * Math.sin(fr / 5)})` }}><Icon name="play" size={64} color="#fff" /></div>
+              <div style={{ position: "absolute", left: 150 - 60, top: 200 - 60, width: 120, height: 120, borderRadius: 60, background: GRAD, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 20px 50px -10px rgba(255,94,26,0.6)", transform: `scale(${1 + 0.06 * Math.sin(fr / 5)})` }}><Icon name="play" size={64} color="#fff" /></div>
             </div>
             <Card style={{ padding: "34px 40px", display: "flex", flexDirection: "column", gap: 18 }}>
               <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 46, color: C.ink }}>Full walkthrough</div>
@@ -475,7 +475,7 @@ export const End: React.FC = () => {
       {fr < hit + 2 && (
         <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}>
           {["$", "%", "#", "$", "%", "#", "$", "%"].map((g, k) => (
-            <div key={k} style={{ position: "absolute", left: 200 + k * 210, top: 250 + Math.sin(fr / 14 + k) * 60 + (k % 2) * 420, fontFamily: FONT.sans, fontWeight: 800, fontSize: 110, color: [C.mag, C.pur, C.cya][k % 3], opacity: 0.22 * ap(fr, ls(L0) + k * 2, 10) }}>{g}</div>
+            <div key={k} style={{ position: "absolute", left: 200 + k * 210, top: 250 + Math.sin(fr / 14 + k) * 60 + (k % 2) * 420, fontFamily: FONT.num, fontWeight: 900, fontSize: 88, color: [C.mag, C.pur, C.cya][k % 3], opacity: 0.22 * ap(fr, ls(L0) + k * 2, 10) }}>{g}</div>
           ))}
           <KText line={L0} size={96} maxWidth={1500} />
         </AbsoluteFill>

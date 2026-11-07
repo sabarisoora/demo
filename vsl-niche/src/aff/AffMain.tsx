@@ -1,11 +1,13 @@
-import "@fontsource/poppins/600.css";
-import "@fontsource/poppins/700.css";
-import "@fontsource/poppins/800.css";
-import "@fontsource/playfair-display/700-italic.css";
+import "@fontsource/space-grotesk/500.css";
+import "@fontsource/space-grotesk/700.css";
+import "@fontsource/unbounded/700.css";
+import "@fontsource/unbounded/900.css";
+import "@fontsource/jetbrains-mono/700.css";
+import "@fontsource/anton/400.css";
 import React, { useEffect, useState } from "react";
 import { AbsoluteFill, Audio, continueRender, delayRender, staticFile, useCurrentFrame } from "remotion";
 import { lio, LINES, sceneEnd, sceneStart, SCENES } from "../home/lib";
-import { Bg, Captions, MARK, Wipes } from "../home/ui";
+import { Bg, Cam, Captions, MARK, Wipes } from "../home/ui";
 import { ChapterCards, Open, Problem, Rail, What, Why } from "./A1";
 import { Cta, Email, Faq, How, Kit, Launch, Master, Money, Rules } from "./A2";
 
@@ -33,7 +35,7 @@ const CAP = new Set(["So a plumber", "ProfitIQS gives him a Callback", "A restau
 
 const useFonts = () => {
   const [h] = useState(() => delayRender("fonts"));
-  useEffect(() => { Promise.all(["800 40px Poppins", "700 40px Poppins", "600 40px Poppins", "italic 700 40px 'Playfair Display'"].map((x) => document.fonts.load(x))).then(() => continueRender(h)); }, [h]);
+  useEffect(() => { Promise.all(["700 40px 'Space Grotesk'", "500 40px 'Space Grotesk'", "900 40px Unbounded", "700 40px Unbounded", "700 40px 'JetBrains Mono'", "400 40px Anton"].map((x) => document.fonts.load(x))).then(() => continueRender(h)); }, [h]);
 };
 const Only: React.FC<{ s: string; children: React.ReactNode }> = ({ s, children }) => {
   const fr = useCurrentFrame();
@@ -48,6 +50,7 @@ export const Aff: React.FC<{ audio?: boolean }> = ({ audio = true }) => {
   return (
     <AbsoluteFill style={{ background: "#FFFFFF" }}>
       <Bg />
+      <Cam>
       <Only s="open"><Open /></Only>
       <Only s="what"><What /></Only>
       <Only s="problem"><Problem /></Only>
@@ -63,6 +66,7 @@ export const Aff: React.FC<{ audio?: boolean }> = ({ audio = true }) => {
       <Only s="cta"><Cta /></Only>
       <Rail />
       <ChapterCards />
+      </Cam>
       <Wipes />
       {li_ >= 0 && CAP.has(li_) && <Captions />}
       {audio && <Audio src={staticFile("mix.wav")} />}

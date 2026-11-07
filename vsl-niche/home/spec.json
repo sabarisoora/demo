@@ -955,5 +955,22 @@
     ]
    ]
   ]
- ]
+ ],
+ "style": "cinema",
+ "voice": "am_fenrir",
+ "speed": 1.0,
+ "drums": {
+  "hook": 0.0,
+  "blind": 0.4,
+  "data": 0.5,
+  "reveal": 1,
+  "show": 0.85,
+  "wall": 1,
+  "box": 1,
+  "inside": 0.8,
+  "how": 0.6,
+  "honest": 0.5,
+  "cta": 1,
+  "end": 1
+ }
 }

@@ -1,12 +1,12 @@
 {
- "duration": 230.242,
+ "duration": 229.043,
  "lead": 0.15,
  "lines": [
   {
    "scene": "hook",
    "sub": "You open at seven.",
    "start": 0.9,
-   "end": 2.005,
+   "end": 1.897,
    "words": [
     {
      "w": "You",
@@ -14,15 +14,15 @@
     },
     {
      "w": "open",
-     "s": 1.0
+     "s": 0.98
     },
     {
      "w": "at",
-     "s": 1.22
+     "s": 1.18
     },
     {
      "w": "seven.",
-     "s": 1.42
+     "s": 1.3
     }
    ],
    "cues": [
@@ -39,24 +39,24 @@
   {
    "scene": "hook",
    "sub": "You close at seven.",
-   "start": 2.425,
-   "end": 3.52,
+   "start": 2.317,
+   "end": 3.371,
    "words": [
     {
      "w": "You",
-     "s": 2.425
+     "s": 2.317
     },
     {
      "w": "close",
-     "s": 2.525
+     "s": 2.397
     },
     {
      "w": "at",
-     "s": 2.705
+     "s": 2.557
     },
     {
      "w": "seven.",
-     "s": 2.925
+     "s": 2.757
     }
    ],
    "cues": [
@@ -73,56 +73,56 @@
   {
    "scene": "hook",
    "sub": "Jobs done. Invoices sent. Money moving in and out, all day long.",
-   "start": 3.94,
-   "end": 8.14,
+   "start": 3.791,
+   "end": 7.877,
    "words": [
     {
      "w": "Jobs",
-     "s": 3.94
+     "s": 3.791
     },
     {
      "w": "done.",
-     "s": 4.16
+     "s": 4.011
     },
     {
      "w": "Invoices",
-     "s": 5.0
+     "s": 4.611
     },
     {
      "w": "sent.",
-     "s": 5.28
+     "s": 5.031
     },
     {
      "w": "Money",
-     "s": 6.36
+     "s": 5.791
     },
     {
      "w": "moving",
-     "s": 6.39
+     "s": 5.971
     },
     {
      "w": "in",
-     "s": 6.58
+     "s": 6.211
     },
     {
      "w": "and",
-     "s": 6.88
+     "s": 6.511
     },
     {
      "w": "out,",
-     "s": 6.98
+     "s": 6.611
     },
     {
      "w": "all",
-     "s": 7.38
+     "s": 7.011
     },
     {
      "w": "day",
-     "s": 7.5
+     "s": 7.131
     },
     {
      "w": "long.",
-     "s": 7.62
+     "s": 7.311
     }
    ],
    "cues": [
@@ -147,28 +147,28 @@
   {
    "scene": "hook",
    "sub": "So here's one quick question.",
-   "start": 8.56,
-   "end": 10.151,
+   "start": 8.297,
+   "end": 9.815,
    "words": [
     {
      "w": "So",
-     "s": 8.56
+     "s": 8.357
     },
     {
      "w": "here's",
-     "s": 8.68
+     "s": 8.417
     },
     {
      "w": "one",
-     "s": 8.98
+     "s": 8.657
     },
     {
      "w": "quick",
-     "s": 9.18
+     "s": 8.817
     },
     {
      "w": "question.",
-     "s": 9.42
+     "s": 9.057
     }
    ],
    "cues": [
@@ -181,40 +181,40 @@
   {
    "scene": "hook",
    "sub": "How much did you actually keep last month?",
-   "start": 10.571,
-   "end": 12.569,
+   "start": 10.235,
+   "end": 12.448,
    "words": [
     {
      "w": "How",
-     "s": 10.571
+     "s": 10.235
     },
     {
      "w": "much",
-     "s": 10.691
+     "s": 10.335
     },
     {
      "w": "did",
-     "s": 10.851
+     "s": 10.535
     },
     {
      "w": "you",
-     "s": 11.071
+     "s": 10.755
     },
     {
      "w": "actually",
-     "s": 11.171
+     "s": 10.855
     },
     {
      "w": "keep",
-     "s": 11.451
+     "s": 11.155
     },
     {
      "w": "last",
-     "s": 11.831
+     "s": 11.575
     },
     {
      "w": "month?",
-     "s": 12.091
+     "s": 11.855
     }
    ],
    "cues": [
@@ -227,36 +227,36 @@
   {
    "scene": "hook",
    "sub": "Not what came in. What you kept.",
-   "start": 12.989,
-   "end": 14.651,
+   "start": 12.868,
+   "end": 14.383,
    "words": [
     {
      "w": "Not",
-     "s": 12.989
+     "s": 12.868
     },
     {
      "w": "what",
-     "s": 13.149
+     "s": 13.028
     },
     {
      "w": "came",
-     "s": 13.269
+     "s": 13.168
     },
     {
      "w": "in.",
-     "s": 13.469
+     "s": 13.348
     },
     {
      "w": "What",
-     "s": 13.969
+     "s": 13.708
     },
     {
      "w": "you",
-     "s": 14.009
+     "s": 13.738
     },
     {
      "w": "kept.",
-     "s": 14.129
+     "s": 13.868
     }
    ],
    "cues": [
@@ -273,32 +273,32 @@
   {
    "scene": "blind",
    "sub": "It doesn't matter what you run.",
-   "start": 15.701,
-   "end": 17.02,
+   "start": 15.433,
+   "end": 16.748,
    "words": [
     {
      "w": "It",
-     "s": 15.701
+     "s": 15.433
     },
     {
      "w": "doesn't",
-     "s": 15.761
+     "s": 15.493
     },
     {
      "w": "matter",
-     "s": 16.021
+     "s": 15.713
     },
     {
      "w": "what",
-     "s": 16.181
+     "s": 15.873
     },
     {
      "w": "you",
-     "s": 16.461
+     "s": 16.133
     },
     {
      "w": "run.",
-     "s": 16.601
+     "s": 16.273
     }
    ],
    "cues": [
@@ -311,44 +311,44 @@
   {
    "scene": "blind",
    "sub": "A plumber wonders which callbacks are eating the margin.",
-   "start": 17.44,
-   "end": 20.338,
+   "start": 17.168,
+   "end": 20.005,
    "words": [
     {
      "w": "A",
-     "s": 17.44
+     "s": 17.168
     },
     {
      "w": "plumber",
-     "s": 17.5
+     "s": 17.228
     },
     {
      "w": "wonders",
-     "s": 17.8
+     "s": 17.488
     },
     {
      "w": "which",
-     "s": 18.14
+     "s": 17.828
     },
     {
      "w": "callbacks",
-     "s": 18.58
+     "s": 18.128
     },
     {
      "w": "are",
-     "s": 19.08
+     "s": 18.668
     },
     {
      "w": "eating",
-     "s": 19.32
+     "s": 18.908
     },
     {
      "w": "the",
-     "s": 19.52
+     "s": 19.128
     },
     {
      "w": "margin.",
-     "s": 19.74
+     "s": 19.348
     }
    ],
    "cues": [
@@ -361,48 +361,48 @@
   {
    "scene": "blind",
    "sub": "A restaurant owner wonders where the prime cost really landed.",
-   "start": 20.758,
-   "end": 23.925,
+   "start": 20.425,
+   "end": 23.729,
    "words": [
     {
      "w": "A",
-     "s": 20.758
+     "s": 20.425
     },
     {
      "w": "restaurant",
-     "s": 20.818
+     "s": 20.485
     },
     {
      "w": "owner",
-     "s": 21.058
+     "s": 20.765
     },
     {
      "w": "wonders",
-     "s": 21.438
+     "s": 21.125
     },
     {
      "w": "where",
-     "s": 21.858
+     "s": 21.625
     },
     {
      "w": "the",
-     "s": 22.238
+     "s": 21.945
     },
     {
      "w": "prime",
-     "s": 22.318
+     "s": 22.025
     },
     {
      "w": "cost",
-     "s": 22.478
+     "s": 22.245
     },
     {
      "w": "really",
-     "s": 22.858
+     "s": 22.625
     },
     {
      "w": "landed.",
-     "s": 23.238
+     "s": 23.025
     }
    ],
    "cues": [
@@ -415,44 +415,44 @@
   {
    "scene": "blind",
    "sub": "A dentist wonders why production and collections don't match.",
-   "start": 24.345,
-   "end": 27.864,
+   "start": 24.149,
+   "end": 27.625,
    "words": [
     {
      "w": "A",
-     "s": 24.345
+     "s": 24.149
     },
     {
      "w": "dentist",
-     "s": 24.385
+     "s": 24.189
     },
     {
      "w": "wonders",
-     "s": 24.605
+     "s": 24.429
     },
     {
      "w": "why",
-     "s": 25.165
+     "s": 24.949
     },
     {
      "w": "production",
-     "s": 25.625
+     "s": 25.389
     },
     {
      "w": "and",
-     "s": 26.025
+     "s": 25.829
     },
     {
      "w": "collections",
-     "s": 26.345
+     "s": 26.169
     },
     {
      "w": "don't",
-     "s": 26.705
+     "s": 26.509
     },
     {
      "w": "match.",
-     "s": 27.385
+     "s": 27.109
     }
    ],
    "cues": [
@@ -465,44 +465,44 @@
   {
    "scene": "blind",
    "sub": "A trucker wonders which loads actually paid after fuel.",
-   "start": 28.284,
-   "end": 31.536,
+   "start": 28.045,
+   "end": 31.32,
    "words": [
     {
      "w": "A",
-     "s": 28.284
+     "s": 28.045
     },
     {
      "w": "trucker",
-     "s": 28.344
+     "s": 28.105
     },
     {
      "w": "wonders",
-     "s": 28.704
+     "s": 28.425
     },
     {
      "w": "which",
-     "s": 28.924
+     "s": 28.765
     },
     {
      "w": "loads",
-     "s": 29.544
+     "s": 29.105
     },
     {
      "w": "actually",
-     "s": 29.764
+     "s": 29.405
     },
     {
      "w": "paid",
-     "s": 30.344
+     "s": 30.005
     },
     {
      "w": "after",
-     "s": 30.724
+     "s": 30.385
     },
     {
      "w": "fuel.",
-     "s": 31.064
+     "s": 30.685
     }
    ],
    "cues": [
@@ -515,48 +515,48 @@
   {
    "scene": "blind",
    "sub": "A landlord wonders which property is dragging the rest down.",
-   "start": 31.956,
-   "end": 35.047,
+   "start": 31.74,
+   "end": 34.961,
    "words": [
     {
      "w": "A",
-     "s": 31.956
+     "s": 31.74
     },
     {
      "w": "landlord",
-     "s": 32.016
+     "s": 31.8
     },
     {
      "w": "wonders",
-     "s": 32.296
+     "s": 32.08
     },
     {
      "w": "which",
-     "s": 32.836
+     "s": 32.7
     },
     {
      "w": "property",
-     "s": 33.136
+     "s": 33.0
     },
     {
      "w": "is",
-     "s": 33.516
+     "s": 33.38
     },
     {
      "w": "dragging",
-     "s": 33.836
+     "s": 33.72
     },
     {
      "w": "the",
-     "s": 34.076
+     "s": 33.94
     },
     {
      "w": "rest",
-     "s": 34.356
+     "s": 34.24
     },
     {
      "w": "down.",
-     "s": 34.496
+     "s": 34.4
     }
    ],
    "cues": [
@@ -569,32 +569,32 @@
   {
    "scene": "blind",
    "sub": "Different trades. The same blind spot.",
-   "start": 35.467,
-   "end": 37.688,
+   "start": 35.381,
+   "end": 37.387,
    "words": [
     {
      "w": "Different",
-     "s": 35.467
+     "s": 35.381
     },
     {
      "w": "trades.",
-     "s": 35.667
+     "s": 35.561
     },
     {
      "w": "The",
-     "s": 36.427
+     "s": 36.141
     },
     {
      "w": "same",
-     "s": 36.467
+     "s": 36.181
     },
     {
      "w": "blind",
-     "s": 36.727
+     "s": 36.421
     },
     {
      "w": "spot.",
-     "s": 36.947
+     "s": 36.621
     }
    ],
    "cues": [
@@ -607,44 +607,44 @@
   {
    "scene": "data",
    "sub": "And here's the thing. The data is already there.",
-   "start": 38.738,
-   "end": 41.14,
+   "start": 38.437,
+   "end": 40.744,
    "words": [
     {
      "w": "And",
-     "s": 38.738
+     "s": 38.437
     },
     {
      "w": "here's",
-     "s": 38.768
+     "s": 38.467
     },
     {
      "w": "the",
-     "s": 38.798
+     "s": 38.497
     },
     {
      "w": "thing.",
-     "s": 38.828
+     "s": 38.527
     },
     {
      "w": "The",
-     "s": 38.858
+     "s": 38.557
     },
     {
      "w": "data",
-     "s": 38.938
+     "s": 38.597
     },
     {
      "w": "is",
-     "s": 39.378
+     "s": 39.597
     },
     {
      "w": "already",
-     "s": 40.358
+     "s": 39.917
     },
     {
      "w": "there.",
-     "s": 40.618
+     "s": 40.177
     }
    ],
    "cues": [
@@ -657,44 +657,44 @@
   {
    "scene": "data",
    "sub": "Invoices. Receipts. Bank statements. The apps you already use.",
-   "start": 41.56,
-   "end": 45.295,
+   "start": 41.164,
+   "end": 44.651,
    "words": [
     {
      "w": "Invoices.",
-     "s": 41.56
+     "s": 41.164
     },
     {
      "w": "Receipts.",
-     "s": 42.32
+     "s": 41.844
     },
     {
      "w": "Bank",
-     "s": 43.02
+     "s": 42.404
     },
     {
      "w": "statements.",
-     "s": 43.05
+     "s": 42.484
     },
     {
      "w": "The",
-     "s": 43.96
+     "s": 43.244
     },
     {
      "w": "apps",
-     "s": 43.99
+     "s": 43.274
     },
     {
      "w": "you",
-     "s": 44.18
+     "s": 43.464
     },
     {
      "w": "already",
-     "s": 44.42
+     "s": 43.704
     },
     {
      "w": "use.",
-     "s": 44.56
+     "s": 43.964
     }
    ],
    "cues": [
@@ -719,44 +719,44 @@
   {
    "scene": "data",
    "sub": "It's just never in one place, turned into answers.",
-   "start": 45.715,
-   "end": 48.356,
+   "start": 45.071,
+   "end": 47.825,
    "words": [
     {
      "w": "It's",
-     "s": 45.715
+     "s": 45.071
     },
     {
      "w": "just",
-     "s": 45.855
+     "s": 45.191
     },
     {
      "w": "never",
-     "s": 45.955
+     "s": 45.311
     },
     {
      "w": "in",
-     "s": 46.255
+     "s": 45.631
     },
     {
      "w": "one",
-     "s": 46.475
+     "s": 45.891
     },
     {
      "w": "place,",
-     "s": 46.615
+     "s": 46.071
     },
     {
      "w": "turned",
-     "s": 47.235
+     "s": 46.651
     },
     {
      "w": "into",
-     "s": 47.395
+     "s": 46.791
     },
     {
      "w": "answers.",
-     "s": 47.655
+     "s": 47.071
     }
    ],
    "cues": [
@@ -769,28 +769,28 @@
   {
    "scene": "reveal",
    "sub": "That's why we built ProfitIQS.",
-   "start": 49.406,
-   "end": 51.269,
+   "start": 48.875,
+   "end": 50.702,
    "words": [
     {
      "w": "That's",
-     "s": 49.406
+     "s": 48.875
     },
     {
      "w": "why",
-     "s": 49.606
+     "s": 49.075
     },
     {
      "w": "we",
-     "s": 49.746
+     "s": 49.215
     },
     {
      "w": "built",
-     "s": 49.886
+     "s": 49.355
     },
     {
      "w": "ProfitIQS.",
-     "s": 50.577
+     "s": 50.029
     }
    ],
    "cues": [
@@ -807,52 +807,52 @@
   {
    "scene": "reveal",
    "sub": "Business intelligence systems, in Excel. Each one built for one industry.",
-   "start": 51.689,
-   "end": 56.009,
+   "start": 51.122,
+   "end": 55.663,
    "words": [
     {
      "w": "Business",
-     "s": 51.689
+     "s": 51.122
     },
     {
      "w": "intelligence",
-     "s": 51.929
+     "s": 51.382
     },
     {
      "w": "systems,",
-     "s": 52.149
+     "s": 51.942
     },
     {
      "w": "in",
-     "s": 53.309
+     "s": 52.482
     },
     {
      "w": "Excel.",
-     "s": 53.339
+     "s": 52.842
     },
     {
      "w": "Each",
-     "s": 54.349
+     "s": 53.782
     },
     {
      "w": "one",
-     "s": 54.449
+     "s": 53.922
     },
     {
      "w": "built",
-     "s": 54.649
+     "s": 54.142
     },
     {
      "w": "for",
-     "s": 54.869
+     "s": 54.382
     },
     {
      "w": "one",
-     "s": 55.109
+     "s": 54.622
     },
     {
      "w": "industry.",
-     "s": 55.269
+     "s": 54.822
     }
    ],
    "cues": [
@@ -869,24 +869,24 @@
   {
    "scene": "reveal",
    "sub": "Twenty-one industries. Sixty-three systems.",
-   "start": 56.429,
-   "end": 58.959,
+   "start": 56.083,
+   "end": 58.564,
    "words": [
     {
      "w": "Twenty-one",
-     "s": 56.429
+     "s": 56.083
     },
     {
      "w": "industries.",
-     "s": 56.829
+     "s": 56.483
     },
     {
      "w": "Sixty-three",
-     "s": 57.569
+     "s": 57.163
     },
     {
      "w": "systems.",
-     "s": 58.309
+     "s": 57.843
     }
    ],
    "cues": [
@@ -911,48 +911,48 @@
   {
    "scene": "reveal",
    "sub": "Not one generic template. A system that speaks your trade.",
-   "start": 59.379,
-   "end": 62.686,
+   "start": 58.984,
+   "end": 62.42,
    "words": [
     {
      "w": "Not",
-     "s": 59.379
+     "s": 58.984
     },
     {
      "w": "one",
-     "s": 59.559
+     "s": 59.164
     },
     {
      "w": "generic",
-     "s": 59.779
+     "s": 59.384
     },
     {
      "w": "template.",
-     "s": 60.079
+     "s": 59.784
     },
     {
      "w": "A",
-     "s": 61.159
+     "s": 60.684
     },
     {
      "w": "system",
-     "s": 61.189
+     "s": 60.764
     },
     {
      "w": "that",
-     "s": 61.419
+     "s": 61.104
     },
     {
      "w": "speaks",
-     "s": 61.739
+     "s": 61.364
     },
     {
      "w": "your",
-     "s": 61.939
+     "s": 61.604
     },
     {
      "w": "trade.",
-     "s": 62.139
+     "s": 61.864
     }
    ],
    "cues": [
@@ -969,56 +969,56 @@
   {
    "scene": "reveal",
    "sub": "Built for people who are experts in their trade, not in spreadsheets.",
-   "start": 63.106,
-   "end": 66.558,
+   "start": 62.84,
+   "end": 66.502,
    "words": [
     {
      "w": "Built",
-     "s": 63.106
+     "s": 62.84
     },
     {
      "w": "for",
-     "s": 63.306
+     "s": 63.0
     },
     {
      "w": "people",
-     "s": 63.446
+     "s": 63.18
     },
     {
      "w": "who",
-     "s": 63.766
+     "s": 63.48
     },
     {
      "w": "are",
-     "s": 63.966
+     "s": 63.72
     },
     {
      "w": "experts",
-     "s": 64.086
+     "s": 63.84
     },
     {
      "w": "in",
-     "s": 64.406
+     "s": 64.2
     },
     {
      "w": "their",
-     "s": 64.746
+     "s": 64.5
     },
     {
      "w": "trade,",
-     "s": 64.826
+     "s": 64.62
     },
     {
      "w": "not",
-     "s": 65.466
+     "s": 65.32
     },
     {
      "w": "in",
-     "s": 65.626
+     "s": 65.46
     },
     {
      "w": "spreadsheets.",
-     "s": 65.746
+     "s": 65.6
     }
    ],
    "cues": [
@@ -1035,40 +1035,40 @@
   {
    "scene": "show",
    "sub": "Come on in. Let's walk through the showroom.",
-   "start": 67.608,
-   "end": 69.804,
+   "start": 67.552,
+   "end": 69.572,
    "words": [
     {
      "w": "Come",
-     "s": 67.608
+     "s": 67.552
     },
     {
      "w": "on",
-     "s": 67.748
+     "s": 67.672
     },
     {
      "w": "in.",
-     "s": 67.868
+     "s": 67.812
     },
     {
      "w": "Let's",
-     "s": 68.448
+     "s": 68.292
     },
     {
      "w": "walk",
-     "s": 68.668
+     "s": 68.452
     },
     {
      "w": "through",
-     "s": 68.828
+     "s": 68.612
     },
     {
      "w": "the",
-     "s": 69.068
+     "s": 68.852
     },
     {
      "w": "showroom.",
-     "s": 69.188
+     "s": 68.972
     }
    ],
    "cues": [
@@ -1085,56 +1085,56 @@
   {
    "scene": "show",
    "sub": "Every sheet name you'll see is real, straight from the actual workbooks.",
-   "start": 70.224,
-   "end": 73.854,
+   "start": 69.992,
+   "end": 73.8,
    "words": [
     {
      "w": "Every",
-     "s": 70.224
+     "s": 69.992
     },
     {
      "w": "sheet",
-     "s": 70.404
+     "s": 70.192
     },
     {
      "w": "name",
-     "s": 70.624
+     "s": 70.412
     },
     {
      "w": "you'll",
-     "s": 70.784
+     "s": 70.672
     },
     {
      "w": "see",
-     "s": 70.984
+     "s": 70.892
     },
     {
      "w": "is",
-     "s": 71.204
+     "s": 71.092
     },
     {
      "w": "real,",
-     "s": 71.444
+     "s": 71.372
     },
     {
      "w": "straight",
-     "s": 72.404
+     "s": 72.032
     },
     {
      "w": "from",
-     "s": 72.434
+     "s": 72.272
     },
     {
      "w": "the",
-     "s": 72.684
+     "s": 72.572
     },
     {
      "w": "actual",
-     "s": 72.784
+     "s": 72.672
     },
     {
      "w": "workbooks.",
-     "s": 73.084
+     "s": 73.012
     }
    ],
    "cues": [
@@ -1147,32 +1147,32 @@
   {
    "scene": "show",
    "sub": "Plumbers: callbacks quietly eating the margin?",
-   "start": 74.274,
-   "end": 76.672,
+   "start": 74.22,
+   "end": 76.552,
    "words": [
     {
      "w": "Plumbers:",
-     "s": 74.274
+     "s": 74.22
     },
     {
      "w": "callbacks",
-     "s": 74.534
+     "s": 74.46
     },
     {
      "w": "quietly",
-     "s": 75.194
+     "s": 74.98
     },
     {
      "w": "eating",
-     "s": 75.514
+     "s": 75.28
     },
     {
      "w": "the",
-     "s": 75.914
+     "s": 75.74
     },
     {
      "w": "margin?",
-     "s": 76.094
+     "s": 75.94
     }
    ],
    "cues": [
@@ -1189,56 +1189,56 @@
   {
    "scene": "show",
    "sub": "Here's a Callback Tracker, and a Job Profitability Center for every job.",
-   "start": 77.092,
-   "end": 81.214,
+   "start": 76.972,
+   "end": 81.254,
    "words": [
     {
      "w": "Here's",
-     "s": 77.092
+     "s": 76.972
     },
     {
      "w": "a",
-     "s": 77.332
+     "s": 77.212
     },
     {
      "w": "Callback",
-     "s": 77.412
+     "s": 77.272
     },
     {
      "w": "Tracker,",
-     "s": 77.792
+     "s": 77.652
     },
     {
      "w": "and",
-     "s": 78.672
+     "s": 78.452
     },
     {
      "w": "a",
-     "s": 78.712
+     "s": 78.512
     },
     {
      "w": "Job",
-     "s": 78.772
+     "s": 78.592
     },
     {
      "w": "Profitability",
-     "s": 79.012
+     "s": 78.892
     },
     {
      "w": "Center",
-     "s": 79.652
+     "s": 79.532
     },
     {
      "w": "for",
-     "s": 80.072
+     "s": 79.972
     },
     {
      "w": "every",
-     "s": 80.352
+     "s": 80.272
     },
     {
      "w": "job.",
-     "s": 80.572
+     "s": 80.532
     }
    ],
    "cues": [
@@ -1259,36 +1259,36 @@
   {
    "scene": "show",
    "sub": "Restaurants: no idea where prime cost landed?",
-   "start": 81.634,
-   "end": 84.365,
+   "start": 81.674,
+   "end": 84.181,
    "words": [
     {
      "w": "Restaurants:",
-     "s": 81.634
+     "s": 81.674
     },
     {
      "w": "no",
-     "s": 82.414
+     "s": 82.154
     },
     {
      "w": "idea",
-     "s": 82.614
+     "s": 82.334
     },
     {
      "w": "where",
-     "s": 82.954
+     "s": 82.694
     },
     {
      "w": "prime",
-     "s": 83.174
+     "s": 82.914
     },
     {
      "w": "cost",
-     "s": 83.414
+     "s": 83.154
     },
     {
      "w": "landed?",
-     "s": 83.714
+     "s": 83.494
     }
    ],
    "cues": [
@@ -1305,52 +1305,52 @@
   {
    "scene": "show",
    "sub": "Here's a Prime Cost Center, and Menu Intelligence for every dish.",
-   "start": 84.785,
-   "end": 88.287,
+   "start": 84.601,
+   "end": 88.277,
    "words": [
     {
      "w": "Here's",
-     "s": 84.785
+     "s": 84.601
     },
     {
      "w": "a",
-     "s": 85.005
+     "s": 84.801
     },
     {
      "w": "Prime",
-     "s": 85.085
+     "s": 84.861
     },
     {
      "w": "Cost",
-     "s": 85.285
+     "s": 85.101
     },
     {
      "w": "Center,",
-     "s": 85.525
+     "s": 85.401
     },
     {
      "w": "and",
-     "s": 86.405
+     "s": 86.201
     },
     {
      "w": "Menu",
-     "s": 86.445
+     "s": 86.261
     },
     {
      "w": "Intelligence",
-     "s": 86.665
+     "s": 86.521
     },
     {
      "w": "for",
-     "s": 86.985
+     "s": 86.981
     },
     {
      "w": "every",
-     "s": 87.485
+     "s": 87.381
     },
     {
      "w": "dish.",
-     "s": 87.645
+     "s": 87.661
     }
    ],
    "cues": [
@@ -1371,36 +1371,36 @@
   {
    "scene": "show",
    "sub": "Dental practices: treatment presented, but never accepted?",
-   "start": 88.707,
-   "end": 92.026,
+   "start": 88.697,
+   "end": 91.924,
    "words": [
     {
      "w": "Dental",
-     "s": 88.707
+     "s": 88.697
     },
     {
      "w": "practices:",
-     "s": 88.927
+     "s": 88.917
     },
     {
      "w": "treatment",
-     "s": 89.947
+     "s": 89.917
     },
     {
      "w": "presented,",
-     "s": 90.227
+     "s": 90.117
     },
     {
      "w": "but",
-     "s": 91.007
+     "s": 90.857
     },
     {
      "w": "never",
-     "s": 91.047
+     "s": 90.917
     },
     {
      "w": "accepted?",
-     "s": 91.227
+     "s": 91.117
     }
    ],
    "cues": [
@@ -1417,40 +1417,40 @@
   {
    "scene": "show",
    "sub": "Here's case acceptance, recall tracking, and provider productivity.",
-   "start": 92.446,
-   "end": 96.186,
+   "start": 92.344,
+   "end": 96.118,
    "words": [
     {
      "w": "Here's",
-     "s": 92.446
+     "s": 92.344
     },
     {
      "w": "case",
-     "s": 92.706
+     "s": 92.564
     },
     {
      "w": "acceptance,",
-     "s": 92.846
+     "s": 92.704
     },
     {
      "w": "recall",
-     "s": 93.866
+     "s": 93.724
     },
     {
      "w": "tracking,",
-     "s": 94.026
+     "s": 93.864
     },
     {
      "w": "and",
-     "s": 94.846
+     "s": 94.684
     },
     {
      "w": "provider",
-     "s": 94.926
+     "s": 94.744
     },
     {
      "w": "productivity.",
-     "s": 95.186
+     "s": 95.024
     }
    ],
    "cues": [
@@ -1475,28 +1475,28 @@
   {
    "scene": "show",
    "sub": "Owner-operators: busy miles, thin money?",
-   "start": 96.606,
-   "end": 99.035,
+   "start": 96.538,
+   "end": 98.792,
    "words": [
     {
      "w": "Owner-operators:",
-     "s": 96.606
+     "s": 96.538
     },
     {
      "w": "busy",
-     "s": 97.626
+     "s": 97.438
     },
     {
      "w": "miles,",
-     "s": 97.786
+     "s": 97.558
     },
     {
      "w": "thin",
-     "s": 98.486
+     "s": 98.138
     },
     {
      "w": "money?",
-     "s": 98.546
+     "s": 98.258
     }
    ],
    "cues": [
@@ -1513,52 +1513,52 @@
   {
    "scene": "show",
    "sub": "Here's profit on every load, and your real cost per mile.",
-   "start": 99.455,
-   "end": 102.577,
+   "start": 99.212,
+   "end": 102.378,
    "words": [
     {
      "w": "Here's",
-     "s": 99.455
+     "s": 99.212
     },
     {
      "w": "profit",
-     "s": 99.715
+     "s": 99.432
     },
     {
      "w": "on",
-     "s": 99.915
+     "s": 99.752
     },
     {
      "w": "every",
-     "s": 100.155
+     "s": 99.932
     },
     {
      "w": "load,",
-     "s": 100.335
+     "s": 100.172
     },
     {
      "w": "and",
-     "s": 101.115
+     "s": 100.812
     },
     {
      "w": "your",
-     "s": 101.175
+     "s": 100.852
     },
     {
      "w": "real",
-     "s": 101.295
+     "s": 100.972
     },
     {
      "w": "cost",
-     "s": 101.455
+     "s": 101.192
     },
     {
      "w": "per",
-     "s": 101.815
+     "s": 101.552
     },
     {
      "w": "mile.",
-     "s": 102.055
+     "s": 101.832
     }
    ],
    "cues": [
@@ -1579,36 +1579,36 @@
   {
    "scene": "show",
    "sub": "Rental investors: rent coming in, return unknown?",
-   "start": 102.997,
-   "end": 106.099,
+   "start": 102.798,
+   "end": 105.673,
    "words": [
     {
      "w": "Rental",
-     "s": 102.997
+     "s": 102.798
     },
     {
      "w": "investors:",
-     "s": 103.257
+     "s": 103.018
     },
     {
      "w": "rent",
-     "s": 104.237
+     "s": 103.978
     },
     {
      "w": "coming",
-     "s": 104.417
+     "s": 104.038
     },
     {
      "w": "in,",
-     "s": 104.697
+     "s": 104.298
     },
     {
      "w": "return",
-     "s": 105.077
+     "s": 104.658
     },
     {
      "w": "unknown?",
-     "s": 105.317
+     "s": 104.878
     }
    ],
    "cues": [
@@ -1625,44 +1625,44 @@
   {
    "scene": "show",
    "sub": "Here's cap rate, cash-on-cash, and DSCR, property by property.",
-   "start": 106.519,
-   "end": 110.726,
+   "start": 106.093,
+   "end": 110.24,
    "words": [
     {
      "w": "Here's",
-     "s": 106.519
+     "s": 106.093
     },
     {
      "w": "cap",
-     "s": 106.739
+     "s": 106.293
     },
     {
      "w": "rate,",
-     "s": 106.899
+     "s": 106.453
     },
     {
      "w": "cash-on-cash,",
-     "s": 107.629
+     "s": 107.153
     },
     {
      "w": "and",
-     "s": 108.359
+     "s": 107.853
     },
     {
      "w": "DSCR,",
-     "s": 108.959
+     "s": 108.443
     },
     {
      "w": "property",
-     "s": 109.559
+     "s": 109.033
     },
     {
      "w": "by",
-     "s": 109.699
+     "s": 109.193
     },
     {
      "w": "property.",
-     "s": 110.079
+     "s": 109.533
     }
    ],
    "cues": [
@@ -1687,36 +1687,36 @@
   {
    "scene": "show",
    "sub": "Online stores: sales up, profit a mystery?",
-   "start": 111.146,
-   "end": 113.794,
+   "start": 110.66,
+   "end": 113.102,
    "words": [
     {
      "w": "Online",
-     "s": 111.146
+     "s": 110.66
     },
     {
      "w": "stores:",
-     "s": 111.346
+     "s": 110.84
     },
     {
      "w": "sales",
-     "s": 112.166
+     "s": 111.26
     },
     {
      "w": "up,",
-     "s": 112.446
+     "s": 111.74
     },
     {
      "w": "profit",
-     "s": 112.866
+     "s": 112.16
     },
     {
      "w": "a",
-     "s": 113.086
+     "s": 112.42
     },
     {
      "w": "mystery?",
-     "s": 113.246
+     "s": 112.54
     }
    ],
    "cues": [
@@ -1733,52 +1733,52 @@
   {
    "scene": "show",
    "sub": "Here's profit by SKU, ad spend, returns, and every sales channel.",
-   "start": 114.214,
-   "end": 118.65,
+   "start": 113.522,
+   "end": 117.94,
    "words": [
     {
      "w": "Here's",
-     "s": 114.214
+     "s": 113.522
     },
     {
      "w": "profit",
-     "s": 114.434
+     "s": 113.722
     },
     {
      "w": "by",
-     "s": 114.634
+     "s": 114.022
     },
     {
      "w": "SKU,",
-     "s": 115.304
+     "s": 114.682
     },
     {
      "w": "ad",
-     "s": 115.974
+     "s": 115.342
     },
     {
      "w": "spend,",
-     "s": 116.214
+     "s": 115.482
     },
     {
      "w": "returns,",
-     "s": 116.794
+     "s": 116.042
     },
     {
      "w": "and",
-     "s": 117.474
+     "s": 116.662
     },
     {
      "w": "every",
-     "s": 117.534
+     "s": 116.702
     },
     {
      "w": "sales",
-     "s": 117.774
+     "s": 116.962
     },
     {
      "w": "channel.",
-     "s": 117.954
+     "s": 117.242
     }
    ],
    "cues": [
@@ -1807,36 +1807,36 @@
   {
    "scene": "wall",
    "sub": "And that's just six of the twenty-one.",
-   "start": 119.7,
-   "end": 121.406,
+   "start": 118.99,
+   "end": 120.651,
    "words": [
     {
      "w": "And",
-     "s": 119.7
+     "s": 118.99
     },
     {
      "w": "that's",
-     "s": 119.8
+     "s": 119.07
     },
     {
      "w": "just",
-     "s": 120.04
+     "s": 119.29
     },
     {
      "w": "six",
-     "s": 120.2
+     "s": 119.45
     },
     {
      "w": "of",
-     "s": 120.46
+     "s": 119.67
     },
     {
      "w": "the",
-     "s": 120.66
+     "s": 119.87
     },
     {
      "w": "twenty-one.",
-     "s": 121.033
+     "s": 120.261
     }
    ],
    "cues": [
@@ -1849,40 +1849,40 @@
   {
    "scene": "wall",
    "sub": "HVAC. Electrical. Roofing. Landscaping. Lawn care. Pest control.",
-   "start": 121.826,
-   "end": 126.341,
+   "start": 121.071,
+   "end": 125.442,
    "words": [
     {
      "w": "HVAC.",
-     "s": 121.826
+     "s": 121.071
     },
     {
      "w": "Electrical.",
-     "s": 122.466
+     "s": 121.711
     },
     {
      "w": "Roofing.",
-     "s": 123.186
+     "s": 122.411
     },
     {
      "w": "Landscaping.",
-     "s": 123.986
+     "s": 123.071
     },
     {
      "w": "Lawn",
-     "s": 124.846
+     "s": 123.931
     },
     {
      "w": "care.",
-     "s": 124.946
+     "s": 124.091
     },
     {
      "w": "Pest",
-     "s": 125.666
+     "s": 124.671
     },
     {
      "w": "control.",
-     "s": 125.746
+     "s": 124.791
     }
    ],
    "cues": [
@@ -1915,44 +1915,44 @@
   {
    "scene": "wall",
    "sub": "Cleaning. Construction. Auto repair. Manufacturing. Marketing agencies. Airbnb hosts.",
-   "start": 126.761,
-   "end": 132.356,
+   "start": 125.862,
+   "end": 131.264,
    "words": [
     {
      "w": "Cleaning.",
-     "s": 126.761
+     "s": 125.862
     },
     {
      "w": "Construction.",
-     "s": 127.301
+     "s": 126.402
     },
     {
      "w": "Auto",
-     "s": 128.141
+     "s": 127.242
     },
     {
      "w": "repair.",
-     "s": 128.201
+     "s": 127.422
     },
     {
      "w": "Manufacturing.",
-     "s": 129.881
+     "s": 128.282
     },
     {
      "w": "Marketing",
-     "s": 130.461
+     "s": 129.162
     },
     {
      "w": "agencies.",
-     "s": 130.491
+     "s": 129.422
     },
     {
      "w": "Airbnb",
-     "s": 131.621
+     "s": 130.342
     },
     {
      "w": "hosts.",
-     "s": 131.651
+     "s": 130.502
     }
    ],
    "cues": [
@@ -1985,48 +1985,48 @@
   {
    "scene": "wall",
    "sub": "Property managers. 1099 contractors. And small businesses of every kind.",
-   "start": 132.776,
-   "end": 137.883,
+   "start": 131.684,
+   "end": 136.849,
    "words": [
     {
      "w": "Property",
-     "s": 132.776
+     "s": 131.684
     },
     {
      "w": "managers.",
-     "s": 133.423
+     "s": 131.964
     },
     {
      "w": "1099",
-     "s": 134.07
+     "s": 132.844
     },
     {
      "w": "contractors.",
-     "s": 134.716
+     "s": 133.724
     },
     {
      "w": "And",
-     "s": 136.056
+     "s": 134.804
     },
     {
      "w": "small",
-     "s": 136.086
+     "s": 134.844
     },
     {
      "w": "businesses",
-     "s": 136.276
+     "s": 135.084
     },
     {
      "w": "of",
-     "s": 136.616
+     "s": 135.504
     },
     {
      "w": "every",
-     "s": 137.076
+     "s": 135.924
     },
     {
      "w": "kind.",
-     "s": 137.256
+     "s": 136.184
     }
    ],
    "cues": [
@@ -2047,44 +2047,44 @@
   {
    "scene": "wall",
    "sub": "Every one built around how that business actually runs.",
-   "start": 138.303,
-   "end": 141.19,
+   "start": 137.269,
+   "end": 140.239,
    "words": [
     {
      "w": "Every",
-     "s": 138.303
+     "s": 137.269
     },
     {
      "w": "one",
-     "s": 138.453
+     "s": 137.389
     },
     {
      "w": "built",
-     "s": 138.603
+     "s": 137.509
     },
     {
      "w": "around",
-     "s": 138.943
+     "s": 137.889
     },
     {
      "w": "how",
-     "s": 139.283
+     "s": 138.209
     },
     {
      "w": "that",
-     "s": 139.563
+     "s": 138.529
     },
     {
      "w": "business",
-     "s": 139.743
+     "s": 138.729
     },
     {
      "w": "actually",
-     "s": 140.063
+     "s": 139.049
     },
     {
      "w": "runs.",
-     "s": 140.463
+     "s": 139.449
     }
    ],
    "cues": [
@@ -2097,32 +2097,32 @@
   {
    "scene": "box",
    "sub": "Every system comes in three editions.",
-   "start": 142.24,
-   "end": 144.242,
+   "start": 141.289,
+   "end": 143.233,
    "words": [
     {
      "w": "Every",
-     "s": 142.24
+     "s": 141.349
     },
     {
      "w": "system",
-     "s": 142.44
+     "s": 141.469
     },
     {
      "w": "comes",
-     "s": 142.8
+     "s": 141.789
     },
     {
      "w": "in",
-     "s": 143.14
+     "s": 142.069
     },
     {
      "w": "three",
-     "s": 143.3
+     "s": 142.229
     },
     {
      "w": "editions.",
-     "s": 143.5
+     "s": 142.731
     }
    ],
    "cues": [
@@ -2135,28 +2135,28 @@
   {
    "scene": "box",
    "sub": "Essential, $97. The core numbers.",
-   "start": 144.662,
-   "end": 147.549,
+   "start": 143.653,
+   "end": 146.476,
    "words": [
     {
      "w": "Essential,",
-     "s": 144.662
+     "s": 143.653
     },
     {
      "w": "$97.",
-     "s": 145.652
+     "s": 144.593
     },
     {
      "w": "The",
-     "s": 146.642
+     "s": 145.533
     },
     {
      "w": "core",
-     "s": 146.682
+     "s": 145.573
     },
     {
      "w": "numbers.",
-     "s": 146.842
+     "s": 145.733
     }
    ],
    "cues": [
@@ -2169,40 +2169,40 @@
   {
    "scene": "box",
    "sub": "Elite, $197. The full system, with deeper analysis.",
-   "start": 147.969,
-   "end": 151.799,
+   "start": 146.896,
+   "end": 150.781,
    "words": [
     {
      "w": "Elite,",
-     "s": 147.969
+     "s": 146.896
     },
     {
      "w": "$197.",
-     "s": 148.789
+     "s": 147.726
     },
     {
      "w": "The",
-     "s": 149.609
+     "s": 148.556
     },
     {
      "w": "full",
-     "s": 149.769
+     "s": 148.616
     },
     {
      "w": "system,",
-     "s": 149.909
+     "s": 148.816
     },
     {
      "w": "with",
-     "s": 150.569
+     "s": 149.456
     },
     {
      "w": "deeper",
-     "s": 150.649
+     "s": 149.556
     },
     {
      "w": "analysis.",
-     "s": 150.849
+     "s": 149.776
     }
    ],
    "cues": [
@@ -2215,28 +2215,28 @@
   {
    "scene": "box",
    "sub": "Complete, $249. Both editions, together.",
-   "start": 152.219,
-   "end": 155.186,
+   "start": 151.201,
+   "end": 153.992,
    "words": [
     {
      "w": "Complete,",
-     "s": 152.219
+     "s": 151.201
     },
     {
      "w": "$249.",
-     "s": 152.979
+     "s": 151.931
     },
     {
      "w": "Both",
-     "s": 153.739
+     "s": 152.661
     },
     {
      "w": "editions,",
-     "s": 153.959
+     "s": 152.761
     },
     {
      "w": "together.",
-     "s": 154.699
+     "s": 153.481
     }
    ],
    "cues": [
@@ -2249,52 +2249,52 @@
   {
    "scene": "box",
    "sub": "Start with Essential, and move up to Elite whenever you're ready.",
-   "start": 155.606,
-   "end": 158.783,
+   "start": 154.412,
+   "end": 157.662,
    "words": [
     {
      "w": "Start",
-     "s": 155.606
+     "s": 154.412
     },
     {
      "w": "with",
-     "s": 155.826
+     "s": 154.672
     },
     {
      "w": "Essential,",
-     "s": 155.966
+     "s": 154.832
     },
     {
      "w": "and",
-     "s": 156.826
+     "s": 155.592
     },
     {
      "w": "move",
-     "s": 156.946
+     "s": 155.672
     },
     {
      "w": "up",
-     "s": 157.126
+     "s": 155.812
     },
     {
      "w": "to",
-     "s": 157.286
+     "s": 156.012
     },
     {
      "w": "Elite",
-     "s": 157.446
+     "s": 156.192
     },
     {
      "w": "whenever",
-     "s": 157.646
+     "s": 156.452
     },
     {
      "w": "you're",
-     "s": 157.966
+     "s": 156.752
     },
     {
      "w": "ready.",
-     "s": 158.366
+     "s": 157.172
     }
    ],
    "cues": [
@@ -2311,24 +2311,24 @@
   {
    "scene": "inside",
    "sub": "And inside every box:",
-   "start": 159.833,
-   "end": 161.29,
+   "start": 158.712,
+   "end": 160.001,
    "words": [
     {
      "w": "And",
-     "s": 159.833
+     "s": 158.712
     },
     {
      "w": "inside",
-     "s": 159.933
+     "s": 158.792
     },
     {
      "w": "every",
-     "s": 160.213
+     "s": 159.032
     },
     {
      "w": "box:",
-     "s": 160.613
+     "s": 159.392
     }
    ],
    "cues": [
@@ -2341,32 +2341,32 @@
   {
    "scene": "inside",
    "sub": "Formulas, dashboards and reports, already built.",
-   "start": 161.71,
-   "end": 164.474,
+   "start": 160.421,
+   "end": 163.135,
    "words": [
     {
      "w": "Formulas,",
-     "s": 161.71
+     "s": 160.421
     },
     {
      "w": "dashboards",
-     "s": 162.47
+     "s": 161.001
     },
     {
      "w": "and",
-     "s": 162.95
+     "s": 161.501
     },
     {
      "w": "reports,",
-     "s": 163.15
+     "s": 161.721
     },
     {
      "w": "already",
-     "s": 163.77
+     "s": 161.981
     },
     {
      "w": "built.",
-     "s": 163.91
+     "s": 162.541
     }
    ],
    "cues": [
@@ -2387,52 +2387,52 @@
   {
    "scene": "inside",
    "sub": "Sample data, so every dashboard works the moment you open it.",
-   "start": 164.894,
-   "end": 168.312,
+   "start": 163.555,
+   "end": 167.058,
    "words": [
     {
      "w": "Sample",
-     "s": 164.894
+     "s": 163.555
     },
     {
      "w": "data,",
-     "s": 165.194
+     "s": 163.815
     },
     {
      "w": "so",
-     "s": 165.854
+     "s": 164.455
     },
     {
      "w": "every",
-     "s": 166.034
+     "s": 164.535
     },
     {
      "w": "dashboard",
-     "s": 166.314
+     "s": 164.835
     },
     {
      "w": "works",
-     "s": 166.734
+     "s": 165.255
     },
     {
      "w": "the",
-     "s": 167.114
+     "s": 165.655
     },
     {
      "w": "moment",
-     "s": 167.354
+     "s": 165.915
     },
     {
      "w": "you",
-     "s": 167.574
+     "s": 166.195
     },
     {
      "w": "open",
-     "s": 167.754
+     "s": 166.395
     },
     {
      "w": "it.",
-     "s": 167.974
+     "s": 166.655
     }
    ],
    "cues": [
@@ -2445,52 +2445,52 @@
   {
    "scene": "inside",
    "sub": "A tax set-aside estimate, so you can plan for tax time.",
-   "start": 168.732,
-   "end": 171.939,
+   "start": 167.478,
+   "end": 170.728,
    "words": [
     {
      "w": "A",
-     "s": 168.732
+     "s": 167.478
     },
     {
      "w": "tax",
-     "s": 168.792
+     "s": 167.538
     },
     {
      "w": "set-aside",
-     "s": 169.202
+     "s": 167.968
     },
     {
      "w": "estimate,",
-     "s": 169.612
+     "s": 168.398
     },
     {
      "w": "so",
-     "s": 170.412
+     "s": 169.138
     },
     {
      "w": "you",
-     "s": 170.512
+     "s": 169.198
     },
     {
      "w": "can",
-     "s": 170.612
+     "s": 169.318
     },
     {
      "w": "plan",
-     "s": 170.732
+     "s": 169.438
     },
     {
      "w": "for",
-     "s": 170.912
+     "s": 169.638
     },
     {
      "w": "tax",
-     "s": 171.132
+     "s": 169.858
     },
     {
      "w": "time.",
-     "s": 171.352
+     "s": 170.098
     }
    ],
    "cues": [
@@ -2503,44 +2503,44 @@
   {
    "scene": "inside",
    "sub": "Country-based tax-rate presets, with room for your own rate.",
-   "start": 172.359,
-   "end": 175.539,
+   "start": 171.148,
+   "end": 174.538,
    "words": [
     {
      "w": "Country-based",
-     "s": 172.359
+     "s": 171.148
     },
     {
      "w": "tax-rate",
-     "s": 172.899
+     "s": 171.748
     },
     {
      "w": "presets,",
-     "s": 173.439
+     "s": 172.348
     },
     {
      "w": "with",
-     "s": 174.219
+     "s": 173.188
     },
     {
      "w": "room",
-     "s": 174.399
+     "s": 173.268
     },
     {
      "w": "for",
-     "s": 174.579
+     "s": 173.488
     },
     {
      "w": "your",
-     "s": 174.819
+     "s": 173.728
     },
     {
      "w": "own",
-     "s": 174.959
+     "s": 173.868
     },
     {
      "w": "rate.",
-     "s": 175.119
+     "s": 174.068
     }
    ],
    "cues": [
@@ -2557,64 +2557,64 @@
   {
    "scene": "inside",
    "sub": "A Quick Start for day one, and a full Field Guide for every sheet.",
-   "start": 175.959,
-   "end": 179.494,
+   "start": 174.958,
+   "end": 178.6,
    "words": [
     {
      "w": "A",
-     "s": 175.959
+     "s": 174.958
     },
     {
      "w": "Quick",
-     "s": 176.019
+     "s": 175.018
     },
     {
      "w": "Start",
-     "s": 176.179
+     "s": 175.178
     },
     {
      "w": "for",
-     "s": 176.439
+     "s": 175.438
     },
     {
      "w": "day",
-     "s": 176.659
+     "s": 175.698
     },
     {
      "w": "one,",
-     "s": 176.839
+     "s": 175.858
     },
     {
      "w": "and",
-     "s": 177.359
+     "s": 176.398
     },
     {
      "w": "a",
-     "s": 177.579
+     "s": 176.458
     },
     {
      "w": "full",
-     "s": 177.639
+     "s": 176.538
     },
     {
      "w": "Field",
-     "s": 177.839
+     "s": 176.778
     },
     {
      "w": "Guide",
-     "s": 178.139
+     "s": 177.158
     },
     {
      "w": "for",
-     "s": 178.419
+     "s": 177.458
     },
     {
      "w": "every",
-     "s": 178.739
+     "s": 177.758
     },
     {
      "w": "sheet.",
-     "s": 178.899
+     "s": 177.978
     }
    ],
    "cues": [
@@ -2631,28 +2631,28 @@
   {
    "scene": "how",
    "sub": "And using it is simple.",
-   "start": 180.544,
-   "end": 181.781,
+   "start": 179.65,
+   "end": 180.841,
    "words": [
     {
      "w": "And",
-     "s": 180.544
+     "s": 179.65
     },
     {
      "w": "using",
-     "s": 180.624
+     "s": 179.71
     },
     {
      "w": "it",
-     "s": 180.824
+     "s": 179.89
     },
     {
      "w": "is",
-     "s": 181.084
+     "s": 180.09
     },
     {
      "w": "simple.",
-     "s": 181.224
+     "s": 180.17
     }
    ],
    "cues": [
@@ -2665,48 +2665,48 @@
   {
    "scene": "how",
    "sub": "Step one: open it. It already works, with sample data.",
-   "start": 182.201,
-   "end": 185.427,
+   "start": 181.261,
+   "end": 184.45,
    "words": [
     {
      "w": "Step",
-     "s": 182.201
+     "s": 181.261
     },
     {
      "w": "one:",
-     "s": 182.381
+     "s": 181.441
     },
     {
      "w": "open",
-     "s": 182.681
+     "s": 181.861
     },
     {
      "w": "it.",
-     "s": 183.041
+     "s": 182.041
     },
     {
      "w": "It",
-     "s": 183.641
+     "s": 182.601
     },
     {
      "w": "already",
-     "s": 183.781
+     "s": 182.681
     },
     {
      "w": "works,",
-     "s": 183.901
+     "s": 182.881
     },
     {
      "w": "with",
-     "s": 184.301
+     "s": 183.281
     },
     {
      "w": "sample",
-     "s": 184.501
+     "s": 183.501
     },
     {
      "w": "data.",
-     "s": 184.781
+     "s": 183.721
     }
    ],
    "cues": [
@@ -2719,48 +2719,48 @@
   {
    "scene": "how",
    "sub": "Step two: replace the sample rows with your own numbers.",
-   "start": 185.847,
-   "end": 188.794,
+   "start": 184.87,
+   "end": 187.877,
    "words": [
     {
      "w": "Step",
-     "s": 185.847
+     "s": 184.87
     },
     {
      "w": "two:",
-     "s": 186.007
+     "s": 185.03
     },
     {
      "w": "replace",
-     "s": 186.567
+     "s": 185.55
     },
     {
      "w": "the",
-     "s": 186.827
+     "s": 185.73
     },
     {
      "w": "sample",
-     "s": 187.107
+     "s": 186.05
     },
     {
      "w": "rows",
-     "s": 187.307
+     "s": 186.27
     },
     {
      "w": "with",
-     "s": 187.647
+     "s": 186.63
     },
     {
      "w": "your",
-     "s": 187.967
+     "s": 186.93
     },
     {
      "w": "own",
-     "s": 188.067
+     "s": 187.05
     },
     {
      "w": "numbers.",
-     "s": 188.187
+     "s": 187.21
     }
    ],
    "cues": [
@@ -2773,48 +2773,48 @@
   {
    "scene": "how",
    "sub": "Step three: the dashboards and reports update on their own.",
-   "start": 189.214,
-   "end": 192.243,
+   "start": 188.297,
+   "end": 191.356,
    "words": [
     {
      "w": "Step",
-     "s": 189.214
+     "s": 188.297
     },
     {
      "w": "three:",
-     "s": 189.374
+     "s": 188.457
     },
     {
      "w": "the",
-     "s": 189.974
+     "s": 189.017
     },
     {
      "w": "dashboards",
-     "s": 190.054
+     "s": 189.057
     },
     {
      "w": "and",
-     "s": 190.534
+     "s": 189.557
     },
     {
      "w": "reports",
-     "s": 190.734
+     "s": 189.757
     },
     {
      "w": "update",
-     "s": 191.014
+     "s": 190.057
     },
     {
      "w": "on",
-     "s": 191.414
+     "s": 190.477
     },
     {
      "w": "their",
-     "s": 191.694
+     "s": 190.777
     },
     {
      "w": "own.",
-     "s": 191.794
+     "s": 190.897
     }
    ],
    "cues": [
@@ -2827,20 +2827,20 @@
   {
    "scene": "honest",
    "sub": "Quick, honest answers.",
-   "start": 193.293,
-   "end": 194.528,
+   "start": 192.406,
+   "end": 193.579,
    "words": [
     {
      "w": "Quick,",
-     "s": 193.293
+     "s": 192.406
     },
     {
      "w": "honest",
-     "s": 193.593
+     "s": 192.646
     },
     {
      "w": "answers.",
-     "s": 193.753
+     "s": 192.806
     }
    ],
    "cues": [
@@ -2853,36 +2853,36 @@
   {
    "scene": "honest",
    "sub": "Is it a subscription? No. One payment.",
-   "start": 194.948,
-   "end": 197.288,
+   "start": 193.999,
+   "end": 195.977,
    "words": [
     {
      "w": "Is",
-     "s": 194.948
+     "s": 193.999
     },
     {
      "w": "it",
-     "s": 195.028
+     "s": 194.079
     },
     {
      "w": "a",
-     "s": 195.108
+     "s": 194.159
     },
     {
      "w": "subscription?",
-     "s": 195.168
+     "s": 194.219
     },
     {
      "w": "No.",
-     "s": 196.168
+     "s": 194.999
     },
     {
      "w": "One",
-     "s": 196.528
+     "s": 195.259
     },
     {
      "w": "payment.",
-     "s": 196.668
+     "s": 195.379
     }
    ],
    "cues": [
@@ -2899,84 +2899,84 @@
   {
    "scene": "honest",
    "sub": "Do you need to be an Excel expert? No. You enter your numbers, and the formulas do the rest.",
-   "start": 197.708,
-   "end": 202.711,
+   "start": 196.397,
+   "end": 201.507,
    "words": [
     {
      "w": "Do",
-     "s": 197.708
+     "s": 196.397
     },
     {
      "w": "you",
-     "s": 197.738
+     "s": 196.477
     },
     {
      "w": "need",
-     "s": 197.828
+     "s": 196.557
     },
     {
      "w": "to",
-     "s": 197.968
+     "s": 196.737
     },
     {
      "w": "be",
-     "s": 198.108
+     "s": 196.877
     },
     {
      "w": "an",
-     "s": 198.228
+     "s": 197.017
     },
     {
      "w": "Excel",
-     "s": 198.328
+     "s": 197.157
     },
     {
      "w": "expert?",
-     "s": 198.488
+     "s": 197.457
     },
     {
      "w": "No.",
-     "s": 199.708
+     "s": 198.577
     },
     {
      "w": "You",
-     "s": 200.328
+     "s": 199.037
     },
     {
      "w": "enter",
-     "s": 200.358
+     "s": 199.097
     },
     {
      "w": "your",
-     "s": 200.508
+     "s": 199.297
     },
     {
      "w": "numbers,",
-     "s": 200.688
+     "s": 199.457
     },
     {
      "w": "and",
-     "s": 201.288
+     "s": 200.037
     },
     {
      "w": "the",
-     "s": 201.318
+     "s": 200.067
     },
     {
      "w": "formulas",
-     "s": 201.408
+     "s": 200.157
     },
     {
      "w": "do",
-     "s": 201.668
+     "s": 200.497
     },
     {
      "w": "the",
-     "s": 202.068
+     "s": 200.857
     },
     {
      "w": "rest.",
-     "s": 202.188
+     "s": 200.997
     }
    ],
    "cues": [
@@ -2993,44 +2993,44 @@
   {
    "scene": "honest",
    "sub": "You'll just need the desktop version of Microsoft Excel.",
-   "start": 203.131,
-   "end": 206.271,
+   "start": 201.927,
+   "end": 205.172,
    "words": [
     {
      "w": "You'll",
-     "s": 203.131
+     "s": 201.927
     },
     {
      "w": "just",
-     "s": 203.231
+     "s": 202.027
     },
     {
      "w": "need",
-     "s": 203.391
+     "s": 202.187
     },
     {
      "w": "the",
-     "s": 203.591
+     "s": 202.447
     },
     {
      "w": "desktop",
-     "s": 203.751
+     "s": 202.627
     },
     {
      "w": "version",
-     "s": 203.971
+     "s": 202.907
     },
     {
      "w": "of",
-     "s": 204.631
+     "s": 203.487
     },
     {
      "w": "Microsoft",
-     "s": 205.031
+     "s": 203.787
     },
     {
      "w": "Excel.",
-     "s": 205.411
+     "s": 204.147
     }
    ],
    "cues": [
@@ -3043,68 +3043,68 @@
   {
    "scene": "honest",
    "sub": "It's a planning tool, not tax advice. And your numbers stay in your own file.",
-   "start": 206.691,
-   "end": 210.845,
+   "start": 205.592,
+   "end": 209.914,
    "words": [
     {
      "w": "It's",
-     "s": 206.691
+     "s": 205.592
     },
     {
      "w": "a",
-     "s": 206.831
+     "s": 205.732
     },
     {
      "w": "planning",
-     "s": 206.871
+     "s": 205.792
     },
     {
      "w": "tool,",
-     "s": 207.051
+     "s": 206.092
     },
     {
      "w": "not",
-     "s": 207.731
+     "s": 206.652
     },
     {
      "w": "tax",
-     "s": 207.911
+     "s": 206.812
     },
     {
      "w": "advice.",
-     "s": 208.111
+     "s": 207.092
     },
     {
      "w": "And",
-     "s": 209.211
+     "s": 208.072
     },
     {
      "w": "your",
-     "s": 209.251
+     "s": 208.102
     },
     {
      "w": "numbers",
-     "s": 209.331
+     "s": 208.212
     },
     {
      "w": "stay",
-     "s": 209.611
+     "s": 208.472
     },
     {
      "w": "in",
-     "s": 209.911
+     "s": 208.812
     },
     {
      "w": "your",
-     "s": 210.071
+     "s": 209.032
     },
     {
      "w": "own",
-     "s": 210.171
+     "s": 209.132
     },
     {
      "w": "file.",
-     "s": 210.331
+     "s": 209.312
     }
    ],
    "cues": [
@@ -3121,28 +3121,28 @@
   {
    "scene": "cta",
    "sub": "So here's your next step.",
-   "start": 211.895,
-   "end": 213.128,
+   "start": 210.964,
+   "end": 212.173,
    "words": [
     {
      "w": "So",
-     "s": 211.895
+     "s": 210.964
     },
     {
      "w": "here's",
-     "s": 212.035
+     "s": 211.064
     },
     {
      "w": "your",
-     "s": 212.335
+     "s": 211.344
     },
     {
      "w": "next",
-     "s": 212.415
+     "s": 211.424
     },
     {
      "w": "step.",
-     "s": 212.555
+     "s": 211.564
     }
    ],
    "cues": [
@@ -3155,36 +3155,36 @@
   {
    "scene": "cta",
    "sub": "Find your industry, right below this video.",
-   "start": 213.548,
-   "end": 215.906,
+   "start": 212.593,
+   "end": 214.945,
    "words": [
     {
      "w": "Find",
-     "s": 213.548
+     "s": 212.593
     },
     {
      "w": "your",
-     "s": 213.748
+     "s": 212.773
     },
     {
      "w": "industry,",
-     "s": 213.908
+     "s": 212.913
     },
     {
      "w": "right",
-     "s": 214.648
+     "s": 213.673
     },
     {
      "w": "below",
-     "s": 214.888
+     "s": 213.793
     },
     {
      "w": "this",
-     "s": 215.148
+     "s": 214.053
     },
     {
      "w": "video.",
-     "s": 215.348
+     "s": 214.333
     }
    ],
    "cues": [
@@ -3197,56 +3197,56 @@
   {
    "scene": "cta",
    "sub": "Each one has its own full walkthrough, every sheet, shown and explained.",
-   "start": 216.326,
-   "end": 220.197,
+   "start": 215.365,
+   "end": 219.124,
    "words": [
     {
      "w": "Each",
-     "s": 216.326
+     "s": 215.365
     },
     {
      "w": "one",
-     "s": 216.486
+     "s": 215.505
     },
     {
      "w": "has",
-     "s": 216.626
+     "s": 215.665
     },
     {
      "w": "its",
-     "s": 216.766
+     "s": 215.805
     },
     {
      "w": "own",
-     "s": 216.886
+     "s": 215.965
     },
     {
      "w": "full",
-     "s": 217.066
+     "s": 216.145
     },
     {
      "w": "walkthrough,",
-     "s": 217.286
+     "s": 216.405
     },
     {
      "w": "every",
-     "s": 218.066
+     "s": 217.165
     },
     {
      "w": "sheet,",
-     "s": 218.286
+     "s": 217.345
     },
     {
      "w": "shown",
-     "s": 218.926
+     "s": 217.885
     },
     {
      "w": "and",
-     "s": 219.166
+     "s": 218.045
     },
     {
      "w": "explained.",
-     "s": 219.446
+     "s": 218.365
     }
    ],
    "cues": [
@@ -3259,32 +3259,32 @@
   {
    "scene": "end",
    "sub": "Your business already has the numbers.",
-   "start": 221.247,
-   "end": 223.158,
+   "start": 220.174,
+   "end": 222.011,
    "words": [
     {
      "w": "Your",
-     "s": 221.247
+     "s": 220.174
     },
     {
      "w": "business",
-     "s": 221.347
+     "s": 220.274
     },
     {
      "w": "already",
-     "s": 221.707
+     "s": 220.594
     },
     {
      "w": "has",
-     "s": 222.147
+     "s": 220.994
     },
     {
      "w": "the",
-     "s": 222.447
+     "s": 221.294
     },
     {
      "w": "numbers.",
-     "s": 222.587
+     "s": 221.434
     }
    ],
    "cues": [
@@ -3297,32 +3297,32 @@
   {
    "scene": "end",
    "sub": "ProfitIQS shows you what they mean.",
-   "start": 223.578,
-   "end": 225.742,
+   "start": 222.431,
+   "end": 224.543,
    "words": [
     {
      "w": "ProfitIQS",
-     "s": 223.578
+     "s": 222.431
     },
     {
      "w": "shows",
-     "s": 224.458
+     "s": 223.251
     },
     {
      "w": "you",
-     "s": 224.798
+     "s": 223.511
     },
     {
      "w": "what",
-     "s": 225.018
+     "s": 223.711
     },
     {
      "w": "they",
-     "s": 225.138
+     "s": 223.851
     },
     {
      "w": "mean.",
-     "s": 225.258
+     "s": 223.991
     }
    ],
    "cues": [

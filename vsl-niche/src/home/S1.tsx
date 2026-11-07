@@ -26,13 +26,11 @@ const Clock: React.FC<{ size: number; spinA: number; spinB: number; turnsA: numb
   const mA = hours * 360 + turnsB * 0;
   return (
     <svg width={size} height={size} viewBox="-100 -100 200 200">
-      <defs>
-        <linearGradient id="ring" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stopColor={C.mag} /><stop offset="0.5" stopColor={C.pur} /><stop offset="1" stopColor={C.cya} /></linearGradient>
-      </defs>
-      <circle r="92" fill="#FFFFFF" stroke="url(#ring)" strokeWidth="9" />
+      
+      <circle r="92" fill="#FFFFFF" stroke={C.mag} strokeWidth="9" />
       {Array.from({ length: 12 }).map((_, k) => {
         const a = (k / 12) * Math.PI * 2;
-        return <circle key={k} cx={Math.sin(a) * 74} cy={-Math.cos(a) * 74} r={k % 3 === 0 ? 5 : 3} fill={k % 3 === 0 ? C.pur : "#D9CCFF"} />;
+        return <circle key={k} cx={Math.sin(a) * 74} cy={-Math.cos(a) * 74} r={k % 3 === 0 ? 5 : 3} fill={k % 3 === 0 ? C.pur : "#FFB48A"} />;
       })}
       <line x1="0" y1="0" x2={Math.sin((hA * Math.PI) / 180) * 42} y2={-Math.cos((hA * Math.PI) / 180) * 42} stroke={C.ink} strokeWidth="8" strokeLinecap="round" />
       <line x1="0" y1="0" x2={Math.sin((mA * Math.PI) / 180) * 64} y2={-Math.cos((mA * Math.PI) / 180) * 64} stroke={C.mag} strokeWidth="5" strokeLinecap="round" />
@@ -63,7 +61,7 @@ export const Hook: React.FC = () => {
             <Clock size={560} spinA={cf(L0, "tick")} spinB={cf(L1, "whoosh")} turnsA={0} turnsB={0} />
           </div>
           <div style={{ position: "absolute", right: -30, top: -20, transform: `rotate(${sunMoon * 200}deg) scale(${1 - 0.15 * Math.sin(sunMoon * Math.PI)})` }}>
-            <div style={{ opacity: 1 - sunMoon, position: "absolute" }}><IconBubble name="sun" size={120} col="#F59E0B" bg="#FFF3D1" /></div>
+            <div style={{ opacity: 1 - sunMoon, position: "absolute" }}><IconBubble name="sun" size={120} col="#F59E0B" bg="#FFF4DC" /></div>
             <div style={{ opacity: sunMoon }}><IconBubble name="moon" size={120} col={C.pur} /></div>
           </div>
         </div>
@@ -71,7 +69,7 @@ export const Hook: React.FC = () => {
           <div style={{ position: "absolute", left: 980, top: 300, width: 820, opacity: 1 - ap(fr, ls(L2) - 6, 8) }}>
             <Pop at={cf(L0, "tick")}><Chip col={C.grn} size={34}><span style={{ color: C.grn }}>●</span> {fr < cf(L1, "whoosh") ? "OPEN" : "CLOSED"}</Chip></Pop>
             <div style={{ height: 34 }} />
-            <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 150, letterSpacing: "-0.05em", color: C.ink, lineHeight: 1 }}>
+            <div style={{ fontFamily: FONT.num, fontWeight: 900, fontSize: 120, letterSpacing: "-0.03em", color: C.ink, lineHeight: 1 }}>
               {fr < cf(L1, "whoosh") ? (fr >= cf(L0, "ding") - 2 ? <span style={{ display: "inline-block", transform: `scale(${pop(fr, cf(L0, "ding"))})` }}><GText>7:00</GText> am</span> : "") : fr >= cf(L1, "ding") - 2 ? <span style={{ display: "inline-block", transform: `scale(${pop(fr, cf(L1, "ding"))})` }}><GText>7:00</GText> pm</span> : ""}
             </div>
             <div style={{ height: 24 }} />
@@ -100,8 +98,8 @@ export const Hook: React.FC = () => {
       <Phase a={ls(L3) - 4} b={ls(L4) - 2} exit="zoom">
         <Center>
           <Pop at={cf(L3, "pop")} from={60}>
-            <div style={{ width: 300, height: 300, borderRadius: "50%", background: "linear-gradient(135deg,#FFE1F1,#EFE8FF 50%,#DDF9FE)", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 40px 90px -30px rgba(255,62,165,0.5)", transform: `rotate(${Math.sin(fr / 6) * 6}deg)` }}>
-              <span style={{ fontFamily: FONT.serif, fontStyle: "italic", fontWeight: 700, fontSize: 230, lineHeight: 1 }}><GText>?</GText></span>
+            <div style={{ width: 300, height: 300, borderRadius: "50%", background: "#F3F3F5", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 40px 90px -30px rgba(255,94,26,0.5)", transform: `rotate(${Math.sin(fr / 6) * 6}deg)` }}>
+              <span style={{ fontFamily: FONT.serif, fontWeight: 700, fontSize: 230, lineHeight: 1 }}><GText>?</GText></span>
             </div>
           </Pop>
           <div style={{ height: 40 }} />
@@ -126,16 +124,16 @@ export const Hook: React.FC = () => {
       <Phase a={ls(L5) - 4} b={le(L5) + 6}>
         <Center style={{ flexDirection: "row", gap: 160 }}>
           <div style={{ position: "relative", textAlign: "center" }}>
-            <div style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 34, letterSpacing: "0.2em", color: C.mute, marginBottom: 10 }}>NOT</div>
-            <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 130, color: "#B7B1CC", letterSpacing: "-0.04em", position: "relative" }}>
+            <div style={{ fontFamily: FONT.mono, fontWeight: 700, fontSize: 34, letterSpacing: "0.2em", color: C.mute, marginBottom: 10 }}>NOT</div>
+            <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 130, color: "#8A8A92", letterSpacing: "-0.04em", position: "relative" }}>
               came in
               <div style={{ position: "absolute", left: -20, right: -20, top: "55%", height: 16, borderRadius: 8, background: C.pink, transformOrigin: "left", transform: `scaleX(${ap(fr, cf(L5, "strike"), 10)}) rotate(-4deg)` }} />
             </div>
           </div>
           <div style={{ position: "relative", textAlign: "center" }}>
-            <div style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 34, letterSpacing: "0.2em", color: C.pur, marginBottom: 10, opacity: ap(fr, cf(L5, "ding") - 6) }}>WHAT YOU</div>
+            <div style={{ fontFamily: FONT.mono, fontWeight: 700, fontSize: 34, letterSpacing: "0.2em", color: C.pur, marginBottom: 10, opacity: ap(fr, cf(L5, "ding") - 6) }}>WHAT YOU</div>
             <Pop at={cf(L5, "ding")} from={40}>
-              <div style={{ fontFamily: FONT.serif, fontStyle: "italic", fontWeight: 700, fontSize: 170, lineHeight: 1 }}><GText>kept.</GText></div>
+              <div style={{ fontFamily: FONT.serif, fontWeight: 700, fontSize: 170, lineHeight: 1 }}><GText>kept.</GText></div>
             </Pop>
             <svg width="520" height="260" viewBox="0 0 520 260" style={{ position: "absolute", left: -60, top: 10 }}>
               <ellipse cx="260" cy="140" rx="240" ry="105" fill="none" stroke={C.mag} strokeWidth="7" strokeLinecap="round" strokeDasharray="1600" strokeDashoffset={1600 * (1 - ap(fr, cf(L5, "ding") + 4, 16))} transform="rotate(-4 260 140)" />
@@ -176,7 +174,7 @@ export const Blind: React.FC = () => {
                 <IconBubble name={t.icon} size={100} col={t.col} />
                 <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 40, color: C.ink, letterSpacing: "-0.02em" }}>{t.name}</div>
                 <div style={{ fontFamily: FONT.sans, fontWeight: 600, fontSize: 30, color: C.ink2, lineHeight: 1.3 }}>{t.q}</div>
-                <div style={{ marginTop: "auto", alignSelf: "flex-end", width: 64, height: 64, borderRadius: "50%", background: `${t.col}22`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT.serif, fontStyle: "italic", fontWeight: 700, fontSize: 46, color: t.col, transform: `rotate(${Math.sin(fr / 8 + k) * 10}deg)` }}>?</div>
+                <div style={{ marginTop: "auto", alignSelf: "flex-end", width: 64, height: 64, borderRadius: "50%", background: `${t.col}22`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT.serif, fontWeight: 700, fontSize: 46, color: t.col, transform: `rotate(${Math.sin(fr / 8 + k) * 10}deg)` }}>?</div>
               </Card>
             </div>
           );
@@ -298,12 +296,12 @@ export const Reveal: React.FC = () => {
             <KText line={L19} size={66} maxWidth={1600} />
           </AbsoluteFill>
           <div style={{ position: "absolute", left: 960 - 170, top: 520, opacity: 1 - fan }}>
-            <Card style={{ width: 340, height: 300, padding: 30, display: "flex", flexDirection: "column", gap: 18, background: "#FBFAFF" }}>
-              {[0, 1, 2, 3, 4].map((k) => <div key={k} style={{ height: 24, borderRadius: 12, background: "#ECE8F6", width: `${90 - k * 12}%` }} />)}
+            <Card style={{ width: 340, height: 300, padding: 30, display: "flex", flexDirection: "column", gap: 18, background: "#FFFFFF" }}>
+              {[0, 1, 2, 3, 4].map((k) => <div key={k} style={{ height: 24, borderRadius: 12, background: "#E2E2E6", width: `${90 - k * 12}%` }} />)}
               <div style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 26, color: C.mute, marginTop: "auto" }}>generic template</div>
             </Card>
             {fr >= cf(L19, "stamp") - 1 && (
-              <div style={{ position: "absolute", left: 40, top: 80, transform: `rotate(-14deg) scale(${2 - pop(fr, cf(L19, "stamp"), 320, 14)})`, opacity: Math.min(1, pop(fr, cf(L19, "stamp")) * 2), border: `8px solid ${C.mag}`, borderRadius: 20, padding: "6px 30px", fontFamily: FONT.sans, fontWeight: 800, fontSize: 80, color: C.mag, background: "rgba(255,255,255,0.85)" }}>NOPE</div>
+              <div style={{ position: "absolute", left: 40, top: 80, transform: `rotate(-14deg) scale(${2 - pop(fr, cf(L19, "stamp"), 320, 14)})`, opacity: Math.min(1, pop(fr, cf(L19, "stamp")) * 2), border: `8px solid ${C.mag}`, borderRadius: 20, padding: "6px 30px", fontFamily: FONT.sans, fontWeight: 800, fontSize: 80, color: C.mag, background: "rgba(255,255,255,0.95)" }}>NOPE</div>
             )}
           </div>
           {fan > 0.01 && FAN.map((s, k) => {

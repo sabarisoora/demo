@@ -25,7 +25,7 @@ export const Rail: React.FC = () => {
     <div style={{ position: "absolute", left: 60, right: 60, top: 26, display: "flex", alignItems: "center", gap: 10, opacity: inA, transform: `translateY(${(1 - inA) * -30}px)` }}>
       <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 24, color: C.ink, marginRight: 10, whiteSpace: "nowrap" }}><GText>{String(idx + 1).padStart(2, "0")}</GText> / 12</div>
       {CH.map(([s, t], k) => (
-        <div key={s} style={{ flex: k === idx ? 3.2 : 1, height: k === idx ? 34 : 10, borderRadius: 17, background: k === idx ? GRAD : k < idx ? "#D9CCFF" : "#EEEAF7", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", transition: "none" }}>
+        <div key={s} style={{ flex: k === idx ? 3.2 : 1, height: k === idx ? 34 : 10, borderRadius: 17, background: k === idx ? GRAD : k < idx ? "#FFB48A" : "#E2E2E6", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", transition: "none" }}>
           {k === idx && <span style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 18, color: "#FFFFFF", letterSpacing: "0.08em", whiteSpace: "nowrap" }}>{t.toUpperCase()}</span>}
         </div>
       ))}
@@ -47,10 +47,10 @@ export const ChapterCards: React.FC = () => {
         return (
           <AbsoluteFill key={s} style={{ alignItems: "center", justifyContent: "center", perspective: 1600, pointerEvents: "none" }}>
             <div style={{ transform: `translateY(${fly * -470}px) scale(${1 - fly * 0.75}) rotateY(${flip}deg)`, opacity: 1 - fly, transformStyle: "preserve-3d" }}>
-              <div style={{ position: "relative", width: 760, height: 300, borderRadius: 30, background: "linear-gradient(135deg,#FFFFFF,#F5F0FF)", border: "3px solid transparent", backgroundImage: `linear-gradient(135deg,#FFFFFF,#F5F0FF), ${GRAD}`, backgroundOrigin: "border-box", backgroundClip: "padding-box, border-box", boxShadow: "0 50px 90px -30px rgba(139,92,246,0.5)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 10 }}>
+              <div style={{ position: "relative", width: 760, height: 300, borderRadius: 30, background: C.surf, border: `3px solid ${C.mag}`, boxShadow: "0 50px 90px -30px rgba(255,94,26,0.5)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 10 }}>
                 <div style={{ position: "absolute", top: -46, left: 40, width: 220, height: 56, borderRadius: "18px 18px 0 0", background: GRAD }} />
-                <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 30, letterSpacing: "0.35em", color: C.pur }}>CHAPTER {String(k + 1).padStart(2, "0")}</div>
-                <div style={{ fontFamily: FONT.serif, fontStyle: "italic", fontWeight: 700, fontSize: 96, lineHeight: 1 }}><GText>{t}</GText></div>
+                <div style={{ fontFamily: FONT.mono, fontWeight: 800, fontSize: 30, letterSpacing: "0.35em", color: C.pur }}>CHAPTER {String(k + 1).padStart(2, "0")}</div>
+                <div style={{ fontFamily: FONT.serif, fontWeight: 700, fontSize: 96, lineHeight: 1 }}><GText>{t}</GText></div>
               </div>
             </div>
           </AbsoluteFill>
@@ -82,7 +82,7 @@ export const Open: React.FC = () => {
       </AbsoluteFill>
       {fr >= cf(L5, "doors") && (
         <AbsoluteFill style={{ pointerEvents: "none" }}>
-          <div style={{ position: "absolute", left: 960 - 520, top: 40, width: 1040, height: 560, background: "radial-gradient(ellipse at 50% 100%, rgba(255,214,90,0.55), rgba(255,182,230,0.25) 40%, transparent 70%)", opacity: openT, transform: `scaleY(${0.6 + 0.4 * openT})`, transformOrigin: "bottom" }} />
+          <div style={{ position: "absolute", left: 960 - 520, top: 40, width: 1040, height: 560, background: "#FF8A3D50", filter: "blur(60px)", borderRadius: "50%", opacity: openT, transform: `scaleY(${0.6 + 0.4 * openT})`, transformOrigin: "bottom" }} />
         </AbsoluteFill>
       )}
       <Rings at={drop} x={960} y={640} n={3} />
@@ -102,19 +102,19 @@ export const Open: React.FC = () => {
             const y = 420 + (k % 2) * 90 - away * 700;
             return (
               <div key={k} style={{ position: "absolute", left: x, top: y, transform: `rotateY(${(k - 1.5) * -14 + away * 200}deg) rotateZ(${(k - 1.5) * 4}deg) scale(${0.6 + 0.4 * Math.min(1.1, s)})`, opacity: Math.min(1, s * 1.5) * (1 - away) }}>
-                <div style={{ width: 330, height: 260, borderRadius: 26, background: "#F4F2F8", border: "2px solid #E4E0EE", padding: 30, display: "flex", flexDirection: "column", gap: 18, boxShadow: "0 30px 60px -30px rgba(120,110,150,0.35)" }}>
-                  <Icon name={ic} size={58} color="#B4AEC8" />
-                  <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 38, color: "#A49EBB", lineHeight: 1.1 }}>{t}</div>
+                <div style={{ width: 330, height: 260, borderRadius: 26, background: "#FFFFFF", border: "2px solid #E2E2E6", padding: 30, display: "flex", flexDirection: "column", gap: 18, boxShadow: "0 30px 60px -30px rgba(11,11,12,0.22)" }}>
+                  <Icon name={ic} size={58} color="#8A8A92" />
+                  <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 38, color: "#6B6B73", lineHeight: 1.1 }}>{t}</div>
                 </div>
                 {fr >= st - 1 && (
-                  <div style={{ position: "absolute", left: 40, top: 80, transform: `rotate(-14deg) scale(${2 - Math.min(1, pop(fr, st, 320, 14))})`, opacity: Math.min(1, pop(fr, st) * 2), border: `7px solid ${C.mag}`, borderRadius: 18, padding: "2px 24px", fontFamily: FONT.sans, fontWeight: 800, fontSize: 64, color: C.mag, background: "rgba(255,255,255,0.88)" }}>NOPE</div>
+                  <div style={{ position: "absolute", left: 40, top: 80, transform: `rotate(-14deg) scale(${2 - Math.min(1, pop(fr, st, 320, 14))})`, opacity: Math.min(1, pop(fr, st) * 2), border: `7px solid ${C.mag}`, borderRadius: 18, padding: "2px 24px", fontFamily: FONT.sans, fontWeight: 800, fontSize: 64, color: C.mag, background: "rgba(255,255,255,0.95)" }}>NOPE</div>
                 )}
               </div>
             );
           })}
           {fr >= cf(L2, "glitch") - 2 && fr < ls(L3) + 6 && (
             <div style={{ position: "absolute", left: 960 - 230, top: 760, opacity: ap(fr, cf(L2, "glitch") - 2, 8) * (1 - ap(fr, ls(L3), 6)), transform: `translateX(${fr < cf(L2, "glitch") + 8 ? Math.sin(fr * 5) * 8 : 0}px)` }}>
-              <div style={{ width: 460, height: 120, borderRadius: 24, border: "4px dashed #D9D3EA", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT.sans, fontWeight: 700, fontSize: 32, color: "#A49EBB" }}>nothing real to promote with</div>
+              <div style={{ width: 460, height: 120, borderRadius: 24, border: "4px dashed #C4C4CB", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT.sans, fontWeight: 700, fontSize: 32, color: "#6B6B73" }}>nothing real to promote with</div>
             </div>
           )}
         </AbsoluteFill>
@@ -154,9 +154,9 @@ export const What: React.FC = () => {
             const r = interpolate(fr, [x.at - 2, x.at + 12], [-90, 0], { ...cl, easing: ez });
             return (
               <React.Fragment key={k}>
-                {k > 0 && <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 120, color: "#D9CCFF", opacity: ap(fr, x.at - 4, 6) }}>{k === 1 ? "×" : "="}</div>}
+                {k > 0 && <div style={{ fontFamily: FONT.num, fontWeight: 900, fontSize: 96, color: "#FFB48A", opacity: ap(fr, x.at - 4, 6) }}>{k === 1 ? "×" : "="}</div>}
                 <div style={{ textAlign: "center", transform: `rotateX(${r}deg)`, opacity: ap(fr, x.at - 3, 6) }}>
-                  <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 260, letterSpacing: "-0.06em", lineHeight: 0.95 }}><GText>{x.n}</GText></div>
+                  <div style={{ fontFamily: FONT.num, fontWeight: 900, fontSize: 208, letterSpacing: "-0.03em", lineHeight: 0.95 }}><GText>{x.n}</GText></div>
                   <div style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 48, color: C.ink }}>{x.l}</div>
                 </div>
               </React.Fragment>
@@ -197,7 +197,7 @@ export const What: React.FC = () => {
                 <Card style={{ width: 420, padding: 30, display: "flex", flexDirection: "column", alignItems: "center", gap: 18 }} glow={`${col}66`}>
                   <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 46, color: C.ink }}>{t}</div>
                   <CoverImg slug={CYCLE[idx]} tier={t} width={200} />
-                  <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 92, letterSpacing: "-0.05em", lineHeight: 1 }}><GText>{p}</GText></div>
+                  <div style={{ fontFamily: FONT.num, fontWeight: 900, fontSize: 74, letterSpacing: "-0.03em", lineHeight: 1 }}><GText>{p}</GText></div>
                 </Card>
               </div>
             );
@@ -248,7 +248,7 @@ export const Problem: React.FC = () => {
         })}
         {fr >= ls(L15) - 4 && fr < ls(L16) - 4 && (
           <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", paddingTop: 200 }}>
-            <Pop at={cf(L15, "hit")}><div style={{ fontFamily: FONT.serif, fontStyle: "italic", fontWeight: 700, fontSize: 200 }}><GText>kept?</GText></div></Pop>
+            <Pop at={cf(L15, "hit")}><div style={{ fontFamily: FONT.serif, fontWeight: 700, fontSize: 200 }}><GText>kept?</GText></div></Pop>
           </AbsoluteFill>
         )}
       </Phase>
@@ -276,16 +276,16 @@ export const Problem: React.FC = () => {
                 <Pop at={ls(x.lp)}><Chip col={x.col} size={32}><Icon name={x.icon} size={38} color={x.col} /> {x.trade}</Chip></Pop>
                 <div style={{ height: 30 }} />
                 <Pop at={cf(x.lp, "pop")} from={40}>
-                  <Card style={{ padding: "30px 32px", background: answered ? "#FFFFFF" : C.pinkL, border: `2px solid ${answered ? C.line : "#FFC2D4"}`, opacity: answered ? 0.6 : 1 }} glow="rgba(255,92,138,0.35)">
+                  <Card style={{ padding: "30px 32px", background: answered ? "#FFFFFF" : C.pinkL, border: `2px solid ${answered ? C.line : "#F2A9A4"}`, opacity: answered ? 0.6 : 1 }} glow="rgba(255,61,46,0.35)">
                     <div style={{ display: "flex", gap: 18 }}>
-                      <div style={{ width: 54, height: 54, borderRadius: 16, background: answered ? C.grnL : "#FFD1DE", flex: "none", display: "flex", alignItems: "center", justifyContent: "center" }}><Icon name={answered ? "check" : "x"} size={34} color={answered ? C.grn : C.pink} /></div>
+                      <div style={{ width: 54, height: 54, borderRadius: 16, background: answered ? C.grnL : "#FDECEB", flex: "none", display: "flex", alignItems: "center", justifyContent: "center" }}><Icon name={answered ? "check" : "x"} size={34} color={answered ? C.grn : C.pink} /></div>
                       <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 46, color: C.ink, lineHeight: 1.15, textDecoration: answered ? "line-through" : "none", textDecorationColor: C.pink }}>{x.prob}</div>
                     </div>
                   </Card>
                 </Pop>
               </div>
               <div style={{ position: "absolute", left: 1320, top: 250, width: 540, display: "flex", flexDirection: "column", gap: 22 }}>
-                {answered && <Pop at={cf(x.la, "sparkle")}><div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 32, letterSpacing: "0.25em", color: x.col }}>THE ANSWER</div></Pop>}
+                {answered && <Pop at={cf(x.la, "sparkle")}><div style={{ fontFamily: FONT.mono, fontWeight: 800, fontSize: 32, letterSpacing: "0.25em", color: x.col }}>THE ANSWER</div></Pop>}
                 {x.chips.map((c, q) => (
                   <Pop key={q} at={cf(x.la, "pop", q)} from={40}>
                     <Card style={{ display: "flex", alignItems: "center", gap: 18, padding: "20px 24px", borderLeft: `8px solid ${[C.mag, C.pur, C.cya][q]}` }} glow={`${x.col}55`}>
@@ -344,13 +344,13 @@ export const Why: React.FC = () => {
               <div key={k} style={{ width: 400, height: 440, position: "relative", transformStyle: "preserve-3d", transform: `rotateY(${shown ? flip : 180}deg)` }}>
                 <div style={{ position: "absolute", inset: 0, backfaceVisibility: "hidden" }}>
                   <Card style={{ height: "100%", padding: 34, display: "flex", flexDirection: "column", gap: 22, boxSizing: "border-box" }} glow={`${r.c}66`}>
-                    <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 110, lineHeight: 1, letterSpacing: "-0.05em" }}><GText>{r.n}</GText></div>
+                    <div style={{ fontFamily: FONT.num, fontWeight: 900, fontSize: 88, lineHeight: 1, letterSpacing: "-0.03em" }}><GText>{r.n}</GText></div>
                     <IconBubble name={r.i} size={96} col={r.c} />
                     <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 42, color: C.ink, lineHeight: 1.1 }}>{r.t}</div>
                     <div style={{ fontFamily: FONT.sans, fontWeight: 600, fontSize: 28, color: C.ink2 }}>{r.d}</div>
                   </Card>
                 </div>
-                <div style={{ position: "absolute", inset: 0, backfaceVisibility: "hidden", transform: "rotateY(180deg)", borderRadius: 28, background: "linear-gradient(135deg,#FFE1F1,#EFE8FF 50%,#DDF9FE)", border: `2px solid ${C.line}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT.serif, fontStyle: "italic", fontWeight: 700, fontSize: 160, color: "#FFFFFF" }}>{r.n}</div>
+                <div style={{ position: "absolute", inset: 0, backfaceVisibility: "hidden", transform: "rotateY(180deg)", borderRadius: 28, background: "#F3F3F5", border: `2px solid ${C.line}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT.serif, fontWeight: 700, fontSize: 160, color: "#FFFFFF" }}>{r.n}</div>
               </div>
             );
           })}

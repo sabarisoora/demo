@@ -1,70 +1,74 @@
 import React from "react";
 import { AbsoluteFill, Img, interpolate, random, staticFile, useCurrentFrame } from "remotion";
-import { ap, C, cl, ez, f, FONT, GRAD, LEAD, LINES, pop, sceneStart, SCENES } from "./lib";
+import { ap, C, cl, CUE, ez, f, FONT, LEAD, LINES, pop, sceneEnd, sceneStart, SCENES } from "./lib";
 
-// ---------- background: white with slow pastel washes and a faint dot grid ----------
+// ---------- background: white, drifting light-steel haze, rising sparks, faint grain ----------
 export const Bg: React.FC = () => {
   const fr = useCurrentFrame();
-  const blob = (x: number, y: number, r: number, col: string, sp: number, ph: number) => (
-    <div style={{ position: "absolute", left: x + Math.sin(fr / sp + ph) * 120 - r, top: y + Math.cos(fr / (sp * 1.3) + ph) * 90 - r, width: r * 2, height: r * 2, borderRadius: "50%", background: col, filter: "blur(90px)", opacity: 0.55 }} />
+  const haze = (x: number, y: number, r: number, sp: number, ph: number, o: number) => (
+    <div style={{ position: "absolute", left: x + Math.sin(fr / sp + ph) * 160 - r, top: y + Math.cos(fr / (sp * 1.4) + ph) * 70 - r, width: r * 2, height: r * 1.2, borderRadius: "50%", background: "#E7E8EC", filter: "blur(110px)", opacity: o }} />
   );
   return (
     <AbsoluteFill style={{ background: C.bg, overflow: "hidden" }}>
-      {blob(260, 180, 420, "#FFD3EC", 140, 0)}
-      {blob(1650, 260, 460, "#E4D8FF", 170, 2)}
-      {blob(1250, 980, 480, "#CDF6FD", 155, 4)}
-      {blob(300, 1000, 380, "#EFE3FF", 190, 1)}
-      <AbsoluteFill style={{ backgroundImage: "radial-gradient(rgba(139,92,246,0.10) 1.6px, transparent 1.6px)", backgroundSize: "44px 44px", backgroundPosition: `0 ${-fr * 0.4}px` }} />
-      {Array.from({ length: 18 }).map((_, k) => {
-        const x = random(`sx${k}`) * 1920, y0 = random(`sy${k}`) * 1080, s = 4 + random(`ss${k}`) * 6;
-        const y = (y0 - fr * (0.3 + random(`sv${k}`) * 0.5) + 1080 * 4) % 1080;
-        const tw = 0.35 + 0.65 * Math.abs(Math.sin(fr / 20 + k));
-        return <div key={k} style={{ position: "absolute", left: x, top: y, width: s, height: s, borderRadius: s, background: [C.mag, C.pur, C.cya][k % 3], opacity: 0.22 * tw }} />;
+      {haze(300, 280, 520, 160, 0, 0.7)}
+      {haze(1600, 720, 560, 190, 2, 0.6)}
+      <div style={{ position: "absolute", left: 160, right: 160, bottom: -300, height: 360, borderRadius: "50%", background: "#FFE1CF", filter: "blur(120px)", opacity: 0.55 + 0.1 * Math.sin(fr / 13) }} />
+      {/* fine steel grid */}
+      <AbsoluteFill style={{ backgroundImage: "linear-gradient(#0B0B0C08 1px, transparent 1px), linear-gradient(90deg, #0B0B0C08 1px, transparent 1px)", backgroundSize: "80px 80px", backgroundPosition: `${-fr * 0.3}px 0px` }} />
+      {/* sparks rising */}
+      {Array.from({ length: 26 }).map((_, k) => {
+        const x0 = random(`ex${k}`) * 1920, sp = 0.6 + random(`ev${k}`) * 1.6, s = 2 + random(`es${k}`) * 3.5;
+        const y = 1100 - ((fr * sp + random(`ey${k}`) * 1200) % 1250);
+        const x = x0 + Math.sin(fr / (18 + k) + k) * 30;
+        const fl = 0.35 + 0.65 * Math.abs(Math.sin(fr / (5 + (k % 7)) + k));
+        return <div key={k} style={{ position: "absolute", left: x, top: y, width: s, height: s, borderRadius: s, background: k % 4 === 0 ? C.pur : C.mag, opacity: 0.55 * fl * Math.min(1, y / 500) }} />;
       })}
+      <svg width="1920" height="1080" style={{ position: "absolute", inset: 0, opacity: 0.05, mixBlendMode: "multiply" }}>
+        <filter id="gr"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed={fr % 50} /><feColorMatrix type="saturate" values="0" /></filter>
+        <rect width="1920" height="1080" filter="url(#gr)" />
+      </svg>
     </AbsoluteFill>
   );
 };
 
-// ---------- gradient text ----------
-export const GText: React.FC<{ children: React.ReactNode; style?: React.CSSProperties }> = ({ children, style }) => (
-  <span style={{ backgroundImage: GRAD, WebkitBackgroundClip: "text", backgroundClip: "text", WebkitTextFillColor: "transparent", paddingRight: "0.06em", ...style }}>{children}</span>
+// ---------- accent text: solid molten orange ----------
+export const GText: React.FC<{ children: React.ReactNode; style?: React.CSSProperties; col?: string }> = ({ children, style, col }) => (
+  <span style={{ color: col ?? C.mag, ...style }}>{children}</span>
 );
 
-// ---------- kinetic text: every word lands exactly when it is spoken ----------
-// [bracketed] words get the gradient serif accent
+// ---------- kinetic trailer text: every word slams in exactly when it is spoken ----------
 export const KText: React.FC<{ line: number; size?: number; align?: "center" | "left"; maxWidth?: number; color?: string; from?: number; dim?: number }> = ({ line, size = 84, align = "center", maxWidth = 1600, color = C.ink, from, dim }) => {
   const fr = useCurrentFrame();
   const l = LINES[line];
   const marks = (MARK[line] ?? "").split("|").filter(Boolean).map((x) => x.toLowerCase());
+  const S = size * 1.12;
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", justifyContent: align === "center" ? "center" : "flex-start", gap: `0 ${size * 0.26}px`, maxWidth, lineHeight: 1.12 }}>
+    <div style={{ display: "flex", flexWrap: "wrap", justifyContent: align === "center" ? "center" : "flex-start", gap: `0 ${S * 0.22}px`, maxWidth, lineHeight: 1.04 }}>
       {l.words.map((w, k) => {
         const a = (from ?? 0) + f(w.s - LEAD) - 2;
-        const s = pop(fr, a, 300, 16);
-        const p = Math.min(1, s * 1.5);
-        const clean = w.w;
-        const acc = marks.some((m) => clean.toLowerCase().replace(/[^a-z0-9$-]/g, "").startsWith(m));
+        const s = pop(fr, a, 420, 18);
+        const p = Math.min(1, s * 1.6);
+        const acc = marks.some((m) => w.w.toLowerCase().replace(/[^a-z0-9$-]/g, "").startsWith(m));
         const style: React.CSSProperties = {
           display: "inline-block",
-          fontFamily: acc ? FONT.serif : FONT.sans,
-          fontStyle: acc ? "italic" : "normal",
-          fontWeight: acc ? 700 : 800,
-          fontSize: acc ? size * 1.08 : size,
-          letterSpacing: acc ? "-0.01em" : "-0.035em",
-          color,
+          fontFamily: FONT.disp,
+          fontWeight: 400,
+          fontSize: acc ? S * 1.06 : S,
+          letterSpacing: "0.01em",
+          textTransform: "uppercase",
+          color: acc ? C.mag : color,
           opacity: p * (dim ?? 1),
-          transform: `translateY(${(1 - s) * size * 0.45}px) scale(${1.35 - 0.35 * Math.min(1, s)})`,
-          filter: `blur(${(1 - p) * 8}px)`,
+          transform: `translateY(${(1 - s) * -S * 0.35}px) scale(${1.9 - 0.9 * Math.min(1, s)})`,
+          filter: `blur(${(1 - p) * 6}px)`,
         };
-        return acc ? <span key={k} style={style}><GText>{clean}</GText></span> : <span key={k} style={style}>{clean}</span>;
+        return <span key={k} style={style}>{w.w}</span>;
       })}
     </div>
   );
 };
-// words to accent per line (prefix match, lowercased, "|" separated) — filled by H.tsx
 export const MARK: Record<number, string> = {};
 
-// ---------- captions (light pill, black words, gradient current word) ----------
+// ---------- captions (dark pill, white words, orange current word) ----------
 export const Captions: React.FC<{ hideIn?: [number, number][] }> = ({ hideIn = [] }) => {
   const fr = useCurrentFrame();
   if (hideIn.some(([a, b]) => fr >= a && fr <= b)) return null;
@@ -86,93 +90,124 @@ export const Captions: React.FC<{ hideIn?: [number, number][] }> = ({ hideIn = [
   const o = interpolate(fr, [f(l.end) + 2, f(l.end) + 8], [1, 0], cl);
   return (
     <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 38, pointerEvents: "none" }}>
-      <div style={{ opacity: Math.min(p, o), transform: `translateY(${(1 - p) * 10}px)`, display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center", maxWidth: 1500, background: "rgba(255,255,255,0.94)", padding: "10px 28px", borderRadius: 999, border: `2px solid ${C.line}`, boxShadow: "0 14px 40px rgba(139,92,246,0.16)" }}>
+      <div style={{ opacity: Math.min(p, o), transform: `translateY(${(1 - p) * 10}px)`, display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center", maxWidth: 1500, background: "rgba(255,255,255,0.96)", padding: "8px 26px", borderRadius: 8, border: `2px solid ${C.ink}`, boxShadow: `6px 6px 0 ${C.ink}` }}>
         {g.map((k) => {
           const w = ws[k];
           const next = ws[k + 1];
           const on = fr >= f(w.s) - 1;
           const now = on && (!next || fr < f(next.s) - 1);
-          return (
-            <span key={k} style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 36, color: on ? C.ink : C.mute, transform: `scale(${now ? 1.06 : 1})`, display: "inline-block" }}>
-              {now ? <GText>{w.w}</GText> : w.w}
-            </span>
-          );
+          return <span key={k} style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 34, color: now ? C.mag : on ? C.ink : C.mute, display: "inline-block" }}>{w.w}</span>;
         })}
       </div>
     </AbsoluteFill>
   );
 };
 
-// ---------- scene-change wipe: a pastel gradient band sweeps across ----------
+// ---------- smash-cut transition: white-hot flash + horizontal light streak ----------
 export const Wipes: React.FC = () => {
   const fr = useCurrentFrame();
   const out: React.ReactNode[] = [];
-  SCENES.slice(1).forEach((s, k) => {
-    const a = sceneStart(s) - 8;
+  SCENES.slice(1).forEach((s) => {
+    const a = sceneStart(s) - 4;
     const d = fr - a;
-    if (d < 0 || d > 18) return;
-    const p = interpolate(d, [0, 18], [-1, 1], { ...cl, easing: ez });
+    if (d < 0 || d > 12) return;
+    const flash = interpolate(d, [0, 2, 10], [0, 0.85, 0], cl);
+    const sx = interpolate(d, [0, 10], [-400, 2300], { ...cl, easing: ez });
     out.push(
-      <AbsoluteFill key={s} style={{ pointerEvents: "none", overflow: "hidden" }}>
-        <div style={{ position: "absolute", top: -300, bottom: -300, left: p * 2600 - 300 + 960 - 600, width: 1200, transform: "rotate(14deg)", background: `linear-gradient(90deg, transparent, ${k % 2 ? "#E9DDFF" : "#FFD9EE"} 20%, #FFFFFF 50%, ${k % 2 ? "#D5F7FD" : "#EDE3FF"} 80%, transparent)`, opacity: 0.96 }} />
+      <AbsoluteFill key={s} style={{ pointerEvents: "none" }}>
+        <AbsoluteFill style={{ background: C.mag, opacity: flash * 0.35 }} />
+        <div style={{ position: "absolute", left: sx - 900, top: 500, width: 1800, height: 18, background: C.mag, opacity: 1 - d / 12, transform: "skewX(-30deg)" }} />
+        <div style={{ position: "absolute", left: sx - 1300, top: 540, width: 1400, height: 6, background: C.ink, opacity: 1 - d / 12, transform: "skewX(-30deg)" }} />
       </AbsoluteFill>,
     );
   });
   return <>{out}</>;
 };
 
-// ---------- confetti burst ----------
+// ---------- camera rig: slow push-in per scene + shake on every hit ----------
+const HITS = new Set(["impact", "hit", "stamp", "cash", "doors", "box", "count"]);
+export const Cam: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const fr = useCurrentFrame();
+  const sc = SCENES.filter((s) => fr >= sceneStart(s) - 4).pop() ?? SCENES[0];
+  const a = sceneStart(sc), b = sceneEnd(sc);
+  const push = 1 + 0.045 * interpolate(fr, [a, b], [0, 1], cl);
+  let dx = 0, dy = 0;
+  for (const c of CUE) {
+    if (!HITS.has(c.kind)) continue;
+    const d = fr - f(c.t);
+    if (d < 0 || d > 12) continue;
+    const amp = c.kind === "impact" ? 22 : c.kind === "count" ? 4 : 10;
+    const k = 1 - d / 12;
+    dx += Math.sin(d * 7.3 + c.t) * amp * k; dy += Math.cos(d * 9.1 + c.t) * amp * 0.6 * k;
+  }
+  return <AbsoluteFill style={{ transform: `translate(${dx}px, ${dy}px) scale(${push})` }}>{children}</AbsoluteFill>;
+};
+
+// ---------- impact: flash + shake helper ----------
+export const shake = (fr: number, at: number, amp = 18, len = 12) => {
+  const d = fr - at;
+  if (d < 0 || d > len) return "translate(0px,0px)";
+  const k = 1 - d / len;
+  return `translate(${Math.sin(d * 7.3) * amp * k}px, ${Math.cos(d * 9.1) * amp * 0.6 * k}px)`;
+};
+export const Flash: React.FC<{ at: number; col?: string; o?: number }> = ({ at, col = "#FF5E1A", o = 0.28 }) => {
+  const fr = useCurrentFrame();
+  const d = fr - at;
+  if (d < 0 || d > 8) return null;
+  return <AbsoluteFill style={{ background: col, opacity: interpolate(d, [0, 1, 8], [0, o, 0], cl), pointerEvents: "none" }} />;
+};
+
+// ---------- spark burst (replaces confetti): elongated hot sparks with gravity ----------
 export const Confetti: React.FC<{ at: number; x?: number; y?: number; n?: number; spread?: number }> = ({ at, x = 960, y = 540, n = 70, spread = 900 }) => {
   const fr = useCurrentFrame();
   const d = fr - at;
-  if (d < 0 || d > 70) return null;
+  if (d < 0 || d > 45) return null;
   return (
     <AbsoluteFill style={{ pointerEvents: "none" }}>
+      <Flash at={at} />
       {Array.from({ length: n }).map((_, k) => {
         const ang = random(`ca${k}`) * Math.PI * 2;
-        const v = (0.35 + random(`cv${k}`) * 0.65) * spread;
-        const t = d / 70;
-        const px = x + Math.cos(ang) * v * (1 - Math.pow(1 - t, 3));
-        const py = y + Math.sin(ang) * v * 0.7 * (1 - Math.pow(1 - t, 3)) + t * t * 260;
-        const s = 8 + random(`cs${k}`) * 12;
-        const col = [C.mag, C.pur, C.cya, C.yel, "#FF9ED2"][k % 5];
-        return <div key={k} style={{ position: "absolute", left: px, top: py, width: k % 3 === 0 ? s * 2 : s, height: s, borderRadius: k % 2 ? s : 3, background: col, opacity: 1 - t * 0.9, transform: `rotate(${d * (8 + k) + k * 40}deg)` }} />;
+        const v = (0.3 + random(`cv${k}`) * 0.7) * spread;
+        const t = d / 45;
+        const e = 1 - Math.pow(1 - t, 2.4);
+        const px = x + Math.cos(ang) * v * e;
+        const py = y + Math.sin(ang) * v * 0.65 * e + t * t * 380;
+        const vx = Math.cos(ang) * v * (1 - t), vy = Math.sin(ang) * v * 0.65 * (1 - t) + t * 380;
+        const rot = (Math.atan2(vy, vx) * 180) / Math.PI;
+        const len = 10 + random(`cl${k}`) * 26;
+        return <div key={k} style={{ position: "absolute", left: px, top: py, width: len * (1 - t * 0.6), height: 3, borderRadius: 2, background: k % 3 === 0 ? C.pur : k % 3 === 1 ? C.mag : C.ink, opacity: 1 - t, transform: `rotate(${rot}deg)` }} />;
       })}
     </AbsoluteFill>
   );
 };
 
-// ---------- expanding gradient rings ----------
+// ---------- shockwave rings ----------
 export const Rings: React.FC<{ at: number; x?: number; y?: number; n?: number }> = ({ at, x = 960, y = 540, n = 3 }) => {
   const fr = useCurrentFrame();
   return (
     <>
       {Array.from({ length: n }).map((_, k) => {
-        const d = fr - at - k * 6;
-        if (d < 0 || d > 40) return null;
-        const r = interpolate(d, [0, 40], [40, 700], { ...cl, easing: ez });
-        return <div key={k} style={{ position: "absolute", left: x - r, top: y - r, width: r * 2, height: r * 2, borderRadius: "50%", border: `${6 - k}px solid ${[C.mag, C.pur, C.cya][k % 3]}`, opacity: 1 - d / 40 }} />;
+        const d = fr - at - k * 5;
+        if (d < 0 || d > 30) return null;
+        const r = interpolate(d, [0, 30], [30, 900], { ...cl, easing: ez });
+        return <div key={k} style={{ position: "absolute", left: x - r, top: y - r * 0.45, width: r * 2, height: r * 0.9, borderRadius: "50%", border: `${5 - k}px solid ${k === 0 ? C.ink : C.mag}`, opacity: (1 - d / 30) * 0.9 }} />;
       })}
     </>
   );
 };
 
-// ---------- sparkle glints ----------
+// ---------- glints ----------
 export const Sparkle: React.FC<{ at: number; x: number; y: number; n?: number; r?: number }> = ({ at, x, y, n = 8, r = 140 }) => {
   const fr = useCurrentFrame();
   const d = fr - at;
-  if (d < 0 || d > 28) return null;
+  if (d < 0 || d > 22) return null;
   return (
     <>
       {Array.from({ length: n }).map((_, k) => {
         const ang = (k / n) * Math.PI * 2 + 0.3;
-        const rr = interpolate(d, [0, 28], [r * 0.3, r], { ...cl, easing: ez });
-        const s = interpolate(d, [0, 8, 28], [0, 1, 0], cl) * (14 + (k % 3) * 6);
-        return (
-          <svg key={k} width={s * 2} height={s * 2} viewBox="-10 -10 20 20" style={{ position: "absolute", left: x + Math.cos(ang) * rr - s, top: y + Math.sin(ang) * rr - s }}>
-            <path d="M0 -10 L2 -2 L10 0 L2 2 L0 10 L-2 2 L-10 0 L-2 -2 Z" fill={[C.mag, C.pur, C.cya, C.yel][k % 4]} />
-          </svg>
-        );
+        const rr = interpolate(d, [0, 22], [r * 0.2, r], { ...cl, easing: ez });
+        const L = interpolate(d, [0, 6, 22], [0, 46, 0], cl);
+        return <div key={k} style={{ position: "absolute", left: x + Math.cos(ang) * rr, top: y + Math.sin(ang) * rr, width: L, height: 3, background: k % 2 ? C.pur : C.mag, transform: `rotate(${(ang * 180) / Math.PI}deg)`, transformOrigin: "left center", borderRadius: 2 }} />;
       })}
     </>
   );
@@ -181,21 +216,21 @@ export const Sparkle: React.FC<{ at: number; x: number; y: number; n?: number; r
 // ---------- brand ----------
 export const Logo: React.FC<{ size?: number }> = ({ size = 160 }) => <Img src={staticFile("logo.png")} style={{ width: size, height: size }} />;
 export const Wordmark: React.FC<{ size?: number }> = ({ size = 120 }) => (
-  <span style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: size, letterSpacing: "-0.045em", color: C.ink }}>
+  <span style={{ fontFamily: FONT.num, fontWeight: 900, fontSize: size * 0.82, letterSpacing: "-0.03em", color: C.ink }}>
     Profit<GText>IQS</GText>
     <span style={{ fontSize: size * 0.28, verticalAlign: "top", fontWeight: 600, marginLeft: 4, color: C.ink2 }}>™</span>
   </span>
 );
 export const CoverImg: React.FC<{ slug: string; tier?: "Essential" | "Elite" | "Complete"; width?: number; style?: React.CSSProperties }> = ({ slug, tier = "Elite", width = 300, style }) => (
-  <Img src={staticFile(`covers/${slug}/${tier}.png`)} style={{ width, height: width * 1.334, borderRadius: width * 0.035, boxShadow: "0 30px 60px -18px rgba(139,92,246,0.35), 0 0 0 1px rgba(139,92,246,0.10)", display: "block", ...style }} />
+  <Img src={staticFile(`covers/${slug}/${tier}.png`)} style={{ width, height: width * 1.334, borderRadius: width * 0.03, boxShadow: `0 30px 60px -22px rgba(11,11,12,0.45), 0 0 0 1px rgba(11,11,12,0.08)`, display: "block", ...style }} />
 );
 
-// ---------- card + chip ----------
+// ---------- card + chip (dark steel) ----------
 export const Card: React.FC<{ children: React.ReactNode; style?: React.CSSProperties; glow?: string }> = ({ children, style, glow }) => (
-  <div style={{ background: "#FFFFFF", borderRadius: 28, border: `2px solid ${C.line}`, boxShadow: `0 24px 60px -20px ${glow ?? "rgba(139,92,246,0.30)"}`, ...style }}>{children}</div>
+  <div style={{ background: C.surf, borderRadius: 12, border: `2px solid ${C.ink}`, boxShadow: `8px 8px 0 ${glow && glow.startsWith("#") ? glow.slice(0, 7) : C.ink}`, ...style }}>{children}</div>
 );
-export const Chip: React.FC<{ children: React.ReactNode; col?: string; size?: number; style?: React.CSSProperties }> = ({ children, col = C.pur, size = 30, style }) => (
-  <div style={{ display: "inline-flex", alignItems: "center", gap: 12, fontFamily: FONT.sans, fontWeight: 700, fontSize: size, color: C.ink, background: "#FFFFFF", border: `2px solid ${col}55`, borderRadius: 999, padding: `${size * 0.32}px ${size * 0.8}px`, boxShadow: `0 12px 30px -10px ${col}66`, whiteSpace: "nowrap", ...style }}>{children}</div>
+export const Chip: React.FC<{ children: React.ReactNode; col?: string; size?: number; style?: React.CSSProperties }> = ({ children, col = C.mag, size = 30, style }) => (
+  <div style={{ display: "inline-flex", alignItems: "center", gap: 12, fontFamily: FONT.sans, fontWeight: 700, fontSize: size, color: C.ink, background: C.surf, border: `2px solid ${C.ink}`, borderRadius: 8, padding: `${size * 0.3}px ${size * 0.75}px`, boxShadow: `4px 4px 0 ${col}`, whiteSpace: "nowrap", ...style }}>{children}</div>
 );
 
 // ---------- icons (stroke, colourable) ----------
@@ -253,8 +288,8 @@ const ICON: Record<string, React.ReactNode> = {
 export const Icon: React.FC<{ name: string; size?: number; color?: string }> = ({ name, size = 48, color = "currentColor" }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" style={{ color, display: "block" }}>{ICON[name]}</svg>
 );
-export const IconBubble: React.FC<{ name: string; size?: number; col?: string; bg?: string }> = ({ name, size = 90, col = C.pur, bg }) => (
-  <div style={{ width: size, height: size, borderRadius: size * 0.32, background: bg ?? `${col}1F`, border: `2px solid ${col}55`, display: "flex", alignItems: "center", justifyContent: "center", flex: "none" }}>
+export const IconBubble: React.FC<{ name: string; size?: number; col?: string; bg?: string }> = ({ name, size = 90, col = C.mag, bg }) => (
+  <div style={{ width: size, height: size, borderRadius: size * 0.22, background: `${col}18`, border: `2px solid ${col}`, display: "flex", alignItems: "center", justifyContent: "center", flex: "none" }}>
     <Icon name={name} size={size * 0.56} color={col} />
   </div>
 );

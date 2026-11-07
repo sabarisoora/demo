@@ -9,10 +9,12 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 MODEL = sys.argv[1]
 HERE = os.path.join(BASE, sys.argv[2]) if len(sys.argv) > 2 else BASE  # variant dir (e.g. home/short) with its own spec.json
 SPECD = json.load(open(f"{HERE}/spec.json")); SPEC = SPECD["lines"]
+CINEMA = SPECD.get("style") == "cinema"
 VOICE, SPEED = "af_heart", 1.05
 START, GAP, SCENE_GAP, TAIL = 0.9, 0.42, 1.05, 4.5
 LEAD = 0.15  # picture + sfx land this much before the spoken word
 
+if CINEMA: VOICE, SPEED = SPECD.get("voice", "am_fenrir"), SPECD.get("speed", 1.0)
 from kokoro_onnx import Kokoro
 from faster_whisper import WhisperModel
 k = Kokoro(os.path.join(MODEL, "kokoro-v1.0.onnx"), os.path.join(MODEL, "voices-v1.0.bin"))
@@ -219,6 +221,54 @@ for c in CUES:
 # a light whoosh into every scene
 for sc, st in list(S.items())[1:]: put(fx, swish(0.18), st - SCENE_GAP * 0.6)
 
+if CINEMA:
+    # ---------- trailer score: 90 bpm, D minor (Dm Bb F C), drones, low ostinato, taiko, braams ----------
+    BPM_ = 90; b_ = 60 / BPM_; bar_ = 4 * b_
+    prg = [[38, 45, 50, 53], [34, 41, 46, 50], [41, 48, 53, 57], [36, 43, 48, 52]]
+    saw = lambda ph: 2 * ((ph / (2 * np.pi)) % 1) - 1
+    drone = np.zeros(N); ost = np.zeros(N); strings = np.zeros(N); taiko = np.zeros(N); hat2 = np.zeros(N)
+    for kb in range(int(T / bar_) + 2):
+        s0 = kb * bar_; ch = prg[kb % 4]
+        tt = TT(bar_ + 0.6); env_ = np.minimum(1, tt / 0.4) * np.exp(-np.maximum(0, tt - bar_) / 0.3)
+        put(drone, lp(sum(saw(2 * np.pi * mt(ch[0] - 12 + d_) * tt) for d_ in (-0.07, 0, 0.07)), 0.02) * env_ * 0.09, s0)
+        for m in ch[1:]:
+            put(strings, lp(sum(saw(2 * np.pi * mt(m + d_) * tt) for d_ in (-0.1, 0.1)), 0.05) * env_ * 0.022, s0)
+        for j in range(16):  # driving low 16th ostinato
+            tj = s0 + j * b_ / 4; t2 = TT(0.16); n_ = ch[0] + (12 if j % 4 == 2 else 0) + (7 if j % 8 == 7 else 0)
+            put(ost, lp(saw(2 * np.pi * mt(n_) * t2), 0.12) * np.exp(-t2 * 22) * (0.11 if j % 4 == 0 else 0.07), tj)
+        for j in (0, 2, 2.75, 3.5) if kb % 2 else (0, 1.5, 2, 3):  # taiko pattern
+            t3 = TT(0.7); put(taiko, (np.sin(2 * np.pi * (42 + 70 * np.exp(-t3 * 18)) * t3) * np.exp(-t3 * 5.5) + lp(rng.standard_normal(len(t3)), 0.08) * np.exp(-t3 * 14) * 0.35) * 0.5, s0 + j * b_)
+        for j in range(8):
+            t4 = TT(0.05); put(hat2, hp(rng.standard_normal(len(t4)), 0.75) * np.exp(-t4 * 80) * 0.025, s0 + j * b_ / 2 + b_ / 4)
+    lvl = drums  # reuse the per-scene drum envelope for the drive
+    music = drone + strings * pads + ost * (0.35 + 0.65 * lvl) + (taiko + hat2) * lvl
+    music *= 0.55 - 0.3 * duck
+    def braam(g=0.5):
+        tt = TT(2.2); e_ = np.minimum(1, tt / 0.04) * np.exp(-tt * 1.6)
+        x = sum(saw(2 * np.pi * mt(m) * tt * (1 + 0.004 * np.sin(2 * np.pi * 5 * tt))) for m in (26, 33, 38, 26.1))
+        return lp(x, 0.06) * e_ * g * 0.5
+    def boom(g=0.7): tt = TT(1.8); return (np.sin(2 * np.pi * (34 + 80 * np.exp(-tt * 8)) * tt) * np.exp(-tt * 2.2) + lp(rng.standard_normal(len(tt)), 0.05) * np.exp(-tt * 6) * 0.6) * g
+    def clank(g=0.3): tt = TT(0.25); return (sum(np.sin(2 * np.pi * f_ * tt) * a_ for f_, a_ in ((2100, 1), (3370, 0.6), (5230, 0.3))) * np.exp(-tt * 28) + np.sin(2 * np.pi * 90 * tt) * np.exp(-tt * 30)) * g
+    def shing(g=0.18): tt = TT(0.9); return hp(rng.standard_normal(len(tt)), 0.55) * np.exp(-tt * 6) * g + sum(np.sin(2 * np.pi * f_ * tt) for f_ in (3951, 5274)) * np.exp(-tt * 5) * g * 0.3
+    def dbell(f0=659, g=0.16): tt = TT(1.6); return sum(np.sin(2 * np.pi * f0 * r * tt) * a_ for r, a_ in ((1, 1), (2.76, 0.5), (5.4, 0.25))) * np.exp(-tt * 2.8) * g
+    def deep_whoosh(g=0.4): return lp(whoosh(0.7, g), 0.35) * 1.4
+    def slam(g=0.6): return addl(boom(g * 0.7)[: int(0.9 * SR)], hit(g * 0.8))
+    C_SFX = {"impact": lambda: addl(braam(), boom()), "whoosh": deep_whoosh, "doors": lambda: addl(deep_whoosh(0.5), np.concatenate([np.zeros(int(0.3 * SR)), slam(0.5)])),
+             "pop": clank, "sparkle": shing, "chime": lambda: addl(dbell(587), np.concatenate([np.zeros(int(0.12 * SR)), dbell(880)])), "ding": lambda: dbell(784),
+             "stamp": slam, "hit": lambda: addl(hit(0.6), boom(0.4)[: int(0.8 * SR)]), "box": lambda: addl(clank(0.4), boom(0.35)[: int(0.6 * SR)]), "soft": lambda: boom(0.45)}
+    fx = np.zeros(N); up_i = 0
+    for c in CUES:
+        kd, at = c["kind"], c["t"]
+        if kd == "up":
+            st_ = 62 + [0, 3, 5, 7, 10][up_i % 5] + 12 * (up_i // 5 % 2); up_i += 1
+            put(fx, clank(0.25), at); put(fx, dbell(mt(st_), 0.07)[: int(0.5 * SR)], at); continue
+        if kd == "count":
+            for j in range(14): put(fx, clank(0.08)[: int(0.06 * SR)], at + j * 0.045)
+            continue
+        if kd == "riser": put(fx, riser(1.2, 0.3), at - 0.5); continue
+        F_ = C_SFX.get(kd) or {"tick": tick, "swish": swish, "strike": strike, "glitch": glitch, "cash": cash, "click": click, "type": typing, "drop": drop}[kd]
+        put(fx, F_(), at - (0.3 if kd in ("whoosh", "doors") else 0) - (0.4 if kd == "impact" else 0) * 0)
+    for sc, st in list(S.items())[1:]: put(fx, addl(deep_whoosh(0.3), np.concatenate([np.zeros(int(0.45 * SR)), boom(0.25)[: int(0.7 * SR)]])), st - SCENE_GAP * 0.7)
 mix = vo * 1.0 + music + fx * 0.55
 raw = f"{HERE}/_raw.wav"
 sf.write(raw, mix / max(1, np.abs(mix).max()), SR, subtype="PCM_24")

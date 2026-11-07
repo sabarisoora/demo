@@ -7,27 +7,31 @@ export const FPS = 30;
 export const W = 1920;
 export const H = 1080;
 
-// light-only palette: white, pastel washes, black-ish ink, magenta / purple / cyan accents
+// white action palette: white / light steel, black type, solid molten orange / gold / steel-blue accents (no gradients)
 export const C = {
-  bg: "#FFFFFF",
-  ink: "#1B1530",
-  ink2: "#5E5878",
-  mute: "#9A94B5",
-  line: "#ECE6FA",
-  mag: "#FF3EA5",
-  pur: "#8B5CF6",
-  cya: "#06B6D4",
-  magL: "#FFE1F1",
-  purL: "#EFE8FF",
-  cyaL: "#DDF9FE",
+  bg: "#FAFAFA",
+  ink: "#0B0B0C",
+  ink2: "#4A4A52",
+  mute: "#9A9AA2",
+  line: "#E2E2E6",
+  mag: "#FF5E1A",
+  pur: "#F5A300",
+  cya: "#1E88E5",
+  magL: "#FFEDE4",
+  purL: "#FFF4DC",
+  cyaL: "#E6F2FD",
   yel: "#FFC94D",
-  grn: "#10B981",
-  grnL: "#DCFCEF",
-  pink: "#FF5C8A",
-  pinkL: "#FFE8EF",
+  grn: "#16A34A",
+  grnL: "#E5F7EC",
+  pink: "#E5322B",
+  pinkL: "#FDECEB",
+  surf: "#FFFFFF",
+  surf2: "#F3F3F5",
 };
-export const GRAD = `linear-gradient(100deg, ${C.mag} 0%, ${C.pur} 50%, ${C.cya} 100%)`;
-export const FONT = { sans: "'Poppins', system-ui, sans-serif", serif: "'Playfair Display', Georgia, serif" };
+/** accent fill (solid: the brief is no gradients) */
+export const GRAD = C.mag;
+// font roles: Anton = slamming headlines, Space Grotesk = body/cards, Unbounded = big numbers, JetBrains Mono = labels/stamps
+export const FONT = { sans: "'Space Grotesk', system-ui, sans-serif", serif: "'Anton', Impact, sans-serif", disp: "'Anton', Impact, sans-serif", num: "'Unbounded', 'Space Grotesk', sans-serif", mono: "'JetBrains Mono', monospace" };
 
 export type Word = { w: string; s: number };
 export type Line = { scene: string; sub: string; start: number; end: number; words: Word[]; cues: [string, string][] };

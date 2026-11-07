@@ -1364,5 +1364,8 @@
   "faq": 0.6,
   "cta": 1
  },
- "scene_gap": 2.2
+ "scene_gap": 2.2,
+ "style": "cinema",
+ "voice": "am_fenrir",
+ "speed": 1.0
 }

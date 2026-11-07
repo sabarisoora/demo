@@ -1,6 +1,6 @@
 import { renderStill, selectComposition } from "@remotion/renderer";
 import fs from "node:fs";
-const tl = JSON.parse(fs.readFileSync("home/aff/timeline.json"));
+const tl = JSON.parse(fs.readFileSync(process.env.TL || "home/aff/timeline.json"));
 const serveUrl = "build/aff-sb";
 const browserExecutable = "/opt/pw-browsers/chromium";
 const composition = await selectComposition({ serveUrl, id: "Aff", browserExecutable, inputProps: { audio: false }, chromiumOptions: { gl: "swangle" } });

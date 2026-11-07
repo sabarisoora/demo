@@ -2,7 +2,7 @@
 import { renderStill, selectComposition } from "@remotion/renderer";
 import fs from "node:fs";
 const tl = JSON.parse(fs.readFileSync("home/timeline.json"));
-const serveUrl = "build/home-bundle";
+const serveUrl = process.env.SB || "build/home-bundle";
 const browserExecutable = "/opt/pw-browsers/chromium";
 const composition = await selectComposition({ serveUrl, id: "Home", browserExecutable, inputProps: { audio: false } });
 const out = process.argv[2] || "build/home-board"; fs.mkdirSync(out, { recursive: true });

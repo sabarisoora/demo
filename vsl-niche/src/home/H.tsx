@@ -1,13 +1,15 @@
-import "@fontsource/poppins/600.css";
-import "@fontsource/poppins/700.css";
-import "@fontsource/poppins/800.css";
-import "@fontsource/playfair-display/700-italic.css";
+import "@fontsource/space-grotesk/500.css";
+import "@fontsource/space-grotesk/700.css";
+import "@fontsource/unbounded/700.css";
+import "@fontsource/unbounded/900.css";
+import "@fontsource/jetbrains-mono/700.css";
+import "@fontsource/anton/400.css";
 import React, { useEffect, useState } from "react";
 import { AbsoluteFill, Audio, continueRender, delayRender, staticFile, useCurrentFrame } from "remotion";
 import { lio, LINES, sceneEnd, sceneStart, SCENES } from "./lib";
 import { Blind, DataScene, Hook, Reveal } from "./S1";
 import { Box, Cta, End, Experts, Honest, How, Inside, Showroom, Wall } from "./S2";
-import { Bg, Captions, MARK, Wipes } from "./ui";
+import { Bg, Cam, Captions, MARK, Wipes } from "./ui";
 
 // accent words (gradient serif) per line
 const ACC: [string, string][] = [
@@ -30,7 +32,7 @@ const CAP_LINES = new Set(["A plumber", "A restaurant", "A dentist", "A trucker"
 const useFonts = () => {
   const [h] = useState(() => delayRender("fonts"));
   useEffect(() => {
-    Promise.all(["800 40px Poppins", "700 40px Poppins", "600 40px Poppins", "italic 700 40px 'Playfair Display'"].map((x) => document.fonts.load(x))).then(() => continueRender(h));
+    Promise.all(["700 40px 'Space Grotesk'", "500 40px 'Space Grotesk'", "900 40px Unbounded", "700 40px Unbounded", "700 40px 'JetBrains Mono'", "400 40px Anton"].map((x) => document.fonts.load(x))).then(() => continueRender(h));
   }, [h]);
 };
 
@@ -49,6 +51,7 @@ export const Home: React.FC<{ audio?: boolean }> = ({ audio = true }) => {
   return (
     <AbsoluteFill style={{ background: "#FFFFFF" }}>
       <Bg />
+      <Cam>
       <Only s="hook"><Hook /></Only>
       <Only s="blind"><Blind /></Only>
       <Only s="data"><DataScene /></Only>
@@ -61,6 +64,7 @@ export const Home: React.FC<{ audio?: boolean }> = ({ audio = true }) => {
       <Only s="honest"><Honest /></Only>
       <Only s="cta"><Cta /></Only>
       <Only s="end"><End /></Only>
+      </Cam>
       <Wipes />
       {showCap && <Captions />}
       {audio && <Audio src={staticFile("mix.wav")} />}
