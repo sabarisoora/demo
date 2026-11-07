@@ -76,7 +76,7 @@ export const Open: React.FC = () => {
       {/* 3D layer: floaters always, kit box from the drop */}
       <AbsoluteFill style={{ opacity: ap(fr, ls(L0) - 10, 20) }}>
         <Stage>
-          <Floaters fr={fr} />
+          <Floaters fr={fr} spread={1.18} />
           {fr >= drop - 16 && <KitBox open={openT} rotY={0.5 + Math.sin(fr / 60) * 0.12} y={-1.0 + boxIn} scale={0.95 * sq} />}
         </Stage>
       </AbsoluteFill>

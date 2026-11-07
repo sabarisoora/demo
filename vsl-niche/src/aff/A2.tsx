@@ -47,7 +47,7 @@ export const Money: React.FC = () => {
               })}
             </div>
             {/* labels (flat, readable) */}
-            <div style={{ position: "absolute", left: 0, right: 0, top: 860, display: "flex", justifyContent: "center", gap: 70 }}>
+            <div style={{ position: "absolute", left: 0, right: 0, top: 940, display: "flex", justifyContent: "center", gap: 70 }}>
               {PH.map((p, k) => (
                 <div key={k} style={{ width: 380, textAlign: "center", opacity: ap(fr, p.at + 4, 10) }}>
                   <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 38, color: C.ink }}>{p.label} · {p.pct}%</div>
@@ -171,7 +171,7 @@ export const Kit: React.FC = () => {
     <Phase a={ls(L50) - 6} b={le(L62) + 8}>
       <Top line={cur(fr, [L50, L51, L52, L53, L54, L54b, L55, L56, L57, L58, L59, L60, L61, L62])} size={44} y={92} />
       <AbsoluteFill style={{ opacity: 1 - ap(fr, le(L62) - 2, 10) * 0 }}>
-        <Stage cam={[0, 0, 9]}><KitBox open={open} rotY={0.35 + Math.sin(fr / 70) * 0.1} y={-2.2} scale={0.52} /></Stage>
+        <Stage cam={[0, 0, 9]}><KitBox open={open} rotY={0.35 + Math.sin(fr / 70) * 0.1} y={-2.4} scale={0.45} /></Stage>
       </AbsoluteFill>
       {fr >= ls(L51) - 4 && fr < ls(L52) - 2 && (
         <div style={{ position: "absolute", left: 0, right: 0, top: 300, display: "flex", justifyContent: "center", gap: 30 }}>
@@ -397,7 +397,7 @@ export const Cta: React.FC = () => {
   return (
     <Phase a={ls(L92) - 6} b={TOTAL + 20}>
       <AbsoluteFill>
-        <Stage><Floaters fr={fr} spread={1.05} />{fr < hit && <KitBox open={close} rotY={0.4 + Math.sin(fr / 60) * 0.1} y={-1.1} scale={0.8} bow={ap(fr, cf(L94, "chime"), 10)} />}</Stage>
+        <Stage><Floaters fr={fr} spread={1.2} />{fr < hit && <KitBox open={close} rotY={0.4 + Math.sin(fr / 60) * 0.1} y={-2.85} scale={0.5} bow={ap(fr, cf(L94, "chime"), 10)} />}</Stage>
       </AbsoluteFill>
       {fr < hit - 2 && (fr < ls(L93) - 4 ? <Mid line={L92} size={110} /> : <Top line={fr < ls(L94) - 4 ? L93 : L94} size={50} y={110} />)}
       {fr >= ls(L93) - 4 && fr < hit - 2 && (

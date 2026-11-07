@@ -64,8 +64,8 @@ export const KitBox: React.FC<{ open: number; rotY: number; rotX?: number; y?: n
 /** glossy pastel shapes drifting (decor) */
 export const Floaters: React.FC<{ fr: number; spread?: number }> = ({ fr, spread = 1 }) => {
   const items: [number, number, number, string, "torus" | "sphere" | "cap" | "ico"][] = [
-    [-5.2, 2.2, -2, "#C9CDD4", "torus"], [5.4, 2.4, -3, "#FF5E1A", "sphere"], [-5.6, -2.3, -2.5, "#111214", "ico"],
-    [5.0, -2.2, -2, "#FFB21E", "cap"], [0.4, 3.3, -5, "#D5D8DE", "ico"], [-1.8, -3.4, -4, "#FF5E1A", "torus"],
+    [-5.4, 0.9, -2, "#C9CDD4", "torus"], [5.6, 1.1, -3, "#FF5E1A", "sphere"], [-5.6, -2.3, -2.5, "#111214", "ico"],
+    [5.0, -2.2, -2, "#FFB21E", "cap"], [2.6, -3.4, -5, "#D5D8DE", "ico"], [-1.8, -3.4, -4, "#FF5E1A", "torus"],
   ];
   return (
     <>
