@@ -23,9 +23,9 @@ for ((A=0; A<TOTAL; A+=STEP)); do
   echo "chunk $A-$E done $(date -u +%H:%M)"; echo "file 'c$A.mp4'" >> $O/list.txt
 done
 # audio: AAC, verify true peak after encoding, step gain down if needed
-G=0.0
+G=2.8
 for try in 1 2 3 4; do
-  ffmpeg -y -hide_banner -loglevel error -i $SRC/mix.wav -af "volume=${G}dB,alimiter=limit=0.8:attack=1:release=50:level=false" -c:a aac -b:a 256k build/home-audio-$V.m4a
+  ffmpeg -y -hide_banner -loglevel error -i $SRC/mix.wav -af "volume=${G}dB,aresample=192000,alimiter=limit=0.74:attack=1:release=60:level=false,alimiter=limit=0.74:attack=0.1:release=20:level=false,aresample=48000" -c:a aac -b:a 256k build/home-audio-$V.m4a
   TP=$(ffmpeg -hide_banner -i build/home-audio-$V.m4a -af ebur128=peak=true -f null - 2>&1 | grep -E "^\s+Peak:" | tail -1 | awk '{print $2}')
   echo "audio try $try gain $G tp $TP"
   [ "$(python3 -c "print(1 if $TP <= -1.2 else 0)")" = 1 ] && break

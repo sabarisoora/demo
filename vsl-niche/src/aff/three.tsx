@@ -1,0 +1,89 @@
+import React, { useMemo } from "react";
+import { ThreeCanvas } from "@remotion/three";
+import * as THREE from "three";
+import { useCurrentFrame } from "remotion";
+
+// bright, low-contrast lighting so nothing shades toward dark
+const Lights: React.FC = () => (
+  <>
+    <ambientLight intensity={1.25} />
+    <hemisphereLight args={["#FFFFFF", "#F3E8FF", 1.1]} />
+    <directionalLight position={[3, 6, 6]} intensity={1.3} />
+    <pointLight position={[-4, 2, 4]} intensity={18} color="#FF7AC6" />
+    <pointLight position={[4, -1, 4]} intensity={14} color="#7DE3F4" />
+  </>
+);
+
+const roundedBox = (w: number, h: number, d: number, r: number) => {
+  const s = new THREE.Shape();
+  const x = -w / 2, y = -h / 2;
+  s.moveTo(x + r, y);
+  s.lineTo(x + w - r, y); s.quadraticCurveTo(x + w, y, x + w, y + r);
+  s.lineTo(x + w, y + h - r); s.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  s.lineTo(x + r, y + h); s.quadraticCurveTo(x, y + h, x, y + h - r);
+  s.lineTo(x, y + r); s.quadraticCurveTo(x, y, x + r, y);
+  const g = new THREE.ExtrudeGeometry(s, { depth: d - r * 2, bevelEnabled: true, bevelThickness: r, bevelSize: r, bevelSegments: 6, curveSegments: 10 });
+  g.translate(0, 0, -(d - r * 2) / 2);
+  return g;
+};
+
+const Glossy: React.FC<{ color: string; emissive?: string; ei?: number }> = ({ color, emissive, ei = 0.18 }) => (
+  <meshPhysicalMaterial color={color} roughness={0.22} metalness={0} clearcoat={1} clearcoatRoughness={0.15} emissive={emissive ?? color} emissiveIntensity={ei} />
+);
+
+/** the ProfitIQS kit box: pastel body, magenta ribbon, hinged lid. open 0..1 */
+export const KitBox: React.FC<{ open: number; rotY: number; rotX?: number; y?: number; scale?: number; bow?: number }> = ({ open, rotY, rotX = 0.62, y = 0, scale = 1, bow = 0 }) => {
+  const body = useMemo(() => roundedBox(3.2, 2.2, 2.4, 0.18), []);
+  const lid = useMemo(() => roundedBox(3.4, 0.42, 2.6, 0.12), []);
+  return (
+    <group position={[0, y, 0]} rotation={[rotX, rotY, 0]} scale={scale}>
+      <mesh geometry={body}><Glossy color="#EADFFF" /></mesh>
+      {/* ribbon on the body */}
+      <mesh position={[0, 0, 1.215]}><boxGeometry args={[0.42, 2.25, 0.03]} /><Glossy color="#FF6FBF" ei={0.25} /></mesh>
+      <mesh position={[1.615, 0, 0]}><boxGeometry args={[0.03, 2.25, 0.42]} /><Glossy color="#FF6FBF" ei={0.25} /></mesh>
+      {/* inner glow when open */}
+      <mesh position={[0, 1.125, 0]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[2.85, 2.0]} /><meshBasicMaterial color="#FFF3C4" transparent opacity={0.95 * open} /></mesh>
+      {/* lid hinged at the back top edge */}
+      <group position={[0, 1.1, -1.25]} rotation={[-open * 2.25, 0, 0]}>
+        <group position={[0, 0.21, 1.25]}>
+          <mesh geometry={lid}><Glossy color="#D9C8FF" /></mesh>
+          <mesh position={[0, 0.215, 0]}><boxGeometry args={[0.44, 0.02, 2.62]} /><Glossy color="#FF6FBF" ei={0.25} /></mesh>
+          {/* bow */}
+          <group position={[0, 0.3, 0]} scale={0.6 + 0.4 * (1 - open) + bow * 0.2}>
+            <mesh position={[-0.32, 0.12, 0]} rotation={[0, 0, 0.6]}><torusGeometry args={[0.28, 0.09, 16, 40]} /><Glossy color="#FF6FBF" ei={0.25} /></mesh>
+            <mesh position={[0.32, 0.12, 0]} rotation={[0, 0, -0.6]}><torusGeometry args={[0.28, 0.09, 16, 40]} /><Glossy color="#FF6FBF" ei={0.25} /></mesh>
+            <mesh position={[0, 0.06, 0]}><sphereGeometry args={[0.14, 24, 24]} /><Glossy color="#FF4FB0" ei={0.25} /></mesh>
+          </group>
+        </group>
+      </group>
+    </group>
+  );
+};
+
+/** glossy pastel shapes drifting (decor) */
+export const Floaters: React.FC<{ fr: number; spread?: number }> = ({ fr, spread = 1 }) => {
+  const items: [number, number, number, string, "torus" | "sphere" | "cap" | "ico"][] = [
+    [-5.2, 2.2, -2, "#FFC2E4", "torus"], [5.4, 2.4, -3, "#C9F4FB", "sphere"], [-5.6, -2.3, -2.5, "#DCCBFF", "sphere"],
+    [5.0, -2.2, -2, "#FFD6EC", "cap"], [0.4, 3.3, -5, "#E4D9FF", "sphere"], [-1.8, -3.4, -4, "#BFF0FA", "torus"],
+  ];
+  return (
+    <>
+      {items.map(([x, y, z, c, k], i) => (
+        <mesh key={i} position={[x * spread, y + Math.sin(fr / 40 + i) * 0.25, z]} rotation={[fr / (70 + i * 9), fr / (55 + i * 7), 0]}>
+          {k === "torus" ? <torusGeometry args={[0.55, 0.22, 32, 64]} /> : k === "sphere" ? <sphereGeometry args={[0.6, 40, 40]} /> : k === "cap" ? <capsuleGeometry args={[0.32, 0.8, 12, 24]} /> : <icosahedronGeometry args={[0.65, 1]} />}
+          <Glossy color={c} ei={0.3} />
+        </mesh>
+      ))}
+    </>
+  );
+};
+
+/** a full-frame transparent 3D layer */
+export const Stage: React.FC<{ children: React.ReactNode; cam?: [number, number, number]; fov?: number }> = ({ children, cam = [0, 0, 9], fov = 38 }) => (
+  <ThreeCanvas width={1920} height={1080} camera={{ position: cam, fov }} flat gl={{ alpha: true, antialias: true, premultipliedAlpha: false }} style={{ position: "absolute", inset: 0, background: "transparent" }}>
+    <Lights />
+    {children}
+  </ThreeCanvas>
+);
+
+export const useFr = () => useCurrentFrame();

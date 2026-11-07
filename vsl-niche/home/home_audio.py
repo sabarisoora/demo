@@ -8,7 +8,7 @@ from scipy.signal import lfilter, resample_poly
 BASE = os.path.dirname(os.path.abspath(__file__))
 MODEL = sys.argv[1]
 HERE = os.path.join(BASE, sys.argv[2]) if len(sys.argv) > 2 else BASE  # variant dir (e.g. home/short) with its own spec.json
-SPEC = json.load(open(f"{HERE}/spec.json"))["lines"]
+SPECD = json.load(open(f"{HERE}/spec.json")); SPEC = SPECD["lines"]
 VOICE, SPEED = "af_heart", 1.05
 START, GAP, SCENE_GAP, TAIL = 0.9, 0.42, 1.05, 4.5
 LEAD = 0.15  # picture + sfx land this much before the spoken word
@@ -47,6 +47,7 @@ def align(sub, say, a, sr, t0, d):
 # ---------- voice + timeline (cached: home/_vo.npz holds per-line audio keyed by the spoken text) ----------
 CACHE = f"{BASE}/_vo.npz"
 cache = dict(np.load(CACHE, allow_pickle=True)) if os.path.exists(CACHE) else {}
+SCENE_GAP = SPECD.get("scene_gap", SCENE_GAP)
 lines, t, prev = [], START, None
 for scene, sub, say, cues in SPEC:
     say = say or sub
@@ -137,10 +138,15 @@ def E(k_):
 drums = env([(0, 0), (E("hook"), 0), (E("blind") - 0.3, 0.0), (E("blind"), 0.45), (E("reveal") - 0.2, 0.45), (E("reveal") + 0.3, 1), (E("how") - 0.3, 1), (E("how"), 0.55), (E("cta") - 0.3, 0.55), (E("cta"), 1), (T - 3.5, 1), (T - 1.0, 0), (T, 0)])
 plucks = env([(0, 0.55), (E("blind"), 0.7), (E("reveal"), 1), (T - 2, 1), (T, 0)])
 pads = env([(0, 0), (0.4, 1), (T - 1, 1), (T, 0)])
+if "drums" in SPECD:  # per-scene drum level, e.g. {"open": 0.3, "what": 1, ...}
+    pts = [(0, 0)]
+    for sc_, st_ in S.items():
+        lv = SPECD["drums"].get(sc_, 1.0); pts += [(st_ - 0.35, pts[-1][1]), (st_ + 0.1, lv)]
+    drums = env(pts + [(T - 3.0, pts[-1][1]), (T - 0.8, 0), (T, 0)])
 music = pad * pads + pluck * plucks + bell * pads + (kick + clap + shk + bass) * drums
 # soft clock tick bed under the hook
 tick_bed = np.zeros(N)
-for kq in range(int((E("blind") - 0.5) / (b))):
+for kq in range(int((E("blind") - 0.5) / (b)) if "drums" not in SPECD else 0):
     t4 = TT(0.03); put(tick_bed, hp(rng.standard_normal(len(t4)), 0.6) * np.exp(-t4 * 140) * (0.05 if kq % 2 else 0.03), 0.4 + kq * b)
 music += tick_bed
 speech = np.zeros(N)

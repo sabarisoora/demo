@@ -1,0 +1,7566 @@
+{
+ "duration": 601.837,
+ "lead": 0.15,
+ "lines": [
+  {
+   "scene": "open",
+   "sub": "If you've ever promoted an affiliate product, you know the problem.",
+   "start": 0.9,
+   "end": 4.262,
+   "words": [
+    {
+     "w": "If",
+     "s": 0.9
+    },
+    {
+     "w": "you've",
+     "s": 1.0
+    },
+    {
+     "w": "ever",
+     "s": 1.2
+    },
+    {
+     "w": "promoted",
+     "s": 1.44
+    },
+    {
+     "w": "an",
+     "s": 1.82
+    },
+    {
+     "w": "affiliate",
+     "s": 2.04
+    },
+    {
+     "w": "product,",
+     "s": 2.2
+    },
+    {
+     "w": "you",
+     "s": 3.28
+    },
+    {
+     "w": "know",
+     "s": 3.38
+    },
+    {
+     "w": "the",
+     "s": 3.52
+    },
+    {
+     "w": "problem.",
+     "s": 3.68
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "affiliate"
+    ]
+   ]
+  },
+  {
+   "scene": "open",
+   "sub": "Half the offers are hype. Fake screenshots. Income claims you'd never say out loud.",
+   "start": 4.682,
+   "end": 9.6,
+   "words": [
+    {
+     "w": "Half",
+     "s": 4.682
+    },
+    {
+     "w": "the",
+     "s": 4.822
+    },
+    {
+     "w": "offers",
+     "s": 4.962
+    },
+    {
+     "w": "are",
+     "s": 5.162
+    },
+    {
+     "w": "hype.",
+     "s": 5.422
+    },
+    {
+     "w": "Fake",
+     "s": 6.262
+    },
+    {
+     "w": "screenshots.",
+     "s": 6.292
+    },
+    {
+     "w": "Income",
+     "s": 7.602
+    },
+    {
+     "w": "claims",
+     "s": 7.662
+    },
+    {
+     "w": "you'd",
+     "s": 8.142
+    },
+    {
+     "w": "never",
+     "s": 8.422
+    },
+    {
+     "w": "say",
+     "s": 8.642
+    },
+    {
+     "w": "out",
+     "s": 8.882
+    },
+    {
+     "w": "loud.",
+     "s": 9.062
+    }
+   ],
+   "cues": [
+    [
+     "stamp",
+     "hype."
+    ],
+    [
+     "stamp",
+     "Fake"
+    ],
+    [
+     "stamp",
+     "Income"
+    ]
+   ]
+  },
+  {
+   "scene": "open",
+   "sub": "And when you finally find a good product, there's nothing real to promote it with.",
+   "start": 10.02,
+   "end": 13.98,
+   "words": [
+    {
+     "w": "And",
+     "s": 10.02
+    },
+    {
+     "w": "when",
+     "s": 10.1
+    },
+    {
+     "w": "you",
+     "s": 10.22
+    },
+    {
+     "w": "finally",
+     "s": 10.34
+    },
+    {
+     "w": "find",
+     "s": 10.7
+    },
+    {
+     "w": "a",
+     "s": 11.06
+    },
+    {
+     "w": "good",
+     "s": 11.18
+    },
+    {
+     "w": "product,",
+     "s": 11.3
+    },
+    {
+     "w": "there's",
+     "s": 12.12
+    },
+    {
+     "w": "nothing",
+     "s": 12.36
+    },
+    {
+     "w": "real",
+     "s": 12.62
+    },
+    {
+     "w": "to",
+     "s": 12.92
+    },
+    {
+     "w": "promote",
+     "s": 13.18
+    },
+    {
+     "w": "it",
+     "s": 13.46
+    },
+    {
+     "w": "with.",
+     "s": 13.66
+    }
+   ],
+   "cues": [
+    [
+     "glitch",
+     "nothing"
+    ]
+   ]
+  },
+  {
+   "scene": "open",
+   "sub": "This is the opposite.",
+   "start": 14.4,
+   "end": 15.631,
+   "words": [
+    {
+     "w": "This",
+     "s": 14.4
+    },
+    {
+     "w": "is",
+     "s": 14.58
+    },
+    {
+     "w": "the",
+     "s": 14.74
+    },
+    {
+     "w": "opposite.",
+     "s": 14.9
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "opposite."
+    ]
+   ]
+  },
+  {
+   "scene": "open",
+   "sub": "A real product, built for real industries, with a full kit for every one of them, written from the actual product files.",
+   "start": 16.051,
+   "end": 22.961,
+   "words": [
+    {
+     "w": "A",
+     "s": 16.051
+    },
+    {
+     "w": "real",
+     "s": 16.111
+    },
+    {
+     "w": "product,",
+     "s": 16.271
+    },
+    {
+     "w": "built",
+     "s": 17.171
+    },
+    {
+     "w": "for",
+     "s": 17.291
+    },
+    {
+     "w": "real",
+     "s": 17.491
+    },
+    {
+     "w": "industries,",
+     "s": 17.751
+    },
+    {
+     "w": "with",
+     "s": 18.851
+    },
+    {
+     "w": "a",
+     "s": 18.991
+    },
+    {
+     "w": "full",
+     "s": 19.071
+    },
+    {
+     "w": "kit",
+     "s": 19.311
+    },
+    {
+     "w": "for",
+     "s": 19.631
+    },
+    {
+     "w": "every",
+     "s": 19.831
+    },
+    {
+     "w": "one",
+     "s": 20.091
+    },
+    {
+     "w": "of",
+     "s": 20.371
+    },
+    {
+     "w": "them,",
+     "s": 20.451
+    },
+    {
+     "w": "written",
+     "s": 20.891
+    },
+    {
+     "w": "from",
+     "s": 21.111
+    },
+    {
+     "w": "the",
+     "s": 21.411
+    },
+    {
+     "w": "actual",
+     "s": 21.531
+    },
+    {
+     "w": "product",
+     "s": 21.851
+    },
+    {
+     "w": "files.",
+     "s": 22.211
+    }
+   ],
+   "cues": [
+    [
+     "impact",
+     "kit"
+    ]
+   ]
+  },
+  {
+   "scene": "open",
+   "sub": "Let me open the box.",
+   "start": 23.381,
+   "end": 24.567,
+   "words": [
+    {
+     "w": "Let",
+     "s": 23.381
+    },
+    {
+     "w": "me",
+     "s": 23.481
+    },
+    {
+     "w": "open",
+     "s": 23.561
+    },
+    {
+     "w": "the",
+     "s": 23.821
+    },
+    {
+     "w": "box.",
+     "s": 23.941
+    }
+   ],
+   "cues": [
+    [
+     "doors",
+     "open"
+    ],
+    [
+     "chime",
+     "box."
+    ]
+   ]
+  },
+  {
+   "scene": "what",
+   "sub": "ProfitIQS makes business intelligence systems in Excel, each one built for one industry.",
+   "start": 26.767,
+   "end": 32.595,
+   "words": [
+    {
+     "w": "ProfitIQS",
+     "s": 26.767
+    },
+    {
+     "w": "makes",
+     "s": 27.747
+    },
+    {
+     "w": "business",
+     "s": 28.087
+    },
+    {
+     "w": "intelligence",
+     "s": 28.447
+    },
+    {
+     "w": "systems",
+     "s": 28.807
+    },
+    {
+     "w": "in",
+     "s": 29.507
+    },
+    {
+     "w": "Excel,",
+     "s": 29.807
+    },
+    {
+     "w": "each",
+     "s": 30.687
+    },
+    {
+     "w": "one",
+     "s": 31.007
+    },
+    {
+     "w": "built",
+     "s": 31.207
+    },
+    {
+     "w": "for",
+     "s": 31.447
+    },
+    {
+     "w": "one",
+     "s": 31.687
+    },
+    {
+     "w": "industry.",
+     "s": 31.867
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Excel,"
+    ],
+    [
+     "pop",
+     "industry."
+    ]
+   ]
+  },
+  {
+   "scene": "what",
+   "sub": "Twenty-one industries. Three editions each. Sixty-three products in total.",
+   "start": 33.015,
+   "end": 37.447,
+   "words": [
+    {
+     "w": "Twenty-one",
+     "s": 33.015
+    },
+    {
+     "w": "industries.",
+     "s": 33.435
+    },
+    {
+     "w": "Three",
+     "s": 34.455
+    },
+    {
+     "w": "editions",
+     "s": 34.555
+    },
+    {
+     "w": "each.",
+     "s": 34.835
+    },
+    {
+     "w": "Sixty-three",
+     "s": 35.595
+    },
+    {
+     "w": "products",
+     "s": 36.355
+    },
+    {
+     "w": "in",
+     "s": 36.675
+    },
+    {
+     "w": "total.",
+     "s": 36.915
+    }
+   ],
+   "cues": [
+    [
+     "count",
+     "Twenty-one"
+    ],
+    [
+     "pop",
+     "Three"
+    ],
+    [
+     "count",
+     "Sixty-three"
+    ]
+   ]
+  },
+  {
+   "scene": "what",
+   "sub": "Every product is a ready-built workbook: dashboards, reports, and a tax set-aside estimate, already built in.",
+   "start": 37.867,
+   "end": 44.405,
+   "words": [
+    {
+     "w": "Every",
+     "s": 37.867
+    },
+    {
+     "w": "product",
+     "s": 38.047
+    },
+    {
+     "w": "is",
+     "s": 38.367
+    },
+    {
+     "w": "a",
+     "s": 38.627
+    },
+    {
+     "w": "ready-built",
+     "s": 38.947
+    },
+    {
+     "w": "workbook:",
+     "s": 39.267
+    },
+    {
+     "w": "dashboards,",
+     "s": 40.187
+    },
+    {
+     "w": "reports,",
+     "s": 41.067
+    },
+    {
+     "w": "and",
+     "s": 41.727
+    },
+    {
+     "w": "a",
+     "s": 41.807
+    },
+    {
+     "w": "tax",
+     "s": 41.887
+    },
+    {
+     "w": "set-aside",
+     "s": 42.337
+    },
+    {
+     "w": "estimate,",
+     "s": 42.787
+    },
+    {
+     "w": "already",
+     "s": 43.527
+    },
+    {
+     "w": "built",
+     "s": 43.687
+    },
+    {
+     "w": "in.",
+     "s": 44.027
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "dashboards,"
+    ],
+    [
+     "pop",
+     "reports,"
+    ],
+    [
+     "pop",
+     "tax"
+    ]
+   ]
+  },
+  {
+   "scene": "what",
+   "sub": "The owner enters their own numbers. The formulas do the rest.",
+   "start": 44.825,
+   "end": 48.222,
+   "words": [
+    {
+     "w": "The",
+     "s": 44.825
+    },
+    {
+     "w": "owner",
+     "s": 44.885
+    },
+    {
+     "w": "enters",
+     "s": 45.105
+    },
+    {
+     "w": "their",
+     "s": 45.465
+    },
+    {
+     "w": "own",
+     "s": 45.745
+    },
+    {
+     "w": "numbers.",
+     "s": 45.965
+    },
+    {
+     "w": "The",
+     "s": 46.845
+    },
+    {
+     "w": "formulas",
+     "s": 46.905
+    },
+    {
+     "w": "do",
+     "s": 47.205
+    },
+    {
+     "w": "the",
+     "s": 47.585
+    },
+    {
+     "w": "rest.",
+     "s": 47.705
+    }
+   ],
+   "cues": [
+    [
+     "type",
+     "enters"
+    ],
+    [
+     "ding",
+     "rest."
+    ]
+   ]
+  },
+  {
+   "scene": "what",
+   "sub": "It ships with sample data, so every dashboard works the moment it's opened.",
+   "start": 48.642,
+   "end": 52.712,
+   "words": [
+    {
+     "w": "It",
+     "s": 48.642
+    },
+    {
+     "w": "ships",
+     "s": 48.722
+    },
+    {
+     "w": "with",
+     "s": 48.862
+    },
+    {
+     "w": "sample",
+     "s": 49.162
+    },
+    {
+     "w": "data,",
+     "s": 49.382
+    },
+    {
+     "w": "so",
+     "s": 50.242
+    },
+    {
+     "w": "every",
+     "s": 50.422
+    },
+    {
+     "w": "dashboard",
+     "s": 50.662
+    },
+    {
+     "w": "works",
+     "s": 51.222
+    },
+    {
+     "w": "the",
+     "s": 51.482
+    },
+    {
+     "w": "moment",
+     "s": 51.722
+    },
+    {
+     "w": "it's",
+     "s": 51.942
+    },
+    {
+     "w": "opened.",
+     "s": 52.162
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "sample"
+    ]
+   ]
+  },
+  {
+   "scene": "what",
+   "sub": "And every edition includes a Quick Start and a full Field Guide.",
+   "start": 53.132,
+   "end": 56.634,
+   "words": [
+    {
+     "w": "And",
+     "s": 53.132
+    },
+    {
+     "w": "every",
+     "s": 53.232
+    },
+    {
+     "w": "edition",
+     "s": 53.452
+    },
+    {
+     "w": "includes",
+     "s": 53.832
+    },
+    {
+     "w": "a",
+     "s": 54.312
+    },
+    {
+     "w": "Quick",
+     "s": 54.512
+    },
+    {
+     "w": "Start",
+     "s": 54.672
+    },
+    {
+     "w": "and",
+     "s": 54.972
+    },
+    {
+     "w": "a",
+     "s": 55.512
+    },
+    {
+     "w": "full",
+     "s": 55.592
+    },
+    {
+     "w": "Field",
+     "s": 55.792
+    },
+    {
+     "w": "Guide.",
+     "s": 56.032
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Quick"
+    ],
+    [
+     "pop",
+     "Field"
+    ]
+   ]
+  },
+  {
+   "scene": "what",
+   "sub": "It's built for owners who are experts in their trade, not in spreadsheets.",
+   "start": 57.054,
+   "end": 60.685,
+   "words": [
+    {
+     "w": "It's",
+     "s": 57.054
+    },
+    {
+     "w": "built",
+     "s": 57.194
+    },
+    {
+     "w": "for",
+     "s": 57.374
+    },
+    {
+     "w": "owners",
+     "s": 57.594
+    },
+    {
+     "w": "who",
+     "s": 57.894
+    },
+    {
+     "w": "are",
+     "s": 58.134
+    },
+    {
+     "w": "experts",
+     "s": 58.234
+    },
+    {
+     "w": "in",
+     "s": 58.534
+    },
+    {
+     "w": "their",
+     "s": 58.834
+    },
+    {
+     "w": "trade,",
+     "s": 58.934
+    },
+    {
+     "w": "not",
+     "s": 59.594
+    },
+    {
+     "w": "in",
+     "s": 59.754
+    },
+    {
+     "w": "spreadsheets.",
+     "s": 59.874
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "trade,"
+    ]
+   ]
+  },
+  {
+   "scene": "what",
+   "sub": "Essential is ninety-seven dollars. Elite, one ninety-seven. Complete, both editions, two forty-nine.",
+   "start": 61.105,
+   "end": 67.543,
+   "words": [
+    {
+     "w": "Essential",
+     "s": 61.105
+    },
+    {
+     "w": "is",
+     "s": 61.445
+    },
+    {
+     "w": "ninety-seven",
+     "s": 61.885
+    },
+    {
+     "w": "dollars.",
+     "s": 62.325
+    },
+    {
+     "w": "Elite,",
+     "s": 63.485
+    },
+    {
+     "w": "one",
+     "s": 63.865
+    },
+    {
+     "w": "ninety-seven.",
+     "s": 64.425
+    },
+    {
+     "w": "Complete,",
+     "s": 64.985
+    },
+    {
+     "w": "both",
+     "s": 65.685
+    },
+    {
+     "w": "editions,",
+     "s": 65.805
+    },
+    {
+     "w": "two",
+     "s": 66.705
+    },
+    {
+     "w": "forty-nine.",
+     "s": 67.124
+    }
+   ],
+   "cues": [
+    [
+     "cash",
+     "ninety-seven"
+    ],
+    [
+     "cash",
+     "ninety-seven."
+    ],
+    [
+     "cash",
+     "forty-nine."
+    ]
+   ]
+  },
+  {
+   "scene": "what",
+   "sub": "One payment. No subscription. It runs in the desktop version of Microsoft Excel.",
+   "start": 67.963,
+   "end": 73.251,
+   "words": [
+    {
+     "w": "One",
+     "s": 67.963
+    },
+    {
+     "w": "payment.",
+     "s": 68.123
+    },
+    {
+     "w": "No",
+     "s": 69.103
+    },
+    {
+     "w": "subscription.",
+     "s": 69.133
+    },
+    {
+     "w": "It",
+     "s": 70.343
+    },
+    {
+     "w": "runs",
+     "s": 70.403
+    },
+    {
+     "w": "in",
+     "s": 70.603
+    },
+    {
+     "w": "the",
+     "s": 70.883
+    },
+    {
+     "w": "desktop",
+     "s": 70.963
+    },
+    {
+     "w": "version",
+     "s": 71.203
+    },
+    {
+     "w": "of",
+     "s": 71.823
+    },
+    {
+     "w": "Microsoft",
+     "s": 72.063
+    },
+    {
+     "w": "Excel.",
+     "s": 72.303
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "One"
+    ],
+    [
+     "stamp",
+     "No"
+    ],
+    [
+     "pop",
+     "desktop"
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "Here's why owners actually want this.",
+   "start": 75.451,
+   "end": 77.393,
+   "words": [
+    {
+     "w": "Here's",
+     "s": 75.451
+    },
+    {
+     "w": "why",
+     "s": 75.711
+    },
+    {
+     "w": "owners",
+     "s": 75.871
+    },
+    {
+     "w": "actually",
+     "s": 76.171
+    },
+    {
+     "w": "want",
+     "s": 76.651
+    },
+    {
+     "w": "this.",
+     "s": 76.951
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "why"
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "Small-business owners are busy every day, and still not sure what they kept.",
+   "start": 77.813,
+   "end": 81.816,
+   "words": [
+    {
+     "w": "Small-business",
+     "s": 77.813
+    },
+    {
+     "w": "owners",
+     "s": 78.293
+    },
+    {
+     "w": "are",
+     "s": 78.613
+    },
+    {
+     "w": "busy",
+     "s": 78.993
+    },
+    {
+     "w": "every",
+     "s": 79.173
+    },
+    {
+     "w": "day,",
+     "s": 79.513
+    },
+    {
+     "w": "and",
+     "s": 80.273
+    },
+    {
+     "w": "still",
+     "s": 80.333
+    },
+    {
+     "w": "not",
+     "s": 80.553
+    },
+    {
+     "w": "sure",
+     "s": 80.813
+    },
+    {
+     "w": "what",
+     "s": 81.013
+    },
+    {
+     "w": "they",
+     "s": 81.213
+    },
+    {
+     "w": "kept.",
+     "s": 81.333
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "busy"
+    ],
+    [
+     "hit",
+     "kept."
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "The data exists, in invoices, receipts, bank statements and apps, but it's never in one place.",
+   "start": 82.236,
+   "end": 87.742,
+   "words": [
+    {
+     "w": "The",
+     "s": 82.236
+    },
+    {
+     "w": "data",
+     "s": 82.316
+    },
+    {
+     "w": "exists,",
+     "s": 82.436
+    },
+    {
+     "w": "in",
+     "s": 83.036
+    },
+    {
+     "w": "invoices,",
+     "s": 83.396
+    },
+    {
+     "w": "receipts,",
+     "s": 84.156
+    },
+    {
+     "w": "bank",
+     "s": 84.856
+    },
+    {
+     "w": "statements",
+     "s": 84.896
+    },
+    {
+     "w": "and",
+     "s": 85.316
+    },
+    {
+     "w": "apps,",
+     "s": 85.596
+    },
+    {
+     "w": "but",
+     "s": 86.256
+    },
+    {
+     "w": "it's",
+     "s": 86.416
+    },
+    {
+     "w": "never",
+     "s": 86.576
+    },
+    {
+     "w": "in",
+     "s": 86.756
+    },
+    {
+     "w": "one",
+     "s": 87.016
+    },
+    {
+     "w": "place.",
+     "s": 87.156
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "invoices,"
+    ],
+    [
+     "pop",
+     "receipts,"
+    ],
+    [
+     "pop",
+     "bank"
+    ],
+    [
+     "pop",
+     "apps,"
+    ],
+    [
+     "glitch",
+     "never"
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "So a plumber can't see which callbacks are eating the margin.",
+   "start": 88.162,
+   "end": 91.076,
+   "words": [
+    {
+     "w": "So",
+     "s": 88.162
+    },
+    {
+     "w": "a",
+     "s": 88.282
+    },
+    {
+     "w": "plumber",
+     "s": 88.342
+    },
+    {
+     "w": "can't",
+     "s": 88.622
+    },
+    {
+     "w": "see",
+     "s": 89.062
+    },
+    {
+     "w": "which",
+     "s": 89.202
+    },
+    {
+     "w": "callbacks",
+     "s": 89.342
+    },
+    {
+     "w": "are",
+     "s": 89.842
+    },
+    {
+     "w": "eating",
+     "s": 90.042
+    },
+    {
+     "w": "the",
+     "s": 90.262
+    },
+    {
+     "w": "margin.",
+     "s": 90.482
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "plumber"
+    ],
+    [
+     "pop",
+     "callbacks"
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "ProfitIQS gives him a Callback Tracker, and a Job Profitability Center.",
+   "start": 91.496,
+   "end": 95.911,
+   "words": [
+    {
+     "w": "ProfitIQS",
+     "s": 91.496
+    },
+    {
+     "w": "gives",
+     "s": 92.396
+    },
+    {
+     "w": "him",
+     "s": 92.656
+    },
+    {
+     "w": "a",
+     "s": 92.876
+    },
+    {
+     "w": "Callback",
+     "s": 92.956
+    },
+    {
+     "w": "Tracker,",
+     "s": 93.336
+    },
+    {
+     "w": "and",
+     "s": 94.216
+    },
+    {
+     "w": "a",
+     "s": 94.276
+    },
+    {
+     "w": "Job",
+     "s": 94.356
+    },
+    {
+     "w": "Profitability",
+     "s": 94.596
+    },
+    {
+     "w": "Center.",
+     "s": 95.196
+    }
+   ],
+   "cues": [
+    [
+     "sparkle",
+     "gives"
+    ],
+    [
+     "pop",
+     "Callback"
+    ],
+    [
+     "pop",
+     "Job"
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "A restaurant owner doesn't know where prime cost landed.",
+   "start": 96.331,
+   "end": 99.333,
+   "words": [
+    {
+     "w": "A",
+     "s": 96.331
+    },
+    {
+     "w": "restaurant",
+     "s": 96.391
+    },
+    {
+     "w": "owner",
+     "s": 96.611
+    },
+    {
+     "w": "doesn't",
+     "s": 97.071
+    },
+    {
+     "w": "know",
+     "s": 97.691
+    },
+    {
+     "w": "where",
+     "s": 97.851
+    },
+    {
+     "w": "prime",
+     "s": 98.011
+    },
+    {
+     "w": "cost",
+     "s": 98.191
+    },
+    {
+     "w": "landed.",
+     "s": 98.591
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "restaurant"
+    ],
+    [
+     "pop",
+     "prime"
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "ProfitIQS gives her a Prime Cost Center, and Menu Intelligence for every dish.",
+   "start": 99.753,
+   "end": 104.689,
+   "words": [
+    {
+     "w": "ProfitIQS",
+     "s": 99.753
+    },
+    {
+     "w": "gives",
+     "s": 100.653
+    },
+    {
+     "w": "her",
+     "s": 101.013
+    },
+    {
+     "w": "a",
+     "s": 101.233
+    },
+    {
+     "w": "Prime",
+     "s": 101.333
+    },
+    {
+     "w": "Cost",
+     "s": 101.573
+    },
+    {
+     "w": "Center,",
+     "s": 101.833
+    },
+    {
+     "w": "and",
+     "s": 102.753
+    },
+    {
+     "w": "Menu",
+     "s": 102.793
+    },
+    {
+     "w": "Intelligence",
+     "s": 103.033
+    },
+    {
+     "w": "for",
+     "s": 103.393
+    },
+    {
+     "w": "every",
+     "s": 103.853
+    },
+    {
+     "w": "dish.",
+     "s": 104.053
+    }
+   ],
+   "cues": [
+    [
+     "sparkle",
+     "gives"
+    ],
+    [
+     "pop",
+     "Prime"
+    ],
+    [
+     "pop",
+     "Menu"
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "A landlord can't tell which property is dragging the portfolio down.",
+   "start": 105.109,
+   "end": 108.676,
+   "words": [
+    {
+     "w": "A",
+     "s": 105.109
+    },
+    {
+     "w": "landlord",
+     "s": 105.169
+    },
+    {
+     "w": "can't",
+     "s": 105.409
+    },
+    {
+     "w": "tell",
+     "s": 105.989
+    },
+    {
+     "w": "which",
+     "s": 106.149
+    },
+    {
+     "w": "property",
+     "s": 106.329
+    },
+    {
+     "w": "is",
+     "s": 106.689
+    },
+    {
+     "w": "dragging",
+     "s": 106.989
+    },
+    {
+     "w": "the",
+     "s": 107.269
+    },
+    {
+     "w": "portfolio",
+     "s": 107.549
+    },
+    {
+     "w": "down.",
+     "s": 107.909
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "landlord"
+    ],
+    [
+     "pop",
+     "dragging"
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "ProfitIQS gives him cap rate, cash-on-cash and DSCR, property by property.",
+   "start": 109.096,
+   "end": 114.481,
+   "words": [
+    {
+     "w": "ProfitIQS",
+     "s": 109.096
+    },
+    {
+     "w": "gives",
+     "s": 109.836
+    },
+    {
+     "w": "him",
+     "s": 110.036
+    },
+    {
+     "w": "cap",
+     "s": 110.196
+    },
+    {
+     "w": "rate,",
+     "s": 110.376
+    },
+    {
+     "w": "cash-on-cash",
+     "s": 111.036
+    },
+    {
+     "w": "and",
+     "s": 111.696
+    },
+    {
+     "w": "DSCR,",
+     "s": 112.516
+    },
+    {
+     "w": "property",
+     "s": 113.336
+    },
+    {
+     "w": "by",
+     "s": 113.456
+    },
+    {
+     "w": "property.",
+     "s": 113.836
+    }
+   ],
+   "cues": [
+    [
+     "sparkle",
+     "gives"
+    ],
+    [
+     "pop",
+     "cap"
+    ],
+    [
+     "pop",
+     "cash-on-cash"
+    ],
+    [
+     "pop",
+     "DSCR,"
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "A dental practice presents treatment that never gets accepted.",
+   "start": 114.901,
+   "end": 118.245,
+   "words": [
+    {
+     "w": "A",
+     "s": 114.901
+    },
+    {
+     "w": "dental",
+     "s": 114.961
+    },
+    {
+     "w": "practice",
+     "s": 115.141
+    },
+    {
+     "w": "presents",
+     "s": 115.641
+    },
+    {
+     "w": "treatment",
+     "s": 115.981
+    },
+    {
+     "w": "that",
+     "s": 116.461
+    },
+    {
+     "w": "never",
+     "s": 117.021
+    },
+    {
+     "w": "gets",
+     "s": 117.241
+    },
+    {
+     "w": "accepted.",
+     "s": 117.481
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "dental"
+    ],
+    [
+     "pop",
+     "never"
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "ProfitIQS gives it a Case Acceptance Center, a Recall Tracker, and provider productivity.",
+   "start": 118.665,
+   "end": 124.173,
+   "words": [
+    {
+     "w": "ProfitIQS",
+     "s": 118.665
+    },
+    {
+     "w": "gives",
+     "s": 119.565
+    },
+    {
+     "w": "it",
+     "s": 119.885
+    },
+    {
+     "w": "a",
+     "s": 120.085
+    },
+    {
+     "w": "Case",
+     "s": 120.165
+    },
+    {
+     "w": "Acceptance",
+     "s": 120.345
+    },
+    {
+     "w": "Center,",
+     "s": 120.925
+    },
+    {
+     "w": "a",
+     "s": 121.685
+    },
+    {
+     "w": "Recall",
+     "s": 121.765
+    },
+    {
+     "w": "Tracker,",
+     "s": 121.945
+    },
+    {
+     "w": "and",
+     "s": 122.845
+    },
+    {
+     "w": "provider",
+     "s": 122.905
+    },
+    {
+     "w": "productivity.",
+     "s": 123.165
+    }
+   ],
+   "cues": [
+    [
+     "sparkle",
+     "gives"
+    ],
+    [
+     "pop",
+     "Case"
+    ],
+    [
+     "pop",
+     "Recall"
+    ],
+    [
+     "pop",
+     "provider"
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "And an owner-operator puts on busy miles, and still isn't sure which loads actually paid.",
+   "start": 124.593,
+   "end": 129.515,
+   "words": [
+    {
+     "w": "And",
+     "s": 124.593
+    },
+    {
+     "w": "an",
+     "s": 124.673
+    },
+    {
+     "w": "owner-operator",
+     "s": 125.003
+    },
+    {
+     "w": "puts",
+     "s": 125.333
+    },
+    {
+     "w": "on",
+     "s": 125.713
+    },
+    {
+     "w": "busy",
+     "s": 125.893
+    },
+    {
+     "w": "miles,",
+     "s": 126.073
+    },
+    {
+     "w": "and",
+     "s": 127.093
+    },
+    {
+     "w": "still",
+     "s": 127.193
+    },
+    {
+     "w": "isn't",
+     "s": 127.413
+    },
+    {
+     "w": "sure",
+     "s": 127.753
+    },
+    {
+     "w": "which",
+     "s": 127.893
+    },
+    {
+     "w": "loads",
+     "s": 128.133
+    },
+    {
+     "w": "actually",
+     "s": 128.333
+    },
+    {
+     "w": "paid.",
+     "s": 128.833
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "owner-operator"
+    ],
+    [
+     "pop",
+     "loads"
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "ProfitIQS gives him profit on every load, and his real cost per mile.",
+   "start": 129.935,
+   "end": 134.299,
+   "words": [
+    {
+     "w": "ProfitIQS",
+     "s": 129.935
+    },
+    {
+     "w": "gives",
+     "s": 130.755
+    },
+    {
+     "w": "him",
+     "s": 131.015
+    },
+    {
+     "w": "profit",
+     "s": 131.195
+    },
+    {
+     "w": "on",
+     "s": 131.475
+    },
+    {
+     "w": "every",
+     "s": 131.735
+    },
+    {
+     "w": "load,",
+     "s": 131.915
+    },
+    {
+     "w": "and",
+     "s": 132.715
+    },
+    {
+     "w": "his",
+     "s": 132.875
+    },
+    {
+     "w": "real",
+     "s": 132.995
+    },
+    {
+     "w": "cost",
+     "s": 133.195
+    },
+    {
+     "w": "per",
+     "s": 133.575
+    },
+    {
+     "w": "mile.",
+     "s": 133.815
+    }
+   ],
+   "cues": [
+    [
+     "sparkle",
+     "gives"
+    ],
+    [
+     "pop",
+     "profit"
+    ],
+    [
+     "pop",
+     "cost"
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "That's the pattern across all twenty-one industries: a real problem the owner already feels, and a real sheet that answers it.",
+   "start": 134.719,
+   "end": 141.862,
+   "words": [
+    {
+     "w": "That's",
+     "s": 134.719
+    },
+    {
+     "w": "the",
+     "s": 134.919
+    },
+    {
+     "w": "pattern",
+     "s": 134.999
+    },
+    {
+     "w": "across",
+     "s": 135.319
+    },
+    {
+     "w": "all",
+     "s": 135.579
+    },
+    {
+     "w": "twenty-one",
+     "s": 136.099
+    },
+    {
+     "w": "industries:",
+     "s": 136.619
+    },
+    {
+     "w": "a",
+     "s": 137.819
+    },
+    {
+     "w": "real",
+     "s": 137.849
+    },
+    {
+     "w": "problem",
+     "s": 138.019
+    },
+    {
+     "w": "the",
+     "s": 138.479
+    },
+    {
+     "w": "owner",
+     "s": 138.699
+    },
+    {
+     "w": "already",
+     "s": 138.919
+    },
+    {
+     "w": "feels,",
+     "s": 139.339
+    },
+    {
+     "w": "and",
+     "s": 140.219
+    },
+    {
+     "w": "a",
+     "s": 140.319
+    },
+    {
+     "w": "real",
+     "s": 140.399
+    },
+    {
+     "w": "sheet",
+     "s": 140.599
+    },
+    {
+     "w": "that",
+     "s": 140.959
+    },
+    {
+     "w": "answers",
+     "s": 141.219
+    },
+    {
+     "w": "it.",
+     "s": 141.459
+    }
+   ],
+   "cues": [
+    [
+     "chime",
+     "pattern"
+    ]
+   ]
+  },
+  {
+   "scene": "problem",
+   "sub": "Which matters to you, because problems like these are what people actually stop scrolling for.",
+   "start": 142.282,
+   "end": 147.176,
+   "words": [
+    {
+     "w": "Which",
+     "s": 142.282
+    },
+    {
+     "w": "matters",
+     "s": 142.422
+    },
+    {
+     "w": "to",
+     "s": 142.622
+    },
+    {
+     "w": "you,",
+     "s": 143.002
+    },
+    {
+     "w": "because",
+     "s": 143.542
+    },
+    {
+     "w": "problems",
+     "s": 143.762
+    },
+    {
+     "w": "like",
+     "s": 144.122
+    },
+    {
+     "w": "these",
+     "s": 144.422
+    },
+    {
+     "w": "are",
+     "s": 144.742
+    },
+    {
+     "w": "what",
+     "s": 145.002
+    },
+    {
+     "w": "people",
+     "s": 145.162
+    },
+    {
+     "w": "actually",
+     "s": 145.482
+    },
+    {
+     "w": "stop",
+     "s": 145.842
+    },
+    {
+     "w": "scrolling",
+     "s": 146.282
+    },
+    {
+     "w": "for.",
+     "s": 146.582
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "scrolling"
+    ]
+   ]
+  },
+  {
+   "scene": "why",
+   "sub": "Four things make ProfitIQS easier to promote than most.",
+   "start": 149.376,
+   "end": 152.825,
+   "words": [
+    {
+     "w": "Four",
+     "s": 149.376
+    },
+    {
+     "w": "things",
+     "s": 149.536
+    },
+    {
+     "w": "make",
+     "s": 149.736
+    },
+    {
+     "w": "ProfitIQS",
+     "s": 150.386
+    },
+    {
+     "w": "easier",
+     "s": 151.036
+    },
+    {
+     "w": "to",
+     "s": 151.536
+    },
+    {
+     "w": "promote",
+     "s": 151.736
+    },
+    {
+     "w": "than",
+     "s": 151.996
+    },
+    {
+     "w": "most.",
+     "s": 152.296
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "Four"
+    ]
+   ]
+  },
+  {
+   "scene": "why",
+   "sub": "One: every product is built for one industry. Match the niche to your audience, and the message almost writes itself.",
+   "start": 153.245,
+   "end": 159.697,
+   "words": [
+    {
+     "w": "One:",
+     "s": 153.245
+    },
+    {
+     "w": "every",
+     "s": 153.585
+    },
+    {
+     "w": "product",
+     "s": 153.785
+    },
+    {
+     "w": "is",
+     "s": 154.205
+    },
+    {
+     "w": "built",
+     "s": 154.425
+    },
+    {
+     "w": "for",
+     "s": 154.645
+    },
+    {
+     "w": "one",
+     "s": 154.845
+    },
+    {
+     "w": "industry.",
+     "s": 155.025
+    },
+    {
+     "w": "Match",
+     "s": 156.305
+    },
+    {
+     "w": "the",
+     "s": 156.335
+    },
+    {
+     "w": "niche",
+     "s": 156.525
+    },
+    {
+     "w": "to",
+     "s": 156.685
+    },
+    {
+     "w": "your",
+     "s": 156.905
+    },
+    {
+     "w": "audience,",
+     "s": 157.005
+    },
+    {
+     "w": "and",
+     "s": 157.785
+    },
+    {
+     "w": "the",
+     "s": 157.865
+    },
+    {
+     "w": "message",
+     "s": 157.945
+    },
+    {
+     "w": "almost",
+     "s": 158.225
+    },
+    {
+     "w": "writes",
+     "s": 158.565
+    },
+    {
+     "w": "itself.",
+     "s": 158.925
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "One:"
+    ]
+   ]
+  },
+  {
+   "scene": "why",
+   "sub": "Two: three price points. You can recommend Essential to a one-truck operation, and Elite to a growing team, honestly.",
+   "start": 160.117,
+   "end": 167.204,
+   "words": [
+    {
+     "w": "Two:",
+     "s": 160.117
+    },
+    {
+     "w": "three",
+     "s": 160.497
+    },
+    {
+     "w": "price",
+     "s": 160.737
+    },
+    {
+     "w": "points.",
+     "s": 161.017
+    },
+    {
+     "w": "You",
+     "s": 162.137
+    },
+    {
+     "w": "can",
+     "s": 162.167
+    },
+    {
+     "w": "recommend",
+     "s": 162.237
+    },
+    {
+     "w": "Essential",
+     "s": 162.577
+    },
+    {
+     "w": "to",
+     "s": 162.917
+    },
+    {
+     "w": "a",
+     "s": 163.357
+    },
+    {
+     "w": "one-truck",
+     "s": 163.657
+    },
+    {
+     "w": "operation,",
+     "s": 163.957
+    },
+    {
+     "w": "and",
+     "s": 164.997
+    },
+    {
+     "w": "Elite",
+     "s": 165.097
+    },
+    {
+     "w": "to",
+     "s": 165.317
+    },
+    {
+     "w": "a",
+     "s": 165.597
+    },
+    {
+     "w": "growing",
+     "s": 165.697
+    },
+    {
+     "w": "team,",
+     "s": 165.897
+    },
+    {
+     "w": "honestly.",
+     "s": 166.617
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Two:"
+    ]
+   ]
+  },
+  {
+   "scene": "why",
+   "sub": "Three: it's a one-time payment, not a subscription. That's an easy yes to explain.",
+   "start": 167.624,
+   "end": 172.356,
+   "words": [
+    {
+     "w": "Three:",
+     "s": 167.624
+    },
+    {
+     "w": "it's",
+     "s": 168.084
+    },
+    {
+     "w": "a",
+     "s": 168.164
+    },
+    {
+     "w": "one-time",
+     "s": 168.454
+    },
+    {
+     "w": "payment,",
+     "s": 168.744
+    },
+    {
+     "w": "not",
+     "s": 169.384
+    },
+    {
+     "w": "a",
+     "s": 169.484
+    },
+    {
+     "w": "subscription.",
+     "s": 169.604
+    },
+    {
+     "w": "That's",
+     "s": 170.764
+    },
+    {
+     "w": "an",
+     "s": 170.964
+    },
+    {
+     "w": "easy",
+     "s": 171.024
+    },
+    {
+     "w": "yes",
+     "s": 171.204
+    },
+    {
+     "w": "to",
+     "s": 171.524
+    },
+    {
+     "w": "explain.",
+     "s": 171.724
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Three:"
+    ]
+   ]
+  },
+  {
+   "scene": "why",
+   "sub": "And four: the sample data means you can screen-record a working dashboard on day one, without entering a single real number.",
+   "start": 172.776,
+   "end": 179.863,
+   "words": [
+    {
+     "w": "And",
+     "s": 172.776
+    },
+    {
+     "w": "four:",
+     "s": 172.836
+    },
+    {
+     "w": "the",
+     "s": 173.516
+    },
+    {
+     "w": "sample",
+     "s": 173.716
+    },
+    {
+     "w": "data",
+     "s": 173.956
+    },
+    {
+     "w": "means",
+     "s": 174.316
+    },
+    {
+     "w": "you",
+     "s": 174.716
+    },
+    {
+     "w": "can",
+     "s": 174.956
+    },
+    {
+     "w": "screen-record",
+     "s": 175.346
+    },
+    {
+     "w": "a",
+     "s": 175.736
+    },
+    {
+     "w": "working",
+     "s": 175.876
+    },
+    {
+     "w": "dashboard",
+     "s": 176.096
+    },
+    {
+     "w": "on",
+     "s": 176.476
+    },
+    {
+     "w": "day",
+     "s": 176.896
+    },
+    {
+     "w": "one,",
+     "s": 177.056
+    },
+    {
+     "w": "without",
+     "s": 177.696
+    },
+    {
+     "w": "entering",
+     "s": 177.936
+    },
+    {
+     "w": "a",
+     "s": 178.436
+    },
+    {
+     "w": "single",
+     "s": 178.676
+    },
+    {
+     "w": "real",
+     "s": 178.936
+    },
+    {
+     "w": "number.",
+     "s": 179.236
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "four:"
+    ]
+   ]
+  },
+  {
+   "scene": "why",
+   "sub": "And every kit tells you who you're talking to. The owner-operator who does the books at night. The growing company with several crews and no side-by-side view. The office manager who tracks it all for the owner.",
+   "start": 180.283,
+   "end": 191.899,
+   "words": [
+    {
+     "w": "And",
+     "s": 180.283
+    },
+    {
+     "w": "every",
+     "s": 180.525
+    },
+    {
+     "w": "kit",
+     "s": 180.768
+    },
+    {
+     "w": "tells",
+     "s": 181.01
+    },
+    {
+     "w": "you",
+     "s": 181.252
+    },
+    {
+     "w": "who",
+     "s": 181.494
+    },
+    {
+     "w": "you're",
+     "s": 181.737
+    },
+    {
+     "w": "talking",
+     "s": 181.979
+    },
+    {
+     "w": "to.",
+     "s": 182.221
+    },
+    {
+     "w": "The",
+     "s": 182.463
+    },
+    {
+     "w": "owner-operator",
+     "s": 182.705
+    },
+    {
+     "w": "who",
+     "s": 182.948
+    },
+    {
+     "w": "does",
+     "s": 183.19
+    },
+    {
+     "w": "the",
+     "s": 183.432
+    },
+    {
+     "w": "books",
+     "s": 183.674
+    },
+    {
+     "w": "at",
+     "s": 183.917
+    },
+    {
+     "w": "night.",
+     "s": 184.159
+    },
+    {
+     "w": "The",
+     "s": 184.401
+    },
+    {
+     "w": "growing",
+     "s": 184.643
+    },
+    {
+     "w": "company",
+     "s": 184.885
+    },
+    {
+     "w": "with",
+     "s": 185.128
+    },
+    {
+     "w": "several",
+     "s": 185.37
+    },
+    {
+     "w": "crews",
+     "s": 185.612
+    },
+    {
+     "w": "and",
+     "s": 185.854
+    },
+    {
+     "w": "no",
+     "s": 186.097
+    },
+    {
+     "w": "side-by-side",
+     "s": 186.339
+    },
+    {
+     "w": "view.",
+     "s": 186.581
+    },
+    {
+     "w": "The",
+     "s": 186.823
+    },
+    {
+     "w": "office",
+     "s": 187.303
+    },
+    {
+     "w": "manager",
+     "s": 187.783
+    },
+    {
+     "w": "who",
+     "s": 190.063
+    },
+    {
+     "w": "tracks",
+     "s": 190.463
+    },
+    {
+     "w": "it",
+     "s": 190.643
+    },
+    {
+     "w": "all",
+     "s": 190.923
+    },
+    {
+     "w": "for",
+     "s": 191.143
+    },
+    {
+     "w": "the",
+     "s": 191.323
+    },
+    {
+     "w": "owner.",
+     "s": 191.423
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "owner-operator"
+    ],
+    [
+     "pop",
+     "growing"
+    ],
+    [
+     "pop",
+     "office"
+    ]
+   ]
+  },
+  {
+   "scene": "money",
+   "sub": "Now, the commission. Here's the planned schedule.",
+   "start": 194.099,
+   "end": 196.512,
+   "words": [
+    {
+     "w": "Now,",
+     "s": 194.099
+    },
+    {
+     "w": "the",
+     "s": 194.279
+    },
+    {
+     "w": "commission.",
+     "s": 194.479
+    },
+    {
+     "w": "Here's",
+     "s": 195.319
+    },
+    {
+     "w": "the",
+     "s": 195.479
+    },
+    {
+     "w": "planned",
+     "s": 195.579
+    },
+    {
+     "w": "schedule.",
+     "s": 195.759
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "commission."
+    ]
+   ]
+  },
+  {
+   "scene": "money",
+   "sub": "From the seventeenth of October, twenty twenty-six, to the sixteenth of January, twenty twenty-seven: a ninety percent launch commission.",
+   "start": 196.932,
+   "end": 204.684,
+   "words": [
+    {
+     "w": "From",
+     "s": 196.932
+    },
+    {
+     "w": "the",
+     "s": 197.052
+    },
+    {
+     "w": "seventeenth",
+     "s": 197.152
+    },
+    {
+     "w": "of",
+     "s": 197.652
+    },
+    {
+     "w": "October,",
+     "s": 197.832
+    },
+    {
+     "w": "twenty",
+     "s": 198.592
+    },
+    {
+     "w": "twenty-six,",
+     "s": 199.252
+    },
+    {
+     "w": "to",
+     "s": 199.912
+    },
+    {
+     "w": "the",
+     "s": 200.012
+    },
+    {
+     "w": "sixteenth",
+     "s": 200.092
+    },
+    {
+     "w": "of",
+     "s": 200.472
+    },
+    {
+     "w": "January,",
+     "s": 200.632
+    },
+    {
+     "w": "twenty",
+     "s": 201.512
+    },
+    {
+     "w": "twenty-seven:",
+     "s": 202.182
+    },
+    {
+     "w": "a",
+     "s": 202.852
+    },
+    {
+     "w": "ninety",
+     "s": 203.032
+    },
+    {
+     "w": "percent",
+     "s": 203.292
+    },
+    {
+     "w": "launch",
+     "s": 203.692
+    },
+    {
+     "w": "commission.",
+     "s": 204.012
+    }
+   ],
+   "cues": [
+    [
+     "cash",
+     "ninety"
+    ]
+   ]
+  },
+  {
+   "scene": "money",
+   "sub": "From the seventeenth of January to the sixteenth of April, twenty twenty-seven: eighty-five percent.",
+   "start": 205.104,
+   "end": 210.723,
+   "words": [
+    {
+     "w": "From",
+     "s": 205.104
+    },
+    {
+     "w": "the",
+     "s": 205.224
+    },
+    {
+     "w": "seventeenth",
+     "s": 205.304
+    },
+    {
+     "w": "of",
+     "s": 205.824
+    },
+    {
+     "w": "January",
+     "s": 205.984
+    },
+    {
+     "w": "to",
+     "s": 206.404
+    },
+    {
+     "w": "the",
+     "s": 206.684
+    },
+    {
+     "w": "sixteenth",
+     "s": 206.784
+    },
+    {
+     "w": "of",
+     "s": 207.204
+    },
+    {
+     "w": "April,",
+     "s": 207.364
+    },
+    {
+     "w": "twenty",
+     "s": 208.004
+    },
+    {
+     "w": "twenty-seven:",
+     "s": 208.69
+    },
+    {
+     "w": "eighty-five",
+     "s": 209.377
+    },
+    {
+     "w": "percent.",
+     "s": 210.064
+    }
+   ],
+   "cues": [
+    [
+     "ding",
+     "eighty-five"
+    ]
+   ]
+  },
+  {
+   "scene": "money",
+   "sub": "And from the seventeenth of April onward: eighty percent, standard.",
+   "start": 211.143,
+   "end": 214.794,
+   "words": [
+    {
+     "w": "And",
+     "s": 211.143
+    },
+    {
+     "w": "from",
+     "s": 211.243
+    },
+    {
+     "w": "the",
+     "s": 211.363
+    },
+    {
+     "w": "seventeenth",
+     "s": 211.463
+    },
+    {
+     "w": "of",
+     "s": 211.923
+    },
+    {
+     "w": "April",
+     "s": 212.063
+    },
+    {
+     "w": "onward:",
+     "s": 212.303
+    },
+    {
+     "w": "eighty",
+     "s": 213.203
+    },
+    {
+     "w": "percent,",
+     "s": 213.423
+    },
+    {
+     "w": "standard.",
+     "s": 214.243
+    }
+   ],
+   "cues": [
+    [
+     "ding",
+     "eighty"
+    ]
+   ]
+  },
+  {
+   "scene": "money",
+   "sub": "These rates are set manually in Digistore24 at each phase change. The rate that applies is the one set at the time of the sale.",
+   "start": 215.214,
+   "end": 223.031,
+   "words": [
+    {
+     "w": "These",
+     "s": 215.214
+    },
+    {
+     "w": "rates",
+     "s": 215.334
+    },
+    {
+     "w": "are",
+     "s": 215.534
+    },
+    {
+     "w": "set",
+     "s": 215.774
+    },
+    {
+     "w": "manually",
+     "s": 215.954
+    },
+    {
+     "w": "in",
+     "s": 216.374
+    },
+    {
+     "w": "Digistore24",
+     "s": 216.814
+    },
+    {
+     "w": "at",
+     "s": 217.614
+    },
+    {
+     "w": "each",
+     "s": 218.214
+    },
+    {
+     "w": "phase",
+     "s": 218.434
+    },
+    {
+     "w": "change.",
+     "s": 218.694
+    },
+    {
+     "w": "The",
+     "s": 219.874
+    },
+    {
+     "w": "rate",
+     "s": 219.974
+    },
+    {
+     "w": "that",
+     "s": 220.154
+    },
+    {
+     "w": "applies",
+     "s": 220.334
+    },
+    {
+     "w": "is",
+     "s": 220.554
+    },
+    {
+     "w": "the",
+     "s": 221.214
+    },
+    {
+     "w": "one",
+     "s": 221.374
+    },
+    {
+     "w": "set",
+     "s": 221.514
+    },
+    {
+     "w": "at",
+     "s": 221.794
+    },
+    {
+     "w": "the",
+     "s": 222.014
+    },
+    {
+     "w": "time",
+     "s": 222.094
+    },
+    {
+     "w": "of",
+     "s": 222.354
+    },
+    {
+     "w": "the",
+     "s": 222.474
+    },
+    {
+     "w": "sale.",
+     "s": 222.574
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "manually"
+    ]
+   ]
+  },
+  {
+   "scene": "money",
+   "sub": "To put that in perspective, here's a simple illustration, on the displayed price, before any fees.",
+   "start": 223.451,
+   "end": 228.929,
+   "words": [
+    {
+     "w": "To",
+     "s": 223.451
+    },
+    {
+     "w": "put",
+     "s": 223.531
+    },
+    {
+     "w": "that",
+     "s": 223.671
+    },
+    {
+     "w": "in",
+     "s": 223.891
+    },
+    {
+     "w": "perspective,",
+     "s": 224.031
+    },
+    {
+     "w": "here's",
+     "s": 225.071
+    },
+    {
+     "w": "a",
+     "s": 225.271
+    },
+    {
+     "w": "simple",
+     "s": 225.351
+    },
+    {
+     "w": "illustration,",
+     "s": 225.611
+    },
+    {
+     "w": "on",
+     "s": 226.851
+    },
+    {
+     "w": "the",
+     "s": 226.911
+    },
+    {
+     "w": "displayed",
+     "s": 227.011
+    },
+    {
+     "w": "price,",
+     "s": 227.311
+    },
+    {
+     "w": "before",
+     "s": 227.691
+    },
+    {
+     "w": "any",
+     "s": 228.171
+    },
+    {
+     "w": "fees.",
+     "s": 228.351
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "illustration,"
+    ]
+   ]
+  },
+  {
+   "scene": "money",
+   "sub": "At ninety percent, an Essential sale is eighty-seven dollars thirty. Elite, one seventy-seven thirty. Complete, two twenty-four ten.",
+   "start": 229.349,
+   "end": 237.694,
+   "words": [
+    {
+     "w": "At",
+     "s": 229.349
+    },
+    {
+     "w": "ninety",
+     "s": 229.429
+    },
+    {
+     "w": "percent,",
+     "s": 229.589
+    },
+    {
+     "w": "an",
+     "s": 230.329
+    },
+    {
+     "w": "Essential",
+     "s": 230.409
+    },
+    {
+     "w": "sale",
+     "s": 230.649
+    },
+    {
+     "w": "is",
+     "s": 231.069
+    },
+    {
+     "w": "eighty-seven",
+     "s": 231.559
+    },
+    {
+     "w": "dollars",
+     "s": 232.049
+    },
+    {
+     "w": "thirty.",
+     "s": 232.349
+    },
+    {
+     "w": "Elite,",
+     "s": 233.569
+    },
+    {
+     "w": "one",
+     "s": 234.029
+    },
+    {
+     "w": "seventy-seven",
+     "s": 234.489
+    },
+    {
+     "w": "thirty.",
+     "s": 234.949
+    },
+    {
+     "w": "Complete,",
+     "s": 236.129
+    },
+    {
+     "w": "two",
+     "s": 236.569
+    },
+    {
+     "w": "twenty-four",
+     "s": 236.879
+    },
+    {
+     "w": "ten.",
+     "s": 237.189
+    }
+   ],
+   "cues": [
+    [
+     "cash",
+     "eighty-seven"
+    ],
+    [
+     "cash",
+     "seventy-seven"
+    ],
+    [
+     "cash",
+     "twenty-four"
+    ]
+   ]
+  },
+  {
+   "scene": "money",
+   "sub": "But that's an illustration, not a payout promise. Digistore24's fees, taxes, refunds and chargebacks all apply, and your own dashboard shows the exact basis.",
+   "start": 238.114,
+   "end": 248.631,
+   "words": [
+    {
+     "w": "But",
+     "s": 238.114
+    },
+    {
+     "w": "that's",
+     "s": 238.174
+    },
+    {
+     "w": "an",
+     "s": 238.454
+    },
+    {
+     "w": "illustration,",
+     "s": 238.514
+    },
+    {
+     "w": "not",
+     "s": 239.434
+    },
+    {
+     "w": "a",
+     "s": 239.694
+    },
+    {
+     "w": "payout",
+     "s": 239.794
+    },
+    {
+     "w": "promise.",
+     "s": 240.014
+    },
+    {
+     "w": "Digistore24's",
+     "s": 241.794
+    },
+    {
+     "w": "fees,",
+     "s": 242.474
+    },
+    {
+     "w": "taxes,",
+     "s": 242.994
+    },
+    {
+     "w": "refunds",
+     "s": 243.854
+    },
+    {
+     "w": "and",
+     "s": 243.884
+    },
+    {
+     "w": "chargebacks",
+     "s": 244.354
+    },
+    {
+     "w": "all",
+     "s": 244.854
+    },
+    {
+     "w": "apply,",
+     "s": 245.214
+    },
+    {
+     "w": "and",
+     "s": 246.114
+    },
+    {
+     "w": "your",
+     "s": 246.194
+    },
+    {
+     "w": "own",
+     "s": 246.314
+    },
+    {
+     "w": "dashboard",
+     "s": 246.514
+    },
+    {
+     "w": "shows",
+     "s": 246.794
+    },
+    {
+     "w": "the",
+     "s": 247.314
+    },
+    {
+     "w": "exact",
+     "s": 247.554
+    },
+    {
+     "w": "basis.",
+     "s": 247.674
+    }
+   ],
+   "cues": [
+    [
+     "stamp",
+     "illustration,"
+    ]
+   ]
+  },
+  {
+   "scene": "money",
+   "sub": "No earnings are promised. Not here, and not anywhere in the kit.",
+   "start": 249.051,
+   "end": 252.462,
+   "words": [
+    {
+     "w": "No",
+     "s": 249.051
+    },
+    {
+     "w": "earnings",
+     "s": 249.231
+    },
+    {
+     "w": "are",
+     "s": 249.431
+    },
+    {
+     "w": "promised.",
+     "s": 249.691
+    },
+    {
+     "w": "Not",
+     "s": 250.751
+    },
+    {
+     "w": "here,",
+     "s": 250.781
+    },
+    {
+     "w": "and",
+     "s": 251.231
+    },
+    {
+     "w": "not",
+     "s": 251.291
+    },
+    {
+     "w": "anywhere",
+     "s": 251.491
+    },
+    {
+     "w": "in",
+     "s": 251.811
+    },
+    {
+     "w": "the",
+     "s": 251.951
+    },
+    {
+     "w": "kit.",
+     "s": 252.031
+    }
+   ],
+   "cues": [
+    [
+     "stamp",
+     "No"
+    ]
+   ]
+  },
+  {
+   "scene": "money",
+   "sub": "And watch for the phase changes, on the seventeenth of January and the seventeenth of April.",
+   "start": 252.882,
+   "end": 257.97,
+   "words": [
+    {
+     "w": "And",
+     "s": 252.882
+    },
+    {
+     "w": "watch",
+     "s": 252.962
+    },
+    {
+     "w": "for",
+     "s": 253.182
+    },
+    {
+     "w": "the",
+     "s": 253.502
+    },
+    {
+     "w": "phase",
+     "s": 253.582
+    },
+    {
+     "w": "changes,",
+     "s": 253.802
+    },
+    {
+     "w": "on",
+     "s": 254.962
+    },
+    {
+     "w": "the",
+     "s": 255.122
+    },
+    {
+     "w": "seventeenth",
+     "s": 255.202
+    },
+    {
+     "w": "of",
+     "s": 255.742
+    },
+    {
+     "w": "January",
+     "s": 255.902
+    },
+    {
+     "w": "and",
+     "s": 256.342
+    },
+    {
+     "w": "the",
+     "s": 256.782
+    },
+    {
+     "w": "seventeenth",
+     "s": 256.882
+    },
+    {
+     "w": "of",
+     "s": 257.362
+    },
+    {
+     "w": "April.",
+     "s": 257.502
+    }
+   ],
+   "cues": [
+    [
+     "ding",
+     "January"
+    ],
+    [
+     "ding",
+     "April."
+    ]
+   ]
+  },
+  {
+   "scene": "how",
+   "sub": "How it works is simple.",
+   "start": 260.17,
+   "end": 261.343,
+   "words": [
+    {
+     "w": "How",
+     "s": 260.17
+    },
+    {
+     "w": "it",
+     "s": 260.31
+    },
+    {
+     "w": "works",
+     "s": 260.43
+    },
+    {
+     "w": "is",
+     "s": 260.59
+    },
+    {
+     "w": "simple.",
+     "s": 260.83
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "simple."
+    ]
+   ]
+  },
+  {
+   "scene": "how",
+   "sub": "You promote a ProfitIQS product with your own Digistore24 affiliate link.",
+   "start": 261.763,
+   "end": 266.601,
+   "words": [
+    {
+     "w": "You",
+     "s": 261.763
+    },
+    {
+     "w": "promote",
+     "s": 261.863
+    },
+    {
+     "w": "a",
+     "s": 262.083
+    },
+    {
+     "w": "ProfitIQS",
+     "s": 262.653
+    },
+    {
+     "w": "product",
+     "s": 263.223
+    },
+    {
+     "w": "with",
+     "s": 263.543
+    },
+    {
+     "w": "your",
+     "s": 264.123
+    },
+    {
+     "w": "own",
+     "s": 264.263
+    },
+    {
+     "w": "Digistore24",
+     "s": 264.463
+    },
+    {
+     "w": "affiliate",
+     "s": 265.383
+    },
+    {
+     "w": "link.",
+     "s": 265.903
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "link."
+    ]
+   ]
+  },
+  {
+   "scene": "how",
+   "sub": "A customer buys through your link.",
+   "start": 267.021,
+   "end": 268.606,
+   "words": [
+    {
+     "w": "A",
+     "s": 267.021
+    },
+    {
+     "w": "customer",
+     "s": 267.081
+    },
+    {
+     "w": "buys",
+     "s": 267.381
+    },
+    {
+     "w": "through",
+     "s": 267.761
+    },
+    {
+     "w": "your",
+     "s": 268.081
+    },
+    {
+     "w": "link.",
+     "s": 268.201
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "buys"
+    ]
+   ]
+  },
+  {
+   "scene": "how",
+   "sub": "Digistore24 records the sale, and credits your commission on eligible orders.",
+   "start": 269.026,
+   "end": 273.973,
+   "words": [
+    {
+     "w": "Digistore24",
+     "s": 269.026
+    },
+    {
+     "w": "records",
+     "s": 270.066
+    },
+    {
+     "w": "the",
+     "s": 270.406
+    },
+    {
+     "w": "sale,",
+     "s": 270.806
+    },
+    {
+     "w": "and",
+     "s": 271.506
+    },
+    {
+     "w": "credits",
+     "s": 271.646
+    },
+    {
+     "w": "your",
+     "s": 271.866
+    },
+    {
+     "w": "commission",
+     "s": 272.086
+    },
+    {
+     "w": "on",
+     "s": 272.286
+    },
+    {
+     "w": "eligible",
+     "s": 272.746
+    },
+    {
+     "w": "orders.",
+     "s": 273.026
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "records"
+    ]
+   ]
+  },
+  {
+   "scene": "how",
+   "sub": "And you see clicks, sales, refunds and commissions in your own Digistore24 account.",
+   "start": 274.393,
+   "end": 279.475,
+   "words": [
+    {
+     "w": "And",
+     "s": 274.393
+    },
+    {
+     "w": "you",
+     "s": 274.453
+    },
+    {
+     "w": "see",
+     "s": 274.533
+    },
+    {
+     "w": "clicks,",
+     "s": 274.693
+    },
+    {
+     "w": "sales,",
+     "s": 275.373
+    },
+    {
+     "w": "refunds",
+     "s": 276.213
+    },
+    {
+     "w": "and",
+     "s": 276.243
+    },
+    {
+     "w": "commissions",
+     "s": 276.793
+    },
+    {
+     "w": "in",
+     "s": 277.033
+    },
+    {
+     "w": "your",
+     "s": 277.473
+    },
+    {
+     "w": "own",
+     "s": 277.573
+    },
+    {
+     "w": "Digistore24",
+     "s": 277.793
+    },
+    {
+     "w": "account.",
+     "s": 278.633
+    }
+   ],
+   "cues": [
+    [
+     "ding",
+     "see"
+    ]
+   ]
+  },
+  {
+   "scene": "how",
+   "sub": "One honest note: the marketplace listings are submitted and pending approval. So request promotion where it's required, and don't describe them as approved until Digistore24 confirms it.",
+   "start": 279.895,
+   "end": 291.661,
+   "words": [
+    {
+     "w": "One",
+     "s": 279.895
+    },
+    {
+     "w": "honest",
+     "s": 280.075
+    },
+    {
+     "w": "note:",
+     "s": 280.395
+    },
+    {
+     "w": "the",
+     "s": 281.375
+    },
+    {
+     "w": "marketplace",
+     "s": 281.475
+    },
+    {
+     "w": "listings",
+     "s": 281.775
+    },
+    {
+     "w": "are",
+     "s": 282.355
+    },
+    {
+     "w": "submitted",
+     "s": 282.715
+    },
+    {
+     "w": "and",
+     "s": 283.135
+    },
+    {
+     "w": "pending",
+     "s": 283.635
+    },
+    {
+     "w": "approval.",
+     "s": 283.955
+    },
+    {
+     "w": "So",
+     "s": 285.155
+    },
+    {
+     "w": "request",
+     "s": 285.215
+    },
+    {
+     "w": "promotion",
+     "s": 285.515
+    },
+    {
+     "w": "where",
+     "s": 286.195
+    },
+    {
+     "w": "it's",
+     "s": 286.455
+    },
+    {
+     "w": "required,",
+     "s": 286.575
+    },
+    {
+     "w": "and",
+     "s": 286.915
+    },
+    {
+     "w": "don't",
+     "s": 287.655
+    },
+    {
+     "w": "describe",
+     "s": 287.935
+    },
+    {
+     "w": "them",
+     "s": 288.135
+    },
+    {
+     "w": "as",
+     "s": 288.515
+    },
+    {
+     "w": "approved",
+     "s": 288.655
+    },
+    {
+     "w": "until",
+     "s": 288.995
+    },
+    {
+     "w": "Digistore24",
+     "s": 289.515
+    },
+    {
+     "w": "confirms",
+     "s": 290.695
+    },
+    {
+     "w": "it.",
+     "s": 291.075
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "pending"
+    ]
+   ]
+  },
+  {
+   "scene": "kit",
+   "sub": "Now the part most programs don't give you. A complete kit, for every one of the twenty-one niches.",
+   "start": 293.861,
+   "end": 299.594,
+   "words": [
+    {
+     "w": "Now",
+     "s": 293.861
+    },
+    {
+     "w": "the",
+     "s": 294.021
+    },
+    {
+     "w": "part",
+     "s": 294.221
+    },
+    {
+     "w": "most",
+     "s": 294.401
+    },
+    {
+     "w": "programs",
+     "s": 294.681
+    },
+    {
+     "w": "don't",
+     "s": 295.061
+    },
+    {
+     "w": "give",
+     "s": 295.521
+    },
+    {
+     "w": "you.",
+     "s": 295.681
+    },
+    {
+     "w": "A",
+     "s": 296.441
+    },
+    {
+     "w": "complete",
+     "s": 296.471
+    },
+    {
+     "w": "kit,",
+     "s": 296.801
+    },
+    {
+     "w": "for",
+     "s": 297.481
+    },
+    {
+     "w": "every",
+     "s": 297.721
+    },
+    {
+     "w": "one",
+     "s": 297.961
+    },
+    {
+     "w": "of",
+     "s": 298.241
+    },
+    {
+     "w": "the",
+     "s": 298.301
+    },
+    {
+     "w": "twenty-one",
+     "s": 298.591
+    },
+    {
+     "w": "niches.",
+     "s": 298.881
+    }
+   ],
+   "cues": [
+    [
+     "box",
+     "kit,"
+    ]
+   ]
+  },
+  {
+   "scene": "kit",
+   "sub": "Every fact in it is labelled: verified from the shipped product files, or marked as general industry context. Never mixed up.",
+   "start": 300.014,
+   "end": 307.647,
+   "words": [
+    {
+     "w": "Every",
+     "s": 300.014
+    },
+    {
+     "w": "fact",
+     "s": 300.214
+    },
+    {
+     "w": "in",
+     "s": 300.534
+    },
+    {
+     "w": "it",
+     "s": 300.714
+    },
+    {
+     "w": "is",
+     "s": 300.834
+    },
+    {
+     "w": "labelled:",
+     "s": 300.934
+    },
+    {
+     "w": "verified",
+     "s": 301.994
+    },
+    {
+     "w": "from",
+     "s": 302.024
+    },
+    {
+     "w": "the",
+     "s": 302.534
+    },
+    {
+     "w": "shipped",
+     "s": 302.654
+    },
+    {
+     "w": "product",
+     "s": 302.854
+    },
+    {
+     "w": "files,",
+     "s": 303.194
+    },
+    {
+     "w": "or",
+     "s": 304.134
+    },
+    {
+     "w": "marked",
+     "s": 304.174
+    },
+    {
+     "w": "as",
+     "s": 304.414
+    },
+    {
+     "w": "general",
+     "s": 304.754
+    },
+    {
+     "w": "industry",
+     "s": 305.014
+    },
+    {
+     "w": "context.",
+     "s": 305.574
+    },
+    {
+     "w": "Never",
+     "s": 306.774
+    },
+    {
+     "w": "mixed",
+     "s": 306.954
+    },
+    {
+     "w": "up.",
+     "s": 307.194
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "verified"
+    ],
+    [
+     "pop",
+     "general"
+    ]
+   ]
+  },
+  {
+   "scene": "kit",
+   "sub": "Each kit has the product facts and the real checkout links for all three editions.",
+   "start": 308.067,
+   "end": 312.548,
+   "words": [
+    {
+     "w": "Each",
+     "s": 308.067
+    },
+    {
+     "w": "kit",
+     "s": 308.267
+    },
+    {
+     "w": "has",
+     "s": 308.467
+    },
+    {
+     "w": "the",
+     "s": 308.727
+    },
+    {
+     "w": "product",
+     "s": 308.867
+    },
+    {
+     "w": "facts",
+     "s": 309.147
+    },
+    {
+     "w": "and",
+     "s": 309.407
+    },
+    {
+     "w": "the",
+     "s": 310.047
+    },
+    {
+     "w": "real",
+     "s": 310.127
+    },
+    {
+     "w": "checkout",
+     "s": 310.327
+    },
+    {
+     "w": "links",
+     "s": 310.607
+    },
+    {
+     "w": "for",
+     "s": 311.027
+    },
+    {
+     "w": "all",
+     "s": 311.307
+    },
+    {
+     "w": "three",
+     "s": 311.527
+    },
+    {
+     "w": "editions.",
+     "s": 311.827
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "facts"
+    ],
+    [
+     "pop",
+     "checkout"
+    ]
+   ]
+  },
+  {
+   "scene": "kit",
+   "sub": "A tier comparison, so you can recommend the right edition honestly.",
+   "start": 312.968,
+   "end": 316.598,
+   "words": [
+    {
+     "w": "A",
+     "s": 312.968
+    },
+    {
+     "w": "tier",
+     "s": 313.028
+    },
+    {
+     "w": "comparison,",
+     "s": 313.248
+    },
+    {
+     "w": "so",
+     "s": 314.208
+    },
+    {
+     "w": "you",
+     "s": 314.428
+    },
+    {
+     "w": "can",
+     "s": 314.548
+    },
+    {
+     "w": "recommend",
+     "s": 314.668
+    },
+    {
+     "w": "the",
+     "s": 314.968
+    },
+    {
+     "w": "right",
+     "s": 315.208
+    },
+    {
+     "w": "edition",
+     "s": 315.408
+    },
+    {
+     "w": "honestly.",
+     "s": 315.748
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "tier"
+    ]
+   ]
+  },
+  {
+   "scene": "kit",
+   "sub": "Thirty short-form video hooks, each with its angle and a suggested visual. Like this one, from the HVAC kit: \"Peak season made the year look great. What happened in the slow months?\"",
+   "start": 317.018,
+   "end": 328.573,
+   "words": [
+    {
+     "w": "Thirty",
+     "s": 317.018
+    },
+    {
+     "w": "short-form",
+     "s": 317.488
+    },
+    {
+     "w": "video",
+     "s": 317.958
+    },
+    {
+     "w": "hooks,",
+     "s": 318.218
+    },
+    {
+     "w": "each",
+     "s": 318.918
+    },
+    {
+     "w": "with",
+     "s": 319.178
+    },
+    {
+     "w": "its",
+     "s": 319.358
+    },
+    {
+     "w": "angle",
+     "s": 319.538
+    },
+    {
+     "w": "and",
+     "s": 319.878
+    },
+    {
+     "w": "a",
+     "s": 320.138
+    },
+    {
+     "w": "suggested",
+     "s": 320.238
+    },
+    {
+     "w": "visual.",
+     "s": 320.518
+    },
+    {
+     "w": "Like",
+     "s": 321.798
+    },
+    {
+     "w": "this",
+     "s": 321.918
+    },
+    {
+     "w": "one,",
+     "s": 322.198
+    },
+    {
+     "w": "from",
+     "s": 322.738
+    },
+    {
+     "w": "the",
+     "s": 322.878
+    },
+    {
+     "w": "HVAC",
+     "s": 323.428
+    },
+    {
+     "w": "kit:",
+     "s": 323.978
+    },
+    {
+     "w": "\"Peak",
+     "s": 324.898
+    },
+    {
+     "w": "season",
+     "s": 325.018
+    },
+    {
+     "w": "made",
+     "s": 325.298
+    },
+    {
+     "w": "the",
+     "s": 325.658
+    },
+    {
+     "w": "year",
+     "s": 325.858
+    },
+    {
+     "w": "look",
+     "s": 325.998
+    },
+    {
+     "w": "great.",
+     "s": 326.238
+    },
+    {
+     "w": "What",
+     "s": 327.078
+    },
+    {
+     "w": "happened",
+     "s": 327.158
+    },
+    {
+     "w": "in",
+     "s": 327.398
+    },
+    {
+     "w": "the",
+     "s": 327.658
+    },
+    {
+     "w": "slow",
+     "s": 327.718
+    },
+    {
+     "w": "months?\"",
+     "s": 327.918
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Thirty"
+    ],
+    [
+     "sparkle",
+     "Peak"
+    ]
+   ]
+  },
+  {
+   "scene": "kit",
+   "sub": "Each hook is the first one to three seconds of a video. Pair it with one of the scripts.",
+   "start": 328.993,
+   "end": 333.566,
+   "words": [
+    {
+     "w": "Each",
+     "s": 328.993
+    },
+    {
+     "w": "hook",
+     "s": 329.173
+    },
+    {
+     "w": "is",
+     "s": 329.393
+    },
+    {
+     "w": "the",
+     "s": 329.673
+    },
+    {
+     "w": "first",
+     "s": 329.813
+    },
+    {
+     "w": "one",
+     "s": 330.073
+    },
+    {
+     "w": "to",
+     "s": 330.293
+    },
+    {
+     "w": "three",
+     "s": 330.473
+    },
+    {
+     "w": "seconds",
+     "s": 330.693
+    },
+    {
+     "w": "of",
+     "s": 331.053
+    },
+    {
+     "w": "a",
+     "s": 331.233
+    },
+    {
+     "w": "video.",
+     "s": 331.293
+    },
+    {
+     "w": "Pair",
+     "s": 332.273
+    },
+    {
+     "w": "it",
+     "s": 332.313
+    },
+    {
+     "w": "with",
+     "s": 332.533
+    },
+    {
+     "w": "one",
+     "s": 332.673
+    },
+    {
+     "w": "of",
+     "s": 332.833
+    },
+    {
+     "w": "the",
+     "s": 332.913
+    },
+    {
+     "w": "scripts.",
+     "s": 332.993
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "hook"
+    ],
+    [
+     "pop",
+     "scripts."
+    ]
+   ]
+  },
+  {
+   "scene": "kit",
+   "sub": "Ten full video scripts, twenty to forty-five seconds each, made to record on a phone with a screen recording of the sample workbook.",
+   "start": 333.986,
+   "end": 341.274,
+   "words": [
+    {
+     "w": "Ten",
+     "s": 333.986
+    },
+    {
+     "w": "full",
+     "s": 334.166
+    },
+    {
+     "w": "video",
+     "s": 334.466
+    },
+    {
+     "w": "scripts,",
+     "s": 334.666
+    },
+    {
+     "w": "twenty",
+     "s": 335.506
+    },
+    {
+     "w": "to",
+     "s": 335.786
+    },
+    {
+     "w": "forty-five",
+     "s": 336.206
+    },
+    {
+     "w": "seconds",
+     "s": 336.626
+    },
+    {
+     "w": "each,",
+     "s": 336.906
+    },
+    {
+     "w": "made",
+     "s": 337.646
+    },
+    {
+     "w": "to",
+     "s": 337.826
+    },
+    {
+     "w": "record",
+     "s": 338.026
+    },
+    {
+     "w": "on",
+     "s": 338.226
+    },
+    {
+     "w": "a",
+     "s": 338.526
+    },
+    {
+     "w": "phone",
+     "s": 338.586
+    },
+    {
+     "w": "with",
+     "s": 338.866
+    },
+    {
+     "w": "a",
+     "s": 339.146
+    },
+    {
+     "w": "screen",
+     "s": 339.226
+    },
+    {
+     "w": "recording",
+     "s": 339.486
+    },
+    {
+     "w": "of",
+     "s": 339.886
+    },
+    {
+     "w": "the",
+     "s": 340.206
+    },
+    {
+     "w": "sample",
+     "s": 340.326
+    },
+    {
+     "w": "workbook.",
+     "s": 340.526
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Ten"
+    ]
+   ]
+  },
+  {
+   "scene": "kit",
+   "sub": "A full social-media calendar, including five carousel decks, already rendered as slides.",
+   "start": 341.694,
+   "end": 347.108,
+   "words": [
+    {
+     "w": "A",
+     "s": 341.694
+    },
+    {
+     "w": "full",
+     "s": 341.754
+    },
+    {
+     "w": "social-media",
+     "s": 342.154
+    },
+    {
+     "w": "calendar,",
+     "s": 342.554
+    },
+    {
+     "w": "including",
+     "s": 343.534
+    },
+    {
+     "w": "five",
+     "s": 343.714
+    },
+    {
+     "w": "carousel",
+     "s": 344.274
+    },
+    {
+     "w": "decks,",
+     "s": 344.694
+    },
+    {
+     "w": "already",
+     "s": 345.434
+    },
+    {
+     "w": "rendered",
+     "s": 345.734
+    },
+    {
+     "w": "as",
+     "s": 346.114
+    },
+    {
+     "w": "slides.",
+     "s": 346.414
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "calendar,"
+    ],
+    [
+     "pop",
+     "five"
+    ]
+   ]
+  },
+  {
+   "scene": "kit",
+   "sub": "Five email swipes for your own list.",
+   "start": 347.528,
+   "end": 349.343,
+   "words": [
+    {
+     "w": "Five",
+     "s": 347.528
+    },
+    {
+     "w": "email",
+     "s": 347.768
+    },
+    {
+     "w": "swipes",
+     "s": 347.968
+    },
+    {
+     "w": "for",
+     "s": 348.508
+    },
+    {
+     "w": "your",
+     "s": 348.708
+    },
+    {
+     "w": "own",
+     "s": 348.808
+    },
+    {
+     "w": "list.",
+     "s": 348.948
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Five"
+    ]
+   ]
+  },
+  {
+   "scene": "kit",
+   "sub": "An eight-email cold outreach sequence.",
+   "start": 349.763,
+   "end": 351.747,
+   "words": [
+    {
+     "w": "An",
+     "s": 349.763
+    },
+    {
+     "w": "eight-email",
+     "s": 350.023
+    },
+    {
+     "w": "cold",
+     "s": 350.283
+    },
+    {
+     "w": "outreach",
+     "s": 350.563
+    },
+    {
+     "w": "sequence.",
+     "s": 351.043
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "eight-email"
+    ]
+   ]
+  },
+  {
+   "scene": "kit",
+   "sub": "Ready-to-paste ad copy for Meta Ads Manager.",
+   "start": 352.167,
+   "end": 354.872,
+   "words": [
+    {
+     "w": "Ready-to-paste",
+     "s": 352.167
+    },
+    {
+     "w": "ad",
+     "s": 352.667
+    },
+    {
+     "w": "copy",
+     "s": 352.987
+    },
+    {
+     "w": "for",
+     "s": 353.347
+    },
+    {
+     "w": "Meta",
+     "s": 353.787
+    },
+    {
+     "w": "Ads",
+     "s": 353.947
+    },
+    {
+     "w": "Manager.",
+     "s": 354.207
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Meta"
+    ]
+   ]
+  },
+  {
+   "scene": "kit",
+   "sub": "Ten ready-made graphics, plus real workbook screenshots.",
+   "start": 355.292,
+   "end": 358.384,
+   "words": [
+    {
+     "w": "Ten",
+     "s": 355.292
+    },
+    {
+     "w": "ready-made",
+     "s": 355.572
+    },
+    {
+     "w": "graphics,",
+     "s": 355.852
+    },
+    {
+     "w": "plus",
+     "s": 356.692
+    },
+    {
+     "w": "real",
+     "s": 356.852
+    },
+    {
+     "w": "workbook",
+     "s": 357.112
+    },
+    {
+     "w": "screenshots.",
+     "s": 357.572
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Ten"
+    ],
+    [
+     "pop",
+     "screenshots."
+    ]
+   ]
+  },
+  {
+   "scene": "kit",
+   "sub": "An audience and objections guide, with honest answers to questions like \"Is it a subscription?\" and \"I'm not an Excel person.\"",
+   "start": 358.804,
+   "end": 366.229,
+   "words": [
+    {
+     "w": "An",
+     "s": 358.804
+    },
+    {
+     "w": "audience",
+     "s": 358.884
+    },
+    {
+     "w": "and",
+     "s": 359.224
+    },
+    {
+     "w": "objections",
+     "s": 359.544
+    },
+    {
+     "w": "guide,",
+     "s": 359.764
+    },
+    {
+     "w": "with",
+     "s": 360.924
+    },
+    {
+     "w": "honest",
+     "s": 360.984
+    },
+    {
+     "w": "answers",
+     "s": 361.264
+    },
+    {
+     "w": "to",
+     "s": 361.784
+    },
+    {
+     "w": "questions",
+     "s": 361.984
+    },
+    {
+     "w": "like",
+     "s": 362.264
+    },
+    {
+     "w": "\"Is",
+     "s": 363.004
+    },
+    {
+     "w": "it",
+     "s": 363.084
+    },
+    {
+     "w": "a",
+     "s": 363.204
+    },
+    {
+     "w": "subscription?\"",
+     "s": 363.264
+    },
+    {
+     "w": "and",
+     "s": 364.524
+    },
+    {
+     "w": "\"I'm",
+     "s": 364.624
+    },
+    {
+     "w": "not",
+     "s": 364.924
+    },
+    {
+     "w": "an",
+     "s": 365.144
+    },
+    {
+     "w": "Excel",
+     "s": 365.284
+    },
+    {
+     "w": "person.\"",
+     "s": 365.444
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "audience"
+    ]
+   ]
+  },
+  {
+   "scene": "kit",
+   "sub": "And a publishing checklist, to tick off before anything goes live.",
+   "start": 366.649,
+   "end": 370.096,
+   "words": [
+    {
+     "w": "And",
+     "s": 366.649
+    },
+    {
+     "w": "a",
+     "s": 366.729
+    },
+    {
+     "w": "publishing",
+     "s": 366.789
+    },
+    {
+     "w": "checklist,",
+     "s": 367.069
+    },
+    {
+     "w": "to",
+     "s": 368.049
+    },
+    {
+     "w": "tick",
+     "s": 368.269
+    },
+    {
+     "w": "off",
+     "s": 368.389
+    },
+    {
+     "w": "before",
+     "s": 368.609
+    },
+    {
+     "w": "anything",
+     "s": 368.829
+    },
+    {
+     "w": "goes",
+     "s": 369.189
+    },
+    {
+     "w": "live.",
+     "s": 369.469
+    }
+   ],
+   "cues": [
+    [
+     "ding",
+     "checklist,"
+    ]
+   ]
+  },
+  {
+   "scene": "master",
+   "sub": "On top of that, the Master Kit covers everything shared across all twenty-one niches.",
+   "start": 372.296,
+   "end": 377.175,
+   "words": [
+    {
+     "w": "On",
+     "s": 372.296
+    },
+    {
+     "w": "top",
+     "s": 372.396
+    },
+    {
+     "w": "of",
+     "s": 372.596
+    },
+    {
+     "w": "that,",
+     "s": 372.736
+    },
+    {
+     "w": "the",
+     "s": 373.276
+    },
+    {
+     "w": "Master",
+     "s": 373.416
+    },
+    {
+     "w": "Kit",
+     "s": 373.596
+    },
+    {
+     "w": "covers",
+     "s": 373.936
+    },
+    {
+     "w": "everything",
+     "s": 374.416
+    },
+    {
+     "w": "shared",
+     "s": 374.956
+    },
+    {
+     "w": "across",
+     "s": 375.256
+    },
+    {
+     "w": "all",
+     "s": 375.676
+    },
+    {
+     "w": "twenty-one",
+     "s": 376.116
+    },
+    {
+     "w": "niches.",
+     "s": 376.556
+    }
+   ],
+   "cues": [
+    [
+     "chime",
+     "Master"
+    ]
+   ]
+  },
+  {
+   "scene": "master",
+   "sub": "The commission guide. The brand messaging guide. The compliance guide. Shared recruiting copy. A launch checklist. A cold-email playbook. And a full brand asset inventory, with every real checkout link for all sixty-three editions.",
+   "start": 377.595,
+   "end": 392.289,
+   "words": [
+    {
+     "w": "The",
+     "s": 377.595
+    },
+    {
+     "w": "commission",
+     "s": 377.655
+    },
+    {
+     "w": "guide.",
+     "s": 377.835
+    },
+    {
+     "w": "The",
+     "s": 378.895
+    },
+    {
+     "w": "brand",
+     "s": 378.925
+    },
+    {
+     "w": "messaging",
+     "s": 379.055
+    },
+    {
+     "w": "guide.",
+     "s": 379.555
+    },
+    {
+     "w": "The",
+     "s": 380.655
+    },
+    {
+     "w": "compliance",
+     "s": 380.695
+    },
+    {
+     "w": "guide.",
+     "s": 380.895
+    },
+    {
+     "w": "Shared",
+     "s": 382.055
+    },
+    {
+     "w": "recruiting",
+     "s": 382.235
+    },
+    {
+     "w": "copy.",
+     "s": 382.595
+    },
+    {
+     "w": "A",
+     "s": 383.815
+    },
+    {
+     "w": "launch",
+     "s": 383.855
+    },
+    {
+     "w": "checklist.",
+     "s": 384.055
+    },
+    {
+     "w": "A",
+     "s": 385.235
+    },
+    {
+     "w": "cold-email",
+     "s": 385.575
+    },
+    {
+     "w": "playbook.",
+     "s": 385.915
+    },
+    {
+     "w": "And",
+     "s": 386.995
+    },
+    {
+     "w": "a",
+     "s": 387.035
+    },
+    {
+     "w": "full",
+     "s": 387.115
+    },
+    {
+     "w": "brand",
+     "s": 387.295
+    },
+    {
+     "w": "asset",
+     "s": 387.575
+    },
+    {
+     "w": "inventory,",
+     "s": 387.995
+    },
+    {
+     "w": "with",
+     "s": 389.015
+    },
+    {
+     "w": "every",
+     "s": 389.045
+    },
+    {
+     "w": "real",
+     "s": 389.335
+    },
+    {
+     "w": "checkout",
+     "s": 389.715
+    },
+    {
+     "w": "link",
+     "s": 389.955
+    },
+    {
+     "w": "for",
+     "s": 390.375
+    },
+    {
+     "w": "all",
+     "s": 390.595
+    },
+    {
+     "w": "sixty-three",
+     "s": 391.065
+    },
+    {
+     "w": "editions.",
+     "s": 391.535
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "commission"
+    ],
+    [
+     "pop",
+     "brand"
+    ],
+    [
+     "pop",
+     "compliance"
+    ],
+    [
+     "pop",
+     "Shared"
+    ],
+    [
+     "pop",
+     "launch"
+    ],
+    [
+     "pop",
+     "cold-email"
+    ],
+    [
+     "pop",
+     "asset"
+    ]
+   ]
+  },
+  {
+   "scene": "launch",
+   "sub": "Here's how to launch, step by step.",
+   "start": 394.489,
+   "end": 396.261,
+   "words": [
+    {
+     "w": "Here's",
+     "s": 394.489
+    },
+    {
+     "w": "how",
+     "s": 394.669
+    },
+    {
+     "w": "to",
+     "s": 394.769
+    },
+    {
+     "w": "launch,",
+     "s": 394.869
+    },
+    {
+     "w": "step",
+     "s": 395.429
+    },
+    {
+     "w": "by",
+     "s": 395.589
+    },
+    {
+     "w": "step.",
+     "s": 395.749
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "launch,"
+    ]
+   ]
+  },
+  {
+   "scene": "launch",
+   "sub": "Pick the niche your audience already lives in. HVAC content to HVAC contractors converts better, and it's more honest, than everything to everyone.",
+   "start": 396.681,
+   "end": 406.145,
+   "words": [
+    {
+     "w": "Pick",
+     "s": 396.681
+    },
+    {
+     "w": "the",
+     "s": 396.801
+    },
+    {
+     "w": "niche",
+     "s": 396.981
+    },
+    {
+     "w": "your",
+     "s": 397.121
+    },
+    {
+     "w": "audience",
+     "s": 397.301
+    },
+    {
+     "w": "already",
+     "s": 397.621
+    },
+    {
+     "w": "lives",
+     "s": 398.061
+    },
+    {
+     "w": "in.",
+     "s": 398.301
+    },
+    {
+     "w": "HVAC",
+     "s": 399.121
+    },
+    {
+     "w": "content",
+     "s": 399.941
+    },
+    {
+     "w": "to",
+     "s": 400.401
+    },
+    {
+     "w": "HVAC",
+     "s": 401.031
+    },
+    {
+     "w": "contractors",
+     "s": 401.661
+    },
+    {
+     "w": "converts",
+     "s": 402.001
+    },
+    {
+     "w": "better,",
+     "s": 402.521
+    },
+    {
+     "w": "and",
+     "s": 403.701
+    },
+    {
+     "w": "it's",
+     "s": 403.741
+    },
+    {
+     "w": "more",
+     "s": 403.841
+    },
+    {
+     "w": "honest,",
+     "s": 404.021
+    },
+    {
+     "w": "than",
+     "s": 404.821
+    },
+    {
+     "w": "everything",
+     "s": 404.861
+    },
+    {
+     "w": "to",
+     "s": 405.221
+    },
+    {
+     "w": "everyone.",
+     "s": 405.501
+    }
+   ],
+   "cues": [
+    [
+     "up",
+     "niche"
+    ]
+   ]
+  },
+  {
+   "scene": "launch",
+   "sub": "There are twenty-one to choose from: ten ninety-nine contractors, Airbnb hosts, auto repair shops, cleaning services, construction, dental practices, digital marketing agencies, ecommerce, electrical contractors, HVAC, pest control, landscaping, lawn care, manufacturing, plumbing, property management, rental property, restaurants, roofing, small businesses, and trucking owner-operators.",
+   "start": 406.565,
+   "end": 429.153,
+   "words": [
+    {
+     "w": "There",
+     "s": 406.565
+    },
+    {
+     "w": "are",
+     "s": 406.645
+    },
+    {
+     "w": "twenty-one",
+     "s": 406.935
+    },
+    {
+     "w": "to",
+     "s": 407.225
+    },
+    {
+     "w": "choose",
+     "s": 407.345
+    },
+    {
+     "w": "from:",
+     "s": 407.545
+    },
+    {
+     "w": "ten",
+     "s": 408.345
+    },
+    {
+     "w": "ninety-nine",
+     "s": 408.705
+    },
+    {
+     "w": "contractors,",
+     "s": 409.065
+    },
+    {
+     "w": "Airbnb",
+     "s": 409.692
+    },
+    {
+     "w": "hosts,",
+     "s": 410.318
+    },
+    {
+     "w": "auto",
+     "s": 410.945
+    },
+    {
+     "w": "repair",
+     "s": 411.125
+    },
+    {
+     "w": "shops,",
+     "s": 411.385
+    },
+    {
+     "w": "cleaning",
+     "s": 412.145
+    },
+    {
+     "w": "services,",
+     "s": 412.345
+    },
+    {
+     "w": "construction,",
+     "s": 413.185
+    },
+    {
+     "w": "dental",
+     "s": 413.885
+    },
+    {
+     "w": "practices,",
+     "s": 414.005
+    },
+    {
+     "w": "digital",
+     "s": 414.845
+    },
+    {
+     "w": "marketing",
+     "s": 415.005
+    },
+    {
+     "w": "agencies,",
+     "s": 415.385
+    },
+    {
+     "w": "ecommerce,",
+     "s": 416.465
+    },
+    {
+     "w": "electrical",
+     "s": 417.125
+    },
+    {
+     "w": "contractors,",
+     "s": 417.485
+    },
+    {
+     "w": "HVAC,",
+     "s": 418.435
+    },
+    {
+     "w": "pest",
+     "s": 419.385
+    },
+    {
+     "w": "control,",
+     "s": 419.445
+    },
+    {
+     "w": "landscaping,",
+     "s": 420.045
+    },
+    {
+     "w": "lawn",
+     "s": 421.025
+    },
+    {
+     "w": "care,",
+     "s": 421.085
+    },
+    {
+     "w": "manufacturing,",
+     "s": 421.765
+    },
+    {
+     "w": "plumbing,",
+     "s": 422.765
+    },
+    {
+     "w": "property",
+     "s": 423.265
+    },
+    {
+     "w": "management,",
+     "s": 423.445
+    },
+    {
+     "w": "rental",
+     "s": 424.405
+    },
+    {
+     "w": "property,",
+     "s": 424.605
+    },
+    {
+     "w": "restaurants,",
+     "s": 425.365
+    },
+    {
+     "w": "roofing,",
+     "s": 426.245
+    },
+    {
+     "w": "small",
+     "s": 426.805
+    },
+    {
+     "w": "businesses,",
+     "s": 426.985
+    },
+    {
+     "w": "and",
+     "s": 427.785
+    },
+    {
+     "w": "trucking",
+     "s": 427.815
+    },
+    {
+     "w": "owner-operators.",
+     "s": 428.479
+    }
+   ],
+   "cues": [
+    [
+     "sparkle",
+     "twenty-one"
+    ]
+   ]
+  },
+  {
+   "scene": "launch",
+   "sub": "Read that niche's product facts and tier comparison.",
+   "start": 429.573,
+   "end": 432.48,
+   "words": [
+    {
+     "w": "Read",
+     "s": 429.573
+    },
+    {
+     "w": "that",
+     "s": 429.773
+    },
+    {
+     "w": "niche's",
+     "s": 429.973
+    },
+    {
+     "w": "product",
+     "s": 430.313
+    },
+    {
+     "w": "facts",
+     "s": 430.633
+    },
+    {
+     "w": "and",
+     "s": 430.893
+    },
+    {
+     "w": "tier",
+     "s": 431.453
+    },
+    {
+     "w": "comparison.",
+     "s": 431.653
+    }
+   ],
+   "cues": [
+    [
+     "up",
+     "Read"
+    ]
+   ]
+  },
+  {
+   "scene": "launch",
+   "sub": "Pick your hooks, scripts, posts and emails, and download the graphics.",
+   "start": 432.9,
+   "end": 436.52,
+   "words": [
+    {
+     "w": "Pick",
+     "s": 432.9
+    },
+    {
+     "w": "your",
+     "s": 433.0
+    },
+    {
+     "w": "hooks,",
+     "s": 433.14
+    },
+    {
+     "w": "scripts,",
+     "s": 433.64
+    },
+    {
+     "w": "posts",
+     "s": 434.16
+    },
+    {
+     "w": "and",
+     "s": 434.34
+    },
+    {
+     "w": "emails,",
+     "s": 434.64
+    },
+    {
+     "w": "and",
+     "s": 435.26
+    },
+    {
+     "w": "download",
+     "s": 435.3
+    },
+    {
+     "w": "the",
+     "s": 435.54
+    },
+    {
+     "w": "graphics.",
+     "s": 435.84
+    }
+   ],
+   "cues": [
+    [
+     "up",
+     "Pick"
+    ]
+   ]
+  },
+  {
+   "scene": "launch",
+   "sub": "Sign in to Digistore24, request promotion if it's required, and copy the link for the right niche and edition.",
+   "start": 436.94,
+   "end": 443.768,
+   "words": [
+    {
+     "w": "Sign",
+     "s": 436.94
+    },
+    {
+     "w": "in",
+     "s": 437.14
+    },
+    {
+     "w": "to",
+     "s": 437.46
+    },
+    {
+     "w": "Digistore24,",
+     "s": 437.6
+    },
+    {
+     "w": "request",
+     "s": 439.06
+    },
+    {
+     "w": "promotion",
+     "s": 439.38
+    },
+    {
+     "w": "if",
+     "s": 439.74
+    },
+    {
+     "w": "it's",
+     "s": 440.22
+    },
+    {
+     "w": "required,",
+     "s": 440.36
+    },
+    {
+     "w": "and",
+     "s": 441.34
+    },
+    {
+     "w": "copy",
+     "s": 441.44
+    },
+    {
+     "w": "the",
+     "s": 441.68
+    },
+    {
+     "w": "link",
+     "s": 441.88
+    },
+    {
+     "w": "for",
+     "s": 442.06
+    },
+    {
+     "w": "the",
+     "s": 442.28
+    },
+    {
+     "w": "right",
+     "s": 442.38
+    },
+    {
+     "w": "niche",
+     "s": 442.6
+    },
+    {
+     "w": "and",
+     "s": 442.92
+    },
+    {
+     "w": "edition.",
+     "s": 443.18
+    }
+   ],
+   "cues": [
+    [
+     "up",
+     "Sign"
+    ]
+   ]
+  },
+  {
+   "scene": "launch",
+   "sub": "Check the page: it opens the right product, it loads on mobile, and the prices match.",
+   "start": 444.188,
+   "end": 449.139,
+   "words": [
+    {
+     "w": "Check",
+     "s": 444.188
+    },
+    {
+     "w": "the",
+     "s": 444.348
+    },
+    {
+     "w": "page:",
+     "s": 444.508
+    },
+    {
+     "w": "it",
+     "s": 445.328
+    },
+    {
+     "w": "opens",
+     "s": 445.488
+    },
+    {
+     "w": "the",
+     "s": 445.768
+    },
+    {
+     "w": "right",
+     "s": 445.988
+    },
+    {
+     "w": "product,",
+     "s": 446.128
+    },
+    {
+     "w": "it",
+     "s": 446.888
+    },
+    {
+     "w": "loads",
+     "s": 446.948
+    },
+    {
+     "w": "on",
+     "s": 447.148
+    },
+    {
+     "w": "mobile,",
+     "s": 447.408
+    },
+    {
+     "w": "and",
+     "s": 448.048
+    },
+    {
+     "w": "the",
+     "s": 448.088
+    },
+    {
+     "w": "prices",
+     "s": 448.168
+    },
+    {
+     "w": "match.",
+     "s": 448.388
+    }
+   ],
+   "cues": [
+    [
+     "up",
+     "Check"
+    ]
+   ]
+  },
+  {
+   "scene": "launch",
+   "sub": "Test your link once, from a private browser window. Don't buy through your own link to test it.",
+   "start": 449.559,
+   "end": 454.366,
+   "words": [
+    {
+     "w": "Test",
+     "s": 449.559
+    },
+    {
+     "w": "your",
+     "s": 449.699
+    },
+    {
+     "w": "link",
+     "s": 449.879
+    },
+    {
+     "w": "once,",
+     "s": 450.039
+    },
+    {
+     "w": "from",
+     "s": 450.699
+    },
+    {
+     "w": "a",
+     "s": 450.739
+    },
+    {
+     "w": "private",
+     "s": 450.799
+    },
+    {
+     "w": "browser",
+     "s": 451.059
+    },
+    {
+     "w": "window.",
+     "s": 451.319
+    },
+    {
+     "w": "Don't",
+     "s": 452.519
+    },
+    {
+     "w": "buy",
+     "s": 452.639
+    },
+    {
+     "w": "through",
+     "s": 452.799
+    },
+    {
+     "w": "your",
+     "s": 453.059
+    },
+    {
+     "w": "own",
+     "s": 453.219
+    },
+    {
+     "w": "link",
+     "s": 453.399
+    },
+    {
+     "w": "to",
+     "s": 453.619
+    },
+    {
+     "w": "test",
+     "s": 453.759
+    },
+    {
+     "w": "it.",
+     "s": 453.959
+    }
+   ],
+   "cues": [
+    [
+     "up",
+     "Test"
+    ]
+   ]
+  },
+  {
+   "scene": "launch",
+   "sub": "Then publish, with a clear disclosure in every post, email and video.",
+   "start": 454.786,
+   "end": 458.727,
+   "words": [
+    {
+     "w": "Then",
+     "s": 454.786
+    },
+    {
+     "w": "publish,",
+     "s": 454.886
+    },
+    {
+     "w": "with",
+     "s": 455.486
+    },
+    {
+     "w": "a",
+     "s": 455.586
+    },
+    {
+     "w": "clear",
+     "s": 455.646
+    },
+    {
+     "w": "disclosure",
+     "s": 455.906
+    },
+    {
+     "w": "in",
+     "s": 456.266
+    },
+    {
+     "w": "every",
+     "s": 456.706
+    },
+    {
+     "w": "post,",
+     "s": 456.846
+    },
+    {
+     "w": "email",
+     "s": 457.606
+    },
+    {
+     "w": "and",
+     "s": 457.886
+    },
+    {
+     "w": "video.",
+     "s": 458.206
+    }
+   ],
+   "cues": [
+    [
+     "up",
+     "publish,"
+    ]
+   ]
+  },
+  {
+   "scene": "launch",
+   "sub": "And check your clicks, sales and refunds weekly. Keep what works. Drop what doesn't.",
+   "start": 459.147,
+   "end": 463.663,
+   "words": [
+    {
+     "w": "And",
+     "s": 459.147
+    },
+    {
+     "w": "check",
+     "s": 459.227
+    },
+    {
+     "w": "your",
+     "s": 459.387
+    },
+    {
+     "w": "clicks,",
+     "s": 459.567
+    },
+    {
+     "w": "sales",
+     "s": 459.887
+    },
+    {
+     "w": "and",
+     "s": 460.207
+    },
+    {
+     "w": "refunds",
+     "s": 460.547
+    },
+    {
+     "w": "weekly.",
+     "s": 460.667
+    },
+    {
+     "w": "Keep",
+     "s": 461.907
+    },
+    {
+     "w": "what",
+     "s": 461.937
+    },
+    {
+     "w": "works.",
+     "s": 462.067
+    },
+    {
+     "w": "Drop",
+     "s": 462.907
+    },
+    {
+     "w": "what",
+     "s": 462.937
+    },
+    {
+     "w": "doesn't.",
+     "s": 463.147
+    }
+   ],
+   "cues": [
+    [
+     "up",
+     "check"
+    ]
+   ]
+  },
+  {
+   "scene": "email",
+   "sub": "If you use email, there are two lanes, and the kit keeps them separate.",
+   "start": 465.863,
+   "end": 469.304,
+   "words": [
+    {
+     "w": "If",
+     "s": 465.863
+    },
+    {
+     "w": "you",
+     "s": 465.943
+    },
+    {
+     "w": "use",
+     "s": 466.023
+    },
+    {
+     "w": "email,",
+     "s": 466.223
+    },
+    {
+     "w": "there",
+     "s": 466.883
+    },
+    {
+     "w": "are",
+     "s": 466.983
+    },
+    {
+     "w": "two",
+     "s": 467.103
+    },
+    {
+     "w": "lanes,",
+     "s": 467.283
+    },
+    {
+     "w": "and",
+     "s": 468.023
+    },
+    {
+     "w": "the",
+     "s": 468.063
+    },
+    {
+     "w": "kit",
+     "s": 468.163
+    },
+    {
+     "w": "keeps",
+     "s": 468.303
+    },
+    {
+     "w": "them",
+     "s": 468.563
+    },
+    {
+     "w": "separate.",
+     "s": 468.763
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "two"
+    ]
+   ]
+  },
+  {
+   "scene": "email",
+   "sub": "Your own list gets the email swipes, and only people who opted in.",
+   "start": 469.724,
+   "end": 473.513,
+   "words": [
+    {
+     "w": "Your",
+     "s": 469.724
+    },
+    {
+     "w": "own",
+     "s": 469.824
+    },
+    {
+     "w": "list",
+     "s": 470.044
+    },
+    {
+     "w": "gets",
+     "s": 470.244
+    },
+    {
+     "w": "the",
+     "s": 470.524
+    },
+    {
+     "w": "email",
+     "s": 470.724
+    },
+    {
+     "w": "swipes,",
+     "s": 470.944
+    },
+    {
+     "w": "and",
+     "s": 472.004
+    },
+    {
+     "w": "only",
+     "s": 472.064
+    },
+    {
+     "w": "people",
+     "s": 472.304
+    },
+    {
+     "w": "who",
+     "s": 472.564
+    },
+    {
+     "w": "opted",
+     "s": 472.824
+    },
+    {
+     "w": "in.",
+     "s": 473.004
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "opted"
+    ]
+   ]
+  },
+  {
+   "scene": "email",
+   "sub": "Cold outreach to business owners gets its own playbook, and its own setup: separate sending domains, a verified list, proper authentication, and weeks of warm-up before a single cold email.",
+   "start": 473.933,
+   "end": 485.471,
+   "words": [
+    {
+     "w": "Cold",
+     "s": 473.933
+    },
+    {
+     "w": "outreach",
+     "s": 474.133
+    },
+    {
+     "w": "to",
+     "s": 474.373
+    },
+    {
+     "w": "business",
+     "s": 474.833
+    },
+    {
+     "w": "owners",
+     "s": 475.033
+    },
+    {
+     "w": "gets",
+     "s": 475.373
+    },
+    {
+     "w": "its",
+     "s": 475.793
+    },
+    {
+     "w": "own",
+     "s": 476.013
+    },
+    {
+     "w": "playbook,",
+     "s": 476.213
+    },
+    {
+     "w": "and",
+     "s": 477.133
+    },
+    {
+     "w": "its",
+     "s": 477.213
+    },
+    {
+     "w": "own",
+     "s": 477.353
+    },
+    {
+     "w": "setup:",
+     "s": 477.533
+    },
+    {
+     "w": "separate",
+     "s": 478.513
+    },
+    {
+     "w": "sending",
+     "s": 478.893
+    },
+    {
+     "w": "domains,",
+     "s": 479.113
+    },
+    {
+     "w": "a",
+     "s": 480.013
+    },
+    {
+     "w": "verified",
+     "s": 480.053
+    },
+    {
+     "w": "list,",
+     "s": 480.313
+    },
+    {
+     "w": "proper",
+     "s": 481.253
+    },
+    {
+     "w": "authentication,",
+     "s": 481.333
+    },
+    {
+     "w": "and",
+     "s": 482.753
+    },
+    {
+     "w": "weeks",
+     "s": 482.833
+    },
+    {
+     "w": "of",
+     "s": 483.033
+    },
+    {
+     "w": "warm-up",
+     "s": 483.343
+    },
+    {
+     "w": "before",
+     "s": 483.653
+    },
+    {
+     "w": "a",
+     "s": 483.973
+    },
+    {
+     "w": "single",
+     "s": 484.133
+    },
+    {
+     "w": "cold",
+     "s": 484.453
+    },
+    {
+     "w": "email.",
+     "s": 484.733
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "separate"
+    ],
+    [
+     "pop",
+     "verified"
+    ],
+    [
+     "pop",
+     "authentication,"
+    ],
+    [
+     "pop",
+     "warm-up"
+    ]
+   ]
+  },
+  {
+   "scene": "email",
+   "sub": "Plus the legal basics, like a real postal address and a working opt-out in every message.",
+   "start": 485.891,
+   "end": 491.162,
+   "words": [
+    {
+     "w": "Plus",
+     "s": 485.891
+    },
+    {
+     "w": "the",
+     "s": 486.051
+    },
+    {
+     "w": "legal",
+     "s": 486.231
+    },
+    {
+     "w": "basics,",
+     "s": 486.471
+    },
+    {
+     "w": "like",
+     "s": 487.491
+    },
+    {
+     "w": "a",
+     "s": 487.571
+    },
+    {
+     "w": "real",
+     "s": 487.691
+    },
+    {
+     "w": "postal",
+     "s": 487.951
+    },
+    {
+     "w": "address",
+     "s": 488.191
+    },
+    {
+     "w": "and",
+     "s": 488.771
+    },
+    {
+     "w": "a",
+     "s": 489.111
+    },
+    {
+     "w": "working",
+     "s": 489.191
+    },
+    {
+     "w": "opt-out",
+     "s": 489.631
+    },
+    {
+     "w": "in",
+     "s": 490.071
+    },
+    {
+     "w": "every",
+     "s": 490.211
+    },
+    {
+     "w": "message.",
+     "s": 490.371
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "postal"
+    ],
+    [
+     "pop",
+     "opt-out"
+    ]
+   ]
+  },
+  {
+   "scene": "rules",
+   "sub": "And the rules that keep all of this working.",
+   "start": 493.362,
+   "end": 495.268,
+   "words": [
+    {
+     "w": "And",
+     "s": 493.362
+    },
+    {
+     "w": "the",
+     "s": 493.442
+    },
+    {
+     "w": "rules",
+     "s": 493.502
+    },
+    {
+     "w": "that",
+     "s": 493.742
+    },
+    {
+     "w": "keep",
+     "s": 494.042
+    },
+    {
+     "w": "all",
+     "s": 494.222
+    },
+    {
+     "w": "of",
+     "s": 494.482
+    },
+    {
+     "w": "this",
+     "s": 494.602
+    },
+    {
+     "w": "working.",
+     "s": 494.722
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "rules"
+    ]
+   ]
+  },
+  {
+   "scene": "rules",
+   "sub": "Disclose clearly, right next to your link, and say it in your videos.",
+   "start": 495.688,
+   "end": 499.079,
+   "words": [
+    {
+     "w": "Disclose",
+     "s": 495.688
+    },
+    {
+     "w": "clearly,",
+     "s": 496.048
+    },
+    {
+     "w": "right",
+     "s": 496.868
+    },
+    {
+     "w": "next",
+     "s": 497.028
+    },
+    {
+     "w": "to",
+     "s": 497.248
+    },
+    {
+     "w": "your",
+     "s": 497.428
+    },
+    {
+     "w": "link,",
+     "s": 497.488
+    },
+    {
+     "w": "and",
+     "s": 497.888
+    },
+    {
+     "w": "say",
+     "s": 497.948
+    },
+    {
+     "w": "it",
+     "s": 498.148
+    },
+    {
+     "w": "in",
+     "s": 498.308
+    },
+    {
+     "w": "your",
+     "s": 498.348
+    },
+    {
+     "w": "videos.",
+     "s": 498.468
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Disclose"
+    ]
+   ]
+  },
+  {
+   "scene": "rules",
+   "sub": "Describe the product honestly: an Excel system that needs desktop Excel.",
+   "start": 499.499,
+   "end": 503.993,
+   "words": [
+    {
+     "w": "Describe",
+     "s": 499.499
+    },
+    {
+     "w": "the",
+     "s": 499.919
+    },
+    {
+     "w": "product",
+     "s": 499.999
+    },
+    {
+     "w": "honestly:",
+     "s": 500.239
+    },
+    {
+     "w": "an",
+     "s": 501.439
+    },
+    {
+     "w": "Excel",
+     "s": 501.479
+    },
+    {
+     "w": "system",
+     "s": 501.659
+    },
+    {
+     "w": "that",
+     "s": 502.099
+    },
+    {
+     "w": "needs",
+     "s": 502.459
+    },
+    {
+     "w": "desktop",
+     "s": 502.659
+    },
+    {
+     "w": "Excel.",
+     "s": 503.019
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "honestly:"
+    ]
+   ]
+  },
+  {
+   "scene": "rules",
+   "sub": "No fake reviews or testimonials. No income or results claims, for buyers or for affiliates.",
+   "start": 504.413,
+   "end": 510.718,
+   "words": [
+    {
+     "w": "No",
+     "s": 504.413
+    },
+    {
+     "w": "fake",
+     "s": 504.553
+    },
+    {
+     "w": "reviews",
+     "s": 504.773
+    },
+    {
+     "w": "or",
+     "s": 505.153
+    },
+    {
+     "w": "testimonials.",
+     "s": 505.553
+    },
+    {
+     "w": "No",
+     "s": 506.993
+    },
+    {
+     "w": "income",
+     "s": 507.053
+    },
+    {
+     "w": "or",
+     "s": 507.353
+    },
+    {
+     "w": "results",
+     "s": 507.713
+    },
+    {
+     "w": "claims,",
+     "s": 507.973
+    },
+    {
+     "w": "for",
+     "s": 508.993
+    },
+    {
+     "w": "buyers",
+     "s": 509.023
+    },
+    {
+     "w": "or",
+     "s": 509.253
+    },
+    {
+     "w": "for",
+     "s": 509.733
+    },
+    {
+     "w": "affiliates.",
+     "s": 509.933
+    }
+   ],
+   "cues": [
+    [
+     "stamp",
+     "fake"
+    ],
+    [
+     "stamp",
+     "income"
+    ]
+   ]
+  },
+  {
+   "scene": "rules",
+   "sub": "If you bought and used the product yourself, you can share your own honest experience.",
+   "start": 511.138,
+   "end": 515.773,
+   "words": [
+    {
+     "w": "If",
+     "s": 511.138
+    },
+    {
+     "w": "you",
+     "s": 511.218
+    },
+    {
+     "w": "bought",
+     "s": 511.298
+    },
+    {
+     "w": "and",
+     "s": 511.498
+    },
+    {
+     "w": "used",
+     "s": 511.738
+    },
+    {
+     "w": "the",
+     "s": 511.898
+    },
+    {
+     "w": "product",
+     "s": 512.098
+    },
+    {
+     "w": "yourself,",
+     "s": 512.358
+    },
+    {
+     "w": "you",
+     "s": 513.358
+    },
+    {
+     "w": "can",
+     "s": 513.458
+    },
+    {
+     "w": "share",
+     "s": 513.558
+    },
+    {
+     "w": "your",
+     "s": 513.798
+    },
+    {
+     "w": "own",
+     "s": 514.018
+    },
+    {
+     "w": "honest",
+     "s": 514.318
+    },
+    {
+     "w": "experience.",
+     "s": 514.638
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "honest"
+    ]
+   ]
+  },
+  {
+   "scene": "rules",
+   "sub": "No spam, no impersonating ProfitIQS or Digistore24, and no bidding on the ProfitIQS brand name in paid search.",
+   "start": 516.193,
+   "end": 524.464,
+   "words": [
+    {
+     "w": "No",
+     "s": 516.193
+    },
+    {
+     "w": "spam,",
+     "s": 516.333
+    },
+    {
+     "w": "no",
+     "s": 517.013
+    },
+    {
+     "w": "impersonating",
+     "s": 517.253
+    },
+    {
+     "w": "ProfitIQS",
+     "s": 518.143
+    },
+    {
+     "w": "or",
+     "s": 519.033
+    },
+    {
+     "w": "Digistore24,",
+     "s": 519.453
+    },
+    {
+     "w": "and",
+     "s": 520.893
+    },
+    {
+     "w": "no",
+     "s": 521.153
+    },
+    {
+     "w": "bidding",
+     "s": 521.333
+    },
+    {
+     "w": "on",
+     "s": 521.633
+    },
+    {
+     "w": "the",
+     "s": 521.913
+    },
+    {
+     "w": "ProfitIQS",
+     "s": 522.373
+    },
+    {
+     "w": "brand",
+     "s": 522.833
+    },
+    {
+     "w": "name",
+     "s": 523.053
+    },
+    {
+     "w": "in",
+     "s": 523.413
+    },
+    {
+     "w": "paid",
+     "s": 523.653
+    },
+    {
+     "w": "search.",
+     "s": 523.833
+    }
+   ],
+   "cues": [
+    [
+     "stamp",
+     "spam,"
+    ],
+    [
+     "stamp",
+     "impersonating"
+    ],
+    [
+     "stamp",
+     "bidding"
+    ]
+   ]
+  },
+  {
+   "scene": "rules",
+   "sub": "No discounts, bonuses or guarantees that ProfitIQS hasn't approved.",
+   "start": 524.884,
+   "end": 529.375,
+   "words": [
+    {
+     "w": "No",
+     "s": 524.884
+    },
+    {
+     "w": "discounts,",
+     "s": 525.024
+    },
+    {
+     "w": "bonuses",
+     "s": 525.884
+    },
+    {
+     "w": "or",
+     "s": 526.104
+    },
+    {
+     "w": "guarantees",
+     "s": 526.604
+    },
+    {
+     "w": "that",
+     "s": 527.044
+    },
+    {
+     "w": "ProfitIQS",
+     "s": 527.734
+    },
+    {
+     "w": "hasn't",
+     "s": 528.424
+    },
+    {
+     "w": "approved.",
+     "s": 528.804
+    }
+   ],
+   "cues": [
+    [
+     "stamp",
+     "discounts,"
+    ]
+   ]
+  },
+  {
+   "scene": "rules",
+   "sub": "And no claims of integrations, automation or AI. The products don't have them, and that's fine.",
+   "start": 529.795,
+   "end": 535.617,
+   "words": [
+    {
+     "w": "And",
+     "s": 529.795
+    },
+    {
+     "w": "no",
+     "s": 529.875
+    },
+    {
+     "w": "claims",
+     "s": 530.035
+    },
+    {
+     "w": "of",
+     "s": 530.315
+    },
+    {
+     "w": "integrations,",
+     "s": 530.535
+    },
+    {
+     "w": "automation",
+     "s": 531.535
+    },
+    {
+     "w": "or",
+     "s": 531.835
+    },
+    {
+     "w": "AI.",
+     "s": 532.435
+    },
+    {
+     "w": "The",
+     "s": 533.495
+    },
+    {
+     "w": "products",
+     "s": 533.555
+    },
+    {
+     "w": "don't",
+     "s": 533.815
+    },
+    {
+     "w": "have",
+     "s": 534.195
+    },
+    {
+     "w": "them,",
+     "s": 534.395
+    },
+    {
+     "w": "and",
+     "s": 534.795
+    },
+    {
+     "w": "that's",
+     "s": 534.835
+    },
+    {
+     "w": "fine.",
+     "s": 535.115
+    }
+   ],
+   "cues": [
+    [
+     "stamp",
+     "integrations,"
+    ]
+   ]
+  },
+  {
+   "scene": "rules",
+   "sub": "If you're ever unsure, leave it out, or ask.",
+   "start": 536.037,
+   "end": 538.149,
+   "words": [
+    {
+     "w": "If",
+     "s": 536.037
+    },
+    {
+     "w": "you're",
+     "s": 536.117
+    },
+    {
+     "w": "ever",
+     "s": 536.217
+    },
+    {
+     "w": "unsure,",
+     "s": 536.337
+    },
+    {
+     "w": "leave",
+     "s": 537.077
+    },
+    {
+     "w": "it",
+     "s": 537.177
+    },
+    {
+     "w": "out,",
+     "s": 537.297
+    },
+    {
+     "w": "or",
+     "s": 537.597
+    },
+    {
+     "w": "ask.",
+     "s": 537.637
+    }
+   ],
+   "cues": [
+    [
+     "ding",
+     "ask."
+    ]
+   ]
+  },
+  {
+   "scene": "faq",
+   "sub": "A few honest answers before you start.",
+   "start": 540.349,
+   "end": 542.365,
+   "words": [
+    {
+     "w": "A",
+     "s": 540.349
+    },
+    {
+     "w": "few",
+     "s": 540.409
+    },
+    {
+     "w": "honest",
+     "s": 540.569
+    },
+    {
+     "w": "answers",
+     "s": 540.869
+    },
+    {
+     "w": "before",
+     "s": 541.309
+    },
+    {
+     "w": "you",
+     "s": 541.689
+    },
+    {
+     "w": "start.",
+     "s": 541.849
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "honest"
+    ]
+   ]
+  },
+  {
+   "scene": "faq",
+   "sub": "Is the ninety percent for life? No. It's the planned launch rate, then eighty-five, then eighty. Nothing in the kit promises a rate locked for life.",
+   "start": 542.785,
+   "end": 551.304,
+   "words": [
+    {
+     "w": "Is",
+     "s": 542.785
+    },
+    {
+     "w": "the",
+     "s": 542.865
+    },
+    {
+     "w": "ninety",
+     "s": 542.965
+    },
+    {
+     "w": "percent",
+     "s": 543.145
+    },
+    {
+     "w": "for",
+     "s": 543.545
+    },
+    {
+     "w": "life?",
+     "s": 543.745
+    },
+    {
+     "w": "No.",
+     "s": 544.645
+    },
+    {
+     "w": "It's",
+     "s": 545.345
+    },
+    {
+     "w": "the",
+     "s": 545.445
+    },
+    {
+     "w": "planned",
+     "s": 545.525
+    },
+    {
+     "w": "launch",
+     "s": 545.745
+    },
+    {
+     "w": "rate,",
+     "s": 546.025
+    },
+    {
+     "w": "then",
+     "s": 546.645
+    },
+    {
+     "w": "eighty-five,",
+     "s": 547.085
+    },
+    {
+     "w": "then",
+     "s": 547.525
+    },
+    {
+     "w": "eighty.",
+     "s": 547.625
+    },
+    {
+     "w": "Nothing",
+     "s": 548.605
+    },
+    {
+     "w": "in",
+     "s": 548.805
+    },
+    {
+     "w": "the",
+     "s": 549.065
+    },
+    {
+     "w": "kit",
+     "s": 549.165
+    },
+    {
+     "w": "promises",
+     "s": 549.365
+    },
+    {
+     "w": "a",
+     "s": 549.825
+    },
+    {
+     "w": "rate",
+     "s": 550.045
+    },
+    {
+     "w": "locked",
+     "s": 550.205
+    },
+    {
+     "w": "for",
+     "s": 550.505
+    },
+    {
+     "w": "life.",
+     "s": 550.745
+    }
+   ],
+   "cues": [
+    [
+     "stamp",
+     "No."
+    ]
+   ]
+  },
+  {
+   "scene": "faq",
+   "sub": "Is it approved on the Digistore24 marketplace? It's submitted and pending. Check the current status before you say otherwise.",
+   "start": 551.724,
+   "end": 559.36,
+   "words": [
+    {
+     "w": "Is",
+     "s": 551.724
+    },
+    {
+     "w": "it",
+     "s": 551.824
+    },
+    {
+     "w": "approved",
+     "s": 551.904
+    },
+    {
+     "w": "on",
+     "s": 552.164
+    },
+    {
+     "w": "the",
+     "s": 552.524
+    },
+    {
+     "w": "Digistore24",
+     "s": 552.644
+    },
+    {
+     "w": "marketplace?",
+     "s": 553.424
+    },
+    {
+     "w": "It's",
+     "s": 554.984
+    },
+    {
+     "w": "submitted",
+     "s": 555.104
+    },
+    {
+     "w": "and",
+     "s": 555.384
+    },
+    {
+     "w": "pending.",
+     "s": 555.884
+    },
+    {
+     "w": "Check",
+     "s": 557.024
+    },
+    {
+     "w": "the",
+     "s": 557.054
+    },
+    {
+     "w": "current",
+     "s": 557.224
+    },
+    {
+     "w": "status",
+     "s": 557.424
+    },
+    {
+     "w": "before",
+     "s": 557.764
+    },
+    {
+     "w": "you",
+     "s": 558.204
+    },
+    {
+     "w": "say",
+     "s": 558.424
+    },
+    {
+     "w": "otherwise.",
+     "s": 558.604
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "pending."
+    ]
+   ]
+  },
+  {
+   "scene": "faq",
+   "sub": "Can I offer a discount or a bonus? Only if it's on the sales page, or ProfitIQS approved it in writing.",
+   "start": 559.78,
+   "end": 566.498,
+   "words": [
+    {
+     "w": "Can",
+     "s": 559.78
+    },
+    {
+     "w": "I",
+     "s": 559.88
+    },
+    {
+     "w": "offer",
+     "s": 560.0
+    },
+    {
+     "w": "a",
+     "s": 560.32
+    },
+    {
+     "w": "discount",
+     "s": 560.44
+    },
+    {
+     "w": "or",
+     "s": 560.68
+    },
+    {
+     "w": "a",
+     "s": 561.22
+    },
+    {
+     "w": "bonus?",
+     "s": 561.28
+    },
+    {
+     "w": "Only",
+     "s": 562.32
+    },
+    {
+     "w": "if",
+     "s": 562.52
+    },
+    {
+     "w": "it's",
+     "s": 562.7
+    },
+    {
+     "w": "on",
+     "s": 562.84
+    },
+    {
+     "w": "the",
+     "s": 562.94
+    },
+    {
+     "w": "sales",
+     "s": 563.02
+    },
+    {
+     "w": "page,",
+     "s": 563.16
+    },
+    {
+     "w": "or",
+     "s": 564.12
+    },
+    {
+     "w": "ProfitIQS",
+     "s": 564.6
+    },
+    {
+     "w": "approved",
+     "s": 565.08
+    },
+    {
+     "w": "it",
+     "s": 565.38
+    },
+    {
+     "w": "in",
+     "s": 565.7
+    },
+    {
+     "w": "writing.",
+     "s": 565.86
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Only"
+    ]
+   ]
+  },
+  {
+   "scene": "faq",
+   "sub": "And who looks after the customer? ProfitIQS handles product support. Digistore24 processes the orders, payments and refunds.",
+   "start": 566.918,
+   "end": 575.415,
+   "words": [
+    {
+     "w": "And",
+     "s": 566.918
+    },
+    {
+     "w": "who",
+     "s": 566.998
+    },
+    {
+     "w": "looks",
+     "s": 567.138
+    },
+    {
+     "w": "after",
+     "s": 567.298
+    },
+    {
+     "w": "the",
+     "s": 567.638
+    },
+    {
+     "w": "customer?",
+     "s": 567.818
+    },
+    {
+     "w": "ProfitIQS",
+     "s": 568.708
+    },
+    {
+     "w": "handles",
+     "s": 569.598
+    },
+    {
+     "w": "product",
+     "s": 570.018
+    },
+    {
+     "w": "support.",
+     "s": 570.278
+    },
+    {
+     "w": "Digistore24",
+     "s": 571.558
+    },
+    {
+     "w": "processes",
+     "s": 572.398
+    },
+    {
+     "w": "the",
+     "s": 573.018
+    },
+    {
+     "w": "orders,",
+     "s": 573.338
+    },
+    {
+     "w": "payments",
+     "s": 574.018
+    },
+    {
+     "w": "and",
+     "s": 574.258
+    },
+    {
+     "w": "refunds.",
+     "s": 574.718
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "support."
+    ],
+    [
+     "pop",
+     "processes"
+    ]
+   ]
+  },
+  {
+   "scene": "cta",
+   "sub": "So here's your next step.",
+   "start": 577.615,
+   "end": 578.847,
+   "words": [
+    {
+     "w": "So",
+     "s": 577.615
+    },
+    {
+     "w": "here's",
+     "s": 577.755
+    },
+    {
+     "w": "your",
+     "s": 578.055
+    },
+    {
+     "w": "next",
+     "s": 578.135
+    },
+    {
+     "w": "step.",
+     "s": 578.275
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "next"
+    ]
+   ]
+  },
+  {
+   "scene": "cta",
+   "sub": "Ask the ProfitIQS team for your Affiliate Hub link. Email support at profitiqs dot com, with \"Affiliate\" in the subject line.",
+   "start": 579.267,
+   "end": 587.808,
+   "words": [
+    {
+     "w": "Ask",
+     "s": 579.267
+    },
+    {
+     "w": "the",
+     "s": 579.547
+    },
+    {
+     "w": "ProfitIQS",
+     "s": 579.877
+    },
+    {
+     "w": "team",
+     "s": 580.207
+    },
+    {
+     "w": "for",
+     "s": 580.787
+    },
+    {
+     "w": "your",
+     "s": 581.047
+    },
+    {
+     "w": "Affiliate",
+     "s": 581.207
+    },
+    {
+     "w": "Hub",
+     "s": 581.627
+    },
+    {
+     "w": "link.",
+     "s": 581.907
+    },
+    {
+     "w": "Email",
+     "s": 582.907
+    },
+    {
+     "w": "support",
+     "s": 583.127
+    },
+    {
+     "w": "at",
+     "s": 583.587
+    },
+    {
+     "w": "profitiqs",
+     "s": 584.207
+    },
+    {
+     "w": "dot",
+     "s": 584.827
+    },
+    {
+     "w": "com,",
+     "s": 585.107
+    },
+    {
+     "w": "with",
+     "s": 585.767
+    },
+    {
+     "w": "\"Affiliate\"",
+     "s": 585.967
+    },
+    {
+     "w": "in",
+     "s": 586.347
+    },
+    {
+     "w": "the",
+     "s": 586.807
+    },
+    {
+     "w": "subject",
+     "s": 586.907
+    },
+    {
+     "w": "line.",
+     "s": 587.087
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Affiliate"
+    ],
+    [
+     "pop",
+     "Email"
+    ]
+   ]
+  },
+  {
+   "scene": "cta",
+   "sub": "Pick your niche, open the kit, and promote something you can actually stand behind.",
+   "start": 588.228,
+   "end": 592.685,
+   "words": [
+    {
+     "w": "Pick",
+     "s": 588.228
+    },
+    {
+     "w": "your",
+     "s": 588.348
+    },
+    {
+     "w": "niche,",
+     "s": 588.488
+    },
+    {
+     "w": "open",
+     "s": 589.028
+    },
+    {
+     "w": "the",
+     "s": 589.328
+    },
+    {
+     "w": "kit,",
+     "s": 589.468
+    },
+    {
+     "w": "and",
+     "s": 590.028
+    },
+    {
+     "w": "promote",
+     "s": 590.208
+    },
+    {
+     "w": "something",
+     "s": 590.408
+    },
+    {
+     "w": "you",
+     "s": 590.868
+    },
+    {
+     "w": "can",
+     "s": 591.068
+    },
+    {
+     "w": "actually",
+     "s": 591.168
+    },
+    {
+     "w": "stand",
+     "s": 591.528
+    },
+    {
+     "w": "behind.",
+     "s": 591.928
+    }
+   ],
+   "cues": [
+    [
+     "chime",
+     "stand"
+    ]
+   ]
+  },
+  {
+   "scene": "cta",
+   "sub": "ProfitIQS. Real products. Real kits. Honest promotion.",
+   "start": 593.105,
+   "end": 597.337,
+   "words": [
+    {
+     "w": "ProfitIQS.",
+     "s": 593.105
+    },
+    {
+     "w": "Real",
+     "s": 594.525
+    },
+    {
+     "w": "products.",
+     "s": 594.555
+    },
+    {
+     "w": "Real",
+     "s": 595.565
+    },
+    {
+     "w": "kits.",
+     "s": 595.595
+    },
+    {
+     "w": "Honest",
+     "s": 596.605
+    },
+    {
+     "w": "promotion.",
+     "s": 596.635
+    }
+   ],
+   "cues": [
+    [
+     "impact",
+     "ProfitIQS."
+    ]
+   ]
+  }
+ ]
+}
