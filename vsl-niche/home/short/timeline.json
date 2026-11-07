@@ -1,0 +1,972 @@
+{
+ "duration": 69.842,
+ "lead": 0.15,
+ "lines": [
+  {
+   "scene": "hook",
+   "sub": "You open at seven.",
+   "start": 0.9,
+   "end": 2.005,
+   "words": [
+    {
+     "w": "You",
+     "s": 0.9
+    },
+    {
+     "w": "open",
+     "s": 1.0
+    },
+    {
+     "w": "at",
+     "s": 1.22
+    },
+    {
+     "w": "seven.",
+     "s": 1.42
+    }
+   ],
+   "cues": [
+    [
+     "tick",
+     "open"
+    ],
+    [
+     "ding",
+     "seven"
+    ]
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "You close at seven.",
+   "start": 2.425,
+   "end": 3.52,
+   "words": [
+    {
+     "w": "You",
+     "s": 2.425
+    },
+    {
+     "w": "close",
+     "s": 2.525
+    },
+    {
+     "w": "at",
+     "s": 2.705
+    },
+    {
+     "w": "seven.",
+     "s": 2.925
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "close"
+    ],
+    [
+     "ding",
+     "seven"
+    ]
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "Jobs done. Invoices sent. Money moving in and out, all day long.",
+   "start": 3.94,
+   "end": 8.14,
+   "words": [
+    {
+     "w": "Jobs",
+     "s": 3.94
+    },
+    {
+     "w": "done.",
+     "s": 4.16
+    },
+    {
+     "w": "Invoices",
+     "s": 5.0
+    },
+    {
+     "w": "sent.",
+     "s": 5.28
+    },
+    {
+     "w": "Money",
+     "s": 6.36
+    },
+    {
+     "w": "moving",
+     "s": 6.39
+    },
+    {
+     "w": "in",
+     "s": 6.58
+    },
+    {
+     "w": "and",
+     "s": 6.88
+    },
+    {
+     "w": "out,",
+     "s": 6.98
+    },
+    {
+     "w": "all",
+     "s": 7.38
+    },
+    {
+     "w": "day",
+     "s": 7.5
+    },
+    {
+     "w": "long.",
+     "s": 7.62
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Jobs"
+    ],
+    [
+     "pop",
+     "Invoices"
+    ],
+    [
+     "swish",
+     "Money"
+    ],
+    [
+     "swish",
+     "out"
+    ]
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "So here's one quick question.",
+   "start": 8.56,
+   "end": 10.151,
+   "words": [
+    {
+     "w": "So",
+     "s": 8.56
+    },
+    {
+     "w": "here's",
+     "s": 8.68
+    },
+    {
+     "w": "one",
+     "s": 8.98
+    },
+    {
+     "w": "quick",
+     "s": 9.18
+    },
+    {
+     "w": "question.",
+     "s": 9.42
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "question"
+    ]
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "How much did you actually keep last month?",
+   "start": 10.571,
+   "end": 12.569,
+   "words": [
+    {
+     "w": "How",
+     "s": 10.571
+    },
+    {
+     "w": "much",
+     "s": 10.691
+    },
+    {
+     "w": "did",
+     "s": 10.851
+    },
+    {
+     "w": "you",
+     "s": 11.071
+    },
+    {
+     "w": "actually",
+     "s": 11.171
+    },
+    {
+     "w": "keep",
+     "s": 11.451
+    },
+    {
+     "w": "last",
+     "s": 11.831
+    },
+    {
+     "w": "month?",
+     "s": 12.091
+    }
+   ],
+   "cues": [
+    [
+     "hit",
+     "keep"
+    ]
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "Not what came in. What you kept.",
+   "start": 12.989,
+   "end": 14.651,
+   "words": [
+    {
+     "w": "Not",
+     "s": 12.989
+    },
+    {
+     "w": "what",
+     "s": 13.149
+    },
+    {
+     "w": "came",
+     "s": 13.269
+    },
+    {
+     "w": "in.",
+     "s": 13.469
+    },
+    {
+     "w": "What",
+     "s": 13.969
+    },
+    {
+     "w": "you",
+     "s": 14.009
+    },
+    {
+     "w": "kept.",
+     "s": 14.129
+    }
+   ],
+   "cues": [
+    [
+     "strike",
+     "came"
+    ],
+    [
+     "ding",
+     "kept"
+    ]
+   ]
+  },
+  {
+   "scene": "reveal",
+   "sub": "That's why we built ProfitIQS.",
+   "start": 15.701,
+   "end": 17.563,
+   "words": [
+    {
+     "w": "That's",
+     "s": 15.701
+    },
+    {
+     "w": "why",
+     "s": 15.901
+    },
+    {
+     "w": "we",
+     "s": 16.041
+    },
+    {
+     "w": "built",
+     "s": 16.181
+    },
+    {
+     "w": "ProfitIQS.",
+     "s": 16.872
+    }
+   ],
+   "cues": [
+    [
+     "riser",
+     "why"
+    ],
+    [
+     "impact",
+     "ProfitIQS"
+    ]
+   ]
+  },
+  {
+   "scene": "reveal",
+   "sub": "Business intelligence systems, in Excel. Each one built for one industry.",
+   "start": 17.983,
+   "end": 22.304,
+   "words": [
+    {
+     "w": "Business",
+     "s": 17.983
+    },
+    {
+     "w": "intelligence",
+     "s": 18.223
+    },
+    {
+     "w": "systems,",
+     "s": 18.443
+    },
+    {
+     "w": "in",
+     "s": 19.603
+    },
+    {
+     "w": "Excel.",
+     "s": 19.633
+    },
+    {
+     "w": "Each",
+     "s": 20.643
+    },
+    {
+     "w": "one",
+     "s": 20.743
+    },
+    {
+     "w": "built",
+     "s": 20.943
+    },
+    {
+     "w": "for",
+     "s": 21.163
+    },
+    {
+     "w": "one",
+     "s": 21.403
+    },
+    {
+     "w": "industry.",
+     "s": 21.563
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Excel"
+    ],
+    [
+     "pop",
+     "one"
+    ]
+   ]
+  },
+  {
+   "scene": "reveal",
+   "sub": "Twenty-one industries. Sixty-three systems.",
+   "start": 22.724,
+   "end": 25.254,
+   "words": [
+    {
+     "w": "Twenty-one",
+     "s": 22.724
+    },
+    {
+     "w": "industries.",
+     "s": 23.124
+    },
+    {
+     "w": "Sixty-three",
+     "s": 23.864
+    },
+    {
+     "w": "systems.",
+     "s": 24.604
+    }
+   ],
+   "cues": [
+    [
+     "count",
+     "Twenty-one"
+    ],
+    [
+     "ding",
+     "industries"
+    ],
+    [
+     "count",
+     "Sixty-three"
+    ],
+    [
+     "ding",
+     "systems"
+    ]
+   ]
+  },
+  {
+   "scene": "reveal",
+   "sub": "Not one generic template. A system that speaks your trade.",
+   "start": 25.674,
+   "end": 28.98,
+   "words": [
+    {
+     "w": "Not",
+     "s": 25.674
+    },
+    {
+     "w": "one",
+     "s": 25.854
+    },
+    {
+     "w": "generic",
+     "s": 26.074
+    },
+    {
+     "w": "template.",
+     "s": 26.374
+    },
+    {
+     "w": "A",
+     "s": 27.454
+    },
+    {
+     "w": "system",
+     "s": 27.484
+    },
+    {
+     "w": "that",
+     "s": 27.714
+    },
+    {
+     "w": "speaks",
+     "s": 28.034
+    },
+    {
+     "w": "your",
+     "s": 28.234
+    },
+    {
+     "w": "trade.",
+     "s": 28.434
+    }
+   ],
+   "cues": [
+    [
+     "stamp",
+     "generic"
+    ],
+    [
+     "sparkle",
+     "speaks"
+    ]
+   ]
+  },
+  {
+   "scene": "reveal",
+   "sub": "Built for people who are experts in their trade, not in spreadsheets.",
+   "start": 29.4,
+   "end": 32.853,
+   "words": [
+    {
+     "w": "Built",
+     "s": 29.4
+    },
+    {
+     "w": "for",
+     "s": 29.6
+    },
+    {
+     "w": "people",
+     "s": 29.74
+    },
+    {
+     "w": "who",
+     "s": 30.06
+    },
+    {
+     "w": "are",
+     "s": 30.26
+    },
+    {
+     "w": "experts",
+     "s": 30.38
+    },
+    {
+     "w": "in",
+     "s": 30.7
+    },
+    {
+     "w": "their",
+     "s": 31.04
+    },
+    {
+     "w": "trade,",
+     "s": 31.12
+    },
+    {
+     "w": "not",
+     "s": 31.76
+    },
+    {
+     "w": "in",
+     "s": 31.92
+    },
+    {
+     "w": "spreadsheets.",
+     "s": 32.04
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "trade,"
+    ],
+    [
+     "swish",
+     "spreadsheets."
+    ]
+   ]
+  },
+  {
+   "scene": "box",
+   "sub": "Every system comes in three editions.",
+   "start": 33.903,
+   "end": 35.905,
+   "words": [
+    {
+     "w": "Every",
+     "s": 33.903
+    },
+    {
+     "w": "system",
+     "s": 34.103
+    },
+    {
+     "w": "comes",
+     "s": 34.463
+    },
+    {
+     "w": "in",
+     "s": 34.803
+    },
+    {
+     "w": "three",
+     "s": 34.963
+    },
+    {
+     "w": "editions.",
+     "s": 35.163
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "three"
+    ]
+   ]
+  },
+  {
+   "scene": "box",
+   "sub": "Essential, $97. The core numbers.",
+   "start": 36.325,
+   "end": 39.211,
+   "words": [
+    {
+     "w": "Essential,",
+     "s": 36.325
+    },
+    {
+     "w": "$97.",
+     "s": 37.315
+    },
+    {
+     "w": "The",
+     "s": 38.305
+    },
+    {
+     "w": "core",
+     "s": 38.345
+    },
+    {
+     "w": "numbers.",
+     "s": 38.505
+    }
+   ],
+   "cues": [
+    [
+     "cash",
+     "$97."
+    ]
+   ]
+  },
+  {
+   "scene": "box",
+   "sub": "Elite, $197. The full system, with deeper analysis.",
+   "start": 39.631,
+   "end": 43.461,
+   "words": [
+    {
+     "w": "Elite,",
+     "s": 39.631
+    },
+    {
+     "w": "$197.",
+     "s": 40.451
+    },
+    {
+     "w": "The",
+     "s": 41.271
+    },
+    {
+     "w": "full",
+     "s": 41.431
+    },
+    {
+     "w": "system,",
+     "s": 41.571
+    },
+    {
+     "w": "with",
+     "s": 42.231
+    },
+    {
+     "w": "deeper",
+     "s": 42.311
+    },
+    {
+     "w": "analysis.",
+     "s": 42.511
+    }
+   ],
+   "cues": [
+    [
+     "cash",
+     "$197."
+    ]
+   ]
+  },
+  {
+   "scene": "box",
+   "sub": "Complete, $249. Both editions, together.",
+   "start": 43.881,
+   "end": 46.849,
+   "words": [
+    {
+     "w": "Complete,",
+     "s": 43.881
+    },
+    {
+     "w": "$249.",
+     "s": 44.641
+    },
+    {
+     "w": "Both",
+     "s": 45.401
+    },
+    {
+     "w": "editions,",
+     "s": 45.621
+    },
+    {
+     "w": "together.",
+     "s": 46.361
+    }
+   ],
+   "cues": [
+    [
+     "cash",
+     "$249."
+    ]
+   ]
+  },
+  {
+   "scene": "box",
+   "sub": "Start with Essential, and move up to Elite whenever you're ready.",
+   "start": 47.269,
+   "end": 50.445,
+   "words": [
+    {
+     "w": "Start",
+     "s": 47.269
+    },
+    {
+     "w": "with",
+     "s": 47.489
+    },
+    {
+     "w": "Essential,",
+     "s": 47.629
+    },
+    {
+     "w": "and",
+     "s": 48.489
+    },
+    {
+     "w": "move",
+     "s": 48.609
+    },
+    {
+     "w": "up",
+     "s": 48.789
+    },
+    {
+     "w": "to",
+     "s": 48.949
+    },
+    {
+     "w": "Elite",
+     "s": 49.109
+    },
+    {
+     "w": "whenever",
+     "s": 49.309
+    },
+    {
+     "w": "you're",
+     "s": 49.629
+    },
+    {
+     "w": "ready.",
+     "s": 50.029
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Essential,"
+    ],
+    [
+     "whoosh",
+     "Elite"
+    ]
+   ]
+  },
+  {
+   "scene": "cta",
+   "sub": "So here's your next step.",
+   "start": 51.495,
+   "end": 52.727,
+   "words": [
+    {
+     "w": "So",
+     "s": 51.495
+    },
+    {
+     "w": "here's",
+     "s": 51.635
+    },
+    {
+     "w": "your",
+     "s": 51.935
+    },
+    {
+     "w": "next",
+     "s": 52.015
+    },
+    {
+     "w": "step.",
+     "s": 52.155
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "next"
+    ]
+   ]
+  },
+  {
+   "scene": "cta",
+   "sub": "Find your industry, right below this video.",
+   "start": 53.147,
+   "end": 55.506,
+   "words": [
+    {
+     "w": "Find",
+     "s": 53.147
+    },
+    {
+     "w": "your",
+     "s": 53.347
+    },
+    {
+     "w": "industry,",
+     "s": 53.507
+    },
+    {
+     "w": "right",
+     "s": 54.247
+    },
+    {
+     "w": "below",
+     "s": 54.487
+    },
+    {
+     "w": "this",
+     "s": 54.747
+    },
+    {
+     "w": "video.",
+     "s": 54.947
+    }
+   ],
+   "cues": [
+    [
+     "drop",
+     "below"
+    ]
+   ]
+  },
+  {
+   "scene": "cta",
+   "sub": "Each one has its own full walkthrough, every sheet, shown and explained.",
+   "start": 55.926,
+   "end": 59.797,
+   "words": [
+    {
+     "w": "Each",
+     "s": 55.926
+    },
+    {
+     "w": "one",
+     "s": 56.086
+    },
+    {
+     "w": "has",
+     "s": 56.226
+    },
+    {
+     "w": "its",
+     "s": 56.366
+    },
+    {
+     "w": "own",
+     "s": 56.486
+    },
+    {
+     "w": "full",
+     "s": 56.666
+    },
+    {
+     "w": "walkthrough,",
+     "s": 56.886
+    },
+    {
+     "w": "every",
+     "s": 57.666
+    },
+    {
+     "w": "sheet,",
+     "s": 57.886
+    },
+    {
+     "w": "shown",
+     "s": 58.526
+    },
+    {
+     "w": "and",
+     "s": 58.766
+    },
+    {
+     "w": "explained.",
+     "s": 59.046
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "every"
+    ]
+   ]
+  },
+  {
+   "scene": "end",
+   "sub": "Your business already has the numbers.",
+   "start": 60.847,
+   "end": 62.758,
+   "words": [
+    {
+     "w": "Your",
+     "s": 60.847
+    },
+    {
+     "w": "business",
+     "s": 60.947
+    },
+    {
+     "w": "already",
+     "s": 61.307
+    },
+    {
+     "w": "has",
+     "s": 61.747
+    },
+    {
+     "w": "the",
+     "s": 62.047
+    },
+    {
+     "w": "numbers.",
+     "s": 62.187
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "numbers."
+    ]
+   ]
+  },
+  {
+   "scene": "end",
+   "sub": "ProfitIQS shows you what they mean.",
+   "start": 63.178,
+   "end": 65.342,
+   "words": [
+    {
+     "w": "ProfitIQS",
+     "s": 63.178
+    },
+    {
+     "w": "shows",
+     "s": 64.058
+    },
+    {
+     "w": "you",
+     "s": 64.398
+    },
+    {
+     "w": "what",
+     "s": 64.618
+    },
+    {
+     "w": "they",
+     "s": 64.738
+    },
+    {
+     "w": "mean.",
+     "s": 64.858
+    }
+   ],
+   "cues": [
+    [
+     "impact",
+     "ProfitIQS"
+    ],
+    [
+     "chime",
+     "mean."
+    ]
+   ]
+  }
+ ]
+}

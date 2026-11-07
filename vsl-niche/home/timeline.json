@@ -1,0 +1,3340 @@
+{
+ "duration": 230.242,
+ "lead": 0.15,
+ "lines": [
+  {
+   "scene": "hook",
+   "sub": "You open at seven.",
+   "start": 0.9,
+   "end": 2.005,
+   "words": [
+    {
+     "w": "You",
+     "s": 0.9
+    },
+    {
+     "w": "open",
+     "s": 1.0
+    },
+    {
+     "w": "at",
+     "s": 1.22
+    },
+    {
+     "w": "seven.",
+     "s": 1.42
+    }
+   ],
+   "cues": [
+    [
+     "tick",
+     "open"
+    ],
+    [
+     "ding",
+     "seven"
+    ]
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "You close at seven.",
+   "start": 2.425,
+   "end": 3.52,
+   "words": [
+    {
+     "w": "You",
+     "s": 2.425
+    },
+    {
+     "w": "close",
+     "s": 2.525
+    },
+    {
+     "w": "at",
+     "s": 2.705
+    },
+    {
+     "w": "seven.",
+     "s": 2.925
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "close"
+    ],
+    [
+     "ding",
+     "seven"
+    ]
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "Jobs done. Invoices sent. Money moving in and out, all day long.",
+   "start": 3.94,
+   "end": 8.14,
+   "words": [
+    {
+     "w": "Jobs",
+     "s": 3.94
+    },
+    {
+     "w": "done.",
+     "s": 4.16
+    },
+    {
+     "w": "Invoices",
+     "s": 5.0
+    },
+    {
+     "w": "sent.",
+     "s": 5.28
+    },
+    {
+     "w": "Money",
+     "s": 6.36
+    },
+    {
+     "w": "moving",
+     "s": 6.39
+    },
+    {
+     "w": "in",
+     "s": 6.58
+    },
+    {
+     "w": "and",
+     "s": 6.88
+    },
+    {
+     "w": "out,",
+     "s": 6.98
+    },
+    {
+     "w": "all",
+     "s": 7.38
+    },
+    {
+     "w": "day",
+     "s": 7.5
+    },
+    {
+     "w": "long.",
+     "s": 7.62
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Jobs"
+    ],
+    [
+     "pop",
+     "Invoices"
+    ],
+    [
+     "swish",
+     "Money"
+    ],
+    [
+     "swish",
+     "out"
+    ]
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "So here's one quick question.",
+   "start": 8.56,
+   "end": 10.151,
+   "words": [
+    {
+     "w": "So",
+     "s": 8.56
+    },
+    {
+     "w": "here's",
+     "s": 8.68
+    },
+    {
+     "w": "one",
+     "s": 8.98
+    },
+    {
+     "w": "quick",
+     "s": 9.18
+    },
+    {
+     "w": "question.",
+     "s": 9.42
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "question"
+    ]
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "How much did you actually keep last month?",
+   "start": 10.571,
+   "end": 12.569,
+   "words": [
+    {
+     "w": "How",
+     "s": 10.571
+    },
+    {
+     "w": "much",
+     "s": 10.691
+    },
+    {
+     "w": "did",
+     "s": 10.851
+    },
+    {
+     "w": "you",
+     "s": 11.071
+    },
+    {
+     "w": "actually",
+     "s": 11.171
+    },
+    {
+     "w": "keep",
+     "s": 11.451
+    },
+    {
+     "w": "last",
+     "s": 11.831
+    },
+    {
+     "w": "month?",
+     "s": 12.091
+    }
+   ],
+   "cues": [
+    [
+     "hit",
+     "keep"
+    ]
+   ]
+  },
+  {
+   "scene": "hook",
+   "sub": "Not what came in. What you kept.",
+   "start": 12.989,
+   "end": 14.651,
+   "words": [
+    {
+     "w": "Not",
+     "s": 12.989
+    },
+    {
+     "w": "what",
+     "s": 13.149
+    },
+    {
+     "w": "came",
+     "s": 13.269
+    },
+    {
+     "w": "in.",
+     "s": 13.469
+    },
+    {
+     "w": "What",
+     "s": 13.969
+    },
+    {
+     "w": "you",
+     "s": 14.009
+    },
+    {
+     "w": "kept.",
+     "s": 14.129
+    }
+   ],
+   "cues": [
+    [
+     "strike",
+     "came"
+    ],
+    [
+     "ding",
+     "kept"
+    ]
+   ]
+  },
+  {
+   "scene": "blind",
+   "sub": "It doesn't matter what you run.",
+   "start": 15.701,
+   "end": 17.02,
+   "words": [
+    {
+     "w": "It",
+     "s": 15.701
+    },
+    {
+     "w": "doesn't",
+     "s": 15.761
+    },
+    {
+     "w": "matter",
+     "s": 16.021
+    },
+    {
+     "w": "what",
+     "s": 16.181
+    },
+    {
+     "w": "you",
+     "s": 16.461
+    },
+    {
+     "w": "run.",
+     "s": 16.601
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "doesn't"
+    ]
+   ]
+  },
+  {
+   "scene": "blind",
+   "sub": "A plumber wonders which callbacks are eating the margin.",
+   "start": 17.44,
+   "end": 20.338,
+   "words": [
+    {
+     "w": "A",
+     "s": 17.44
+    },
+    {
+     "w": "plumber",
+     "s": 17.5
+    },
+    {
+     "w": "wonders",
+     "s": 17.8
+    },
+    {
+     "w": "which",
+     "s": 18.14
+    },
+    {
+     "w": "callbacks",
+     "s": 18.58
+    },
+    {
+     "w": "are",
+     "s": 19.08
+    },
+    {
+     "w": "eating",
+     "s": 19.32
+    },
+    {
+     "w": "the",
+     "s": 19.52
+    },
+    {
+     "w": "margin.",
+     "s": 19.74
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "plumber"
+    ]
+   ]
+  },
+  {
+   "scene": "blind",
+   "sub": "A restaurant owner wonders where the prime cost really landed.",
+   "start": 20.758,
+   "end": 23.925,
+   "words": [
+    {
+     "w": "A",
+     "s": 20.758
+    },
+    {
+     "w": "restaurant",
+     "s": 20.818
+    },
+    {
+     "w": "owner",
+     "s": 21.058
+    },
+    {
+     "w": "wonders",
+     "s": 21.438
+    },
+    {
+     "w": "where",
+     "s": 21.858
+    },
+    {
+     "w": "the",
+     "s": 22.238
+    },
+    {
+     "w": "prime",
+     "s": 22.318
+    },
+    {
+     "w": "cost",
+     "s": 22.478
+    },
+    {
+     "w": "really",
+     "s": 22.858
+    },
+    {
+     "w": "landed.",
+     "s": 23.238
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "restaurant"
+    ]
+   ]
+  },
+  {
+   "scene": "blind",
+   "sub": "A dentist wonders why production and collections don't match.",
+   "start": 24.345,
+   "end": 27.864,
+   "words": [
+    {
+     "w": "A",
+     "s": 24.345
+    },
+    {
+     "w": "dentist",
+     "s": 24.385
+    },
+    {
+     "w": "wonders",
+     "s": 24.605
+    },
+    {
+     "w": "why",
+     "s": 25.165
+    },
+    {
+     "w": "production",
+     "s": 25.625
+    },
+    {
+     "w": "and",
+     "s": 26.025
+    },
+    {
+     "w": "collections",
+     "s": 26.345
+    },
+    {
+     "w": "don't",
+     "s": 26.705
+    },
+    {
+     "w": "match.",
+     "s": 27.385
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "dentist"
+    ]
+   ]
+  },
+  {
+   "scene": "blind",
+   "sub": "A trucker wonders which loads actually paid after fuel.",
+   "start": 28.284,
+   "end": 31.536,
+   "words": [
+    {
+     "w": "A",
+     "s": 28.284
+    },
+    {
+     "w": "trucker",
+     "s": 28.344
+    },
+    {
+     "w": "wonders",
+     "s": 28.704
+    },
+    {
+     "w": "which",
+     "s": 28.924
+    },
+    {
+     "w": "loads",
+     "s": 29.544
+    },
+    {
+     "w": "actually",
+     "s": 29.764
+    },
+    {
+     "w": "paid",
+     "s": 30.344
+    },
+    {
+     "w": "after",
+     "s": 30.724
+    },
+    {
+     "w": "fuel.",
+     "s": 31.064
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "trucker"
+    ]
+   ]
+  },
+  {
+   "scene": "blind",
+   "sub": "A landlord wonders which property is dragging the rest down.",
+   "start": 31.956,
+   "end": 35.047,
+   "words": [
+    {
+     "w": "A",
+     "s": 31.956
+    },
+    {
+     "w": "landlord",
+     "s": 32.016
+    },
+    {
+     "w": "wonders",
+     "s": 32.296
+    },
+    {
+     "w": "which",
+     "s": 32.836
+    },
+    {
+     "w": "property",
+     "s": 33.136
+    },
+    {
+     "w": "is",
+     "s": 33.516
+    },
+    {
+     "w": "dragging",
+     "s": 33.836
+    },
+    {
+     "w": "the",
+     "s": 34.076
+    },
+    {
+     "w": "rest",
+     "s": 34.356
+    },
+    {
+     "w": "down.",
+     "s": 34.496
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "landlord"
+    ]
+   ]
+  },
+  {
+   "scene": "blind",
+   "sub": "Different trades. The same blind spot.",
+   "start": 35.467,
+   "end": 37.688,
+   "words": [
+    {
+     "w": "Different",
+     "s": 35.467
+    },
+    {
+     "w": "trades.",
+     "s": 35.667
+    },
+    {
+     "w": "The",
+     "s": 36.427
+    },
+    {
+     "w": "same",
+     "s": 36.467
+    },
+    {
+     "w": "blind",
+     "s": 36.727
+    },
+    {
+     "w": "spot.",
+     "s": 36.947
+    }
+   ],
+   "cues": [
+    [
+     "soft",
+     "same"
+    ]
+   ]
+  },
+  {
+   "scene": "data",
+   "sub": "And here's the thing. The data is already there.",
+   "start": 38.738,
+   "end": 41.14,
+   "words": [
+    {
+     "w": "And",
+     "s": 38.738
+    },
+    {
+     "w": "here's",
+     "s": 38.768
+    },
+    {
+     "w": "the",
+     "s": 38.798
+    },
+    {
+     "w": "thing.",
+     "s": 38.828
+    },
+    {
+     "w": "The",
+     "s": 38.858
+    },
+    {
+     "w": "data",
+     "s": 38.938
+    },
+    {
+     "w": "is",
+     "s": 39.378
+    },
+    {
+     "w": "already",
+     "s": 40.358
+    },
+    {
+     "w": "there.",
+     "s": 40.618
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "data"
+    ]
+   ]
+  },
+  {
+   "scene": "data",
+   "sub": "Invoices. Receipts. Bank statements. The apps you already use.",
+   "start": 41.56,
+   "end": 45.295,
+   "words": [
+    {
+     "w": "Invoices.",
+     "s": 41.56
+    },
+    {
+     "w": "Receipts.",
+     "s": 42.32
+    },
+    {
+     "w": "Bank",
+     "s": 43.02
+    },
+    {
+     "w": "statements.",
+     "s": 43.05
+    },
+    {
+     "w": "The",
+     "s": 43.96
+    },
+    {
+     "w": "apps",
+     "s": 43.99
+    },
+    {
+     "w": "you",
+     "s": 44.18
+    },
+    {
+     "w": "already",
+     "s": 44.42
+    },
+    {
+     "w": "use.",
+     "s": 44.56
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Invoices"
+    ],
+    [
+     "pop",
+     "Receipts"
+    ],
+    [
+     "pop",
+     "Bank"
+    ],
+    [
+     "pop",
+     "apps"
+    ]
+   ]
+  },
+  {
+   "scene": "data",
+   "sub": "It's just never in one place, turned into answers.",
+   "start": 45.715,
+   "end": 48.356,
+   "words": [
+    {
+     "w": "It's",
+     "s": 45.715
+    },
+    {
+     "w": "just",
+     "s": 45.855
+    },
+    {
+     "w": "never",
+     "s": 45.955
+    },
+    {
+     "w": "in",
+     "s": 46.255
+    },
+    {
+     "w": "one",
+     "s": 46.475
+    },
+    {
+     "w": "place,",
+     "s": 46.615
+    },
+    {
+     "w": "turned",
+     "s": 47.235
+    },
+    {
+     "w": "into",
+     "s": 47.395
+    },
+    {
+     "w": "answers.",
+     "s": 47.655
+    }
+   ],
+   "cues": [
+    [
+     "glitch",
+     "never"
+    ]
+   ]
+  },
+  {
+   "scene": "reveal",
+   "sub": "That's why we built ProfitIQS.",
+   "start": 49.406,
+   "end": 51.269,
+   "words": [
+    {
+     "w": "That's",
+     "s": 49.406
+    },
+    {
+     "w": "why",
+     "s": 49.606
+    },
+    {
+     "w": "we",
+     "s": 49.746
+    },
+    {
+     "w": "built",
+     "s": 49.886
+    },
+    {
+     "w": "ProfitIQS.",
+     "s": 50.577
+    }
+   ],
+   "cues": [
+    [
+     "riser",
+     "why"
+    ],
+    [
+     "impact",
+     "ProfitIQS"
+    ]
+   ]
+  },
+  {
+   "scene": "reveal",
+   "sub": "Business intelligence systems, in Excel. Each one built for one industry.",
+   "start": 51.689,
+   "end": 56.009,
+   "words": [
+    {
+     "w": "Business",
+     "s": 51.689
+    },
+    {
+     "w": "intelligence",
+     "s": 51.929
+    },
+    {
+     "w": "systems,",
+     "s": 52.149
+    },
+    {
+     "w": "in",
+     "s": 53.309
+    },
+    {
+     "w": "Excel.",
+     "s": 53.339
+    },
+    {
+     "w": "Each",
+     "s": 54.349
+    },
+    {
+     "w": "one",
+     "s": 54.449
+    },
+    {
+     "w": "built",
+     "s": 54.649
+    },
+    {
+     "w": "for",
+     "s": 54.869
+    },
+    {
+     "w": "one",
+     "s": 55.109
+    },
+    {
+     "w": "industry.",
+     "s": 55.269
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Excel"
+    ],
+    [
+     "pop",
+     "one"
+    ]
+   ]
+  },
+  {
+   "scene": "reveal",
+   "sub": "Twenty-one industries. Sixty-three systems.",
+   "start": 56.429,
+   "end": 58.959,
+   "words": [
+    {
+     "w": "Twenty-one",
+     "s": 56.429
+    },
+    {
+     "w": "industries.",
+     "s": 56.829
+    },
+    {
+     "w": "Sixty-three",
+     "s": 57.569
+    },
+    {
+     "w": "systems.",
+     "s": 58.309
+    }
+   ],
+   "cues": [
+    [
+     "count",
+     "Twenty-one"
+    ],
+    [
+     "ding",
+     "industries"
+    ],
+    [
+     "count",
+     "Sixty-three"
+    ],
+    [
+     "ding",
+     "systems"
+    ]
+   ]
+  },
+  {
+   "scene": "reveal",
+   "sub": "Not one generic template. A system that speaks your trade.",
+   "start": 59.379,
+   "end": 62.686,
+   "words": [
+    {
+     "w": "Not",
+     "s": 59.379
+    },
+    {
+     "w": "one",
+     "s": 59.559
+    },
+    {
+     "w": "generic",
+     "s": 59.779
+    },
+    {
+     "w": "template.",
+     "s": 60.079
+    },
+    {
+     "w": "A",
+     "s": 61.159
+    },
+    {
+     "w": "system",
+     "s": 61.189
+    },
+    {
+     "w": "that",
+     "s": 61.419
+    },
+    {
+     "w": "speaks",
+     "s": 61.739
+    },
+    {
+     "w": "your",
+     "s": 61.939
+    },
+    {
+     "w": "trade.",
+     "s": 62.139
+    }
+   ],
+   "cues": [
+    [
+     "stamp",
+     "generic"
+    ],
+    [
+     "sparkle",
+     "speaks"
+    ]
+   ]
+  },
+  {
+   "scene": "reveal",
+   "sub": "Built for people who are experts in their trade, not in spreadsheets.",
+   "start": 63.106,
+   "end": 66.558,
+   "words": [
+    {
+     "w": "Built",
+     "s": 63.106
+    },
+    {
+     "w": "for",
+     "s": 63.306
+    },
+    {
+     "w": "people",
+     "s": 63.446
+    },
+    {
+     "w": "who",
+     "s": 63.766
+    },
+    {
+     "w": "are",
+     "s": 63.966
+    },
+    {
+     "w": "experts",
+     "s": 64.086
+    },
+    {
+     "w": "in",
+     "s": 64.406
+    },
+    {
+     "w": "their",
+     "s": 64.746
+    },
+    {
+     "w": "trade,",
+     "s": 64.826
+    },
+    {
+     "w": "not",
+     "s": 65.466
+    },
+    {
+     "w": "in",
+     "s": 65.626
+    },
+    {
+     "w": "spreadsheets.",
+     "s": 65.746
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "trade,"
+    ],
+    [
+     "swish",
+     "spreadsheets."
+    ]
+   ]
+  },
+  {
+   "scene": "show",
+   "sub": "Come on in. Let's walk through the showroom.",
+   "start": 67.608,
+   "end": 69.804,
+   "words": [
+    {
+     "w": "Come",
+     "s": 67.608
+    },
+    {
+     "w": "on",
+     "s": 67.748
+    },
+    {
+     "w": "in.",
+     "s": 67.868
+    },
+    {
+     "w": "Let's",
+     "s": 68.448
+    },
+    {
+     "w": "walk",
+     "s": 68.668
+    },
+    {
+     "w": "through",
+     "s": 68.828
+    },
+    {
+     "w": "the",
+     "s": 69.068
+    },
+    {
+     "w": "showroom.",
+     "s": 69.188
+    }
+   ],
+   "cues": [
+    [
+     "doors",
+     "in"
+    ],
+    [
+     "chime",
+     "showroom"
+    ]
+   ]
+  },
+  {
+   "scene": "show",
+   "sub": "Every sheet name you'll see is real, straight from the actual workbooks.",
+   "start": 70.224,
+   "end": 73.854,
+   "words": [
+    {
+     "w": "Every",
+     "s": 70.224
+    },
+    {
+     "w": "sheet",
+     "s": 70.404
+    },
+    {
+     "w": "name",
+     "s": 70.624
+    },
+    {
+     "w": "you'll",
+     "s": 70.784
+    },
+    {
+     "w": "see",
+     "s": 70.984
+    },
+    {
+     "w": "is",
+     "s": 71.204
+    },
+    {
+     "w": "real,",
+     "s": 71.444
+    },
+    {
+     "w": "straight",
+     "s": 72.404
+    },
+    {
+     "w": "from",
+     "s": 72.434
+    },
+    {
+     "w": "the",
+     "s": 72.684
+    },
+    {
+     "w": "actual",
+     "s": 72.784
+    },
+    {
+     "w": "workbooks.",
+     "s": 73.084
+    }
+   ],
+   "cues": [
+    [
+     "sparkle",
+     "real,"
+    ]
+   ]
+  },
+  {
+   "scene": "show",
+   "sub": "Plumbers: callbacks quietly eating the margin?",
+   "start": 74.274,
+   "end": 76.672,
+   "words": [
+    {
+     "w": "Plumbers:",
+     "s": 74.274
+    },
+    {
+     "w": "callbacks",
+     "s": 74.534
+    },
+    {
+     "w": "quietly",
+     "s": 75.194
+    },
+    {
+     "w": "eating",
+     "s": 75.514
+    },
+    {
+     "w": "the",
+     "s": 75.914
+    },
+    {
+     "w": "margin?",
+     "s": 76.094
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "Plumbers"
+    ],
+    [
+     "pop",
+     "callbacks"
+    ]
+   ]
+  },
+  {
+   "scene": "show",
+   "sub": "Here's a Callback Tracker, and a Job Profitability Center for every job.",
+   "start": 77.092,
+   "end": 81.214,
+   "words": [
+    {
+     "w": "Here's",
+     "s": 77.092
+    },
+    {
+     "w": "a",
+     "s": 77.332
+    },
+    {
+     "w": "Callback",
+     "s": 77.412
+    },
+    {
+     "w": "Tracker,",
+     "s": 77.792
+    },
+    {
+     "w": "and",
+     "s": 78.672
+    },
+    {
+     "w": "a",
+     "s": 78.712
+    },
+    {
+     "w": "Job",
+     "s": 78.772
+    },
+    {
+     "w": "Profitability",
+     "s": 79.012
+    },
+    {
+     "w": "Center",
+     "s": 79.652
+    },
+    {
+     "w": "for",
+     "s": 80.072
+    },
+    {
+     "w": "every",
+     "s": 80.352
+    },
+    {
+     "w": "job.",
+     "s": 80.572
+    }
+   ],
+   "cues": [
+    [
+     "sparkle",
+     "Here's"
+    ],
+    [
+     "pop",
+     "Callback"
+    ],
+    [
+     "pop",
+     "Job"
+    ]
+   ]
+  },
+  {
+   "scene": "show",
+   "sub": "Restaurants: no idea where prime cost landed?",
+   "start": 81.634,
+   "end": 84.365,
+   "words": [
+    {
+     "w": "Restaurants:",
+     "s": 81.634
+    },
+    {
+     "w": "no",
+     "s": 82.414
+    },
+    {
+     "w": "idea",
+     "s": 82.614
+    },
+    {
+     "w": "where",
+     "s": 82.954
+    },
+    {
+     "w": "prime",
+     "s": 83.174
+    },
+    {
+     "w": "cost",
+     "s": 83.414
+    },
+    {
+     "w": "landed?",
+     "s": 83.714
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "Restaurants"
+    ],
+    [
+     "pop",
+     "prime"
+    ]
+   ]
+  },
+  {
+   "scene": "show",
+   "sub": "Here's a Prime Cost Center, and Menu Intelligence for every dish.",
+   "start": 84.785,
+   "end": 88.287,
+   "words": [
+    {
+     "w": "Here's",
+     "s": 84.785
+    },
+    {
+     "w": "a",
+     "s": 85.005
+    },
+    {
+     "w": "Prime",
+     "s": 85.085
+    },
+    {
+     "w": "Cost",
+     "s": 85.285
+    },
+    {
+     "w": "Center,",
+     "s": 85.525
+    },
+    {
+     "w": "and",
+     "s": 86.405
+    },
+    {
+     "w": "Menu",
+     "s": 86.445
+    },
+    {
+     "w": "Intelligence",
+     "s": 86.665
+    },
+    {
+     "w": "for",
+     "s": 86.985
+    },
+    {
+     "w": "every",
+     "s": 87.485
+    },
+    {
+     "w": "dish.",
+     "s": 87.645
+    }
+   ],
+   "cues": [
+    [
+     "sparkle",
+     "Here's"
+    ],
+    [
+     "pop",
+     "Prime"
+    ],
+    [
+     "pop",
+     "Menu"
+    ]
+   ]
+  },
+  {
+   "scene": "show",
+   "sub": "Dental practices: treatment presented, but never accepted?",
+   "start": 88.707,
+   "end": 92.026,
+   "words": [
+    {
+     "w": "Dental",
+     "s": 88.707
+    },
+    {
+     "w": "practices:",
+     "s": 88.927
+    },
+    {
+     "w": "treatment",
+     "s": 89.947
+    },
+    {
+     "w": "presented,",
+     "s": 90.227
+    },
+    {
+     "w": "but",
+     "s": 91.007
+    },
+    {
+     "w": "never",
+     "s": 91.047
+    },
+    {
+     "w": "accepted?",
+     "s": 91.227
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "Dental"
+    ],
+    [
+     "pop",
+     "never"
+    ]
+   ]
+  },
+  {
+   "scene": "show",
+   "sub": "Here's case acceptance, recall tracking, and provider productivity.",
+   "start": 92.446,
+   "end": 96.186,
+   "words": [
+    {
+     "w": "Here's",
+     "s": 92.446
+    },
+    {
+     "w": "case",
+     "s": 92.706
+    },
+    {
+     "w": "acceptance,",
+     "s": 92.846
+    },
+    {
+     "w": "recall",
+     "s": 93.866
+    },
+    {
+     "w": "tracking,",
+     "s": 94.026
+    },
+    {
+     "w": "and",
+     "s": 94.846
+    },
+    {
+     "w": "provider",
+     "s": 94.926
+    },
+    {
+     "w": "productivity.",
+     "s": 95.186
+    }
+   ],
+   "cues": [
+    [
+     "sparkle",
+     "Here's"
+    ],
+    [
+     "pop",
+     "case"
+    ],
+    [
+     "pop",
+     "recall"
+    ],
+    [
+     "pop",
+     "provider"
+    ]
+   ]
+  },
+  {
+   "scene": "show",
+   "sub": "Owner-operators: busy miles, thin money?",
+   "start": 96.606,
+   "end": 99.035,
+   "words": [
+    {
+     "w": "Owner-operators:",
+     "s": 96.606
+    },
+    {
+     "w": "busy",
+     "s": 97.626
+    },
+    {
+     "w": "miles,",
+     "s": 97.786
+    },
+    {
+     "w": "thin",
+     "s": 98.486
+    },
+    {
+     "w": "money?",
+     "s": 98.546
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "Owner-operators"
+    ],
+    [
+     "pop",
+     "thin"
+    ]
+   ]
+  },
+  {
+   "scene": "show",
+   "sub": "Here's profit on every load, and your real cost per mile.",
+   "start": 99.455,
+   "end": 102.577,
+   "words": [
+    {
+     "w": "Here's",
+     "s": 99.455
+    },
+    {
+     "w": "profit",
+     "s": 99.715
+    },
+    {
+     "w": "on",
+     "s": 99.915
+    },
+    {
+     "w": "every",
+     "s": 100.155
+    },
+    {
+     "w": "load,",
+     "s": 100.335
+    },
+    {
+     "w": "and",
+     "s": 101.115
+    },
+    {
+     "w": "your",
+     "s": 101.175
+    },
+    {
+     "w": "real",
+     "s": 101.295
+    },
+    {
+     "w": "cost",
+     "s": 101.455
+    },
+    {
+     "w": "per",
+     "s": 101.815
+    },
+    {
+     "w": "mile.",
+     "s": 102.055
+    }
+   ],
+   "cues": [
+    [
+     "sparkle",
+     "Here's"
+    ],
+    [
+     "pop",
+     "profit"
+    ],
+    [
+     "pop",
+     "cost"
+    ]
+   ]
+  },
+  {
+   "scene": "show",
+   "sub": "Rental investors: rent coming in, return unknown?",
+   "start": 102.997,
+   "end": 106.099,
+   "words": [
+    {
+     "w": "Rental",
+     "s": 102.997
+    },
+    {
+     "w": "investors:",
+     "s": 103.257
+    },
+    {
+     "w": "rent",
+     "s": 104.237
+    },
+    {
+     "w": "coming",
+     "s": 104.417
+    },
+    {
+     "w": "in,",
+     "s": 104.697
+    },
+    {
+     "w": "return",
+     "s": 105.077
+    },
+    {
+     "w": "unknown?",
+     "s": 105.317
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "Rental"
+    ],
+    [
+     "pop",
+     "unknown"
+    ]
+   ]
+  },
+  {
+   "scene": "show",
+   "sub": "Here's cap rate, cash-on-cash, and DSCR, property by property.",
+   "start": 106.519,
+   "end": 110.726,
+   "words": [
+    {
+     "w": "Here's",
+     "s": 106.519
+    },
+    {
+     "w": "cap",
+     "s": 106.739
+    },
+    {
+     "w": "rate,",
+     "s": 106.899
+    },
+    {
+     "w": "cash-on-cash,",
+     "s": 107.629
+    },
+    {
+     "w": "and",
+     "s": 108.359
+    },
+    {
+     "w": "DSCR,",
+     "s": 108.959
+    },
+    {
+     "w": "property",
+     "s": 109.559
+    },
+    {
+     "w": "by",
+     "s": 109.699
+    },
+    {
+     "w": "property.",
+     "s": 110.079
+    }
+   ],
+   "cues": [
+    [
+     "sparkle",
+     "Here's"
+    ],
+    [
+     "pop",
+     "cap"
+    ],
+    [
+     "pop",
+     "cash-on-cash,"
+    ],
+    [
+     "pop",
+     "DSCR,"
+    ]
+   ]
+  },
+  {
+   "scene": "show",
+   "sub": "Online stores: sales up, profit a mystery?",
+   "start": 111.146,
+   "end": 113.794,
+   "words": [
+    {
+     "w": "Online",
+     "s": 111.146
+    },
+    {
+     "w": "stores:",
+     "s": 111.346
+    },
+    {
+     "w": "sales",
+     "s": 112.166
+    },
+    {
+     "w": "up,",
+     "s": 112.446
+    },
+    {
+     "w": "profit",
+     "s": 112.866
+    },
+    {
+     "w": "a",
+     "s": 113.086
+    },
+    {
+     "w": "mystery?",
+     "s": 113.246
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "Online"
+    ],
+    [
+     "pop",
+     "mystery"
+    ]
+   ]
+  },
+  {
+   "scene": "show",
+   "sub": "Here's profit by SKU, ad spend, returns, and every sales channel.",
+   "start": 114.214,
+   "end": 118.65,
+   "words": [
+    {
+     "w": "Here's",
+     "s": 114.214
+    },
+    {
+     "w": "profit",
+     "s": 114.434
+    },
+    {
+     "w": "by",
+     "s": 114.634
+    },
+    {
+     "w": "SKU,",
+     "s": 115.304
+    },
+    {
+     "w": "ad",
+     "s": 115.974
+    },
+    {
+     "w": "spend,",
+     "s": 116.214
+    },
+    {
+     "w": "returns,",
+     "s": 116.794
+    },
+    {
+     "w": "and",
+     "s": 117.474
+    },
+    {
+     "w": "every",
+     "s": 117.534
+    },
+    {
+     "w": "sales",
+     "s": 117.774
+    },
+    {
+     "w": "channel.",
+     "s": 117.954
+    }
+   ],
+   "cues": [
+    [
+     "sparkle",
+     "Here's"
+    ],
+    [
+     "pop",
+     "SKU,"
+    ],
+    [
+     "pop",
+     "ad"
+    ],
+    [
+     "pop",
+     "returns,"
+    ],
+    [
+     "pop",
+     "sales"
+    ]
+   ]
+  },
+  {
+   "scene": "wall",
+   "sub": "And that's just six of the twenty-one.",
+   "start": 119.7,
+   "end": 121.406,
+   "words": [
+    {
+     "w": "And",
+     "s": 119.7
+    },
+    {
+     "w": "that's",
+     "s": 119.8
+    },
+    {
+     "w": "just",
+     "s": 120.04
+    },
+    {
+     "w": "six",
+     "s": 120.2
+    },
+    {
+     "w": "of",
+     "s": 120.46
+    },
+    {
+     "w": "the",
+     "s": 120.66
+    },
+    {
+     "w": "twenty-one.",
+     "s": 121.033
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "six"
+    ]
+   ]
+  },
+  {
+   "scene": "wall",
+   "sub": "HVAC. Electrical. Roofing. Landscaping. Lawn care. Pest control.",
+   "start": 121.826,
+   "end": 126.341,
+   "words": [
+    {
+     "w": "HVAC.",
+     "s": 121.826
+    },
+    {
+     "w": "Electrical.",
+     "s": 122.466
+    },
+    {
+     "w": "Roofing.",
+     "s": 123.186
+    },
+    {
+     "w": "Landscaping.",
+     "s": 123.986
+    },
+    {
+     "w": "Lawn",
+     "s": 124.846
+    },
+    {
+     "w": "care.",
+     "s": 124.946
+    },
+    {
+     "w": "Pest",
+     "s": 125.666
+    },
+    {
+     "w": "control.",
+     "s": 125.746
+    }
+   ],
+   "cues": [
+    [
+     "up",
+     "HVAC."
+    ],
+    [
+     "up",
+     "Electrical."
+    ],
+    [
+     "up",
+     "Roofing."
+    ],
+    [
+     "up",
+     "Landscaping."
+    ],
+    [
+     "up",
+     "Lawn"
+    ],
+    [
+     "up",
+     "Pest"
+    ]
+   ]
+  },
+  {
+   "scene": "wall",
+   "sub": "Cleaning. Construction. Auto repair. Manufacturing. Marketing agencies. Airbnb hosts.",
+   "start": 126.761,
+   "end": 132.356,
+   "words": [
+    {
+     "w": "Cleaning.",
+     "s": 126.761
+    },
+    {
+     "w": "Construction.",
+     "s": 127.301
+    },
+    {
+     "w": "Auto",
+     "s": 128.141
+    },
+    {
+     "w": "repair.",
+     "s": 128.201
+    },
+    {
+     "w": "Manufacturing.",
+     "s": 129.881
+    },
+    {
+     "w": "Marketing",
+     "s": 130.461
+    },
+    {
+     "w": "agencies.",
+     "s": 130.491
+    },
+    {
+     "w": "Airbnb",
+     "s": 131.621
+    },
+    {
+     "w": "hosts.",
+     "s": 131.651
+    }
+   ],
+   "cues": [
+    [
+     "up",
+     "Cleaning."
+    ],
+    [
+     "up",
+     "Construction."
+    ],
+    [
+     "up",
+     "Auto"
+    ],
+    [
+     "up",
+     "Manufacturing."
+    ],
+    [
+     "up",
+     "Marketing"
+    ],
+    [
+     "up",
+     "Airbnb"
+    ]
+   ]
+  },
+  {
+   "scene": "wall",
+   "sub": "Property managers. 1099 contractors. And small businesses of every kind.",
+   "start": 132.776,
+   "end": 137.883,
+   "words": [
+    {
+     "w": "Property",
+     "s": 132.776
+    },
+    {
+     "w": "managers.",
+     "s": 133.423
+    },
+    {
+     "w": "1099",
+     "s": 134.07
+    },
+    {
+     "w": "contractors.",
+     "s": 134.716
+    },
+    {
+     "w": "And",
+     "s": 136.056
+    },
+    {
+     "w": "small",
+     "s": 136.086
+    },
+    {
+     "w": "businesses",
+     "s": 136.276
+    },
+    {
+     "w": "of",
+     "s": 136.616
+    },
+    {
+     "w": "every",
+     "s": 137.076
+    },
+    {
+     "w": "kind.",
+     "s": 137.256
+    }
+   ],
+   "cues": [
+    [
+     "up",
+     "Property"
+    ],
+    [
+     "up",
+     "1099"
+    ],
+    [
+     "up",
+     "small"
+    ]
+   ]
+  },
+  {
+   "scene": "wall",
+   "sub": "Every one built around how that business actually runs.",
+   "start": 138.303,
+   "end": 141.19,
+   "words": [
+    {
+     "w": "Every",
+     "s": 138.303
+    },
+    {
+     "w": "one",
+     "s": 138.453
+    },
+    {
+     "w": "built",
+     "s": 138.603
+    },
+    {
+     "w": "around",
+     "s": 138.943
+    },
+    {
+     "w": "how",
+     "s": 139.283
+    },
+    {
+     "w": "that",
+     "s": 139.563
+    },
+    {
+     "w": "business",
+     "s": 139.743
+    },
+    {
+     "w": "actually",
+     "s": 140.063
+    },
+    {
+     "w": "runs.",
+     "s": 140.463
+    }
+   ],
+   "cues": [
+    [
+     "sparkle",
+     "Every"
+    ]
+   ]
+  },
+  {
+   "scene": "box",
+   "sub": "Every system comes in three editions.",
+   "start": 142.24,
+   "end": 144.242,
+   "words": [
+    {
+     "w": "Every",
+     "s": 142.24
+    },
+    {
+     "w": "system",
+     "s": 142.44
+    },
+    {
+     "w": "comes",
+     "s": 142.8
+    },
+    {
+     "w": "in",
+     "s": 143.14
+    },
+    {
+     "w": "three",
+     "s": 143.3
+    },
+    {
+     "w": "editions.",
+     "s": 143.5
+    }
+   ],
+   "cues": [
+    [
+     "whoosh",
+     "three"
+    ]
+   ]
+  },
+  {
+   "scene": "box",
+   "sub": "Essential, $97. The core numbers.",
+   "start": 144.662,
+   "end": 147.549,
+   "words": [
+    {
+     "w": "Essential,",
+     "s": 144.662
+    },
+    {
+     "w": "$97.",
+     "s": 145.652
+    },
+    {
+     "w": "The",
+     "s": 146.642
+    },
+    {
+     "w": "core",
+     "s": 146.682
+    },
+    {
+     "w": "numbers.",
+     "s": 146.842
+    }
+   ],
+   "cues": [
+    [
+     "cash",
+     "$97."
+    ]
+   ]
+  },
+  {
+   "scene": "box",
+   "sub": "Elite, $197. The full system, with deeper analysis.",
+   "start": 147.969,
+   "end": 151.799,
+   "words": [
+    {
+     "w": "Elite,",
+     "s": 147.969
+    },
+    {
+     "w": "$197.",
+     "s": 148.789
+    },
+    {
+     "w": "The",
+     "s": 149.609
+    },
+    {
+     "w": "full",
+     "s": 149.769
+    },
+    {
+     "w": "system,",
+     "s": 149.909
+    },
+    {
+     "w": "with",
+     "s": 150.569
+    },
+    {
+     "w": "deeper",
+     "s": 150.649
+    },
+    {
+     "w": "analysis.",
+     "s": 150.849
+    }
+   ],
+   "cues": [
+    [
+     "cash",
+     "$197."
+    ]
+   ]
+  },
+  {
+   "scene": "box",
+   "sub": "Complete, $249. Both editions, together.",
+   "start": 152.219,
+   "end": 155.186,
+   "words": [
+    {
+     "w": "Complete,",
+     "s": 152.219
+    },
+    {
+     "w": "$249.",
+     "s": 152.979
+    },
+    {
+     "w": "Both",
+     "s": 153.739
+    },
+    {
+     "w": "editions,",
+     "s": 153.959
+    },
+    {
+     "w": "together.",
+     "s": 154.699
+    }
+   ],
+   "cues": [
+    [
+     "cash",
+     "$249."
+    ]
+   ]
+  },
+  {
+   "scene": "box",
+   "sub": "Start with Essential, and move up to Elite whenever you're ready.",
+   "start": 155.606,
+   "end": 158.783,
+   "words": [
+    {
+     "w": "Start",
+     "s": 155.606
+    },
+    {
+     "w": "with",
+     "s": 155.826
+    },
+    {
+     "w": "Essential,",
+     "s": 155.966
+    },
+    {
+     "w": "and",
+     "s": 156.826
+    },
+    {
+     "w": "move",
+     "s": 156.946
+    },
+    {
+     "w": "up",
+     "s": 157.126
+    },
+    {
+     "w": "to",
+     "s": 157.286
+    },
+    {
+     "w": "Elite",
+     "s": 157.446
+    },
+    {
+     "w": "whenever",
+     "s": 157.646
+    },
+    {
+     "w": "you're",
+     "s": 157.966
+    },
+    {
+     "w": "ready.",
+     "s": 158.366
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Essential,"
+    ],
+    [
+     "whoosh",
+     "Elite"
+    ]
+   ]
+  },
+  {
+   "scene": "inside",
+   "sub": "And inside every box:",
+   "start": 159.833,
+   "end": 161.29,
+   "words": [
+    {
+     "w": "And",
+     "s": 159.833
+    },
+    {
+     "w": "inside",
+     "s": 159.933
+    },
+    {
+     "w": "every",
+     "s": 160.213
+    },
+    {
+     "w": "box:",
+     "s": 160.613
+    }
+   ],
+   "cues": [
+    [
+     "box",
+     "box:"
+    ]
+   ]
+  },
+  {
+   "scene": "inside",
+   "sub": "Formulas, dashboards and reports, already built.",
+   "start": 161.71,
+   "end": 164.474,
+   "words": [
+    {
+     "w": "Formulas,",
+     "s": 161.71
+    },
+    {
+     "w": "dashboards",
+     "s": 162.47
+    },
+    {
+     "w": "and",
+     "s": 162.95
+    },
+    {
+     "w": "reports,",
+     "s": 163.15
+    },
+    {
+     "w": "already",
+     "s": 163.77
+    },
+    {
+     "w": "built.",
+     "s": 163.91
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Formulas,"
+    ],
+    [
+     "pop",
+     "dashboards"
+    ],
+    [
+     "pop",
+     "reports,"
+    ]
+   ]
+  },
+  {
+   "scene": "inside",
+   "sub": "Sample data, so every dashboard works the moment you open it.",
+   "start": 164.894,
+   "end": 168.312,
+   "words": [
+    {
+     "w": "Sample",
+     "s": 164.894
+    },
+    {
+     "w": "data,",
+     "s": 165.194
+    },
+    {
+     "w": "so",
+     "s": 165.854
+    },
+    {
+     "w": "every",
+     "s": 166.034
+    },
+    {
+     "w": "dashboard",
+     "s": 166.314
+    },
+    {
+     "w": "works",
+     "s": 166.734
+    },
+    {
+     "w": "the",
+     "s": 167.114
+    },
+    {
+     "w": "moment",
+     "s": 167.354
+    },
+    {
+     "w": "you",
+     "s": 167.574
+    },
+    {
+     "w": "open",
+     "s": 167.754
+    },
+    {
+     "w": "it.",
+     "s": 167.974
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Sample"
+    ]
+   ]
+  },
+  {
+   "scene": "inside",
+   "sub": "A tax set-aside estimate, so you can plan for tax time.",
+   "start": 168.732,
+   "end": 171.939,
+   "words": [
+    {
+     "w": "A",
+     "s": 168.732
+    },
+    {
+     "w": "tax",
+     "s": 168.792
+    },
+    {
+     "w": "set-aside",
+     "s": 169.202
+    },
+    {
+     "w": "estimate,",
+     "s": 169.612
+    },
+    {
+     "w": "so",
+     "s": 170.412
+    },
+    {
+     "w": "you",
+     "s": 170.512
+    },
+    {
+     "w": "can",
+     "s": 170.612
+    },
+    {
+     "w": "plan",
+     "s": 170.732
+    },
+    {
+     "w": "for",
+     "s": 170.912
+    },
+    {
+     "w": "tax",
+     "s": 171.132
+    },
+    {
+     "w": "time.",
+     "s": 171.352
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "tax"
+    ]
+   ]
+  },
+  {
+   "scene": "inside",
+   "sub": "Country-based tax-rate presets, with room for your own rate.",
+   "start": 172.359,
+   "end": 175.539,
+   "words": [
+    {
+     "w": "Country-based",
+     "s": 172.359
+    },
+    {
+     "w": "tax-rate",
+     "s": 172.899
+    },
+    {
+     "w": "presets,",
+     "s": 173.439
+    },
+    {
+     "w": "with",
+     "s": 174.219
+    },
+    {
+     "w": "room",
+     "s": 174.399
+    },
+    {
+     "w": "for",
+     "s": 174.579
+    },
+    {
+     "w": "your",
+     "s": 174.819
+    },
+    {
+     "w": "own",
+     "s": 174.959
+    },
+    {
+     "w": "rate.",
+     "s": 175.119
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Country-based"
+    ],
+    [
+     "pop",
+     "own"
+    ]
+   ]
+  },
+  {
+   "scene": "inside",
+   "sub": "A Quick Start for day one, and a full Field Guide for every sheet.",
+   "start": 175.959,
+   "end": 179.494,
+   "words": [
+    {
+     "w": "A",
+     "s": 175.959
+    },
+    {
+     "w": "Quick",
+     "s": 176.019
+    },
+    {
+     "w": "Start",
+     "s": 176.179
+    },
+    {
+     "w": "for",
+     "s": 176.439
+    },
+    {
+     "w": "day",
+     "s": 176.659
+    },
+    {
+     "w": "one,",
+     "s": 176.839
+    },
+    {
+     "w": "and",
+     "s": 177.359
+    },
+    {
+     "w": "a",
+     "s": 177.579
+    },
+    {
+     "w": "full",
+     "s": 177.639
+    },
+    {
+     "w": "Field",
+     "s": 177.839
+    },
+    {
+     "w": "Guide",
+     "s": 178.139
+    },
+    {
+     "w": "for",
+     "s": 178.419
+    },
+    {
+     "w": "every",
+     "s": 178.739
+    },
+    {
+     "w": "sheet.",
+     "s": 178.899
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Quick"
+    ],
+    [
+     "pop",
+     "Field"
+    ]
+   ]
+  },
+  {
+   "scene": "how",
+   "sub": "And using it is simple.",
+   "start": 180.544,
+   "end": 181.781,
+   "words": [
+    {
+     "w": "And",
+     "s": 180.544
+    },
+    {
+     "w": "using",
+     "s": 180.624
+    },
+    {
+     "w": "it",
+     "s": 180.824
+    },
+    {
+     "w": "is",
+     "s": 181.084
+    },
+    {
+     "w": "simple.",
+     "s": 181.224
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "simple."
+    ]
+   ]
+  },
+  {
+   "scene": "how",
+   "sub": "Step one: open it. It already works, with sample data.",
+   "start": 182.201,
+   "end": 185.427,
+   "words": [
+    {
+     "w": "Step",
+     "s": 182.201
+    },
+    {
+     "w": "one:",
+     "s": 182.381
+    },
+    {
+     "w": "open",
+     "s": 182.681
+    },
+    {
+     "w": "it.",
+     "s": 183.041
+    },
+    {
+     "w": "It",
+     "s": 183.641
+    },
+    {
+     "w": "already",
+     "s": 183.781
+    },
+    {
+     "w": "works,",
+     "s": 183.901
+    },
+    {
+     "w": "with",
+     "s": 184.301
+    },
+    {
+     "w": "sample",
+     "s": 184.501
+    },
+    {
+     "w": "data.",
+     "s": 184.781
+    }
+   ],
+   "cues": [
+    [
+     "click",
+     "open"
+    ]
+   ]
+  },
+  {
+   "scene": "how",
+   "sub": "Step two: replace the sample rows with your own numbers.",
+   "start": 185.847,
+   "end": 188.794,
+   "words": [
+    {
+     "w": "Step",
+     "s": 185.847
+    },
+    {
+     "w": "two:",
+     "s": 186.007
+    },
+    {
+     "w": "replace",
+     "s": 186.567
+    },
+    {
+     "w": "the",
+     "s": 186.827
+    },
+    {
+     "w": "sample",
+     "s": 187.107
+    },
+    {
+     "w": "rows",
+     "s": 187.307
+    },
+    {
+     "w": "with",
+     "s": 187.647
+    },
+    {
+     "w": "your",
+     "s": 187.967
+    },
+    {
+     "w": "own",
+     "s": 188.067
+    },
+    {
+     "w": "numbers.",
+     "s": 188.187
+    }
+   ],
+   "cues": [
+    [
+     "type",
+     "replace"
+    ]
+   ]
+  },
+  {
+   "scene": "how",
+   "sub": "Step three: the dashboards and reports update on their own.",
+   "start": 189.214,
+   "end": 192.243,
+   "words": [
+    {
+     "w": "Step",
+     "s": 189.214
+    },
+    {
+     "w": "three:",
+     "s": 189.374
+    },
+    {
+     "w": "the",
+     "s": 189.974
+    },
+    {
+     "w": "dashboards",
+     "s": 190.054
+    },
+    {
+     "w": "and",
+     "s": 190.534
+    },
+    {
+     "w": "reports",
+     "s": 190.734
+    },
+    {
+     "w": "update",
+     "s": 191.014
+    },
+    {
+     "w": "on",
+     "s": 191.414
+    },
+    {
+     "w": "their",
+     "s": 191.694
+    },
+    {
+     "w": "own.",
+     "s": 191.794
+    }
+   ],
+   "cues": [
+    [
+     "ding",
+     "update"
+    ]
+   ]
+  },
+  {
+   "scene": "honest",
+   "sub": "Quick, honest answers.",
+   "start": 193.293,
+   "end": 194.528,
+   "words": [
+    {
+     "w": "Quick,",
+     "s": 193.293
+    },
+    {
+     "w": "honest",
+     "s": 193.593
+    },
+    {
+     "w": "answers.",
+     "s": 193.753
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "honest"
+    ]
+   ]
+  },
+  {
+   "scene": "honest",
+   "sub": "Is it a subscription? No. One payment.",
+   "start": 194.948,
+   "end": 197.288,
+   "words": [
+    {
+     "w": "Is",
+     "s": 194.948
+    },
+    {
+     "w": "it",
+     "s": 195.028
+    },
+    {
+     "w": "a",
+     "s": 195.108
+    },
+    {
+     "w": "subscription?",
+     "s": 195.168
+    },
+    {
+     "w": "No.",
+     "s": 196.168
+    },
+    {
+     "w": "One",
+     "s": 196.528
+    },
+    {
+     "w": "payment.",
+     "s": 196.668
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "subscription?"
+    ],
+    [
+     "stamp",
+     "No."
+    ]
+   ]
+  },
+  {
+   "scene": "honest",
+   "sub": "Do you need to be an Excel expert? No. You enter your numbers, and the formulas do the rest.",
+   "start": 197.708,
+   "end": 202.711,
+   "words": [
+    {
+     "w": "Do",
+     "s": 197.708
+    },
+    {
+     "w": "you",
+     "s": 197.738
+    },
+    {
+     "w": "need",
+     "s": 197.828
+    },
+    {
+     "w": "to",
+     "s": 197.968
+    },
+    {
+     "w": "be",
+     "s": 198.108
+    },
+    {
+     "w": "an",
+     "s": 198.228
+    },
+    {
+     "w": "Excel",
+     "s": 198.328
+    },
+    {
+     "w": "expert?",
+     "s": 198.488
+    },
+    {
+     "w": "No.",
+     "s": 199.708
+    },
+    {
+     "w": "You",
+     "s": 200.328
+    },
+    {
+     "w": "enter",
+     "s": 200.358
+    },
+    {
+     "w": "your",
+     "s": 200.508
+    },
+    {
+     "w": "numbers,",
+     "s": 200.688
+    },
+    {
+     "w": "and",
+     "s": 201.288
+    },
+    {
+     "w": "the",
+     "s": 201.318
+    },
+    {
+     "w": "formulas",
+     "s": 201.408
+    },
+    {
+     "w": "do",
+     "s": 201.668
+    },
+    {
+     "w": "the",
+     "s": 202.068
+    },
+    {
+     "w": "rest.",
+     "s": 202.188
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "Excel"
+    ],
+    [
+     "stamp",
+     "No."
+    ]
+   ]
+  },
+  {
+   "scene": "honest",
+   "sub": "You'll just need the desktop version of Microsoft Excel.",
+   "start": 203.131,
+   "end": 206.271,
+   "words": [
+    {
+     "w": "You'll",
+     "s": 203.131
+    },
+    {
+     "w": "just",
+     "s": 203.231
+    },
+    {
+     "w": "need",
+     "s": 203.391
+    },
+    {
+     "w": "the",
+     "s": 203.591
+    },
+    {
+     "w": "desktop",
+     "s": 203.751
+    },
+    {
+     "w": "version",
+     "s": 203.971
+    },
+    {
+     "w": "of",
+     "s": 204.631
+    },
+    {
+     "w": "Microsoft",
+     "s": 205.031
+    },
+    {
+     "w": "Excel.",
+     "s": 205.411
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "desktop"
+    ]
+   ]
+  },
+  {
+   "scene": "honest",
+   "sub": "It's a planning tool, not tax advice. And your numbers stay in your own file.",
+   "start": 206.691,
+   "end": 210.845,
+   "words": [
+    {
+     "w": "It's",
+     "s": 206.691
+    },
+    {
+     "w": "a",
+     "s": 206.831
+    },
+    {
+     "w": "planning",
+     "s": 206.871
+    },
+    {
+     "w": "tool,",
+     "s": 207.051
+    },
+    {
+     "w": "not",
+     "s": 207.731
+    },
+    {
+     "w": "tax",
+     "s": 207.911
+    },
+    {
+     "w": "advice.",
+     "s": 208.111
+    },
+    {
+     "w": "And",
+     "s": 209.211
+    },
+    {
+     "w": "your",
+     "s": 209.251
+    },
+    {
+     "w": "numbers",
+     "s": 209.331
+    },
+    {
+     "w": "stay",
+     "s": 209.611
+    },
+    {
+     "w": "in",
+     "s": 209.911
+    },
+    {
+     "w": "your",
+     "s": 210.071
+    },
+    {
+     "w": "own",
+     "s": 210.171
+    },
+    {
+     "w": "file.",
+     "s": 210.331
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "planning"
+    ],
+    [
+     "pop",
+     "file."
+    ]
+   ]
+  },
+  {
+   "scene": "cta",
+   "sub": "So here's your next step.",
+   "start": 211.895,
+   "end": 213.128,
+   "words": [
+    {
+     "w": "So",
+     "s": 211.895
+    },
+    {
+     "w": "here's",
+     "s": 212.035
+    },
+    {
+     "w": "your",
+     "s": 212.335
+    },
+    {
+     "w": "next",
+     "s": 212.415
+    },
+    {
+     "w": "step.",
+     "s": 212.555
+    }
+   ],
+   "cues": [
+    [
+     "swish",
+     "next"
+    ]
+   ]
+  },
+  {
+   "scene": "cta",
+   "sub": "Find your industry, right below this video.",
+   "start": 213.548,
+   "end": 215.906,
+   "words": [
+    {
+     "w": "Find",
+     "s": 213.548
+    },
+    {
+     "w": "your",
+     "s": 213.748
+    },
+    {
+     "w": "industry,",
+     "s": 213.908
+    },
+    {
+     "w": "right",
+     "s": 214.648
+    },
+    {
+     "w": "below",
+     "s": 214.888
+    },
+    {
+     "w": "this",
+     "s": 215.148
+    },
+    {
+     "w": "video.",
+     "s": 215.348
+    }
+   ],
+   "cues": [
+    [
+     "drop",
+     "below"
+    ]
+   ]
+  },
+  {
+   "scene": "cta",
+   "sub": "Each one has its own full walkthrough, every sheet, shown and explained.",
+   "start": 216.326,
+   "end": 220.197,
+   "words": [
+    {
+     "w": "Each",
+     "s": 216.326
+    },
+    {
+     "w": "one",
+     "s": 216.486
+    },
+    {
+     "w": "has",
+     "s": 216.626
+    },
+    {
+     "w": "its",
+     "s": 216.766
+    },
+    {
+     "w": "own",
+     "s": 216.886
+    },
+    {
+     "w": "full",
+     "s": 217.066
+    },
+    {
+     "w": "walkthrough,",
+     "s": 217.286
+    },
+    {
+     "w": "every",
+     "s": 218.066
+    },
+    {
+     "w": "sheet,",
+     "s": 218.286
+    },
+    {
+     "w": "shown",
+     "s": 218.926
+    },
+    {
+     "w": "and",
+     "s": 219.166
+    },
+    {
+     "w": "explained.",
+     "s": 219.446
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "every"
+    ]
+   ]
+  },
+  {
+   "scene": "end",
+   "sub": "Your business already has the numbers.",
+   "start": 221.247,
+   "end": 223.158,
+   "words": [
+    {
+     "w": "Your",
+     "s": 221.247
+    },
+    {
+     "w": "business",
+     "s": 221.347
+    },
+    {
+     "w": "already",
+     "s": 221.707
+    },
+    {
+     "w": "has",
+     "s": 222.147
+    },
+    {
+     "w": "the",
+     "s": 222.447
+    },
+    {
+     "w": "numbers.",
+     "s": 222.587
+    }
+   ],
+   "cues": [
+    [
+     "pop",
+     "numbers."
+    ]
+   ]
+  },
+  {
+   "scene": "end",
+   "sub": "ProfitIQS shows you what they mean.",
+   "start": 223.578,
+   "end": 225.742,
+   "words": [
+    {
+     "w": "ProfitIQS",
+     "s": 223.578
+    },
+    {
+     "w": "shows",
+     "s": 224.458
+    },
+    {
+     "w": "you",
+     "s": 224.798
+    },
+    {
+     "w": "what",
+     "s": 225.018
+    },
+    {
+     "w": "they",
+     "s": 225.138
+    },
+    {
+     "w": "mean.",
+     "s": 225.258
+    }
+   ],
+   "cues": [
+    [
+     "impact",
+     "ProfitIQS"
+    ],
+    [
+     "chime",
+     "mean."
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,295 @@
+{
+ "lines": [
+  [
+   "hook",
+   "You open at seven.",
+   null,
+   [
+    [
+     "tick",
+     "open"
+    ],
+    [
+     "ding",
+     "seven"
+    ]
+   ]
+  ],
+  [
+   "hook",
+   "You close at seven.",
+   null,
+   [
+    [
+     "whoosh",
+     "close"
+    ],
+    [
+     "ding",
+     "seven"
+    ]
+   ]
+  ],
+  [
+   "hook",
+   "Jobs done. Invoices sent. Money moving in and out, all day long.",
+   null,
+   [
+    [
+     "pop",
+     "Jobs"
+    ],
+    [
+     "pop",
+     "Invoices"
+    ],
+    [
+     "swish",
+     "Money"
+    ],
+    [
+     "swish",
+     "out"
+    ]
+   ]
+  ],
+  [
+   "hook",
+   "So here's one quick question.",
+   null,
+   [
+    [
+     "pop",
+     "question"
+    ]
+   ]
+  ],
+  [
+   "hook",
+   "How much did you actually keep last month?",
+   null,
+   [
+    [
+     "hit",
+     "keep"
+    ]
+   ]
+  ],
+  [
+   "hook",
+   "Not what came in. What you kept.",
+   null,
+   [
+    [
+     "strike",
+     "came"
+    ],
+    [
+     "ding",
+     "kept"
+    ]
+   ]
+  ],
+  [
+   "reveal",
+   "That's why we built ProfitIQS.",
+   "That's why we built Profit IQS.",
+   [
+    [
+     "riser",
+     "why"
+    ],
+    [
+     "impact",
+     "ProfitIQS"
+    ]
+   ]
+  ],
+  [
+   "reveal",
+   "Business intelligence systems, in Excel. Each one built for one industry.",
+   null,
+   [
+    [
+     "pop",
+     "Excel"
+    ],
+    [
+     "pop",
+     "one"
+    ]
+   ]
+  ],
+  [
+   "reveal",
+   "Twenty-one industries. Sixty-three systems.",
+   null,
+   [
+    [
+     "count",
+     "Twenty-one"
+    ],
+    [
+     "ding",
+     "industries"
+    ],
+    [
+     "count",
+     "Sixty-three"
+    ],
+    [
+     "ding",
+     "systems"
+    ]
+   ]
+  ],
+  [
+   "reveal",
+   "Not one generic template. A system that speaks your trade.",
+   null,
+   [
+    [
+     "stamp",
+     "generic"
+    ],
+    [
+     "sparkle",
+     "speaks"
+    ]
+   ]
+  ],
+  [
+   "reveal",
+   "Built for people who are experts in their trade, not in spreadsheets.",
+   null,
+   [
+    [
+     "pop",
+     "trade,"
+    ],
+    [
+     "swish",
+     "spreadsheets."
+    ]
+   ]
+  ],
+  [
+   "box",
+   "Every system comes in three editions.",
+   null,
+   [
+    [
+     "whoosh",
+     "three"
+    ]
+   ]
+  ],
+  [
+   "box",
+   "Essential, $97. The core numbers.",
+   "Essential, ninety-seven dollars. The core numbers.",
+   [
+    [
+     "cash",
+     "$97."
+    ]
+   ]
+  ],
+  [
+   "box",
+   "Elite, $197. The full system, with deeper analysis.",
+   "Elite, one ninety-seven. The full system, with deeper analysis.",
+   [
+    [
+     "cash",
+     "$197."
+    ]
+   ]
+  ],
+  [
+   "box",
+   "Complete, $249. Both editions, together.",
+   "Complete, two forty-nine. Both editions, together.",
+   [
+    [
+     "cash",
+     "$249."
+    ]
+   ]
+  ],
+  [
+   "box",
+   "Start with Essential, and move up to Elite whenever you're ready.",
+   null,
+   [
+    [
+     "pop",
+     "Essential,"
+    ],
+    [
+     "whoosh",
+     "Elite"
+    ]
+   ]
+  ],
+  [
+   "cta",
+   "So here's your next step.",
+   null,
+   [
+    [
+     "swish",
+     "next"
+    ]
+   ]
+  ],
+  [
+   "cta",
+   "Find your industry, right below this video.",
+   null,
+   [
+    [
+     "drop",
+     "below"
+    ]
+   ]
+  ],
+  [
+   "cta",
+   "Each one has its own full walkthrough, every sheet, shown and explained.",
+   null,
+   [
+    [
+     "pop",
+     "every"
+    ]
+   ]
+  ],
+  [
+   "end",
+   "Your business already has the numbers.",
+   null,
+   [
+    [
+     "pop",
+     "numbers."
+    ]
+   ]
+  ],
+  [
+   "end",
+   "ProfitIQS shows you what they mean.",
+   "Profit IQS shows you what they mean.",
+   [
+    [
+     "impact",
+     "ProfitIQS"
+    ],
+    [
+     "chime",
+     "mean."
+    ]
+   ]
+  ]
+ ]
+}

@@ -6,3 +6,9 @@ out
 *.tsbuildinfo
 next-env.d.ts
 .vercel
+# homepage VSL: generated audio/data and copied product assets stay out of the public repo
+vsl-niche/home/public/
+vsl-niche/home/cur/
+vsl-niche/home/**/*.wav
+vsl-niche/home/_vo.npz
+vsl-niche/home/**/audio.log
