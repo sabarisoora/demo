@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Render the homepage VSL in chunks (resumable via .ok markers), then encode with the mastered audio.
+# Render the affiliate VSL in chunks (resumable via .ok markers), then encode with the mastered audio.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 V=aff
@@ -16,14 +16,19 @@ for ((A=0; A<TOTAL; A+=STEP)); do
   E=$(( A + STEP - 1 )); (( E >= TOTAL )) && E=$(( TOTAL - 1 ))
   F=$O/c$A.mp4
   if [ -s $F ] && [ -f $F.ok ]; then echo "file 'c$A.mp4'" >> $O/list.txt; continue; fi
+  # WebGL (swangle, slow) only for chunks that touch the 3D scenes; the rest render with the default GL
+  GL=$(python3 -c "
+import json;t=json.load(open('$SRC/timeline.json'))['lines'];r={}
+for l in t: r.setdefault(l['scene'],[l['start'],l['end']]); r[l['scene']][1]=l['end']
+print('--gl=swangle' if any(s in r and r[s][0]*30-40<=$E and r[s][1]*30+40>=$A for s in ('open','kit','cta')) else '')")
   for try in 1 2 3; do
-    if npx remotion render $B Aff $F --gl=swangle --frames=$A-$E --muted --props='{"audio":false}' --timeout=120000 --concurrency=4 --crf=14 --browser-executable=/opt/pw-browsers/chromium > $O/c$A.log 2>&1; then touch $F.ok; break; fi
+    if npx remotion render $B Aff $F $GL --frames=$A-$E --muted --props='{"audio":false}' --timeout=120000 --concurrency=4 --crf=14 --browser-executable=/opt/pw-browsers/chromium > $O/c$A.log 2>&1; then touch $F.ok; break; fi
     echo "chunk $A failed (try $try)"; [ $try = 3 ] && exit 1
   done
   echo "chunk $A-$E done $(date -u +%H:%M)"; echo "file 'c$A.mp4'" >> $O/list.txt
 done
 # audio: AAC, verify true peak after encoding, step gain down if needed
-G=2.8
+G=4.6
 for try in 1 2 3 4; do
   ffmpeg -y -hide_banner -loglevel error -i $SRC/mix.wav -af "volume=${G}dB,aresample=192000,alimiter=limit=0.74:attack=1:release=60:level=false,alimiter=limit=0.74:attack=0.1:release=20:level=false,aresample=48000" -c:a aac -b:a 256k build/aff-audio.m4a
   TP=$(ffmpeg -hide_banner -i build/aff-audio.m4a -af ebur128=peak=true -f null - 2>&1 | grep -E "^\s+Peak:" | tail -1 | awk '{print $2}')
