@@ -249,7 +249,7 @@ const ILL = [
 export const Money: React.FC = () => {
   const fr = useCurrentFrame();
   const L0 = li("Now, the commission"), L1 = li("From the seventeenth of October"), L2 = li("Then eighty-five"), L3 = li("And from the seventeenth of April"), L4 = li("Rates are set"), L5 = li("As an illustration"), L6 = li("Elite, one seventy-seven"), L7 = li("Fees, taxes");
-  const pAt = [cf(L1, "cash"), cf(L2, "cash"), cf(L3, "cash")];
+  const pAt = [ls(L1) + 6, cf(L2, "cash"), cf(L3, "cash")];
   const act = pAt.reduce((a, t, k) => (fr >= t - 8 ? k : a), -1);
   const cAt = [cf(L5, "cash"), cf(L6, "cash", 0), cf(L6, "cash", 1)];
   const cw = (1680 - 2 * 32) / 3;
@@ -299,7 +299,7 @@ export const Money: React.FC = () => {
                 </div>
                 <div>
                   <TSub size={26}>Illustrative commission at 90%</TSub>
-                  <div style={{ fontFamily: F.sans, fontWeight: 600, fontSize: 150, letterSpacing: "-0.065em", lineHeight: 0.95, color: P.ink, marginTop: 10, fontVariantNumeric: "tabular-nums" }}>{c.c}</div>
+                  <div style={{ fontFamily: F.sans, fontWeight: 600, fontSize: 116, letterSpacing: "-0.06em", lineHeight: 0.95, color: P.ink, marginTop: 14, fontVariantNumeric: "tabular-nums" }}>{c.c}</div>
                 </div>
               </Card>
             </Blur>

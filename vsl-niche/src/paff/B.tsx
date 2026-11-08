@@ -12,7 +12,7 @@ const ALL = ["plumbing-contractor", "hvac", "electrical-contractor", "roofing", 
 export const Kit: React.FC = () => {
   const fr = useCurrentFrame();
   const L0 = li("Now, the part most"), L1 = li("A complete kit"), L2 = li("Every fact in it"), L3 = li("Product facts, and"), L4 = li("A tier comparison"), L5 = li("Thirty short-form"), L6 = li("A social calendar"), L7 = li("Five email swipes"), L8 = li("Ad copy for Meta"), L9 = li("Plus an objections");
-  const cw = (1680 - 3 * 24) / 4, rh = 226;
+  const cw = (1680 - 3 * 24) / 4, rh = 208;
   const X = (c: number) => MX + c * (cw + 24), Y = (r: number) => 262 + r * (rh + 24);
   const T: React.FC<{ c: number; r: number; w?: number; h?: number; at: number; dark?: boolean; title: string; sub: string; children?: React.ReactNode }> = ({ c, r, w = 1, h = 1, at, dark, title, sub, children }) => (
     <Blur at={at - 6} dy={40} len={20} style={{ position: "absolute", left: X(c), top: Y(r) }}>
@@ -27,9 +27,9 @@ export const Kit: React.FC = () => {
     <Block a={ls(L0) - 8} b={le(L9) + 10} push={0.01}>
       <Phase a={ls(L0) - 8} b={ls(L1) - 8}><BigSay line={L0} size={124} /></Phase>
       <Phase a={ls(L1) - 8} b={ls(L2) - 8}>
-        <Head line={L1} size={72} maxWidth={1680} align="center" whole top={170} />
+        <Head line={L1} size={60} maxWidth={1680} align="center" whole top={170} maxLines={1} />
         {[ALL.slice(0, 11), ALL.slice(11)].map((row, r) => (
-          <div key={r} style={{ position: "absolute", left: 0, right: 0, top: 330 + r * 240, display: "flex", justifyContent: "center", gap: 22 }}>
+          <div key={r} style={{ position: "absolute", left: 0, right: 0, top: 360 + r * 240, display: "flex", justifyContent: "center", gap: 22 }}>
             {row.map((s, k) => <Blur key={s} at={cf(L1, "box") - 10 + (r * 11 + k) * 1.3} dy={40}><Cover slug={s} width={130} /></Blur>)}
           </div>
         ))}
@@ -50,22 +50,21 @@ export const Kit: React.FC = () => {
         </T>
         <T c={1} r={0} at={cf(L3, "pop")} title="Product facts" sub="Real checkout links, all three editions" />
         <T c={2} r={0} at={cf(L4, "pop")} title="Tier comparison" sub="Recommend the right edition">
-          <KitImg src="comparison.png" width={120} ratio={1350 / 1080} radius={8} style={{ position: "absolute", right: 30, bottom: -40 }} />
+          <KitImg src="comparison.png" width={120} ratio={1350 / 1080} radius={8} style={{ position: "absolute", right: 30, bottom: -76 }} />
         </T>
         <T c={3} r={0} at={cf(L5, "pop", 1)} title="10 video scripts" sub="20 to 45 seconds, phone-ready" />
         <T c={1} r={1} w={2} at={cf(L6, "pop", 0)} title="Social calendar" sub="Five carousel decks, already designed">
-          <div style={{ position: "absolute", right: 30, top: 30, display: "flex", gap: 12 }}>
-            {["car-slide-1.png", "car-slide-2.png", "car-slide-3.png"].map((s, k) => <Blur key={s} at={cf(L6, "pop", 1) - 6 + k * 3} dy={20}><KitImg src={s} width={132} ratio={1350 / 1080} radius={8} /></Blur>)}
+          <div style={{ position: "absolute", right: 30, bottom: 26, display: "flex", gap: 12 }}>
+            {["square-1-problem.png", "square-3-kpi.png", "launch-announcement.png"].map((s, k) => <Blur key={s} at={cf(L6, "pop", 1) - 6 + k * 3} dy={20}><KitImg src={s} width={104} ratio={1} radius={10} /></Blur>)}
           </div>
         </T>
         <T c={3} r={1} at={cf(L7, "pop", 0)} title="5 email swipes" sub="For your own opt-in list" />
         <T c={1} r={2} at={cf(L7, "pop", 1)} title="Cold outreach" sub="An eight-email sequence" />
         <T c={2} r={2} at={cf(L8, "pop", 0)} title="Meta ad copy" sub="Ready to paste into Ads Manager" />
         <T c={3} r={2} at={cf(L8, "pop", 1)} dark title="10 graphics" sub="Plus real workbook screenshots">
-          <KitImg src="square-2-product.png" width={110} ratio={1} radius={8} style={{ position: "absolute", right: 26, bottom: 22 }} />
         </T>
         {fr >= ls(L9) - 8 && (
-          <AbsoluteFill style={{ alignItems: "center", paddingTop: 1000 }}>
+          <AbsoluteFill style={{ alignItems: "center", paddingTop: 958 }}>
             <div style={{ display: "flex", gap: 14 }}>
               <Blur at={cf(L9, "pop", 0) - 6} dy={12}><Pill dark size={24}>Audience & objections guide</Pill></Blur>
               <Blur at={cf(L9, "pop", 1) - 6} dy={12}><Pill dark size={24}>Publishing checklist</Pill></Blur>
@@ -123,7 +122,7 @@ export const Launch: React.FC = () => {
   const L0 = li("Here's your first week");
   const Ls = STEPS.map((s) => li(s.l));
   const act = Ls.reduce((a, l, k) => (fr >= ls(l) - 8 ? k : a), -1);
-  const pw = 128, ph = 96;
+  const pw = 96, ph = 76;
   return (
     <Block a={ls(L0) - 8} b={le(Ls[5]) + 10} push={0.012}>
       <Phase a={ls(L0) - 8} b={ls(Ls[0]) - 8}><BigSay line={L0} size={140} /></Phase>
@@ -144,12 +143,12 @@ export const Launch: React.FC = () => {
         </div>
         <div style={{ position: "absolute", left: 1080, top: 190, width: 720 }}>
           <Label>21 niches · pick yours</Label>
-          <div style={{ display: "grid", gridTemplateColumns: `repeat(5, ${pw}px)`, gap: 13, marginTop: 24 }}>
+          <div style={{ display: "grid", gridTemplateColumns: `repeat(7, ${pw}px)`, gap: 8, marginTop: 24 }}>
             {PICK.map((s, k) => {
               const sel = s === "hvac" && act >= 0;
               const p = inn(fr, ls(Ls[0]) - 6 + k * 1.2, 14);
               return (
-                <div key={s} style={{ position: "relative", width: pw, height: ph, borderRadius: 18, overflow: "hidden", opacity: p * (act >= 1 && !sel ? 0.35 : 1), boxShadow: sel ? SH.deep : "none", outline: sel ? `4px solid ${P.ink}` : "none", outlineOffset: 3, transform: `translateY(${(1 - p) * 20}px)` }}>
+                <div key={s} style={{ position: "relative", width: pw, height: ph, borderRadius: 14, overflow: "hidden", opacity: p * (act >= 1 && !sel ? 0.35 : 1), boxShadow: sel ? SH.deep : "none", outline: sel ? `4px solid ${P.ink}` : "none", outlineOffset: 3, transform: `translateY(${(1 - p) * 20}px)` }}>
                   <Photo slug={s} w={pw} h={ph} style={{ filter: act >= 1 && !sel ? "grayscale(1)" : "none" }} />
                 </div>
               );
