@@ -97,9 +97,9 @@ export const Cover: React.FC<{ slug: string; tier?: "Essential" | "Elite"; width
   const size = px <= 360 ? 360 : px <= 720 ? 720 : 1240;
   return <Img src={staticFile(`hq/${slug}/${tier}-${size}.png`)} style={{ width, height: Math.round((width * 3508) / 2480), display: "block", borderRadius: Math.max(4, width * 0.018), boxShadow: SH.deep, ...style }} />;
 };
-/** the trade photograph from a product cover (real photography, 1200 px) */
+/** a real photograph of the trade (1600 px) */
 export const Photo: React.FC<{ slug: string; style?: React.CSSProperties }> = ({ slug, style }) => (
-  <Img src={staticFile(`hq/${slug}/photo.jpg`)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block", ...style }} />
+  <Img src={staticFile(`photos/${slug}.jpg`)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block", ...style }} />
 );
 
 /** an Excel-style app window with a real workbook screenshot */
