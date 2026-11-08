@@ -132,7 +132,7 @@ export const Wall: React.FC = () => {
           const p = inn(fr, t.at - 2, 14);
           return (
             <div key={k} style={{ position: "relative", height: 178, borderRadius: 28, overflow: "hidden", background: P.tile, boxShadow: p > 0.5 ? SH.card : "none", transform: `translateY(${-p * 6}px)` }}>
-              <Photo slug={SLUG[t.t]} style={{ opacity: 0.18 + 0.82 * p, filter: `grayscale(${1 - p})`, transform: `scale(${1.15 - 0.1 * p})` }} />
+              <Photo slug={SLUG[t.t]} w={cw} h={178} zoom={1.08 - 0.08 * p} style={{ opacity: 0.18 + 0.82 * p, filter: `grayscale(${1 - p})` }} />
               <div style={{ position: "absolute", inset: 0, background: `rgba(11,11,12,${0.05 + 0.5 * p})` }} />
               <div style={{ position: "absolute", inset: 0, padding: 24, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                 <div style={{ fontFamily: F.sans, fontWeight: 500, fontSize: 20, color: p > 0.5 ? "rgba(255,255,255,0.7)" : P.grey }}>{String(k + 1).padStart(2, "0")}</div>

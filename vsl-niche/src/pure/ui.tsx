@@ -1,6 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Img, interpolate, staticFile, useCurrentFrame } from "remotion";
 import { cl, eIn, eOut, F, inn, LINES, MX, norm, out, P, SCENES, sceneStart, SH, SHOT, wk } from "./lib";
+import PHOTOS from "./photos.json";
 
 let _ctx: CanvasRenderingContext2D | null = null;
 const measure = (text: string, font: string) => {
@@ -97,10 +98,15 @@ export const Cover: React.FC<{ slug: string; tier?: "Essential" | "Elite"; width
   const size = px <= 360 ? 360 : px <= 720 ? 720 : 1240;
   return <Img src={staticFile(`hq/${slug}/${tier}-${size}.png`)} style={{ width, height: Math.round((width * 3508) / 2480), display: "block", borderRadius: Math.max(4, width * 0.018), boxShadow: SH.deep, ...style }} />;
 };
-/** a real photograph of the trade (1600 px) */
-export const Photo: React.FC<{ slug: string; style?: React.CSSProperties }> = ({ slug, style }) => (
-  <Img src={staticFile(`photos/${slug}.jpg`)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block", ...style }} />
-);
+/** a real photograph of the trade, cropped around its chosen focal point for this exact tile size (never a blind centre crop) */
+export const Photo: React.FC<{ slug: string; w: number; h: number; zoom?: number; style?: React.CSSProperties }> = ({ slug, w, h, zoom = 1, style }) => {
+  const m = (PHOTOS as Record<string, { w: number; h: number; fx: number; fy: number; z: number }>)[slug];
+  const s = Math.max(w / m.w, h / m.h) * m.z * zoom;
+  const iw = m.w * s, ih = m.h * s;
+  const left = Math.min(0, Math.max(w - iw, w / 2 - m.fx * iw));
+  const top = Math.min(0, Math.max(h - ih, h / 2 - m.fy * ih));
+  return <Img src={staticFile(`photos/${slug}.jpg`)} style={{ position: "absolute", left, top, width: iw, height: ih, maxWidth: "none", display: "block", ...style }} />;
+};
 
 /** an Excel-style app window with a real workbook screenshot */
 export const Win: React.FC<{ shot: string; width: number; maxH?: number; title?: string; style?: React.CSSProperties; sample?: boolean }> = ({ shot, width, maxH = 600, title, style, sample = true }) => {

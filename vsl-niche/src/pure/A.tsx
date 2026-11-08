@@ -128,7 +128,7 @@ export const Blind: React.FC = () => {
             return (
               <div key={k} style={{ position: "absolute", left: pos.x, top: pos.y, width: pos.w, height: 300, borderRadius: 36, overflow: "hidden", background: P.ink,
                 boxShadow: active ? SH.deep : SH.soft, opacity: p, filter: p < 1 ? `blur(${(1 - p) * 12}px)` : undefined, transform: `translateY(${(1 - p) * 40 - a * 10}px)` }}>
-                <Photo slug={t.slug} style={{ filter: active ? "none" : "grayscale(1)", transform: `scale(${1.04 + 0.04 * a})` }} />
+                <Photo slug={t.slug} w={pos.w} h={300} zoom={1 + 0.04 * a} style={{ filter: active ? "none" : "grayscale(1)" }} />
                 <div style={{ position: "absolute", inset: 0, background: `rgba(11,11,12,${active ? 0.38 : 0.66})` }} />
                 <div style={{ position: "absolute", inset: 0, padding: 44, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
                   <Label color="rgba(255,255,255,0.72)">0{k + 1} · {t.name}</Label>
