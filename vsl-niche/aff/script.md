@@ -80,7 +80,7 @@
 > A customer buys through your link.
 > Digistore24 records the sale, and credits your commission on eligible orders.
 > And you see clicks, sales, refunds and commissions in your own Digistore24 account.
-> One honest note: the marketplace listings are submitted and pending approval. So request promotion where it's required, and don't describe them as approved until Digistore24 confirms it.
+> And here's the good news: every ProfitIQS product is approved on the Digistore24 marketplace. So you can start promoting right now.
 
 ## Chapter 6 · What's in every niche kit
 **Visual:** the kit box. Each item flies out on its word and stacks into a neat inventory wall, with real kit graphics as thumbnails.
@@ -113,7 +113,7 @@
 > There are twenty-one to choose from: ten ninety-nine contractors, Airbnb hosts, auto repair shops, cleaning services, construction, dental practices, digital marketing agencies, ecommerce, electrical contractors, HVAC, pest control, landscaping, lawn care, manufacturing, plumbing, property management, rental property, restaurants, roofing, small businesses, and trucking owner-operators.
 > Read that niche's product facts and tier comparison.
 > Pick your hooks, scripts, posts and emails, and download the graphics.
-> Sign in to Digistore24, request promotion if it's required, and copy the link for the right niche and edition.
+> Sign in to Digistore24, find the product, and copy your affiliate link for the right niche and edition.
 > Check the page: it opens the right product, it loads on mobile, and the prices match.
 > Test your link once, from a private browser window. Don't buy through your own link to test it.
 > Then publish, with a clear disclosure in every post, email and video.
@@ -144,7 +144,7 @@
 
 > A few honest answers before you start.
 > Is the ninety percent for life? No. It's the planned launch rate, then eighty-five, then eighty. Nothing in the kit promises a rate locked for life.
-> Is it approved on the Digistore24 marketplace? It's submitted and pending. Check the current status before you say otherwise.
+> Is it approved on the Digistore24 marketplace? Yes. Every product is approved, so you can start promoting today.
 > Can I offer a discount or a bonus? Only if it's on the sales page, or ProfitIQS approved it in writing.
 > And who looks after the customer? ProfitIQS handles product support. Digistore24 processes the orders, payments and refunds.
 
@@ -161,5 +161,5 @@
 ### Notes for your review
 - **Illustrative commission figures** ($87.30 / $177.30 / $224.10 at 90%) appear exactly as the master kit shows them, always with the "before fees, not a guarantee" label on screen and in the voice. If you'd prefer to leave the dollar amounts out completely, I'll cut those two lines.
 - **Dates** follow the kit: 90% until 16 Jan 2027, then 85%, then 80% from 17 Apr 2027. Once a phase passes, the video would need an update.
-- **Marketplace status** is described as "submitted and pending approval". If Digistore24 has approved it since 20 Oct 2026, tell me and I'll change that line.
+- **Marketplace status:** all products are approved on Digistore24 (confirmed by ProfitIQS, Nov 2026); affiliates can promote now.
 - **The Affiliate Hub link itself** isn't in the kit (it says "ask the ProfitIQS team"). If you give me the real URL, the end card can show it instead.
