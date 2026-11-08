@@ -8,7 +8,7 @@ B=build/home-bundle-$V; O=build/home-chunks-$V; mkdir -p $O out home/cur
 exec 9>/tmp/home-bundle.lock; flock 9
 cp $SRC/timeline.json $SRC/cues.json home/cur/
 cp $SRC/mix.wav home/public/mix.wav
-rm -rf $B && npx remotion bundle ${ENTRY:-src/min/index.ts} --public-dir home/public --out-dir $B --log=error >/dev/null
+rm -rf $B && npx remotion bundle ${ENTRY:-src/pure/index.ts} --public-dir home/public --out-dir $B --log=error >/dev/null
 flock -u 9
 TOTAL=$(python3 -c "import json,math;print(math.ceil(json.load(open('$SRC/timeline.json'))['duration']*30))")
 STEP=750; rm -f $O/list.txt
