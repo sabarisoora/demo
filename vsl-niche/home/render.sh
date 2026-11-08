@@ -4,7 +4,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 V=${1:-full}                          # full | short
 SRC=home; [ "$V" = short ] && SRC=home/short
-ENTRY=${ENTRY:-src/pure/index.ts}; NAME=ProfitIQS-Home-VSL$([ "$V" = short ] && echo -Short)
+ENTRY=${ENTRY:-src/pure/index.ts}; NAME=ProfitIQS-Home-VSL$([ "$V" = short ] && echo -Short || true)
 if [ "$V" = aff ]; then SRC=home/aff2; ENTRY=src/paff/index.ts; NAME=ProfitIQS-Affiliate-VSL; fi
 B=build/home-bundle-$V; O=build/home-chunks-$V; mkdir -p $O out home/cur
 exec 9>/tmp/home-bundle.lock; flock 9
