@@ -8,7 +8,7 @@ const composition = await selectComposition({ serveUrl, id: "Home", browserExecu
 const out = process.argv[2] || "build/home-board"; fs.mkdirSync(out, { recursive: true });
 const frames = process.argv[3] ? process.argv[3].split(",").map(Number) : tl.lines.map((l) => Math.round((l.start + (l.end - l.start) * 0.72) * 30));
 for (const [k, frame] of frames.entries()) {
-  try { await renderStill({ serveUrl, composition, frame, output: `${out}/${String(k).padStart(2, "0")}.png`, browserExecutable, scale: 0.3, inputProps: { audio: false } }); }
+  try { await renderStill({ serveUrl, composition, frame, output: `${out}/${String(k).padStart(2, "0")}.png`, browserExecutable, scale: Number(process.env.SCALE || 0.3), inputProps: { audio: false } }); }
   catch (e) { console.log("ERR", k, frame, String(e).slice(0, 400)); }
 }
 console.log("stills done", frames.length);

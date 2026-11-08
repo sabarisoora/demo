@@ -14,7 +14,8 @@ VOICE, SPEED = "af_heart", 1.05
 START, GAP, SCENE_GAP, TAIL = 0.9, 0.42, 1.05, 4.5
 LEAD = 0.15  # picture + sfx land this much before the spoken word
 
-if CINEMA: VOICE, SPEED = SPECD.get("voice", "am_fenrir"), SPECD.get("speed", 1.0)
+MINIMAL = SPECD.get("style") == "minimal"
+if CINEMA or MINIMAL: VOICE, SPEED = SPECD.get("voice", "am_fenrir"), SPECD.get("speed", 1.0)
 from kokoro_onnx import Kokoro
 from faster_whisper import WhisperModel
 k = Kokoro(os.path.join(MODEL, "kokoro-v1.0.onnx"), os.path.join(MODEL, "voices-v1.0.bin"))
@@ -269,6 +270,53 @@ if CINEMA:
         F_ = C_SFX.get(kd) or {"tick": tick, "swish": swish, "strike": strike, "glitch": glitch, "cash": cash, "click": click, "type": typing, "drop": drop}[kd]
         put(fx, F_(), at - (0.3 if kd in ("whoosh", "doors") else 0) - (0.4 if kd == "impact" else 0) * 0)
     for sc, st in list(S.items())[1:]: put(fx, addl(deep_whoosh(0.3), np.concatenate([np.zeros(int(0.45 * SR)), boom(0.25)[: int(0.7 * SR)]])), st - SCENE_GAP * 0.7)
+if MINIMAL:
+    # ---------- minimal score: sparse felt piano, 72 bpm, Fmaj7 Am7 Dm9 Cmaj9, soft room; sfx are quiet taps and tones ----------
+    from scipy.signal import fftconvolve
+    BPM_ = 72; b_ = 60 / BPM_; bar_ = 4 * b_
+    def pno(m, d=2.6, v=0.1):
+        f0 = mt(m); tt = TT(d); x = np.zeros(len(tt))
+        for n_ in range(1, 7):
+            x += np.sin(2 * np.pi * f0 * n_ * (1 + 0.0004 * n_ * n_) * tt) / n_ ** 1.7 * np.exp(-tt * (0.9 + 0.8 * n_ + f0 / 900))
+        x *= np.minimum(1, tt / 0.006)
+        x += lp(rng.standard_normal(len(tt)), 0.05) * np.exp(-tt * 90) * 0.15
+        return lp(x, 0.22) * v
+    prg = [(41, [57, 60, 64]), (45, [55, 60, 64]), (38, [53, 57, 64]), (36, [55, 59, 62])]
+    mel = [76, 74, 72, 67, 69, 72, 74, 79]
+    piano = np.zeros(N); pad_ = np.zeros(N); melody = np.zeros(N)
+    for kb in range(int(T / bar_) + 2):
+        s0 = kb * bar_; bs, ch = prg[kb % 4]
+        put(piano, pno(bs, 3.6, 0.09), s0)
+        for j, m in enumerate(ch): put(piano, pno(m, 3.2, 0.055), s0 + 0.035 * j)
+        put(piano, pno(ch[1], 1.6, 0.03), s0 + 2 * b_)
+        put(melody, pno(mel[kb % 8], 2.4, 0.045), s0 + 2.5 * b_)
+        tt = TT(bar_ + 0.8); e_ = np.minimum(1, tt / 0.8) * np.exp(-np.maximum(0, tt - bar_) / 0.4)
+        put(pad_, sum(np.sin(2 * np.pi * mt(m) * tt) for m in (bs + 12, ch[0])) * e_ * 0.012, s0)
+    irt = TT(2.2); ir = rng.standard_normal(len(irt)) * np.exp(-irt * 2.6); ir = lp(ir, 0.3); ir /= np.abs(ir).sum() ** 0.5 * 9
+    def room(x): return x + fftconvolve(x, ir)[: len(x)] * 0.9
+    mel_lvl = env([(0, 0), (E("reveal") - 0.5, 0), (E("reveal") + 1.0, 1), (T - 2, 1), (T, 0)])
+    pad_lvl = env([(0, 0.4), (E("reveal"), 1), (T - 2, 1), (T, 0)])
+    music = room(piano + melody * mel_lvl) + pad_ * pad_lvl
+    music *= (0.62 - 0.3 * duck) * env([(0, 0), (0.3, 1), (T - 1.5, 1), (T, 0)])
+    def tap(g=0.07, f0=1900): tt = TT(0.06); return (np.sin(2 * np.pi * f0 * tt) * np.exp(-tt * 90) + hp(rng.standard_normal(len(tt)), 0.5) * np.exp(-tt * 260) * 0.4) * g
+    def tone(m=84, g=0.05, d=1.6): tt = TT(d); return (np.sin(2 * np.pi * mt(m) * tt) + 0.18 * np.sin(4 * np.pi * mt(m) * tt)) * np.exp(-tt * 3.2) * np.minimum(1, tt / 0.004) * g
+    def air(d=0.6, g=0.035): tt = TT(d); return lp(rng.standard_normal(len(tt)), 0.08) * np.sin(np.pi * tt / d) ** 2 * g
+    def pencil(g=0.03): tt = TT(0.28); return hp(lp(rng.standard_normal(len(tt)), 0.35), 0.2) * np.sin(np.pi * tt / 0.28) * g
+    fx = np.zeros(N); up_i = 0
+    for c in CUES:
+        kd, at = c["kind"], c["t"]
+        if kd == "up": put(fx, tone([72, 74, 76, 79, 81][up_i % 5] + 12 * (up_i // 5 % 2), 0.035, 1.0), at); up_i += 1; continue
+        if kd == "count":
+            for j in range(10): put(fx, tap(0.035, 2400), at + j * 0.06)
+            continue
+        if kd == "type":
+            for j in range(8): put(fx, tap(0.03, 2600 + 300 * (j % 3)), at + j * 0.09)
+            continue
+        if kd == "strike": put(fx, pencil(), at); continue
+        if kd == "impact": put(fx, addl(tone(72, 0.05, 2.4), tone(79, 0.035, 2.4), tone(84, 0.03, 2.4)), at); continue
+        if kd in ("ding", "chime", "sparkle", "soft", "hit", "cash"): put(fx, tone({"ding": 84, "chime": 88, "sparkle": 91, "soft": 72, "hit": 76, "cash": 86}[kd]), at); continue
+        if kd in ("whoosh", "swish", "doors", "riser", "box"): put(fx, air(), at - 0.3); continue
+        put(fx, tap(), at)
 mix = vo * 1.0 + music + fx * 0.55
 raw = f"{HERE}/_raw.wav"
 sf.write(raw, mix / max(1, np.abs(mix).max()), SR, subtype="PCM_24")
