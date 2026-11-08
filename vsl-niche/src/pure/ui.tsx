@@ -35,7 +35,7 @@ const chunksOf = (toks: Tok[], maxWords: number) => {
 };
 
 /** spoken line: each word assembles itself (blur + rise) the moment it is said */
-export const Say: React.FC<{ line: number; size?: number; weight?: number; maxWidth?: number; maxLines?: number; align?: "left" | "center"; color?: string; whole?: boolean; strike?: string[]; style?: React.CSSProperties }> = ({ line, size = 76, weight = 600, maxWidth = 1500, maxLines = 2, align = "center", color = P.ink, whole = false, strike = [], style }) => {
+export const Say: React.FC<{ line: number; size?: number; weight?: number; maxWidth?: number; maxLines?: number; align?: "left" | "center"; color?: string; whole?: boolean; strike?: string[]; style?: React.CSSProperties; until?: number }> = ({ line, size = 76, weight = 600, maxWidth = 1500, maxLines = 2, align = "center", color = P.ink, whole = false, strike = [], style, until }) => {
   const fr = useCurrentFrame();
   const L = LINES[line];
   const acc = (ACC[line] ?? []).map(norm);
@@ -48,7 +48,7 @@ export const Say: React.FC<{ line: number; size?: number; weight?: number; maxWi
     <div style={{ display: "grid", width: maxWidth, justifyItems: align === "center" ? "center" : "start", ...style }}>
       {chunks.map((c, ci) => {
         const a = starts[ci] - 2;
-        const b = ci + 1 < chunks.length ? starts[ci + 1] - 9 : Infinity;
+        const b = ci + 1 < chunks.length ? starts[ci + 1] - 16 : until ?? Infinity;
         if (fr < a - 30 || fr > b + 12) return null;
         const q = Number.isFinite(b) ? interpolate(fr, [b, b + 9], [0, 1], { ...cl, easing: eIn }) : 0;
         return (
@@ -91,8 +91,15 @@ export const Pill: React.FC<{ children: React.ReactNode; dark?: boolean; size?: 
   <div style={{ display: "inline-flex", alignItems: "center", gap: 12, borderRadius: 999, padding: `${size * 0.5}px ${size * 0.95}px`, background: dark ? P.ink : P.bg, color: dark ? "#FFFFFF" : P.ink, border: dark ? "none" : `1.5px solid ${P.line}`, fontFamily: F.sans, fontWeight: 600, fontSize: size, letterSpacing: "-0.02em", boxShadow: dark ? SH.soft : "none", whiteSpace: "nowrap", ...style }}>{children}</div>
 );
 
-export const Cover: React.FC<{ slug: string; tier?: "Essential" | "Elite"; width: number; style?: React.CSSProperties }> = ({ slug, tier = "Elite", width, style }) => (
-  <Img src={staticFile(`hicov/${slug}/${tier}.png`)} style={{ width, height: Math.round((width * 1544) / 1091), display: "block", borderRadius: Math.max(4, width * 0.018), boxShadow: SH.deep, ...style }} />
+/** product cover from the 300-dpi field-guide master, pre-scaled so it is never shrunk more than ~2x on screen */
+export const Cover: React.FC<{ slug: string; tier?: "Essential" | "Elite"; width: number; style?: React.CSSProperties }> = ({ slug, tier = "Elite", width, style }) => {
+  const px = width * 2;
+  const size = px <= 360 ? 360 : px <= 720 ? 720 : 1240;
+  return <Img src={staticFile(`hq/${slug}/${tier}-${size}.png`)} style={{ width, height: Math.round((width * 3508) / 2480), display: "block", borderRadius: Math.max(4, width * 0.018), boxShadow: SH.deep, ...style }} />;
+};
+/** the trade photograph from a product cover (real photography, 1200 px) */
+export const Photo: React.FC<{ slug: string; style?: React.CSSProperties }> = ({ slug, style }) => (
+  <Img src={staticFile(`hq/${slug}/photo.jpg`)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", display: "block", ...style }} />
 );
 
 /** an Excel-style app window with a real workbook screenshot */
@@ -146,10 +153,10 @@ export const Chrome: React.FC = () => {
 /** scene block: soft blur-fade in/out plus a slow continuous camera push */
 export const Block: React.FC<{ a: number; b: number; children: React.ReactNode; push?: number; style?: React.CSSProperties }> = ({ a, b, children, push = 0.03, style }) => {
   const fr = useCurrentFrame();
-  if (fr < a - 1 || fr > b + 12) return null;
-  const p = inn(fr, a, 16);
-  const q = out(fr, b, 12);
-  const t = interpolate(fr, [a, b + 12], [0, 1], cl);
+  if (fr < a + 1 || fr > b) return null;
+  const p = inn(fr, a + 2, 14);
+  const q = out(fr, b - 10, 10);
+  const t = interpolate(fr, [a, b], [0, 1], cl);
   const bl = q * 12;
   return <AbsoluteFill style={{ opacity: Math.min(p, 1 - q), filter: bl > 0.05 ? `blur(${bl}px)` : undefined, transform: `scale(${1 + push * t})`, ...style }}>{children}</AbsoluteFill>;
 };
@@ -160,4 +167,18 @@ export const Head: React.FC<{ line: number; size?: number; maxWidth?: number; wh
   <div style={{ position: "absolute", left: align === "left" ? MX : (1920 - maxWidth) / 2, top }}>
     <Say line={line} size={size} maxWidth={maxWidth} align={align} whole={whole} maxLines={maxLines} />
   </div>
+);
+
+/** a part of a scene shown from a to b; it has fully left before b, so whatever follows never overlaps it */
+export const Phase: React.FC<{ a: number; b?: number; children: React.ReactNode; style?: React.CSSProperties }> = ({ a, b = Infinity, children, style }) => {
+  const fr = useCurrentFrame();
+  if (fr < a + 1 || fr > b) return null;
+  const p = inn(fr, a + 2, 12);
+  const q = Number.isFinite(b) ? out(fr, b - 10, 10) : 0;
+  const bl = (1 - p) * 10 + q * 10;
+  return <AbsoluteFill style={{ opacity: Math.min(p, 1 - q), filter: bl > 0.05 ? `blur(${bl}px)` : undefined, ...style }}>{children}</AbsoluteFill>;
+};
+/** consecutive parts: each one leaves before the next arrives */
+export const Seq: React.FC<{ items: [number, React.ReactNode][] }> = ({ items }) => (
+  <>{items.map(([a, node], k) => <Phase key={k} a={a} b={k + 1 < items.length ? items[k + 1][0] : Infinity}>{node}</Phase>)}</>
 );

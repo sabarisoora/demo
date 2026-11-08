@@ -17,7 +17,7 @@ for ((A=0; A<TOTAL; A+=STEP)); do
   F=$O/c$A.mp4
   if [ -s $F ] && [ -f $F.ok ]; then echo "file 'c$A.mp4'" >> $O/list.txt; continue; fi
   for try in 1 2 3; do
-    if npx remotion render $B Home $F --frames=$A-$E --muted --props='{"audio":false}' --timeout=120000 --concurrency=4 --crf=14 --browser-executable=/opt/pw-browsers/chromium > $O/c$A.log 2>&1; then touch $F.ok; break; fi
+    if npx remotion render $B Home $F --frames=$A-$E --muted --props='{"audio":false}' --timeout=120000 --concurrency=4 --scale=2 --image-format=png --crf=12 --x264-preset=veryfast --browser-executable=/opt/pw-browsers/chromium > $O/c$A.log 2>&1; then touch $F.ok; break; fi
     echo "chunk $A failed (try $try)"; [ $try = 3 ] && exit 1
   done
   echo "chunk $A-$E done $(date -u +%H:%M)"; echo "file 'c$A.mp4'" >> $O/list.txt
@@ -31,6 +31,6 @@ for try in 1 2 3 4; do
   [ "$(python3 -c "print(1 if $TP <= -1.2 else 0)")" = 1 ] && break
   G=$(python3 -c "print(round($G - ($TP + 1.4), 2))")
 done
-ffmpeg -y -hide_banner -loglevel error -f concat -safe 0 -i $O/list.txt -i build/home-audio-$V.m4a -map 0:v:0 -map 1:a:0 -c:v libx264 -crf 18 -preset slow -pix_fmt yuv420p -c:a copy -shortest -movflags +faststart out/ProfitIQS-Home-VSL$([ "$V" = short ] && echo -Short).mp4
+ffmpeg -y -hide_banner -loglevel error -f concat -safe 0 -i $O/list.txt -i build/home-audio-$V.m4a -map 0:v:0 -map 1:a:0 -vf scale=1920:1080:flags=lanczos -c:v libx264 -crf 14 -preset slow -tune animation -pix_fmt yuv420p -c:a copy -shortest -movflags +faststart out/ProfitIQS-Home-VSL$([ "$V" = short ] && echo -Short).mp4
 ffmpeg -hide_banner -i out/ProfitIQS-Home-VSL$([ "$V" = short ] && echo -Short).mp4 -vn -af ebur128=peak=true -f null - 2>&1 | grep -E "^\s+(I:|Peak:)" | tail -2 | tr -s ' ' | tr '\n' ' '
 echo; echo "HOME $V RENDERED $(date -u +%H:%M)"

@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, useCurrentFrame } from "remotion";
 import { cf, F, inn, io, le, li, ls, MX, out, P, SH, TOTAL } from "./lib";
-import { Block, Blur, Center, Cover, Head, Label, Lockup, Pill, Say, Win } from "./ui";
+import { Block, Blur, Center, Cover, Head, Label, Lockup, Phase, Photo, Pill, Say, Seq, Win } from "./ui";
 
 // ================= SHOWROOM =================
 type Sheet = { name: string; shot: string };
@@ -73,7 +73,7 @@ export const Showroom: React.FC = () => {
               {cur >= 0 && (
                 <div style={{ position: "absolute", left: 1090, top: 250, opacity: winIn, filter: winIn < 1 ? `blur(${(1 - winIn) * 12}px)` : undefined, transform: `translate(${(1 - winIn) * 160}px, ${(1 - winIn) * 30}px)` }}>
                   {n.sheets.map((s, q) => {
-                    const v = q === cur ? inn(fr, chipAt[q], 14) : q === cur - 1 ? 1 - inn(fr, chipAt[cur], 10) : 0;
+                    const v = q === cur ? (q === 0 ? 1 : inn(fr, chipAt[q] + 6, 12)) : q === cur - 1 ? 1 - inn(fr, chipAt[cur] - 3, 8) : 0;
                     if (v <= 0) return null;
                     return (
                       <div key={q} style={{ position: "absolute", left: 0, top: 0, opacity: v }}>
@@ -99,6 +99,12 @@ export const Showroom: React.FC = () => {
 
 // ================= ALL 21 =================
 const SHOWN = ["Plumbing", "Restaurants", "Dental", "Trucking", "Rental property", "Ecommerce"];
+const SLUG: Record<string, string> = {
+  Plumbing: "plumbing-contractor", Restaurants: "restaurant", Dental: "dental-practice", Trucking: "trucking-owner-operator", "Rental property": "rental-portfolio", Ecommerce: "ecommerce",
+  HVAC: "hvac", Electrical: "electrical-contractor", Roofing: "roofing", Landscaping: "landscaping", "Lawn care": "lawn-care", "Pest control": "pest-control", Cleaning: "cleaning-service",
+  Construction: "construction", "Auto repair": "auto-repair", Manufacturing: "manufacturing", "Marketing agencies": "digital-marketing-agency", "Airbnb hosts": "airbnb",
+  "Property managers": "property-management", "1099 contractors": "1099", "Small business": "small-business",
+};
 const REST: [string, number, string][] = [
   ["HVAC", 0, "HVAC."], ["Electrical", 0, "Electrical."], ["Roofing", 0, "Roofing."], ["Landscaping", 0, "Landscaping."], ["Lawn care", 0, "Lawn"], ["Pest control", 0, "Pest"],
   ["Cleaning", 1, "Cleaning."], ["Construction", 1, "Construction."], ["Auto repair", 1, "Auto"], ["Manufacturing", 1, "Manufacturing."], ["Marketing agencies", 1, "Marketing"], ["Airbnb hosts", 1, "Airbnb"],
@@ -116,7 +122,7 @@ export const Wall: React.FC = () => {
   const cw = (1680 - 6 * 20) / 7;
   return (
     <Block a={ls(L0) - 8} b={le(Le) + 8} push={0.02}>
-      <Head line={done ? Le : L0} size={64} maxWidth={1250} whole />
+      <Seq items={[[ls(L0) - 8, <Head line={L0} size={64} maxWidth={1250} whole />], [ls(Le) - 8, <Head line={Le} size={64} maxWidth={1250} whole />]]} />
       <div style={{ position: "absolute", right: MX, top: 120, display: "flex", alignItems: "baseline", gap: 10 }}>
         <div style={{ fontFamily: F.sans, fontWeight: 600, fontSize: 170, letterSpacing: "-0.07em", lineHeight: 1, color: P.ink, fontVariantNumeric: "tabular-nums" }}>{String(lit).padStart(2, "0")}</div>
         <div style={{ fontFamily: F.sans, fontWeight: 600, fontSize: 56, letterSpacing: "-0.04em", color: P.soft }}>/21</div>
@@ -125,10 +131,13 @@ export const Wall: React.FC = () => {
         {tiles.map((t, k) => {
           const p = inn(fr, t.at - 2, 14);
           return (
-            <div key={k} style={{ height: 178, borderRadius: 28, padding: "24px 24px", boxSizing: "border-box", display: "flex", flexDirection: "column", justifyContent: "space-between",
-              background: p > 0.5 ? P.ink : P.tile, boxShadow: p > 0.5 ? SH.card : "none", transform: `translateY(${-p * 6}px)` }}>
-              <div style={{ fontFamily: F.sans, fontWeight: 500, fontSize: 20, color: p > 0.5 ? "#8E8E93" : P.soft }}>{String(k + 1).padStart(2, "0")}</div>
-              <div style={{ fontFamily: F.sans, fontWeight: 600, fontSize: 29, letterSpacing: "-0.03em", lineHeight: 1.05, color: p > 0.5 ? "#FFFFFF" : P.soft }}>{t.t}</div>
+            <div key={k} style={{ position: "relative", height: 178, borderRadius: 28, overflow: "hidden", background: P.tile, boxShadow: p > 0.5 ? SH.card : "none", transform: `translateY(${-p * 6}px)` }}>
+              <Photo slug={SLUG[t.t]} style={{ opacity: 0.18 + 0.82 * p, filter: `grayscale(${1 - p})`, transform: `scale(${1.15 - 0.1 * p})` }} />
+              <div style={{ position: "absolute", inset: 0, background: `rgba(11,11,12,${0.05 + 0.5 * p})` }} />
+              <div style={{ position: "absolute", inset: 0, padding: 24, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                <div style={{ fontFamily: F.sans, fontWeight: 500, fontSize: 20, color: p > 0.5 ? "rgba(255,255,255,0.7)" : P.grey }}>{String(k + 1).padStart(2, "0")}</div>
+                <div style={{ fontFamily: F.sans, fontWeight: 600, fontSize: 29, letterSpacing: "-0.03em", lineHeight: 1.05, color: p > 0.5 ? "#FFFFFF" : P.grey2 }}>{t.t}</div>
+              </div>
             </div>
           );
         })}
@@ -151,7 +160,7 @@ export const Box: React.FC = () => {
   ];
   return (
     <Block a={ls(L0) - 8} b={le(Ls) + 8} push={0.015}>
-      <Head line={head} size={60} maxWidth={1680} maxLines={1} whole />
+      <Seq items={[L0, Le, Lx, Lc, Ls].map((l) => [ls(l) - 8, <Head line={l} size={60} maxWidth={1680} maxLines={1} whole />] as [number, React.ReactNode])} />
       <div style={{ position: "absolute", left: MX, top: 270, width: 1680, display: "flex", gap: 40 }}>
         {COLS.map((c, k) => {
           const dim = path && k === 2 ? 0.4 : 1;
@@ -209,11 +218,9 @@ export const Inside: React.FC = () => {
   );
   return (
     <Block a={ls(L0) - 8} b={le(L5) + 8} push={0.015}>
-      {lineNow === undefined ? (
-        <Center><Say line={L0} size={140} maxWidth={1600} whole /></Center>
-      ) : (
-        <>
-          <Head line={lineNow} size={56} maxWidth={1680} maxLines={1} whole />
+      <Seq items={[[ls(L0) - 8, <Center><Say line={L0} size={140} maxWidth={1600} whole /></Center>], ...[L1, L2, L3, L4, L5].map((l) => [ls(l) - 8, <Head line={l} size={56} maxWidth={1680} maxLines={1} whole />] as [number, React.ReactNode])]} />
+      {lineNow !== undefined && (
+        <Phase a={ls(L1) - 8}>
           <Tile c={0} r={0} w={2} h={2} at={cf(L1, "pop", 1)} dark title="Dashboards & reports" sub="Already built">
             <div style={{ position: "absolute", left: 38, top: 150 }}>
               <Win shot="ecommerce/executive-dashboard" width={760} maxH={400} title="Executive Dashboard.xlsx" />
@@ -231,7 +238,7 @@ export const Inside: React.FC = () => {
               {["plumbing-contractor", "dental-practice", "restaurant"].map((s) => <Cover key={s} slug={s} width={124} />)}
             </div>
           </Tile>
-        </>
+        </Phase>
       )}
     </Block>
   );
@@ -251,11 +258,9 @@ export const How: React.FC = () => {
   const cw = (1680 - 2 * 32) / 3;
   return (
     <Block a={ls(L0) - 8} b={le(L3) + 8} push={0.015}>
-      {act < 0 ? (
-        <Center><Say line={L0} size={140} maxWidth={1600} whole /></Center>
-      ) : (
-        <>
-          <Head line={[L1, L2, L3][act]} size={56} maxWidth={1680} maxLines={1} whole />
+      <Seq items={[[ls(L0) - 8, <Center><Say line={L0} size={140} maxWidth={1600} whole /></Center>], ...[L1, L2, L3].map((l) => [ls(l) - 8, <Head line={l} size={56} maxWidth={1680} maxLines={1} whole />] as [number, React.ReactNode])]} />
+      {act >= 0 && (
+        <Phase a={ls(L1) - 8}>
           {STEPS.map((s, k) => {
             const on = act === k;
             return (
@@ -277,7 +282,7 @@ export const How: React.FC = () => {
               </Blur>
             );
           })}
-        </>
+        </Phase>
       )}
     </Block>
   );
@@ -299,10 +304,9 @@ export const Honest: React.FC = () => {
   const cw = (1680 - 2 * 24) / 3;
   return (
     <Block a={ls(L0) - 8} b={le(L4) + 8} push={0.015}>
-      {fr < ls(L1) - 8 ? (
-        <Center><Say line={L0} size={140} maxWidth={1600} whole /></Center>
-      ) : (
-        <>
+      <Seq items={[[ls(L0) - 8, <Center><Say line={L0} size={140} maxWidth={1600} whole /></Center>], [ls(L1) - 8, null]]} />
+      {fr >= ls(L1) - 8 && (
+        <Phase a={ls(L1) - 8}>
           {FAQ.map((r, k) => (
             <Blur key={k} at={r.at - 6} dy={40} style={{ position: "absolute", left: MX, top: 180 + k * 196 }}>
               <div style={{ width: 1680, height: 172, borderRadius: 40, background: "#FFFFFF", boxShadow: `${SH.card}, 0 0 0 1px rgba(0,0,0,0.05)`, display: "flex", alignItems: "center", padding: "0 56px", boxSizing: "border-box", gap: 40 }}>
@@ -324,7 +328,7 @@ export const Honest: React.FC = () => {
               </div>
             </Blur>
           ))}
-        </>
+        </Phase>
       )}
     </Block>
   );
@@ -340,9 +344,8 @@ export const Cta: React.FC = () => {
   const W_ = 126, G = 22;
   return (
     <Block a={ls(L0) - 8} b={le(L2) + 8} push={0.015}>
-      {fr < ls(L1) - 8 ? (
-        <Center><Say line={L0} size={140} maxWidth={1600} whole /></Center>
-      ) : !swap ? (
+      <Phase a={ls(L0) - 8} b={ls(L1) - 8}><Center><Say line={L0} size={140} maxWidth={1600} whole /></Center></Phase>
+      <Phase a={ls(L1) - 8} b={ls(L2) - 8}>
         <>
           <Head line={L1} size={70} maxWidth={1680} align="center" whole top={150} />
           {[ALL.slice(0, 11), ALL.slice(11)].map((row, r) => (
@@ -361,7 +364,8 @@ export const Cta: React.FC = () => {
             </Blur>
           </AbsoluteFill>
         </>
-      ) : (
+      </Phase>
+      <Phase a={ls(L2) - 8}>
         <>
           <Blur at={ls(L2) - 6} dy={50} len={24} style={{ position: "absolute", left: MX, top: 230 }}>
             <div style={{ position: "relative" }}>
@@ -384,7 +388,7 @@ export const Cta: React.FC = () => {
             ))}
           </div>
         </>
-      )}
+      </Phase>
     </Block>
   );
 };
@@ -396,9 +400,8 @@ export const End: React.FC = () => {
   const hit = cf(L1, "impact");
   return (
     <Block a={ls(L0) - 8} b={TOTAL + 20} push={0.02}>
-      {fr < hit - 8 ? (
-        <Center><Say line={L0} size={140} maxWidth={1600} whole /></Center>
-      ) : (
+      <Phase a={ls(L0) - 8} b={hit - 8}><Center><Say line={L0} size={140} maxWidth={1600} whole /></Center></Phase>
+      <Phase a={hit - 8}>
         <Center style={{ paddingBottom: 40 }}>
           <Blur at={hit - 6} len={26}><Lockup size={170} /></Blur>
           <div style={{ marginTop: 60 }}><Say line={L1} size={72} maxWidth={1500} whole /></div>
@@ -406,7 +409,7 @@ export const End: React.FC = () => {
             <Pill size={26} style={{ background: P.tile, border: "none", color: P.grey2 }}>21 industries · 63 systems · profitiqs.com</Pill>
           </Blur>
         </Center>
-      )}
+      </Phase>
     </Block>
   );
 };

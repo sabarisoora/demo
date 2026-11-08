@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
 import { cf, cl, eOut, F, inn, io, le, li, lio, ls, MX, out, P, SH } from "./lib";
-import { Block, Blur, Center, Cover, Head, Label, Lockup, Pill, Say, Win } from "./ui";
+import { Block, Blur, Center, Cover, Head, Label, Lockup, Photo, Pill, Say, Seq, Win } from "./ui";
 
 // ================= HOOK =================
 const Time: React.FC<{ pm: boolean }> = ({ pm }) => (
@@ -36,7 +36,7 @@ export const Hook: React.FC = () => {
             <Blur at={ls(L0) - 4} len={22} dy={60} style={{ position: "absolute", opacity: 1 - roll, transform: `translateY(${-roll * 120}px)`, filter: roll > 0 ? `blur(${roll * 14}px)` : undefined }}><Time pm={false} /></Blur>
             {roll > 0 && <div style={{ position: "absolute", opacity: roll, transform: `translateY(${(1 - roll) * 120}px)`, filter: roll < 1 ? `blur(${(1 - roll) * 14}px)` : undefined }}><Time pm /></div>}
           </div>
-          <div style={{ marginTop: 50 }}><Say line={fr < ls(L1) - 6 ? L0 : L1} size={64} maxWidth={1400} whole /></div>
+          <div style={{ marginTop: 50, position: "relative", width: 1400, height: 80 }}><Seq items={[[ls(L0) - 8, <Say line={L0} size={64} maxWidth={1400} whole />], [ls(L1) - 8, <Say line={L1} size={64} maxWidth={1400} whole />]]} /></div>
         </Center>
       </Block>
       <Block a={ls(L2) - 8} b={ls(L3) - 8}>
@@ -95,11 +95,11 @@ export const Hook: React.FC = () => {
 
 // ================= THE SAME BLIND SPOT =================
 const TRADES = [
-  { name: "Plumber", q: "Which callbacks are eating the margin?" },
-  { name: "Restaurant owner", q: "Where did prime cost really land?" },
-  { name: "Dentist", q: "Why don't production and collections match?" },
-  { name: "Trucker", q: "Which loads actually paid after fuel?" },
-  { name: "Landlord", q: "Which property is dragging the rest down?" },
+  { name: "Plumber", slug: "plumbing-contractor", q: "Which callbacks are eating the margin?" },
+  { name: "Restaurant owner", slug: "restaurant", q: "Where did prime cost really land?" },
+  { name: "Dentist", slug: "dental-practice", q: "Why don't production and collections match?" },
+  { name: "Trucker", slug: "trucking-owner-operator", q: "Which loads actually paid after fuel?" },
+  { name: "Landlord", slug: "rental-portfolio", q: "Which property is dragging the rest down?" },
 ];
 const TILE_POS = [
   { x: 0, y: 0, w: 544 }, { x: 568, y: 0, w: 544 }, { x: 1136, y: 0, w: 544 },
@@ -108,17 +108,15 @@ const TILE_POS = [
 export const Blind: React.FC = () => {
   const fr = useCurrentFrame();
   const L6 = li("It doesn't matter"), Lx = [li("A plumber"), li("A restaurant"), li("A dentist"), li("A trucker"), li("A landlord")], L12 = li("Different trades");
-  const gone = out(fr, ls(L12) - 10, 14);
+  const gone = out(fr, ls(L12) - 18, 10);
   return (
     <Block a={ls(L6) - 8} b={le(L12) + 8}>
-      {fr < ls(Lx[0]) - 8 ? (
-        <Center><Say line={L6} size={130} maxWidth={1600} whole /></Center>
-      ) : fr < ls(L12) - 6 ? (
-        <Head line={L6} size={60} whole />
-      ) : (
-        <Center><Say line={L12} size={130} maxWidth={1600} maxLines={2} whole /></Center>
-      )}
-      {gone < 1 && fr >= ls(Lx[0]) - 10 && (
+      <Seq items={[
+        [ls(L6) - 8, <Center><Say line={L6} size={130} maxWidth={1600} whole /></Center>],
+        [cf(Lx[0], "pop") - 14, <Head line={L6} size={60} whole />],
+        [ls(L12) - 8, <Center><Say line={L12} size={130} maxWidth={1600} maxLines={2} whole /></Center>],
+      ]} />
+      {gone < 1 && fr >= cf(Lx[0], "pop") - 8 && (
         <div style={{ position: "absolute", left: MX, top: 300, width: 1680, height: 624, opacity: 1 - gone, filter: gone > 0 ? `blur(${gone * 12}px)` : undefined, transform: `translateY(${gone * 40}px)` }}>
           {TRADES.map((t, k) => {
             const at = cf(Lx[k], "pop") - 6;
@@ -128,10 +126,14 @@ export const Blind: React.FC = () => {
             const a = inn(fr, at + 4, 10) * (active ? 1 : 0);
             const pos = TILE_POS[k];
             return (
-              <div key={k} style={{ position: "absolute", left: pos.x, top: pos.y, width: pos.w, height: 300, borderRadius: 36, padding: 44, boxSizing: "border-box", display: "flex", flexDirection: "column", justifyContent: "space-between",
-                background: active ? P.ink : P.tile, boxShadow: active ? SH.deep : "none", opacity: p, filter: p < 1 ? `blur(${(1 - p) * 12}px)` : undefined, transform: `translateY(${(1 - p) * 40 - a * 8}px)` }}>
-                <Label color={active ? "#A1A1A6" : P.grey}>0{k + 1} · {t.name}</Label>
-                <div style={{ fontFamily: F.sans, fontWeight: 600, fontSize: 46, letterSpacing: "-0.035em", lineHeight: 1.08, color: active ? "#FFFFFF" : P.ink }}>{t.q}</div>
+              <div key={k} style={{ position: "absolute", left: pos.x, top: pos.y, width: pos.w, height: 300, borderRadius: 36, overflow: "hidden", background: P.ink,
+                boxShadow: active ? SH.deep : SH.soft, opacity: p, filter: p < 1 ? `blur(${(1 - p) * 12}px)` : undefined, transform: `translateY(${(1 - p) * 40 - a * 10}px)` }}>
+                <Photo slug={t.slug} style={{ filter: active ? "none" : "grayscale(1)", transform: `scale(${1.04 + 0.04 * a})` }} />
+                <div style={{ position: "absolute", inset: 0, background: `rgba(11,11,12,${active ? 0.38 : 0.66})` }} />
+                <div style={{ position: "absolute", inset: 0, padding: 44, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                  <Label color="rgba(255,255,255,0.72)">0{k + 1} · {t.name}</Label>
+                  <div style={{ fontFamily: F.sans, fontWeight: 600, fontSize: 46, letterSpacing: "-0.035em", lineHeight: 1.08, color: "#FFFFFF", opacity: active ? 1 : 0.8 }}>{t.q}</div>
+                </div>
               </div>
             );
           })}
@@ -158,11 +160,12 @@ export const DataScene: React.FC = () => {
   const W_ = 380, G = (1680 - 4 * 380) / 3;
   return (
     <Block a={ls(L13) - 8} b={hit - 2} push={0.02}>
-      {fr < ls(L14) - 8 ? (
-        <Center><Say line={L13} size={124} maxWidth={1600} maxLines={2} whole /></Center>
-      ) : fr < ls(L16) - 8 ? (
-        <Head line={fr < ls(L15) - 8 ? L14 : L15} size={60} maxWidth={1600} whole />
-      ) : null}
+      <Seq items={[
+        [ls(L13) - 8, <Center><Say line={L13} size={124} maxWidth={1600} maxLines={2} whole /></Center>],
+        [ls(L14) - 8, <Head line={L14} size={60} maxWidth={1600} whole />],
+        [ls(L15) - 8, <Head line={L15} size={60} maxWidth={1600} whole />],
+        [ls(L16) - 8, null],
+      ]} />
       {DOCS.map((d, k) => {
         const at = cf(L14, "pop", k) - 6;
         if (fr < at - 1) return null;
