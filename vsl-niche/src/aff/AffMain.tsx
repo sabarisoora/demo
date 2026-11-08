@@ -19,7 +19,7 @@ const ACC: [string, string][] = [
   ["Three: it's a one-time", "easy"], ["And four: the sample", "day"], ["And every kit tells", "who"], ["Now, the commission", "commission"], ["From the seventeenth of October", "ninety"],
   ["From the seventeenth of January", "eighty-five"], ["And from the seventeenth of April", "eighty"], ["These rates are set", "manually"], ["To put that in", "illustration"],
   ["At ninety percent", "eighty-seven|seventy-seven|twenty-four"], ["But that's an illustration", "not"], ["No earnings are promised", "no"], ["How it works is simple", "simple"],
-  ["You promote", "own"], ["A customer buys", "buys"], ["Digistore24 records", "credits"], ["And you see clicks", "see"], ["One honest note", "pending"],
+  ["You promote", "own"], ["A customer buys", "buys"], ["Digistore24 records", "credits"], ["And you see clicks", "see"], ["And here's the good news", "approved"],
   ["Now the part most", "complete"], ["Every fact in it", "verified"], ["Each kit has the product", "real"], ["A tier comparison", "honestly"], ["Thirty short-form", "thirty"],
   ["Ten full video", "ten"], ["A full social-media", "five"], ["Five email swipes", "five"], ["An eight-email", "eight-email"], ["Ready-to-paste", "meta"],
   ["Ten ready-made", "ten"], ["An audience and", "honest"], ["And a publishing", "checklist"], ["On top of that", "master"], ["The commission guide", "every"],
@@ -27,7 +27,7 @@ const ACC: [string, string][] = [
   ["Sign in to Digistore24", "link"], ["Check the page", "match"], ["Test your link", "once"], ["Then publish", "disclosure"], ["And check your clicks", "weekly"],
   ["If you use email", "two"], ["Your own list gets", "opted"], ["Cold outreach to", "own"], ["Plus the legal", "opt-out"], ["And the rules that", "rules"],
   ["Disclose clearly", "disclose"], ["Describe the product", "honestly"], ["No fake reviews", "no"], ["No spam", "no"], ["No discounts", "approved"], ["And no claims", "fine"],
-  ["If you're ever unsure", "ask"], ["A few honest answers", "honest"], ["Is the ninety percent", "no"], ["Is it approved", "pending"], ["Can I offer", "only"],
+  ["If you're ever unsure", "ask"], ["A few honest answers", "honest"], ["Is the ninety percent", "no"], ["Is it approved", "yes"], ["Can I offer", "only"],
   ["And who looks after", "support"], ["So here's your next", "next"], ["Ask the ProfitIQS team", "affiliate"], ["Pick your niche", "stand"], ["ProfitIQS. Real products", "honest"],
 ];
 ACC.forEach(([p, m]) => { const i = lio(p); if (i >= 0) MARK[i] = m; });

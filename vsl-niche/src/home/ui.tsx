@@ -37,14 +37,31 @@ export const GText: React.FC<{ children: React.ReactNode; style?: React.CSSPrope
 );
 
 // ---------- kinetic trailer text: every word slams in exactly when it is spoken ----------
-export const KText: React.FC<{ line: number; size?: number; align?: "center" | "left"; maxWidth?: number; color?: string; from?: number; dim?: number }> = ({ line, size = 84, align = "center", maxWidth = 1600, color = C.ink, from, dim }) => {
+/** sent: show only the sentence being spoken; maxLines: shrink the type so it never wraps past this many lines */
+export const KText: React.FC<{ line: number; size?: number; align?: "center" | "left"; maxWidth?: number; color?: string; from?: number; dim?: number; sent?: boolean; maxLines?: number }> = ({ line, size = 84, align = "center", maxWidth = 1600, color = C.ink, from, dim, sent, maxLines }) => {
   const fr = useCurrentFrame();
   const l = LINES[line];
   const marks = (MARK[line] ?? "").split("|").filter(Boolean).map((x) => x.toLowerCase());
-  const S = size * 1.12;
+  let words = l.words.map((w, k) => ({ ...w, k }));
+  if (sent) {
+    let si = 0;
+    let run = 0;
+    const tagged = words.map((w) => { const t = { ...w, si }; run++; if (/[.?!:]["”]?$/.test(w.w) || (run >= 7 && /,$/.test(w.w)) || run >= 13) { si++; run = 0; } return t; });
+    const spoken = tagged.filter((w) => fr >= (from ?? 0) + f(w.s - LEAD) - 2);
+    const cs = spoken.length ? spoken[spoken.length - 1].si : 0;
+    words = tagged.filter((w) => w.si === cs);
+  }
+  let S = size * 1.12;
+  if (maxLines) {
+    // Anton caps run ~0.5em per character incl. spacing; fit the whole (sentence) text into maxLines
+    const chars = words.reduce((n, w) => n + w.w.length + 1, 0);
+    const fit = (maxWidth * maxLines * 0.86) / (0.5 * chars);
+    S = Math.min(S, fit);
+  }
   return (
     <div style={{ display: "flex", flexWrap: "wrap", justifyContent: align === "center" ? "center" : "flex-start", gap: `0 ${S * 0.22}px`, maxWidth, lineHeight: 1.04 }}>
-      {l.words.map((w, k) => {
+      {words.map((w) => {
+        const k = w.k;
         const a = (from ?? 0) + f(w.s - LEAD) - 2;
         const s = pop(fr, a, 420, 18);
         const p = Math.min(1, s * 1.6);

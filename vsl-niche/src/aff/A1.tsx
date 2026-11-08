@@ -6,10 +6,10 @@ import { Card, Chip, Confetti, CoverImg, GText, Icon, IconBubble, KText, Logo, P
 import { Floaters, KitBox, Stage } from "./three";
 
 const Top: React.FC<{ line: number; size?: number; y?: number }> = ({ line, size = 64, y = 120 }) => (
-  <AbsoluteFill style={{ alignItems: "center", paddingTop: y }}><KText line={line} size={size} maxWidth={1700} /></AbsoluteFill>
+  <AbsoluteFill style={{ alignItems: "center", paddingTop: y }}><KText line={line} size={size} maxWidth={1700} sent maxLines={2} /></AbsoluteFill>
 );
 const Mid: React.FC<{ line: number; size?: number }> = ({ line, size = 110 }) => (
-  <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}><KText line={line} size={size} maxWidth={1700} /></AbsoluteFill>
+  <AbsoluteFill style={{ alignItems: "center", justifyContent: "center" }}><KText line={line} size={size} maxWidth={1700} maxLines={3} /></AbsoluteFill>
 );
 /** the current line among a list (by start time) */
 const cur = (fr: number, ls_: number[]) => [...ls_].reverse().find((l) => fr >= ls(l) - 4) ?? ls_[0];
@@ -76,7 +76,7 @@ export const Open: React.FC = () => {
       {/* 3D layer: floaters always, kit box from the drop */}
       <AbsoluteFill style={{ opacity: ap(fr, ls(L0) - 10, 20) }}>
         <Stage>
-          <Floaters fr={fr} spread={1.18} />
+          <Floaters fr={fr} spread={1.32} />
           {fr >= drop - 16 && <KitBox open={openT} rotY={0.5 + Math.sin(fr / 60) * 0.12} y={-1.0 + boxIn} scale={0.95 * sq} />}
         </Stage>
       </AbsoluteFill>
@@ -102,12 +102,12 @@ export const Open: React.FC = () => {
             const y = 420 + (k % 2) * 90 - away * 700;
             return (
               <div key={k} style={{ position: "absolute", left: x, top: y, transform: `rotateY(${(k - 1.5) * -14 + away * 200}deg) rotateZ(${(k - 1.5) * 4}deg) scale(${0.6 + 0.4 * Math.min(1.1, s)})`, opacity: Math.min(1, s * 1.5) * (1 - away) }}>
-                <div style={{ width: 330, height: 260, borderRadius: 26, background: "#FFFFFF", border: "2px solid #E2E2E6", padding: 30, display: "flex", flexDirection: "column", gap: 18, boxShadow: "0 30px 60px -30px rgba(11,11,12,0.22)" }}>
+                <div style={{ width: 330, height: 310, borderRadius: 26, background: "#FFFFFF", border: "2px solid #E2E2E6", padding: 30, display: "flex", flexDirection: "column", gap: 18, boxShadow: "0 30px 60px -30px rgba(11,11,12,0.22)" }}>
                   <Icon name={ic} size={58} color="#8A8A92" />
                   <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 38, color: "#6B6B73", lineHeight: 1.1 }}>{t}</div>
                 </div>
                 {fr >= st - 1 && (
-                  <div style={{ position: "absolute", left: 40, top: 80, transform: `rotate(-14deg) scale(${2 - Math.min(1, pop(fr, st, 320, 14))})`, opacity: Math.min(1, pop(fr, st) * 2), border: `7px solid ${C.mag}`, borderRadius: 18, padding: "2px 24px", fontFamily: FONT.sans, fontWeight: 800, fontSize: 64, color: C.mag, background: "rgba(255,255,255,0.95)" }}>NOPE</div>
+                  <div style={{ position: "absolute", left: 60, top: 205, transform: `rotate(-8deg) scale(${2 - Math.min(1, pop(fr, st, 320, 14))})`, opacity: Math.min(1, pop(fr, st) * 2), border: `7px solid ${C.mag}`, borderRadius: 18, padding: "2px 24px", fontFamily: FONT.sans, fontWeight: 800, fontSize: 64, color: C.mag, background: "rgba(255,255,255,0.95)" }}>NOPE</div>
                 )}
               </div>
             );
@@ -230,9 +230,7 @@ export const Problem: React.FC = () => {
   const P = PAIRS.map((x) => ({ ...x, lp: li(x.p), la: li(x.a) }));
   const idx = P.reduce((a, x, k) => (fr >= ls(x.lp) - 8 ? k : a), -1);
   // 3D ring of the five covers, rotating the current one to the front
-  const ringRot = P.reduce((acc, x, k) => acc + (k > 0 ? interpolate(fr, [ls(x.lp) - 10, ls(x.lp) + 8], [0, 1], { ...cl, easing: ez }) : 0), 0) * 72;
-  const ring21 = ap(fr, cf(L27, "chime") - 10, 20);
-  const docs = [["Invoices", "doc", C.pur], ["Receipts", "receipt", C.mag], ["Bank statements", "bank", C.cya], ["Apps", "phone", C.pur]] as const;
+    const docs = [["Invoices", "doc", C.pur], ["Receipts", "receipt", C.mag], ["Bank statements", "bank", C.cya], ["Apps", "phone", C.pur]] as const;
   return (
     <>
       <Phase a={ls(L14) - 6} b={ls(P[0].lp) - 8}>
@@ -253,20 +251,20 @@ export const Problem: React.FC = () => {
         )}
       </Phase>
       <Phase a={ls(P[0].lp) - 8} b={ls(L27) - 4}>
-        {/* 3D ring */}
-        <AbsoluteFill style={{ perspective: 2000 }}>
-          <div style={{ position: "absolute", left: 960 - 130, top: 300, width: 260, height: 347, transformStyle: "preserve-3d", transform: `rotateX(-6deg) rotateY(${-ringRot}deg)` }}>
-            {Array.from({ length: 10 }).map((_, j) => {
-              const main = j % 2 === 0;
-              const slug = main ? P[j / 2].slug : ["hvac", "roofing", "airbnb", "ecommerce", "lawn-care"][(j - 1) / 2];
-              return (
-                <div key={j} style={{ position: "absolute", inset: 0, transform: `rotateY(${j * 36}deg) translateZ(560px)`, backfaceVisibility: "hidden", opacity: main && j / 2 === idx ? 1 : 0.5 }}>
-                  <CoverImg slug={slug} width={260} />
-                </div>
-              );
-            })}
-          </div>
-        </AbsoluteFill>
+        {/* one crisp, flat hero cover per trade: whips in from the right, old one exits left */}
+        {P.map((x, k) => {
+          const inT = interpolate(fr, [ls(x.lp) - 10, ls(x.lp) + 6], [0, 1], { ...cl, easing: ez });
+          const nx = P[k + 1];
+          const outT = nx ? interpolate(fr, [ls(nx.lp) - 10, ls(nx.lp) + 2], [0, 1], { ...cl, easing: ez }) : 0;
+          if (inT <= 0 || outT >= 1) return null;
+          const x0 = (1 - inT) * 900 - outT * 900;
+          return (
+            <div key={k} style={{ position: "absolute", left: 960 - 200 + x0, top: 230, width: 400, opacity: Math.min(inT * 1.5, 1 - outT), transform: `rotate(${(1 - inT) * 6 - outT * 6}deg)` }}>
+              <div style={{ position: "absolute", left: 30, right: 30, bottom: -26, height: 40, borderRadius: "50%", background: "rgba(11,11,12,0.12)", filter: "blur(10px)" }} />
+              <CoverImg slug={x.slug} width={400} />
+            </div>
+          );
+        })}
         {P.map((x, k) => {
           if (k !== idx) return null;
           const answered = fr >= ls(x.la) - 4;
@@ -295,7 +293,7 @@ export const Problem: React.FC = () => {
                   </Pop>
                 ))}
               </div>
-              {answered && <Sparkle at={cf(x.la, "sparkle")} x={960} y={470} n={12} r={320} />}
+              {answered && <Sparkle at={cf(x.la, "sparkle")} x={960} y={500} n={12} r={300} />}
             </React.Fragment>
           );
         })}
@@ -303,15 +301,18 @@ export const Problem: React.FC = () => {
       {/* all 21 covers on a spinning 3D ring */}
       <Phase a={ls(L27) - 4} b={le(L28) + 8}>
         <Top line={fr < ls(L28) - 4 ? L27 : L28} size={52} y={100} />
-        <AbsoluteFill style={{ perspective: 2400 }}>
-          <div style={{ position: "absolute", left: 960 - 90, top: 420, width: 180, height: 240, transformStyle: "preserve-3d", transform: `rotateX(-10deg) rotateY(${fr * 0.9}deg) scale(${0.6 + 0.4 * ring21})` }}>
-            {ALL21.map((s, k) => (
-              <div key={s} style={{ position: "absolute", inset: 0, transform: `rotateY(${(k * 360) / 21}deg) translateZ(640px)` }}>
-                <CoverImg slug={s} width={180} />
+        {/* all 21 covers, flat and sharp, dealt onto a 7 x 3 grid */}
+        <div style={{ position: "absolute", left: 960 - 597, top: 236, width: 1194, display: "flex", flexWrap: "wrap", gap: 24 }}>
+          {ALL21.map((sl, k) => {
+            const at = cf(L27, "chime") - 10 + k * 1.5;
+            const t = interpolate(fr, [at, at + 10], [0, 1], { ...cl, easing: ez });
+            return (
+              <div key={sl} style={{ width: 150, opacity: t, transform: `translateY(${(1 - t) * 60}px) scale(${0.85 + 0.15 * t})` }}>
+                <CoverImg slug={sl} width={150} />
               </div>
-            ))}
-          </div>
-        </AbsoluteFill>
+            );
+          })}
+        </div>
         {fr >= ls(L28) - 4 && (
           <AbsoluteFill style={{ alignItems: "center", justifyContent: "flex-end", paddingBottom: 60 }}>
             <Pop at={cf(L28, "pop")}><Chip col={C.mag} size={40}><Icon name="phone" size={44} color={C.mag} /> the problems people stop scrolling for</Chip></Pop>
@@ -341,12 +342,12 @@ export const Why: React.FC = () => {
             const flip = interpolate(fr, [r.at - 6, r.at + 10], [180, 0], { ...cl, easing: ez });
             const shown = fr >= r.at - 6;
             return (
-              <div key={k} style={{ width: 400, height: 440, position: "relative", transformStyle: "preserve-3d", transform: `rotateY(${shown ? flip : 180}deg)` }}>
+              <div key={k} style={{ width: 400, height: 470, position: "relative", transformStyle: "preserve-3d", transform: `rotateY(${shown ? flip : 180}deg)` }}>
                 <div style={{ position: "absolute", inset: 0, backfaceVisibility: "hidden" }}>
-                  <Card style={{ height: "100%", padding: 34, display: "flex", flexDirection: "column", gap: 22, boxSizing: "border-box" }} glow={`${r.c}66`}>
-                    <div style={{ fontFamily: FONT.num, fontWeight: 900, fontSize: 88, lineHeight: 1, letterSpacing: "-0.03em" }}><GText>{r.n}</GText></div>
-                    <IconBubble name={r.i} size={96} col={r.c} />
-                    <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 42, color: C.ink, lineHeight: 1.1 }}>{r.t}</div>
+                  <Card style={{ height: "100%", padding: 30, display: "flex", flexDirection: "column", gap: 16, boxSizing: "border-box" }} glow={`${r.c}66`}>
+                    <div style={{ fontFamily: FONT.num, fontWeight: 900, fontSize: 72, lineHeight: 1, letterSpacing: "-0.03em" }}><GText>{r.n}</GText></div>
+                    <IconBubble name={r.i} size={80} col={r.c} />
+                    <div style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 38, color: C.ink, lineHeight: 1.1 }}>{r.t}</div>
                     <div style={{ fontFamily: FONT.sans, fontWeight: 600, fontSize: 28, color: C.ink2 }}>{r.d}</div>
                   </Card>
                 </div>

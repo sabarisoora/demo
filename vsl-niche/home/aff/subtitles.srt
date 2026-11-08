@@ -203,198 +203,198 @@ Digistore24 records the sale, and credits your commission on eligible orders.
 And you see clicks, sales, refunds and commissions in your own Digistore24 account.
 
 52
-00:04:49,205 --> 00:05:01,272
-One honest note: the marketplace listings are submitted and pending approval. So request promotion where it's required, and don't describe them as approved until Digistore24 confirms it.
+00:04:49,205 --> 00:04:58,271
+And here's the good news: every ProfitIQS product is approved on the Digistore24 marketplace. So you can start promoting right now.
 
 53
-00:05:03,322 --> 00:05:09,085
+00:05:00,321 --> 00:05:06,084
 Now the part most programs don't give you. A complete kit, for every one of the twenty-one niches.
 
 54
-00:05:09,355 --> 00:05:17,354
+00:05:06,354 --> 00:05:14,353
 Every fact in it is labelled: verified from the shipped product files, or marked as general industry context. Never mixed up.
 
 55
-00:05:17,624 --> 00:05:22,430
+00:05:14,623 --> 00:05:19,429
 Each kit has the product facts and the real checkout links for all three editions.
 
 56
-00:05:22,700 --> 00:05:26,560
+00:05:19,699 --> 00:05:23,559
 A tier comparison, so you can recommend the right edition honestly.
 
 57
-00:05:26,830 --> 00:05:38,493
+00:05:23,829 --> 00:05:35,493
 Thirty short-form video hooks, each with its angle and a suggested visual. Like this one, from the HVAC kit: "Peak season made the year look great. What happened in the slow months?"
 
 58
-00:05:38,763 --> 00:05:43,720
+00:05:35,763 --> 00:05:40,720
 Each hook is the first one to three seconds of a video. Pair it with one of the scripts.
 
 59
-00:05:43,990 --> 00:05:51,704
+00:05:40,990 --> 00:05:48,704
 Ten full video scripts, twenty to forty-five seconds each, made to record on a phone with a screen recording of the sample workbook.
 
 60
-00:05:51,974 --> 00:05:57,673
+00:05:48,974 --> 00:05:54,672
 A full social-media calendar, including five carousel decks, already rendered as slides.
 
 61
-00:05:57,943 --> 00:05:59,966
+00:05:54,942 --> 00:05:56,966
 Five email swipes for your own list.
 
 62
-00:06:00,236 --> 00:06:02,413
+00:05:57,236 --> 00:05:59,412
 An eight-email cold outreach sequence.
 
 63
-00:06:02,683 --> 00:06:05,494
+00:05:59,682 --> 00:06:02,493
 Ready-to-paste ad copy for Meta Ads Manager.
 
 64
-00:06:05,764 --> 00:06:08,974
+00:06:02,763 --> 00:06:05,973
 Ten ready-made graphics, plus real workbook screenshots.
 
 65
-00:06:09,244 --> 00:06:17,157
+00:06:06,243 --> 00:06:14,156
 An audience and objections guide, with honest answers to questions like "Is it a subscription?" and "I'm not an Excel person."
 
 66
-00:06:17,427 --> 00:06:21,115
+00:06:14,426 --> 00:06:18,114
 And a publishing checklist, to tick off before anything goes live.
 
 67
-00:06:23,165 --> 00:06:28,316
+00:06:20,164 --> 00:06:25,315
 On top of that, the Master Kit covers everything shared across all twenty-one niches.
 
 68
-00:06:28,586 --> 00:06:43,380
+00:06:25,585 --> 00:06:40,379
 The commission guide. The brand messaging guide. The compliance guide. Shared recruiting copy. A launch checklist. A cold-email playbook. And a full brand asset inventory, with every real checkout link for all sixty-three editions.
 
 69
-00:06:45,430 --> 00:06:47,251
+00:06:42,429 --> 00:06:44,250
 Here's how to launch, step by step.
 
 70
-00:06:47,521 --> 00:06:57,640
+00:06:44,520 --> 00:06:54,639
 Pick the niche your audience already lives in. HVAC content to HVAC contractors converts better, and it's more honest, than everything to everyone.
 
 71
-00:06:57,910 --> 00:07:17,242
+00:06:54,909 --> 00:07:14,241
 There are twenty-one to choose from: ten ninety-nine contractors, Airbnb hosts, auto repair shops, cleaning services, construction, dental practices, digital marketing agencies, ecommerce, electrical contractors, HVAC, pest control, landscaping, lawn care, manufacturing, plumbing, property management, rental property, restaurants, roofing, small businesses, and trucking owner-operators.
 
 72
-00:07:17,512 --> 00:07:20,460
+00:07:14,511 --> 00:07:17,459
 Read that niche's product facts and tier comparison.
 
 73
-00:07:20,730 --> 00:07:24,635
+00:07:17,729 --> 00:07:21,634
 Pick your hooks, scripts, posts and emails, and download the graphics.
 
 74
-00:07:24,905 --> 00:07:32,223
-Sign in to Digistore24, request promotion if it's required, and copy the link for the right niche and edition.
+00:07:21,904 --> 00:07:28,449
+Sign in to Digistore24, find the product, and copy your affiliate link for the right niche and edition.
 
 75
-00:07:32,493 --> 00:07:37,612
+00:07:28,719 --> 00:07:33,838
 Check the page: it opens the right product, it loads on mobile, and the prices match.
 
 76
-00:07:37,882 --> 00:07:43,318
+00:07:34,108 --> 00:07:39,543
 Test your link once, from a private browser window. Don't buy through your own link to test it.
 
 77
-00:07:43,588 --> 00:07:47,729
+00:07:39,813 --> 00:07:43,955
 Then publish, with a clear disclosure in every post, email and video.
 
 78
-00:07:47,999 --> 00:07:52,797
+00:07:44,225 --> 00:07:49,022
 And check your clicks, sales and refunds weekly. Keep what works. Drop what doesn't.
 
 79
-00:07:54,847 --> 00:07:58,496
+00:07:51,072 --> 00:07:54,722
 If you use email, there are two lanes, and the kit keeps them separate.
 
 80
-00:07:58,766 --> 00:08:02,829
+00:07:54,992 --> 00:07:59,055
 Your own list gets the email swipes, and only people who opted in.
 
 81
-00:08:03,099 --> 00:08:14,560
+00:07:59,325 --> 00:08:10,785
 Cold outreach to business owners gets its own playbook, and its own setup: separate sending domains, a verified list, proper authentication, and weeks of warm-up before a single cold email.
 
 82
-00:08:14,830 --> 00:08:20,328
+00:08:11,055 --> 00:08:16,553
 Plus the legal basics, like a real postal address and a working opt-out in every message.
 
 83
-00:08:22,378 --> 00:08:24,534
+00:08:18,603 --> 00:08:20,760
 And the rules that keep all of this working.
 
 84
-00:08:24,804 --> 00:08:28,390
+00:08:21,030 --> 00:08:24,616
 Disclose clearly, right next to your link, and say it in your videos.
 
 85
-00:08:28,660 --> 00:08:33,449
+00:08:24,886 --> 00:08:29,675
 Describe the product honestly: an Excel system that needs desktop Excel.
 
 86
-00:08:33,719 --> 00:08:40,529
+00:08:29,945 --> 00:08:36,755
 No fake reviews or testimonials. No income or results claims, for buyers or for affiliates.
 
 87
-00:08:40,799 --> 00:08:45,783
+00:08:37,025 --> 00:08:42,009
 If you bought and used the product yourself, you can share your own honest experience.
 
 88
-00:08:46,053 --> 00:08:54,913
+00:08:42,279 --> 00:08:51,138
 No spam, no impersonating ProfitIQS or Digistore24, and no bidding on the ProfitIQS brand name in paid search.
 
 89
-00:08:55,183 --> 00:09:00,017
+00:08:51,408 --> 00:08:56,243
 No discounts, bonuses or guarantees that ProfitIQS hasn't approved.
 
 90
-00:09:00,287 --> 00:09:06,519
+00:08:56,513 --> 00:09:02,745
 And no claims of integrations, automation or AI. The products don't have them, and that's fine.
 
 91
-00:09:06,789 --> 00:09:08,992
+00:09:03,015 --> 00:09:05,218
 If you're ever unsure, leave it out, or ask.
 
 92
-00:09:11,042 --> 00:09:13,192
+00:09:07,268 --> 00:09:09,418
 A few honest answers before you start.
 
 93
-00:09:13,462 --> 00:09:22,353
+00:09:09,688 --> 00:09:18,579
 Is the ninety percent for life? No. It's the planned launch rate, then eighty-five, then eighty. Nothing in the kit promises a rate locked for life.
 
 94
-00:09:22,623 --> 00:09:30,633
-Is it approved on the Digistore24 marketplace? It's submitted and pending. Check the current status before you say otherwise.
+00:09:18,849 --> 00:09:26,469
+Is it approved on the Digistore24 marketplace? Yes. Every product is approved, so you can start promoting today.
 
 95
-00:09:30,903 --> 00:09:38,071
+00:09:26,739 --> 00:09:33,907
 Can I offer a discount or a bonus? Only if it's on the sales page, or ProfitIQS approved it in writing.
 
 96
-00:09:38,341 --> 00:09:47,463
+00:09:34,177 --> 00:09:43,299
 And who looks after the customer? ProfitIQS handles product support. Digistore24 processes the orders, payments and refunds.
 
 97
-00:09:49,513 --> 00:09:50,872
+00:09:45,349 --> 00:09:46,708
 So here's your next step.
 
 98
-00:09:51,142 --> 00:10:00,452
+00:09:46,978 --> 00:09:56,288
 Ask the ProfitIQS team for your Affiliate Hub link. Email support at profitiqs dot com, with "Affiliate" in the subject line.
 
 99
-00:10:00,722 --> 00:10:05,461
+00:09:56,558 --> 00:10:01,297
 Pick your niche, open the kit, and promote something you can actually stand behind.
 
 100
-00:10:05,731 --> 00:10:09,990
+00:10:01,567 --> 00:10:05,826
 ProfitIQS. Real products. Real kits. Honest promotion.
 

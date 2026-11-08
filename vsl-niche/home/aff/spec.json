@@ -727,12 +727,12 @@
   ],
   [
    "how",
-   "One honest note: the marketplace listings are submitted and pending approval. So request promotion where it's required, and don't describe them as approved until Digistore24 confirms it.",
-   null,
+   "And here's the good news: every ProfitIQS product is approved on the Digistore24 marketplace. So you can start promoting right now.",
+   "And here's the good news: every Profit IQS product is approved on the Digistore24 marketplace. So you can start promoting right now.",
    [
     [
      "pop",
-     "pending"
+     "approved"
     ]
    ]
   ],
@@ -1017,7 +1017,7 @@
   ],
   [
    "launch",
-   "Sign in to Digistore24, request promotion if it's required, and copy the link for the right niche and edition.",
+   "Sign in to Digistore24, find the product, and copy your affiliate link for the right niche and edition.",
    null,
    [
     [
@@ -1265,12 +1265,12 @@
   ],
   [
    "faq",
-   "Is it approved on the Digistore24 marketplace? It's submitted and pending. Check the current status before you say otherwise.",
+   "Is it approved on the Digistore24 marketplace? Yes. Every product is approved, so you can start promoting today.",
    null,
    [
     [
-     "pop",
-     "pending."
+     "stamp",
+     "Yes."
     ]
    ]
   ],

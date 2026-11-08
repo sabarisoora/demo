@@ -6,10 +6,10 @@ import { Card, Chip, Confetti, CoverImg, GText, Icon, IconBubble, KText, Logo, P
 import { cur, Mid, Top } from "./A1";
 import { Floaters, KitBox, Stage } from "./three";
 
-const Stamp: React.FC<{ at: number; text: string; size?: number; rot?: number }> = ({ at, text, size = 60, rot = -10 }) => {
+const Stamp: React.FC<{ at: number; text: string; size?: number; rot?: number; col?: string }> = ({ at, text, size = 60, rot = -10, col = C.mag }) => {
   const fr = useCurrentFrame();
   if (fr < at - 1) return null;
-  return <div style={{ transform: `rotate(${rot}deg) scale(${2.2 - 1.2 * Math.min(1, pop(fr, at, 320, 14))})`, opacity: Math.min(1, pop(fr, at) * 2), border: `${size * 0.11}px solid ${C.mag}`, borderRadius: size * 0.3, padding: `0 ${size * 0.4}px`, fontFamily: FONT.sans, fontWeight: 800, fontSize: size, color: C.mag, background: "rgba(255,255,255,0.95)", whiteSpace: "nowrap" }}>{text}</div>;
+  return <div style={{ transform: `rotate(${rot}deg) scale(${2.2 - 1.2 * Math.min(1, pop(fr, at, 320, 14))})`, opacity: Math.min(1, pop(fr, at) * 2), border: `${size * 0.11}px solid ${col}`, borderRadius: size * 0.3, padding: `0 ${size * 0.4}px`, fontFamily: FONT.mono, fontWeight: 700, fontSize: size, color: col, background: "rgba(255,255,255,0.95)", whiteSpace: "nowrap" }}>{text}</div>;
 };
 
 // ================= MONEY =================
@@ -49,13 +49,13 @@ export const Money: React.FC = () => {
             {/* labels (flat, readable) */}
             <div style={{ position: "absolute", left: 0, right: 0, top: 940, display: "flex", justifyContent: "center", gap: 70 }}>
               {PH.map((p, k) => (
-                <div key={k} style={{ width: 380, textAlign: "center", opacity: ap(fr, p.at + 4, 10) }}>
+                <div key={k} style={{ width: 380, textAlign: "center", opacity: ap(fr, p.at + 4, 10) * (1 - ap(fr, ls(L39) - 6, 6)) }}>
                   <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 38, color: C.ink }}>{p.label} · {p.pct}%</div>
                   <div style={{ fontFamily: FONT.sans, fontWeight: 600, fontSize: 26, color: C.ink2 }}>{p.dates}</div>
                 </div>
               ))}
             </div>
-            {fr >= ls(L39) - 4 && <div style={{ position: "absolute", left: 0, right: 0, top: 220, display: "flex", justifyContent: "center" }}><Pop at={cf(L39, "pop")}><Chip col={C.pur} size={32}><Icon name="gear" size={38} color={C.pur} /> set manually in Digistore24 at each phase change</Chip></Pop></div>}
+            {fr >= ls(L39) - 4 && <div style={{ position: "absolute", left: 0, right: 0, top: 950, display: "flex", justifyContent: "center" }}><Pop at={cf(L39, "pop")}><Chip col={C.pur} size={32}><Icon name="gear" size={38} color={C.pur} /> set manually in Digistore24 at each phase change</Chip></Pop></div>}
             {PH.map((p, k) => <Sparkle key={k} at={p.at + 8} x={560 + k * 420} y={480} n={8} r={160} />)}
           </AbsoluteFill>
         )}
@@ -77,8 +77,8 @@ export const Money: React.FC = () => {
         {fr < ls(L43) - 4 && (
           <div style={{ position: "absolute", left: 360, top: 260, width: 1200 }}>
             <Pop at={cf(L40, "swish")}>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 14, background: "#FFF4DC", border: "2px solid #F5C451", borderRadius: 999, padding: "10px 26px", fontFamily: FONT.sans, fontWeight: 800, fontSize: 28, color: "#FFC94D", marginBottom: 26 }}>
-                <Icon name="spark" size={32} color="#E0A100" /> ILLUSTRATIVE · at 90%, on the displayed price, before Digistore24 fees, taxes and refunds
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 14, background: "#FFF4DC", border: `2px solid ${C.ink}`, boxShadow: `4px 4px 0 ${C.pur}`, borderRadius: 10, padding: "10px 24px", fontFamily: FONT.mono, fontWeight: 700, fontSize: 26, color: C.ink, marginBottom: 26, whiteSpace: "nowrap" }}>
+                <Icon name="spark" size={30} color={C.pur} /> ILLUSTRATIVE · 90% of the displayed price, before fees, taxes, refunds
               </div>
             </Pop>
             <Card style={{ padding: "18px 34px" }}>
@@ -102,7 +102,7 @@ export const Money: React.FC = () => {
 // ================= HOW IT WORKS =================
 export const How: React.FC = () => {
   const fr = useCurrentFrame();
-  const [L44, L45, L46, L47, L48, L49] = ["How it works is simple", "You promote", "A customer buys", "Digistore24 records", "And you see clicks", "One honest note"].map(li);
+  const [L44, L45, L46, L47, L48, L49] = ["How it works is simple", "You promote", "A customer buys", "Digistore24 records", "And you see clicks", "And here's the good news"].map(li);
   const N = [
     { t: "Your affiliate link", i: "spark", at: cf(L45, "pop"), c: C.mag },
     { t: "Customer buys", i: "cart", at: cf(L46, "pop"), c: C.pur },
@@ -138,7 +138,7 @@ export const How: React.FC = () => {
           ))}
           {fr >= ls(L49) - 4 && (
             <div style={{ position: "absolute", left: 0, right: 0, top: 790, display: "flex", justifyContent: "center", gap: 24 }}>
-              <Pop at={cf(L49, "pop")}><div style={{ display: "inline-flex", alignItems: "center", gap: 14, background: "#FFF4DC", border: "2px solid #F5C451", borderRadius: 999, padding: "14px 30px", fontFamily: FONT.sans, fontWeight: 800, fontSize: 34, color: "#FFC94D" }}><span style={{ width: 18, height: 18, borderRadius: 9, background: "#FFC94D" }} /> Marketplace listing: submitted, pending approval</div></Pop>
+              <Pop at={cf(L49, "pop")}><div style={{ display: "inline-flex", alignItems: "center", gap: 14, background: C.grnL, border: `3px solid ${C.grn}`, borderRadius: 999, padding: "14px 34px", fontFamily: FONT.sans, fontWeight: 700, fontSize: 36, color: C.ink, boxShadow: `5px 5px 0 ${C.grn}` }}><Icon name="check" size={40} color={C.grn} /> Approved on Digistore24 · start promoting now</div></Pop>
             </div>
           )}
         </>
@@ -171,7 +171,7 @@ export const Kit: React.FC = () => {
     <Phase a={ls(L50) - 6} b={le(L62) + 8}>
       <Top line={cur(fr, [L50, L51, L52, L53, L54, L54b, L55, L56, L57, L58, L59, L60, L61, L62])} size={44} y={92} />
       <AbsoluteFill style={{ opacity: 1 - ap(fr, le(L62) - 2, 10) * 0 }}>
-        <Stage cam={[0, 0, 9]}><KitBox open={open} rotY={0.35 + Math.sin(fr / 70) * 0.1} y={-2.4} scale={0.45} /></Stage>
+        <AbsoluteFill style={{ opacity: 1 - ap(fr, items[8].at - 8, 10) }}><Stage cam={[0, 0, 9]}><KitBox open={open} rotY={0.35 + Math.sin(fr / 70) * 0.1} y={-2.4} scale={0.45} /></Stage></AbsoluteFill>
       </AbsoluteFill>
       {fr >= ls(L51) - 4 && fr < ls(L52) - 2 && (
         <div style={{ position: "absolute", left: 0, right: 0, top: 300, display: "flex", justifyContent: "center", gap: 30 }}>
@@ -219,24 +219,22 @@ export const Master: React.FC = () => {
   return (
     <Phase a={ls(L63) - 6} b={le(L64) + 8}>
       <Top line={fr < ls(L64) - 4 ? L63 : L64} size={48} y={100} />
-      <AbsoluteFill style={{ perspective: 1800 }}>
-        <div style={{ position: "absolute", left: 960 - 160, top: 360, width: 320, height: 420, transformStyle: "preserve-3d" }}>
-          {T.map((t, k) => {
-            const at = cf(L64, "pop", k);
-            const g = interpolate(fr, [at - 4, at + 12], [0, 1], { ...cl, easing: ez });
-            const ang = (k - 3) * 16 * g;
-            return (
-              <div key={k} style={{ position: "absolute", inset: 0, transformOrigin: "50% 140%", transform: `rotateZ(${ang}deg) translateZ(${k * 4}px) translateY(${(1 - g) * 40}px)`, opacity: fr >= at - 4 ? 1 : 0 }}>
-                <div style={{ width: 320, height: 420, borderRadius: 26, background: "#FFFFFF", border: `2px solid ${C.mag}`, boxShadow: "0 30px 60px -24px rgba(255,94,26,0.45)", padding: 26, boxSizing: "border-box", display: "flex", flexDirection: "column", gap: 16 }}>
-                  <div style={{ width: 120, height: 34, borderRadius: 10, background: [C.magL, C.purL, C.cyaL][k % 3] }} />
-                  <IconBubble name={["dollar", "spark", "check", "mega", "rocket", "mail", "doc"][k]} size={80} col={[C.mag, C.pur, C.cya][k % 3]} />
-                  <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 34, color: C.ink, lineHeight: 1.15 }}>{t}</div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </AbsoluteFill>
+      {/* seven guides dealt onto a flat 4 + 3 grid: every title readable */}
+      <div style={{ position: "absolute", left: 120, right: 120, top: 330, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 34 }}>
+        {T.map((t, k) => {
+          const at = cf(L64, "pop", k);
+          const g = interpolate(fr, [at - 4, at + 10], [0, 1], { ...cl, easing: ez });
+          const col = [C.mag, C.pur, C.cya][k % 3];
+          return (
+            <div key={k} style={{ width: 380, opacity: g, transform: `translateY(${(1 - g) * 70}px) rotate(${(1 - g) * (k % 2 ? 6 : -6)}deg) scale(${0.8 + 0.2 * g})` }}>
+              <Card style={{ height: 170, padding: "22px 24px", boxSizing: "border-box", display: "flex", alignItems: "center", gap: 20 }} glow={col}>
+                <IconBubble name={["dollar", "spark", "check", "mega", "rocket", "mail", "doc"][k]} size={78} col={col} />
+                <div style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 32, color: C.ink, lineHeight: 1.15 }}>{t}</div>
+              </Card>
+            </div>
+          );
+        })}
+      </div>
       {fr < ls(L64) - 4 && (
         <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", paddingTop: 120 }}>
           <Pop at={cf(L63, "chime")}><Chip col={C.pur} size={50}><Icon name="briefcase" size={56} color={C.pur} /> Master Affiliate Kit</Chip></Pop>
@@ -363,7 +361,7 @@ export const Faq: React.FC = () => {
   const [L87, L88, L89, L90, L91] = ["A few honest answers", "Is the ninety percent", "Is it approved", "Can I offer", "And who looks after"].map(li);
   const QA = [
     { q: "Is the 90% for life?", a: "No: launch rate, then 85%, then 80%", line: L88, at: cf(L88, "stamp"), stamp: true },
-    { q: "Approved on the marketplace?", a: "Submitted, pending. Check before you say so", line: L89, at: cf(L89, "pop") },
+    { q: "Approved on Digistore24?", a: "Yes. Every product. Promote today", line: L89, at: cf(L89, "stamp"), stamp: true, yes: true },
     { q: "Can I offer a discount or bonus?", a: "Only if it's on the sales page or approved in writing", line: L90, at: cf(L90, "pop") },
     { q: "Who looks after the customer?", a: "ProfitIQS: product support · Digistore24: orders, payments, refunds", line: L91, at: cf(L91, "pop", 0) },
   ];
@@ -378,7 +376,7 @@ export const Faq: React.FC = () => {
             <Card style={{ padding: "26px 36px", display: "flex", alignItems: "center", gap: 28 }}>
               <div style={{ fontFamily: FONT.serif, fontWeight: 700, fontSize: 64, lineHeight: 1 }}><GText>Q</GText></div>
               <div style={{ fontFamily: FONT.sans, fontWeight: 800, fontSize: 38, color: C.ink, width: 620 }}>{x.q}</div>
-              {x.stamp && <Stamp at={x.at} text="NO" size={52} />}
+              {x.stamp && <Stamp at={x.at} text={(x as { yes?: boolean }).yes ? "YES" : "NO"} col={(x as { yes?: boolean }).yes ? C.grn : C.mag} size={52} />}
               <div style={{ fontFamily: FONT.sans, fontWeight: 700, fontSize: 30, color: C.ink2, flex: 1, opacity: ap(fr, x.at + 2, 10) }}>{x.a}</div>
             </Card>
           </div>
