@@ -1,7 +1,7 @@
 // stills at 70% of each line (or given frames) -> build/home-board/NN.png + contact sheet
 import { renderStill, selectComposition } from "@remotion/renderer";
 import fs from "node:fs";
-const tl = JSON.parse(fs.readFileSync("home/timeline.json"));
+const tl = JSON.parse(fs.readFileSync(process.env.TL || "home/timeline.json"));
 const serveUrl = process.env.SB || "build/home-bundle";
 const browserExecutable = "/opt/pw-browsers/chromium";
 const composition = await selectComposition({ serveUrl, id: "Home", browserExecutable, inputProps: { audio: false } });

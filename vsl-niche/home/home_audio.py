@@ -294,8 +294,9 @@ if MINIMAL:
         put(pad_, sum(np.sin(2 * np.pi * mt(m) * tt) for m in (bs + 12, ch[0])) * e_ * 0.012, s0)
     irt = TT(2.2); ir = rng.standard_normal(len(irt)) * np.exp(-irt * 2.6); ir = lp(ir, 0.3); ir /= np.abs(ir).sum() ** 0.5 * 9
     def room(x): return x + fftconvolve(x, ir)[: len(x)] * 0.9
-    mel_lvl = env([(0, 0), (E("reveal") - 0.5, 0), (E("reveal") + 1.0, 1), (T - 2, 1), (T, 0)])
-    pad_lvl = env([(0, 0.4), (E("reveal"), 1), (T - 2, 1), (T, 0)])
+    R_ = S["reveal"] if "reveal" in S else list(S.values())[1]
+    mel_lvl = env([(0, 0), (R_ - 0.5, 0), (R_ + 1.0, 1), (T - 2, 1), (T, 0)])
+    pad_lvl = env([(0, 0.4), (R_, 1), (T - 2, 1), (T, 0)])
     music = room(piano + melody * mel_lvl) + pad_ * pad_lvl
     music *= (0.62 - 0.3 * duck) * env([(0, 0), (0.3, 1), (T - 1.5, 1), (T, 0)])
     def tap(g=0.07, f0=1900): tt = TT(0.06); return (np.sin(2 * np.pi * f0 * tt) * np.exp(-tt * 90) + hp(rng.standard_normal(len(tt)), 0.5) * np.exp(-tt * 260) * 0.4) * g

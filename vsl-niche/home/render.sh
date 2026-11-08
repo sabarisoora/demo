@@ -4,11 +4,13 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 V=${1:-full}                          # full | short
 SRC=home; [ "$V" = short ] && SRC=home/short
+ENTRY=${ENTRY:-src/pure/index.ts}; NAME=ProfitIQS-Home-VSL$([ "$V" = short ] && echo -Short)
+if [ "$V" = aff ]; then SRC=home/aff2; ENTRY=src/paff/index.ts; NAME=ProfitIQS-Affiliate-VSL; fi
 B=build/home-bundle-$V; O=build/home-chunks-$V; mkdir -p $O out home/cur
 exec 9>/tmp/home-bundle.lock; flock 9
 cp $SRC/timeline.json $SRC/cues.json home/cur/
 cp $SRC/mix.wav home/public/mix.wav
-rm -rf $B && npx remotion bundle ${ENTRY:-src/pure/index.ts} --public-dir home/public --out-dir $B --log=error >/dev/null
+rm -rf $B && npx remotion bundle $ENTRY --public-dir home/public --out-dir $B --log=error >/dev/null
 flock -u 9
 TOTAL=$(python3 -c "import json,math;print(math.ceil(json.load(open('$SRC/timeline.json'))['duration']*30))")
 STEP=750; rm -f $O/list.txt
@@ -31,6 +33,6 @@ for try in 1 2 3 4; do
   [ "$(python3 -c "print(1 if $TP <= -1.2 else 0)")" = 1 ] && break
   G=$(python3 -c "print(round($G - ($TP + 1.4), 2))")
 done
-ffmpeg -y -hide_banner -loglevel error -f concat -safe 0 -i $O/list.txt -i build/home-audio-$V.m4a -map 0:v:0 -map 1:a:0 -vf scale=1920:1080:flags=lanczos -c:v libx264 -crf 14 -preset slow -tune animation -pix_fmt yuv420p -c:a copy -shortest -movflags +faststart out/ProfitIQS-Home-VSL$([ "$V" = short ] && echo -Short).mp4
-ffmpeg -hide_banner -i out/ProfitIQS-Home-VSL$([ "$V" = short ] && echo -Short).mp4 -vn -af ebur128=peak=true -f null - 2>&1 | grep -E "^\s+(I:|Peak:)" | tail -2 | tr -s ' ' | tr '\n' ' '
+ffmpeg -y -hide_banner -loglevel error -f concat -safe 0 -i $O/list.txt -i build/home-audio-$V.m4a -map 0:v:0 -map 1:a:0 -vf scale=1920:1080:flags=lanczos -c:v libx264 -crf 14 -preset slow -tune animation -pix_fmt yuv420p -c:a copy -shortest -movflags +faststart out/$NAME.mp4
+ffmpeg -hide_banner -i out/$NAME.mp4 -vn -af ebur128=peak=true -f null - 2>&1 | grep -E "^\s+(I:|Peak:)" | tail -2 | tr -s ' ' | tr '\n' ' '
 echo; echo "HOME $V RENDERED $(date -u +%H:%M)"
