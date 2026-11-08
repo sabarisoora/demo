@@ -68,7 +68,7 @@ export const Say: React.FC<{ line: number; size?: number; weight?: number; maxWi
           <div key={ci} style={{ gridArea: "1 / 1", textAlign: align, fontFamily: F.sans, fontWeight: weight, fontSize: s, lineHeight: 1.12, letterSpacing: "-0.025em", color, maxWidth }}>
             {c.map((t, k) => {
               const p = interpolate(fr, [t.at - 5, t.at + 11], [0, 1], { ...cl, easing: eOut });
-              const q = interpolate(fr, [b, b + 9], [0, 1], { ...cl, easing: eIn });
+              const q = Number.isFinite(b) ? interpolate(fr, [b, b + 9], [0, 1], { ...cl, easing: eIn }) : 0;
               const st = strike.includes(norm(t.w));
               return (
                 <React.Fragment key={k}>

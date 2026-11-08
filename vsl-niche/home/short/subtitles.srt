@@ -1,84 +1,84 @@
 1
-00:00:00,900 --> 00:00:02,047
+00:00:00,900 --> 00:00:02,319
 You open at seven.
 
 2
-00:00:02,317 --> 00:00:03,521
+00:00:02,589 --> 00:00:03,983
 You close at seven.
 
 3
-00:00:03,791 --> 00:00:08,027
+00:00:04,253 --> 00:00:09,064
 Jobs done. Invoices sent. Money moving in and out, all day long.
 
 4
-00:00:08,297 --> 00:00:09,965
+00:00:09,334 --> 00:00:11,148
 So here's one quick question.
 
 5
-00:00:10,235 --> 00:00:12,598
+00:00:11,418 --> 00:00:13,994
 How much did you actually keep last month?
 
 6
-00:00:12,868 --> 00:00:14,533
+00:00:14,264 --> 00:00:16,432
 Not what came in. What you kept.
 
 7
-00:00:15,433 --> 00:00:17,410
+00:00:17,532 --> 00:00:19,820
 That's why we built ProfitIQS.
 
 8
-00:00:17,680 --> 00:00:22,371
+00:00:20,090 --> 00:00:25,365
 Business intelligence systems, in Excel. Each one built for one industry.
 
 9
-00:00:22,641 --> 00:00:25,272
+00:00:25,635 --> 00:00:28,758
 Twenty-one industries. Sixty-three systems.
 
 10
-00:00:25,542 --> 00:00:29,128
+00:00:29,028 --> 00:00:32,982
 Not one generic template. A system that speaks your trade.
 
 11
-00:00:29,398 --> 00:00:33,210
+00:00:33,252 --> 00:00:37,383
 Built for people who are experts in their trade, not in spreadsheets.
 
 12
-00:00:34,110 --> 00:00:36,204
+00:00:38,483 --> 00:00:40,848
 Every system comes in three editions.
 
 13
-00:00:36,474 --> 00:00:39,447
+00:00:41,118 --> 00:00:44,422
 Essential, $97. The core numbers.
 
 14
-00:00:39,717 --> 00:00:43,752
+00:00:44,692 --> 00:00:49,039
 Elite, $197. The full system, with deeper analysis.
 
 15
-00:00:44,022 --> 00:00:46,963
+00:00:49,309 --> 00:00:52,760
 Complete, $249. Both editions, together.
 
 16
-00:00:47,233 --> 00:00:50,633
+00:00:53,030 --> 00:00:56,782
 Start with Essential, and move up to Elite whenever you're ready.
 
 17
-00:00:51,533 --> 00:00:52,892
+00:00:57,882 --> 00:00:59,415
 So here's your next step.
 
 18
-00:00:53,162 --> 00:00:55,665
+00:00:59,685 --> 00:01:02,642
 Find your industry, right below this video.
 
 19
-00:00:55,935 --> 00:00:59,843
+00:01:02,912 --> 00:01:07,476
 Each one has its own full walkthrough, every sheet, shown and explained.
 
 20
-00:01:00,743 --> 00:01:02,730
+00:01:08,576 --> 00:01:10,892
 Your business already has the numbers.
 
 21
-00:01:03,000 --> 00:01:05,262
+00:01:11,162 --> 00:01:13,687
 ProfitIQS shows you what they mean.
 

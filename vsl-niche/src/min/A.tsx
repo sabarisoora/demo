@@ -64,8 +64,8 @@ export const Hook: React.FC = () => {
       {/* open at seven, close at seven */}
       <Block a={ls(L0) - 8} b={ls(L2) - 8}>
         <div style={{ position: "absolute", left: MX, top: 380, width: 820 }}>
-          <div style={{ overflow: "hidden", height: 30, marginBottom: 26 }}>
-            <Label style={{ transform: `translateY(${fr < ls(L1) - 6 ? 0 : -100}%)`, transition: "none" }}>{fr < ls(L1) - 6 ? "Opens" : "Closes"}</Label>
+          <div style={{ height: 30, marginBottom: 26 }}>
+            <Label color={fr < ls(L1) - 6 ? M.ink2 : M.acc}>{fr < ls(L1) - 6 ? "Opens" : "Closes"}</Label>
           </div>
           <Say line={fr < ls(L1) - 6 ? L0 : L1} size={104} maxWidth={820} align="left" />
         </div>
@@ -103,7 +103,8 @@ export const Hook: React.FC = () => {
       </Block>
       {/* not what came in: what you kept */}
       <Block a={ls(L5) - 6} b={le(L5) + 8}>
-        <Center style={{ flexDirection: "row", alignItems: "flex-end", gap: 170, paddingBottom: 40 }}>
+        <Center>
+         <div style={{ display: "flex", alignItems: "flex-end", gap: 170 }}>
           <div>
             <Rise at={ls(L5) - 4}><Label>Not</Label></Rise>
             <Rise at={ls(L5)} style={{ marginTop: 18 }}>
@@ -120,6 +121,7 @@ export const Hook: React.FC = () => {
             </Rise>
             <Rule at={cf(L5, "ding") + 6} w={420} h={3} color={M.acc} style={{ marginTop: 14 }} />
           </div>
+         </div>
         </Center>
       </Block>
     </>
@@ -189,7 +191,7 @@ const DocCard: React.FC<{ d: (typeof DOCS)[number] }> = ({ d }) => (
     <div style={{ marginTop: "auto", fontFamily: F.sans, fontWeight: 500, fontSize: 36, letterSpacing: "-0.02em", color: M.ink }}>{d.name}</div>
   </div>
 );
-const SCAT = [{ x: -40, y: 70, r: -5 }, { x: 30, y: -40, r: 4 }, { x: -20, y: 90, r: -3 }, { x: 50, y: -20, r: 6 }];
+const SCAT = [{ x: -40, y: 70, r: -5 }, { x: 30, y: -40, r: 4 }, { x: -20, y: 90, r: -3 }, { x: -30, y: -20, r: 4 }];
 export const DataScene: React.FC = () => {
   const fr = useCurrentFrame();
   const L13 = li("And here's the thing"), L14 = li("Invoices. Receipts"), L15 = li("It's just never"), L16 = li("That's why we built");

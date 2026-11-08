@@ -161,7 +161,7 @@ export const Box: React.FC = () => {
       {COLS.map((c, k) => {
         const dim = path && k === 2 ? 0.32 : 1;
         return (
-          <Enter key={k} at={c.at - 4} dy={30} len={24} style={{ position: "absolute", left: MX + k * cw, top: 300, width: cw, display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <Enter key={k} at={c.at - 4} dy={30} len={24} style={{ position: "absolute", left: MX + k * cw, top: 280, width: cw, display: "flex", flexDirection: "column", alignItems: "center" }}>
             <div style={{ opacity: dim, display: "flex", flexDirection: "column", alignItems: "center" }}>
               <Label color={M.mute}>0{k + 1} — {c.tier}</Label>
               <div style={{ position: "relative", width: 300, height: 382, marginTop: 34, display: "flex", justifyContent: "center" }}>
@@ -181,7 +181,7 @@ export const Box: React.FC = () => {
                   </Rise>
                 )}
               </div>
-              <div style={{ fontFamily: F.sans, fontWeight: 400, fontSize: 28, color: M.ink2, opacity: inn(fr, c.price + 4, 14), textAlign: "center", maxWidth: 420 }}>{c.desc}</div>
+              <div style={{ fontFamily: F.sans, fontWeight: 400, fontSize: 26, color: M.ink2, opacity: inn(fr, c.price + 4, 14), textAlign: "center", maxWidth: 530, whiteSpace: "nowrap" }}>{c.desc}</div>
             </div>
             {path && c.note && (
               <Enter at={k === 0 ? cf(Ls, "pop") - 4 : cf(Ls, "whoosh") + 2} dy={10} style={{ marginTop: 18 }}>
@@ -383,7 +383,7 @@ export const Cta: React.FC = () => {
   const L0 = li("So here's your next"), L1 = li("Find your industry"), L2 = li("Each one has its own");
   const drop = cf(L1, "drop");
   const swap = fr >= ls(L2) - 8;
-  const W_ = 132, G = 20;
+  const W_ = 124, G = 18;
   return (
     <Block a={ls(L0) - 8} b={le(L2) + 8}>
       {fr < ls(L1) - 8 ? (
