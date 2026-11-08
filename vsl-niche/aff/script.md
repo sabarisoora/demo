@@ -4,7 +4,7 @@
 **Goal:** show them the product is real and worth promoting (problem → solution), explain the program and commission honestly, show everything in the kit, and send them to get their Affiliate Hub link.
 **Length:** about 10½–11 minutes (≈1,415 spoken words plus visual beats). Exact timings come from the recorded voice.
 **Look (new format, not the showroom or sheet tour):** *"The Affiliate Playbook"*. The light style again (white, pastel washes, magenta / purple / cyan, black text). A kit box sits on a bright desk. Each chapter pulls one folder out of the box, a progress rail across the top shows **Chapter 3 of 12**, and every number and rule lands on screen as it's spoken.
-**Sources:** Master Affiliate Kit (program overview, commission guide, brand messaging, compliance, launch checklist, cold-email playbook) and the niche kits (product facts, tier comparisons, hooks, scripts). No invented results, earnings, testimonials or customer counts. Marketplace status is described as **pending**, never "approved".
+**Sources:** Master Affiliate Kit (program overview, commission guide, brand messaging, compliance, launch checklist, cold-email playbook) and the niche kits (product facts, tier comparisons, hooks, scripts). No invented results, earnings, testimonials or customer counts. Marketplace status: **approved** on Digistore24 (per ProfitIQS, Nov 2026).
 
 ---
 
